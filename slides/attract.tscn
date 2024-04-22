@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfl0vahoqtr3d"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_28m7q"]
+
+[node name="Attract" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_28m7q")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1587.0
+offset_bottom = 889.0
+color = Color(0.172549, 0.698039, 0.498039, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1602.0
+offset_bottom = 903.0
+theme_override_font_sizes/font_size = 150
+text = "Hello World"
+horizontal_alignment = 1
+vertical_alignment = 1
