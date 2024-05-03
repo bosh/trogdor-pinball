@@ -3,4 +3,4 @@
 bcp:
   connections:
     local_display:
-      port: 5052
+      port: 5050
