@@ -1,0 +1,54 @@
+#config_version=6
+
+# As you add coils, you will define
+# their name, number on the board, default_pulse. 
+
+# Visit https://docs.missionpinball.org/en/latest/mechs/coils/ for additional information. 
+
+coils:
+
+#Board 3208 
+  c_auto_plunger:
+    number: 3208-0
+    default_pulse_ms: 15
+
+  c_trough_eject:
+    number: 3208-1
+    default_pulse_ms: 15
+
+
+  c_flipper_right_full:
+    number: 3208-2
+    default_pulse_ms: 30
+
+  c_flipper_right_hold:
+    number: 3208-3
+    default_hold_power: .125
+
+  c_right_sling:
+    number: 3208-4
+    default_pulse_ms: 25
+
+
+  c_left_sling:
+    number: 3208-5
+    default_pulse_ms: 25
+
+  c_flipper_left_hold:
+    number: 3208-6
+    default_hold_power: .125
+
+  c_flipper_left_full:
+    number: 3208-7
+    default_pulse_ms: 30
+
+
+#Autofire devices are defined here by switch and what coil is cycled when that switch is active.
+autofire_coils:
+  slingshot_left:
+    coil: c_left_sling
+    switch: s_left_sling
+
+  slingshot_right:
+    coil: c_right_sling
+    switch: s_right_sling

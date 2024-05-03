@@ -1,0 +1,73 @@
+#config_version=6
+
+# Can name these to match left, right, center, or however you want.
+# The switch name defined here will be used in any modes where
+# the switches are activated, etc.
+
+switches:
+
+#3208 Board
+## Block A
+  s_right_outer_lane:
+    number: 3208-25
+
+  s_right_inner_lane:
+    number: 3208-26
+
+  s_right_flipper_eos:
+    number: 3208-28
+    type: 'NC'
+
+  s_right_sling: # Parallel switch pair
+    number: 3208-29
+
+  s_plunger: # shooter lane presence
+    number: 3208-31
+
+## Block B
+  s_left_outer_lane:
+    number: 3208-11
+
+  s_left_inner_lane:
+    number: 3208-12
+
+  s_left_flipper_eos:
+    number: 3208-13
+    type: 'NC'
+
+  s_left_sling: # Parallel switch pair
+    number: 3208-15
+
+## Block C #FUTURE
+  # s_trough_ball_jam:
+  #   number: 3208-16
+  #   type: 'NC'
+
+  # s_trough_ball_1:
+  #   number: 3208-17
+  #   type: 'NC'
+
+  # s_trough_ball_2:
+  #   number: 3208-18
+
+  # s_trough_ball_3:
+  #   number: 3208-19
+
+  # s_trough_ball_4:
+  #   number: 3208-20
+
+
+#Cabinet switches FUTURE
+#TODO check the board number as 0024 or smth else
+  # s_right_flipper:
+  #   number: 0024-0
+  #   tags: flipper_right
+
+  # s_left_flipper:
+  #   number: 0024-1
+  #   tags: flipper_left
+
+
+  # s_start:
+  #   number: 0024-4
+  #   tags: start

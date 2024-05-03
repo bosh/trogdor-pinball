@@ -4,3 +4,93 @@ bcp:
   connections:
     local_display:
       port: 5050
+
+hardware:
+    platform: fast
+
+fast:
+  net:
+    controller: neuron
+    port: COM5
+    io_loop:
+
+      3208:
+        model: FP-I/O-3208
+        order: 1
+
+      # 0024:
+      #   model: FP-I/O-0024
+      #   order: 2
+
+window:
+  width: 1600
+  height: 900
+  title: Trogdor Display Window
+  fullscreen: false
+  resizable: false
+  borderless: true
+  exit_on_escape: true
+  no_window: false
+  show_cursor: no
+
+displays:
+  window:
+    width: 1600
+    height: 900
+  display1:
+    width: 1600
+    height: 900
+
+config:
+  - lights.yaml
+  - coils.yaml
+  - switches.yaml
+
+playfields:
+  #Define your playfields
+  # playfield:
+  #   default_source_device: bd_plunger
+  #   tags: default
+
+machine:
+  balls_installed: 3
+
+game:
+  balls_per_game: 3
+  max_players: 1
+
+modes:
+  - base
+  - attract
+
+flippers:
+  left_flipper:
+    main_coil: c_flipper_left_full
+    hold_coil: c_flipper_left_hold
+    activation_switch: s_left_flipper
+    eos_switch: s_left_flipper_eos
+    enable_events: ball_started, enableAutofire
+    disable_events: ball_will_end, service_mode_entered, disableAutofire
+
+  right_flipper:
+    main_coil: c_flipper_right_full
+    hold_coil: c_flipper_right_hold
+    eos_switch: s_right_flipper_eos
+    activation_switch: s_right_flipper
+    enable_events: ball_started, enableAutofire
+    disable_events: ball_will_end, service_mode_entered, disableAutofire
+
+ball_devices:
+  bd_trough:
+
+    ball_switches: s_trough_ball_1, s_trough_ball_2, s_trough_ball_3
+    tags: trough, home, drain
+    eject_coil: c_trough_eject
+    eject_coil_jam_pulse: 15ms
+    eject_targets: bd_plunger
+    eject_timeouts: 2s
+
+  bd_plunger:
+    ball_switches: s_plunger
+    mechanical_eject: true
+    eject_timeouts: 5s
