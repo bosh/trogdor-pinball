@@ -47,14 +47,14 @@ switches:
   #   number: 3208-17
   #   type: 'NC'
 
-  # s_trough_ball_2:
-  #   number: 3208-18
+  s_trough_ball_2:
+    number: 3208-18
 
-  # s_trough_ball_3:
-  #   number: 3208-19
+  s_trough_ball_3:
+    number: 3208-19
 
-  # s_trough_ball_4:
-  #   number: 3208-20
+  s_trough_ball_4:
+    number: 3208-20
 
 
 #Cabinet switches FUTURE

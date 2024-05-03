@@ -3,7 +3,7 @@
 bcp:
   connections:
     local_display:
-      port: 5050
+      # port: 5050
 
 hardware:
     platform: fast
@@ -11,21 +11,26 @@ hardware:
 fast:
   net:
     controller: neuron
-    port: COM5
     io_loop:
 
       3208:
         model: FP-I/O-3208
         order: 1
 
-      # 0024:
+      # "0024":
       #   model: FP-I/O-0024
       #   order: 2
+  exp:
+    boards:
+      neuron:
+        model: FP-EXP-2000
+      # playfield:
+      #   model: FP-EXP-0071
 
 window:
   width: 1600
   height: 900
-  title: Trogdor Display Window
+  title: Videlectrix
   fullscreen: false
   resizable: false
   borderless: true
@@ -47,10 +52,9 @@ config:
   - switches.yaml
 
 playfields:
-  #Define your playfields
-  # playfield:
-  #   default_source_device: bd_plunger
-  #   tags: default
+  playfield:
+    default_source_device: bd_plunger
+    tags: default
 
 machine:
   balls_installed: 3
@@ -82,8 +86,9 @@ flippers:
 
 ball_devices:
   bd_trough:
-
-    ball_switches: s_trough_ball_1, s_trough_ball_2, s_trough_ball_3
+    # TODO make the opto work instead of pretending the offset count works
+    # ball_switches: s_trough_ball_1, s_trough_ball_2, s_trough_ball_3
+    ball_switches: s_trough_ball_2, s_trough_ball_3, s_trough_ball_4
     tags: trough, home, drain
     eject_coil: c_trough_eject
     eject_coil_jam_pulse: 15ms
