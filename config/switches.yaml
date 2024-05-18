@@ -7,7 +7,7 @@
 switches:
 
 #3208 Board
-## Block A
+## Block D
   s_right_outer_lane:
     number: 3208-25
 
@@ -38,14 +38,14 @@ switches:
   s_left_sling: # Parallel switch pair
     number: 3208-15
 
-## Block C #FUTURE
-  # s_trough_ball_jam:
-  #   number: 3208-16
-  #   type: 'NC'
+## Block C
+  s_trough_ball_jam:
+    number: 3208-16
+    type: 'NC'
 
-  # s_trough_ball_1:
-  #   number: 3208-17
-  #   type: 'NC'
+  s_trough_ball_1:
+    number: 3208-17
+    type: 'NC'
 
   s_trough_ball_2:
     number: 3208-18
@@ -56,18 +56,29 @@ switches:
   s_trough_ball_4:
     number: 3208-20
 
+  s_trough_ball_5:
+    number: 3208-21
 
-#Cabinet switches FUTURE
-#TODO check the board number as 0024 or smth else
-  # s_right_flipper:
-  #   number: 0024-0
-  #   tags: flipper_right
+#Cabinet switches WHILE ON 3208!
+## Block A
+  s_mini_flipper:
+    number: 3208-0
+    tags: mini_flipper #TODO check what the tags do for upper/mini
 
-  # s_left_flipper:
-  #   number: 0024-1
-  #   tags: flipper_left
+  s_left_flipper:
+    number: 3208-1
+    tags: left_flipper
 
+  s_right_flipper:
+    number: 3208-3
+    tags: right_flipper
 
-  # s_start:
-  #   number: 0024-4
-  #   tags: start
+  s_start:
+    number: 3208-4
+    tags: start
+
+#1616 Board
+## Block A
+  # s_mini_flipper_eos:
+  #   number: 1616-X
+  #   type: 'NC'

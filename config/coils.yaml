@@ -24,6 +24,7 @@ coils:
   c_flipper_right_hold:
     number: 3208-3
     default_hold_power: .125
+    allow_enable: true
 
   c_right_sling:
     number: 3208-4
@@ -37,10 +38,19 @@ coils:
   c_flipper_left_hold:
     number: 3208-6
     default_hold_power: .125
+    allow_enable: true
 
   c_flipper_left_full:
     number: 3208-7
     default_pulse_ms: 30
+
+#TODO
+#Board 1616
+#  c_flipper_mini_hold:
+#    number: 1616-1
+#    allow_enable: true
+#  c_flipper_mini_full:
+#    number: 1616-2
 
 
 #Autofire devices are defined here by switch and what coil is cycled when that switch is active.

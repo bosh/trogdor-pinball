@@ -1,8 +1,24 @@
 #config_version=6
 
-#led name can be anything you want, the number is the board its on playfield, port 1, led 1 in the chain. For the 2nd led, it would be number: playfield-1-2
+led name can be anything you want, 
+the number is the board its on playfield,
+#port 1, led 1 in the chain.
+#For the 2nd led, it would be number: playfield-1-2
+
 lights:
-#  shoot_again:
-#    number: playfield-1-1
-#    type: rgb
- 
+  demo_one:
+    number: exp_playfield-1-1
+    type: rgb
+  demo_two:
+    number: exp_playfield-1-2
+    type: grb
+
+  mini_cab_mini:
+    number: exp_playfield-2-1
+    type: rgb
+  mini_cab_left:
+    number: exp_playfield-2-2
+    type: rgb
+  mini_cab_right:
+    number: exp_playfield-2-3
+    type: rgb

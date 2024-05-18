@@ -6,7 +6,7 @@ bcp:
       # port: 5050
 
 hardware:
-    platform: fast
+  platform: fast
 
 fast:
   net:
@@ -17,15 +17,22 @@ fast:
         model: FP-I/O-3208
         order: 1
 
+      # TODO: ready for 1616 upper board
+      # 1616:
+      #   model: FP-I/O-1616 #TODO check
+      #   order: 2
+
+      # TODO: ready for cabinet io board
       # "0024":
       #   model: FP-I/O-0024
-      #   order: 2
+      #   order: 3
+
   exp:
     boards:
       neuron:
         model: FP-EXP-2000
-      # playfield:
-      #   model: FP-EXP-0071
+      exp_playfield:
+        model: FP-EXP-0071
 
 window:
   width: 1600
@@ -68,32 +75,43 @@ modes:
   - attract
 
 flippers:
+
   left_flipper:
     main_coil: c_flipper_left_full
     hold_coil: c_flipper_left_hold
     activation_switch: s_left_flipper
     eos_switch: s_left_flipper_eos
-    enable_events: ball_started, enableAutofire
+    enable_events: ball_started, enableAutofire, machine_reset_phase_3 #P3 for testing
     disable_events: ball_will_end, service_mode_entered, disableAutofire
+
+  # mini_flipper:
+  #   main_coil: c_flipper_mini_full
+  #   hold_coil: c_flipper_mini_hold
+  #   activation_switch: s_mini_flipper
+  #   eos_switch: s_mini_flipper_eos
+  #   enable_events: ball_started, enableAutofire
+  #   disable_events: ball_will_end, service_mode_entered, disableAutofire
 
   right_flipper:
     main_coil: c_flipper_right_full
     hold_coil: c_flipper_right_hold
     eos_switch: s_right_flipper_eos
     activation_switch: s_right_flipper
-    enable_events: ball_started, enableAutofire
+    enable_events: ball_started, enableAutofire, machine_reset_phase_3 #P3 for testing
     disable_events: ball_will_end, service_mode_entered, disableAutofire
 
 ball_devices:
+  #TODO do i need to declare the playfield as a ball device?
+
   bd_trough:
-    # TODO make the opto work instead of pretending the offset count works
-    # ball_switches: s_trough_ball_1, s_trough_ball_2, s_trough_ball_3
-    ball_switches: s_trough_ball_2, s_trough_ball_3, s_trough_ball_4
+    ball_switches: s_trough_ball_1, s_trough_ball_2, s_trough_ball_3 #, s_trough_ball_4, s_trough_ball_5
     tags: trough, home, drain
     eject_coil: c_trough_eject
     eject_coil_jam_pulse: 15ms
+    jam_switch: s_trough_ball_jam
     eject_targets: bd_plunger
     eject_timeouts: 2s
+    debug: true
 
   bd_plunger:
     ball_switches: s_plunger
