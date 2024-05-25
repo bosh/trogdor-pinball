@@ -10,6 +10,7 @@ hardware:
 
 fast:
   net:
+    port: /dev/ttyACM0
     controller: neuron
     io_loop:
 
@@ -28,6 +29,7 @@ fast:
       #   order: 3
 
   exp:
+    port: /dev/ttyACM1
     boards:
       neuron:
         model: FP-EXP-2000

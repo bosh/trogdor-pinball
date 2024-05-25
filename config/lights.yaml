@@ -1,9 +1,9 @@
 #config_version=6
 
-led name can be anything you want, 
-the number is the board its on playfield,
-#port 1, led 1 in the chain.
-#For the 2nd led, it would be number: playfield-1-2
+# led name can be anything you want, 
+# the number is the board its on playfield,
+# port 1, led 1 in the chain.
+# For the 2nd led, it would be number: playfield-1-2
 
 lights:
   demo_one:
