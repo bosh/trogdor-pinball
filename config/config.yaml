@@ -86,13 +86,12 @@ flippers:
     enable_events: ball_started, enableAutofire, machine_reset_phase_3 #P3 for testing
     disable_events: ball_will_end, service_mode_entered, disableAutofire
 
-  # mini_flipper:
-  #   main_coil: c_flipper_mini_full
-  #   hold_coil: c_flipper_mini_hold
-  #   activation_switch: s_mini_flipper
-  #   eos_switch: s_mini_flipper_eos
-  #   enable_events: ball_started, enableAutofire
-  #   disable_events: ball_will_end, service_mode_entered, disableAutofire
+  mini_flipper_as_autolaunch:
+    main_coil: c_auto_plunger
+    hold_coil: c_auto_plunger
+    activation_switch: s_mini_flipper
+    enable_events: ball_started, enableAutofire
+    disable_events: ball_will_end, service_mode_entered, disableAutofire
 
   right_flipper:
     main_coil: c_flipper_right_full

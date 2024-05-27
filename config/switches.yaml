@@ -40,11 +40,11 @@ switches:
 
 ## Block C
   s_trough_ball_jam:
-    number: 3208-16
+    number: 3208-17
     type: 'NC'
 
   s_trough_ball_1:
-    number: 3208-17
+    number: 3208-16
     type: 'NC'
 
   s_trough_ball_2:

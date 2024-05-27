@@ -11,6 +11,7 @@ coils:
   c_auto_plunger:
     number: 3208-0
     default_pulse_ms: 15
+    default_hold_power: .125
 
   c_trough_eject:
     number: 3208-1
