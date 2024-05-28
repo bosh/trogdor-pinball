@@ -1,0 +1,78 @@
+#show_version=5
+
+- duration: 0.5s
+  lights:
+    l_demo_1: 0
+    l_demo_2: 0
+    l_mini_cab_mini: 0
+    l_mini_cab_left: 0
+    l_mini_cab_right: 0
+
+
+- duration: 0.5s
+  lights:
+    l_demo_1: ffffff
+    l_demo_2: 0
+    l_mini_cab_mini: ffffff
+    l_mini_cab_left: 0
+    l_mini_cab_right: ffffff
+
+- duration: 0.5s
+  lights:
+    l_demo_1: 0
+    l_demo_2: ffffff
+    l_mini_cab_mini: 0
+    l_mini_cab_left: ffffff
+    l_mini_cab_right: 0
+
+
+- duration: 0.5s
+  lights:
+    l_demo_1: ff0000
+    l_demo_2: 0
+    l_mini_cab_mini: ff0000
+    l_mini_cab_left: 0
+    l_mini_cab_right: ff0000
+
+- duration: 0.5s
+  lights:
+    l_demo_1: 0
+    l_demo_2: ff0000
+    l_mini_cab_mini: 0
+    l_mini_cab_left: ff0000
+    l_mini_cab_right: 0
+
+
+- duration: 0.5s
+  lights:
+    l_demo_1: 00ff00
+    l_demo_2: 0
+    l_mini_cab_mini: 00ff00
+    l_mini_cab_left: 0
+    l_mini_cab_right: 00ff00
+
+- duration: 0.5s
+  lights:
+    l_demo_1: 0
+    l_demo_2: 00ff00
+    l_mini_cab_mini: 0
+    l_mini_cab_left: 00ff00
+    l_mini_cab_right: 0
+
+
+- duration: 0.5s
+  lights:
+    l_demo_1: 0000ff
+    l_demo_2: 0
+    l_mini_cab_mini: 0000ff
+    l_mini_cab_left: 0
+    l_mini_cab_right: 0000ff
+
+- duration: 0.5s
+  lights:
+    l_demo_1: 0
+    l_demo_2: 0000ff
+    l_mini_cab_mini: 0
+    l_mini_cab_left: 0000ff
+    l_mini_cab_right: 0
+

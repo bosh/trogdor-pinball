@@ -6,19 +6,19 @@
 # For the 2nd led, it would be number: playfield-1-2
 
 lights:
-  demo_one:
+  l_demo_1:
     number: exp_playfield-1-1
     type: rgb
-  demo_two:
+  l_demo_2:
     number: exp_playfield-1-2
     type: grb
 
-  mini_cab_mini:
+  l_mini_cab_mini:
     number: exp_playfield-2-1
     type: rgb
-  mini_cab_left:
+  l_mini_cab_left:
     number: exp_playfield-2-2
     type: rgb
-  mini_cab_right:
+  l_mini_cab_right:
     number: exp_playfield-2-3
     type: rgb

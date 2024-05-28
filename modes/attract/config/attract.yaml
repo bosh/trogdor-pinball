@@ -7,3 +7,6 @@ slide_player:
   mode_attract_started:
     startup:
       action: remove
+
+show_player:
+  mode_attract_started: attract_light_loop
