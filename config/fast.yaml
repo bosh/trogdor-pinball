@@ -1,0 +1,32 @@
+#config_version=6
+
+hardware:
+  platform: fast
+
+fast:
+  net:
+    port: /dev/ttyACM0
+    controller: neuron
+    io_loop:
+
+      3208:
+        model: FP-I/O-3208
+        order: 1
+
+      # TODO: ready for 1616 upper board
+      # 1616:
+      #   model: FP-I/O-1616 #TODO check
+      #   order: 2
+
+      # TODO: ready for cabinet io board
+      # "0024":
+      #   model: FP-I/O-0024
+      #   order: 3
+
+  exp:
+    port: /dev/ttyACM1
+    boards:
+      neuron:
+        model: FP-EXP-2000
+      exp_playfield:
+        model: FP-EXP-0071

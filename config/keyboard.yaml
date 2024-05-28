@@ -1,0 +1,13 @@
+#config_version=6
+
+keyboard:
+  z:
+    switch: s_left_flipper
+  x:
+    switch: s_right_flipper
+  ' ':
+    switch: s_mini_flipper
+  a:
+    switch: s_left_sling
+  s:
+    switch: s_right_sling

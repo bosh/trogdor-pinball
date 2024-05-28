@@ -10,7 +10,7 @@ coils:
 #Board 3208 
   c_auto_plunger:
     number: 3208-0
-    default_pulse_ms: 15
+    default_pulse_ms: 12
     default_hold_power: .125
 
   c_trough_eject:
@@ -20,7 +20,7 @@ coils:
 
   c_flipper_right_full:
     number: 3208-2
-    default_pulse_ms: 30
+    default_pulse_ms: 25
 
   c_flipper_right_hold:
     number: 3208-3
@@ -29,12 +29,12 @@ coils:
 
   c_right_sling:
     number: 3208-4
-    default_pulse_ms: 25
+    default_pulse_ms: 20
 
 
   c_left_sling:
     number: 3208-5
-    default_pulse_ms: 25
+    default_pulse_ms: 20
 
   c_flipper_left_hold:
     number: 3208-6
@@ -43,7 +43,7 @@ coils:
 
   c_flipper_left_full:
     number: 3208-7
-    default_pulse_ms: 30
+    default_pulse_ms: 25
 
 #TODO
 #Board 1616
@@ -53,13 +53,3 @@ coils:
 #  c_flipper_mini_full:
 #    number: 1616-2
 
-
-#Autofire devices are defined here by switch and what coil is cycled when that switch is active.
-autofire_coils:
-  slingshot_left:
-    coil: c_left_sling
-    switch: s_left_sling
-
-  slingshot_right:
-    coil: c_right_sling
-    switch: s_right_sling

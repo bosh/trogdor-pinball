@@ -1,0 +1,37 @@
+#config_version=6
+
+#Autofire devices are defined here by switch and what coil is cycled when that switch is active.
+autofire_coils:
+  slingshot_left:
+    coil: c_left_sling
+    switch: s_left_sling
+
+  slingshot_right:
+    coil: c_right_sling
+    switch: s_right_sling
+
+#Flippers are complex autofires
+flippers:
+  left_flipper:
+    main_coil: c_flipper_left_full
+    hold_coil: c_flipper_left_hold
+    activation_switch: s_left_flipper
+    eos_switch: s_left_flipper_eos
+    enable_events: ball_started, enableAutofire, machine_reset_phase_3 #P3 for testing
+    disable_events: ball_will_end, service_mode_entered, disableAutofire
+
+  mini_flipper_as_autolaunch:
+    main_coil: c_auto_plunger
+    hold_coil: c_auto_plunger
+    activation_switch: s_mini_flipper
+    enable_events: ball_started, enableAutofire
+    disable_events: ball_will_end, service_mode_entered, disableAutofire
+
+  right_flipper:
+    main_coil: c_flipper_right_full
+    hold_coil: c_flipper_right_hold
+    eos_switch: s_right_flipper_eos
+    activation_switch: s_right_flipper
+    enable_events: ball_started, enableAutofire, machine_reset_phase_3 #P3 for testing
+    disable_events: ball_will_end, service_mode_entered, disableAutofire
+

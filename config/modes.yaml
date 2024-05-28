@@ -1,0 +1,5 @@
+#config_version=6
+
+modes:
+  - base
+  - attract

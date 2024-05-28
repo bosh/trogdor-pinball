@@ -1,0 +1,25 @@
+#config_version=6
+
+bcp:
+  connections:
+    local_display:
+      # port: 5050
+
+window:
+  width: 1600
+  height: 900
+  title: Videlectrix
+  fullscreen: false
+  resizable: false
+  borderless: true
+  exit_on_escape: true
+  no_window: false
+  show_cursor: no
+
+displays:
+  window:
+    width: 1600
+    height: 900
+  display1:
+    width: 1600
+    height: 900
