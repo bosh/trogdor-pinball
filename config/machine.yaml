@@ -6,8 +6,3 @@ machine:
 game:
   balls_per_game: 3
   max_players: 1
-
-playfields:
-  playfield:
-    default_source_device: bd_plunger
-    tags: default

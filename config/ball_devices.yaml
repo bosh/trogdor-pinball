@@ -17,3 +17,8 @@ ball_devices:
     ball_switches: s_plunger
     mechanical_eject: true
     eject_timeouts: 5s
+
+playfields:
+  playfield:
+    default_source_device: bd_plunger
+    tags: default

@@ -10,9 +10,11 @@ switches:
 ## Block D
   s_right_outer_lane:
     number: 3208-25
+    tags: playfield_active
 
   s_right_inner_lane:
     number: 3208-26
+    tags: playfield_active
 
   s_right_flipper_eos:
     number: 3208-28
@@ -20,6 +22,7 @@ switches:
 
   s_right_sling: # Parallel switch pair
     number: 3208-29
+    tags: playfield_active
 
   s_plunger: # shooter lane presence
     number: 3208-31
@@ -27,9 +30,11 @@ switches:
 ## Block B
   s_left_outer_lane:
     number: 3208-11
+    tags: playfield_active
 
   s_left_inner_lane:
     number: 3208-12
+    tags: playfield_active
 
   s_left_flipper_eos:
     number: 3208-13
@@ -37,6 +42,7 @@ switches:
 
   s_left_sling: # Parallel switch pair
     number: 3208-15
+    tags: playfield_active
 
 ## Block C
   s_trough_ball_jam:
@@ -82,3 +88,9 @@ switches:
   # s_mini_flipper_eos:
   #   number: 1616-X
   #   type: 'NC'
+
+
+virtual_platform_start_active_switches:
+  - s_trough_ball_1
+  - s_trough_ball_2
+  - s_trough_ball_3

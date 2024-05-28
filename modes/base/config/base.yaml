@@ -1,1 +1,29 @@
 #config_version=6
+
+mode:
+  start_events: ball_started
+  priority: 100
+
+player_vars:
+  sling_hits:
+    initial_value: 0
+
+variable_player:
+
+  s_left_outer_lane_active:
+    score: 999
+  s_left_inner_lane_active:
+    score: 100
+
+  s_right_inner_lane_active:
+    score: 100
+  s_right_outer_lane_active:
+    score: 999
+
+
+  s_left_sling_active:
+    score: 25
+    sling_hits: 1
+  s_right_sling_active:
+    score: 50
+    sling_hits: 1
