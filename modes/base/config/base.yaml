@@ -46,10 +46,7 @@ accruals:
       - s_left_flipper_active
       - s_right_flipper_active
       - s_start_active
-    disable_events:
-      - s_left_flipper_inactive
-      - s_right_flipper_inactive
-      - s_start_inactive
+    disable_events: s_left_flipper_inactive, s_right_flipper_inactive, s_start_inactive
     disable_on_complete: false
     events_when_complete: mini_cabinet_multiball_qualified
 

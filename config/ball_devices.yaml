@@ -17,9 +17,11 @@ ball_devices:
     ball_switches: s_plunger
     mechanical_eject: true
     eject_timeouts: 5s
+    eject_coil: c_auto_plunger
+    player_controlled_eject_event: s_mini_flipper_active
 
 playfields:
   playfield:
     default_source_device: bd_plunger
     tags: default
-    enable_ball_search: true
+    enable_ball_search: false
