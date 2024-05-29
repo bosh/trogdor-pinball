@@ -24,6 +24,22 @@ variable_player:
     score: 50
     sling_hits: 1
 
+  slings_l2r_hit:
+    score: 250
+
+  slings_r2l_hit:
+    score: 555
+
+
+sequence_shots:
+  slings_l2r:
+    switch_sequence: s_left_sling, s_right_sling
+    sequence_timeout: 300ms
+  slings_r2l:
+    switch_sequence: s_right_sling, s_left_sling
+    sequence_timeout: 300ms
+
+
 accruals:
   cab_three_button_reset:
     events:
@@ -50,3 +66,14 @@ multiballs:
     disable_events: ball_ending
     start_events: mini_cabinet_multiball_qualified
     shoot_again: 7000ms
+
+ball_saves:
+  default:
+    active_time: 5s
+    hurry_up_time: 2s
+    grace_period: 2s
+    enable_events: mode_base_started
+    timer_start_events: balldevice_bd_plunger_ball_eject_success
+    auto_launch: true
+    balls_to_save: 1
+    debug: true

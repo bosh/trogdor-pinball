@@ -1,0 +1,5 @@
+#config_version=6
+
+player_vars:
+  sling_hits:
+    initial_value: 0
