@@ -1,0 +1,17 @@
+#show_version=6
+
+- duration: 300ms
+  lights:
+    lights_cab: 990099
+- duration: 300ms
+  lights:
+    lights_cab: aaaaaa
+- duration: 300ms
+  lights:
+    lights_cab: 990099
+- duration: 300ms
+  lights:
+    lights_cab: aaaaaa
+- duration: 150ms
+  lights:
+    lights_cab: off

@@ -23,3 +23,30 @@ variable_player:
   s_right_sling_active:
     score: 50
     sling_hits: 1
+
+accruals:
+  cab_three_button_reset:
+    events:
+      - s_left_flipper_active
+      - s_right_flipper_active
+      - s_start_active
+    disable_events:
+      - s_left_flipper_inactive
+      - s_right_flipper_inactive
+      - s_start_inactive
+    disable_on_complete: false
+    events_when_complete: mini_cabinet_multiball_qualified
+
+show_player:
+  mini_cabinet_multiball_qualified:
+    cabinet_multiball_flash:
+      loops: 1
+
+multiballs:
+  cabinet_multiball:
+    ball_count: 3
+    ball_count_type: total
+    enable_events: playfield_active
+    disable_events: ball_ending
+    start_events: mini_cabinet_multiball_qualified
+    shoot_again: 7000ms
