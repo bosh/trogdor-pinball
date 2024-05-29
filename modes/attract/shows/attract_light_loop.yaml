@@ -1,78 +1,62 @@
 #show_version=6
 
-- duration: 0.5s
+- duration: 750ms #All off
   lights:
-    l_demo_1: 0
-    l_demo_2: 0
-    l_mini_cab_mini: 0
-    l_mini_cab_left: 0
-    l_mini_cab_right: 0
+    lights_all: 0
 
-
-- duration: 0.5s
+- duration: 300ms #Ascend 3,7,10, off
   lights:
-    l_demo_1: ffffff
-    l_demo_2: 0
-    l_mini_cab_mini: ffffff
-    l_mini_cab_left: 0
-    l_mini_cab_right: ffffff
+    lights_all: 333333
 
-- duration: 0.5s
+- duration: 300ms
   lights:
-    l_demo_1: 0
-    l_demo_2: ffffff
-    l_mini_cab_mini: 0
-    l_mini_cab_left: ffffff
-    l_mini_cab_right: 0
+    lights_all: 777777
 
-
-- duration: 0.5s
+- duration: 300ms
   lights:
-    l_demo_1: ff0000
-    l_demo_2: 0
-    l_mini_cab_mini: ff0000
-    l_mini_cab_left: 0
-    l_mini_cab_right: ff0000
+    lights_all: aaaaaa
 
-- duration: 0.5s
+- duration: 100ms
   lights:
-    l_demo_1: 0
-    l_demo_2: ff0000
-    l_mini_cab_mini: 0
-    l_mini_cab_left: ff0000
-    l_mini_cab_right: 0
+    lights_all: 0
 
-
-- duration: 0.5s
+- duration: 500ms #flash PF and cab purples
   lights:
-    l_demo_1: 00ff00
-    l_demo_2: 0
-    l_mini_cab_mini: 00ff00
-    l_mini_cab_left: 0
-    l_mini_cab_right: 00ff00
+    lights_pf: 990099
 
-- duration: 0.5s
+- duration: 500ms
   lights:
-    l_demo_1: 0
-    l_demo_2: 00ff00
-    l_mini_cab_mini: 0
-    l_mini_cab_left: 00ff00
-    l_mini_cab_right: 0
+    lights_pf: 0
+    lights_cab: 990099
 
-
-- duration: 0.5s
+- duration: 500ms # flash a/b red, green, then blue
   lights:
-    l_demo_1: 0000ff
-    l_demo_2: 0
-    l_mini_cab_mini: 0000ff
-    l_mini_cab_left: 0
-    l_mini_cab_right: 0000ff
+    lights_a: ff0000
+    lights_b: 0
 
-- duration: 0.5s
+- duration: 500ms
   lights:
-    l_demo_1: 0
-    l_demo_2: 0000ff
-    l_mini_cab_mini: 0
-    l_mini_cab_left: 0000ff
-    l_mini_cab_right: 0
+    lights_a: 0
+    lights_b: ff0000
 
+
+- duration: 500ms
+  lights:
+    lights_a: 00ff00
+    lights_b: 0
+
+- duration: 500ms
+  lights:
+    lights_a: 0
+    lights_b: 00ff00
+
+
+- duration: 500ms
+  lights:
+    lights_a: 0000ff
+    lights_b: 0
+
+- duration: 500ms
+  lights:
+    lights_a: 0
+    lights_b: 0000ff
