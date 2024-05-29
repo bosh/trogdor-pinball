@@ -4,10 +4,6 @@ mode:
   start_events: ball_started
   priority: 100
 
-player_vars:
-  sling_hits:
-    initial_value: 0
-
 variable_player:
 
   s_left_outer_lane_active:

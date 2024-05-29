@@ -22,7 +22,6 @@ switches:
 
   s_right_sling: # Parallel switch pair
     number: 3208-29
-    tags: playfield_active
 
   s_plunger: # shooter lane presence
     number: 3208-31
@@ -42,7 +41,6 @@ switches:
 
   s_left_sling: # Parallel switch pair
     number: 3208-15
-    tags: playfield_active
 
 ## Block C
   s_trough_ball_jam:

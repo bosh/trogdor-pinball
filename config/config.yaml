@@ -11,3 +11,9 @@ config:
   - autofires.yaml
   - ball_devices.yaml
   - modes.yaml
+  
+player_vars:
+  sling_hits:
+    initial_value: 0
+
+
