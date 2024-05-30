@@ -27,6 +27,9 @@ switches:
     number: 3208-31
 
 ## Block B
+  s_high_voltage_status:
+    number: 3208-8
+
   s_left_outer_lane:
     number: 3208-11
     tags: playfield_active
