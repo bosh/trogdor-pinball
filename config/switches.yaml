@@ -70,7 +70,7 @@ switches:
 ## Block A
   s_mini_flipper:
     number: 3208-0
-    tags: mini_flipper #TODO check what the tags do for upper/mini
+    tags: mini_flipper
 
   s_left_flipper:
     number: 3208-1

@@ -5,8 +5,9 @@ mode:
   priority: 100
 
 variable_player:
+  #Simple lane scoring
   s_left_outer_lane_active:
-    score: 999
+    score: 999 #Outers score more because ball ends
   s_left_inner_lane_active:
     score: 100
 
@@ -15,16 +16,17 @@ variable_player:
   s_right_outer_lane_active:
     score: 999
 
-
+  #Simple sling scoring with sling counter
   s_left_sling_active:
-    score: 25
+    score: 25 #Left scores less because plunge to left is common
     sling_hits: 1
   s_right_sling_active:
     score: 50
     sling_hits: 1
 
+  #Hooks for sling sequence pairs
   slings_l2r_hit:
-    score: 250
+    score: 250 #Sequence starting with left scores less because plunge start
 
   slings_r2l_hit:
     score: 555
@@ -37,23 +39,6 @@ sequence_shots:
   slings_r2l:
     switch_sequence: s_right_sling, s_left_sling
     sequence_timeout: 300ms
-
-
-accruals:
-  cab_three_button_reset:
-    events:
-      - s_left_flipper_active
-      - s_right_flipper_active
-      - s_start_active
-    disable_events: s_left_flipper_inactive, s_right_flipper_inactive, s_start_inactive
-    disable_on_complete: false
-    events_when_complete: mini_cabinet_multiball_qualified
-
-show_player:
-  mini_cabinet_multiball_qualified:
-    cabinet_multiball_flash:
-      loops: 1
-
 
 light_player:
   # Sequence: flipper button, flipper coil to EOS, flipper button release
@@ -79,6 +64,19 @@ light_player:
     l_mini_cab_mini: 0000ff
   s_mini_flipper_inactive:
     l_mini_cab_mini: off
+
+combo_switches:
+  cab_two_button_reset: # Press both cab buttons to max for 2.5s to trigger multiball
+    events_both: mini_cabinet_multiball_qualified
+    switch_1: s_mini_flipper
+    switch_2: s_right_flipper
+    hold_time: 2500ms
+    max_offset_time: 200ms
+
+show_player:
+  mini_cabinet_multiball_qualified:
+    cabinet_multiball_flash:
+      loops: 1 # Should play TWICE
 
 multiballs:
   cabinet_multiball:
