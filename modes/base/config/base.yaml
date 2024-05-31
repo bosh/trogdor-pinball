@@ -5,7 +5,6 @@ mode:
   priority: 100
 
 variable_player:
-
   s_left_outer_lane_active:
     score: 999
   s_left_inner_lane_active:
@@ -54,6 +53,32 @@ show_player:
   mini_cabinet_multiball_qualified:
     cabinet_multiball_flash:
       loops: 1
+
+
+light_player:
+  # Sequence: flipper button, flipper coil to EOS, flipper button release
+  s_left_flipper_active:
+    l_mini_cab_left: 000099
+  s_left_flipper_eos_active:
+    l_mini_cab_left: 0000ff
+  s_left_flipper_inactive:
+    l_mini_cab_left: off
+
+  # Sequence: flipper button, flipper coil to EOS, flipper button release
+  s_right_flipper_active:
+    l_mini_cab_right: 000099
+  s_right_flipper_eos_active:
+    l_mini_cab_right: 0000ff
+  s_right_flipper_inactive:
+    l_mini_cab_right: off
+
+  # Sequence: ball sent to plunge lane, flipper button, no EOS, (clear lane), flipper button release
+  s_plunger_active:
+    l_mini_cab_mini: 00ff00
+  s_mini_flipper_active:
+    l_mini_cab_mini: 0000ff
+  s_mini_flipper_inactive:
+    l_mini_cab_mini: off
 
 multiballs:
   cabinet_multiball:
