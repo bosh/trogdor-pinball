@@ -1,6 +1,7 @@
 #config_version=6
 
 config:
+  - settings.yaml
   - fast.yaml
   - displays.yaml
   - machine.yaml
@@ -12,4 +13,3 @@ config:
   - ball_devices.yaml
   - modes.yaml
   - player_vars.yaml
-
