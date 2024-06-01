@@ -1,6 +1,13 @@
 #config_version=6
 
 light_player:
+  # High voltage status warn LED
+  "{device.switches.s_high_voltage_status.state == 0}":
+    l_pf_1: eee000
+  "{device.switches.s_high_voltage_status.state == 1}":
+    l_pf_1: ff0000
+
+
   #Minicab left status LED tracking button and EOS
   "{device.switches.s_left_flipper.state == 0 and device.switches.s_left_flipper_eos.state == 0}":
     l_mini_cab_left: off
