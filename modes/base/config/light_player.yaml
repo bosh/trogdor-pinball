@@ -1,27 +1,32 @@
 #config_version=6
 
 light_player:
-  # Sequence: flipper button, flipper coil to EOS, flipper button release
-  s_left_flipper_active:
-    l_mini_cab_left: 000066
-  s_left_flipper_eos_active:
-    l_mini_cab_left: 0044dd
-  s_left_flipper_inactive:
+  #Minicab left status LED tracking button and EOS
+  "{device.switches.s_left_flipper.state == 0 and device.switches.s_left_flipper_eos.state == 0}":
     l_mini_cab_left: off
+  "{device.switches.s_left_flipper.state == 1 and device.switches.s_left_flipper_eos.state == 0}":
+    l_mini_cab_left: 000099
+  "{device.switches.s_left_flipper.state == 0 and device.switches.s_left_flipper_eos.state == 1}":
+    l_mini_cab_left: 990000
+  "{device.switches.s_left_flipper.state == 1 and device.switches.s_left_flipper_eos.state == 1}":
+    l_mini_cab_left: cc00cc
 
-  #TODO actual logic should be: flipper active sets machine variable and minicab switch listens for that
-  #then flipper inactive unsets, eos active sets another var, inactive unsets, and each var controls one light channel R or B
-
-  # Sequence: flipper button, flipper coil to EOS, flipper button release
-  s_right_flipper_active:
-    l_mini_cab_right: 000066
-  s_right_flipper_eos_active:
-    l_mini_cab_right: 0044dd
-  s_right_flipper_inactive:
+  #Minicab right status LED tracking button and EOS
+  "{device.switches.s_right_flipper.state == 0 and device.switches.s_right_flipper_eos.state == 0}":
     l_mini_cab_right: off
+  "{device.switches.s_right_flipper.state == 1 and device.switches.s_right_flipper_eos.state == 0}":
+    l_mini_cab_right: 000099
+  "{device.switches.s_right_flipper.state == 0 and device.switches.s_right_flipper_eos.state == 1}":
+    l_mini_cab_right: 990000
+  "{device.switches.s_right_flipper.state == 1 and device.switches.s_right_flipper_eos.state == 1}":
+    l_mini_cab_right: cc00cc
 
-  # Sequence: ball sent to plunge lane, flipper button, no EOS, (clear lane), flipper button release
-  s_mini_flipper_active:
-    l_mini_cab_mini: 0000ff
-  s_mini_flipper_inactive:
-    l_mini_cab_mini: off
+  #Minicab trough status LED tracking plunger switch and mini flip button
+  "{device.switches.s_plunger.state == 0 and device.switches.s_mini_flipper.state == 0}":
+    l_mini_cab_right: off
+  "{device.switches.s_plunger.state == 1 and device.switches.s_mini_flipper.state == 0}":
+    l_mini_cab_right: 009900
+  "{device.switches.s_plunger.state == 0 and device.switches.s_mini_flipper.state == 1}":
+    l_mini_cab_right: 990000
+  "{device.switches.s_plunger.state == 1 and device.switches.s_mini_flipper.state == 1}":
+    l_mini_cab_right: cccc00
