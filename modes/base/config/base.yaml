@@ -67,9 +67,9 @@ light_player:
 
 combo_switches:
   cab_two_button_reset: # Press both cab buttons to max for 2.5s to trigger multiball
-    events_both: mini_cabinet_multiball_qualified
-    switch_1: s_mini_flipper
-    switch_2: s_right_flipper
+    events_when_both: mini_cabinet_multiball_qualified
+    switches_1: s_mini_flipper
+    switches_2: s_right_flipper
     hold_time: 2500ms
     max_offset_time: 200ms
 
