@@ -1,5 +1,6 @@
 #config_version=6
-slide_player:
+
+slide_player: #For GMC
   mode_attract_starting:
     attract:
       action: play
@@ -9,4 +10,11 @@ slide_player:
       action: remove
 
 show_player:
-  mode_attract_started: attract_light_loop
+  mode_attract_started:
+    attract_light_loop: play
+  mode_attract_will_stop:
+    attract_light_loop: stop
+
+light_player:
+  mode_attract_stopping: #Clear lights after light loop stop
+    lights_all: off

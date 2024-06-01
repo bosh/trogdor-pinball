@@ -1,0 +1,24 @@
+#config_version=6
+
+multiballs:
+  cabinet_multiball:
+    ball_count: 3
+    ball_count_type: total
+    enable_events: playfield_active
+    disable_events: ball_ending
+    start_events: mini_cabinet_multiball_qualified
+    shoot_again: 7000ms
+
+combo_switches:
+  cab_two_button_reset: # Press both cab buttons to max for 2.5s to trigger multiball
+    events_when_both: mini_cabinet_multiball_qualified
+    switches_1: s_mini_flipper
+    switches_2: s_right_flipper
+    hold_time: 2500ms
+    max_offset_time: 200ms
+
+show_player:
+  mini_cabinet_multiball_qualified:
+    cabinet_multiball_flash:
+      loops: 1 # Should play TWICE
+

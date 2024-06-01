@@ -2,7 +2,7 @@
 
 - duration: 750ms #All off
   lights:
-    lights_all: 0
+    lights_all: off
 
 - duration: 300ms #Ascend 3,7,10, off
   lights:
@@ -18,7 +18,7 @@
 
 - duration: 100ms
   lights:
-    lights_all: 0
+    lights_all: off
 
 - duration: 500ms #flash PF and cab purples
   lights:
@@ -26,37 +26,37 @@
 
 - duration: 500ms
   lights:
-    lights_pf: 0
+    lights_pf: off
     lights_cab: 990099
 
 - duration: 500ms # flash a/b red, green, then blue
   lights:
     lights_a: ff0000
-    lights_b: 0
+    lights_b: off
 
 - duration: 500ms
   lights:
-    lights_a: 0
+    lights_a: off
     lights_b: ff0000
 
 
 - duration: 500ms
   lights:
     lights_a: 00ff00
-    lights_b: 0
+    lights_b: off
 
 - duration: 500ms
   lights:
-    lights_a: 0
+    lights_a: off
     lights_b: 00ff00
 
 
 - duration: 500ms
   lights:
     lights_a: 0000ff
-    lights_b: 0
+    lights_b: off
 
 - duration: 500ms
   lights:
-    lights_a: 0
+    lights_a: off
     lights_b: 0000ff

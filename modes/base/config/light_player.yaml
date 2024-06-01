@@ -1,0 +1,27 @@
+#config_version=6
+
+light_player:
+  # Sequence: flipper button, flipper coil to EOS, flipper button release
+  s_left_flipper_active:
+    l_mini_cab_left: 000066
+  s_left_flipper_eos_active:
+    l_mini_cab_left: 0044dd
+  s_left_flipper_inactive:
+    l_mini_cab_left: off
+
+  #TODO actual logic should be: flipper active sets machine variable and minicab switch listens for that
+  #then flipper inactive unsets, eos active sets another var, inactive unsets, and each var controls one light channel R or B
+
+  # Sequence: flipper button, flipper coil to EOS, flipper button release
+  s_right_flipper_active:
+    l_mini_cab_right: 000066
+  s_right_flipper_eos_active:
+    l_mini_cab_right: 0044dd
+  s_right_flipper_inactive:
+    l_mini_cab_right: off
+
+  # Sequence: ball sent to plunge lane, flipper button, no EOS, (clear lane), flipper button release
+  s_mini_flipper_active:
+    l_mini_cab_mini: 0000ff
+  s_mini_flipper_inactive:
+    l_mini_cab_mini: off
