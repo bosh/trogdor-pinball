@@ -38,33 +38,55 @@ lights:
   l_ring_a_1:
     number: exp_playfield-2-4
     type: rgb
-    tags: lights_a, lights_cab, lights_all, lights_ring_a
+    tags: lights_all, lights_ring_a, lights_a
+
   l_ring_a_2:
     number: exp_playfield-2-5
-    type: rgb
-    tags: lights_b, lights_cab, lights_all, lights_ring_a
-  l_ring_a_3:
-    number: exp_playfield-2-6
-    type: rgb
-    tags: lights_a, lights_cab, lights_all, lights_ring_a
+    type: gwr
+    tags: lights_all, lights_ring_a, lights_a
+
   l_ring_a_4:
-    number: exp_playfield-2-7
-    type: rgb
-    tags: lights_b, lights_cab, lights_all, lights_ring_a
+    number: exp_playfield-2-6
+    type: wbg
+    tags: lights_all, lights_ring_a, lights_a
+
   l_ring_a_5:
+    number: exp_playfield-2-7
+    type: brw
+    tags: lights_all, lights_ring_a, lights_a
+
+  l_ring_a_6:
     number: exp_playfield-2-8
     type: rgb
-    tags: lights_a, lights_cab, lights_all, lights_ring_a
-  l_ring_a_6:
-    number: exp_playfield-2-9
-    type: rgb
-    tags: lights_b, lights_cab, lights_all, lights_ring_a
+    tags: lights_all, lights_ring_a, lights_a
+
   l_ring_a_7:
-    number: exp_playfield-2-10
-    type: rgb
-    tags: lights_a, lights_cab, lights_all, lights_ring_a
+    number: exp_playfield-2-9
+    type: gwr
+    tags: lights_all, lights_ring_a, lights_a
+
   l_ring_a_8:
+    number: exp_playfield-2-10
+    type: wbg
+    tags: lights_all, lights_ring_a, lights_a
+
+  l_ring_a_9:
     number: exp_playfield-2-11
+    type: brw
+    tags: lights_all, lights_ring_a, lights_a
+
+  l_ring_a_10:
+    number: exp_playfield-2-12
     type: rgb
-    tags: lights_b, lights_cab, lights_all, lights_ring_a
+    tags: lights_all, lights_ring_a, lights_a
+
+  l_ring_a_11:
+    number: exp_playfield-2-13
+    type: gwr
+    tags: lights_all, lights_ring_a, lights_a
+
+  l_ring_a_12:
+    number: exp_playfield-2-14
+    type: wbr #r is unused and will steal from the next LED
+    tags: lights_all, lights_ring_a, lights_a
 
