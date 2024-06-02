@@ -12,7 +12,7 @@ light_player:
   "{device.switches.s_left_flipper.state == 0 and device.switches.s_left_flipper_eos.state == 0}":
     l_mini_cab_left: off
   "{device.switches.s_left_flipper.state == 1 and device.switches.s_left_flipper_eos.state == 0}":
-    l_mini_cab_left: 000099
+    l_mini_cab_left: "000099"
   "{device.switches.s_left_flipper.state == 0 and device.switches.s_left_flipper_eos.state == 1}":
     l_mini_cab_left: 990000
   "{device.switches.s_left_flipper.state == 1 and device.switches.s_left_flipper_eos.state == 1}":
@@ -22,7 +22,7 @@ light_player:
   "{device.switches.s_right_flipper.state == 0 and device.switches.s_right_flipper_eos.state == 0}":
     l_mini_cab_right: off
   "{device.switches.s_right_flipper.state == 1 and device.switches.s_right_flipper_eos.state == 0}":
-    l_mini_cab_right: 000099
+    l_mini_cab_right: "000099"
   "{device.switches.s_right_flipper.state == 0 and device.switches.s_right_flipper_eos.state == 1}":
     l_mini_cab_right: 990000
   "{device.switches.s_right_flipper.state == 1 and device.switches.s_right_flipper_eos.state == 1}":
@@ -30,55 +30,26 @@ light_player:
 
   #Minicab trough status LED tracking plunger switch and mini flip button
   "{device.switches.s_plunger.state == 0 and device.switches.s_mini_flipper.state == 0}":
-    l_mini_cab_right: off
+    l_mini_cab_mini: off
   "{device.switches.s_plunger.state == 1 and device.switches.s_mini_flipper.state == 0}":
-    l_mini_cab_right: 009900
+    l_mini_cab_mini: "009900"
   "{device.switches.s_plunger.state == 0 and device.switches.s_mini_flipper.state == 1}":
-    l_mini_cab_right: 990000
+    l_mini_cab_mini: 990000
   "{device.switches.s_plunger.state == 1 and device.switches.s_mini_flipper.state == 1}":
-    l_mini_cab_right: cccc00
+    l_mini_cab_mini: cccc00
 
 
   # Trough status GI light
   "{device.switches.s_trough_ball_jam.state == 1}":
     l_pf_2: cc3333
-  "{device.switches.s_trough_ball_jam.state == 0
-    and device.switches.s_trough_ball_1.state
-    + device.switches.s_trough_ball_2.state
-    + device.switches.s_trough_ball_3.state
-    + device.switches.s_trough_ball_4.state
-    + device.switches.s_trough_ball_5.state
-    == 0}":
+  "{device.switches.s_trough_ball_jam.state == 0 and device.switches.s_trough_ball_1.state + device.switches.s_trough_ball_2.state + device.switches.s_trough_ball_3.state + device.switches.s_trough_ball_4.state + device.switches.s_trough_ball_5.state == 0}":
     l_pf_2: ff0000 #Empty is red
-  "{device.switches.s_trough_ball_jam.state == 0
-    and device.switches.s_trough_ball_1.state
-    + device.switches.s_trough_ball_2.state
-    + device.switches.s_trough_ball_3.state
-    + device.switches.s_trough_ball_4.state
-    + device.switches.s_trough_ball_5.state
-    == 1}":
+  "{device.switches.s_trough_ball_jam.state == 0 and device.switches.s_trough_ball_1.state + device.switches.s_trough_ball_2.state + device.switches.s_trough_ball_3.state + device.switches.s_trough_ball_4.state + device.switches.s_trough_ball_5.state == 1}":
     l_pf_2: 994400
-  "{device.switches.s_trough_ball_jam.state == 0
-    and device.switches.s_trough_ball_1.state
-    + device.switches.s_trough_ball_2.state
-    + device.switches.s_trough_ball_3.state
-    + device.switches.s_trough_ball_4.state
-    + device.switches.s_trough_ball_5.state
-    == 2}":
+  "{device.switches.s_trough_ball_jam.state == 0 and device.switches.s_trough_ball_1.state + device.switches.s_trough_ball_2.state + device.switches.s_trough_ball_3.state + device.switches.s_trough_ball_4.state + device.switches.s_trough_ball_5.state == 2}":
     l_pf_2: 557700
-  "{device.switches.s_trough_ball_jam.state == 0
-    and device.switches.s_trough_ball_1.state
-    + device.switches.s_trough_ball_2.state
-    + device.switches.s_trough_ball_3.state
-    + device.switches.s_trough_ball_4.state
-    + device.switches.s_trough_ball_5.state
-    == 3}":
+  "{device.switches.s_trough_ball_jam.state == 0 and device.switches.s_trough_ball_1.state + device.switches.s_trough_ball_2.state + device.switches.s_trough_ball_3.state + device.switches.s_trough_ball_4.state + device.switches.s_trough_ball_5.state == 3}":
     l_pf_2: 33aa00
-  "{device.switches.s_trough_ball_jam.state == 0
-    and device.switches.s_trough_ball_1.state
-    + device.switches.s_trough_ball_2.state
-    + device.switches.s_trough_ball_3.state
-    + device.switches.s_trough_ball_4.state
-    + device.switches.s_trough_ball_5.state
-    > 3}":
+  "{device.switches.s_trough_ball_jam.state == 0 and device.switches.s_trough_ball_1.state + device.switches.s_trough_ball_2.state + device.switches.s_trough_ball_3.state + device.switches.s_trough_ball_4.state + device.switches.s_trough_ball_5.state > 3}":
     l_pf_2: 0066ff #intended for 3 balls, so 4+ is unexpected blue state
+
