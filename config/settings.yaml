@@ -1,5 +1,8 @@
+#config_version=6
+
 settings:
   ball_search_enabled:
+    sort: 200
     label: Ball search enabled?
     values:
       0: "Disabled"
