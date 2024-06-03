@@ -1,8 +1,6 @@
 #config_version=6
 
 ball_devices:
-  #TODO do i need to declare the playfield as a ball device?
-
   bd_trough:
     ball_switches: s_trough_ball_1, s_trough_ball_2, s_trough_ball_3 #, s_trough_ball_4, s_trough_ball_5
     tags: trough, home, drain
@@ -24,6 +22,5 @@ playfields:
   playfield:
     default_source_device: bd_plunger
     tags: default
-    # enable_ball_search: settings.ball_search_enabled == 1
-    enable_ball_search: false
+    enable_ball_search: settings.ball_search_enabled
 

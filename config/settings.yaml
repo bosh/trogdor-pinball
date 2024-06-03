@@ -5,7 +5,8 @@ settings:
     sort: 200
     label: Ball search enabled?
     values:
-      0: "Disabled"
-      1: "Enabled"
-    default: 0
-    key_type: int
+      false: "Disabled"
+      true: "Enabled"
+    default: false
+    key_type: boolean
+
