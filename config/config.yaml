@@ -5,7 +5,8 @@ config:
   - fast.yaml
   - displays.yaml
   - machine.yaml
-  - lights.yaml
+  - minicab_lights.yaml
+  - pf_lights.yaml
   - coils.yaml
   - switches.yaml
   - keyboard.yaml
