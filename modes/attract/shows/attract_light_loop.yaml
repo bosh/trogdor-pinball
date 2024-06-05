@@ -2,23 +2,23 @@
 
 - duration: 750ms #All off
   lights:
-    lights_all: off
+    "*": off
 
 - duration: 300ms #Ascend 3,7,10, off
   lights:
-    lights_all: 333333
+    "*": 333333
 
 - duration: 300ms
   lights:
-    lights_all: 777777
+    "*": 777777
 
 - duration: 300ms
   lights:
-    lights_all: aaaaaa
+    "*": aaaaaa
 
 - duration: 100ms
   lights:
-    lights_all: off
+    "*": off
 
 - duration: 500ms #flash PF and cab purples
   lights:

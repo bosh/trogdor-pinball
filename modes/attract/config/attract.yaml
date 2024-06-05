@@ -17,4 +17,4 @@ show_player:
 
 light_player:
   mode_attract_stopping: #Clear lights after light loop stop
-    lights_all: off
+    "*": off #TODO Ernie says this shouldnt be necessary

@@ -13,58 +13,58 @@ lights:
   l_pf_1:
     number: exp_playfield-1-1
     type: rgb
-    tags: lights_a, lights_pf, lights_ci, lights_all
+    tags: lights_a, lights_pf, lights_ci
   l_pf_2:
     number: exp_playfield-1-2
     type: grb
-    tags: lights_b, lights_pf, lights_gi, lights_all
+    tags: lights_b, lights_pf, lights_gi
 
   # EXP String 2 - mini cab
   l_mini_cab_mini:
     number: exp_playfield-2-1
     type: rgb
-    tags: lights_a, lights_cab, lights_all
+    tags: lights_a, lights_cab
 
   l_mini_cab_left:
     number: exp_playfield-2-2
     type: rgb
-    tags: lights_b, lights_cab, lights_all
+    tags: lights_b, lights_cab
 
   l_mini_cab_right:
     number: exp_playfield-2-3
     type: rgb
-    tags: lights_a, lights_cab, lights_all
+    tags: lights_a, lights_cab
 
   l_ring_a_1:
     number: exp_playfield-2-4
     type: rgb
-    tags: lights_a, lights_cab, lights_all, lights_ring_a
+    tags: lights_a, lights_cab, lights_ring_a
   l_ring_a_2:
     number: exp_playfield-2-5
     type: rgb
-    tags: lights_b, lights_cab, lights_all, lights_ring_a
+    tags: lights_b, lights_cab, lights_ring_a
   l_ring_a_3:
     number: exp_playfield-2-6
     type: rgb
-    tags: lights_a, lights_cab, lights_all, lights_ring_a
+    tags: lights_a, lights_cab, lights_ring_a
   l_ring_a_4:
     number: exp_playfield-2-7
     type: rgb
-    tags: lights_b, lights_cab, lights_all, lights_ring_a
+    tags: lights_b, lights_cab, lights_ring_a
   l_ring_a_5:
     number: exp_playfield-2-8
     type: rgb
-    tags: lights_a, lights_cab, lights_all, lights_ring_a
+    tags: lights_a, lights_cab, lights_ring_a
   l_ring_a_6:
     number: exp_playfield-2-9
     type: rgb
-    tags: lights_b, lights_cab, lights_all, lights_ring_a
+    tags: lights_b, lights_cab, lights_ring_a
   l_ring_a_7:
     number: exp_playfield-2-10
     type: rgb
-    tags: lights_a, lights_cab, lights_all, lights_ring_a
+    tags: lights_a, lights_cab, lights_ring_a
   l_ring_a_8:
     number: exp_playfield-2-11
     type: rgb
-    tags: lights_b, lights_cab, lights_all, lights_ring_a
+    tags: lights_b, lights_cab, lights_ring_a
 
