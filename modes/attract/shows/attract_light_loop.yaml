@@ -20,43 +20,43 @@
   lights:
     "*": off
 
-- duration: 500ms #flash PF and cab purples
+- duration: 750ms #flash PF orange and cab purple
   lights:
-    lights_pf: 990099
+    lights_pf: 777700
 
-- duration: 500ms
+- duration: 750ms
   lights:
     lights_pf: off
-    lights_cab: 990099
+    lights_cab: 770077
 
 - duration: 500ms # flash a/b red, green, then blue
   lights:
-    lights_a: ff0000
+    lights_a: aa0000
     lights_b: off
 
 - duration: 500ms
   lights:
     lights_a: off
-    lights_b: ff0000
+    lights_b: aa0000
 
 
 - duration: 500ms
   lights:
-    lights_a: 00ff00
+    lights_a: 00aa00
     lights_b: off
 
 - duration: 500ms
   lights:
     lights_a: off
-    lights_b: 00ff00
+    lights_b: 00aa00
 
 
 - duration: 500ms
   lights:
-    lights_a: 0000ff
+    lights_a: 0000aa
     lights_b: off
 
 - duration: 500ms
   lights:
     lights_a: off
-    lights_b: 0000ff
+    lights_b: 0000aa
