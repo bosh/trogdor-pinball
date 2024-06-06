@@ -25,10 +25,8 @@ lights:
     type: rgb
     tags: lights_a, lights_cab
 
-
-
-  #Pop bumper light ring A - cobrapin rgbw four channel requires manual channeling
-  #Don't add more lights after it in a chain
+# Cobrapin Pop bumper light ring A - RGBW four channel requires manual channeling
+# Don't add more lights after it in a chain
 
 # The pattern appears to be as follows, repeating after 12 channels
 # 0-0 0-1 0-2 1-1
@@ -145,3 +143,4 @@ lights:
     #     number: exp_playfield-2-15-0
     #   white:
     #   number: exp_playfield-2-15-2
+  #or if it was back to rgb, probably 2-14-2, 2-15-0, 2-15-1
