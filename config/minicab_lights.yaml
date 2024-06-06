@@ -25,6 +25,11 @@ lights:
     type: rgb
     tags: lights_a, lights_cab
 
+
+
+  #Pop bumper light ring A - cobrapin rgbw four channel requires manual channeling
+  #Don't add more lights after it in a chain
+
 # The pattern appears to be as follows, repeating after 12 channels
 # 0-0 0-1 0-2 1-1
 # 1-2 1-0 2-1 2-0
@@ -34,11 +39,8 @@ lights:
 # 5-2 5-0 6-1 6-0
 # 7-1 6-2 7-0 7-2
 
-  #Light ring A - cobrapin rgbw four channel, requires hacking.
-  #Don't add more lights after it in a chain IMO
-
-  l_ring_a_1:
-    tags: lights_a, lights_cab, lights_ring_a
+  l_pop_ring_a_1:
+    tags: lights_a, lights_cab, lights_pop_ring_a
     channels:
       red:
         number: exp_playfield-2-4-0
@@ -49,8 +51,8 @@ lights:
       white:
         number: exp_playfield-2-5-1
 
-  l_ring_a_2:
-    tags: lights_b, lights_cab, lights_ring_a
+  l_pop_ring_a_2:
+    tags: lights_b, lights_cab, lights_pop_ring_a
     channels:
       red:
         number: exp_playfield-2-5-2
@@ -61,8 +63,8 @@ lights:
       white:
         number: exp_playfield-2-6-0
 
-  l_ring_a_3:
-    tags: lights_a, lights_cab, lights_ring_a
+  l_pop_ring_a_3:
+    tags: lights_a, lights_cab, lights_pop_ring_a
     channels:
       red:
         number: exp_playfield-2-7-1
@@ -73,8 +75,8 @@ lights:
       white:
         number: exp_playfield-2-7-2
 
-  l_ring_a_4:
-    tags: lights_b, lights_cab, lights_ring_a
+  l_pop_ring_a_4:
+    tags: lights_b, lights_cab, lights_pop_ring_a
     channels:
       red:
         number: exp_playfield-2-8-0
@@ -85,8 +87,8 @@ lights:
       white:
         number: exp_playfield-2-9-1
 
-  l_ring_a_5:
-    tags: lights_a, lights_cab, lights_ring_a
+  l_pop_ring_a_5:
+    tags: lights_a, lights_cab, lights_pop_ring_a
     channels:
       red:
         number: exp_playfield-2-9-2
@@ -97,8 +99,8 @@ lights:
       white:
         number: exp_playfield-2-10-0
 
-  l_ring_a_6:
-    tags: lights_b, lights_cab, lights_ring_a
+  l_pop_ring_a_6:
+    tags: lights_b, lights_cab, lights_pop_ring_a
     channels:
       red:
         number: exp_playfield-2-11-1
@@ -109,8 +111,8 @@ lights:
       white:
         number: exp_playfield-2-11-2
 
-  l_ring_a_7:
-    tags: lights_a, lights_cab, lights_ring_a
+  l_pop_ring_a_7:
+    tags: lights_a, lights_cab, lights_pop_ring_a
     channels:
       red:
         number: exp_playfield-2-12-0
@@ -121,8 +123,8 @@ lights:
       white:
         number: exp_playfield-2-13-1
 
-  l_ring_a_8:
-    tags: lights_b, lights_cab, lights_ring_a
+  l_pop_ring_a_8:
+    tags: lights_b, lights_cab, lights_pop_ring_a
     channels:
       red:
         number: exp_playfield-2-13-2
