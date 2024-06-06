@@ -25,36 +25,121 @@ lights:
     type: rgb
     tags: lights_a, lights_cab
 
-  l_ring_a_1:
-    number: exp_playfield-2-4
-    type: rgb
-    tags: lights_a, lights_cab, lights_ring_a
-  l_ring_a_2:
-    number: exp_playfield-2-5
-    type: rgb
-    tags: lights_b, lights_cab, lights_ring_a
-  l_ring_a_3:
-    number: exp_playfield-2-6
-    type: rgb
-    tags: lights_a, lights_cab, lights_ring_a
-  l_ring_a_4:
-    number: exp_playfield-2-7
-    type: rgb
-    tags: lights_b, lights_cab, lights_ring_a
-  l_ring_a_5:
-    number: exp_playfield-2-8
-    type: rgb
-    tags: lights_a, lights_cab, lights_ring_a
-  l_ring_a_6:
-    number: exp_playfield-2-9
-    type: rgb
-    tags: lights_b, lights_cab, lights_ring_a
-  l_ring_a_7:
-    number: exp_playfield-2-10
-    type: rgb
-    tags: lights_a, lights_cab, lights_ring_a
-  l_ring_a_8:
-    number: exp_playfield-2-11
-    type: rgb
-    tags: lights_b, lights_cab, lights_ring_a
+# The pattern appears to be as follows, repeating after 12 channels
+# 0-0 0-1 0-2 1-1
+# 1-2 1-0 2-1 2-0
+# 3-1 2-2 3-0 3-2
 
+# 4-0 4-1 4-2 5-1
+# 5-2 5-0 6-1 6-0
+# 7-1 6-2 7-0 7-2
+
+  #Light ring A - cobrapin rgbw four channel, requires hacking.
+  #Don't add more lights after it in a chain IMO
+
+  l_ring_a_1:
+    tags: lights_a, lights_cab, lights_ring_a
+    channels:
+      red:
+        number: exp_playfield-2-4-0
+      green:
+        number: exp_playfield-2-4-1
+      blue:
+        number: exp_playfield-2-4-2
+      white:
+        number: exp_playfield-2-5-1
+
+  l_ring_a_2:
+    tags: lights_b, lights_cab, lights_ring_a
+    channels:
+      red:
+        number: exp_playfield-2-5-2
+      green:
+        number: exp_playfield-2-5-0
+      blue:
+        number: exp_playfield-2-6-1
+      white:
+        number: exp_playfield-2-6-0
+
+  l_ring_a_3:
+    tags: lights_a, lights_cab, lights_ring_a
+    channels:
+      red:
+        number: exp_playfield-2-7-1
+      green:
+        number: exp_playfield-2-6-2
+      blue:
+        number: exp_playfield-2-7-0
+      white:
+        number: exp_playfield-2-7-2
+
+  l_ring_a_4:
+    tags: lights_b, lights_cab, lights_ring_a
+    channels:
+      red:
+        number: exp_playfield-2-8-0
+      green:
+        number: exp_playfield-2-8-1
+      blue:
+        number: exp_playfield-2-8-2
+      white:
+        number: exp_playfield-2-9-1
+
+  l_ring_a_5:
+    tags: lights_a, lights_cab, lights_ring_a
+    channels:
+      red:
+        number: exp_playfield-2-9-2
+      green:
+        number: exp_playfield-2-9-0
+      blue:
+        number: exp_playfield-2-10-1
+      white:
+        number: exp_playfield-2-10-0
+
+  l_ring_a_6:
+    tags: lights_b, lights_cab, lights_ring_a
+    channels:
+      red:
+        number: exp_playfield-2-11-1
+      green:
+        number: exp_playfield-2-10-2
+      blue:
+        number: exp_playfield-2-11-0
+      white:
+        number: exp_playfield-2-11-2
+
+  l_ring_a_7:
+    tags: lights_a, lights_cab, lights_ring_a
+    channels:
+      red:
+        number: exp_playfield-2-12-0
+      green:
+        number: exp_playfield-2-12-1
+      blue:
+        number: exp_playfield-2-12-2
+      white:
+        number: exp_playfield-2-13-1
+
+  l_ring_a_8:
+    tags: lights_b, lights_cab, lights_ring_a
+    channels:
+      red:
+        number: exp_playfield-2-13-2
+      green:
+        number: exp_playfield-2-13-0
+      blue:
+        number: exp_playfield-2-14-1
+      white:
+        number: exp_playfield-2-14-0
+
+  #next available is 2-14-2 but if the sequence was to hold, it would be
+    # channels:
+    #   red:
+    #     number: exp_playfield-2-15-1
+    #   green:
+    #     number: exp_playfield-2-14-2
+    #   blue:
+    #     number: exp_playfield-2-15-0
+    #   white:
+    #   number: exp_playfield-2-15-2
