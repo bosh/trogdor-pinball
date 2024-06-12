@@ -1,0 +1,76 @@
+#show_version=6
+
+# lights are l_pop_ring_a_1 - l_pop_ring_a_8, probably counterclockwise
+# tag is lights_pop_ring_a
+- duration: 100ms #Loop
+  lights:
+    l_pop_ring_a_4: 0a0000
+    l_pop_ring_a_5: 1a0000
+    l_pop_ring_a_6: 220000
+    l_pop_ring_a_7: 441000
+    l_pop_ring_a_8: 662a10
+    l_pop_ring_a_1: 883333
+
+- duration: 100ms
+  lights:
+    l_pop_ring_a_5: 0a0000
+    l_pop_ring_a_6: 1a0000
+    l_pop_ring_a_7: 220000
+    l_pop_ring_a_8: 441000
+    l_pop_ring_a_1: 662a10
+    l_pop_ring_a_2: 883333
+
+- duration: 100ms
+  lights:
+    l_pop_ring_a_6: 0a0000
+    l_pop_ring_a_7: 1a0000
+    l_pop_ring_a_8: 220000
+    l_pop_ring_a_1: 441000
+    l_pop_ring_a_2: 662a10
+    l_pop_ring_a_3: 883333
+
+- duration: 100ms
+  lights:
+    l_pop_ring_a_7: 0a0000
+    l_pop_ring_a_8: 1a0000
+    l_pop_ring_a_1: 220000
+    l_pop_ring_a_2: 441000
+    l_pop_ring_a_3: 662a10
+    l_pop_ring_a_4: 883333
+
+- duration: 100ms
+  lights:
+    l_pop_ring_a_8: 0a0000
+    l_pop_ring_a_1: 1a0000
+    l_pop_ring_a_2: 220000
+    l_pop_ring_a_3: 441000
+    l_pop_ring_a_4: 662a10
+    l_pop_ring_a_5: 883333
+
+- duration: 100ms
+  lights:
+    l_pop_ring_a_1: 0a0000
+    l_pop_ring_a_2: 1a0000
+    l_pop_ring_a_3: 220000
+    l_pop_ring_a_4: 441000
+    l_pop_ring_a_5: 662a10
+    l_pop_ring_a_6: 883333
+
+- duration: 100ms
+  lights:
+    l_pop_ring_a_2: 0a0000
+    l_pop_ring_a_3: 1a0000
+    l_pop_ring_a_4: 220000
+    l_pop_ring_a_5: 441000
+    l_pop_ring_a_6: 662a10
+    l_pop_ring_a_7: 883333
+
+- duration: 100ms
+  lights:
+    l_pop_ring_a_3: 0a0000
+    l_pop_ring_a_4: 1a0000
+    l_pop_ring_a_5: 220000
+    l_pop_ring_a_6: 441000
+    l_pop_ring_a_7: 662a10
+    l_pop_ring_a_8: 883333
+

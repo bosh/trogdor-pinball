@@ -1,6 +1,13 @@
 #config_version=6
 
+show_player:
+  mode_base_started:
+    light_ring_spinner: play
+  mode_base_will_stop:
+    light_ring_spinner: stop
+
 light_player:
+
   # High voltage status warn LED
   "{device.switches.s_high_voltage_status.state == 0}":
     l_pf_1: eee000
