@@ -1,0 +1,11 @@
+#show_version=6
+
+# lights are l_pop_ring_a_1 - l_pop_ring_a_8, probably counterclockwise
+# tag is lights_pop_ring_a
+- duration: 500ms #Ring off
+  lights:
+    lights_pop_ring_a: off
+
+- duration: 250ms #Flash on
+  lights:
+    lights_pop_ring_a: 333333
