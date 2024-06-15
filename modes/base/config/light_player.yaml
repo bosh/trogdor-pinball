@@ -2,9 +2,19 @@
 
 show_player:
   mode_base_started:
-    light_ring_spinner: play
+    tokenized_ring_spin:
+      show_tokens:
+        l1: l_pop_ring_a_1
+        l2: l_pop_ring_a_2
+        l3: l_pop_ring_a_3
+        l4: l_pop_ring_a_4
+        l5: l_pop_ring_a_5
+        l6: l_pop_ring_a_6
+        l7: l_pop_ring_a_7
+        l8: l_pop_ring_a_8
+
   mode_base_will_stop:
-    light_ring_spinner: stop
+    tokenized_ring_spin: stop
 
 light_player:
 
