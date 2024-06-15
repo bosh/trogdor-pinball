@@ -1,9 +1,17 @@
 #config_version=6
 
-show_player:
+event_player:
   mode_base_started:
+    - start_pop_ring_spin_red
+    - start_star_ring_spin_blue
+
+show_player:
+  start_pop_ring_spin_red:
     tokenized_ring_spin:
+      action: play
+      key: pop_ring_red_spin
       show_tokens:
+        # Asc order should spin CCW
         l1: l_pop_ring_a_1
         l2: l_pop_ring_a_2
         l3: l_pop_ring_a_3
@@ -18,8 +26,30 @@ show_player:
         level4: 441000
         level5: 662a10
         level6: 883333
+
+  start_star_ring_spin_blue:
+    tokenized_ring_spin:
+      action: play
+      key: star_ring_blue_spin
+      show_tokens:
+        # Reverse order should spin CW
+        l1: l_star_ring_a_8
+        l2: l_star_ring_a_7
+        l3: l_star_ring_a_6
+        l4: l_star_ring_a_5
+        l5: l_star_ring_a_4
+        l6: l_star_ring_a_3
+        l7: l_star_ring_a_2
+        l8: l_star_ring_a_1
+        level1: 00000a
+        level2: 00001a
+        level3: "000022"
+        level4: 100044
+        level5: 2a1066
+        level6: 333388
   mode_base_will_stop:
-    tokenized_ring_spin: stop
+    pop_ring_red_spin: stop
+    star_ring_blue_spin: stop
 
 light_player:
 
