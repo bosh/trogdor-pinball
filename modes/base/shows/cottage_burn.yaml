@@ -1,0 +1,53 @@
+#show_version=6
+
+# lights are (l1) - (l8)
+# colors are red, orange, yellow, low (222222), med (555555)
+
+#   8 7
+# 1     6
+# 2     5
+#   3 4
+
+- duration: 120ms
+  lights:
+    (l1): red-f240ms
+    (l2): orange-f120ms
+    (l3): red-f240ms
+    (l4): yellow-f120ms
+    (l5): red-f240ms
+    (l6): orange-f120ms
+    (l7): red-f240ms
+    (l8): 222222-f120ms
+
+- duration: 120ms
+  lights:
+    (l1): orange-f120ms
+    (l2): red-f240ms
+    (l3): orange-f120ms
+    (l4): 555555-f240ms
+    (l5): orange-f120ms
+    (l6): red-f240ms
+    (l7): orange-f120ms
+    (l8): yellow-f240ms
+
+- duration: 120ms
+  lights:
+    (l1): red-f240ms
+    (l2): yellow-f120ms
+    (l3): red-f240ms
+    (l4): orange-f120ms
+    (l5): red-f240ms
+    (l6): yellow-f120ms
+    (l7): red-f240ms
+    (l8): 555555-f120ms
+
+- duration: 120ms
+  lights:
+    (l1): orange-f240ms
+    (l2): red-f120ms
+    (l3): orange-f240ms
+    (l4): 222222-f120ms
+    (l5): orange-f240ms
+    (l6): yellow-f120ms
+    (l7): orange-f240ms
+    (l8): red-f120ms

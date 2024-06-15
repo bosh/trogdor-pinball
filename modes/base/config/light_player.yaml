@@ -51,9 +51,42 @@ show_player:
         level6: 333388
         level7: "000000"
         level8: "000000"
+
+  slings_l2r_hit:
+    cottage_burn:
+      action: play
+      loops: 2
+      key: l2r_star_a_burn
+      show_tokens:
+        l1: l_star_ring_a_1
+        l2: l_star_ring_a_2
+        l3: l_star_ring_a_3
+        l4: l_star_ring_a_4
+        l5: l_star_ring_a_5
+        l6: l_star_ring_a_6
+        l7: l_star_ring_a_7
+        l8: l_star_ring_a_8
+
+  slings_r2l_hit:
+    cottage_burn:
+      action: play
+      loops: 2
+      key: r2l_pop_a_burn
+      show_tokens:
+        l1: l_pop_ring_a_8
+        l2: l_pop_ring_a_7
+        l3: l_pop_ring_a_6
+        l4: l_pop_ring_a_5
+        l5: l_pop_ring_a_4
+        l6: l_pop_ring_a_3
+        l7: l_pop_ring_a_2
+        l8: l_pop_ring_a_1
+
   mode_base_will_stop:
     pop_ring_red_spin: stop
     star_ring_blue_spin: stop
+    r2l_pop_a_burn: stop
+    l2r_star_a_burn: stop
 
 light_player:
 
