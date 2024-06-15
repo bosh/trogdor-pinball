@@ -26,6 +26,8 @@ show_player:
         level4: 441000
         level5: 662a10
         level6: 883333
+        level7: "000000"
+        level8: "000000"
 
   start_star_ring_spin_blue:
     tokenized_ring_spin:
@@ -47,6 +49,8 @@ show_player:
         level4: 100044
         level5: 2a1066
         level6: 333388
+        level7: "000000"
+        level8: "000000"
   mode_base_will_stop:
     pop_ring_red_spin: stop
     star_ring_blue_spin: stop
