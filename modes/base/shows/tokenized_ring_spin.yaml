@@ -4,73 +4,73 @@
 # tag is lights_pop_ring_a
 - duration: 100ms #Loop
   lights:
-    (l4): 0a0000
-    (l5): 1a0000
-    (l6): 220000
-    (l7): 441000
-    (l8): 662a10
-    (l1): 883333
+    (l4): (level1)
+    (l5): (level2)
+    (l6): (level3)
+    (l7): (level4)
+    (l8): (level5)
+    (l1): (level6)
 
 - duration: 100ms
   lights:
-    (l5): 0a0000
-    (l6): 1a0000
-    (l7): 220000
-    (l8): 441000
-    (l1): 662a10
-    (l2): 883333
+    (l5): (level1)
+    (l6): (level2)
+    (l7): (level3)
+    (l8): (level4)
+    (l1): (level5)
+    (l2): (level6)
 
 - duration: 100ms
   lights:
-    (l6): 0a0000
-    (l7): 1a0000
-    (l8): 220000
-    (l1): 441000
-    (l2): 662a10
-    (l3): 883333
+    (l6): (level1)
+    (l7): (level2)
+    (l8): (level3)
+    (l1): (level4)
+    (l2): (level5)
+    (l3): (level6)
 
 - duration: 100ms
   lights:
-    (l7): 0a0000
-    (l8): 1a0000
-    (l1): 220000
-    (l2): 441000
-    (l3): 662a10
-    (l4): 883333
+    (l7): (level1)
+    (l8): (level2)
+    (l1): (level3)
+    (l2): (level4)
+    (l3): (level5)
+    (l4): (level6)
 
 - duration: 100ms
   lights:
-    (l8): 0a0000
-    (l1): 1a0000
-    (l2): 220000
-    (l3): 441000
-    (l4): 662a10
-    (l5): 883333
+    (l8): (level1)
+    (l1): (level2)
+    (l2): (level3)
+    (l3): (level4)
+    (l4): (level5)
+    (l5): (level6)
 
 - duration: 100ms
   lights:
-    (l1): 0a0000
-    (l2): 1a0000
-    (l3): 220000
-    (l4): 441000
-    (l5): 662a10
-    (l6): 883333
+    (l1): (level1)
+    (l2): (level2)
+    (l3): (level3)
+    (l4): (level4)
+    (l5): (level5)
+    (l6): (level6)
 
 - duration: 100ms
   lights:
-    (l2): 0a0000
-    (l3): 1a0000
-    (l4): 220000
-    (l5): 441000
-    (l6): 662a10
-    (l7): 883333
+    (l2): (level1)
+    (l3): (level2)
+    (l4): (level3)
+    (l5): (level4)
+    (l6): (level5)
+    (l7): (level6)
 
 - duration: 100ms
   lights:
-    (l3): 0a0000
-    (l4): 1a0000
-    (l5): 220000
-    (l6): 441000
-    (l7): 662a10
-    (l8): 883333
+    (l3): (level1)
+    (l4): (level2)
+    (l5): (level3)
+    (l6): (level4)
+    (l7): (level5)
+    (l8): (level6)
 

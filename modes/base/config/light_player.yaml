@@ -12,7 +12,12 @@ show_player:
         l6: l_pop_ring_a_6
         l7: l_pop_ring_a_7
         l8: l_pop_ring_a_8
-
+        level1: 0a0000
+        level2: 1a0000
+        level3: 220000
+        level4: 441000
+        level5: 662a10
+        level6: 883333
   mode_base_will_stop:
     tokenized_ring_spin: stop
 
