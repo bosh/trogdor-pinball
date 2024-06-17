@@ -8,46 +8,46 @@
 # 2     5
 #   3 4
 
-- duration: 120ms
+- duration: 240ms
   lights:
-    (l1): red-f240ms
-    (l2): orange-f120ms
-    (l3): red-f240ms
-    (l4): yellow-f120ms
-    (l5): red-f240ms
-    (l6): orange-f120ms
-    (l7): red-f240ms
-    (l8): 222222-f120ms
+    (l1): red-f480ms
+    (l2): orange-f240ms
+    (l3): red-f480ms
+    (l4): yellow-f240ms
+    (l5): red-f480ms
+    (l6): orange-f240ms
+    (l7): red-f480ms
+    (l8): 222222-f240ms
 
-- duration: 120ms
-  lights:
-    (l1): orange-f120ms
-    (l2): red-f240ms
-    (l3): orange-f120ms
-    (l4): 555555-f240ms
-    (l5): orange-f120ms
-    (l6): red-f240ms
-    (l7): orange-f120ms
-    (l8): yellow-f240ms
-
-- duration: 120ms
-  lights:
-    (l1): red-f240ms
-    (l2): yellow-f120ms
-    (l3): red-f240ms
-    (l4): orange-f120ms
-    (l5): red-f240ms
-    (l6): yellow-f120ms
-    (l7): red-f240ms
-    (l8): 555555-f120ms
-
-- duration: 120ms
+- duration: 240ms
   lights:
     (l1): orange-f240ms
-    (l2): red-f120ms
+    (l2): red-f480ms
     (l3): orange-f240ms
-    (l4): 222222-f120ms
+    (l4): 555555-f480ms
     (l5): orange-f240ms
-    (l6): yellow-f120ms
+    (l6): red-f480ms
     (l7): orange-f240ms
-    (l8): red-f120ms
+    (l8): yellow-f480ms
+
+- duration: 240ms
+  lights:
+    (l1): red-f480ms
+    (l2): yellow-f240ms
+    (l3): red-f480ms
+    (l4): orange-f240ms
+    (l5): red-f480ms
+    (l6): yellow-f240ms
+    (l7): red-f480ms
+    (l8): 555555-f240ms
+
+- duration: 240ms
+  lights:
+    (l1): orange-f480ms
+    (l2): red-f240ms
+    (l3): orange-f480ms
+    (l4): 222222-f240ms
+    (l5): orange-f480ms
+    (l6): yellow-f240ms
+    (l7): orange-f480ms
+    (l8): red-f240ms
