@@ -4,8 +4,18 @@ event_player:
   mode_base_started:
     - start_pop_ring_spin_red
     - start_star_ring_spin_blue
+  s_start_active:
+    - stop_pop_ring_spin_red
+    - stop_star_ring_spin_blue
+  s_start_inactive:
+    - start_pop_ring_spin_red
+    - start_star_ring_spin_blue
 
 show_player:
+  stop_pop_ring_spin_red:
+    pop_ring_red_spin:
+      action: stop
+
   start_pop_ring_spin_red:
     tokenized_ring_spin:
       action: play
@@ -28,6 +38,10 @@ show_player:
         level6: 883333
         level7: "000000"
         level8: "000000"
+
+  stop_star_ring_spin_blue:
+    star_ring_blue_spin:
+      action: stop
 
   start_star_ring_spin_blue:
     tokenized_ring_spin:
