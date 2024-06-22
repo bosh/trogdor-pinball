@@ -1,0 +1,12 @@
+#show_version=6
+
+# lights are (lights)
+# color is (color)
+
+- duration: 500ms
+  lights:
+    (lights): (color)
+
+- duration: 500ms
+  lights:
+    (lights): off

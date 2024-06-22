@@ -12,6 +12,16 @@ event_player:
     - start_star_ring_spin_blue
 
 show_player:
+  ts_start_button_active:
+    light_ring_flash:
+      key: pop_ring_a_menu_flash_x3
+      action: play
+      speed: 2
+      loops: 2
+      show_tokens:
+        lights: lights_pop_ring_a
+        color: orange
+
   stop_pop_ring_spin_red:
     pop_ring_red_spin:
       action: stop
