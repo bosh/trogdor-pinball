@@ -1,0 +1,15 @@
+#config_version=6
+
+# Devices that exist in the plan but are not yet physically installed
+
+switches:
+  s_example1:
+    number:
+
+coils:
+  c_example1:
+    number:
+
+lights:
+  l_example1:
+    number:

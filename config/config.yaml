@@ -14,3 +14,4 @@ config:
   - ball_devices.yaml
   - modes.yaml
   - player_vars.yaml
+  - future.yaml
