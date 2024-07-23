@@ -43,12 +43,3 @@ coils:
   c_flipper_left_full:
     number: 3208-7
     default_pulse_ms: 25
-
-#TODO
-#Board 1616
-#  c_flipper_mini_hold:
-#    number: 1616-1
-#    allow_enable: true
-#  c_flipper_mini_full:
-#    number: 1616-2
-

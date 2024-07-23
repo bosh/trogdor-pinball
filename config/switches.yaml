@@ -84,13 +84,6 @@ switches:
     number: 3208-4
     tags: start
 
-#1616 Board
-## Block A
-  # s_mini_flipper_eos:
-  #   number: 1616-X
-  #   type: 'NC'
-
-
 virtual_platform_start_active_switches:
   - s_trough_ball_1
   - s_trough_ball_2

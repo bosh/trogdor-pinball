@@ -3,13 +3,102 @@
 # Devices that exist in the plan but are not yet physically installed
 
 switches:
-  s_example1:
+  #For coils
+  s_pop_left:
+    number:
+  s_pop_right:
+    number:
+  s_pop_center:
+    number:
+
+  s_vuk_presence:
+    number:
+    type: 'NC'
+
+  s_high_sling:
+    number:
+
+  s_upper_flipper_eos:
+    number:
+    type: 'NC' #maybe nc
+
+  #Targets
+  s_drop_left_down: #TODO learn how drop switching works (are there two?)
+    number:
+
+  #Rollovers
+  s_burn_b:
+    number:
+  s_burn_u:
+    number:
+  s_burn_r:
+    number:
+  s_burn_n:
+    number:
+
+  #Spinners
+  s_spinner_left:
+    number:
+  s_spinner_right:
+    number:
+
+  #Passthrough optos
+  s_left_orbit:
+    number:
+  s_right_orbit:
+    number:
+  s_horseshoe:
+    number:
+
+  s_wireform_s_entry:
+    number:
+  s_wireform_s_exit:
+    number:
+  s_wireform_left_top:
+    number:
+  s_wireform_right_top:
     number:
 
 coils:
-  c_example1:
+  c_pop_left:
+    number:
+  c_pop_right:
+    number:
+  c_pop_center:
     number:
 
-lights:
-  l_example1:
+  c_vuk:
     number:
+    default_pulse_ms: 50 #TODO dial in
+
+  c_upper_slingshot:
+    number:
+
+  c_gate_left:
+    number:
+  c_gate_right:
+    number:
+
+  c_drop_left_reset:
+    number:
+  c_drop_left_knockdown:
+    default_pulse_ms: 10 #TODO dial in
+    number:
+
+  c_saver_post:
+    number:
+    allow_enable: true
+    default_hold_power: .25 #TODO dial in
+
+  c_flipper_upper_hold:
+    number:
+    default_hold_power: .5
+    allow_enable: true
+
+  c_flipper_upper_full:
+    number:
+    default_pulse_ms: 25
+
+lights:
+  # l_example1:
+  #   number:
