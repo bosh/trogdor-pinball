@@ -15,7 +15,7 @@ switches:
     number:
     type: 'NC'
 
-  s_high_sling:
+  s_upper_sling:
     number:
 
   s_upper_flipper_eos:
@@ -71,7 +71,7 @@ coils:
     number:
     default_pulse_ms: 50 #TODO dial in
 
-  c_upper_slingshot:
+  c_upper_sling:
     number:
 
   c_gate_left:
@@ -102,3 +102,32 @@ coils:
 lights:
   # l_example1:
   #   number:
+
+autofire_coils:
+  pop_left:
+    coil: c_pop_left
+    switch: s_pop_left
+  pop_right:
+    coil: c_pop_right
+    switch: s_pop_right
+  pop_center:
+    coil: c_pop_center
+    switch: s_pop_center
+
+  slingshot_upper:
+    coil: c_upper_sling
+    switch: s_upper_sling
+
+  vuk_autofire: #TODO does vuk have a better type?
+    coil: c_vuk
+    switch: s_vuk_presence
+
+flippers:
+  upper_flipper:
+    main_coil: c_flipper_upper_full
+    hold_coil: c_flipper_upper_hold
+    eos_switch: s_upper_flipper_eos
+    activation_switch: s_mini_flipper #TODO this is from real hardware
+    enable_events: ball_started, enableAutofire #, machine_reset_phase_3 #P3 for testing
+    disable_events: ball_will_end, service_mode_entered, disableAutofire
+    use_eos: true
