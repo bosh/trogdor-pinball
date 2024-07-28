@@ -1,29 +1,40 @@
 #config_version=6
 
-light_settings:
-  default_fade_ms: 40
-
-# led name can be anything you want, 
-# the number is the board its on playfield,
-# port 1, led 1 in the chain.
-# For the 2nd led, it would be number: playfield-1-2
-
 lights:
-  # EXP String 2 - mini cab
-  l_mini_cab_mini:
-    number: exp_playfield-2-1
+  # Cobrapin star post ring - RGB, no hax needed
+  l_star_ring_a_1:
+    number: exp_playfield-1-3
     type: rgb
-    tags: lights_a, lights_cab
+    tags: lights_a, lights_pf, lights_star_ring_a
+  l_star_ring_a_2:
+    number: exp_playfield-1-4
+    type: rgb
+    tags: lights_b, lights_pf, lights_star_ring_a
+  l_star_ring_a_3:
+    number: exp_playfield-1-5
+    type: rgb
+    tags: lights_a, lights_pf, lights_star_ring_a
+  l_star_ring_a_4:
+    number: exp_playfield-1-6
+    type: rgb
+    tags: lights_b, lights_pf, lights_star_ring_a
+  l_star_ring_a_5:
+    number: exp_playfield-1-7
+    type: rgb
+    tags: lights_a, lights_pf, lights_star_ring_a
+  l_star_ring_a_6:
+    number: exp_playfield-1-8
+    type: rgb
+    tags: lights_b, lights_pf, lights_star_ring_a
+  l_star_ring_a_7:
+    number: exp_playfield-1-9
+    type: rgb
+    tags: lights_a, lights_pf, lights_star_ring_a
+  l_star_ring_a_8:
+    number: exp_playfield-1-10
+    type: rgb
+    tags: lights_b, lights_pf, lights_star_ring_a
 
-  l_mini_cab_left:
-    number: exp_playfield-2-2
-    type: rgb
-    tags: lights_b, lights_cab
-
-  l_mini_cab_right:
-    number: exp_playfield-2-3
-    type: rgb
-    tags: lights_a, lights_cab
 
 # Cobrapin Pop bumper light ring A - RGBW four channel requires manual channeling
 # Don't add more lights after it in a chain
@@ -38,7 +49,7 @@ lights:
 # 7-1 6-2 7-0 7-2
 
   l_pop_ring_a_1:
-    tags: lights_a, lights_cab, lights_pop_ring_a
+    tags: lights_a, lights_pf, lights_pop_ring_a
     channels:
       red:
         number: exp_playfield-2-4-0
@@ -50,7 +61,7 @@ lights:
         number: exp_playfield-2-5-1
 
   l_pop_ring_a_2:
-    tags: lights_b, lights_cab, lights_pop_ring_a
+    tags: lights_b, lights_pf, lights_pop_ring_a
     channels:
       red:
         number: exp_playfield-2-5-2
@@ -62,7 +73,7 @@ lights:
         number: exp_playfield-2-6-0
 
   l_pop_ring_a_3:
-    tags: lights_a, lights_cab, lights_pop_ring_a
+    tags: lights_a, lights_pf, lights_pop_ring_a
     channels:
       red:
         number: exp_playfield-2-7-1
@@ -74,7 +85,7 @@ lights:
         number: exp_playfield-2-7-2
 
   l_pop_ring_a_4:
-    tags: lights_b, lights_cab, lights_pop_ring_a
+    tags: lights_b, lights_pf, lights_pop_ring_a
     channels:
       red:
         number: exp_playfield-2-8-0
@@ -86,7 +97,7 @@ lights:
         number: exp_playfield-2-9-1
 
   l_pop_ring_a_5:
-    tags: lights_a, lights_cab, lights_pop_ring_a
+    tags: lights_a, lights_pf, lights_pop_ring_a
     channels:
       red:
         number: exp_playfield-2-9-2
@@ -98,7 +109,7 @@ lights:
         number: exp_playfield-2-10-0
 
   l_pop_ring_a_6:
-    tags: lights_b, lights_cab, lights_pop_ring_a
+    tags: lights_b, lights_pf, lights_pop_ring_a
     channels:
       red:
         number: exp_playfield-2-11-1
@@ -110,7 +121,7 @@ lights:
         number: exp_playfield-2-11-2
 
   l_pop_ring_a_7:
-    tags: lights_a, lights_cab, lights_pop_ring_a
+    tags: lights_a, lights_pf, lights_pop_ring_a
     channels:
       red:
         number: exp_playfield-2-12-0
@@ -122,7 +133,7 @@ lights:
         number: exp_playfield-2-13-1
 
   l_pop_ring_a_8:
-    tags: lights_b, lights_cab, lights_pop_ring_a
+    tags: lights_b, lights_pf, lights_pop_ring_a
     channels:
       red:
         number: exp_playfield-2-13-2

@@ -1,0 +1,26 @@
+#config_version=6
+
+light_settings:
+  default_fade_ms: 40
+
+# led name can be anything you want, 
+# the number is the board its on playfield,
+# port 1, led 1 in the chain.
+# For the 2nd led, it would be number: playfield-1-2
+
+lights:
+  # EXP String 2 - mini cab
+  l_mini_cab_mini:
+    number: exp_playfield-2-1
+    type: rgb
+    tags: lights_a, lights_cab
+
+  l_mini_cab_left:
+    number: exp_playfield-2-2
+    type: rgb
+    tags: lights_b, lights_cab
+
+  l_mini_cab_right:
+    number: exp_playfield-2-3
+    type: rgb
+    tags: lights_a, lights_cab

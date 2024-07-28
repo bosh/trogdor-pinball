@@ -1,0 +1,7 @@
+#config_version=6
+
+config:
+  - minicab.yaml
+  - playfield_misc.yaml
+  - playfield_rings.yaml
+  - future.yaml

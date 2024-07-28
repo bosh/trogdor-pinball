@@ -1,0 +1,68 @@
+#config_version=6
+
+lights:
+  l_pop_ring_b_1:
+    number:
+    type: rgb
+    tags: lights_a, lights_pf, lights_pop_ring_b
+  l_pop_ring_b_2:
+    number:
+    type: rgb
+    tags: lights_b, lights_pf, lights_pop_ring_b
+  l_pop_ring_b_3:
+    number:
+    type: rgb
+    tags: lights_a, lights_pf, lights_pop_ring_b
+  l_pop_ring_b_4:
+    number:
+    type: rgb
+    tags: lights_b, lights_pf, lights_pop_ring_b
+  l_pop_ring_b_5:
+    number:
+    type: rgb
+    tags: lights_a, lights_pf, lights_pop_ring_b
+  l_pop_ring_b_6:
+    number:
+    type: rgb
+    tags: lights_b, lights_pf, lights_pop_ring_b
+  l_pop_ring_b_7:
+    number:
+    type: rgb
+    tags: lights_a, lights_pf, lights_pop_ring_b
+  l_pop_ring_b_8:
+    number:
+    type: rgb
+    tags: lights_b, lights_pf, lights_pop_ring_b
+
+  l_pop_ring_c_1:
+    number:
+    type: rgb
+    tags: lights_a, lights_pf, lights_pop_ring_c
+  l_pop_ring_c_2:
+    number:
+    type: rgb
+    tags: lights_b, lights_pf, lights_pop_ring_c
+  l_pop_ring_c_3:
+    number:
+    type: rgb
+    tags: lights_a, lights_pf, lights_pop_ring_c
+  l_pop_ring_c_4:
+    number:
+    type: rgb
+    tags: lights_b, lights_pf, lights_pop_ring_c
+  l_pop_ring_c_5:
+    number:
+    type: rgb
+    tags: lights_a, lights_pf, lights_pop_ring_c
+  l_pop_ring_c_6:
+    number:
+    type: rgb
+    tags: lights_b, lights_pf, lights_pop_ring_c
+  l_pop_ring_c_7:
+    number:
+    type: rgb
+    tags: lights_a, lights_pf, lights_pop_ring_c
+  l_pop_ring_c_8:
+    number:
+    type: rgb
+    tags: lights_b, lights_pf, lights_pop_ring_c

@@ -1,0 +1,12 @@
+#config_version=6
+
+lights:
+  # EXP String 1 - lower third
+  l_pf_1:
+    number: exp_playfield-1-1
+    type: rgb
+    tags: lights_a, lights_pf, lights_ci
+  l_pf_2:
+    number: exp_playfield-1-2
+    type: grb
+    tags: lights_b, lights_pf, lights_gi
