@@ -1,6 +1,7 @@
 #config_version=6
 
 lights:
+  # Playfield: 3x Cobrapin pop bumper ring - RGBW...
   l_pop_ring_b_1:
     number:
     type: rgb
@@ -66,3 +67,37 @@ lights:
     number:
     type: rgb
     tags: lights_b, lights_pf, lights_pop_ring_c
+
+  # Minicab: Cobrapin dome post ring - RGB
+  l_dome_ring_a_1:
+    number:
+    type: rgb
+    tags: lights_a, lights_cab, lights_dome_ring_a
+  l_dome_ring_a_2:
+    number:
+    type: rgb
+    tags: lights_b, lights_cab, lights_dome_ring_a
+  l_dome_ring_a_3:
+    number:
+    type: rgb
+    tags: lights_a, lights_cab, lights_dome_ring_a
+  l_dome_ring_a_4:
+    number:
+    type: rgb
+    tags: lights_b, lights_cab, lights_dome_ring_a
+  l_dome_ring_a_5:
+    number:
+    type: rgb
+    tags: lights_a, lights_cab, lights_dome_ring_a
+  l_dome_ring_a_6:
+    number:
+    type: rgb
+    tags: lights_b, lights_cab, lights_dome_ring_a
+  l_dome_ring_a_7:
+    number:
+    type: rgb
+    tags: lights_a, lights_cab, lights_dome_ring_a
+  l_dome_ring_a_8:
+    number:
+    type: rgb
+    tags: lights_b, lights_cab, lights_dome_ring_a

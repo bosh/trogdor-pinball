@@ -2,44 +2,44 @@
 
 event_player:
   mode_base_started:
-    - start_pop_ring_spin_red
+    - start_dome_ring_spin_red
     - start_star_ring_spin_blue
   s_start_active:
-    - stop_pop_ring_spin_red
+    - stop_dome_ring_spin_red
     - stop_star_ring_spin_blue
   s_start_inactive:
-    - start_pop_ring_spin_red
+    - start_dome_ring_spin_red
     - start_star_ring_spin_blue
 
 show_player:
   ts_start_button_active:
     light_ring_flash:
-      key: pop_ring_a_menu_flash_x3
+      key: dome_ring_a_menu_flash_x3
       action: play
       speed: 2
       loops: 2
       show_tokens:
-        lights: lights_pop_ring_a
+        lights: lights_dome_ring_a
         color: orange
 
-  stop_pop_ring_spin_red:
-    pop_ring_red_spin:
+  stop_dome_ring_spin_red:
+    dome_ring_red_spin:
       action: stop
 
-  start_pop_ring_spin_red:
+  start_dome_ring_spin_red:
     tokenized_ring_spin:
       action: play
-      key: pop_ring_red_spin
+      key: dome_ring_red_spin
       show_tokens:
         # Asc order should spin CCW
-        l1: l_pop_ring_a_1
-        l2: l_pop_ring_a_2
-        l3: l_pop_ring_a_3
-        l4: l_pop_ring_a_4
-        l5: l_pop_ring_a_5
-        l6: l_pop_ring_a_6
-        l7: l_pop_ring_a_7
-        l8: l_pop_ring_a_8
+        l1: l_dome_ring_a_1
+        l2: l_dome_ring_a_2
+        l3: l_dome_ring_a_3
+        l4: l_dome_ring_a_4
+        l5: l_dome_ring_a_5
+        l6: l_dome_ring_a_6
+        l7: l_dome_ring_a_7
+        l8: l_dome_ring_a_8
         level1: 0a0000
         level2: 1a0000
         level3: 220000
@@ -95,21 +95,21 @@ show_player:
     cottage_burn:
       action: play
       loops: 2
-      key: r2l_pop_a_burn
+      key: r2l_dome_a_burn
       show_tokens:
-        l1: l_pop_ring_a_8
-        l2: l_pop_ring_a_7
-        l3: l_pop_ring_a_6
-        l4: l_pop_ring_a_5
-        l5: l_pop_ring_a_4
-        l6: l_pop_ring_a_3
-        l7: l_pop_ring_a_2
-        l8: l_pop_ring_a_1
+        l1: l_dome_ring_a_8
+        l2: l_dome_ring_a_7
+        l3: l_dome_ring_a_6
+        l4: l_dome_ring_a_5
+        l5: l_dome_ring_a_4
+        l6: l_dome_ring_a_3
+        l7: l_dome_ring_a_2
+        l8: l_dome_ring_a_1
 
   mode_base_will_stop:
-    pop_ring_red_spin: stop
+    dome_ring_red_spin: stop
     star_ring_blue_spin: stop
-    r2l_pop_a_burn: stop
+    r2l_dome_a_burn: stop
     l2r_star_a_burn: stop
 
 light_player:
