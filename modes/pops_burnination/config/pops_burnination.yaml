@@ -1,0 +1,121 @@
+#config_version=6
+
+mode:
+  start_events: qualify_pops_burnination
+  priority: 150
+
+timers:
+  # Three separate burndown timers completing every three seconds
+  pop_left_burndown:
+    start_value: 0
+    end_value: 3
+    direction: up
+    start_running: true
+    restart_on_complete: true
+    control_events:
+      - action: start
+        event: pop_left_burndown_start
+      - action: stop
+        event: pop_left_burndown_stop
+
+  pop_right_burndown:
+    start_value: 0
+    end_value: 3
+    direction: up
+    start_running: true
+    restart_on_complete: true
+    control_events:
+      - action: start
+        event: pop_right_burndown_start
+      - action: stop
+        event: pop_right_burndown_stop
+
+  pop_center_burndown:
+    start_value: 0
+    end_value: 3
+    direction: up
+    start_running: true
+    restart_on_complete: true
+    control_events:
+      - action: start
+        event: pop_center_burndown_start
+      - action: stop
+        event: pop_center_burndown_stop
+
+variable_player:
+  # Increment fire level by three on bumper hit
+  s_pop_left_active:
+    pop_left_fire_level:
+      int: 3
+      action: add
+
+  s_pop_right_active:
+    pop_right_fire_level:
+      int: 3
+      action: add
+
+  s_pop_center_active:
+    pop_center_fire_level:
+      int: 3
+      action: add
+
+event_player:
+  # Stop timers on mode exit (TODO try to do this before turning off shows)
+  mode_pops_burnination_will_stop:
+    - pop_left_burndown_stop
+    - pop_right_burndown_stop
+    - pop_center_burndown_stop
+
+  # Immediately start shows on mode start
+  mode_pops_burnination_started:
+    - refresh_pop_left_show
+    - refresh_pop_right_show
+    - refresh_pop_center_show
+
+  # When player variables change, refresh related show
+  player_pop_left_fire_level:
+    - refresh_pop_left_show
+  player_pop_right_fire_level:
+    - refresh_pop_right_show
+  player_pop_center_fire_level:
+    - refresh_pop_center_show
+
+show_player:
+  # Turn off pop shows
+  mode_pops_burnination_will_stop:
+    pop_left_show: stop
+    pop_right_show: stop
+    pop_center_show: stop
+
+  stop_pop_left_show:
+    pop_left_show: stop
+  refresh_pop_left_show:
+    fire_level_show:
+      key: pop_left_show
+      action: play
+      sync_ms: 500
+      show_tokens:
+        lights: lights_pop_ring_a
+        color: yellow
+
+  stop_pop_right_show:
+    pop_right_show: stop
+  refresh_pop_right_show:
+    fire_level_show:
+      key: pop_right_show
+      action: play
+      sync_ms: 500
+      show_tokens:
+        lights: lights_pop_ring_b
+        color: green
+
+  stop_pop_center_show:
+    pop_center_show: stop
+  refresh_pop_center_show:
+    fire_level_show:
+      key: pop_center_show
+      action: play
+      sync_ms: 500
+      show_tokens:
+        lights: lights_pop_ring_c
+        color: red

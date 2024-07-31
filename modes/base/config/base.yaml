@@ -8,6 +8,10 @@ mode:
   start_events: ball_started
   priority: 100
 
+event_player:
+  mode_base_started:
+    - qualify_pops_burnination
+
 variable_player:
   #Simple lane scoring
   s_left_outer_lane_active:

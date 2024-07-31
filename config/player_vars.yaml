@@ -3,3 +3,16 @@
 player_vars:
   sling_hits:
     initial_value: 0
+
+  # For pop_burnination mode behaviors:
+  pop_left_fire_level:
+    initial_value: 0
+    value_type: int
+
+  pop_right_fire_level:
+    initial_value: 0
+    value_type: int
+
+  pop_center_fire_level:
+    initial_value: 0
+    value_type: int
