@@ -17,6 +17,8 @@ timers:
         event: pop_left_burndown_start
       - action: stop
         event: pop_left_burndown_stop
+      - action: reset
+        event: pop_left_burndown_reset
 
   pop_right_burndown:
     start_value: 0
@@ -29,6 +31,8 @@ timers:
         event: pop_right_burndown_start
       - action: stop
         event: pop_right_burndown_stop
+      - action: reset
+        event: pop_right_burndown_reset
 
   pop_center_burndown:
     start_value: 0
@@ -41,6 +45,8 @@ timers:
         event: pop_center_burndown_start
       - action: stop
         event: pop_center_burndown_stop
+      - action: reset
+        event: pop_center_burndown_reset
 
 variable_player:
   # Increment fire level by three on bumper hit
@@ -59,7 +65,29 @@ variable_player:
       int: 3
       action: add
 
+  timer_pop_left_burndown_complete{current_player.pop_left_fire_level > 0}:
+    pop_left_fire_level:
+      int: -1
+      action: add
+  timer_pop_right_burndown_complete{current_player.pop_right_fire_level > 0}:
+    pop_right_fire_level:
+      int: -1
+      action: add
+  timer_pop_center_burndown_complete{current_player.pop_center_fire_level > 0}:
+    pop_center_fire_level:
+      int: -1
+      action: add
+
+
 event_player:
+  # Reset the timer when pop is hit
+  s_pop_left_active:
+    - pop_left_burndown_reset
+  s_pop_right_active:
+    - pop_right_burndown_reset
+  s_pop_center_active:
+    - pop_center_burndown_reset
+
   # Stop timers on mode exit (TODO try to do this before turning off shows)
   mode_pops_burnination_will_stop:
     - pop_left_burndown_stop
