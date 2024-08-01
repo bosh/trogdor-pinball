@@ -1,0 +1,11 @@
+#show_version=6
+
+# lights are (lights)
+
+- duration: 250ms
+  lights:
+    (lights): "fc1717"
+
+- duration: 250ms
+  lights:
+    (lights): off

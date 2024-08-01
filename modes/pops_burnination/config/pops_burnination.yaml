@@ -117,33 +117,114 @@ show_player:
 
   stop_pop_left_show:
     pop_left_show: stop
-  refresh_pop_left_show:
-    fire_level_show:
+  stop_pop_right_show:
+    pop_right_show: stop
+  stop_pop_center_show:
+    pop_center_show: stop
+
+  refresh_pop_left_show{current_player.pop_left_fire_level <= 0}:
+    pop_left_show: stop
+  refresh_pop_right_show{current_player.pop_right_fire_level <= 0}:
+    pop_right_show: stop
+  refresh_pop_center_show{current_player.pop_center_fire_level <= 0}:
+    pop_center_show: stop
+
+  # Low level
+  refresh_pop_left_show{current_player.pop_left_fire_level > 0 and current_player.pop_left_fire_level < 8}:
+    fire_low_level_show:
       key: pop_left_show
       action: play
       sync_ms: 500
       show_tokens:
         lights: lights_pop_ring_a
-        color: yellow
 
-  stop_pop_right_show:
-    pop_right_show: stop
-  refresh_pop_right_show:
-    fire_level_show:
+  refresh_pop_right_show{current_player.pop_right_fire_level > 0 and current_player.pop_right_fire_level < 8}:
+    fire_low_level_show:
       key: pop_right_show
       action: play
       sync_ms: 500
       show_tokens:
         lights: lights_pop_ring_b
-        color: green
 
-  stop_pop_center_show:
-    pop_center_show: stop
-  refresh_pop_center_show:
-    fire_level_show:
+  refresh_pop_center_show{current_player.pop_center_fire_level > 0 and current_player.pop_center_fire_level < 8}:
+    fire_low_level_show:
       key: pop_center_show
       action: play
       sync_ms: 500
       show_tokens:
         lights: lights_pop_ring_c
-        color: red
+
+  # Medium level
+  refresh_pop_left_show{current_player.pop_left_fire_level >= 8 and current_player.pop_left_fire_level < 15}:
+    fire_medium_level_show:
+      key: pop_left_show
+      action: play
+      sync_ms: 500
+      show_tokens:
+        lights: lights_pop_ring_a
+
+  refresh_pop_right_show{current_player.pop_right_fire_level >= 8 and current_player.pop_right_fire_level < 15}:
+    fire_medium_level_show:
+      key: pop_right_show
+      action: play
+      sync_ms: 500
+      show_tokens:
+        lights: lights_pop_ring_b
+
+  refresh_pop_center_show{current_player.pop_center_fire_level >= 8 and current_player.pop_center_fire_level < 15}:
+    fire_medium_level_show:
+      key: pop_center_show
+      action: play
+      sync_ms: 500
+      show_tokens:
+        lights: lights_pop_ring_c
+
+  # High level
+  refresh_pop_left_show{current_player.pop_left_fire_level >= 15 and current_player.pop_left_fire_level < 25}:
+    fire_high_level_show:
+      key: pop_left_show
+      action: play
+      sync_ms: 500
+      show_tokens:
+        lights: lights_pop_ring_a
+
+  refresh_pop_right_show{current_player.pop_right_fire_level >= 15 and current_player.pop_right_fire_level < 25}:
+    fire_high_level_show:
+      key: pop_right_show
+      action: play
+      sync_ms: 500
+      show_tokens:
+        lights: lights_pop_ring_b
+
+  refresh_pop_center_show{current_player.pop_center_fire_level >= 15 and current_player.pop_center_fire_level < 25}:
+    fire_high_level_show:
+      key: pop_center_show
+      action: play
+      sync_ms: 500
+      show_tokens:
+        lights: lights_pop_ring_c
+
+  # Extreme level
+  refresh_pop_left_show{current_player.pop_left_fire_level >= 25}:
+    fire_extreme_level_show:
+      key: pop_left_show
+      action: play
+      sync_ms: 500
+      show_tokens:
+        lights: lights_pop_ring_a
+
+  refresh_pop_right_show{current_player.pop_right_fire_level >= 25}:
+    fire_extreme_level_show:
+      key: pop_right_show
+      action: play
+      sync_ms: 500
+      show_tokens:
+        lights: lights_pop_ring_b
+
+  refresh_pop_center_show{current_player.pop_center_fire_level >= 25}:
+    fire_extreme_level_show:
+      key: pop_center_show
+      action: play
+      sync_ms: 500
+      show_tokens:
+        lights: lights_pop_ring_c
