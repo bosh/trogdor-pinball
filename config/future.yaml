@@ -70,7 +70,7 @@ coils:
 
   c_vuk:
     number:
-    default_pulse_ms: 50 #TODO dial in
+    default_pulse_ms: 20 #TODO dial in
 
   c_upper_sling:
     number:
@@ -100,6 +100,12 @@ coils:
     number:
     default_pulse_ms: 25
 
+ball_devices:
+  bd_vuk:
+    ball_switches: s_vuk_presence
+    eject_coil: c_vuk
+    eject_timeouts: 1s
+
 autofire_coils:
   pop_left:
     coil: c_pop_left
@@ -115,9 +121,6 @@ autofire_coils:
     coil: c_upper_sling
     switch: s_upper_sling
 
-  vuk_autofire: #TODO does vuk have a better type?
-    coil: c_vuk
-    switch: s_vuk_presence
 
 flippers:
   upper_flipper:
