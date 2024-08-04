@@ -77,8 +77,12 @@ coils:
 
   c_gate_left:
     number:
+    default_pulse_ms: 10
+    default_hold_power: 0.25
   c_gate_right:
     number:
+    default_pulse_ms: 10
+    default_hold_power: 0.25
 
   c_drop_left_reset:
     number:
