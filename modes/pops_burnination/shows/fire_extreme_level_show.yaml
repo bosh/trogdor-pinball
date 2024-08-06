@@ -8,22 +8,44 @@
 
 - duration: 250ms
   lights:
-    (light_prefix)_1: "fc1717"
-    (light_prefix)_2: off
-    (light_prefix)_3: "fc1717"
-    (light_prefix)_4: off
-    (light_prefix)_5: "fc1717"
-    (light_prefix)_6: off
-    (light_prefix)_7: "fc1717"
-    (light_prefix)_8: off
+    (light_prefix)_1: red-f480ms
+    (light_prefix)_2: orange-f240ms
+    (light_prefix)_3: red-f480ms
+    (light_prefix)_4: red-f480ms
+    (light_prefix)_5: red-f480ms
+    (light_prefix)_6: orange-f240ms
+    (light_prefix)_7: red-f480ms
+    (light_prefix)_8: red-f480ms
 
 - duration: 250ms
   lights:
-    (light_prefix)_1: off
-    (light_prefix)_2: "fc1717"
-    (light_prefix)_3: off
-    (light_prefix)_4: "fc1717"
-    (light_prefix)_5: off
-    (light_prefix)_6: "fc1717"
-    (light_prefix)_7: off
-    (light_prefix)_8: "fc1717"
+    (light_prefix)_1: orange-f240ms
+    (light_prefix)_2: red-f480ms
+    (light_prefix)_3: orange-f240ms
+    (light_prefix)_4: red-f480ms
+    (light_prefix)_5: orange-f240ms
+    (light_prefix)_6: red-f480ms
+    (light_prefix)_7: orange-f240ms
+    (light_prefix)_8: red-f480ms
+
+- duration: 250ms
+  lights:
+    (light_prefix)_1: red-f480ms
+    (light_prefix)_2: red-f480ms
+    (light_prefix)_3: red-f480ms
+    (light_prefix)_4: orange-f240ms
+    (light_prefix)_5: red-f480ms
+    (light_prefix)_6: red-f480ms
+    (light_prefix)_7: red-f480ms
+    (light_prefix)_8: orange-f240ms
+
+- duration: 250ms
+  lights:
+    (light_prefix)_1: orange-f480ms
+    (light_prefix)_2: red-f240ms
+    (light_prefix)_3: orange-f480ms
+    (light_prefix)_4: red-f480ms
+    (light_prefix)_5: orange-f480ms
+    (light_prefix)_6: red-f480ms
+    (light_prefix)_7: orange-f480ms
+    (light_prefix)_8: red-f240ms

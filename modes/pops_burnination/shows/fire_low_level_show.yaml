@@ -8,22 +8,44 @@
 
 - duration: 250ms
   lights:
-    (light_prefix)_1: "e9c719"
+    (light_prefix)_1: off
+    (light_prefix)_2: orange-f240ms
+    (light_prefix)_3: off
+    (light_prefix)_4: yellow-f240ms
+    (light_prefix)_5: off
+    (light_prefix)_6: orange-f240ms
+    (light_prefix)_7: off
+    (light_prefix)_8: 222222-f240ms
+
+- duration: 250ms
+  lights:
+    (light_prefix)_1: orange-f240ms
     (light_prefix)_2: off
-    (light_prefix)_3: "e9c719"
+    (light_prefix)_3: orange-f240ms
     (light_prefix)_4: off
-    (light_prefix)_5: "e9c719"
+    (light_prefix)_5: orange-f240ms
     (light_prefix)_6: off
-    (light_prefix)_7: "e9c719"
+    (light_prefix)_7: orange-f240ms
     (light_prefix)_8: off
 
 - duration: 250ms
   lights:
     (light_prefix)_1: off
-    (light_prefix)_2: "e9c719"
+    (light_prefix)_2: yellow-f240ms
     (light_prefix)_3: off
-    (light_prefix)_4: "e9c719"
+    (light_prefix)_4: orange-f240ms
     (light_prefix)_5: off
-    (light_prefix)_6: "e9c719"
+    (light_prefix)_6: yellow-f240ms
     (light_prefix)_7: off
-    (light_prefix)_8: "e9c719"
+    (light_prefix)_8: 555555-f240ms
+
+- duration: 250ms
+  lights:
+    (light_prefix)_1: orange-f480ms
+    (light_prefix)_2: off
+    (light_prefix)_3: orange-f480ms
+    (light_prefix)_4: off
+    (light_prefix)_5: orange-f480ms
+    (light_prefix)_6: off
+    (light_prefix)_7: orange-f480ms
+    (light_prefix)_8: off
