@@ -1,11 +1,29 @@
 #show_version=6
 
-# lights are (lights)
+# lights are (light_prefix) plus _1 through _8
+#   8 7
+# 1     6
+# 2     5
+#   3 4
 
 - duration: 250ms
   lights:
-    (lights): "fc5e26"
+    (light_prefix)_1: "fc5e26"
+    (light_prefix)_2: off
+    (light_prefix)_3: "fc5e26"
+    (light_prefix)_4: off
+    (light_prefix)_5: "fc5e26"
+    (light_prefix)_6: off
+    (light_prefix)_7: "fc5e26"
+    (light_prefix)_8: off
 
 - duration: 250ms
   lights:
-    (lights): off
+    (light_prefix)_1: off
+    (light_prefix)_2: "fc5e26"
+    (light_prefix)_3: off
+    (light_prefix)_4: "fc5e26"
+    (light_prefix)_5: off
+    (light_prefix)_6: "fc5e26"
+    (light_prefix)_7: off
+    (light_prefix)_8: "fc5e26"

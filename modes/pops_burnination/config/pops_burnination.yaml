@@ -136,7 +136,7 @@ show_player:
       action: play
       sync_ms: 500
       show_tokens:
-        lights: lights_pop_ring_a
+        light_prefix: l_pop_ring_a
 
   refresh_pop_right_show{current_player.pop_right_fire_level > 0 and current_player.pop_right_fire_level < 8}:
     fire_low_level_show:
@@ -144,7 +144,7 @@ show_player:
       action: play
       sync_ms: 500
       show_tokens:
-        lights: lights_pop_ring_b
+        light_prefix: l_pop_ring_b
 
   refresh_pop_center_show{current_player.pop_center_fire_level > 0 and current_player.pop_center_fire_level < 8}:
     fire_low_level_show:
@@ -152,7 +152,7 @@ show_player:
       action: play
       sync_ms: 500
       show_tokens:
-        lights: lights_pop_ring_c
+        light_prefix: l_pop_ring_c
 
   # Medium level
   refresh_pop_left_show{current_player.pop_left_fire_level >= 8 and current_player.pop_left_fire_level < 15}:
@@ -161,7 +161,7 @@ show_player:
       action: play
       sync_ms: 500
       show_tokens:
-        lights: lights_pop_ring_a
+        light_prefix: l_pop_ring_a
 
   refresh_pop_right_show{current_player.pop_right_fire_level >= 8 and current_player.pop_right_fire_level < 15}:
     fire_medium_level_show:
@@ -169,7 +169,7 @@ show_player:
       action: play
       sync_ms: 500
       show_tokens:
-        lights: lights_pop_ring_b
+        light_prefix: l_pop_ring_b
 
   refresh_pop_center_show{current_player.pop_center_fire_level >= 8 and current_player.pop_center_fire_level < 15}:
     fire_medium_level_show:
@@ -177,7 +177,7 @@ show_player:
       action: play
       sync_ms: 500
       show_tokens:
-        lights: lights_pop_ring_c
+        light_prefix: l_pop_ring_c
 
   # High level
   refresh_pop_left_show{current_player.pop_left_fire_level >= 15 and current_player.pop_left_fire_level < 25}:
@@ -186,7 +186,7 @@ show_player:
       action: play
       sync_ms: 500
       show_tokens:
-        lights: lights_pop_ring_a
+        light_prefix: l_pop_ring_a
 
   refresh_pop_right_show{current_player.pop_right_fire_level >= 15 and current_player.pop_right_fire_level < 25}:
     fire_high_level_show:
@@ -194,7 +194,7 @@ show_player:
       action: play
       sync_ms: 500
       show_tokens:
-        lights: lights_pop_ring_b
+        light_prefix: l_pop_ring_b
 
   refresh_pop_center_show{current_player.pop_center_fire_level >= 15 and current_player.pop_center_fire_level < 25}:
     fire_high_level_show:
@@ -202,7 +202,7 @@ show_player:
       action: play
       sync_ms: 500
       show_tokens:
-        lights: lights_pop_ring_c
+        light_prefix: l_pop_ring_c
 
   # Extreme level
   refresh_pop_left_show{current_player.pop_left_fire_level >= 25}:
@@ -211,7 +211,7 @@ show_player:
       action: play
       sync_ms: 500
       show_tokens:
-        lights: lights_pop_ring_a
+        light_prefix: l_pop_ring_a
 
   refresh_pop_right_show{current_player.pop_right_fire_level >= 25}:
     fire_extreme_level_show:
@@ -219,7 +219,7 @@ show_player:
       action: play
       sync_ms: 500
       show_tokens:
-        lights: lights_pop_ring_b
+        light_prefix: l_pop_ring_b
 
   refresh_pop_center_show{current_player.pop_center_fire_level >= 25}:
     fire_extreme_level_show:
@@ -227,4 +227,4 @@ show_player:
       action: play
       sync_ms: 500
       show_tokens:
-        lights: lights_pop_ring_c
+        light_prefix: l_pop_ring_c
