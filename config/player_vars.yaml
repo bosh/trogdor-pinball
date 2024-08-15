@@ -1,6 +1,10 @@
 #config_version=6
 
 player_vars:
+  playfield_multiplier:
+    initial_value: 1
+    value_type: int
+
   sling_hits:
     initial_value: 0
 

@@ -2,9 +2,21 @@
 
 mode:
   start_events: qualify_pops_burnination
+  stop_events: succeed_pops_burnination, fail_pops_burnination
   priority: 150
 
 timers:
+  #Mode time limit timer
+  burnination_countdown:
+    start_value: 20 #Short for now for ease of testing
+    end_value: 0
+    direction: down
+    start_running: true
+    restart_on_complete: false
+    control_events:
+      - action: stop
+        event: burnination_countdown_stop
+
   # Three separate burndown timers completing every three seconds
   pop_left_burndown:
     start_value: 0
@@ -80,6 +92,9 @@ variable_player:
 
 
 event_player:
+  timer_burnination_countdown_complete:
+    fail_pops_burnination
+
   # Reset the timer when pop is hit
   s_pop_left_active:
     - pop_left_burndown_reset
@@ -100,13 +115,20 @@ event_player:
     - refresh_pop_right_show
     - refresh_pop_center_show
 
-  # When player variables change, refresh related show
+  # When player variables change, refresh related show and test mode completion
   player_pop_left_fire_level:
     - refresh_pop_left_show
+    - check_burnination_complete
   player_pop_right_fire_level:
     - refresh_pop_right_show
+    - check_burnination_complete
   player_pop_center_fire_level:
     - refresh_pop_center_show
+    - check_burnination_complete
+
+  check_burnination_complete{current_player.pop_left_fire_level > 25 and current_player.pop_right_fire_level > 25 and current_player.pop_center_fire_level > 25}:
+    - burnination_countdown_stop
+    - succeed_pops_burnination
 
 show_player:
   # Turn off pop shows

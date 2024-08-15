@@ -1,6 +1,7 @@
 #config_version=6
 
 modes:
-  - base
   - attract
+  - base
   - pops_burnination
+  - pops_burninated

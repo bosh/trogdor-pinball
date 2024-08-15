@@ -1,0 +1,52 @@
+#config_version=6
+
+mode:
+  start_events: succeed_pops_burnination
+  priority: 151
+
+variable_player:
+  s_pop_left_active:
+    score: 5000 * current_player.playfield_multiplier
+
+  s_pop_right_active:
+    score: 5000 * current_player.playfield_multiplier
+
+  s_pop_center_active:
+    score: 4000 * current_player.playfield_multiplier
+
+event_player:
+  mode_pops_burninated_started:
+  - start_left_pop_burninated
+  - start_right_pop_burninated
+  - start_center_pop_burninated
+
+show_player:
+  # Turn off pop shows
+  mode_pops_burninated_will_stop:
+    pop_left_show: stop
+    pop_right_show: stop
+    pop_center_show: stop
+
+  start_left_pop_burninated:
+    fire_burninated_show:
+      key: pop_left_show
+      action: play
+      sync_ms: 300
+      show_tokens:
+        light_prefix: l_pop_ring_a
+
+  start_right_pop_burninated:
+    fire_burninated_show:
+      key: pop_right_show
+      action: play
+      sync_ms: 300
+      show_tokens:
+        light_prefix: l_pop_ring_b
+
+  start_center_pop_burninated:
+    fire_burninated_show:
+      key: pop_center_show
+      action: play
+      sync_ms: 300
+      show_tokens:
+        light_prefix: l_pop_ring_c

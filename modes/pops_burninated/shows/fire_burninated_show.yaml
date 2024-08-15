@@ -6,7 +6,7 @@
 # 2     5
 #   3 4
 
-- duration: 250ms
+- duration: 150ms
   lights:
     (light_prefix)_1: off
     (light_prefix)_2: "d82d08"
@@ -17,7 +17,7 @@
     (light_prefix)_7: "d82d08"
     (light_prefix)_8: off
 
-- duration: 250ms
+- duration: 150ms
   lights:
     (light_prefix)_1: "d82d08"
     (light_prefix)_2: off
@@ -28,7 +28,7 @@
     (light_prefix)_7: "d82d08"
     (light_prefix)_8: "d82d08"
 
-- duration: 250ms
+- duration: 150ms
   lights:
     (light_prefix)_1: "d82d08"
     (light_prefix)_2: "d82d08"
@@ -39,7 +39,7 @@
     (light_prefix)_7: "d82d08"
     (light_prefix)_8: "d82d08"
 
-- duration: 250ms
+- duration: 150ms
   lights:
     (light_prefix)_1: "d82d08"
     (light_prefix)_2: "d82d08"
