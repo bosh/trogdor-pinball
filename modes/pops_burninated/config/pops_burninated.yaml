@@ -2,6 +2,7 @@
 
 mode:
   start_events: succeed_pops_burnination
+  stop_events: qualify_pops_burnination
   priority: 151
 
 variable_player:

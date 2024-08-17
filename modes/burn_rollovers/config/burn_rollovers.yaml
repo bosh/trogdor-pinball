@@ -1,0 +1,59 @@
+#config_version=6
+
+mode:
+  start_events: mode_base_started, mode_pops_burninated_started
+  stop_events: succeed_burn_rollovers, cancel_burn_rollovers
+  priority: 140
+
+variable_player:
+  burn_group_lit_hit:
+    score: 100
+  burn_group_unlit_hit:
+    score: 1000
+  burn_group_lit_complete:
+    score: 4000
+
+event_player:
+  burn_group_lit_complete:
+    - succeed_burn_rollovers
+    - qualify_pops_burnination
+
+shot_profiles:
+  rollover_profile:
+    states:
+      - name: 'unlit'
+        show: 'off'
+      - name: 'lit'
+        show: 'lit_rollover'
+
+shots:
+  shot_burn_b:
+    profile: rollover_profile
+    switch: s_burn_b
+    show_tokens:
+      light: l_burn_b
+  shot_burn_u:
+    profile: rollover_profile
+    switch: s_burn_u
+    show_tokens:
+      light: l_burn_u
+  shot_burn_r:
+    profile: rollover_profile
+    switch: s_burn_r
+    show_tokens:
+      light: l_burn_r
+  shot_burn_n:
+    profile: rollover_profile
+    switch: s_burn_n
+    show_tokens:
+      light: l_burn_n
+
+
+shot_groups:
+  burn_group:
+    shots: shot_burn_b, shot_burn_u, shot_burn_r, shot_burn_n
+    rotate_left_events: s_left_flipper_active
+    rotate_right_events: s_right_flipper_active
+    reset_events: mode_burn_rollovers_started
+    enable_events: ball_started
+    disable_events: ball_ending

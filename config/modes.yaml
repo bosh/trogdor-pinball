@@ -3,5 +3,6 @@
 modes:
   - attract
   - base
+  - burn_rollovers
   - pops_burnination
   - pops_burninated

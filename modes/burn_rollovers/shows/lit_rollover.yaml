@@ -1,0 +1,7 @@
+#show_version=6
+
+# lights are (lights)
+
+- duration: 100ms
+  lights:
+    (light): green

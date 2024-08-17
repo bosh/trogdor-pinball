@@ -61,6 +61,17 @@ timers:
         event: pop_center_burndown_reset
 
 variable_player:
+  mode_pops_burnination_started:
+    pop_left_fire_level:
+      int: 0
+      action: set
+    pop_right_fire_level:
+      int: 0
+      action: set
+    pop_center_fire_level:
+      int: 0
+      action: set
+
   # Increment fire level by three on bumper hit
   s_pop_left_active:
     pop_left_fire_level:

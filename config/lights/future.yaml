@@ -1,6 +1,24 @@
 #config_version=6
 
 lights:
+  # B U R N rollovers
+  l_burn_b:
+    number:
+    type: rgb
+    tags: lights_a, lights_pf, lights_burn
+  l_burn_u:
+    number:
+    type: rgb
+    tags: lights_b, lights_pf, lights_burn
+  l_burn_r:
+    number:
+    type: rgb
+    tags: lights_a, lights_pf, lights_burn
+  l_burn_n:
+    number:
+    type: rgb
+    tags: lights_b, lights_pf, lights_burn
+
   # Playfield: 3x Cobrapin pop bumper ring - RGBW...
   l_pop_ring_b_1:
     number:
