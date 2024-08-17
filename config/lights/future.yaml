@@ -19,6 +19,29 @@ lights:
     type: rgb
     tags: lights_b, lights_pf, lights_burn
 
+  # Inlanes and Outlanes
+  l_left_outlane:
+    number:
+    type: rgb
+    tags: lights_a, lights_pf, lights_lanes, lights_outlanes, lights_lower_third
+  l_left_inlane:
+    number:
+    type: rgb
+    tags: lights_b, lights_pf, lights_lanes, lights_inlanes, lights_lower_third
+  l_right_inlane:
+    number:
+    type: rgb
+    tags: lights_a, lights_pf, lights_lanes, lights_inlanes, lights_lower_third
+  l_right_outlane:
+    number:
+    type: rgb
+    tags: lights_b, lights_pf, lights_lanes, lights_outlanes, lights_lower_third
+
+  l_drain:
+    number:
+    type: rgb
+    tags: lights_b, lights_pf, lights_lower_third
+
   # Playfield: 3x Cobrapin pop bumper ring - RGBW...
   l_pop_ring_b_1:
     number:
