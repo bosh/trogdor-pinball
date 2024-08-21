@@ -1,6 +1,50 @@
 #config_version=6
 
 lights:
+  # playfield multipliers
+  l_pf_x2:
+    number:
+    type: rgb
+    tags: lights_b, lights_pf, lights_multipliers
+  l_pf_x3:
+    number:
+    type: rgb
+    tags: lights_a, lights_pf, lights_multipliers
+  l_pf_x4:
+    number:
+    type: rgb
+    tags: lights_b, lights_pf, lights_multipliers
+  l_pf_x5:
+    number:
+    type: rgb
+    tags: lights_a, lights_pf, lights_lights_multipliersburn
+
+  # MAJESTY counters (from 12:00 clockwise rotating)
+  l_majesty_1: #Consider splitting into R G and B channels to separately light colors without mounting multiple LED packages into one insert
+    number:
+    type: rgb
+    tags: lights_a, lights_pf, lights_majesty
+  l_majesty_2:
+    number:
+    type: rgb
+    tags: lights_b, lights_pf, lights_majesty
+  l_majesty_3:
+    number:
+    type: rgb
+    tags: lights_a, lights_pf, lights_majesty
+  l_majesty_4:
+    number:
+    type: rgb
+    tags: lights_b, lights_pf, lights_majesty
+  l_majesty_5:
+    number:
+    type: rgb
+    tags: lights_a, lights_pf, lights_majesty
+  l_majesty_6:
+    number:
+    type: rgb
+    tags: lights_b, lights_pf, lights_majesty
+
   # B U R N rollovers
   l_burn_b:
     number:
