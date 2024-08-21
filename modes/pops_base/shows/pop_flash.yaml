@@ -1,0 +1,51 @@
+#show_version=6
+
+# lights are (light_prefix) plus _1 through _8
+#   8 7
+# 1     6
+# 2     5
+#   3 4
+
+- duration: 25ms
+  lights:
+    (light_prefix)_1: off
+    (light_prefix)_2: off
+    (light_prefix)_3: off
+    (light_prefix)_4: purple
+    (light_prefix)_5: off
+    (light_prefix)_6: off
+    (light_prefix)_7: off
+    (light_prefix)_8: purple
+
+- duration: 75ms
+  lights:
+    (light_prefix)_1: purple
+    (light_prefix)_2: off
+    (light_prefix)_3: purple
+    (light_prefix)_4: off
+    (light_prefix)_5: purple
+    (light_prefix)_6: off
+    (light_prefix)_7: purple
+    (light_prefix)_8: off
+
+- duration: 50ms
+  lights:
+    (light_prefix)_1: purple
+    (light_prefix)_2: purple
+    (light_prefix)_3: purple
+    (light_prefix)_4: purple
+    (light_prefix)_5: purple
+    (light_prefix)_6: purple
+    (light_prefix)_7: purple
+    (light_prefix)_8: purple
+
+- duration: 75ms
+  lights:
+    (light_prefix)_1: off
+    (light_prefix)_2: off
+    (light_prefix)_3: off
+    (light_prefix)_4: purple-f150ms
+    (light_prefix)_5: off
+    (light_prefix)_6: off
+    (light_prefix)_7: off
+    (light_prefix)_8: purple-f150ms

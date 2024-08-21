@@ -10,7 +10,8 @@ mode:
 
 event_player:
   mode_base_started:
-    # - qualify_pops_burnination #Off for now to reduce log spam
+    - begin_pops_base
+    - begin_burn_rollovers
 
 variable_player:
   #Simple lane scoring

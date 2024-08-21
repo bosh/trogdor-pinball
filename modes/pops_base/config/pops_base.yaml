@@ -1,0 +1,31 @@
+#config_version=6
+
+mode:
+  start_events: begin_pops_base, fail_pops_burnination
+  stop_events: cancel_pops_base
+  priority: 151
+
+show_player:
+  s_pop_left_active:
+    pop_flash:
+      key: pop_left_show
+      action: play
+      loops: 0
+      show_tokens:
+        light_prefix: l_pop_ring_a
+
+  s_pop_right_active:
+    pop_flash:
+      key: pop_right_show
+      action: play
+      loops: 0
+      show_tokens:
+        light_prefix: l_pop_ring_b
+
+  s_pop_center_active:
+    pop_flash:
+      key: pop_center_show
+      action: play
+      loops: 0
+      show_tokens:
+        light_prefix: l_pop_ring_c

@@ -3,7 +3,7 @@
 mode:
   start_events: qualify_pops_burnination
   stop_events: succeed_pops_burnination, fail_pops_burnination
-  priority: 150
+  priority: 154
 
 timers:
   #Mode time limit timer
@@ -104,7 +104,7 @@ variable_player:
 
 event_player:
   timer_burnination_countdown_complete:
-    fail_pops_burnination
+    - fail_pops_burnination
 
   # Reset the timer when pop is hit
   s_pop_left_active:
