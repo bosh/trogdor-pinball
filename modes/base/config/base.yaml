@@ -14,31 +14,39 @@ event_player:
     - begin_burn_rollovers
 
 variable_player:
+  #Playfield multiplier always back down to 1 on new ball
+  mode_base_started:
+    playfield_multiplier:
+      action: set
+      int: 1
+
   #Simple lane scoring
+  #Outers score more because ball ends
   s_left_outer_lane_active:
-    score: 999 #Outers score more because ball ends
+    score: 1000 * current_player.playfield_multiplier - 1
   s_left_inner_lane_active:
-    score: 100
+    score: 100 * current_player.playfield_multiplier
 
   s_right_inner_lane_active:
-    score: 100
+    score: 100 * current_player.playfield_multiplier
   s_right_outer_lane_active:
-    score: 999
+    score: 1000 * current_player.playfield_multiplier - 1
 
   #Simple sling scoring with sling counter
+  #Left scores less because plunge to left is common
   s_left_sling_active:
-    score: 25 #Left scores less because plunge to left is common
+    score: 25 * current_player.playfield_multiplier
     sling_hits: 1
   s_right_sling_active:
-    score: 50
+    score: 50 * current_player.playfield_multiplier
     sling_hits: 1
 
   #Hooks for sling sequence pairs
+  #Sequence starting with left scores less because plunge start
   slings_l2r_hit:
-    score: 250 #Sequence starting with left scores less because plunge start
-
+    score: 250 * current_player.playfield_multiplier
   slings_r2l_hit:
-    score: 555
+    score: 555 * current_player.playfield_multiplier
 
 
 sequence_shots:
