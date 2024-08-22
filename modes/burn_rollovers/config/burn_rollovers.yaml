@@ -18,6 +18,7 @@ event_player:
     - succeed_burn_rollovers
     - cancel_pops_base
     - qualify_pops_burnination
+    - begin_burnination_rollovers
 
 shot_profiles:
   rollover_profile:
@@ -26,6 +27,7 @@ shot_profiles:
         show: 'off'
       - name: 'lit'
         show: 'lit_rollover'
+        sync_ms: 50
 
 shots:
   shot_burn_b:
@@ -48,7 +50,6 @@ shots:
     switch: s_burn_n
     show_tokens:
       light: l_burn_n
-
 
 shot_groups:
   burn_group:

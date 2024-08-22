@@ -1,0 +1,121 @@
+#config_version=6
+
+mode:
+  start_events: begin_burnination_rollovers
+  stop_events: succeed_pops_burnination, fail_pops_burnination
+  priority: 144
+
+timers:
+  # timer for changing where the target rollover is
+  rotating_target_clock:
+    start_value: 3
+    end_value: 0
+    tick_interval: 750ms
+    direction: down
+    start_running: true
+    restart_on_complete: true
+    control_events:
+      - event: rotating_target_clock_reset
+        action: reset
+
+event_player:
+  # Rotate right on timer, left on objective rollover
+  timer_rotating_target_clock_complete:
+    - target_rollover_rotate_right
+  burnination_rollover_shots_on_target_hit:
+    - rotating_target_clock_reset
+    - target_rollover_rotate_left
+
+  ensure_targets_set_non_objective:
+    - set_target_b_non_objective
+    - set_target_u_non_objective
+    - set_target_r_non_objective
+    - set_target_n_non_objective
+
+  mode_burnination_rollovers_started:
+    - ensure_targets_set_non_objective
+    - start_rotating_target_shot
+
+  mode_burnination_rollovers_will_stop:
+    - ensure_targets_set_non_objective
+
+
+random_event_player:
+  # Allow any starting target
+  start_rotating_target_shot:
+    - set_target_objective_b
+    - set_target_objective_u
+    - set_target_objective_r
+    - set_target_objective_n
+
+variable_player:
+  burnination_rollover_shots_on_target_hit:
+    score: 10000 * current_player.playfield_multiplier
+  burnination_rollover_shots_off_target_hit:
+    score: 400 * current_player.playfield_multiplier
+
+shot_profiles:
+  rotating_rollover_target_profile:
+    advance_on_hit: false
+    states:
+      - name: 'off_target'
+        show: 'nonobjective_rollover'
+      - name: 'on_target'
+        show: 'objective_rollover'
+
+shots:
+  shot_burnination_rollover_b:
+    advance_events: set_target_objective_b
+    control_events:
+      - events: set_target_b_non_objective
+        state: 0
+    persist_enable: false
+    profile: rotating_rollover_target_profile
+    switch: s_burn_b
+    show_tokens:
+      light: l_burn_b
+
+  shot_burnination_rollover_u:
+    advance_events: set_target_objective_u
+    control_events:
+      - events: set_target_u_non_objective
+        state: 0
+    persist_enable: false
+    profile: rotating_rollover_target_profile
+    switch: s_burn_u
+    show_tokens:
+      light: l_burn_u
+
+  shot_burnination_rollover_r:
+    advance_events: set_target_objective_r
+    control_events:
+      - events: set_target_r_non_objective
+        state: 0
+    persist_enable: false
+    profile: rotating_rollover_target_profile
+    switch: s_burn_r
+    show_tokens:
+      light: l_burn_r
+
+  shot_burnination_rollover_n:
+    advance_events: set_target_objective_n
+    control_events:
+      - events: set_target_n_non_objective
+        state: 0
+    persist_enable: false
+    profile: rotating_rollover_target_profile
+    switch: s_burn_n
+    show_tokens:
+      light: l_burn_n
+
+shot_groups:
+  burnination_rollover_shots:
+    shots:
+      - shot_burnination_rollover_b
+      - shot_burnination_rollover_u
+      - shot_burnination_rollover_r
+      - shot_burnination_rollover_n
+    rotate_left_events: target_rollover_rotate_left
+    rotate_right_events: target_rollover_rotate_right
+    enable_events: ball_started
+    disable_events: ball_ending

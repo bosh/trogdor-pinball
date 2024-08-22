@@ -1,0 +1,7 @@
+#show_version=6
+
+# lights are (light)
+
+- duration: 300ms
+  lights:
+    (light): "331111"
