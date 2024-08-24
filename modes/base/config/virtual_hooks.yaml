@@ -1,0 +1,26 @@
+#config_version=6
+
+event_player:
+  vswitch_end_game_active:
+    - end_game
+
+  vswitch_qualify_burnination_active:
+    - burn_group_lit_complete
+
+  vswitch_add_fire_level_active:
+    - virtual_add_10_fire_all
+
+  vswitch_qualify_burninated_active:
+    - succeed_pops_burnination
+
+variable_player:
+  virtual_add_10_fire_all:
+    pop_right_fire_level:
+      int: 10
+      action: add
+    pop_left_fire_level:
+      int: 10
+      action: add
+    pop_center_fire_level:
+      int: 10
+      action: add

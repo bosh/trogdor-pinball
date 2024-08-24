@@ -1,0 +1,52 @@
+#config_version=6
+
+# Switches used in mpf monitor to issue artificial mode qualification events
+
+switches:
+  vswitch_end_game:
+    number:
+
+  vswitch_qualify_burnination:
+    number:
+  vswitch_add_fire_level:
+    number:
+
+  vswitch_qualify_burninated:
+    number:
+
+plugins: switch_player
+switch_player:
+  start_event: vswitch_end_game_active
+  steps:
+    # Clear plunger lane and space in back of trough
+    - time: 1ms
+      switch: s_plunger
+      action: deactivate
+    - time: 1ms
+      switch: s_trough_ball_5
+      action: deactivate
+    - time: 1ms
+      switch: s_trough_ball_4
+      action: deactivate
+    - time: 1ms
+      switch: s_trough_ball_3
+      action: deactivate
+
+    # Ensure trough start is prepared
+    - time: 1ms
+      switch: s_trough_ball_2
+      action: activate
+    - time: 1ms
+      switch: s_trough_ball_1
+      action: activate
+
+    # Send a fake ball through the trough to trick ball detection, resting at 3
+    - time: 10ms
+      switch: s_trough_ball_5
+      action: activate
+    - time: 1ms
+      switch: s_trough_ball_5
+      action: deactivate
+    - time: 1ms
+      switch: s_trough_ball_3
+      action: activate

@@ -3,6 +3,7 @@
 config:
   - light_player.yaml
   - mini_cab_multiball.yaml
+  - virtual_hooks.yaml
 
 mode:
   start_events: ball_started
