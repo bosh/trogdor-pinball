@@ -1,0 +1,19 @@
+#config_version=6
+
+mode:
+  start_events: begin_lower_lanes_base
+  stop_events: cancel_lower_lanes_base
+  priority: 111
+
+variable_player:
+  #Simple lane scoring
+  #Outers score more because ball ends
+  s_left_outer_lane_active:
+    score: 1000 * current_player.playfield_multiplier - 1
+  s_left_inner_lane_active:
+    score: 100 * current_player.playfield_multiplier
+
+  s_right_inner_lane_active:
+    score: 100 * current_player.playfield_multiplier
+  s_right_outer_lane_active:
+    score: 1000 * current_player.playfield_multiplier - 1

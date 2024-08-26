@@ -5,6 +5,8 @@ modes:
   - base
   - burn_rollovers
   - burnination_rollovers
+  - lower_lanes_base
   - pops_base
   - pops_burnination
   - pops_burninated
+  - slings_base

@@ -12,6 +12,8 @@ mode:
 event_player:
   mode_base_started:
     - begin_pops_base
+    - begin_slings_base
+    - begin_lower_lanes_base
     - begin_burn_rollovers
 
 variable_player:
@@ -20,43 +22,6 @@ variable_player:
     playfield_multiplier:
       action: set
       int: 1
-
-  #Simple lane scoring
-  #Outers score more because ball ends
-  s_left_outer_lane_active:
-    score: 1000 * current_player.playfield_multiplier - 1
-  s_left_inner_lane_active:
-    score: 100 * current_player.playfield_multiplier
-
-  s_right_inner_lane_active:
-    score: 100 * current_player.playfield_multiplier
-  s_right_outer_lane_active:
-    score: 1000 * current_player.playfield_multiplier - 1
-
-  #Simple sling scoring with sling counter
-  #Left scores less because plunge to left is common
-  s_left_sling_active:
-    score: 25 * current_player.playfield_multiplier
-    sling_hits: 1
-  s_right_sling_active:
-    score: 50 * current_player.playfield_multiplier
-    sling_hits: 1
-
-  #Hooks for sling sequence pairs
-  #Sequence starting with left scores less because plunge start
-  slings_l2r_hit:
-    score: 250 * current_player.playfield_multiplier
-  slings_r2l_hit:
-    score: 555 * current_player.playfield_multiplier
-
-
-sequence_shots:
-  slings_l2r:
-    switch_sequence: s_left_sling, s_right_sling
-    sequence_timeout: 300ms
-  slings_r2l:
-    switch_sequence: s_right_sling, s_left_sling
-    sequence_timeout: 300ms
 
 ball_saves:
   default:

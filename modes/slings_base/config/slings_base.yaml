@@ -1,0 +1,63 @@
+#config_version=6
+
+mode:
+  start_events: begin_slings_base
+  stop_events: cancel_slings_base
+  priority: 121
+
+variable_player:
+  #Simple sling scoring with sling counter
+  #Left scores less because plunge to left is common
+  s_left_sling_active:
+    score: 25 * current_player.playfield_multiplier
+    sling_hits: 1
+  s_right_sling_active:
+    score: 50 * current_player.playfield_multiplier
+    sling_hits: 1
+
+  #Hooks for sling sequence pairs
+  #Sequence starting with left scores less because plunge start
+  slings_l2r_hit:
+    score: 250 * current_player.playfield_multiplier
+  slings_r2l_hit:
+    score: 555 * current_player.playfield_multiplier
+
+sequence_shots:
+  slings_l2r:
+    switch_sequence: s_left_sling, s_right_sling
+    sequence_timeout: 300ms
+  slings_r2l:
+    switch_sequence: s_right_sling, s_left_sling
+    sequence_timeout: 300ms
+
+show_player:
+  slings_l2r_hit:
+    cottage_burn:
+      action: play
+      loops: 2
+      key: l2r_star_a_burn
+      show_tokens:
+        l1: l_star_ring_a_1
+        l2: l_star_ring_a_2
+        l3: l_star_ring_a_3
+        l4: l_star_ring_a_4
+        l5: l_star_ring_a_5
+        l6: l_star_ring_a_6
+        l7: l_star_ring_a_7
+        l8: l_star_ring_a_8
+
+  slings_r2l_hit:
+    cottage_burn:
+      action: play
+      loops: 2
+      key: r2l_dome_a_burn
+      show_tokens:
+        l1: l_dome_ring_a_8
+        l2: l_dome_ring_a_7
+        l3: l_dome_ring_a_6
+        l4: l_dome_ring_a_5
+        l5: l_dome_ring_a_4
+        l6: l_dome_ring_a_3
+        l7: l_dome_ring_a_2
+        l8: l_dome_ring_a_1
+
