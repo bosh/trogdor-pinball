@@ -1,0 +1,6 @@
+#config_version=6
+
+#This file is hand-written for now but in the future, generating modes should
+#cause this file to regenerate with them all listed
+modes:
+  - generated_example

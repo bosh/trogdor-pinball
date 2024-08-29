@@ -1,0 +1,9 @@
+#show_version=6
+
+- duration: 334ms
+  lights:
+    vlight_for_generated_example_mode: off
+
+- duration: 666ms
+  lights:
+    vlight_for_generated_example_mode: green

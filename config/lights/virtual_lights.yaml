@@ -1,0 +1,10 @@
+#config_version=6
+
+# Lights used in mpf monitor to help debug
+# with no plan to actually wire a light into the physical machine
+
+lights:
+  vlight_for_generated_example_mode:
+    number:
+    type: rgb
+    tags: lights_virtual
