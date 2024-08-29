@@ -1,0 +1,33 @@
+#config_version=6
+
+mode:
+  start_events: ball_started
+  priority: 109
+
+show_player:
+  celebrate_achievement:
+    majesty_rainbow_loop:
+      action: play
+      loops: 2
+
+achievements:
+  burnination:
+    start_enabled: true
+
+    show_tokens:
+      light: l_majesty_1
+
+    show_when_selected:
+    show_when_started: flash
+    show_when_completed: on
+    events_when_started:
+    restart_after_stop_possible: true
+    events_when_completed: celebrate_achievement
+    #Control events:
+    select_events:
+    unselect_events:
+    start_events: mode_pops_burnination_started
+    stop_events: fail_pops_burnination
+    complete_events: succeed_pops_burnination
+    enable_events:
+    disable_events:

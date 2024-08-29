@@ -1,0 +1,58 @@
+#show_version=6
+
+# lights are (l1) - (l6)
+# colors are (level1) - (level6)
+
+- duration: 150ms
+  lights:
+    l_majesty_1: green
+    l_majesty_2: yellow
+    l_majesty_3: orange
+    l_majesty_4: red
+    l_majesty_5: purple
+    l_majesty_6: blue
+
+- duration: 150ms
+  lights:
+    l_majesty_2: green
+    l_majesty_3: yellow
+    l_majesty_4: orange
+    l_majesty_5: red
+    l_majesty_6: purple
+    l_majesty_1: blue
+
+- duration: 150ms
+  lights:
+    l_majesty_3: green
+    l_majesty_4: yellow
+    l_majesty_5: orange
+    l_majesty_6: red
+    l_majesty_1: purple
+    l_majesty_2: blue
+
+- duration: 150ms
+  lights:
+    l_majesty_4: green
+    l_majesty_5: yellow
+    l_majesty_6: orange
+    l_majesty_1: red
+    l_majesty_2: purple
+    l_majesty_3: blue
+
+- duration: 150ms
+  lights:
+    l_majesty_5: green
+    l_majesty_6: yellow
+    l_majesty_1: orange
+    l_majesty_2: red
+    l_majesty_3: purple
+    l_majesty_4: blue
+
+- duration: 150ms
+  lights:
+    l_majesty_6: green
+    l_majesty_1: yellow
+    l_majesty_2: orange
+    l_majesty_3: red
+    l_majesty_4: purple
+    l_majesty_5: blue

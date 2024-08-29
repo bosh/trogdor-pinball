@@ -1,6 +1,7 @@
 #config_version=6
 
 modes:
+  - achievements
   - attract
   - base
   - burn_rollovers
