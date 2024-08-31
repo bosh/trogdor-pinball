@@ -1,6 +1,8 @@
 require 'yaml'
+require 'fileutils'
 
 require_relative 'models/config'
+require_relative 'models/show'
 require_relative 'models/mode'
 require_relative 'models/plan'
 

@@ -1,9 +1,11 @@
 #show_version=6
-
+# This is a generated show!
+# 2024-08-31 03:37:05 -0700
+---
 - duration: 334ms
   lights:
-    vlight_for_generated_example_mode: off
-
+    vlight_for_generated_example_mode: 'off'
 - duration: 666ms
   lights:
     vlight_for_generated_example_mode: green
+

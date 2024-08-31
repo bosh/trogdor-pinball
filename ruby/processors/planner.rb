@@ -6,7 +6,10 @@ module TrogBuild
 
     def plan!
       plan = Plan.new()
-      plan.modes << Mode.new("generated_example_2", 131)
+      mode = Mode.new("generated_example", 131)
+      show = Show.new("generated_show_a")
+      mode.shows << show
+      plan.modes << mode
       plan
     end
   end
