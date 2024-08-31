@@ -5,7 +5,9 @@ module TrogBuild
     end
 
     def plan!
-      Plan.new()
+      plan = Plan.new()
+      plan.modes << Mode.new("generated_example_2", 131)
+      plan
     end
   end
 end

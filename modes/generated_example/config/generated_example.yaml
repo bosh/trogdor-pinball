@@ -1,5 +1,5 @@
 #config_version=6
-
+---
 #TODO this is fake for now, but a ruby harness should be able to regenerate it
 mode:
   start_events: ball_started
