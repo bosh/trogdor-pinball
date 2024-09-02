@@ -1,7 +1,47 @@
 #show_version=6
 # 6 majesty lights spin twice
-# 2024-09-02 03:15:17 -0700
+# 2024-09-02 03:20:10 -0700
 ---
+- duration: 150ms
+  lights:
+    l_majesty_1: yellow
+    l_majesty_2: orange
+    l_majesty_3: red
+    l_majesty_4: purple
+    l_majesty_5: blue
+    l_majesty_6: green
+- duration: 150ms
+  lights:
+    l_majesty_1: orange
+    l_majesty_2: red
+    l_majesty_3: purple
+    l_majesty_4: blue
+    l_majesty_5: green
+    l_majesty_6: yellow
+- duration: 150ms
+  lights:
+    l_majesty_1: red
+    l_majesty_2: purple
+    l_majesty_3: blue
+    l_majesty_4: green
+    l_majesty_5: yellow
+    l_majesty_6: orange
+- duration: 150ms
+  lights:
+    l_majesty_1: purple
+    l_majesty_2: blue
+    l_majesty_3: green
+    l_majesty_4: yellow
+    l_majesty_5: orange
+    l_majesty_6: red
+- duration: 150ms
+  lights:
+    l_majesty_1: blue
+    l_majesty_2: green
+    l_majesty_3: yellow
+    l_majesty_4: orange
+    l_majesty_5: red
+    l_majesty_6: purple
 - duration: 150ms
   lights:
     l_majesty_1: green
@@ -10,44 +50,4 @@
     l_majesty_4: red
     l_majesty_5: purple
     l_majesty_6: blue
-- duration: 150ms
-  lights:
-    l_majesty_2: green
-    l_majesty_3: yellow
-    l_majesty_4: orange
-    l_majesty_5: red
-    l_majesty_6: purple
-    l_majesty_1: blue
-- duration: 150ms
-  lights:
-    l_majesty_3: green
-    l_majesty_4: yellow
-    l_majesty_5: orange
-    l_majesty_6: red
-    l_majesty_1: purple
-    l_majesty_2: blue
-- duration: 150ms
-  lights:
-    l_majesty_4: green
-    l_majesty_5: yellow
-    l_majesty_6: orange
-    l_majesty_1: red
-    l_majesty_2: purple
-    l_majesty_3: blue
-- duration: 150ms
-  lights:
-    l_majesty_5: green
-    l_majesty_6: yellow
-    l_majesty_1: orange
-    l_majesty_2: red
-    l_majesty_3: purple
-    l_majesty_4: blue
-- duration: 150ms
-  lights:
-    l_majesty_6: green
-    l_majesty_1: yellow
-    l_majesty_2: orange
-    l_majesty_3: red
-    l_majesty_4: purple
-    l_majesty_5: blue
 
