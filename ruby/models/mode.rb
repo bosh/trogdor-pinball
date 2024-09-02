@@ -46,7 +46,10 @@ module TrogBuild
     def generate_start_events; 'ball_started' end
 
     def add_shows!
-      @example_show = ExampleShow.new("example_show_a")
+      @example_show = Show.new('example_show_a', 'This is the example show!')
+      @example_show.add_step('334ms', {vlight_for_generated_example_mode: 'purple'})
+      @example_show.add_step('666ms', {vlight_for_generated_example_mode: 'red'})
+
       @shows << @example_show
     end
 
