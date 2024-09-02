@@ -10,12 +10,20 @@ module TrogBuild
       @plan = Plan.new()
 
       add_example_mode!
+      add_achievement_modes!
       plan
     end
 
-    def add_example_mode!
-      mode = ExampleMode.new("generated_example", 131)
+    def add_mode(mode)
       plan.modes << mode
+    end
+
+    def add_example_mode!
+      add_mode ExampleMode.new("generated_example", 131)
+    end
+
+    def add_achievement_modes!
+      add_mode AchievementMode.new("generated_achievements", 109)
     end
   end
 end

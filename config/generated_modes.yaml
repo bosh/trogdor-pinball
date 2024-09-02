@@ -2,4 +2,5 @@
 # This file is generated to load the other generated files---
 modes:
 - generated_example
+- generated_achievements
 

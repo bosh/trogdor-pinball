@@ -13,19 +13,34 @@ module TrogBuild
     end
 
     def to_hash
-      {}
-    end
+      out = base_hash
 
-    def base_hash
-      out = {'mode' => {}}
-      mode = out['mode']
+      out[Mode::SHOW_PLAYER] = show_player if show_player
+      out.merge!(custom_hash)
 
-      mode['priority'] = @priority
-      out['mode']['start_events'] = @start_events
       out
     end
 
+    def base_hash
+      {
+        'mode' => {
+          'priority' => @priority,
+          'start_events' => @start_events
+        }
+      }
+    end
+
     def add_shows!
+    end
+    def add_show(show)
+      @shows << show
+    end
+
+    def show_player
+    end
+
+    def custom_hash
+      {}
     end
 
     def custom_top_comment
@@ -49,23 +64,71 @@ module TrogBuild
       @example_show = Show.new('example_show_a', 'This is the example show!')
       @example_show.add_step('334ms', {vlight_for_generated_example_mode: 'purple'})
       @example_show.add_step('666ms', {vlight_for_generated_example_mode: 'red'})
-
-      @shows << @example_show
+      add_show(@example_show)
     end
 
-    def to_hash
-      out = base_hash
-
-      out[Mode::SHOW_PLAYER] = {
+    def show_player
+      {
         "mode_#{name}_started" => {
           @example_show.name => {
             'action' => 'play'
           }
         }
       }
-
-      out
     end
 
+  end
+
+  class AchievementMode < Mode
+    def custom_top_comment; 'Majesty Achievements!' end
+    def generate_start_events; 'ball_started' end
+
+    def add_shows!
+      @rainbow_show = Show.new('majesty_rainbow_loop', '6 majesty lights spin twice')
+      6.times do |i|
+        @rainbow_show.add_step('150ms', rainbow_step(i))
+      end
+
+      add_show(@rainbow_show)
+    end
+
+    def rainbow_step(i)
+      colors = %w(green yellow orange red purple blue)
+      (0...6).inject({}) do |memo, light_number|
+        memo["l_majesty_#{1 + (light_number+i)%6}"] = colors[light_number]
+        memo
+      end
+    end
+
+    def show_player
+      {
+        "celebrate_achievement" => {
+          @rainbow_show.name => {
+            'action' => 'play',
+            'loops' => 2
+          }
+        }
+      }
+    end
+
+    def custom_hash
+      {
+        'achievements' => {
+          'burnination' => {
+            'start_enabled' => true,
+            'show_tokens' => {
+              'light' => 'l_majesty_1'
+            },
+            'show_when_started' => 'flash',
+            'show_when_completed' => 'on',
+            'restart_after_stop_possible' => true,
+            'events_when_completed' => 'celebrate_achievement',
+            'start_events' => 'mode_pops_burnination_started',
+            'stop_events' => 'fail_pops_burnination',
+            'complete_events' => 'succeed_pops_burnination'
+          }
+        }
+      }
+    end
   end
 end

@@ -1,8 +1,7 @@
 #show_version=6
-
-# lights are (l1) - (l6)
-# colors are (level1) - (level6)
-
+# 6 majesty lights spin twice
+# 2024-09-02 03:06:06 -0700
+---
 - duration: 150ms
   lights:
     l_majesty_1: green
@@ -11,7 +10,6 @@
     l_majesty_4: red
     l_majesty_5: purple
     l_majesty_6: blue
-
 - duration: 150ms
   lights:
     l_majesty_2: green
@@ -20,7 +18,6 @@
     l_majesty_5: red
     l_majesty_6: purple
     l_majesty_1: blue
-
 - duration: 150ms
   lights:
     l_majesty_3: green
@@ -29,7 +26,6 @@
     l_majesty_6: red
     l_majesty_1: purple
     l_majesty_2: blue
-
 - duration: 150ms
   lights:
     l_majesty_4: green
@@ -38,7 +34,6 @@
     l_majesty_1: red
     l_majesty_2: purple
     l_majesty_3: blue
-
 - duration: 150ms
   lights:
     l_majesty_5: green
@@ -47,7 +42,6 @@
     l_majesty_2: red
     l_majesty_3: purple
     l_majesty_4: blue
-
 - duration: 150ms
   lights:
     l_majesty_6: green
@@ -56,3 +50,4 @@
     l_majesty_3: red
     l_majesty_4: purple
     l_majesty_5: blue
+
