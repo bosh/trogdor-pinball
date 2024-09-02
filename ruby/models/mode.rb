@@ -1,42 +1,62 @@
 module TrogBuild
   class Mode
+    SHOW_PLAYER = 'show_player'
     attr_reader :name, :priority, :shows
 
     def initialize(name, priority)
       @name = name
       @priority = priority
-      @top_comment = 'This is a generated file!'
       @shows = []
+      @top_comment = custom_top_comment
+      add_shows!
     end
 
     def to_hash
+      {}
+    end
+
+    def base_hash
       out = {'mode' => {}}
       mode = out['mode']
 
       mode['priority'] = @priority
-      mode['start_events'] = 'ball_started'
-
-      out['show_player'] = build_show_player if build_show_player
-
       out
     end
 
-    def top_comment_text
-      if @top_comment
-        '# ' + @top_comment + "\n# " + Time.now.to_s + "\n"
-      end
+    def add_shows!
     end
 
-    private
+    def custom_top_comment
+      'This is a generated file!'
+    end
 
-    def build_show_player
-      @show_player ||= {
+    def top_comment_text
+      '# ' + @top_comment + "\n# " + Time.now.to_s + "\n"
+    end
+  end
+
+  class ExampleMode < Mode
+    def custom_top_comment; 'This is the example mode!' end
+
+    def add_shows!
+      @example_show = ExampleShow.new("example_show_a")
+      @shows << @example_show
+    end
+
+    def to_hash
+      out = base_hash
+      out['mode']['start_events'] = 'ball_started'
+
+      out[Mode::SHOW_PLAYER] = {
         "mode_#{name}_started" => {
-          'generated_show_a' => {
+          @example_show.name => {
             'action' => 'play'
           }
         }
       }
+
+      out
     end
+
   end
 end

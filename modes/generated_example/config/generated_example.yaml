@@ -1,12 +1,12 @@
 #config_version=6
-# This is a generated file!
-# 2024-08-31 03:37:05 -0700
+# This is the example mode!
+# 2024-09-02 02:14:16 -0700
 ---
 mode:
   priority: 131
   start_events: ball_started
 show_player:
   mode_generated_example_started:
-    generated_show_a:
+    example_show_a:
       action: play
 

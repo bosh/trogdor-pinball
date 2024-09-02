@@ -1,16 +1,21 @@
 module TrogBuild
   class Planner
+    attr_reader :plan
     def initialize(config)
       @config = config
+      @plan = nil
     end
 
     def plan!
-      plan = Plan.new()
-      mode = Mode.new("generated_example", 131)
-      show = Show.new("generated_show_a")
-      mode.shows << show
-      plan.modes << mode
+      @plan = Plan.new()
+
+      add_example_mode!
       plan
+    end
+
+    def add_example_mode!
+      mode = ExampleMode.new("generated_example", 131)
+      plan.modes << mode
     end
   end
 end
