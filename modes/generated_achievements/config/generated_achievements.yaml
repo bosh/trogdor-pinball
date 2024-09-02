@@ -1,6 +1,6 @@
 #config_version=6
 # Majesty Achievements!
-# 2024-09-02 03:06:06 -0700
+# 2024-09-02 03:15:17 -0700
 ---
 mode:
   priority: 109
@@ -22,4 +22,59 @@ achievements:
     start_events: mode_pops_burnination_started
     stop_events: fail_pops_burnination
     complete_events: succeed_pops_burnination
+  a2:
+    start_enabled: true
+    show_tokens:
+      light: l_majesty_2
+    show_when_started: flash
+    show_when_completed: 'on'
+    restart_after_stop_possible: true
+    events_when_completed: celebrate_achievement
+    start_events: start_achievement_a2
+    stop_events: fail_a2
+    complete_events: succeed_a2
+  a3:
+    start_enabled: true
+    show_tokens:
+      light: l_majesty_3
+    show_when_started: flash
+    show_when_completed: 'on'
+    restart_after_stop_possible: true
+    events_when_completed: celebrate_achievement
+    start_events: start_achievement_a3
+    stop_events: fail_a3
+    complete_events: succeed_a3
+  a4:
+    start_enabled: true
+    show_tokens:
+      light: l_majesty_4
+    show_when_started: flash
+    show_when_completed: 'on'
+    restart_after_stop_possible: true
+    events_when_completed: celebrate_achievement
+    start_events: start_achievement_a4
+    stop_events: fail_a4
+    complete_events: succeed_a4
+  a5:
+    start_enabled: true
+    show_tokens:
+      light: l_majesty_5
+    show_when_started: flash
+    show_when_completed: 'on'
+    restart_after_stop_possible: true
+    events_when_completed: celebrate_achievement
+    start_events: start_achievement_a5
+    stop_events: fail_a5
+    complete_events: succeed_a5
+  a6:
+    start_enabled: true
+    show_tokens:
+      light: l_majesty_6
+    show_when_started: flash
+    show_when_completed: 'on'
+    restart_after_stop_possible: true
+    events_when_completed: celebrate_achievement
+    start_events: start_achievement_a6
+    stop_events: fail_a6
+    complete_events: succeed_a6
 

@@ -114,20 +114,29 @@ module TrogBuild
     def custom_hash
       {
         'achievements' => {
-          'burnination' => {
-            'start_enabled' => true,
-            'show_tokens' => {
-              'light' => 'l_majesty_1'
-            },
-            'show_when_started' => 'flash',
-            'show_when_completed' => 'on',
-            'restart_after_stop_possible' => true,
-            'events_when_completed' => 'celebrate_achievement',
-            'start_events' => 'mode_pops_burnination_started',
-            'stop_events' => 'fail_pops_burnination',
-            'complete_events' => 'succeed_pops_burnination'
-          }
+          'burnination' => achievement_hash('burnination', 1, "mode_pops_burnination_started", 'pops_burnination'),
+          'a2' => achievement_hash('a2', 2, nil, 'a2'),
+          'a3' => achievement_hash('a3', 3, nil, 'a3'),
+          'a4' => achievement_hash('a4', 4, nil, 'a4'),
+          'a5' => achievement_hash('a5', 5, nil, 'a5'),
+          'a6' => achievement_hash('a6', 6, nil, 'a6')
         }
+      }
+    end
+
+    def achievement_hash(name, majesty_number, start_events, event_template_name)
+      {
+        'start_enabled' => true,
+        'show_tokens' => {
+          'light' => "l_majesty_#{majesty_number}"
+        },
+        'show_when_started' => 'flash',
+        'show_when_completed' => 'on',
+        'restart_after_stop_possible' => true,
+        'events_when_completed' => 'celebrate_achievement',
+        'start_events' => start_events || "start_achievement_#{name}",
+        'stop_events' => "fail_#{event_template_name}",
+        'complete_events' => "succeed_#{event_template_name}"
       }
     end
   end
