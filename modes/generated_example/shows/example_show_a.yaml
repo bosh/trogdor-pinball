@@ -1,11 +1,11 @@
 #show_version=6
 # This is the example show!
-# 2024-09-02 02:14:16 -0700
+# 2024-09-02 02:28:24 -0700
 ---
 - duration: 334ms
   lights:
-    vlight_for_generated_example_mode: 'off'
+    vlight_for_generated_example_mode: purple
 - duration: 666ms
   lights:
-    vlight_for_generated_example_mode: green
+    vlight_for_generated_example_mode: red
 

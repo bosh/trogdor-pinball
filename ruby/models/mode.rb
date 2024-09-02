@@ -8,6 +8,7 @@ module TrogBuild
       @priority = priority
       @shows = []
       @top_comment = custom_top_comment
+      @start_events = generate_start_events
       add_shows!
     end
 
@@ -20,6 +21,7 @@ module TrogBuild
       mode = out['mode']
 
       mode['priority'] = @priority
+      out['mode']['start_events'] = @start_events
       out
     end
 
@@ -30,6 +32,10 @@ module TrogBuild
       'This is a generated file!'
     end
 
+    def generate_start_events
+      'start_generated_mode_' + name
+    end
+
     def top_comment_text
       '# ' + @top_comment + "\n# " + Time.now.to_s + "\n"
     end
@@ -37,6 +43,7 @@ module TrogBuild
 
   class ExampleMode < Mode
     def custom_top_comment; 'This is the example mode!' end
+    def generate_start_events; 'ball_started' end
 
     def add_shows!
       @example_show = ExampleShow.new("example_show_a")
@@ -45,7 +52,6 @@ module TrogBuild
 
     def to_hash
       out = base_hash
-      out['mode']['start_events'] = 'ball_started'
 
       out[Mode::SHOW_PLAYER] = {
         "mode_#{name}_started" => {
