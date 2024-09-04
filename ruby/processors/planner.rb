@@ -15,8 +15,24 @@ module TrogBuild
       plan
     end
 
+    private
+
     def add_generated_lights!
       plan.add_light "generated_light_1"
+
+      add_light_sequence "gl_ring_a", 8 do |i, config|
+        lights_ab_tag = i % 2 == 0 ? 'lights_a' : 'lights_b'
+        config['tags'] = "lights_generated,#{lights_ab_tag}"
+        config['type'] = 'rgb'
+        config
+      end
+    end
+
+    def add_light_sequence(name, count)
+      count.times do |i|
+        config = yield(i, {})
+        plan.add_light "#{name}_#{i}", config
+      end
     end
 
     def add_example_mode!
