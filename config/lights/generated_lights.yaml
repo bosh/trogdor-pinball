@@ -1,0 +1,8 @@
+#config_version=6
+# Generated lights!
+
+---
+lights:
+  generated_light_1:
+    number:
+    type: rgb

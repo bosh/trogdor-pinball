@@ -29,7 +29,7 @@ module TrogBuild
     end
 
     def top_comment_text
-      "#show_version=6\n# " + @top_comment + "\n# " + Time.now.to_s + "\n"
+      "#show_version=6\n# " + @top_comment + "\n\n"
     end
   end
 end

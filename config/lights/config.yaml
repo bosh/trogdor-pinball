@@ -4,5 +4,6 @@ config:
   - minicab.yaml
   - playfield_misc.yaml
   - playfield_rings.yaml
+  - generated_lights.yaml
   - virtual_lights.yaml
   - future.yaml

@@ -9,21 +9,22 @@ module TrogBuild
     def plan!
       @plan = Plan.new()
 
+      add_generated_lights!
       add_example_mode!
       add_achievement_modes!
       plan
     end
 
-    def add_mode(mode)
-      plan.modes << mode
+    def add_generated_lights!
+      plan.add_light "generated_light_1"
     end
 
     def add_example_mode!
-      add_mode ExampleMode.new("generated_example", 131)
+      plan.add_mode ExampleMode.new("generated_example", 131)
     end
 
     def add_achievement_modes!
-      add_mode AchievementMode.new("generated_achievements", 109)
+      plan.add_mode AchievementMode.new("generated_achievements", 109)
     end
   end
 end

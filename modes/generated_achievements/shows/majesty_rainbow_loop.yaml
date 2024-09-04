@@ -1,6 +1,6 @@
 #show_version=6
 # 6 majesty lights spin twice
-# 2024-09-02 03:20:10 -0700
+
 ---
 - duration: 150ms
   lights:

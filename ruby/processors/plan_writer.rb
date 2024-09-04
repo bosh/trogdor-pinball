@@ -6,13 +6,19 @@ module TrogBuild
     end
 
     def write!(plan)
+      clean_generated_lights!
       clean_generated_modes_manifest!
       clean_generated_modes!
+      write_generated_lights!(plan)
       write_generated_modes_manifest!(plan)
       write_generated_modes!(plan)
     end
 
     private
+
+    def generated_lights_path
+      "#{PROJECT_ROOT}/config/lights/generated_lights.yaml"
+    end
 
     def mode_manifest_path
       "#{PROJECT_ROOT}/config/generated_modes.yaml"
@@ -20,6 +26,11 @@ module TrogBuild
 
     def mode_path(name)
       "#{PROJECT_ROOT}/modes/#{name}"
+    end
+
+    def clean_generated_lights!
+      puts "Cleaning generated lights" if $debug
+      File.delete(generated_lights_path) if File.exist?(generated_lights_path)
     end
 
     def clean_generated_modes_manifest!
@@ -33,6 +44,18 @@ module TrogBuild
       found_modes.each do |path|
         FileUtils.remove_dir(path)
       end
+    end
+
+    def write_generated_lights!(plan)
+      puts "Writing generated lights" if $debug
+      File.open(generated_lights_path, 'w') do |file|
+        file.write("#config_version=6\n# Generated lights!\n\n")
+        write_lights(plan, file)
+      end
+    end
+
+    def write_lights(plan, file)
+      file.write(plan.lights.to_yaml)
     end
 
     def write_generated_modes_manifest!(plan)

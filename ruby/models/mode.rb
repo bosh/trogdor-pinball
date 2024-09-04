@@ -52,7 +52,7 @@ module TrogBuild
     end
 
     def top_comment_text
-      '# ' + @top_comment + "\n# " + Time.now.to_s + "\n"
+      '# ' + @top_comment + "\n\n"
     end
   end
 
