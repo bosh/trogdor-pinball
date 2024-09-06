@@ -15,6 +15,7 @@ event_player:
     - begin_slings_base
     - begin_lower_lanes_base
     - begin_burn_rollovers
+    - begin_skillshot_base
 
 variable_player:
   #Playfield multiplier always back down to 1 on new ball
