@@ -142,6 +142,7 @@ event_player:
 
   check_burnination_complete{current_player.pop_left_fire_level > 25 and current_player.pop_right_fire_level > 25 and current_player.pop_center_fire_level > 25}:
     - burnination_countdown_stop
+    - increment_playfield_multiplier #TODO need to make this a state machine with a transition that posts the increment once
     - succeed_pops_burnination
 
 show_player:

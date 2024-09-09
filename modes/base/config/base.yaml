@@ -24,6 +24,12 @@ variable_player:
       action: set
       int: 1
 
+  #indirection so players can hook onto increment instead of the player var event
+  increment_playfield_multiplier{current_player.playfield_multiplier < 5}:
+    playfield_multiplier:
+      action: add
+      int: 1
+
 ball_saves:
   default:
     active_time: 5s

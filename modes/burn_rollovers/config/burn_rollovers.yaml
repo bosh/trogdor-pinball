@@ -16,6 +16,7 @@ variable_player:
 event_player:
   burn_group_lit_complete:
     - succeed_burn_rollovers
+    - increment_playfield_multiplier
     - cancel_pops_base
     - qualify_pops_burnination
     - begin_burnination_rollovers

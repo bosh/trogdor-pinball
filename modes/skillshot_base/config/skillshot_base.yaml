@@ -22,6 +22,7 @@ event_player:
   timer_skill_shot_timeout_complete:
     - end_skillshot_base
   skillshot_of_an_artist_hitme_hit:
+    - increment_playfield_multiplier
     - abort_skill_2
     - abort_skill_3
   skillshot_2_hitme_hit:
