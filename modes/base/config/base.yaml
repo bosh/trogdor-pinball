@@ -14,7 +14,7 @@ event_player:
     - begin_pops_base
     - begin_slings_base
     - begin_lower_lanes_base
-    - begin_burn_rollovers
+    - mode_start_burn_rollovers
     - begin_skillshot_base
 
 variable_player:
