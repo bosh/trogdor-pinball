@@ -2,6 +2,7 @@
 
 mode:
   start_events: ball_started
+  events_when_started: restart_skill_shots
   stop_events: end_skillshot_base
   priority: 301
 
@@ -17,6 +18,22 @@ timers:
         event: balldevice_bd_plunger_ball_eject_success
       - action: stop
         event: skillshots_group_hit
+
+variable_player:
+  skillshot_of_an_artist_hitme_hit:
+    score: 13000 + current_player.total_skillshot_successes * 111
+    total_skillshot_successes: 1
+    skillshot_of_an_artist_successes: 1
+
+  skillshot_2_hitme_hit:
+    score: 12000 + current_player.total_skillshot_successes * 111
+    total_skillshot_successes: 1
+    skillshot_2_successes: 1
+
+  skillshot_3_hitme_hit:
+    score: 14000 + current_player.total_skillshot_successes * 111
+    total_skillshot_successes: 1
+    skillshot_3_successes: 1
 
 event_player:
   timer_skill_shot_timeout_complete:
@@ -62,6 +79,7 @@ shots:
   skillshot_of_an_artist:
     profile: skill_shot_profile
     switch: s_spinner_left
+    restart_events: restart_skill_shots
     advance_events: skillshot_of_an_artist_hitme_hit
     control_events:
       - events: abort_skill_1
@@ -72,6 +90,7 @@ shots:
   skillshot_2:
     profile: skill_shot_profile
     switch: s_spinner_right
+    restart_events: restart_skill_shots
     advance_events: skillshot_2_hitme_hit
     control_events:
       - events: abort_skill_2
@@ -82,6 +101,7 @@ shots:
   skillshot_3:
     profile: skill_shot_profile
     switches: s_burn_b, s_burn_u, s_burn_r, s_burn_n
+    restart_events: restart_skill_shots
     advance_events: skillshot_3_hitme_hit
     control_events:
       - events: abort_skill_3

@@ -5,10 +5,28 @@ player_vars:
     initial_value: 1
     value_type: int
 
+  # Skill shots
+  total_skillshot_successes:
+    initial_value: 0
+    value_type: int
+
+  skillshot_of_an_artist_successes:
+    initial_value: 0
+    value_type: int
+
+  skillshot_2_successes:
+    initial_value: 0
+    value_type: int
+
+  skillshot_3_successes:
+    initial_value: 0
+    value_type: int
+
+  # Slings
   sling_hits:
     initial_value: 0
 
-  # For pop_burnination mode behaviors:
+  # pops_burnination mode behaviors:
   pop_left_fire_level:
     initial_value: 0
     value_type: int
