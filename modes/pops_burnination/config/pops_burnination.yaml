@@ -107,7 +107,7 @@ variable_player:
 
 event_player:
   timer_burnination_countdown_complete:
-    - fail_pops_burnination
+    - burnination_failed
 
   # Reset the timer when pop is hit
   s_pop_left_active:
@@ -141,9 +141,27 @@ event_player:
     - check_burnination_complete
 
   check_burnination_complete{current_player.pop_left_fire_level > 25 and current_player.pop_right_fire_level > 25 and current_player.pop_center_fire_level > 25}:
-    - burnination_countdown_stop
-    - increment_playfield_multiplier #TODO need to make this a state machine with a transition that posts the increment once
-    - succeed_pops_burnination
+    - burnination_qualified
+
+state_machines:
+  burnination_state:
+    persist_state: true
+    states:
+      start:
+        label: incomplete
+      done:
+        label: complete
+        events_when_started: burnination_countdown_stop, increment_playfield_multiplier, succeed_pops_burnination
+      failed:
+        label: failed
+        events_when_started: burnination_countdown_stop, fail_pops_burnination
+    transitions:
+      - source: start
+        target: done
+        events: burnination_qualified
+      - source: start
+        target: failed
+        events: burnination_failed
 
 show_player:
   # Turn off pop shows
