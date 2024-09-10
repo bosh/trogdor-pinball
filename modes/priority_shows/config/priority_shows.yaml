@@ -9,3 +9,16 @@ show_player:
     skillshot_success:
       action: play
       loops: 2
+
+  ball_save_default_timer_start:
+    ball_save_on:
+      action: play
+      key: ball_save_show
+  ball_save_default_hurry_up:
+    ball_save_flash:
+      action: play
+      key: ball_save_show
+  ball_save_default_disabled:
+    ball_save_show:
+      action: stop
+

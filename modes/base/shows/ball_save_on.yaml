@@ -1,0 +1,12 @@
+#show_version=6
+
+# lights are (light)
+# color is (color)
+
+- duration: 200ms
+  lights:
+    l_drain: fcba03
+
+- duration: 200ms
+  lights:
+    l_drain: fc8403

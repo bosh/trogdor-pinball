@@ -1,0 +1,9 @@
+#show_version=6
+
+- duration: 100ms
+  lights:
+    l_drain: orange
+
+- duration: 100ms
+  lights:
+    l_drain: off
