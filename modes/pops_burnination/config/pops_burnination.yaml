@@ -1,8 +1,8 @@
 #config_version=6
 
 mode:
-  start_events: qualify_pops_burnination
-  stop_events: succeed_pops_burnination, fail_pops_burnination
+  start_events: mode_start_pops_burnination
+  stop_events: mode_complete_pops_burnination, mode_fail_pops_burnination
   priority: 154
 
 timers:
@@ -151,10 +151,10 @@ state_machines:
         label: incomplete
       done:
         label: complete
-        events_when_started: burnination_countdown_stop, increment_playfield_multiplier, succeed_pops_burnination
+        events_when_started: burnination_countdown_stop, increment_playfield_multiplier, mode_complete_pops_burnination
       failed:
         label: failed
-        events_when_started: burnination_countdown_stop, fail_pops_burnination
+        events_when_started: burnination_countdown_stop, mode_fail_pops_burnination
     transitions:
       - source: start
         target: done

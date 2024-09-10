@@ -1,7 +1,7 @@
 #config_version=6
 
 mode:
-  start_events: begin_pops_base, fail_pops_burnination
+  start_events: begin_pops_base, mode_fail_pops_burnination
   stop_events: cancel_pops_base
   priority: 151
 

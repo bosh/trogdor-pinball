@@ -11,7 +11,7 @@ event_player:
     - virtual_add_10_fire_all
 
   vswitch_qualify_burninated_active:
-    - succeed_pops_burnination
+    - mode_complete_pops_burnination
 
 variable_player:
   virtual_add_10_fire_all:

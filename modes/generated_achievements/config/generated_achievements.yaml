@@ -20,8 +20,8 @@ achievements:
     restart_after_stop_possible: true
     events_when_completed: celebrate_achievement
     start_events: mode_pops_burnination_started
-    stop_events: fail_pops_burnination
-    complete_events: succeed_pops_burnination
+    stop_events: mode_fail_pops_burnination
+    complete_events: mode_complete_pops_burnination
   a2:
     start_enabled: true
     show_tokens:

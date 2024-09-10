@@ -1,8 +1,8 @@
 #config_version=6
 
 mode:
-  start_events: succeed_pops_burnination
-  stop_events: qualify_pops_burnination
+  start_events: mode_complete_pops_burnination
+  stop_events: mode_start_pops_burnination
   priority: 155
 
 variable_player:

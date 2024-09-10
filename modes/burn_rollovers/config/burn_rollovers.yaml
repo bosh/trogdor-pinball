@@ -1,7 +1,7 @@
 #config_version=6
 
 mode:
-  start_events: begin_burn_rollovers, fail_pops_burnination
+  start_events: begin_burn_rollovers, mode_fail_pops_burnination
   stop_events: succeed_burn_rollovers, cancel_burn_rollovers
   priority: 140
 
@@ -18,7 +18,7 @@ event_player:
     - succeed_burn_rollovers
     - increment_playfield_multiplier
     - cancel_pops_base
-    - qualify_pops_burnination
+    - mode_start_pops_burnination
     - begin_burnination_rollovers
 
 shot_profiles:
