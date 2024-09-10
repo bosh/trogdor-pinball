@@ -1,7 +1,7 @@
 #config_version=6
 
 mode:
-  start_events: begin_burnination_rollovers
+  start_events: mode_start_burnination_rollovers
   stop_events: mode_complete_pops_burnination, mode_fail_pops_burnination
   priority: 144
 

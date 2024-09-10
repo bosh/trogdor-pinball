@@ -1,21 +1,21 @@
 #show_version=6
 
-- duration: 250ms
+- duration: 150ms
   lights:
     lights_a: red
     lights_b: off
 
-- duration: 250ms
+- duration: 150ms
   lights:
     lights_a: off
     lights_b: red
 
-- duration: 250ms
+- duration: 150ms
   lights:
     lights_a: purple
     lights_b: purple
 
-- duration: 100ms
+- duration: 50ms
   lights:
     lights_a: off
     lights_b: off

@@ -3,6 +3,7 @@
 modes:
   - attract
   - base
+  - priority_shows
   - burn_rollovers
   - burnination_rollovers
   - lower_lanes_base

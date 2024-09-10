@@ -1,9 +1,9 @@
 #config_version=6
 
 mode:
-  start_events: ball_started
+  start_events: mode_start_skillshot_base
   events_when_started: restart_skill_shots
-  stop_events: end_skillshot_base
+  stop_events: mode_complete_skillshot_base, mode_fail_skillshot_base
   priority: 301
 
 timers:
@@ -37,7 +37,7 @@ variable_player:
 
 event_player:
   timer_skill_shot_timeout_complete:
-    - end_skillshot_base
+    - mode_fail_skillshot_base
   skillshot_of_an_artist_hitme_hit:
     - increment_playfield_multiplier
     - abort_skill_2
@@ -49,12 +49,9 @@ event_player:
     - abort_skill_1
     - abort_skill_2
 
-show_player:
   skillshots_group_hitme_hit:
-    skillshot_success:
-      action: play
-      loops: 2
-      events_when_completed: end_skillshot_base
+    - priority_show_skillshot_success
+    - mode_complete_skillshot_base
 
 shot_profiles:
   skill_shot_profile:
@@ -79,7 +76,6 @@ shots:
   skillshot_of_an_artist:
     profile: skill_shot_profile
     switch: s_spinner_left
-    restart_events: restart_skill_shots
     advance_events: skillshot_of_an_artist_hitme_hit
     control_events:
       - events: abort_skill_1
@@ -90,7 +86,6 @@ shots:
   skillshot_2:
     profile: skill_shot_profile
     switch: s_spinner_right
-    restart_events: restart_skill_shots
     advance_events: skillshot_2_hitme_hit
     control_events:
       - events: abort_skill_2
@@ -101,7 +96,6 @@ shots:
   skillshot_3:
     profile: skill_shot_profile
     switches: s_burn_b, s_burn_u, s_burn_r, s_burn_n
-    restart_events: restart_skill_shots
     advance_events: skillshot_3_hitme_hit
     control_events:
       - events: abort_skill_3
@@ -112,4 +106,4 @@ shots:
 shot_groups:
   skillshots_group:
     shots: skillshot_of_an_artist, skillshot_2, skillshot_3
-    reset_events: ball_started
+    reset_events: restart_skill_shots

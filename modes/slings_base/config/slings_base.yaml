@@ -1,8 +1,8 @@
 #config_version=6
 
 mode:
-  start_events: begin_slings_base
-  stop_events: cancel_slings_base
+  start_events: mode_start_slings_base
+  stop_events: mode_cancel_slings_base
   priority: 121
 
 variable_player:
@@ -60,4 +60,3 @@ show_player:
         l6: l_dome_ring_a_3
         l7: l_dome_ring_a_2
         l8: l_dome_ring_a_1
-

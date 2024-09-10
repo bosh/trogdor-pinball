@@ -11,11 +11,12 @@ mode:
 
 event_player:
   mode_base_started:
-    - begin_pops_base
-    - begin_slings_base
-    - begin_lower_lanes_base
+    - mode_start_priority_shows
+    - mode_start_skillshot_base
+    - mode_start_pops_base
+    - mode_start_slings_base
+    - mode_start_lower_lanes_base
     - mode_start_burn_rollovers
-    - begin_skillshot_base
 
 variable_player:
   #Playfield multiplier always back down to 1 on new ball

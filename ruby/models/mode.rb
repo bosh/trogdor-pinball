@@ -114,7 +114,7 @@ module TrogBuild
     def custom_hash
       {
         'achievements' => {
-          'burnination' => achievement_hash('burnination', 1, "mode_pops_burnination_started", 'pops_burnination'),
+          'burnination' => achievement_hash('burnination', 1, 'mode_start_pops_burnination', 'pops_burnination'),
           'a2' => achievement_hash('a2', 2, nil, 'a2'),
           'a3' => achievement_hash('a3', 3, nil, 'a3'),
           'a4' => achievement_hash('a4', 4, nil, 'a4'),
@@ -135,8 +135,8 @@ module TrogBuild
         'restart_after_stop_possible' => true,
         'events_when_completed' => 'celebrate_achievement',
         'start_events' => start_events || "start_achievement_#{name}",
-        'stop_events' => "fail_#{event_template_name}",
-        'complete_events' => "succeed_#{event_template_name}"
+        'stop_events' => "mode_fail_#{event_template_name}",
+        'complete_events' => "mode_complete_#{event_template_name}"
       }
     end
   end

@@ -17,9 +17,9 @@ event_player:
   burn_group_lit_complete:
     - mode_complete_burn_rollovers
     - increment_playfield_multiplier
-    - cancel_pops_base
+    - mode_cancel_pops_base
     - mode_start_pops_burnination
-    - begin_burnination_rollovers
+    - mode_start_burnination_rollovers
 
 shot_profiles:
   rollover_profile:

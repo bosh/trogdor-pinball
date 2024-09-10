@@ -19,7 +19,7 @@ achievements:
     show_when_completed: 'on'
     restart_after_stop_possible: true
     events_when_completed: celebrate_achievement
-    start_events: mode_pops_burnination_started
+    start_events: mode_start_pops_burnination
     stop_events: mode_fail_pops_burnination
     complete_events: mode_complete_pops_burnination
   a2:
@@ -31,8 +31,8 @@ achievements:
     restart_after_stop_possible: true
     events_when_completed: celebrate_achievement
     start_events: start_achievement_a2
-    stop_events: fail_a2
-    complete_events: succeed_a2
+    stop_events: mode_fail_a2
+    complete_events: mode_complete_a2
   a3:
     start_enabled: true
     show_tokens:
@@ -42,8 +42,8 @@ achievements:
     restart_after_stop_possible: true
     events_when_completed: celebrate_achievement
     start_events: start_achievement_a3
-    stop_events: fail_a3
-    complete_events: succeed_a3
+    stop_events: mode_fail_a3
+    complete_events: mode_complete_a3
   a4:
     start_enabled: true
     show_tokens:
@@ -53,8 +53,8 @@ achievements:
     restart_after_stop_possible: true
     events_when_completed: celebrate_achievement
     start_events: start_achievement_a4
-    stop_events: fail_a4
-    complete_events: succeed_a4
+    stop_events: mode_fail_a4
+    complete_events: mode_complete_a4
   a5:
     start_enabled: true
     show_tokens:
@@ -64,8 +64,8 @@ achievements:
     restart_after_stop_possible: true
     events_when_completed: celebrate_achievement
     start_events: start_achievement_a5
-    stop_events: fail_a5
-    complete_events: succeed_a5
+    stop_events: mode_fail_a5
+    complete_events: mode_complete_a5
   a6:
     start_enabled: true
     show_tokens:
@@ -75,6 +75,6 @@ achievements:
     restart_after_stop_possible: true
     events_when_completed: celebrate_achievement
     start_events: start_achievement_a6
-    stop_events: fail_a6
-    complete_events: succeed_a6
+    stop_events: mode_fail_a6
+    complete_events: mode_complete_a6
 

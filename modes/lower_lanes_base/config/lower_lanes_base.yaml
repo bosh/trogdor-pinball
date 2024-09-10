@@ -1,8 +1,8 @@
 #config_version=6
 
 mode:
-  start_events: begin_lower_lanes_base
-  stop_events: cancel_lower_lanes_base
+  start_events: mode_start_lower_lanes_base
+  stop_events: mode_cancel_lower_lanes_base
   priority: 111
 
 variable_player:
