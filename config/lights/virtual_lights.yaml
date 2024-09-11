@@ -8,3 +8,16 @@ lights:
     number:
     type: rgb
     tags: lights_virtual
+
+  vlight_ball_1:
+    number:
+    type: rgb
+    tags: lights_virtual
+  vlight_ball_2:
+    number:
+    type: rgb
+    tags: lights_virtual
+  vlight_ball_3:
+    number:
+    type: rgb
+    tags: lights_virtual
