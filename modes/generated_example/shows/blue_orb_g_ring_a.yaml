@@ -1,0 +1,357 @@
+#show_version=6
+# Generated ring show on generated ring
+
+---
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '000011'
+    gl_ring_a_2: '000011'
+    gl_ring_a_3: '000011'
+    gl_ring_a_4: '000011'
+    gl_ring_a_5: '000011'
+    gl_ring_a_6: '000011'
+    gl_ring_a_7: '000011'
+    gl_ring_a_8: '000011'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '000011'
+    gl_ring_a_2: '000011'
+    gl_ring_a_3: '000011'
+    gl_ring_a_4: '000011'
+    gl_ring_a_5: '000011'
+    gl_ring_a_6: '000011'
+    gl_ring_a_7: '000011'
+    gl_ring_a_8: '000011'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '000022'
+    gl_ring_a_2: '000022'
+    gl_ring_a_3: '000022'
+    gl_ring_a_4: '000022'
+    gl_ring_a_5: '000011'
+    gl_ring_a_6: '000011'
+    gl_ring_a_7: '000011'
+    gl_ring_a_8: '000011'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '000022'
+    gl_ring_a_2: '111133'
+    gl_ring_a_3: '111133'
+    gl_ring_a_4: '000022'
+    gl_ring_a_5: '000022'
+    gl_ring_a_6: '000011'
+    gl_ring_a_7: '000011'
+    gl_ring_a_8: '000022'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '111133'
+    gl_ring_a_2: '111133'
+    gl_ring_a_3: '111133'
+    gl_ring_a_4: '111133'
+    gl_ring_a_5: '000022'
+    gl_ring_a_6: '000011'
+    gl_ring_a_7: '000011'
+    gl_ring_a_8: '000022'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '111133'
+    gl_ring_a_2: '111144'
+    gl_ring_a_3: '111144'
+    gl_ring_a_4: '111133'
+    gl_ring_a_5: '000022'
+    gl_ring_a_6: '000011'
+    gl_ring_a_7: '000011'
+    gl_ring_a_8: '000022'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '111144'
+    gl_ring_a_2: '111155'
+    gl_ring_a_3: '111155'
+    gl_ring_a_4: '111144'
+    gl_ring_a_5: '111133'
+    gl_ring_a_6: '000022'
+    gl_ring_a_7: '000022'
+    gl_ring_a_8: '111133'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '111144'
+    gl_ring_a_2: '111155'
+    gl_ring_a_3: '111155'
+    gl_ring_a_4: '111144'
+    gl_ring_a_5: '111133'
+    gl_ring_a_6: '000022'
+    gl_ring_a_7: '000022'
+    gl_ring_a_8: '111133'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '111155'
+    gl_ring_a_2: '222266'
+    gl_ring_a_3: '222266'
+    gl_ring_a_4: '111155'
+    gl_ring_a_5: '111133'
+    gl_ring_a_6: '000022'
+    gl_ring_a_7: '000022'
+    gl_ring_a_8: '111133'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '111155'
+    gl_ring_a_2: '222277'
+    gl_ring_a_3: '222277'
+    gl_ring_a_4: '111155'
+    gl_ring_a_5: '111144'
+    gl_ring_a_6: '000022'
+    gl_ring_a_7: '000022'
+    gl_ring_a_8: '111144'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '222266'
+    gl_ring_a_2: '222277'
+    gl_ring_a_3: '222277'
+    gl_ring_a_4: '222266'
+    gl_ring_a_5: '111144'
+    gl_ring_a_6: '000022'
+    gl_ring_a_7: '000022'
+    gl_ring_a_8: '111144'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '222266'
+    gl_ring_a_2: '222288'
+    gl_ring_a_3: '222288'
+    gl_ring_a_4: '222266'
+    gl_ring_a_5: '111144'
+    gl_ring_a_6: '000022'
+    gl_ring_a_7: '000022'
+    gl_ring_a_8: '111144'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '222277'
+    gl_ring_a_2: '333399'
+    gl_ring_a_3: '333399'
+    gl_ring_a_4: '222277'
+    gl_ring_a_5: '111155'
+    gl_ring_a_6: '111133'
+    gl_ring_a_7: '111133'
+    gl_ring_a_8: '111155'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '222277'
+    gl_ring_a_2: '333399'
+    gl_ring_a_3: '333399'
+    gl_ring_a_4: '222277'
+    gl_ring_a_5: '111155'
+    gl_ring_a_6: '111133'
+    gl_ring_a_7: '111133'
+    gl_ring_a_8: '111155'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '222288'
+    gl_ring_a_2: 3333aa
+    gl_ring_a_3: 3333aa
+    gl_ring_a_4: '222288'
+    gl_ring_a_5: '111155'
+    gl_ring_a_6: '111133'
+    gl_ring_a_7: '111133'
+    gl_ring_a_8: '111155'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '222288'
+    gl_ring_a_2: 3333bb
+    gl_ring_a_3: 3333bb
+    gl_ring_a_4: '222288'
+    gl_ring_a_5: '222266'
+    gl_ring_a_6: '111133'
+    gl_ring_a_7: '111133'
+    gl_ring_a_8: '222266'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '333399'
+    gl_ring_a_2: 3333bb
+    gl_ring_a_3: 3333bb
+    gl_ring_a_4: '333399'
+    gl_ring_a_5: '222266'
+    gl_ring_a_6: '111133'
+    gl_ring_a_7: '111133'
+    gl_ring_a_8: '222266'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '222288'
+    gl_ring_a_2: 3333bb
+    gl_ring_a_3: 3333bb
+    gl_ring_a_4: '222288'
+    gl_ring_a_5: '222266'
+    gl_ring_a_6: '111133'
+    gl_ring_a_7: '111133'
+    gl_ring_a_8: '222266'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '222288'
+    gl_ring_a_2: 3333aa
+    gl_ring_a_3: 3333aa
+    gl_ring_a_4: '222288'
+    gl_ring_a_5: '111155'
+    gl_ring_a_6: '111133'
+    gl_ring_a_7: '111133'
+    gl_ring_a_8: '111155'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '222277'
+    gl_ring_a_2: '333399'
+    gl_ring_a_3: '333399'
+    gl_ring_a_4: '222277'
+    gl_ring_a_5: '111155'
+    gl_ring_a_6: '111133'
+    gl_ring_a_7: '111133'
+    gl_ring_a_8: '111155'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '222277'
+    gl_ring_a_2: '333399'
+    gl_ring_a_3: '333399'
+    gl_ring_a_4: '222277'
+    gl_ring_a_5: '111155'
+    gl_ring_a_6: '111133'
+    gl_ring_a_7: '111133'
+    gl_ring_a_8: '111155'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '222266'
+    gl_ring_a_2: '222288'
+    gl_ring_a_3: '222288'
+    gl_ring_a_4: '222266'
+    gl_ring_a_5: '111144'
+    gl_ring_a_6: '000022'
+    gl_ring_a_7: '000022'
+    gl_ring_a_8: '111144'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '222266'
+    gl_ring_a_2: '222277'
+    gl_ring_a_3: '222277'
+    gl_ring_a_4: '222266'
+    gl_ring_a_5: '111144'
+    gl_ring_a_6: '000022'
+    gl_ring_a_7: '000022'
+    gl_ring_a_8: '111144'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '111155'
+    gl_ring_a_2: '222277'
+    gl_ring_a_3: '222277'
+    gl_ring_a_4: '111155'
+    gl_ring_a_5: '111144'
+    gl_ring_a_6: '000022'
+    gl_ring_a_7: '000022'
+    gl_ring_a_8: '111144'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '111155'
+    gl_ring_a_2: '222266'
+    gl_ring_a_3: '222266'
+    gl_ring_a_4: '111155'
+    gl_ring_a_5: '111133'
+    gl_ring_a_6: '000022'
+    gl_ring_a_7: '000022'
+    gl_ring_a_8: '111133'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '111144'
+    gl_ring_a_2: '111155'
+    gl_ring_a_3: '111155'
+    gl_ring_a_4: '111144'
+    gl_ring_a_5: '111133'
+    gl_ring_a_6: '000022'
+    gl_ring_a_7: '000022'
+    gl_ring_a_8: '111133'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '111144'
+    gl_ring_a_2: '111155'
+    gl_ring_a_3: '111155'
+    gl_ring_a_4: '111144'
+    gl_ring_a_5: '111133'
+    gl_ring_a_6: '000022'
+    gl_ring_a_7: '000022'
+    gl_ring_a_8: '111133'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '111133'
+    gl_ring_a_2: '111144'
+    gl_ring_a_3: '111144'
+    gl_ring_a_4: '111133'
+    gl_ring_a_5: '000022'
+    gl_ring_a_6: '000011'
+    gl_ring_a_7: '000011'
+    gl_ring_a_8: '000022'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '111133'
+    gl_ring_a_2: '111133'
+    gl_ring_a_3: '111133'
+    gl_ring_a_4: '111133'
+    gl_ring_a_5: '000022'
+    gl_ring_a_6: '000011'
+    gl_ring_a_7: '000011'
+    gl_ring_a_8: '000022'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '000022'
+    gl_ring_a_2: '111133'
+    gl_ring_a_3: '111133'
+    gl_ring_a_4: '000022'
+    gl_ring_a_5: '000022'
+    gl_ring_a_6: '000011'
+    gl_ring_a_7: '000011'
+    gl_ring_a_8: '000022'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '000022'
+    gl_ring_a_2: '000022'
+    gl_ring_a_3: '000022'
+    gl_ring_a_4: '000022'
+    gl_ring_a_5: '000011'
+    gl_ring_a_6: '000011'
+    gl_ring_a_7: '000011'
+    gl_ring_a_8: '000011'
+- duration: 240ms
+  lights:
+    lights_gl_ring_a: 'off'
+    gl_ring_a_1: '000011'
+    gl_ring_a_2: '000011'
+    gl_ring_a_3: '000011'
+    gl_ring_a_4: '000011'
+    gl_ring_a_5: '000011'
+    gl_ring_a_6: '000011'
+    gl_ring_a_7: '000011'
+    gl_ring_a_8: '000011'
+

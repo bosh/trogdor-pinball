@@ -21,8 +21,8 @@ module TrogBuild
       plan.add_light "generated_light_1"
 
       add_light_sequence "gl_ring_a", 8 do |i, config|
-        lights_ab_tag = i % 2 == 0 ? 'lights_a' : 'lights_b'
-        config['tags'] = "lights_generated,#{lights_ab_tag}"
+        lights_ab_tag = i % 2 != 0 ? 'lights_a' : 'lights_b'
+        config['tags'] = "lights_generated,#{lights_ab_tag},lights_gl_ring_a"
         config['type'] = 'rgb'
         config
       end
@@ -30,8 +30,9 @@ module TrogBuild
 
     def add_light_sequence(name, count)
       count.times do |i|
-        config = yield(i, {})
-        plan.add_light "#{name}_#{i}", config
+        number = i + 1
+        config = yield(number, {})
+        plan.add_light "#{name}_#{number}", config
       end
     end
 
