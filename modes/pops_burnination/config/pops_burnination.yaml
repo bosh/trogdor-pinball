@@ -117,7 +117,7 @@ event_player:
   s_pop_center_active:
     - pop_center_burndown_reset
 
-  # Stop timers on mode exit (TODO try to do this before turning off shows)
+  # Stop timers on mode exit process starting
   mode_pops_burnination_will_stop:
     - pop_left_burndown_stop
     - pop_right_burndown_stop
@@ -164,12 +164,6 @@ state_machines:
         events: burnination_failed
 
 show_player:
-  # Turn off pop shows
-  mode_pops_burnination_will_stop:
-    pop_left_show: stop
-    pop_right_show: stop
-    pop_center_show: stop
-
   stop_pop_left_show:
     pop_left_show: stop
   stop_pop_right_show:

@@ -22,12 +22,6 @@ event_player:
   - start_center_pop_burninated
 
 show_player:
-  # Turn off pop shows
-  mode_pops_burninated_will_stop:
-    pop_left_show: stop
-    pop_right_show: stop
-    pop_center_show: stop
-
   start_left_pop_burninated:
     fire_burninated_show:
       key: pop_left_show
