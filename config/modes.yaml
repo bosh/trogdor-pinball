@@ -4,11 +4,12 @@ modes:
   - attract
   - base
   - priority_shows
+  - ball_saves
+  - skillshot_base
+  - lower_lanes_base
+  - slings_base
   - burn_rollovers
   - burnination_rollovers
-  - lower_lanes_base
   - pops_base
   - pops_burnination
   - pops_burninated
-  - slings_base
-  - skillshot_base

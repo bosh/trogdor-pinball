@@ -12,6 +12,7 @@ mode:
 event_player:
   mode_base_started:
     - mode_start_priority_shows
+    - mode_start_ball_saves
     - mode_start_skillshot_base
     - mode_start_pops_base
     - mode_start_slings_base
@@ -30,17 +31,6 @@ variable_player:
     playfield_multiplier:
       action: add
       int: 1
-
-ball_saves:
-  default:
-    active_time: 5s
-    hurry_up_time: 2s
-    grace_period: 2s
-    enable_events: mode_base_started
-    timer_start_events: balldevice_bd_plunger_ball_eject_success
-    auto_launch: true
-    balls_to_save: 1
-    early_ball_save_events: s_right_outer_lane_active, s_right_inner_lane_active
 
 timed_switches:
   ts_start_button:

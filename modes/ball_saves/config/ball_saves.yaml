@@ -1,0 +1,17 @@
+#config_version=6
+
+mode:
+  start_events: mode_start_ball_saves
+  stop_events: mode_stop_ball_saves
+  priority: 305
+
+ball_saves:
+  default:
+    active_time: 5s
+    hurry_up_time: 2s
+    grace_period: 2s
+    enable_events: mode_ball_saves_started
+    timer_start_events: balldevice_bd_plunger_ball_eject_success, playfield_active
+    auto_launch: true
+    balls_to_save: 1
+    early_ball_save_events: s_left_outer_lane_active, s_right_outer_lane_active
