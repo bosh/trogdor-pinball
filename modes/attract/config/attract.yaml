@@ -12,9 +12,3 @@ slide_player: #For GMC
 show_player:
   mode_attract_started:
     attract_light_loop: play
-  mode_attract_will_stop: #TODO these stops may be unnecessary if mode stopping turns them off
-    attract_light_loop: stop
-
-light_player:
-  mode_attract_stopping: #Clear lights after light loop stop
-    "*": off #TODO Ernie says this shouldnt be necessary
