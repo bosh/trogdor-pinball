@@ -283,6 +283,9 @@ light:
   vlight_for_generated_example_mode:
     x: 0.031609195402298854
     y: 0.12607758620689655
+  vlight_inlane_qualified:
+    x: 0.04597701149425287
+    y: 0.625
 multiball:
   cabinet_multiball:
     x: 0.45114942528735635
@@ -433,6 +436,9 @@ switch:
   vswitch_qualify_right_outlane_save:
     x: 0.9195402298850576
     y: 0.6831896551724138
+  vswitch_reset_inlane_detector:
+    x: 0.015804597701149427
+    y: 0.625
 timed_switch:
   flipper_cradle:
     x: 0.5847701149425287

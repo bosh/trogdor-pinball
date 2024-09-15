@@ -21,3 +21,8 @@ lights:
     number:
     type: rgb
     tags: lights_virtual
+
+  vlight_inlane_qualified: #Could become a real light in an orbit lane etc
+    number:
+    type: rgb
+    tags: lights_virtual
