@@ -1,0 +1,8 @@
+#show_version=6
+
+- duration: 100ms
+  lights:
+    (lane_light): yellow
+- duration: 100ms
+  lights:
+    (lane_light): off

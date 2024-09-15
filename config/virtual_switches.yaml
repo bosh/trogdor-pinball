@@ -14,6 +14,9 @@ switches:
   vswitch_qualify_burninated:
     number:
 
+  vswitch_qualify_left_outlane_save:
+    number:
+
 plugins: switch_player
 switch_player:
   start_event: vswitch_end_game_active

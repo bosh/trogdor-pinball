@@ -427,6 +427,9 @@ switch:
   vswitch_qualify_burnination:
     x: 0.031609195402298854
     y: 0.03987068965517242
+  vswitch_qualify_left_outlane_save:
+    x: 0.034482758620689655
+    y: 0.677801724137931
 timed_switch:
   flipper_cradle:
     x: 0.5847701149425287

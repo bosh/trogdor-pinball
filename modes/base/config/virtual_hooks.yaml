@@ -13,6 +13,10 @@ event_player:
   vswitch_qualify_burninated_active:
     - mode_complete_pops_burnination
 
+  vswitch_qualify_left_outlane_save_active:
+    - qualify_left_outlane_save
+
+
 variable_player:
   virtual_add_10_fire_all:
     pop_right_fire_level:

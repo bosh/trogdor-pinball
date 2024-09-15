@@ -15,3 +15,72 @@ ball_saves:
     auto_launch: true
     balls_to_save: 1
     early_ball_save_events: s_left_outer_lane_active, s_right_outer_lane_active
+
+  short:
+    enable_events: enable_ball_save_short
+    timer_start_events: balldevice_bd_plunger_ball_eject_success, playfield_active #TODO maybe it just starts on lane presence inactive
+    active_time: 5s # Delayed timer
+    hurry_up_time: 0
+    grace_period: 250ms
+    auto_launch: true
+    balls_to_save: 1
+    early_ball_save_events: s_left_outer_lane_active, s_right_outer_lane_active
+
+  left_outlane_saver:
+    enable_events: enable_ball_save_left_outlane_saver
+    active_time: 4s # Auto starting timer
+    hurry_up_time: 0
+    grace_period: 0
+    auto_launch: true
+    balls_to_save: 1
+
+event_player:
+  # External interface to turn on left outlane save
+  qualify_left_outlane_save:
+    - advance_left_outlane_to_qualified
+
+  # Enable outlane ball save device on rollover when qualified
+  left_outlane_rollover_qualified_hit:
+    - advance_left_outlane_to_saved
+    - enable_ball_save_left_outlane_saver
+
+  # Change lightshow when actually enabled vs just qualified
+  ball_save_left_outlane_saver_enabled:
+    - advance_left_outlane_to_saving
+
+  # Trigger short save for the inbound ball when draining ball is actually saved
+  ball_save_left_outlane_saver_saving_ball:
+    - enable_ball_save_short
+
+  # Reset shot state if save times out
+  ball_save_left_outlane_saver_disabled:
+    - advance_left_outlane_to_off
+
+shots:
+  left_outlane_rollover:
+    switch: s_left_outer_lane
+    show_tokens:
+      lane_light: l_left_outlane
+    profile: outlane_rollover_profile
+    control_events:
+      - events: advance_left_outlane_to_off
+        state: 0
+      - events: advance_left_outlane_to_qualified
+        state: 1
+      - events: advance_left_outlane_to_saving
+        state: 2
+      - events: advance_left_outlane_to_saved
+        state: 3
+
+shot_profiles:
+  outlane_rollover_profile:
+    advance_on_hit: false
+    states:
+      - name: "off"
+        show: "off"
+      - name: qualified
+        show: lane_save_qualified
+      - name: saving
+        show: lane_save_saving
+      - name: saved
+        show: lane_save_saved

@@ -1,0 +1,5 @@
+#show_version=6
+
+- duration: 100ms
+  lights:
+    (lane_light): green
