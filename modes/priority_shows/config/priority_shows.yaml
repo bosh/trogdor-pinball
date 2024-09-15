@@ -7,18 +7,60 @@ mode:
 show_player:
   priority_show_skillshot_success:
     skillshot_success:
-      action: play
       loops: 2
 
   ball_save_default_timer_start:
     ball_save_on:
-      action: play
-      key: ball_save_show
+      key: center_ball_save_show
+      show_tokens:
+        color: blue
   ball_save_default_hurry_up:
     ball_save_flash:
-      action: play
-      key: ball_save_show
+      key: center_ball_save_show
+      show_tokens:
+        color: blue
   ball_save_default_disabled:
-    ball_save_show:
+    center_ball_save_show:
       action: stop
 
+  ball_save_short_timer_start:
+    ball_save_on:
+      key: center_ball_save_show
+      show_tokens:
+        color: yellow
+  ball_save_short_hurry_up:
+    ball_save_flash:
+      key: center_ball_save_show
+      show_tokens:
+        color: yellow
+  ball_save_short_disabled:
+    center_ball_save_show:
+      action: stop
+
+  ball_save_left_outlane_saver_timer_start:
+    ball_save_on:
+      key: center_ball_save_show
+      show_tokens:
+        color: orange
+  ball_save_left_outlane_saver_hurry_up:
+    ball_save_flash:
+      key: center_ball_save_show
+      show_tokens:
+        color: orange
+  ball_save_left_outlane_saver_disabled:
+    center_ball_save_show:
+      action: stop
+
+  ball_save_right_outlane_saver_timer_start:
+    ball_save_on:
+      key: center_ball_save_show
+      show_tokens:
+        color: purple
+  ball_save_right_outlane_saver_hurry_up:
+    ball_save_flash:
+      key: center_ball_save_show
+      show_tokens:
+        color: purple
+  ball_save_right_outlane_saver_disabled:
+    center_ball_save_show:
+      action: stop

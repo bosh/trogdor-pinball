@@ -1,9 +1,11 @@
 #show_version=6
 
-- duration: 200ms
-  lights:
-    l_drain: fcba03
+# show token: color
 
-- duration: 200ms
+- duration: 150ms
   lights:
-    l_drain: fc8403
+    l_drain: (color)
+
+- duration: 50ms
+  lights:
+    l_drain: off

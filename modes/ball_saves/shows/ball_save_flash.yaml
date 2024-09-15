@@ -1,8 +1,10 @@
 #show_version=6
 
+# show token: color
+
 - duration: 100ms
   lights:
-    l_drain: orange
+    l_drain: (color)
 
 - duration: 100ms
   lights:
