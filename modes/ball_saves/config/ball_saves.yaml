@@ -14,7 +14,7 @@ ball_saves:
     timer_start_events: balldevice_bd_plunger_ball_eject_success, playfield_active
     auto_launch: true
     balls_to_save: 1
-    early_ball_save_events: s_left_outer_lane_active, s_right_outer_lane_active
+    early_ball_save_events: s_left_outer_lane_active, s_right_outer_lane_active #TODO maybe these should be left_outlane_off_hit ?
 
   short:
     enable_events: enable_ball_save_short
@@ -28,6 +28,14 @@ ball_saves:
 
   left_outlane_saver:
     enable_events: enable_ball_save_left_outlane_saver
+    active_time: 4s # Auto starting timer
+    hurry_up_time: 0
+    grace_period: 0
+    auto_launch: true
+    balls_to_save: 1
+
+  right_outlane_saver:
+    enable_events: enable_ball_save_right_outlane_saver
     active_time: 4s # Auto starting timer
     hurry_up_time: 0
     grace_period: 0
@@ -56,12 +64,35 @@ event_player:
   ball_save_left_outlane_saver_disabled:
     - advance_left_outlane_to_off
 
+  # External interface to turn on right outlane save
+  qualify_right_outlane_save:
+    - advance_right_outlane_to_qualified
+
+  # Enable outlane ball save device on rollover when qualified
+  right_outlane_rollover_qualified_hit:
+    - advance_right_outlane_to_saved
+    - enable_ball_save_right_outlane_saver
+
+  # Change lightshow when actually enabled vs just qualified
+  ball_save_right_outlane_saver_enabled:
+    - advance_right_outlane_to_saving
+
+  # Trigger short save for the inbound ball when draining ball is actually saved
+  ball_save_right_outlane_saver_saving_ball:
+    - enable_ball_save_short
+
+  # Reset shot state if save times out
+  ball_save_right_outlane_saver_disabled:
+    - advance_right_outlane_to_off
+
+
 shots:
   left_outlane_rollover:
     switch: s_left_outer_lane
     show_tokens:
       lane_light: l_left_outlane
     profile: outlane_rollover_profile
+    persist_enable: true
     control_events:
       - events: advance_left_outlane_to_off
         state: 0
@@ -70,6 +101,22 @@ shots:
       - events: advance_left_outlane_to_saving
         state: 2
       - events: advance_left_outlane_to_saved
+        state: 3
+
+  right_outlane_rollover:
+    switch: s_right_outer_lane
+    show_tokens:
+      lane_light: l_right_outlane
+    profile: outlane_rollover_profile
+    persist_enable: true
+    control_events:
+      - events: advance_right_outlane_to_off
+        state: 0
+      - events: advance_right_outlane_to_qualified
+        state: 1
+      - events: advance_right_outlane_to_saving
+        state: 2
+      - events: advance_right_outlane_to_saved
         state: 3
 
 shot_profiles:

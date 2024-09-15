@@ -16,6 +16,9 @@ event_player:
   vswitch_qualify_left_outlane_save_active:
     - qualify_left_outlane_save
 
+  vswitch_qualify_right_outlane_save_active:
+    - qualify_right_outlane_save
+
 
 variable_player:
   virtual_add_10_fire_all:

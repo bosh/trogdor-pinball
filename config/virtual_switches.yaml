@@ -16,6 +16,8 @@ switches:
 
   vswitch_qualify_left_outlane_save:
     number:
+  vswitch_qualify_right_outlane_save:
+    number:
 
 plugins: switch_player
 switch_player:

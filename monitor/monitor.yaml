@@ -430,6 +430,9 @@ switch:
   vswitch_qualify_left_outlane_save:
     x: 0.034482758620689655
     y: 0.677801724137931
+  vswitch_qualify_right_outlane_save:
+    x: 0.9195402298850576
+    y: 0.6831896551724138
 timed_switch:
   flipper_cradle:
     x: 0.5847701149425287
