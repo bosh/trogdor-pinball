@@ -22,6 +22,9 @@ switches:
   vswitch_reset_inlane_detector:
     number:
 
+  vswitch_toggle_slings_dead:
+    number:
+
 plugins: switch_player
 switch_player:
   start_event: vswitch_end_game_active

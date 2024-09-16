@@ -1,0 +1,16 @@
+#config_version=6
+
+mode:
+  start_events: mode_start_slings_dead
+  stop_events: mode_stop_slings_dead
+  priority: 1250
+  events_when_started: disable_slings
+  events_when_stopped: enable_slings
+
+variable_player:
+  s_left_sling_active:
+    score: 999|block
+    sling_hits: 0|block
+  s_right_sling_active:
+    score: 999|block
+    sling_hits: 0|block

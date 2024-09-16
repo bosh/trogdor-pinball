@@ -19,15 +19,13 @@ event_player:
   vswitch_qualify_right_outlane_save_active:
     - qualify_right_outlane_save
 
+  vswitch_toggle_slings_dead_active:
+    - mode_start_slings_dead
+  vswitch_toggle_slings_dead_inactive:
+    - mode_stop_slings_dead
 
 variable_player:
   virtual_add_10_fire_all:
-    pop_right_fire_level:
-      int: 10
-      action: add
-    pop_left_fire_level:
-      int: 10
-      action: add
-    pop_center_fire_level:
-      int: 10
-      action: add
+    pop_right_fire_level: 10
+    pop_left_fire_level: 10
+    pop_center_fire_level: 10

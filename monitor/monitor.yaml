@@ -439,6 +439,9 @@ switch:
   vswitch_reset_inlane_detector:
     x: 0.015804597701149427
     y: 0.625
+  vswitch_toggle_slings_dead:
+    x: 0.9655172413793103
+    y: 0.646551724137931
 timed_switch:
   flipper_cradle:
     x: 0.5847701149425287

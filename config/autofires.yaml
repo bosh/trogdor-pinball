@@ -5,12 +5,16 @@ autofire_coils:
   slingshot_left:
     coil: c_left_sling
     switch: s_left_sling
+    enable_events: ball_started, enable_slings
+    disable_events: ball_will_end, service_mode_entered, disable_slings
 
   slingshot_right:
     coil: c_right_sling
     switch: s_right_sling
+    enable_events: ball_started, enable_slings
+    disable_events: ball_will_end, service_mode_entered, disable_slings
 
-#Flippers are complex autofires
+#Flippers are just complex autofires
 flippers:
   right_flipper:
     main_coil: c_flipper_right_full
@@ -26,7 +30,7 @@ flippers:
     hold_coil: c_flipper_left_hold
     activation_switch: s_left_flipper
     eos_switch: s_left_flipper_eos
-    enable_events: ball_started, enableAutofire #, machine_reset_phase_3 #P3 for testing
+    enable_events: ball_started, enableAutofire #, machine_reset_phase_3
     disable_events: ball_will_end, service_mode_entered, disableAutofire
     use_eos: true
 

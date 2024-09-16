@@ -8,6 +8,7 @@ modes:
   - skillshot_base
   - lower_lanes_base
   - slings_base
+  - slings_dead
   - burn_rollovers
   - burnination_rollovers
   - pops_base
