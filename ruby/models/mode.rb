@@ -72,18 +72,40 @@ module TrogBuild
       16.times {|i| @blue_orb_ring_show.add_step(s, blue_orb_step(16-i, 'gl_ring_a'))}
 
       add_show(@blue_orb_ring_show)
+
+      @speedup_spin_show = Show.new('speedup_spin_show', 'Single light ring spin with increasing speed')
+      (8*SPEEDUP_SPEEDS.length).times {|i| @speedup_spin_show.add_step(speedup_spin_speed(i), speedup_spin_step(i))}
+
+      add_show(@speedup_spin_show)
     end
 
     def show_player
       {
         "mode_#{name}_started" => {
           @example_show.name => {'action' => 'play' },
-          @blue_orb_ring_show.name => {'action' => 'play' }
+          # @blue_orb_ring_show.name => {'action' => 'play' },
+          @speedup_spin_show.name => {'action' => 'play', 'show_tokens' => {'color' => 'teal', 'ring_prefix' => 'gl_ring_a'}}
         }
       }
     end
 
     private
+
+    SPEEDUP_SPEEDS = [150, 100, 50, 25, 15, 10, 25, 100].map{|i| "#{i}ms"}
+    def speedup_spin_speed(i)
+      idx = (i/8.0).floor
+      SPEEDUP_SPEEDS[idx]
+    end
+
+    def speedup_spin_step(i)
+      on_light = (i%8)+1
+      off_light = ((i-1)%8)+1
+      {
+        "(ring_prefix)_#{on_light}" => '(color)',
+        "(ring_prefix)_#{off_light}" => 'off'
+      }
+    end
+
 
     def blue_orb_step(i, ring_name)
       out = {"lights_#{ring_name}" => 'off'}

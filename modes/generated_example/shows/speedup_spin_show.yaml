@@ -1,0 +1,261 @@
+#show_version=6
+# Single light ring spin with increasing speed
+
+---
+- duration: 150ms
+  lights:
+    "(ring_prefix)_1": "(color)"
+    "(ring_prefix)_8": 'off'
+- duration: 150ms
+  lights:
+    "(ring_prefix)_2": "(color)"
+    "(ring_prefix)_1": 'off'
+- duration: 150ms
+  lights:
+    "(ring_prefix)_3": "(color)"
+    "(ring_prefix)_2": 'off'
+- duration: 150ms
+  lights:
+    "(ring_prefix)_4": "(color)"
+    "(ring_prefix)_3": 'off'
+- duration: 150ms
+  lights:
+    "(ring_prefix)_5": "(color)"
+    "(ring_prefix)_4": 'off'
+- duration: 150ms
+  lights:
+    "(ring_prefix)_6": "(color)"
+    "(ring_prefix)_5": 'off'
+- duration: 150ms
+  lights:
+    "(ring_prefix)_7": "(color)"
+    "(ring_prefix)_6": 'off'
+- duration: 150ms
+  lights:
+    "(ring_prefix)_8": "(color)"
+    "(ring_prefix)_7": 'off'
+- duration: 100ms
+  lights:
+    "(ring_prefix)_1": "(color)"
+    "(ring_prefix)_8": 'off'
+- duration: 100ms
+  lights:
+    "(ring_prefix)_2": "(color)"
+    "(ring_prefix)_1": 'off'
+- duration: 100ms
+  lights:
+    "(ring_prefix)_3": "(color)"
+    "(ring_prefix)_2": 'off'
+- duration: 100ms
+  lights:
+    "(ring_prefix)_4": "(color)"
+    "(ring_prefix)_3": 'off'
+- duration: 100ms
+  lights:
+    "(ring_prefix)_5": "(color)"
+    "(ring_prefix)_4": 'off'
+- duration: 100ms
+  lights:
+    "(ring_prefix)_6": "(color)"
+    "(ring_prefix)_5": 'off'
+- duration: 100ms
+  lights:
+    "(ring_prefix)_7": "(color)"
+    "(ring_prefix)_6": 'off'
+- duration: 100ms
+  lights:
+    "(ring_prefix)_8": "(color)"
+    "(ring_prefix)_7": 'off'
+- duration: 50ms
+  lights:
+    "(ring_prefix)_1": "(color)"
+    "(ring_prefix)_8": 'off'
+- duration: 50ms
+  lights:
+    "(ring_prefix)_2": "(color)"
+    "(ring_prefix)_1": 'off'
+- duration: 50ms
+  lights:
+    "(ring_prefix)_3": "(color)"
+    "(ring_prefix)_2": 'off'
+- duration: 50ms
+  lights:
+    "(ring_prefix)_4": "(color)"
+    "(ring_prefix)_3": 'off'
+- duration: 50ms
+  lights:
+    "(ring_prefix)_5": "(color)"
+    "(ring_prefix)_4": 'off'
+- duration: 50ms
+  lights:
+    "(ring_prefix)_6": "(color)"
+    "(ring_prefix)_5": 'off'
+- duration: 50ms
+  lights:
+    "(ring_prefix)_7": "(color)"
+    "(ring_prefix)_6": 'off'
+- duration: 50ms
+  lights:
+    "(ring_prefix)_8": "(color)"
+    "(ring_prefix)_7": 'off'
+- duration: 25ms
+  lights:
+    "(ring_prefix)_1": "(color)"
+    "(ring_prefix)_8": 'off'
+- duration: 25ms
+  lights:
+    "(ring_prefix)_2": "(color)"
+    "(ring_prefix)_1": 'off'
+- duration: 25ms
+  lights:
+    "(ring_prefix)_3": "(color)"
+    "(ring_prefix)_2": 'off'
+- duration: 25ms
+  lights:
+    "(ring_prefix)_4": "(color)"
+    "(ring_prefix)_3": 'off'
+- duration: 25ms
+  lights:
+    "(ring_prefix)_5": "(color)"
+    "(ring_prefix)_4": 'off'
+- duration: 25ms
+  lights:
+    "(ring_prefix)_6": "(color)"
+    "(ring_prefix)_5": 'off'
+- duration: 25ms
+  lights:
+    "(ring_prefix)_7": "(color)"
+    "(ring_prefix)_6": 'off'
+- duration: 25ms
+  lights:
+    "(ring_prefix)_8": "(color)"
+    "(ring_prefix)_7": 'off'
+- duration: 15ms
+  lights:
+    "(ring_prefix)_1": "(color)"
+    "(ring_prefix)_8": 'off'
+- duration: 15ms
+  lights:
+    "(ring_prefix)_2": "(color)"
+    "(ring_prefix)_1": 'off'
+- duration: 15ms
+  lights:
+    "(ring_prefix)_3": "(color)"
+    "(ring_prefix)_2": 'off'
+- duration: 15ms
+  lights:
+    "(ring_prefix)_4": "(color)"
+    "(ring_prefix)_3": 'off'
+- duration: 15ms
+  lights:
+    "(ring_prefix)_5": "(color)"
+    "(ring_prefix)_4": 'off'
+- duration: 15ms
+  lights:
+    "(ring_prefix)_6": "(color)"
+    "(ring_prefix)_5": 'off'
+- duration: 15ms
+  lights:
+    "(ring_prefix)_7": "(color)"
+    "(ring_prefix)_6": 'off'
+- duration: 15ms
+  lights:
+    "(ring_prefix)_8": "(color)"
+    "(ring_prefix)_7": 'off'
+- duration: 10ms
+  lights:
+    "(ring_prefix)_1": "(color)"
+    "(ring_prefix)_8": 'off'
+- duration: 10ms
+  lights:
+    "(ring_prefix)_2": "(color)"
+    "(ring_prefix)_1": 'off'
+- duration: 10ms
+  lights:
+    "(ring_prefix)_3": "(color)"
+    "(ring_prefix)_2": 'off'
+- duration: 10ms
+  lights:
+    "(ring_prefix)_4": "(color)"
+    "(ring_prefix)_3": 'off'
+- duration: 10ms
+  lights:
+    "(ring_prefix)_5": "(color)"
+    "(ring_prefix)_4": 'off'
+- duration: 10ms
+  lights:
+    "(ring_prefix)_6": "(color)"
+    "(ring_prefix)_5": 'off'
+- duration: 10ms
+  lights:
+    "(ring_prefix)_7": "(color)"
+    "(ring_prefix)_6": 'off'
+- duration: 10ms
+  lights:
+    "(ring_prefix)_8": "(color)"
+    "(ring_prefix)_7": 'off'
+- duration: 25ms
+  lights:
+    "(ring_prefix)_1": "(color)"
+    "(ring_prefix)_8": 'off'
+- duration: 25ms
+  lights:
+    "(ring_prefix)_2": "(color)"
+    "(ring_prefix)_1": 'off'
+- duration: 25ms
+  lights:
+    "(ring_prefix)_3": "(color)"
+    "(ring_prefix)_2": 'off'
+- duration: 25ms
+  lights:
+    "(ring_prefix)_4": "(color)"
+    "(ring_prefix)_3": 'off'
+- duration: 25ms
+  lights:
+    "(ring_prefix)_5": "(color)"
+    "(ring_prefix)_4": 'off'
+- duration: 25ms
+  lights:
+    "(ring_prefix)_6": "(color)"
+    "(ring_prefix)_5": 'off'
+- duration: 25ms
+  lights:
+    "(ring_prefix)_7": "(color)"
+    "(ring_prefix)_6": 'off'
+- duration: 25ms
+  lights:
+    "(ring_prefix)_8": "(color)"
+    "(ring_prefix)_7": 'off'
+- duration: 100ms
+  lights:
+    "(ring_prefix)_1": "(color)"
+    "(ring_prefix)_8": 'off'
+- duration: 100ms
+  lights:
+    "(ring_prefix)_2": "(color)"
+    "(ring_prefix)_1": 'off'
+- duration: 100ms
+  lights:
+    "(ring_prefix)_3": "(color)"
+    "(ring_prefix)_2": 'off'
+- duration: 100ms
+  lights:
+    "(ring_prefix)_4": "(color)"
+    "(ring_prefix)_3": 'off'
+- duration: 100ms
+  lights:
+    "(ring_prefix)_5": "(color)"
+    "(ring_prefix)_4": 'off'
+- duration: 100ms
+  lights:
+    "(ring_prefix)_6": "(color)"
+    "(ring_prefix)_5": 'off'
+- duration: 100ms
+  lights:
+    "(ring_prefix)_7": "(color)"
+    "(ring_prefix)_6": 'off'
+- duration: 100ms
+  lights:
+    "(ring_prefix)_8": "(color)"
+    "(ring_prefix)_7": 'off'
+
