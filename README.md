@@ -73,3 +73,27 @@ Game features include:
                                      |____
 
 ```
+
+---
+
+## Development
+
+Currently built on mpf v0.80.0.dev4
+with monitor v0.57.1
+on windows and linux
+
+not yet integrated with godot
+
+trogbuild is a ruby script built on ruby 3.2.2
+currently it only depends on the stl :)))
+
+## Commands
+
+Add the tsource command from bin/shell_one_time_setup.sh to your shell profile.
+This adds a hook to load the commands from bin/shell_extensions.sh
+
+`vsnake` runs monitor and the logging game window together, and is the most common testing command now.
+
+`trogdor` runs the logging game instance against a live table
+
+`ruby trogbuild.rb [-x]` will regenerate the generated modes, shows, and hooks. Default dry run, or -x to write.
