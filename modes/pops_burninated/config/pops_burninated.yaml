@@ -26,8 +26,8 @@ show_player:
     fire_burninated_show:
       key: pop_left_show
       action: play
-      sync_ms: 300
-      start_step: 3
+      sync_ms: 500
+      start_step: 5
       show_tokens:
         light_prefix: l_pop_ring_a
 
@@ -35,7 +35,7 @@ show_player:
     fire_burninated_show:
       key: pop_right_show
       action: play
-      sync_ms: 300
+      sync_ms: 500
       start_step: 1
       show_tokens:
         light_prefix: l_pop_ring_b
@@ -44,7 +44,7 @@ show_player:
     fire_burninated_show:
       key: pop_center_show
       action: play
-      sync_ms: 300
-      start_step: 4
+      sync_ms: 500
+      start_step: 7
       show_tokens:
         light_prefix: l_pop_ring_c

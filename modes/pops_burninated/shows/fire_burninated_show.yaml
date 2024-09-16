@@ -5,47 +5,93 @@
 # 1     6
 # 2     5
 #   3 4
+# Using stop instead of off allows a lower priority to show led updates
+# in the 2 off lights without knowing the spinner step
 
-- duration: 150ms
+- duration: 200ms
   lights:
-    (light_prefix)_1: off
+    (light_prefix)_1: stop
     (light_prefix)_2: "d82d08"
     (light_prefix)_3: "d82d08"
     (light_prefix)_4: "d82d08"
     (light_prefix)_5: "d82d08"
     (light_prefix)_6: "d82d08"
     (light_prefix)_7: "d82d08"
-    (light_prefix)_8: off
+    (light_prefix)_8: stop
 
-- duration: 150ms
+- duration: 200ms
   lights:
-    (light_prefix)_1: "d82d08"
-    (light_prefix)_2: off
-    (light_prefix)_3: off
+    (light_prefix)_1: stop
+    (light_prefix)_2: stop
+    (light_prefix)_3: "d82d08"
     (light_prefix)_4: "d82d08"
     (light_prefix)_5: "d82d08"
     (light_prefix)_6: "d82d08"
     (light_prefix)_7: "d82d08"
     (light_prefix)_8: "d82d08"
 
-- duration: 150ms
+- duration: 200ms
   lights:
     (light_prefix)_1: "d82d08"
-    (light_prefix)_2: "d82d08"
-    (light_prefix)_3: "d82d08"
-    (light_prefix)_4: off
-    (light_prefix)_5: off
+    (light_prefix)_2: stop
+    (light_prefix)_3: stop
+    (light_prefix)_4: "d82d08"
+    (light_prefix)_5: "d82d08"
     (light_prefix)_6: "d82d08"
     (light_prefix)_7: "d82d08"
     (light_prefix)_8: "d82d08"
 
-- duration: 150ms
+- duration: 200ms
+  lights:
+    (light_prefix)_1: "d82d08"
+    (light_prefix)_2: "d82d08"
+    (light_prefix)_3: stop
+    (light_prefix)_4: stop
+    (light_prefix)_5: "d82d08"
+    (light_prefix)_6: "d82d08"
+    (light_prefix)_7: "d82d08"
+    (light_prefix)_8: "d82d08"
+
+- duration: 200ms
+  lights:
+    (light_prefix)_1: "d82d08"
+    (light_prefix)_2: "d82d08"
+    (light_prefix)_3: "d82d08"
+    (light_prefix)_4: stop
+    (light_prefix)_5: stop
+    (light_prefix)_6: "d82d08"
+    (light_prefix)_7: "d82d08"
+    (light_prefix)_8: "d82d08"
+
+- duration: 200ms
+  lights:
+    (light_prefix)_1: "d82d08"
+    (light_prefix)_2: "d82d08"
+    (light_prefix)_3: "d82d08"
+    (light_prefix)_4: "d82d08"
+    (light_prefix)_5: stop
+    (light_prefix)_6: stop
+    (light_prefix)_7: "d82d08"
+    (light_prefix)_8: "d82d08"
+
+- duration: 200ms
   lights:
     (light_prefix)_1: "d82d08"
     (light_prefix)_2: "d82d08"
     (light_prefix)_3: "d82d08"
     (light_prefix)_4: "d82d08"
     (light_prefix)_5: "d82d08"
-    (light_prefix)_6: off
-    (light_prefix)_7: off
+    (light_prefix)_6: stop
+    (light_prefix)_7: stop
     (light_prefix)_8: "d82d08"
+
+- duration: 200ms
+  lights:
+    (light_prefix)_1: "d82d08"
+    (light_prefix)_2: "d82d08"
+    (light_prefix)_3: "d82d08"
+    (light_prefix)_4: "d82d08"
+    (light_prefix)_5: "d82d08"
+    (light_prefix)_6: "d82d08"
+    (light_prefix)_7: stop
+    (light_prefix)_8: stop

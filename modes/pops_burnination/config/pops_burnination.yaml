@@ -75,35 +75,22 @@ variable_player:
   # Increment fire level by three on bumper hit
   s_pop_left_active:
     score: 1000 * current_player.playfield_multiplier
-    pop_left_fire_level:
-      int: 3
-      action: add
+    pop_left_fire_level: 3
 
   s_pop_right_active:
     score: 1000 * current_player.playfield_multiplier
-    pop_right_fire_level:
-      int: 3
-      action: add
+    pop_right_fire_level: 3
 
   s_pop_center_active:
     score: 1000 * current_player.playfield_multiplier
-    pop_center_fire_level:
-      int: 3
-      action: add
+    pop_center_fire_level: 3
 
   timer_pop_left_burndown_complete{current_player.pop_left_fire_level > 0}:
-    pop_left_fire_level:
-      int: -1
-      action: add
+    pop_left_fire_level: -1
   timer_pop_right_burndown_complete{current_player.pop_right_fire_level > 0}:
-    pop_right_fire_level:
-      int: -1
-      action: add
+    pop_right_fire_level: -1
   timer_pop_center_burndown_complete{current_player.pop_center_fire_level > 0}:
-    pop_center_fire_level:
-      int: -1
-      action: add
-
+    pop_center_fire_level: -1
 
 event_player:
   timer_burnination_countdown_complete:

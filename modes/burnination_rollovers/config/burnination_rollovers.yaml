@@ -51,8 +51,15 @@ random_event_player:
 variable_player:
   burnination_rollover_shots_on_target_hit:
     score: 10000 * current_player.playfield_multiplier
+    pop_left_fire_level: 2 * current_player.playfield_multiplier
+    pop_right_fire_level: 2 * current_player.playfield_multiplier
+    pop_center_fire_level: 2 * current_player.playfield_multiplier
+
   burnination_rollover_shots_off_target_hit:
     score: 400 * current_player.playfield_multiplier
+    pop_left_fire_level: 2
+    pop_right_fire_level: 2
+    pop_center_fire_level: 2
 
 shot_profiles:
   rotating_rollover_target_profile:
