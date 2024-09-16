@@ -3,7 +3,7 @@
 mode:
   start_events: mode_start_burn_rollovers, mode_fail_pops_burnination
   stop_events: mode_complete_burn_rollovers, mode_cancel_burn_rollovers
-  priority: 140
+  priority: 1400
 
 variable_player:
   burn_group_lit_hit:

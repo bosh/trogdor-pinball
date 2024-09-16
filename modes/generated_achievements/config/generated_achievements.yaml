@@ -3,7 +3,7 @@
 
 ---
 mode:
-  priority: 109
+  priority: 1090
   start_events: ball_started
 show_player:
   celebrate_achievement:

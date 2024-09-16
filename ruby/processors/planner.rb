@@ -37,11 +37,11 @@ module TrogBuild
     end
 
     def add_example_mode!
-      plan.add_mode ExampleMode.new("generated_example", 131)
+      plan.add_mode ExampleMode.new("generated_example", 1310)
     end
 
     def add_achievement_modes!
-      plan.add_mode AchievementMode.new("generated_achievements", 109)
+      plan.add_mode AchievementMode.new("generated_achievements", 1090)
     end
   end
 end

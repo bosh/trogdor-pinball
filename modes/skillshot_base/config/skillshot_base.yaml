@@ -4,7 +4,7 @@ mode:
   start_events: mode_start_skillshot_base
   events_when_started: restart_skill_shots
   stop_events: mode_complete_skillshot_base, mode_fail_skillshot_base
-  priority: 310
+  priority: 3100
 
 timers:
   skill_shot_timeout:

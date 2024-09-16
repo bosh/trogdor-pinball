@@ -7,7 +7,7 @@ config:
 
 mode:
   start_events: ball_started
-  priority: 100
+  priority: 1000
 
 event_player:
   mode_base_started:

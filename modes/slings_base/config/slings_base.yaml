@@ -3,7 +3,7 @@
 mode:
   start_events: mode_start_slings_base
   stop_events: mode_cancel_slings_base
-  priority: 121
+  priority: 1210
 
 variable_player:
   #Simple sling scoring with sling counter

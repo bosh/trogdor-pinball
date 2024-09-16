@@ -3,7 +3,7 @@
 mode:
   start_events: mode_start_ball_saves
   stop_events: mode_stop_ball_saves
-  priority: 305
+  priority: 3050
 
 ball_saves:
   default:

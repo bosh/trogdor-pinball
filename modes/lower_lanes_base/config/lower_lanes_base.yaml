@@ -3,7 +3,7 @@
 mode:
   start_events: mode_start_lower_lanes_base
   stop_events: mode_cancel_lower_lanes_base
-  priority: 111
+  priority: 1110
 
 variable_player:
   inlane_detector_shot_off_hit:

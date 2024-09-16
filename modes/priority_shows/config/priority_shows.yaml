@@ -2,7 +2,7 @@
 
 mode:
   start_events: mode_start_priority_shows
-  priority: 1000
+  priority: 9000
 
 show_player:
   priority_show_skillshot_success:
