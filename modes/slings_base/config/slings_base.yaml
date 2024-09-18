@@ -5,13 +5,27 @@ mode:
   stop_events: mode_cancel_slings_base
   priority: 1210
 
+shot_profiles:
+  sling_base_profile:
+    advance_on_hit: false
+    states:
+      - name: 'live'
+
+shots:
+  shot_sling_left_base:
+    profile: sling_base_profile
+    switch: s_left_sling
+  shot_sling_right_base:
+    profile: sling_base_profile
+    switch: s_left_sling
+
 variable_player:
   #Simple sling scoring with sling counter
   #Left scores less because plunge to left is common
-  s_left_sling_active:
+  shot_sling_left_base_hit:
     score: 25 * current_player.playfield_multiplier
     sling_hits: 1
-  s_right_sling_active:
+  shot_sling_right_base_hit:
     score: 50 * current_player.playfield_multiplier
     sling_hits: 1
 
@@ -24,11 +38,15 @@ variable_player:
 
 sequence_shots:
   slings_l2r:
-    switch_sequence: s_left_sling, s_right_sling
-    sequence_timeout: 300ms
+    event_sequence:
+      - shot_sling_left_base_hit
+      - shot_sling_right_base_hit
+    sequence_timeout: 400ms
   slings_r2l:
-    switch_sequence: s_right_sling, s_left_sling
-    sequence_timeout: 300ms
+    event_sequence:
+      - shot_sling_right_base_hit
+      - shot_sling_left_base_hit
+    sequence_timeout: 400ms
 
 show_player:
   slings_l2r_hit:
