@@ -28,8 +28,8 @@ shots:
     profile: inlane_detector_profile
     switches: s_left_inner_lane, s_right_inner_lane
     reset_events: reset_inlane_detector
-    show_tokens:
-      light: vlight_inlane_qualified
+#    show_tokens:
+#      light: vlight_inlane_qualified
 
 event_player:
   vswitch_reset_inlane_detector_active:

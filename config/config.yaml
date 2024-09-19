@@ -8,11 +8,11 @@ config:
   - lights/config.yaml
   - coils.yaml
   - switches.yaml
-  - virtual_switches.yaml
+#  - virtual_switches.yaml
   - keyboard.yaml
   - autofires.yaml
   - ball_devices.yaml
   - modes.yaml
   - player_vars.yaml
-  - future.yaml
-  - generated_modes.yaml
+#  - future.yaml
+#  - generated_modes.yaml
