@@ -4,25 +4,35 @@
 
 switches:
   vswitch_end_game:
+    platform: virtual
     number:
 
   vswitch_qualify_burnination:
+    platform: virtual
     number:
+
   vswitch_add_fire_level:
+    platform: virtual
     number:
 
   vswitch_qualify_burninated:
+    platform: virtual
     number:
 
   vswitch_qualify_left_outlane_save:
+    platform: virtual
     number:
+
   vswitch_qualify_right_outlane_save:
+    platform: virtual
     number:
 
   vswitch_reset_inlane_detector:
+    platform: virtual
     number:
 
   vswitch_toggle_slings_dead:
+    platform: virtual
     number:
 
 plugins: switch_player
