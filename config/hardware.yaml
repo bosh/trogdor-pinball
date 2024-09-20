@@ -1,0 +1,7 @@
+#config_version=6
+
+hardware:
+  platform: smart_virtual
+  switches: fast
+  coils: fast
+  lights: fast

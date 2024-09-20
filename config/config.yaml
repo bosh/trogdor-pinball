@@ -2,6 +2,7 @@
 
 config:
   - settings.yaml
+  - hardware.yaml
   - fast.yaml
   - displays.yaml
   - machine.yaml

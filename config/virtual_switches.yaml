@@ -4,36 +4,36 @@
 
 switches:
   vswitch_end_game:
-    platform: virtual
-    number:
+    platform: smart_virtual
+    number: 901
 
   vswitch_qualify_burnination:
-    platform: virtual
-    number:
+    platform: smart_virtual
+    number: 902
 
   vswitch_add_fire_level:
-    platform: virtual
-    number:
+    platform: smart_virtual
+    number: 903
 
   vswitch_qualify_burninated:
-    platform: virtual
-    number:
+    platform: smart_virtual
+    number: 904
 
   vswitch_qualify_left_outlane_save:
-    platform: virtual
-    number:
+    platform: smart_virtual
+    number: 905
 
   vswitch_qualify_right_outlane_save:
-    platform: virtual
-    number:
+    platform: smart_virtual
+    number: 906
 
   vswitch_reset_inlane_detector:
-    platform: virtual
-    number:
+    platform: smart_virtual
+    number: 907
 
   vswitch_toggle_slings_dead:
-    platform: virtual
-    number:
+    platform: smart_virtual
+    number: 908
 
 plugins: switch_player
 switch_player:

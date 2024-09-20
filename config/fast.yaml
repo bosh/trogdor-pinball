@@ -1,8 +1,5 @@
 #config_version=6
 
-hardware:
-  platform: fast #This line is the only one that needs to be commented to allow virtual run
-
 fast:
   net:
     port: /dev/ttyACM0
