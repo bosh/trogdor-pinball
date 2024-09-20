@@ -4,37 +4,46 @@
 ---
 lights:
   generated_light_1:
-    number:
+    number: 11001
+    platform: smart_virtual
     type: rgb
   gl_ring_a_1:
     tags: lights_generated,lights_a,lights_gl_ring_a
     type: rgb
-    number:
+    number: 11002
+    platform: smart_virtual
   gl_ring_a_2:
     tags: lights_generated,lights_b,lights_gl_ring_a
     type: rgb
-    number:
+    number: 11003
+    platform: smart_virtual
   gl_ring_a_3:
     tags: lights_generated,lights_a,lights_gl_ring_a
     type: rgb
-    number:
+    number: 11004
+    platform: smart_virtual
   gl_ring_a_4:
     tags: lights_generated,lights_b,lights_gl_ring_a
     type: rgb
-    number:
+    number: 11005
+    platform: smart_virtual
   gl_ring_a_5:
     tags: lights_generated,lights_a,lights_gl_ring_a
     type: rgb
-    number:
+    number: 11006
+    platform: smart_virtual
   gl_ring_a_6:
     tags: lights_generated,lights_b,lights_gl_ring_a
     type: rgb
-    number:
+    number: 11007
+    platform: smart_virtual
   gl_ring_a_7:
     tags: lights_generated,lights_a,lights_gl_ring_a
     type: rgb
-    number:
+    number: 11008
+    platform: smart_virtual
   gl_ring_a_8:
     tags: lights_generated,lights_b,lights_gl_ring_a
     type: rgb
-    number:
+    number: 11009
+    platform: smart_virtual

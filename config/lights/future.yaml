@@ -3,186 +3,229 @@
 lights:
   # playfield multipliers
   l_pf_x2:
-    number:
+    number: 9001
+    platform: smart_virtual
     type: rgb
     tags: lights_b, lights_pf, lights_multipliers
   l_pf_x3:
-    number:
+    number: 9002
+    platform: smart_virtual
     type: rgb
     tags: lights_a, lights_pf, lights_multipliers
   l_pf_x4:
-    number:
+    number: 9003
+    platform: smart_virtual
     type: rgb
     tags: lights_b, lights_pf, lights_multipliers
   l_pf_x5:
-    number:
+    number: 9004
+    platform: smart_virtual
     type: rgb
     tags: lights_a, lights_pf, lights_lights_multipliersburn
 
   # MAJESTY counters (from 12:00 clockwise rotating)
   l_majesty_1: #Consider splitting into R G and B channels to separately light colors without mounting multiple LED packages into one insert
-    number:
+    number: 9005
+    platform: smart_virtual
     type: rgb
     tags: lights_a, lights_pf, lights_majesty
   l_majesty_2:
-    number:
+    number: 9006
+    platform: smart_virtual
     type: rgb
     tags: lights_b, lights_pf, lights_majesty
   l_majesty_3:
-    number:
+    number: 9007
+    platform: smart_virtual
     type: rgb
     tags: lights_a, lights_pf, lights_majesty
   l_majesty_4:
-    number:
+    number: 9008
+    platform: smart_virtual
     type: rgb
     tags: lights_b, lights_pf, lights_majesty
   l_majesty_5:
-    number:
+    number: 9009
+    platform: smart_virtual
     type: rgb
     tags: lights_a, lights_pf, lights_majesty
   l_majesty_6:
-    number:
+    number: 9010
+    platform: smart_virtual
     type: rgb
     tags: lights_b, lights_pf, lights_majesty
 
   # B U R N rollovers
   l_burn_b:
-    number:
+    number: 9011
+    platform: smart_virtual
     type: rgb
     tags: lights_a, lights_pf, lights_burn
   l_burn_u:
-    number:
+    number: 9012
+    platform: smart_virtual
     type: rgb
     tags: lights_b, lights_pf, lights_burn
   l_burn_r:
-    number:
+    number: 9013
+    platform: smart_virtual
     type: rgb
     tags: lights_a, lights_pf, lights_burn
   l_burn_n:
-    number:
+    number: 9014
+    platform: smart_virtual
     type: rgb
     tags: lights_b, lights_pf, lights_burn
 
   # Inlanes and Outlanes
   l_left_outlane:
-    number:
+    number: 9015
+    platform: smart_virtual
     type: rgb
     tags: lights_a, lights_pf, lights_lanes, lights_outlanes, lights_lower_third
   l_left_inlane:
-    number:
+    number: 9016
+    platform: smart_virtual
     type: rgb
     tags: lights_b, lights_pf, lights_lanes, lights_inlanes, lights_lower_third
   l_right_inlane:
-    number:
+    number: 9017
+    platform: smart_virtual
     type: rgb
     tags: lights_a, lights_pf, lights_lanes, lights_inlanes, lights_lower_third
   l_right_outlane:
-    number:
+    number: 9018
+    platform: smart_virtual
     type: rgb
     tags: lights_b, lights_pf, lights_lanes, lights_outlanes, lights_lower_third
 
   l_drain:
-    number:
+    number: 9019
+    platform: smart_virtual
     type: rgb
     tags: lights_b, lights_pf, lights_lower_third
 
   # Playfield: 3x Cobrapin pop bumper ring - RGBW...
   l_pop_ring_b_1:
-    number:
+    number: 9020
+    platform: smart_virtual
     type: rgb
     tags: lights_a, lights_pf, lights_pop_ring_b
   l_pop_ring_b_2:
-    number:
+    number: 9021
+    platform: smart_virtual
     type: rgb
     tags: lights_b, lights_pf, lights_pop_ring_b
   l_pop_ring_b_3:
-    number:
+    number: 9022
+    platform: smart_virtual
     type: rgb
     tags: lights_a, lights_pf, lights_pop_ring_b
   l_pop_ring_b_4:
-    number:
+    number: 9023
+    platform: smart_virtual
     type: rgb
     tags: lights_b, lights_pf, lights_pop_ring_b
   l_pop_ring_b_5:
-    number:
+    number: 9024
+    platform: smart_virtual
     type: rgb
     tags: lights_a, lights_pf, lights_pop_ring_b
   l_pop_ring_b_6:
-    number:
+    number: 9025
+    platform: smart_virtual
     type: rgb
     tags: lights_b, lights_pf, lights_pop_ring_b
   l_pop_ring_b_7:
-    number:
+    number: 9026
+    platform: smart_virtual
     type: rgb
     tags: lights_a, lights_pf, lights_pop_ring_b
   l_pop_ring_b_8:
-    number:
+    number: 9027
+    platform: smart_virtual
     type: rgb
     tags: lights_b, lights_pf, lights_pop_ring_b
 
   l_pop_ring_c_1:
-    number:
+    number: 9028
+    platform: smart_virtual
     type: rgb
     tags: lights_a, lights_pf, lights_pop_ring_c
   l_pop_ring_c_2:
-    number:
+    number: 9029
+    platform: smart_virtual
     type: rgb
     tags: lights_b, lights_pf, lights_pop_ring_c
   l_pop_ring_c_3:
-    number:
+    number: 9030
+    platform: smart_virtual
     type: rgb
     tags: lights_a, lights_pf, lights_pop_ring_c
   l_pop_ring_c_4:
-    number:
+    number: 9031
+    platform: smart_virtual
     type: rgb
     tags: lights_b, lights_pf, lights_pop_ring_c
   l_pop_ring_c_5:
-    number:
+    number: 9032
+    platform: smart_virtual
     type: rgb
     tags: lights_a, lights_pf, lights_pop_ring_c
   l_pop_ring_c_6:
-    number:
+    number: 9033
+    platform: smart_virtual
     type: rgb
     tags: lights_b, lights_pf, lights_pop_ring_c
   l_pop_ring_c_7:
-    number:
+    number: 9034
+    platform: smart_virtual
     type: rgb
     tags: lights_a, lights_pf, lights_pop_ring_c
   l_pop_ring_c_8:
-    number:
+    number: 9035
+    platform: smart_virtual
     type: rgb
     tags: lights_b, lights_pf, lights_pop_ring_c
 
   # Minicab: Cobrapin dome post ring - RGB
   l_dome_ring_a_1:
-    number:
+    number: 9036
+    platform: smart_virtual
     type: rgb
     tags: lights_a, lights_cab, lights_dome_ring_a
   l_dome_ring_a_2:
-    number:
+    number: 9037
+    platform: smart_virtual
     type: rgb
     tags: lights_b, lights_cab, lights_dome_ring_a
   l_dome_ring_a_3:
-    number:
+    number: 9038
+    platform: smart_virtual
     type: rgb
     tags: lights_a, lights_cab, lights_dome_ring_a
   l_dome_ring_a_4:
-    number:
+    number: 9039
+    platform: smart_virtual
     type: rgb
     tags: lights_b, lights_cab, lights_dome_ring_a
   l_dome_ring_a_5:
-    number:
+    number: 9040
+    platform: smart_virtual
     type: rgb
     tags: lights_a, lights_cab, lights_dome_ring_a
   l_dome_ring_a_6:
-    number:
+    number: 9041
+    platform: smart_virtual
     type: rgb
     tags: lights_b, lights_cab, lights_dome_ring_a
   l_dome_ring_a_7:
-    number:
+    number: 9042
+    platform: smart_virtual
     type: rgb
     tags: lights_a, lights_cab, lights_dome_ring_a
   l_dome_ring_a_8:
-    number:
+    number: 9043
+    platform: smart_virtual
     type: rgb
     tags: lights_b, lights_cab, lights_dome_ring_a

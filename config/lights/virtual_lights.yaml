@@ -5,24 +5,29 @@
 
 lights:
   vlight_for_generated_example_mode:
-    number:
+    number: 9501
+    platform: smart_virtual
     type: rgb
     tags: lights_virtual
 
   vlight_ball_1:
-    number:
+    number: 9502
+    platform: smart_virtual
     type: rgb
     tags: lights_virtual
   vlight_ball_2:
-    number:
+    number: 9503
+    platform: smart_virtual
     type: rgb
     tags: lights_virtual
   vlight_ball_3:
-    number:
+    number: 9504
+    platform: smart_virtual
     type: rgb
     tags: lights_virtual
 
   vlight_inlane_qualified: #Could become a real light in an orbit lane etc
-    number:
+    number: 9505
+    platform: smart_virtual
     type: rgb
     tags: lights_virtual

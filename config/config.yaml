@@ -15,8 +15,8 @@ config:
   - ball_devices.yaml
   - modes.yaml
   - player_vars.yaml
-#  - future.yaml
-#  - generated_modes.yaml
+  - future.yaml
+  - generated_modes.yaml
 
 custom_code:
   - trogpy.core.Core

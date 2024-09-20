@@ -6,102 +6,135 @@
 switches:
   #For coils
   s_pop_left:
-    number:
+    number: 801
+    platform: smart_virtual
+
   s_pop_right:
-    number:
+    number: 802
+    platform: smart_virtual
   s_pop_center:
-    number:
+    number: 803
+    platform: smart_virtual
 
   s_vuk_presence:
-    number:
+    number: 804
+    platform: smart_virtual
     type: 'NC'
 
   s_upper_sling:
-    number:
+    number: 805
+    platform: smart_virtual
 
   s_upper_flipper_eos:
-    number:
+    number: 806
+    platform: smart_virtual
     type: 'NC' #maybe nc
 
   #Targets
   s_drop_left_down: #TODO learn how drop switching works (are there two?)
-    number:
+    number: 807
+    platform: smart_virtual
 
   #Rollovers
   s_burn_b:
-    number:
+    number: 808
+    platform: smart_virtual
   s_burn_u:
-    number:
+    number: 809
+    platform: smart_virtual
   s_burn_r:
-    number:
+    number: 810
+    platform: smart_virtual
   s_burn_n:
-    number:
+    number: 811
+    platform: smart_virtual
 
   #Spinners
   s_spinner_left:
-    number:
+    number: 812
+    platform: smart_virtual
   s_spinner_right:
-    number:
+    number: 813
+    platform: smart_virtual
 
   #Passthrough optos
   s_left_orbit:
-    number:
+    number: 814
+    platform: smart_virtual
   s_right_orbit:
-    number:
+    number: 815
+    platform: smart_virtual
   s_horseshoe:
-    number:
+    number: 816
+    platform: smart_virtual
 
   s_wireform_s_entry:
-    number:
+    number: 817
+    platform: smart_virtual
   s_wireform_s_exit:
-    number:
+    number: 818
+    platform: smart_virtual
   s_wireform_left_top:
-    number:
+    number: 819
+    platform: smart_virtual
   s_wireform_right_top:
-    number:
+    number: 820
+    platform: smart_virtual
 
 coils:
   c_pop_left:
-    number:
+    number: 3001
+    platform: smart_virtual
   c_pop_right:
-    number:
+    number: 3002
+    platform: smart_virtual
   c_pop_center:
-    number:
+    number: 3003
+    platform: smart_virtual
 
   c_vuk:
-    number:
+    number: 3004
+    platform: smart_virtual
     default_pulse_ms: 20 #TODO dial in
 
   c_upper_sling:
-    number:
+    number: 3005
+    platform: smart_virtual
 
   c_gate_left:
-    number:
+    number: 3006
+    platform: smart_virtual
     default_pulse_ms: 10
     default_hold_power: 0.25
   c_gate_right:
-    number:
+    number: 3007
+    platform: smart_virtual
     default_pulse_ms: 10
     default_hold_power: 0.25
 
   c_drop_left_reset:
-    number:
+    number: 3008
+    platform: smart_virtual
   c_drop_left_knockdown:
     default_pulse_ms: 10 #TODO dial in
-    number:
+    number: 3009
+    platform: smart_virtual
 
   c_saver_post:
-    number:
+    number: 3010
+    platform: smart_virtual
     allow_enable: true
     default_hold_power: .25 #TODO dial in
 
   c_flipper_upper_hold:
-    number:
+    number: 3011
+    platform: smart_virtual
     default_hold_power: .5
     allow_enable: true
 
   c_flipper_upper_full:
-    number:
+    number: 3012
+    platform: smart_virtual
     default_pulse_ms: 25
 
 ball_devices:
@@ -131,7 +164,7 @@ flippers:
     main_coil: c_flipper_upper_full
     hold_coil: c_flipper_upper_hold
     eos_switch: s_upper_flipper_eos
-    activation_switch: s_mini_flipper #TODO this is from real hardware
+    activation_switch: #s_mini_flipper #TODO this is from real hardware
     enable_events: ball_started, enableAutofire #, machine_reset_phase_3 #P3 for testing
     disable_events: ball_will_end, service_mode_entered, disableAutofire
     use_eos: true
