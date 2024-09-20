@@ -16,3 +16,6 @@ config:
   - player_vars.yaml
 #  - future.yaml
 #  - generated_modes.yaml
+
+custom_code:
+  - trogpy.core.Core
