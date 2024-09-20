@@ -1,0 +1,7 @@
+#config_version=6
+
+mode:
+  start_events: mode_start_code_base
+  stop_events: mode_stop_code_base
+  priority: 11000
+  code: code_base.CodeBase

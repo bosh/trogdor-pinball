@@ -3,6 +3,7 @@
 modes:
   - attract
   - base
+  - code_base
   - priority_shows
   - ball_saves
 #  - skillshot_base

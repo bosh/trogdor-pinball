@@ -11,6 +11,7 @@ mode:
 
 event_player:
   mode_base_started:
+    - mode_start_code_base
     - mode_start_priority_shows
     - mode_start_ball_saves
     - mode_start_skillshot_base
