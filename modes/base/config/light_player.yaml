@@ -28,7 +28,7 @@ show_player:
 
   start_dome_ring_spin_red:
     tokenized_ring_spin:
-      action: stop #TODO play
+      action: play
       key: dome_ring_red_spin
       show_tokens:
         # Asc order should spin CCW
@@ -77,12 +77,12 @@ show_player:
         level8: "000000"
 
 light_player:
-#  "{current_player.ball == 1}":
-#    vlight_ball_1: "ff00ff"
-#  "{current_player.ball == 2}":
-#    vlight_ball_2: "ff00ff"
-#  "{current_player.ball == 3}":
-#    vlight_ball_2: "ff00ff"
+  "{current_player.ball == 1}":
+    vlight_ball_1: "ff00ff"
+  "{current_player.ball == 2}":
+    vlight_ball_2: "ff00ff"
+  "{current_player.ball == 3}":
+    vlight_ball_2: "ff00ff"
 
   # High voltage status warn LED
   "{device.switches.s_high_voltage_status.state == 0}":
@@ -135,20 +135,20 @@ light_player:
   "{device.switches.s_trough_ball_jam.state == 0 and device.switches.s_trough_ball_1.state + device.switches.s_trough_ball_2.state + device.switches.s_trough_ball_3.state + device.switches.s_trough_ball_4.state + device.switches.s_trough_ball_5.state > 3}":
     l_pf_2: 0066ff #intended for 3 balls, so 4+ is unexpected blue state
 
-#  # Playfield Multiplier
-#  "{current_player.playfield_multiplier == 2}":
-#    l_pf_x2: ff0000
-#  "{current_player.playfield_multiplier != 2}":
-#    l_pf_x2: off
-#  "{current_player.playfield_multiplier == 3}":
-#    l_pf_x3: ff0000
-#  "{current_player.playfield_multiplier != 3}":
-#    l_pf_x3: off
-#  "{current_player.playfield_multiplier == 4}":
-#    l_pf_x4: ff0000
-#  "{current_player.playfield_multiplier != 4}":
-#    l_pf_x4: off
-#  "{current_player.playfield_multiplier == 5}":
-#    l_pf_x5: ff0000
-#  "{current_player.playfield_multiplier != 5}":
-#    l_pf_x5: off
+  # Playfield Multiplier
+  "{current_player.playfield_multiplier == 2}":
+    l_pf_x2: ff0000
+  "{current_player.playfield_multiplier != 2}":
+    l_pf_x2: off
+  "{current_player.playfield_multiplier == 3}":
+    l_pf_x3: ff0000
+  "{current_player.playfield_multiplier != 3}":
+    l_pf_x3: off
+  "{current_player.playfield_multiplier == 4}":
+    l_pf_x4: ff0000
+  "{current_player.playfield_multiplier != 4}":
+    l_pf_x4: off
+  "{current_player.playfield_multiplier == 5}":
+    l_pf_x5: ff0000
+  "{current_player.playfield_multiplier != 5}":
+    l_pf_x5: off
