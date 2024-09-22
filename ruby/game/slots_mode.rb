@@ -6,7 +6,7 @@ module TrogBuild
     def fast_tick;'375ms' end
 
     def add_timers!
-      @countdown = Timer.new('slots_countdown', 30, 0, '1000ms', true, true, false)
+      @countdown = Timer.new('slots_countdown', 6, 0, '5000ms', true, true, false) #30s with a 5s checkin to reduce spam
       add_timer(@countdown)
       @rotate = Timer.new('slots_rotate', 1, 0, slow_tick, true, true, true)
       @rotate.add_tick_option('slow', slow_tick)
@@ -41,7 +41,7 @@ module TrogBuild
 
       grid_shots.each do |s|
         add_shot(s)
-        add_event_player(s.state_hit(1), [s.set_state_event(2), slots_active_scored])
+        add_event_player(s.state_hit(1), [s.set_state_event(2), slots_active_scored, refresh_rotation_event])
       end
 
       @left_column_rotation_group = ShotGroup.new('left_column_rotation_group', [a, d, g], true)
@@ -53,8 +53,7 @@ module TrogBuild
 
       add_event_player(set_initial_targets, [g.set_state_event(1), h.set_state_event(1), i.set_state_event(1)])
 
-      row_groups = []
-      [[a,b,c], [d,e,f], [g,h,i]].map.with_index do |line_group, i|
+      row_groups = [[a,b,c], [d,e,f], [g,h,i]].map.with_index do |line_group, i|
         sg = ShotGroup.new("slot_row_#{i+1}_group", line_group, false)
         add_shot_group(sg)
         add_event_player("slot_row_#{i+1}_group_locked_complete", [row_locked_event, @rotate.stop_event])
@@ -96,20 +95,53 @@ module TrogBuild
         add_event_player("slot_singles_#{i+1}_group_locked_complete", [singles_locked_event, @rotate.stop_event])
         sg
       end
+
+      generate_refresh_checks(grid_shots)
+    end
+
+    def generate_pairs(list)
+      out = []
+      count = list.size
+      (0...count).each do |i|
+        ((i+1)...count).each do |j|
+          out << [list[i], list[j]]
+        end
+      end
+
+      out
+    end
+
+    def generate_refresh_checks(grid_shots)
+      grid_shots.each do |shot|
+        other_shots = grid_shots - [shot]
+
+        other_shots_unlocked = other_shots.map{|s| "device.shots.#{s.name}.state_name != 'locked'"}.join(' and ')
+        refresh_hook_name = "#{refresh_rotation_event}{device.shots.#{shot.name}.state_name == 'locked' and #{other_shots_unlocked}}"
+        add_event_player(refresh_hook_name, @rotate.set_tick_interval_event('medium'))
+      end
+
+      grid_shot_pairs = generate_pairs(grid_shots)
+      grid_shot_pairs.each do |shots|
+        other_shots = grid_shots - shots
+
+        other_shots_unlocked = other_shots.map{|s| "device.shots.#{s.name}.state_name != 'locked'"}.join(' and ')
+        refresh_hook_name = "#{refresh_rotation_event}{device.shots.#{shots[0].name}.state_name == 'locked' and device.shots.#{shots[1].name}.state == 'locked' and #{other_shots_unlocked}}"
+        add_event_player(refresh_hook_name, @rotate.set_tick_interval_event('fast'))
+      end
     end
 
     def add_variable_players!
-      add_variable_player(slots_active_scored, vp_score(500, true))
+      add_variable_player(slots_active_scored, vp_score(25, true))
 
-      add_variable_player(singles_locked_event,      vp_score(50, true))
-      add_variable_player(splitpair_locked_event,    vp_score(150, true))
-      add_variable_player(neighborpair_locked_event, vp_score(250, true))
+      add_variable_player(singles_locked_event,      vp_score(75, true))
+      add_variable_player(splitpair_locked_event,    vp_score(125, true))
+      add_variable_player(neighborpair_locked_event, vp_score(200, true))
       add_variable_player(row_locked_event,          vp_score(5000, false))
       add_variable_player(diagonal_locked_event,     vp_score(10000, false))
     end
 
     def add_event_players!
-      add_event_player(mode_start_event, [set_initial_targets])
+      add_event_player(mode_start_event, [set_initial_targets, @rotate.set_tick_interval_event('slow')])
       add_event_player(@countdown.complete_event, [fail_event])
       add_event_player(@rotate.complete_event, [
         @left_column_rotation_group.rotate_left_event,
@@ -122,6 +154,7 @@ module TrogBuild
 
     private
 
+    def refresh_rotation_event;     "slots_refresh_rotation" end
     def singles_locked_event;       "slots_singles_locked" end
     def row_locked_event;           "slots_row_locked" end
     def diagonal_locked_event;      "slots_diagonal_locked" end

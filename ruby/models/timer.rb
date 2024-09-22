@@ -31,7 +31,8 @@ module TrogBuild
       ]
 
       @tick_options.each do |(rate_name, speed)|
-        base << control_event('set_tick_interval', set_tick_interval_event(rate_name), {'value' => speed})
+        speed_float = speed.to_i / 1000.0
+        base << control_event('set_tick_interval', set_tick_interval_event(rate_name), {'value' => speed_float})
       end
 
       base

@@ -7,10 +7,10 @@ mode:
   start_events: start_mode_generated_slots
 timers:
   slots_countdown:
-    start_value: 30
+    start_value: 6
     end_value: 0
     direction: down
-    tick_interval: 1000ms
+    tick_interval: 5000ms
     start_running: true
     restart_on_complete: false
     control_events:
@@ -36,41 +36,50 @@ timers:
       action: reset
     - event: timer_slots_rotate_set_tick_interval_slow
       action: set_tick_interval
-      value: 650ms
+      value: 0.65
     - event: timer_slots_rotate_set_tick_interval_medium
       action: set_tick_interval
-      value: 500ms
+      value: 0.5
     - event: timer_slots_rotate_set_tick_interval_fast
       action: set_tick_interval
-      value: 375ms
+      value: 0.375
 event_player:
   slots_a_active_hit:
   - set_shot_state_slots_a_locked
   - slots_active_scored
+  - slots_refresh_rotation
   slots_b_active_hit:
   - set_shot_state_slots_b_locked
   - slots_active_scored
+  - slots_refresh_rotation
   slots_c_active_hit:
   - set_shot_state_slots_c_locked
   - slots_active_scored
+  - slots_refresh_rotation
   slots_d_active_hit:
   - set_shot_state_slots_d_locked
   - slots_active_scored
+  - slots_refresh_rotation
   slots_e_active_hit:
   - set_shot_state_slots_e_locked
   - slots_active_scored
+  - slots_refresh_rotation
   slots_f_active_hit:
   - set_shot_state_slots_f_locked
   - slots_active_scored
+  - slots_refresh_rotation
   slots_g_active_hit:
   - set_shot_state_slots_g_locked
   - slots_active_scored
+  - slots_refresh_rotation
   slots_h_active_hit:
   - set_shot_state_slots_h_locked
   - slots_active_scored
+  - slots_refresh_rotation
   slots_i_active_hit:
   - set_shot_state_slots_i_locked
   - slots_active_scored
+  - slots_refresh_rotation
   slots_set_initial_targets:
   - set_shot_state_slots_g_active
   - set_shot_state_slots_h_active
@@ -156,8 +165,279 @@ event_player:
   slot_singles_4_group_locked_complete:
   - slots_singles_locked
   - timer_slots_rotate_stop
+  ? slots_refresh_rotation{device.shots.slots_a.state_name == 'locked' and device.shots.slots_b.state_name
+    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
+    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
+    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_medium
+  ? slots_refresh_rotation{device.shots.slots_b.state_name == 'locked' and device.shots.slots_a.state_name
+    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
+    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
+    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_medium
+  ? slots_refresh_rotation{device.shots.slots_c.state_name == 'locked' and device.shots.slots_a.state_name
+    != 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_d.state_name
+    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
+    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_medium
+  ? slots_refresh_rotation{device.shots.slots_d.state_name == 'locked' and device.shots.slots_a.state_name
+    != 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_c.state_name
+    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
+    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_medium
+  ? slots_refresh_rotation{device.shots.slots_e.state_name == 'locked' and device.shots.slots_a.state_name
+    != 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_c.state_name
+    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_f.state_name
+    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_medium
+  ? slots_refresh_rotation{device.shots.slots_f.state_name == 'locked' and device.shots.slots_a.state_name
+    != 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_c.state_name
+    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
+    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_medium
+  ? slots_refresh_rotation{device.shots.slots_g.state_name == 'locked' and device.shots.slots_a.state_name
+    != 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_c.state_name
+    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
+    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_medium
+  ? slots_refresh_rotation{device.shots.slots_h.state_name == 'locked' and device.shots.slots_a.state_name
+    != 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_c.state_name
+    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
+    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_g.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_medium
+  ? slots_refresh_rotation{device.shots.slots_i.state_name == 'locked' and device.shots.slots_a.state_name
+    != 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_c.state_name
+    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
+    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_g.state_name
+    != 'locked' and device.shots.slots_h.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_medium
+  ? slots_refresh_rotation{device.shots.slots_a.state_name == 'locked' and device.shots.slots_b.state
+    == 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
+    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
+    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_a.state_name == 'locked' and device.shots.slots_c.state
+    == 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_d.state_name
+    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
+    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_a.state_name == 'locked' and device.shots.slots_d.state
+    == 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_c.state_name
+    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
+    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_a.state_name == 'locked' and device.shots.slots_e.state
+    == 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_c.state_name
+    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_f.state_name
+    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_a.state_name == 'locked' and device.shots.slots_f.state
+    == 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_c.state_name
+    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
+    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_a.state_name == 'locked' and device.shots.slots_g.state
+    == 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_c.state_name
+    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
+    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_a.state_name == 'locked' and device.shots.slots_h.state
+    == 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_c.state_name
+    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
+    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_g.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_a.state_name == 'locked' and device.shots.slots_i.state
+    == 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_c.state_name
+    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
+    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_g.state_name
+    != 'locked' and device.shots.slots_h.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_b.state_name == 'locked' and device.shots.slots_c.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_d.state_name
+    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
+    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_b.state_name == 'locked' and device.shots.slots_d.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_c.state_name
+    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
+    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_b.state_name == 'locked' and device.shots.slots_e.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_c.state_name
+    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_f.state_name
+    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_b.state_name == 'locked' and device.shots.slots_f.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_c.state_name
+    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
+    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_b.state_name == 'locked' and device.shots.slots_g.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_c.state_name
+    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
+    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_b.state_name == 'locked' and device.shots.slots_h.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_c.state_name
+    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
+    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_g.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_b.state_name == 'locked' and device.shots.slots_i.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_c.state_name
+    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
+    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_g.state_name
+    != 'locked' and device.shots.slots_h.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_c.state_name == 'locked' and device.shots.slots_d.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
+    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
+    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_c.state_name == 'locked' and device.shots.slots_e.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
+    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_f.state_name
+    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_c.state_name == 'locked' and device.shots.slots_f.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
+    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
+    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_c.state_name == 'locked' and device.shots.slots_g.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
+    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
+    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_c.state_name == 'locked' and device.shots.slots_h.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
+    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
+    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_g.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_c.state_name == 'locked' and device.shots.slots_i.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
+    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
+    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_g.state_name
+    != 'locked' and device.shots.slots_h.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_d.state_name == 'locked' and device.shots.slots_e.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
+    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_f.state_name
+    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_d.state_name == 'locked' and device.shots.slots_f.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
+    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_e.state_name
+    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_d.state_name == 'locked' and device.shots.slots_g.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
+    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_e.state_name
+    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_d.state_name == 'locked' and device.shots.slots_h.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
+    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_e.state_name
+    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_g.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_d.state_name == 'locked' and device.shots.slots_i.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
+    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_e.state_name
+    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_g.state_name
+    != 'locked' and device.shots.slots_h.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_e.state_name == 'locked' and device.shots.slots_f.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
+    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
+    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_e.state_name == 'locked' and device.shots.slots_g.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
+    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
+    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_e.state_name == 'locked' and device.shots.slots_h.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
+    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
+    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_g.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_e.state_name == 'locked' and device.shots.slots_i.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
+    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
+    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_g.state_name
+    != 'locked' and device.shots.slots_h.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_f.state_name == 'locked' and device.shots.slots_g.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
+    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
+    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_h.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_f.state_name == 'locked' and device.shots.slots_h.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
+    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
+    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_g.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_f.state_name == 'locked' and device.shots.slots_i.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
+    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
+    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_g.state_name
+    != 'locked' and device.shots.slots_h.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_g.state_name == 'locked' and device.shots.slots_h.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
+    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
+    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
+    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_g.state_name == 'locked' and device.shots.slots_i.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
+    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
+    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
+    != 'locked' and device.shots.slots_h.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
+  ? slots_refresh_rotation{device.shots.slots_h.state_name == 'locked' and device.shots.slots_i.state
+    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
+    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
+    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
+    != 'locked' and device.shots.slots_g.state_name != 'locked'}
+  : timer_slots_rotate_set_tick_interval_fast
   mode_generated_slots_started:
   - slots_set_initial_targets
+  - timer_slots_rotate_set_tick_interval_slow
   timer_slots_countdown_complete:
   - mode_fail_generated_slots
   timer_slots_rotate_complete:
