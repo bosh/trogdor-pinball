@@ -35,6 +35,10 @@ switches:
     platform: smart_virtual
     number: 908
 
+  vswitch_start_slots:
+    platform: smart_virtual
+    number: 909
+
 plugins: switch_player
 switch_player:
   start_event: vswitch_end_game_active

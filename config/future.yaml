@@ -81,6 +81,16 @@ switches:
     number: 820
     platform: smart_virtual
 
+  s_drop_bank_left:
+    number: 821
+    platform: smart_virtual
+  s_drop_bank_center:
+    number: 822
+    platform: smart_virtual
+  s_drop_bank_right:
+    number: 823
+    platform: smart_virtual
+
 coils:
   c_pop_left:
     number: 3001
@@ -137,6 +147,10 @@ coils:
     platform: smart_virtual
     default_pulse_ms: 25
 
+  c_slot_bank_reset:
+    number: 3013
+    platform: smart_virtual
+
 ball_devices:
   bd_vuk:
     ball_switches: s_vuk_presence
@@ -168,3 +182,17 @@ flippers:
     enable_events: ball_started, enableAutofire #, machine_reset_phase_3 #P3 for testing
     disable_events: ball_will_end, service_mode_entered, disableAutofire
     use_eos: true
+
+drop_targets:
+  dt_left:
+    switch: s_drop_bank_left
+  dt_center:
+    switch: s_drop_bank_center
+  dt_right:
+    switch: s_drop_bank_right
+
+drop_target_banks:
+  slots_target_bank:
+    drop_targets: dt_left, dt_center, dt_right
+    reset_coils: c_slot_bank_reset
+    reset_on_complete: #No

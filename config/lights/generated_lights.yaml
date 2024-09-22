@@ -47,3 +47,48 @@ lights:
     type: rgb
     number: 11009
     platform: smart_virtual
+  gl_grid_1:
+    number: 1001
+    tags: lights_generated,lights_a,grid_lights,grid_lights_a
+    type: rgb
+    platform: smart_virtual
+  gl_grid_2:
+    number: 1002
+    tags: lights_generated,lights_b,grid_lights,grid_lights_b
+    type: rgb
+    platform: smart_virtual
+  gl_grid_3:
+    number: 1003
+    tags: lights_generated,lights_a,grid_lights,grid_lights_a
+    type: rgb
+    platform: smart_virtual
+  gl_grid_4:
+    number: 1004
+    tags: lights_generated,lights_b,grid_lights,grid_lights_b
+    type: rgb
+    platform: smart_virtual
+  gl_grid_5:
+    number: 1005
+    tags: lights_generated,lights_a,grid_lights,grid_lights_a
+    type: rgb
+    platform: smart_virtual
+  gl_grid_6:
+    number: 1006
+    tags: lights_generated,lights_b,grid_lights,grid_lights_b
+    type: rgb
+    platform: smart_virtual
+  gl_grid_7:
+    number: 1007
+    tags: lights_generated,lights_a,grid_lights,grid_lights_a
+    type: rgb
+    platform: smart_virtual
+  gl_grid_8:
+    number: 1008
+    tags: lights_generated,lights_b,grid_lights,grid_lights_b
+    type: rgb
+    platform: smart_virtual
+  gl_grid_9:
+    number: 1009
+    tags: lights_generated,lights_a,grid_lights,grid_lights_a
+    type: rgb
+    platform: smart_virtual

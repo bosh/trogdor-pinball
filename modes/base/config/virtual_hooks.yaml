@@ -24,6 +24,9 @@ event_player:
   vswitch_toggle_slings_dead_inactive:
     - mode_stop_slings_dead
 
+  vswitch_start_slots_active:
+    - start_mode_generated_slots
+
 variable_player:
   virtual_add_10_fire_all:
     pop_right_fire_level: 10

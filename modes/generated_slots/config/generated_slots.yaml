@@ -1,0 +1,263 @@
+#config_version=6
+# Main slots mode
+
+---
+mode:
+  priority: 1020
+  start_events: start_mode_generated_slots
+timers:
+  slots_countdown:
+    start_value: 30
+    end_value: 0
+    direction: down
+    tick_interval: 1000ms
+    start_running: true
+    restart_on_complete: false
+    control_events:
+    - action: start
+      event: timer_slots_countdown_start
+    - action: stop
+      event: timer_slots_countdown_stop
+    - action: reset
+      event: timer_slots_countdown_reset
+  slots_rotate:
+    start_value: 4
+    end_value: 0
+    direction: down
+    tick_interval: 100ms
+    start_running: true
+    restart_on_complete: true
+    control_events:
+    - action: start
+      event: timer_slots_rotate_start
+    - action: stop
+      event: timer_slots_rotate_stop
+    - action: reset
+      event: timer_slots_rotate_reset
+event_player:
+  slots_a_active_hit:
+  - set_shot_state_slots_a_locked
+  - slots_active_scored
+  slots_b_active_hit:
+  - set_shot_state_slots_b_locked
+  - slots_active_scored
+  slots_c_active_hit:
+  - set_shot_state_slots_c_locked
+  - slots_active_scored
+  slots_d_active_hit:
+  - set_shot_state_slots_d_locked
+  - slots_active_scored
+  slots_e_active_hit:
+  - set_shot_state_slots_e_locked
+  - slots_active_scored
+  slots_f_active_hit:
+  - set_shot_state_slots_f_locked
+  - slots_active_scored
+  slots_g_active_hit:
+  - set_shot_state_slots_g_locked
+  - slots_active_scored
+  slots_h_active_hit:
+  - set_shot_state_slots_h_locked
+  - slots_active_scored
+  slots_i_active_hit:
+  - set_shot_state_slots_i_locked
+  - slots_active_scored
+  slots_set_initial_targets:
+  - set_shot_state_slots_g_active
+  - set_shot_state_slots_h_active
+  - set_shot_state_slots_i_active
+  mode_generated_slots_started:
+  - slots_set_initial_targets
+  timer_slots_countdown_complete:
+  - mode_fail_generated_slots
+  timer_slots_rotate_complete:
+  - left_column_rotation_group_rotate_left
+  - center_column_rotation_group_rotate_left
+  - right_column_rotation_group_rotate_left
+shot_profiles:
+  slot_square_profile:
+    advance_on_hit: false
+    states:
+    - name: inactive
+      show: 'off'
+    - name: active
+      show: on_color
+      show_tokens:
+        color: orange
+    - name: locked
+      show: on_color
+      show_tokens:
+        color: red
+    - name: complete_locked
+      show: on_color
+      show_tokens:
+        color: green
+    state_names_to_not_rotate: locked, complete_locked
+shots:
+  slots_a:
+    profile: slot_square_profile
+    advance_events: shot_advance_slots_a
+    control_events:
+    - events: set_shot_state_slots_a_inactive
+      state: 0
+    - events: set_shot_state_slots_a_active
+      state: 1
+    - events: set_shot_state_slots_a_locked
+      state: 2
+    - events: set_shot_state_slots_a_complete_locked
+      state: 3
+    persist_enable: true
+    switch: s_drop_bank_left
+    show_tokens:
+      light: gl_grid_1
+  slots_b:
+    profile: slot_square_profile
+    advance_events: shot_advance_slots_b
+    control_events:
+    - events: set_shot_state_slots_b_inactive
+      state: 0
+    - events: set_shot_state_slots_b_active
+      state: 1
+    - events: set_shot_state_slots_b_locked
+      state: 2
+    - events: set_shot_state_slots_b_complete_locked
+      state: 3
+    persist_enable: true
+    switch: s_drop_bank_center
+    show_tokens:
+      light: gl_grid_2
+  slots_c:
+    profile: slot_square_profile
+    advance_events: shot_advance_slots_c
+    control_events:
+    - events: set_shot_state_slots_c_inactive
+      state: 0
+    - events: set_shot_state_slots_c_active
+      state: 1
+    - events: set_shot_state_slots_c_locked
+      state: 2
+    - events: set_shot_state_slots_c_complete_locked
+      state: 3
+    persist_enable: true
+    switch: s_drop_bank_right
+    show_tokens:
+      light: gl_grid_3
+  slots_d:
+    profile: slot_square_profile
+    advance_events: shot_advance_slots_d
+    control_events:
+    - events: set_shot_state_slots_d_inactive
+      state: 0
+    - events: set_shot_state_slots_d_active
+      state: 1
+    - events: set_shot_state_slots_d_locked
+      state: 2
+    - events: set_shot_state_slots_d_complete_locked
+      state: 3
+    persist_enable: true
+    switch: s_drop_bank_left
+    show_tokens:
+      light: gl_grid_4
+  slots_e:
+    profile: slot_square_profile
+    advance_events: shot_advance_slots_e
+    control_events:
+    - events: set_shot_state_slots_e_inactive
+      state: 0
+    - events: set_shot_state_slots_e_active
+      state: 1
+    - events: set_shot_state_slots_e_locked
+      state: 2
+    - events: set_shot_state_slots_e_complete_locked
+      state: 3
+    persist_enable: true
+    switch: s_drop_bank_center
+    show_tokens:
+      light: gl_grid_5
+  slots_f:
+    profile: slot_square_profile
+    advance_events: shot_advance_slots_f
+    control_events:
+    - events: set_shot_state_slots_f_inactive
+      state: 0
+    - events: set_shot_state_slots_f_active
+      state: 1
+    - events: set_shot_state_slots_f_locked
+      state: 2
+    - events: set_shot_state_slots_f_complete_locked
+      state: 3
+    persist_enable: true
+    switch: s_drop_bank_right
+    show_tokens:
+      light: gl_grid_6
+  slots_g:
+    profile: slot_square_profile
+    advance_events: shot_advance_slots_g
+    control_events:
+    - events: set_shot_state_slots_g_inactive
+      state: 0
+    - events: set_shot_state_slots_g_active
+      state: 1
+    - events: set_shot_state_slots_g_locked
+      state: 2
+    - events: set_shot_state_slots_g_complete_locked
+      state: 3
+    persist_enable: true
+    switch: s_drop_bank_left
+    show_tokens:
+      light: gl_grid_7
+  slots_h:
+    profile: slot_square_profile
+    advance_events: shot_advance_slots_h
+    control_events:
+    - events: set_shot_state_slots_h_inactive
+      state: 0
+    - events: set_shot_state_slots_h_active
+      state: 1
+    - events: set_shot_state_slots_h_locked
+      state: 2
+    - events: set_shot_state_slots_h_complete_locked
+      state: 3
+    persist_enable: true
+    switch: s_drop_bank_center
+    show_tokens:
+      light: gl_grid_8
+  slots_i:
+    profile: slot_square_profile
+    advance_events: shot_advance_slots_i
+    control_events:
+    - events: set_shot_state_slots_i_inactive
+      state: 0
+    - events: set_shot_state_slots_i_active
+      state: 1
+    - events: set_shot_state_slots_i_locked
+      state: 2
+    - events: set_shot_state_slots_i_complete_locked
+      state: 3
+    persist_enable: true
+    switch: s_drop_bank_right
+    show_tokens:
+      light: gl_grid_9
+shot_groups:
+  left_column_rotation_group:
+    shots:
+    - slots_a
+    - slots_d
+    - slots_g
+    rotate_left_events: left_column_rotation_group_rotate_left
+    rotate_right_events: left_column_rotation_group_rotate_right
+  center_column_rotation_group:
+    shots:
+    - slots_b
+    - slots_e
+    - slots_h
+    rotate_left_events: center_column_rotation_group_rotate_left
+    rotate_right_events: center_column_rotation_group_rotate_right
+  right_column_rotation_group:
+    shots:
+    - slots_c
+    - slots_f
+    - slots_i
+    rotate_left_events: right_column_rotation_group_rotate_left
+    rotate_right_events: right_column_rotation_group_rotate_right
+

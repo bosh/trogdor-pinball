@@ -1,21 +1,42 @@
 module TrogBuild
   class Mode
     SHOW_PLAYER = 'show_player'
+    TIMERS = 'timers'
+    EVENT_PLAYER = 'event_player'
+    VARIABLE_PLAYER = 'variable_player'
+    SHOTS = 'shots'
+    SHOT_PROFILES = 'shot_profiles'
+    SHOT_GROUPS = 'shot_groups'
     attr_reader :name, :priority, :shows
 
     def initialize(name, priority)
       @name = name
       @priority = priority
+      @shot_profiles = {}
+      @shot_groups = {}
+      @shots = {}
       @shows = []
+      @timers = {}
+      @event_player = {}
+      @variable_player = {}
       @top_comment = custom_top_comment
       @start_events = generate_start_events
+      add_shots!
+      add_timers!
       add_shows!
+      add_event_players!
     end
 
     def to_hash
       out = base_hash
 
       out[Mode::SHOW_PLAYER] = show_player if show_player
+      out[Mode::TIMERS] = @timers unless @timers.empty?
+      out[Mode::EVENT_PLAYER] = @event_player unless @event_player.empty?
+      out[Mode::VARIABLE_PLAYER] = @variable_player unless @variable_player.empty?
+      out[Mode::SHOT_PROFILES] = @shot_profiles unless @shot_profiles.empty?
+      out[Mode::SHOTS] = @shots unless @shots.empty?
+      out[Mode::SHOT_GROUPS] = @shot_groups unless @shot_groups.empty?
       out.merge!(custom_hash)
 
       out
@@ -30,10 +51,35 @@ module TrogBuild
       }
     end
 
-    def add_shows!
+    def add_shots!; end
+    def add_shot(shot)
+      @shots[shot.name] = shot.to_hash
     end
+    def add_shot_profile(shot_profile)
+      @shot_profiles[shot_profile.name] = shot_profile.to_hash
+    end
+    def add_shot_group(shot_group)
+      @shot_groups[shot_group.name] = shot_group.to_hash
+    end
+
+    def add_shows!; end
     def add_show(show)
       @shows << show
+    end
+
+    def add_timers!; end
+    def add_timer(timer)
+      @timers[timer.name] = timer.to_hash
+    end
+
+    def add_event_players!; end
+    def add_event_player(event_name, triggered_events)
+      @event_player[event_name] = triggered_events
+    end
+
+    def add_variable_players!; end
+    def add_variable_player(event_name, variable_hash)
+      @variable_player[event_name] = variable_hash
     end
 
     def show_player
@@ -48,7 +94,11 @@ module TrogBuild
     end
 
     def generate_start_events
-      'start_generated_mode_' + name
+      'start_mode_' + name
+    end
+
+    def mode_start_event
+      "mode_#{name}_started"
     end
 
     def top_comment_text
@@ -193,6 +243,81 @@ module TrogBuild
         'stop_events' => "mode_fail_#{event_template_name}",
         'complete_events' => "mode_complete_#{event_template_name}"
       }
+    end
+  end
+
+  class SlotsMode < Mode
+    def custom_top_comment; 'Main slots mode' end
+
+    def add_timers!
+      @countdown = Timer.new('slots_countdown', 30, 0, '1000ms', true, true, false)
+      add_timer(@countdown)
+      @rotate = Timer.new('slots_rotate', 1, 0, '400ms', true, true, true)
+      add_timer(@rotate)
+    end
+
+    def add_shots!
+      slot_square = ShotProfile.new('slot_square_profile', false)
+      slot_square.add_state('inactive', 'off', nil)
+      slot_square.add_state('active', 'on_color', {'color' => 'orange'})
+      slot_square.add_state('locked', 'on_color', {'color' => 'red'})
+      slot_square.add_state('complete_locked', 'on_color', {'color' => 'green'})
+      slot_square.set_state_names_to_not_rotate('locked, complete_locked')
+
+      add_shot_profile(slot_square)
+
+      a = Shot.new('slots_a', slot_square, 's_drop_bank_left', true,   {'light' => 'gl_grid_1'})
+      b = Shot.new('slots_b', slot_square, 's_drop_bank_center', true, {'light' => 'gl_grid_2'})
+      c = Shot.new('slots_c', slot_square, 's_drop_bank_right', true,  {'light' => 'gl_grid_3'})
+      d = Shot.new('slots_d', slot_square, 's_drop_bank_left', true,   {'light' => 'gl_grid_4'})
+      e = Shot.new('slots_e', slot_square, 's_drop_bank_center', true, {'light' => 'gl_grid_5'})
+      f = Shot.new('slots_f', slot_square, 's_drop_bank_right', true,  {'light' => 'gl_grid_6'})
+      g = Shot.new('slots_g', slot_square, 's_drop_bank_left', true,   {'light' => 'gl_grid_7'})
+      h = Shot.new('slots_h', slot_square, 's_drop_bank_center', true, {'light' => 'gl_grid_8'})
+      i = Shot.new('slots_i', slot_square, 's_drop_bank_right', true,  {'light' => 'gl_grid_9'})
+      [a, b, c, d, e, f, g, h, i].each do |s|
+        add_shot(s)
+        add_event_player(s.state_hit(1), [s.set_state_event(2), slots_active_scored])
+      end
+
+      @left_column_rotation_group = ShotGroup.new('left_column_rotation_group', [a, d, g].map(&:name))
+      add_shot_group(@left_column_rotation_group)
+      @center_column_rotation_group = ShotGroup.new('center_column_rotation_group', [b, e, h].map(&:name))
+      add_shot_group(@center_column_rotation_group)
+      @right_column_rotation_group = ShotGroup.new('right_column_rotation_group', [c, f, i].map(&:name))
+      add_shot_group(@right_column_rotation_group)
+
+      add_event_player(set_initial_targets, [g.set_state_event(1), h.set_state_event(1), i.set_state_event(1)])
+    end
+
+    def add_variable_players!
+      add_variable_player(slots_active_scored, {'score' => 'current_player.playfield_multiplier * 1000'})
+    end
+
+    def add_event_players!
+      add_event_player(mode_start_event, [set_initial_targets])
+      add_event_player(@countdown.complete_event, [fail_event])
+      add_event_player(@rotate.complete_event, [
+        @left_column_rotation_group.rotate_left_event,
+        @center_column_rotation_group.rotate_left_event,
+        @right_column_rotation_group.rotate_left_event
+      ])
+    end
+
+    def set_initial_targets
+      'slots_set_initial_targets'
+    end
+
+    def slots_active_scored
+      'slots_active_scored'
+    end
+
+    def fail_event
+      "mode_fail_#{name}"
+    end
+
+    def custom_hash
+      {}
     end
   end
 end

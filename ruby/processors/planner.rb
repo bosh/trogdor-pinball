@@ -12,6 +12,7 @@ module TrogBuild
       add_generated_lights!
       add_example_mode!
       add_achievement_modes!
+      add_slots_modes!
       plan
     end
 
@@ -23,6 +24,14 @@ module TrogBuild
       add_light_sequence "gl_ring_a", 8 do |i, config|
         lights_ab_tag = i % 2 != 0 ? 'lights_a' : 'lights_b'
         config['tags'] = "lights_generated,#{lights_ab_tag},lights_gl_ring_a"
+        config['type'] = 'rgb'
+        config
+      end
+
+      add_light_sequence "gl_grid", 9 do |i, config|
+        lights_ab_tag = i % 2 != 0 ? 'lights_a' : 'lights_b'
+        config['number'] = 1000 + i
+        config['tags'] = "lights_generated,#{lights_ab_tag},grid_lights,grid_#{lights_ab_tag}"
         config['type'] = 'rgb'
         config
       end
@@ -42,6 +51,10 @@ module TrogBuild
 
     def add_achievement_modes!
       plan.add_mode AchievementMode.new("generated_achievements", 1090)
+    end
+
+    def add_slots_modes!
+      plan.add_mode SlotsMode.new("generated_slots", 1020)
     end
   end
 end
