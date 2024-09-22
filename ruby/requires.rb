@@ -13,3 +13,7 @@ require_relative 'models/plan'
 require_relative 'processors/cli_parser'
 require_relative 'processors/planner'
 require_relative 'processors/plan_writer'
+
+require_relative 'game/example_mode'
+require_relative 'game/achievement_mode'
+require_relative 'game/slots_mode'

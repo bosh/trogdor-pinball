@@ -21,10 +21,10 @@ timers:
     - action: reset
       event: timer_slots_countdown_reset
   slots_rotate:
-    start_value: 4
+    start_value: 1
     end_value: 0
     direction: down
-    tick_interval: 100ms
+    tick_interval: 400ms
     start_running: true
     restart_on_complete: true
     control_events:
