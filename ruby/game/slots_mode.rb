@@ -1,11 +1,17 @@
 module TrogBuild
   class SlotsMode < Mode
     def custom_top_comment; 'Main slots mode' end
+    def slow_tick;'650ms' end
+    def medium_tick;'500ms' end
+    def fast_tick;'375ms' end
 
     def add_timers!
       @countdown = Timer.new('slots_countdown', 30, 0, '1000ms', true, true, false)
       add_timer(@countdown)
-      @rotate = Timer.new('slots_rotate', 1, 0, '400ms', true, true, true)
+      @rotate = Timer.new('slots_rotate', 1, 0, slow_tick, true, true, true)
+      @rotate.add_tick_option('slow', slow_tick)
+      @rotate.add_tick_option('medium', medium_tick)
+      @rotate.add_tick_option('fast', fast_tick)
       add_timer(@rotate)
     end
 

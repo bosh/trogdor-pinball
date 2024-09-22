@@ -9,24 +9,36 @@ module TrogBuild
       @tick_interval = tick_interval
       @start_running = start_running
       @restart_on_complete = restart_on_complete
+      @tick_options = []
     end
 
-    def start_event
-      "timer_#{name}_start"
-    end
-    def stop_event
-      "timer_#{name}_stop"
-    end
-    def reset_event
-      "timer_#{name}_reset"
+    def add_tick_option(rate_name, speed)
+      @tick_options << [rate_name, speed]
     end
 
-    def complete_event
-      "timer_#{name}_complete"
+    def start_event;    "timer_#{name}_start" end
+    def stop_event;     "timer_#{name}_stop" end
+    def reset_event;    "timer_#{name}_reset" end
+    def complete_event; "timer_#{name}_complete" end
+    def stopped_event;  "timer_#{name}_stopped" end
+    def set_tick_interval_event(rate_name); "timer_#{name}_set_tick_interval_#{rate_name}" end
+
+    def generate_control_events
+      base = [
+        control_event('start', start_event),
+        control_event('stop', stop_event),
+        control_event('reset', reset_event),
+      ]
+
+      @tick_options.each do |(rate_name, speed)|
+        base << control_event('set_tick_interval', set_tick_interval_event(rate_name), {'value' => speed})
+      end
+
+      base
     end
 
-    def stopped_event
-      "timer_#{name}_stopped"
+    def control_event(action, event_name, extra = {})
+      {'event' => event_name, 'action' => action}.merge(extra)
     end
 
     def to_hash
@@ -37,11 +49,7 @@ module TrogBuild
         'tick_interval' => @tick_interval,
         'start_running' => @start_running,
         'restart_on_complete' => @restart_on_complete,
-        'control_events' => [
-          {'action' => 'start', 'event' => start_event},
-          {'action' => 'stop', 'event' => stop_event},
-          {'action' => 'reset', 'event' => reset_event},
-        ]
+        'control_events' => generate_control_events
       }
     end
   end

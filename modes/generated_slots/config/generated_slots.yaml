@@ -14,26 +14,35 @@ timers:
     start_running: true
     restart_on_complete: false
     control_events:
-    - action: start
-      event: timer_slots_countdown_start
-    - action: stop
-      event: timer_slots_countdown_stop
-    - action: reset
-      event: timer_slots_countdown_reset
+    - event: timer_slots_countdown_start
+      action: start
+    - event: timer_slots_countdown_stop
+      action: stop
+    - event: timer_slots_countdown_reset
+      action: reset
   slots_rotate:
     start_value: 1
     end_value: 0
     direction: down
-    tick_interval: 400ms
+    tick_interval: 650ms
     start_running: true
     restart_on_complete: true
     control_events:
-    - action: start
-      event: timer_slots_rotate_start
-    - action: stop
-      event: timer_slots_rotate_stop
-    - action: reset
-      event: timer_slots_rotate_reset
+    - event: timer_slots_rotate_start
+      action: start
+    - event: timer_slots_rotate_stop
+      action: stop
+    - event: timer_slots_rotate_reset
+      action: reset
+    - event: timer_slots_rotate_set_tick_interval_slow
+      action: set_tick_interval
+      value: 650ms
+    - event: timer_slots_rotate_set_tick_interval_medium
+      action: set_tick_interval
+      value: 500ms
+    - event: timer_slots_rotate_set_tick_interval_fast
+      action: set_tick_interval
+      value: 375ms
 event_player:
   slots_a_active_hit:
   - set_shot_state_slots_a_locked
