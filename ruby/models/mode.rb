@@ -21,8 +21,8 @@ module TrogBuild
       @variable_player = {}
       @top_comment = custom_top_comment
       @start_events = generate_start_events
-      add_shots!
       add_timers!
+      add_shots!
       add_shows!
       add_event_players!
     end
@@ -80,6 +80,13 @@ module TrogBuild
     def add_variable_players!; end
     def add_variable_player(event_name, variable_hash)
       @variable_player[event_name] = variable_hash
+    end
+    def vp_score(value, use_pf_multiplier)
+      if use_pf_multiplier
+        {'score' => "#{value} * current_player.playfield_multiplier"}
+      else
+        {'score' => value}
+      end
     end
 
     def show_player

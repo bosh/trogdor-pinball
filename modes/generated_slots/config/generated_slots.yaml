@@ -66,6 +66,87 @@ event_player:
   - set_shot_state_slots_g_active
   - set_shot_state_slots_h_active
   - set_shot_state_slots_i_active
+  slot_row_1_group_locked_complete:
+  - slots_row_locked
+  - timer_slots_rotate_stop
+  slot_row_2_group_locked_complete:
+  - slots_row_locked
+  - timer_slots_rotate_stop
+  slot_row_3_group_locked_complete:
+  - slots_row_locked
+  - timer_slots_rotate_stop
+  slot_diagonal_1_group_locked_complete:
+  - slots_diagonal_locked
+  - timer_slots_rotate_stop
+  slot_diagonal_2_group_locked_complete:
+  - slots_diagonal_locked
+  - timer_slots_rotate_stop
+  slot_neighborpair_1_group_locked_complete:
+  - slots_neighborpair_locked
+  - timer_slots_rotate_stop
+  slot_neighborpair_2_group_locked_complete:
+  - slots_neighborpair_locked
+  - timer_slots_rotate_stop
+  slot_neighborpair_3_group_locked_complete:
+  - slots_neighborpair_locked
+  - timer_slots_rotate_stop
+  slot_neighborpair_4_group_locked_complete:
+  - slots_neighborpair_locked
+  - timer_slots_rotate_stop
+  slot_neighborpair_5_group_locked_complete:
+  - slots_neighborpair_locked
+  - timer_slots_rotate_stop
+  slot_neighborpair_6_group_locked_complete:
+  - slots_neighborpair_locked
+  - timer_slots_rotate_stop
+  slot_neighborpair_7_group_locked_complete:
+  - slots_neighborpair_locked
+  - timer_slots_rotate_stop
+  slot_neighborpair_8_group_locked_complete:
+  - slots_neighborpair_locked
+  - timer_slots_rotate_stop
+  slot_neighborpair_9_group_locked_complete:
+  - slots_neighborpair_locked
+  - timer_slots_rotate_stop
+  slot_neighborpair_10_group_locked_complete:
+  - slots_neighborpair_locked
+  - timer_slots_rotate_stop
+  slot_neighborpair_11_group_locked_complete:
+  - slots_neighborpair_locked
+  - timer_slots_rotate_stop
+  slot_neighborpair_12_group_locked_complete:
+  - slots_neighborpair_locked
+  - timer_slots_rotate_stop
+  slot_splitpair_1_group_locked_complete:
+  - slots_splitpair_locked
+  - timer_slots_rotate_stop
+  slot_splitpair_2_group_locked_complete:
+  - slots_splitpair_locked
+  - timer_slots_rotate_stop
+  slot_splitpair_3_group_locked_complete:
+  - slots_splitpair_locked
+  - timer_slots_rotate_stop
+  slot_splitpair_4_group_locked_complete:
+  - slots_splitpair_locked
+  - timer_slots_rotate_stop
+  slot_splitpair_5_group_locked_complete:
+  - slots_splitpair_locked
+  - timer_slots_rotate_stop
+  slot_splitpair_6_group_locked_complete:
+  - slots_splitpair_locked
+  - timer_slots_rotate_stop
+  slot_singles_1_group_locked_complete:
+  - slots_singles_locked
+  - timer_slots_rotate_stop
+  slot_singles_2_group_locked_complete:
+  - slots_singles_locked
+  - timer_slots_rotate_stop
+  slot_singles_3_group_locked_complete:
+  - slots_singles_locked
+  - timer_slots_rotate_stop
+  slot_singles_4_group_locked_complete:
+  - slots_singles_locked
+  - timer_slots_rotate_stop
   mode_generated_slots_started:
   - slots_set_initial_targets
   timer_slots_countdown_complete:
@@ -260,4 +341,139 @@ shot_groups:
     - slots_i
     rotate_left_events: right_column_rotation_group_rotate_left
     rotate_right_events: right_column_rotation_group_rotate_right
+  slot_row_1_group:
+    shots:
+    - slots_a
+    - slots_b
+    - slots_c
+  slot_row_2_group:
+    shots:
+    - slots_d
+    - slots_e
+    - slots_f
+  slot_row_3_group:
+    shots:
+    - slots_g
+    - slots_h
+    - slots_i
+  slot_diagonal_1_group:
+    shots:
+    - slots_a
+    - slots_e
+    - slots_i
+  slot_diagonal_2_group:
+    shots:
+    - slots_g
+    - slots_e
+    - slots_c
+  slot_neighborpair_1_group:
+    shots:
+    - slots_a
+    - slots_b
+    - slots_f
+  slot_neighborpair_2_group:
+    shots:
+    - slots_a
+    - slots_e
+    - slots_f
+  slot_neighborpair_3_group:
+    shots:
+    - slots_a
+    - slots_b
+    - slots_i
+  slot_neighborpair_4_group:
+    shots:
+    - slots_a
+    - slots_h
+    - slots_i
+  slot_neighborpair_5_group:
+    shots:
+    - slots_d
+    - slots_b
+    - slots_c
+  slot_neighborpair_6_group:
+    shots:
+    - slots_d
+    - slots_e
+    - slots_c
+  slot_neighborpair_7_group:
+    shots:
+    - slots_d
+    - slots_e
+    - slots_i
+  slot_neighborpair_8_group:
+    shots:
+    - slots_d
+    - slots_h
+    - slots_i
+  slot_neighborpair_9_group:
+    shots:
+    - slots_g
+    - slots_b
+    - slots_c
+  slot_neighborpair_10_group:
+    shots:
+    - slots_g
+    - slots_h
+    - slots_c
+  slot_neighborpair_11_group:
+    shots:
+    - slots_g
+    - slots_e
+    - slots_f
+  slot_neighborpair_12_group:
+    shots:
+    - slots_g
+    - slots_h
+    - slots_f
+  slot_splitpair_1_group:
+    shots:
+    - slots_a
+    - slots_e
+    - slots_c
+  slot_splitpair_2_group:
+    shots:
+    - slots_a
+    - slots_h
+    - slots_c
+  slot_splitpair_3_group:
+    shots:
+    - slots_d
+    - slots_b
+    - slots_f
+  slot_splitpair_4_group:
+    shots:
+    - slots_d
+    - slots_h
+    - slots_f
+  slot_splitpair_5_group:
+    shots:
+    - slots_g
+    - slots_b
+    - slots_i
+  slot_splitpair_6_group:
+    shots:
+    - slots_g
+    - slots_e
+    - slots_i
+  slot_singles_1_group:
+    shots:
+    - slots_a
+    - slots_h
+    - slots_f
+  slot_singles_2_group:
+    shots:
+    - slots_d
+    - slots_h
+    - slots_c
+  slot_singles_3_group:
+    shots:
+    - slots_d
+    - slots_b
+    - slots_i
+  slot_singles_4_group:
+    shots:
+    - slots_g
+    - slots_b
+    - slots_f
 
