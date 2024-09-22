@@ -28,16 +28,19 @@ module TrogBuild
       center = 's_drop_bank_center'
       left = 's_drop_bank_left'
       right = 's_drop_bank_right'
-      a = Shot.new('slots_a', slot_square, left,   true, {'light' => 'gl_grid_1'})
-      b = Shot.new('slots_b', slot_square, center, true, {'light' => 'gl_grid_2'})
-      c = Shot.new('slots_c', slot_square, right,  true, {'light' => 'gl_grid_3'})
-      d = Shot.new('slots_d', slot_square, left,   true, {'light' => 'gl_grid_4'})
-      e = Shot.new('slots_e', slot_square, center, true, {'light' => 'gl_grid_5'})
-      f = Shot.new('slots_f', slot_square, right,  true, {'light' => 'gl_grid_6'})
-      g = Shot.new('slots_g', slot_square, left,   true, {'light' => 'gl_grid_7'})
-      h = Shot.new('slots_h', slot_square, center, true, {'light' => 'gl_grid_8'})
-      i = Shot.new('slots_i', slot_square, right,  true, {'light' => 'gl_grid_9'})
-      grid_shots = [a, b, c, d, e, f, g, h, i]
+      a = @a = Shot.new('slots_a', slot_square, left,   true, {'light' => 'gl_grid_1'})
+      b = @b = Shot.new('slots_b', slot_square, center, true, {'light' => 'gl_grid_2'})
+      c = @c = Shot.new('slots_c', slot_square, right,  true, {'light' => 'gl_grid_3'})
+      d = @d = Shot.new('slots_d', slot_square, left,   true, {'light' => 'gl_grid_4'})
+      e = @e = Shot.new('slots_e', slot_square, center, true, {'light' => 'gl_grid_5'})
+      f = @f = Shot.new('slots_f', slot_square, right,  true, {'light' => 'gl_grid_6'})
+      g = @g = Shot.new('slots_g', slot_square, left,   true, {'light' => 'gl_grid_7'})
+      h = @h = Shot.new('slots_h', slot_square, center, true, {'light' => 'gl_grid_8'})
+      i = @i = Shot.new('slots_i', slot_square, right,  true, {'light' => 'gl_grid_9'})
+      @row_1 = [a, b, c].freeze
+      @row_2 = [d, e, f].freeze
+      @row_3 = [g, h, i].freeze
+      grid_shots = [a, b, c, d, e, f, g, h, i].freeze
 
       grid_shots.each do |s|
         add_shot(s)
@@ -51,34 +54,35 @@ module TrogBuild
       @right_column_rotation_group = ShotGroup.new('right_column_rotation_group', [c, f, i], true)
       add_shot_group(@right_column_rotation_group)
 
-      add_event_player(set_initial_targets, [g.set_state_event(1), h.set_state_event(1), i.set_state_event(1)])
-
-      row_groups = [[a,b,c], [d,e,f], [g,h,i]].map.with_index do |line_group, i|
-        sg = ShotGroup.new("slot_row_#{i+1}_group", line_group, false)
+      @row_groups = [@row_1, @row_2, @row_3].map.with_index do |line_group, i|
+        num = i + 1
+        sg = ShotGroup.new("slot_row_#{num}_group", line_group, false)
         add_shot_group(sg)
-        add_event_player("slot_row_#{i+1}_group_locked_complete", [row_locked_event, @rotate.stop_event])
+        add_event_player("slot_row_#{num}_group_locked_complete", [row_locked_event, "slots_complete_row_#{num}", @rotate.stop_event])
         sg
       end
 
-      diagonal_groups = [[a,e,i], [g,e,c]].map.with_index do |diag_group, i|
-        sg = ShotGroup.new("slot_diagonal_#{i+1}_group", diag_group, false)
+      @diagonal_groups = [[a,e,i], [g,e,c]].map.with_index do |diag_group, i|
+        num = i + 1
+        sg = ShotGroup.new("slot_diagonal_#{num}_group", diag_group, false)
         add_shot_group(sg)
-        add_event_player("slot_diagonal_#{i+1}_group_locked_complete", [diagonal_locked_event, @rotate.stop_event])
+        add_event_player("slot_diagonal_#{num}_group_locked_complete", [diagonal_locked_event, @rotate.stop_event])
         sg
       end
 
-      neighbor_pair_groups = [
+      @neighbor_pair_groups = [
         [a,b,f], [a,e,f], [a,b,i], [a,h,i],
         [d,b,c], [d,e,c], [d,e,i], [d,h,i],
         [g,b,c], [g,h,c], [g,e,f], [g,h,f]
       ].map.with_index do |neighbor_group, i|
-        sg = ShotGroup.new("slot_neighborpair_#{i+1}_group", neighbor_group, false)
+        num = i + 1
+        sg = ShotGroup.new("slot_neighborpair_#{num}_group", neighbor_group, false)
         add_shot_group(sg)
-        add_event_player("slot_neighborpair_#{i+1}_group_locked_complete", [neighborpair_locked_event, @rotate.stop_event])
+        add_event_player("slot_neighborpair_#{num}_group_locked_complete", [neighborpair_locked_event, @rotate.stop_event])
         sg
       end
 
-      split_pair_groups = [
+      @split_pair_groups = [
         [a,e,c], [a,h,c],
         [d,b,f], [d,h,f],
         [g,b,i], [g,e,i]
@@ -89,7 +93,7 @@ module TrogBuild
         sg
       end
 
-      singles_groups = [[a,h,f], [d,h,c], [d,b,i], [g,b,f]].map.with_index do |single_group, i|
+      @singles_groups = [[a,h,f], [d,h,c], [d,b,i], [g,b,f]].map.with_index do |single_group, i|
         sg = ShotGroup.new("slot_singles_#{i+1}_group", single_group, false)
         add_shot_group(sg)
         add_event_player("slot_singles_#{i+1}_group_locked_complete", [singles_locked_event, @rotate.stop_event])
@@ -97,6 +101,82 @@ module TrogBuild
       end
 
       generate_refresh_checks(grid_shots)
+    end
+
+    def add_variable_players!
+      add_variable_player(slots_active_scored, vp_score(25, true))
+
+      add_variable_player(singles_locked_event,      vp_score(75, true))
+      add_variable_player(splitpair_locked_event,    vp_score(125, true))
+      add_variable_player(neighborpair_locked_event, vp_score(200, true))
+      add_variable_player(row_locked_event,          vp_score(5000, false))
+      add_variable_player(diagonal_locked_event,     vp_score(10000, false))
+    end
+
+    def add_event_players!
+      add_event_player(mode_start_event, [ensure_initial_targets, refresh_rotation_event])
+      add_event_player(@countdown.complete_event, [fail_event])
+
+      add_event_player(@rotate.complete_event, [
+        @left_column_rotation_group.rotate_left_event,
+        @center_column_rotation_group.rotate_left_event,
+        @right_column_rotation_group.rotate_left_event
+      ])
+
+      generate_initial_state_setup
+    end
+
+    def fail_event;                 "mode_fail_#{name}" end
+
+    private
+
+    def refresh_rotation_event;     "slots_refresh_rotation" end
+    def singles_locked_event;       "slots_singles_locked" end
+    def row_locked_event;           "slots_row_locked" end
+    def diagonal_locked_event;      "slots_diagonal_locked" end
+    def splitpair_locked_event;     "slots_splitpair_locked" end
+    def neighborpair_locked_event;  "slots_neighborpair_locked" end
+    def ensure_initial_targets;     "slots_ensure_initial_targets" end
+    def slots_active_scored;        "slots_active_scored" end
+    def custom_hash; {} end
+
+    def generate_initial_state_setup
+      add_event_player('slots_unset_row_1', @row_1.map {|s| s.set_state_event(0) })
+      add_event_player('slots_unset_row_2', @row_2.map {|s| s.set_state_event(0) })
+      add_event_player('slots_unset_row_3', @row_3.map {|s| s.set_state_event(0) })
+      add_event_player('slots_set_active_row_1', @row_1.map {|s| s.set_state_event(1) })
+      add_event_player('slots_set_active_row_2', @row_2.map {|s| s.set_state_event(1) })
+      add_event_player('slots_set_active_row_3', @row_3.map {|s| s.set_state_event(1) })
+      add_event_player('slots_complete_row_1', @row_1.map {|s| s.set_state_event(3) })
+      add_event_player('slots_complete_row_2', @row_2.map {|s| s.set_state_event(3) })
+      add_event_player('slots_complete_row_3', @row_3.map {|s| s.set_state_event(3) })
+
+      add_event_player(ensure_initial_targets, ['slots_unset_row_1', 'slots_unset_row_2', 'slots_set_active_row_3'])
+    end
+
+    def generate_refresh_checks(grid_shots)
+      # 0 = set tick slow
+      all_shots_unlocked = grid_shots.map {|s| "device.shots.#{s.name}.state_name != 'locked'"}.join(' and ')
+      add_event_player("#{refresh_rotation_event}{all_shots_unlocked}", @rotate.set_tick_interval_event('slow'))
+
+      # 1 = set tick medium
+      grid_shots.each do |shot|
+        other_shots = grid_shots - [shot]
+
+        other_shots_unlocked = other_shots.map {|s| "device.shots.#{s.name}.state_name != 'locked'"}.join(' and ')
+        refresh_hook_name = "#{refresh_rotation_event}{device.shots.#{shot.name}.state_name == 'locked' and #{other_shots_unlocked}}"
+        add_event_player(refresh_hook_name, @rotate.set_tick_interval_event('medium'))
+      end
+
+      # 2 = set tick fast
+      grid_shot_pairs = generate_pairs(grid_shots) #Overkill since there shouldnt be two locked in any column anyway
+      grid_shot_pairs.each do |shots|
+        other_shots = grid_shots - shots
+
+        other_shots_unlocked = other_shots.map {|s| "device.shots.#{s.name}.state_name != 'locked'"}.join(' and ')
+        refresh_hook_name = "#{refresh_rotation_event}{device.shots.#{shots[0].name}.state_name == 'locked' and device.shots.#{shots[1].name}.state == 'locked' and #{other_shots_unlocked}}"
+        add_event_player(refresh_hook_name, @rotate.set_tick_interval_event('fast'))
+      end
     end
 
     def generate_pairs(list)
@@ -111,57 +191,5 @@ module TrogBuild
       out
     end
 
-    def generate_refresh_checks(grid_shots)
-      grid_shots.each do |shot|
-        other_shots = grid_shots - [shot]
-
-        other_shots_unlocked = other_shots.map{|s| "device.shots.#{s.name}.state_name != 'locked'"}.join(' and ')
-        refresh_hook_name = "#{refresh_rotation_event}{device.shots.#{shot.name}.state_name == 'locked' and #{other_shots_unlocked}}"
-        add_event_player(refresh_hook_name, @rotate.set_tick_interval_event('medium'))
-      end
-
-      grid_shot_pairs = generate_pairs(grid_shots)
-      grid_shot_pairs.each do |shots|
-        other_shots = grid_shots - shots
-
-        other_shots_unlocked = other_shots.map{|s| "device.shots.#{s.name}.state_name != 'locked'"}.join(' and ')
-        refresh_hook_name = "#{refresh_rotation_event}{device.shots.#{shots[0].name}.state_name == 'locked' and device.shots.#{shots[1].name}.state == 'locked' and #{other_shots_unlocked}}"
-        add_event_player(refresh_hook_name, @rotate.set_tick_interval_event('fast'))
-      end
-    end
-
-    def add_variable_players!
-      add_variable_player(slots_active_scored, vp_score(25, true))
-
-      add_variable_player(singles_locked_event,      vp_score(75, true))
-      add_variable_player(splitpair_locked_event,    vp_score(125, true))
-      add_variable_player(neighborpair_locked_event, vp_score(200, true))
-      add_variable_player(row_locked_event,          vp_score(5000, false))
-      add_variable_player(diagonal_locked_event,     vp_score(10000, false))
-    end
-
-    def add_event_players!
-      add_event_player(mode_start_event, [set_initial_targets, @rotate.set_tick_interval_event('slow')])
-      add_event_player(@countdown.complete_event, [fail_event])
-      add_event_player(@rotate.complete_event, [
-        @left_column_rotation_group.rotate_left_event,
-        @center_column_rotation_group.rotate_left_event,
-        @right_column_rotation_group.rotate_left_event
-      ])
-    end
-
-    def fail_event;                 "mode_fail_#{name}" end
-
-    private
-
-    def refresh_rotation_event;     "slots_refresh_rotation" end
-    def singles_locked_event;       "slots_singles_locked" end
-    def row_locked_event;           "slots_row_locked" end
-    def diagonal_locked_event;      "slots_diagonal_locked" end
-    def splitpair_locked_event;     "slots_splitpair_locked" end
-    def neighborpair_locked_event;  "slots_neighborpair_locked" end
-    def set_initial_targets;        "slots_set_initial_targets" end
-    def slots_active_scored;        "slots_active_scored" end
-    def custom_hash; {} end
   end
 end

@@ -24,8 +24,10 @@ event_player:
   vswitch_toggle_slings_dead_inactive:
     - mode_stop_slings_dead
 
-  vswitch_start_slots_active:
-    - start_mode_generated_slots
+  vswitch_toggle_slots_active:
+    - mode_start_generated_slots
+  vswitch_toggle_slots_inactive:
+    - mode_stop_generated_slots
 
 variable_player:
   virtual_add_10_fire_all:

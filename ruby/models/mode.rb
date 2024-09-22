@@ -21,6 +21,7 @@ module TrogBuild
       @variable_player = {}
       @top_comment = custom_top_comment
       @start_events = generate_start_events
+      @stop_events = generate_stop_events
       add_timers!
       add_shots!
       add_shows!
@@ -46,7 +47,8 @@ module TrogBuild
       {
         'mode' => {
           'priority' => @priority,
-          'start_events' => @start_events
+          'start_events' => @start_events,
+          'stop_events' => @stop_events
         }
       }
     end
@@ -101,10 +103,14 @@ module TrogBuild
     end
 
     def generate_start_events
-      'start_mode_' + name
+      'mode_start_' + name
     end
 
-    def mode_start_event
+    def generate_stop_events
+      'mode_stop_' + name
+    end
+
+    def mode_start_event #not used to start the mode, used to hook onto started processing
       "mode_#{name}_started"
     end
 

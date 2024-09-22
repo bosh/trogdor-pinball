@@ -4,7 +4,8 @@
 ---
 mode:
   priority: 1020
-  start_events: start_mode_generated_slots
+  start_events: mode_start_generated_slots
+  stop_events: mode_stop_generated_slots
 timers:
   slots_countdown:
     start_value: 6
@@ -80,18 +81,17 @@ event_player:
   - set_shot_state_slots_i_locked
   - slots_active_scored
   - slots_refresh_rotation
-  slots_set_initial_targets:
-  - set_shot_state_slots_g_active
-  - set_shot_state_slots_h_active
-  - set_shot_state_slots_i_active
   slot_row_1_group_locked_complete:
   - slots_row_locked
+  - slots_complete_row_1
   - timer_slots_rotate_stop
   slot_row_2_group_locked_complete:
   - slots_row_locked
+  - slots_complete_row_2
   - timer_slots_rotate_stop
   slot_row_3_group_locked_complete:
   - slots_row_locked
+  - slots_complete_row_3
   - timer_slots_rotate_stop
   slot_diagonal_1_group_locked_complete:
   - slots_diagonal_locked
@@ -165,6 +165,7 @@ event_player:
   slot_singles_4_group_locked_complete:
   - slots_singles_locked
   - timer_slots_rotate_stop
+  slots_refresh_rotation{all_shots_unlocked}: timer_slots_rotate_set_tick_interval_slow
   ? slots_refresh_rotation{device.shots.slots_a.state_name == 'locked' and device.shots.slots_b.state_name
     != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
     != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
@@ -436,14 +437,54 @@ event_player:
     != 'locked' and device.shots.slots_g.state_name != 'locked'}
   : timer_slots_rotate_set_tick_interval_fast
   mode_generated_slots_started:
-  - slots_set_initial_targets
-  - timer_slots_rotate_set_tick_interval_slow
+  - slots_ensure_initial_targets
+  - slots_refresh_rotation
   timer_slots_countdown_complete:
   - mode_fail_generated_slots
   timer_slots_rotate_complete:
   - left_column_rotation_group_rotate_left
   - center_column_rotation_group_rotate_left
   - right_column_rotation_group_rotate_left
+  slots_unset_row_1:
+  - set_shot_state_slots_a_inactive
+  - set_shot_state_slots_b_inactive
+  - set_shot_state_slots_c_inactive
+  slots_unset_row_2:
+  - set_shot_state_slots_d_inactive
+  - set_shot_state_slots_e_inactive
+  - set_shot_state_slots_f_inactive
+  slots_unset_row_3:
+  - set_shot_state_slots_g_inactive
+  - set_shot_state_slots_h_inactive
+  - set_shot_state_slots_i_inactive
+  slots_set_active_row_1:
+  - set_shot_state_slots_a_active
+  - set_shot_state_slots_b_active
+  - set_shot_state_slots_c_active
+  slots_set_active_row_2:
+  - set_shot_state_slots_d_active
+  - set_shot_state_slots_e_active
+  - set_shot_state_slots_f_active
+  slots_set_active_row_3:
+  - set_shot_state_slots_g_active
+  - set_shot_state_slots_h_active
+  - set_shot_state_slots_i_active
+  slots_complete_row_1:
+  - set_shot_state_slots_a_complete_locked
+  - set_shot_state_slots_b_complete_locked
+  - set_shot_state_slots_c_complete_locked
+  slots_complete_row_2:
+  - set_shot_state_slots_d_complete_locked
+  - set_shot_state_slots_e_complete_locked
+  - set_shot_state_slots_f_complete_locked
+  slots_complete_row_3:
+  - set_shot_state_slots_g_complete_locked
+  - set_shot_state_slots_h_complete_locked
+  - set_shot_state_slots_i_complete_locked
+  slots_ensure_initial_targets:
+  - slots_unset_row_1
+  - slots_unset_row_2
+  - slots_set_active_row_3
 shot_profiles:
   slot_square_profile:
     advance_on_hit: false

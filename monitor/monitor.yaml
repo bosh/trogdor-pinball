@@ -492,7 +492,7 @@ switch:
   vswitch_reset_inlane_detector:
     x: 0.015804597701149427
     y: 0.625
-  vswitch_start_slots:
+  vswitch_toggle_slots:
     x: 0.015804597701149427
     y: 0.16487068965517243
   vswitch_toggle_slings_dead:

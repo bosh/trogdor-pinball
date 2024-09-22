@@ -5,6 +5,7 @@
 mode:
   priority: 1310
   start_events: ball_started
+  stop_events: mode_stop_generated_example
 show_player:
   mode_generated_example_started:
     example_show_a:
