@@ -19,8 +19,8 @@ timers:
       action: start
     - event: timer_slots_countdown_stop
       action: stop
-    - event: timer_slots_countdown_reset
-      action: reset
+    - event: timer_slots_countdown_restart
+      action: restart
   slots_rotate:
     start_value: 1
     end_value: 0
@@ -33,8 +33,8 @@ timers:
       action: start
     - event: timer_slots_rotate_stop
       action: stop
-    - event: timer_slots_rotate_reset
-      action: reset
+    - event: timer_slots_rotate_restart
+      action: restart
     - event: timer_slots_rotate_set_tick_interval_slow
       action: set_tick_interval
       value: 0.65
@@ -83,15 +83,15 @@ event_player:
   - slots_refresh_rotation
   slot_row_1_group_locked_complete:
   - slots_row_locked
-  - slots_complete_row_1
+  - slots_confirm_row_1
   - timer_slots_rotate_stop
   slot_row_2_group_locked_complete:
   - slots_row_locked
-  - slots_complete_row_2
+  - slots_confirm_row_2
   - timer_slots_rotate_stop
   slot_row_3_group_locked_complete:
   - slots_row_locked
-  - slots_complete_row_3
+  - slots_confirm_row_3
   - timer_slots_rotate_stop
   slot_diagonal_1_group_locked_complete:
   - slots_diagonal_locked
@@ -165,282 +165,243 @@ event_player:
   slot_singles_4_group_locked_complete:
   - slots_singles_locked
   - timer_slots_rotate_stop
-  slots_refresh_rotation{all_shots_unlocked}: timer_slots_rotate_set_tick_interval_slow
-  ? slots_refresh_rotation{device.shots.slots_a.state_name == 'locked' and device.shots.slots_b.state_name
-    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
-    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
-    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_a.state != 2 and device.shots.slots_b.state
+    != 2 and device.shots.slots_c.state != 2 and device.shots.slots_d.state != 2 and
+    device.shots.slots_e.state != 2 and device.shots.slots_f.state != 2 and device.shots.slots_g.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
+  : timer_slots_rotate_set_tick_interval_slow
+  ? slots_refresh_rotation{device.shots.slots_a.state == 2 and device.shots.slots_b.state
+    != 2 and device.shots.slots_c.state != 2 and device.shots.slots_d.state != 2 and
+    device.shots.slots_e.state != 2 and device.shots.slots_f.state != 2 and device.shots.slots_g.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_medium
-  ? slots_refresh_rotation{device.shots.slots_b.state_name == 'locked' and device.shots.slots_a.state_name
-    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
-    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
-    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_b.state == 2 and device.shots.slots_a.state
+    != 2 and device.shots.slots_c.state != 2 and device.shots.slots_d.state != 2 and
+    device.shots.slots_e.state != 2 and device.shots.slots_f.state != 2 and device.shots.slots_g.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_medium
-  ? slots_refresh_rotation{device.shots.slots_c.state_name == 'locked' and device.shots.slots_a.state_name
-    != 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_d.state_name
-    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
-    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_c.state == 2 and device.shots.slots_a.state
+    != 2 and device.shots.slots_b.state != 2 and device.shots.slots_d.state != 2 and
+    device.shots.slots_e.state != 2 and device.shots.slots_f.state != 2 and device.shots.slots_g.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_medium
-  ? slots_refresh_rotation{device.shots.slots_d.state_name == 'locked' and device.shots.slots_a.state_name
-    != 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_c.state_name
-    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
-    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_d.state == 2 and device.shots.slots_a.state
+    != 2 and device.shots.slots_b.state != 2 and device.shots.slots_c.state != 2 and
+    device.shots.slots_e.state != 2 and device.shots.slots_f.state != 2 and device.shots.slots_g.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_medium
-  ? slots_refresh_rotation{device.shots.slots_e.state_name == 'locked' and device.shots.slots_a.state_name
-    != 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_c.state_name
-    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_f.state_name
-    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_e.state == 2 and device.shots.slots_a.state
+    != 2 and device.shots.slots_b.state != 2 and device.shots.slots_c.state != 2 and
+    device.shots.slots_d.state != 2 and device.shots.slots_f.state != 2 and device.shots.slots_g.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_medium
-  ? slots_refresh_rotation{device.shots.slots_f.state_name == 'locked' and device.shots.slots_a.state_name
-    != 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_c.state_name
-    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
-    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_f.state == 2 and device.shots.slots_a.state
+    != 2 and device.shots.slots_b.state != 2 and device.shots.slots_c.state != 2 and
+    device.shots.slots_d.state != 2 and device.shots.slots_e.state != 2 and device.shots.slots_g.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_medium
-  ? slots_refresh_rotation{device.shots.slots_g.state_name == 'locked' and device.shots.slots_a.state_name
-    != 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_c.state_name
-    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
-    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_g.state == 2 and device.shots.slots_a.state
+    != 2 and device.shots.slots_b.state != 2 and device.shots.slots_c.state != 2 and
+    device.shots.slots_d.state != 2 and device.shots.slots_e.state != 2 and device.shots.slots_f.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_medium
-  ? slots_refresh_rotation{device.shots.slots_h.state_name == 'locked' and device.shots.slots_a.state_name
-    != 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_c.state_name
-    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
-    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_g.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_h.state == 2 and device.shots.slots_a.state
+    != 2 and device.shots.slots_b.state != 2 and device.shots.slots_c.state != 2 and
+    device.shots.slots_d.state != 2 and device.shots.slots_e.state != 2 and device.shots.slots_f.state
+    != 2 and device.shots.slots_g.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_medium
-  ? slots_refresh_rotation{device.shots.slots_i.state_name == 'locked' and device.shots.slots_a.state_name
-    != 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_c.state_name
-    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
-    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_g.state_name
-    != 'locked' and device.shots.slots_h.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_i.state == 2 and device.shots.slots_a.state
+    != 2 and device.shots.slots_b.state != 2 and device.shots.slots_c.state != 2 and
+    device.shots.slots_d.state != 2 and device.shots.slots_e.state != 2 and device.shots.slots_f.state
+    != 2 and device.shots.slots_g.state != 2 and device.shots.slots_h.state != 2}
   : timer_slots_rotate_set_tick_interval_medium
-  ? slots_refresh_rotation{device.shots.slots_a.state_name == 'locked' and device.shots.slots_b.state
-    == 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
-    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
-    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_a.state == 2 and device.shots.slots_b.state
+    == 2 and device.shots.slots_c.state != 2 and device.shots.slots_d.state != 2 and
+    device.shots.slots_e.state != 2 and device.shots.slots_f.state != 2 and device.shots.slots_g.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_a.state_name == 'locked' and device.shots.slots_c.state
-    == 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_d.state_name
-    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
-    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_a.state == 2 and device.shots.slots_c.state
+    == 2 and device.shots.slots_b.state != 2 and device.shots.slots_d.state != 2 and
+    device.shots.slots_e.state != 2 and device.shots.slots_f.state != 2 and device.shots.slots_g.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_a.state_name == 'locked' and device.shots.slots_d.state
-    == 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_c.state_name
-    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
-    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_a.state == 2 and device.shots.slots_d.state
+    == 2 and device.shots.slots_b.state != 2 and device.shots.slots_c.state != 2 and
+    device.shots.slots_e.state != 2 and device.shots.slots_f.state != 2 and device.shots.slots_g.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_a.state_name == 'locked' and device.shots.slots_e.state
-    == 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_c.state_name
-    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_f.state_name
-    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_a.state == 2 and device.shots.slots_e.state
+    == 2 and device.shots.slots_b.state != 2 and device.shots.slots_c.state != 2 and
+    device.shots.slots_d.state != 2 and device.shots.slots_f.state != 2 and device.shots.slots_g.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_a.state_name == 'locked' and device.shots.slots_f.state
-    == 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_c.state_name
-    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
-    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_a.state == 2 and device.shots.slots_f.state
+    == 2 and device.shots.slots_b.state != 2 and device.shots.slots_c.state != 2 and
+    device.shots.slots_d.state != 2 and device.shots.slots_e.state != 2 and device.shots.slots_g.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_a.state_name == 'locked' and device.shots.slots_g.state
-    == 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_c.state_name
-    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
-    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_a.state == 2 and device.shots.slots_g.state
+    == 2 and device.shots.slots_b.state != 2 and device.shots.slots_c.state != 2 and
+    device.shots.slots_d.state != 2 and device.shots.slots_e.state != 2 and device.shots.slots_f.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_a.state_name == 'locked' and device.shots.slots_h.state
-    == 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_c.state_name
-    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
-    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_g.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_a.state == 2 and device.shots.slots_h.state
+    == 2 and device.shots.slots_b.state != 2 and device.shots.slots_c.state != 2 and
+    device.shots.slots_d.state != 2 and device.shots.slots_e.state != 2 and device.shots.slots_f.state
+    != 2 and device.shots.slots_g.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_a.state_name == 'locked' and device.shots.slots_i.state
-    == 'locked' and device.shots.slots_b.state_name != 'locked' and device.shots.slots_c.state_name
-    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
-    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_g.state_name
-    != 'locked' and device.shots.slots_h.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_a.state == 2 and device.shots.slots_i.state
+    == 2 and device.shots.slots_b.state != 2 and device.shots.slots_c.state != 2 and
+    device.shots.slots_d.state != 2 and device.shots.slots_e.state != 2 and device.shots.slots_f.state
+    != 2 and device.shots.slots_g.state != 2 and device.shots.slots_h.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_b.state_name == 'locked' and device.shots.slots_c.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_d.state_name
-    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
-    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_b.state == 2 and device.shots.slots_c.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_d.state != 2 and
+    device.shots.slots_e.state != 2 and device.shots.slots_f.state != 2 and device.shots.slots_g.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_b.state_name == 'locked' and device.shots.slots_d.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_c.state_name
-    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
-    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_b.state == 2 and device.shots.slots_d.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_c.state != 2 and
+    device.shots.slots_e.state != 2 and device.shots.slots_f.state != 2 and device.shots.slots_g.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_b.state_name == 'locked' and device.shots.slots_e.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_c.state_name
-    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_f.state_name
-    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_b.state == 2 and device.shots.slots_e.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_c.state != 2 and
+    device.shots.slots_d.state != 2 and device.shots.slots_f.state != 2 and device.shots.slots_g.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_b.state_name == 'locked' and device.shots.slots_f.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_c.state_name
-    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
-    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_b.state == 2 and device.shots.slots_f.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_c.state != 2 and
+    device.shots.slots_d.state != 2 and device.shots.slots_e.state != 2 and device.shots.slots_g.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_b.state_name == 'locked' and device.shots.slots_g.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_c.state_name
-    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
-    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_b.state == 2 and device.shots.slots_g.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_c.state != 2 and
+    device.shots.slots_d.state != 2 and device.shots.slots_e.state != 2 and device.shots.slots_f.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_b.state_name == 'locked' and device.shots.slots_h.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_c.state_name
-    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
-    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_g.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_b.state == 2 and device.shots.slots_h.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_c.state != 2 and
+    device.shots.slots_d.state != 2 and device.shots.slots_e.state != 2 and device.shots.slots_f.state
+    != 2 and device.shots.slots_g.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_b.state_name == 'locked' and device.shots.slots_i.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_c.state_name
-    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
-    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_g.state_name
-    != 'locked' and device.shots.slots_h.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_b.state == 2 and device.shots.slots_i.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_c.state != 2 and
+    device.shots.slots_d.state != 2 and device.shots.slots_e.state != 2 and device.shots.slots_f.state
+    != 2 and device.shots.slots_g.state != 2 and device.shots.slots_h.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_c.state_name == 'locked' and device.shots.slots_d.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
-    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
-    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_c.state == 2 and device.shots.slots_d.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_b.state != 2 and
+    device.shots.slots_e.state != 2 and device.shots.slots_f.state != 2 and device.shots.slots_g.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_c.state_name == 'locked' and device.shots.slots_e.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
-    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_f.state_name
-    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_c.state == 2 and device.shots.slots_e.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_b.state != 2 and
+    device.shots.slots_d.state != 2 and device.shots.slots_f.state != 2 and device.shots.slots_g.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_c.state_name == 'locked' and device.shots.slots_f.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
-    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
-    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_c.state == 2 and device.shots.slots_f.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_b.state != 2 and
+    device.shots.slots_d.state != 2 and device.shots.slots_e.state != 2 and device.shots.slots_g.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_c.state_name == 'locked' and device.shots.slots_g.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
-    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
-    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_c.state == 2 and device.shots.slots_g.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_b.state != 2 and
+    device.shots.slots_d.state != 2 and device.shots.slots_e.state != 2 and device.shots.slots_f.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_c.state_name == 'locked' and device.shots.slots_h.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
-    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
-    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_g.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_c.state == 2 and device.shots.slots_h.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_b.state != 2 and
+    device.shots.slots_d.state != 2 and device.shots.slots_e.state != 2 and device.shots.slots_f.state
+    != 2 and device.shots.slots_g.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_c.state_name == 'locked' and device.shots.slots_i.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
-    != 'locked' and device.shots.slots_d.state_name != 'locked' and device.shots.slots_e.state_name
-    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_g.state_name
-    != 'locked' and device.shots.slots_h.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_c.state == 2 and device.shots.slots_i.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_b.state != 2 and
+    device.shots.slots_d.state != 2 and device.shots.slots_e.state != 2 and device.shots.slots_f.state
+    != 2 and device.shots.slots_g.state != 2 and device.shots.slots_h.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_d.state_name == 'locked' and device.shots.slots_e.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
-    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_f.state_name
-    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_d.state == 2 and device.shots.slots_e.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_b.state != 2 and
+    device.shots.slots_c.state != 2 and device.shots.slots_f.state != 2 and device.shots.slots_g.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_d.state_name == 'locked' and device.shots.slots_f.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
-    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_e.state_name
-    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_d.state == 2 and device.shots.slots_f.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_b.state != 2 and
+    device.shots.slots_c.state != 2 and device.shots.slots_e.state != 2 and device.shots.slots_g.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_d.state_name == 'locked' and device.shots.slots_g.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
-    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_e.state_name
-    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_d.state == 2 and device.shots.slots_g.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_b.state != 2 and
+    device.shots.slots_c.state != 2 and device.shots.slots_e.state != 2 and device.shots.slots_f.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_d.state_name == 'locked' and device.shots.slots_h.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
-    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_e.state_name
-    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_g.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_d.state == 2 and device.shots.slots_h.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_b.state != 2 and
+    device.shots.slots_c.state != 2 and device.shots.slots_e.state != 2 and device.shots.slots_f.state
+    != 2 and device.shots.slots_g.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_d.state_name == 'locked' and device.shots.slots_i.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
-    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_e.state_name
-    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_g.state_name
-    != 'locked' and device.shots.slots_h.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_d.state == 2 and device.shots.slots_i.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_b.state != 2 and
+    device.shots.slots_c.state != 2 and device.shots.slots_e.state != 2 and device.shots.slots_f.state
+    != 2 and device.shots.slots_g.state != 2 and device.shots.slots_h.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_e.state_name == 'locked' and device.shots.slots_f.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
-    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
-    != 'locked' and device.shots.slots_g.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_e.state == 2 and device.shots.slots_f.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_b.state != 2 and
+    device.shots.slots_c.state != 2 and device.shots.slots_d.state != 2 and device.shots.slots_g.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_e.state_name == 'locked' and device.shots.slots_g.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
-    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
-    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_e.state == 2 and device.shots.slots_g.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_b.state != 2 and
+    device.shots.slots_c.state != 2 and device.shots.slots_d.state != 2 and device.shots.slots_f.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_e.state_name == 'locked' and device.shots.slots_h.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
-    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
-    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_g.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_e.state == 2 and device.shots.slots_h.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_b.state != 2 and
+    device.shots.slots_c.state != 2 and device.shots.slots_d.state != 2 and device.shots.slots_f.state
+    != 2 and device.shots.slots_g.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_e.state_name == 'locked' and device.shots.slots_i.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
-    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
-    != 'locked' and device.shots.slots_f.state_name != 'locked' and device.shots.slots_g.state_name
-    != 'locked' and device.shots.slots_h.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_e.state == 2 and device.shots.slots_i.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_b.state != 2 and
+    device.shots.slots_c.state != 2 and device.shots.slots_d.state != 2 and device.shots.slots_f.state
+    != 2 and device.shots.slots_g.state != 2 and device.shots.slots_h.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_f.state_name == 'locked' and device.shots.slots_g.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
-    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
-    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_h.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_f.state == 2 and device.shots.slots_g.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_b.state != 2 and
+    device.shots.slots_c.state != 2 and device.shots.slots_d.state != 2 and device.shots.slots_e.state
+    != 2 and device.shots.slots_h.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_f.state_name == 'locked' and device.shots.slots_h.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
-    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
-    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_g.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_f.state == 2 and device.shots.slots_h.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_b.state != 2 and
+    device.shots.slots_c.state != 2 and device.shots.slots_d.state != 2 and device.shots.slots_e.state
+    != 2 and device.shots.slots_g.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_f.state_name == 'locked' and device.shots.slots_i.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
-    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
-    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_g.state_name
-    != 'locked' and device.shots.slots_h.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_f.state == 2 and device.shots.slots_i.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_b.state != 2 and
+    device.shots.slots_c.state != 2 and device.shots.slots_d.state != 2 and device.shots.slots_e.state
+    != 2 and device.shots.slots_g.state != 2 and device.shots.slots_h.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_g.state_name == 'locked' and device.shots.slots_h.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
-    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
-    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
-    != 'locked' and device.shots.slots_i.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_g.state == 2 and device.shots.slots_h.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_b.state != 2 and
+    device.shots.slots_c.state != 2 and device.shots.slots_d.state != 2 and device.shots.slots_e.state
+    != 2 and device.shots.slots_f.state != 2 and device.shots.slots_i.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_g.state_name == 'locked' and device.shots.slots_i.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
-    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
-    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
-    != 'locked' and device.shots.slots_h.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_g.state == 2 and device.shots.slots_i.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_b.state != 2 and
+    device.shots.slots_c.state != 2 and device.shots.slots_d.state != 2 and device.shots.slots_e.state
+    != 2 and device.shots.slots_f.state != 2 and device.shots.slots_h.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
-  ? slots_refresh_rotation{device.shots.slots_h.state_name == 'locked' and device.shots.slots_i.state
-    == 'locked' and device.shots.slots_a.state_name != 'locked' and device.shots.slots_b.state_name
-    != 'locked' and device.shots.slots_c.state_name != 'locked' and device.shots.slots_d.state_name
-    != 'locked' and device.shots.slots_e.state_name != 'locked' and device.shots.slots_f.state_name
-    != 'locked' and device.shots.slots_g.state_name != 'locked'}
+  ? slots_refresh_rotation{device.shots.slots_h.state == 2 and device.shots.slots_i.state
+    == 2 and device.shots.slots_a.state != 2 and device.shots.slots_b.state != 2 and
+    device.shots.slots_c.state != 2 and device.shots.slots_d.state != 2 and device.shots.slots_e.state
+    != 2 and device.shots.slots_f.state != 2 and device.shots.slots_g.state != 2}
   : timer_slots_rotate_set_tick_interval_fast
   mode_generated_slots_started:
   - slots_ensure_initial_targets
   - slots_refresh_rotation
   timer_slots_countdown_complete:
   - mode_fail_generated_slots
+  mode_fail_generated_slots:
+  - mode_stop_generated_slots
   timer_slots_rotate_complete:
   - left_column_rotation_group_rotate_left
   - center_column_rotation_group_rotate_left
@@ -469,22 +430,91 @@ event_player:
   - set_shot_state_slots_g_active
   - set_shot_state_slots_h_active
   - set_shot_state_slots_i_active
-  slots_complete_row_1:
-  - set_shot_state_slots_a_complete_locked
-  - set_shot_state_slots_b_complete_locked
-  - set_shot_state_slots_c_complete_locked
-  slots_complete_row_2:
-  - set_shot_state_slots_d_complete_locked
-  - set_shot_state_slots_e_complete_locked
-  - set_shot_state_slots_f_complete_locked
-  slots_complete_row_3:
-  - set_shot_state_slots_g_complete_locked
-  - set_shot_state_slots_h_complete_locked
-  - set_shot_state_slots_i_complete_locked
+  slots_confirm_row_1:
+  - set_shot_state_slots_a_confirmed
+  - set_shot_state_slots_b_confirmed
+  - set_shot_state_slots_c_confirmed
+  slots_confirm_row_2:
+  - set_shot_state_slots_d_confirmed
+  - set_shot_state_slots_e_confirmed
+  - set_shot_state_slots_f_confirmed
+  slots_confirm_row_3:
+  - set_shot_state_slots_g_confirmed
+  - set_shot_state_slots_h_confirmed
+  - set_shot_state_slots_i_confirmed
   slots_ensure_initial_targets:
   - slots_unset_row_1
   - slots_unset_row_2
   - slots_set_active_row_3
+  slot_row_3_group_locked_complete{device.shots.slots_a.state < 2 and device.shots.slots_d.state < 2}:
+  - timer_slots_rotate_stop
+  - set_shot_state_slots_d_active
+  - set_shot_state_slots_e_active
+  - set_shot_state_slots_f_active
+  - set_shot_state_slots_a_inactive
+  - set_shot_state_slots_b_inactive
+  - set_shot_state_slots_c_inactive
+  - timer_slots_rotate_restart
+  slot_row_3_group_locked_complete{device.shots.slots_a.state < 2 and device.shots.slots_d.state >= 2}:
+  - timer_slots_rotate_stop
+  - set_shot_state_slots_a_active
+  - set_shot_state_slots_b_active
+  - set_shot_state_slots_c_active
+  slot_row_3_group_locked_complete{device.shots.slots_a.state >= 2 and device.shots.slots_d.state < 2}:
+  - timer_slots_rotate_stop
+  - set_shot_state_slots_d_active
+  - set_shot_state_slots_e_active
+  - set_shot_state_slots_f_active
+  slot_row_3_group_locked_complete{device.shots.slots_a.state >= 2 and device.shots.slots_d.state >= 2}:
+  - timer_slots_rotate_stop
+  - timer_slots_countdown_stop
+  - party_time
+  slot_row_2_group_locked_complete{device.shots.slots_a.state < 2 and device.shots.slots_g.state < 2}:
+  - timer_slots_rotate_stop
+  - set_shot_state_slots_g_active
+  - set_shot_state_slots_h_active
+  - set_shot_state_slots_i_active
+  - set_shot_state_slots_a_inactive
+  - set_shot_state_slots_b_inactive
+  - set_shot_state_slots_c_inactive
+  - timer_slots_rotate_restart
+  slot_row_2_group_locked_complete{device.shots.slots_a.state < 2 and device.shots.slots_g.state >= 2}:
+  - timer_slots_rotate_stop
+  - set_shot_state_slots_a_active
+  - set_shot_state_slots_b_active
+  - set_shot_state_slots_c_active
+  slot_row_2_group_locked_complete{device.shots.slots_a.state >= 2 and device.shots.slots_g.state < 2}:
+  - timer_slots_rotate_stop
+  - set_shot_state_slots_g_active
+  - set_shot_state_slots_h_active
+  - set_shot_state_slots_i_active
+  slot_row_2_group_locked_complete{device.shots.slots_a.state >= 2 and device.shots.slots_g.state >= 2}:
+  - timer_slots_rotate_stop
+  - timer_slots_countdown_stop
+  - party_time
+  slot_row_1_group_locked_complete{device.shots.slots_d.state < 2 and device.shots.slots_g.state < 2}:
+  - timer_slots_rotate_stop
+  - set_shot_state_slots_g_active
+  - set_shot_state_slots_h_active
+  - set_shot_state_slots_i_active
+  - set_shot_state_slots_d_inactive
+  - set_shot_state_slots_e_inactive
+  - set_shot_state_slots_f_inactive
+  - timer_slots_rotate_restart
+  slot_row_1_group_locked_complete{device.shots.slots_d.state < 2 and device.shots.slots_g.state >= 2}:
+  - timer_slots_rotate_stop
+  - set_shot_state_slots_d_active
+  - set_shot_state_slots_e_active
+  - set_shot_state_slots_f_active
+  slot_row_1_group_locked_complete{device.shots.slots_d.state >= 2 and device.shots.slots_g.state < 2}:
+  - timer_slots_rotate_stop
+  - set_shot_state_slots_g_active
+  - set_shot_state_slots_h_active
+  - set_shot_state_slots_i_active
+  slot_row_1_group_locked_complete{device.shots.slots_d.state >= 2 and device.shots.slots_g.state >= 2}:
+  - timer_slots_rotate_stop
+  - timer_slots_countdown_stop
+  - party_time
 shot_profiles:
   slot_square_profile:
     advance_on_hit: false
@@ -499,11 +529,11 @@ shot_profiles:
       show: on_color
       show_tokens:
         color: red
-    - name: complete_locked
+    - name: confirmed
       show: on_color
       show_tokens:
         color: green
-    state_names_to_not_rotate: locked, complete_locked
+    state_names_to_not_rotate: locked, confirmed
 shots:
   slots_a:
     profile: slot_square_profile
@@ -515,7 +545,7 @@ shots:
       state: 1
     - events: set_shot_state_slots_a_locked
       state: 2
-    - events: set_shot_state_slots_a_complete_locked
+    - events: set_shot_state_slots_a_confirmed
       state: 3
     persist_enable: true
     switch: s_drop_bank_left
@@ -531,7 +561,7 @@ shots:
       state: 1
     - events: set_shot_state_slots_b_locked
       state: 2
-    - events: set_shot_state_slots_b_complete_locked
+    - events: set_shot_state_slots_b_confirmed
       state: 3
     persist_enable: true
     switch: s_drop_bank_center
@@ -547,7 +577,7 @@ shots:
       state: 1
     - events: set_shot_state_slots_c_locked
       state: 2
-    - events: set_shot_state_slots_c_complete_locked
+    - events: set_shot_state_slots_c_confirmed
       state: 3
     persist_enable: true
     switch: s_drop_bank_right
@@ -563,7 +593,7 @@ shots:
       state: 1
     - events: set_shot_state_slots_d_locked
       state: 2
-    - events: set_shot_state_slots_d_complete_locked
+    - events: set_shot_state_slots_d_confirmed
       state: 3
     persist_enable: true
     switch: s_drop_bank_left
@@ -579,7 +609,7 @@ shots:
       state: 1
     - events: set_shot_state_slots_e_locked
       state: 2
-    - events: set_shot_state_slots_e_complete_locked
+    - events: set_shot_state_slots_e_confirmed
       state: 3
     persist_enable: true
     switch: s_drop_bank_center
@@ -595,7 +625,7 @@ shots:
       state: 1
     - events: set_shot_state_slots_f_locked
       state: 2
-    - events: set_shot_state_slots_f_complete_locked
+    - events: set_shot_state_slots_f_confirmed
       state: 3
     persist_enable: true
     switch: s_drop_bank_right
@@ -611,7 +641,7 @@ shots:
       state: 1
     - events: set_shot_state_slots_g_locked
       state: 2
-    - events: set_shot_state_slots_g_complete_locked
+    - events: set_shot_state_slots_g_confirmed
       state: 3
     persist_enable: true
     switch: s_drop_bank_left
@@ -627,7 +657,7 @@ shots:
       state: 1
     - events: set_shot_state_slots_h_locked
       state: 2
-    - events: set_shot_state_slots_h_complete_locked
+    - events: set_shot_state_slots_h_confirmed
       state: 3
     persist_enable: true
     switch: s_drop_bank_center
@@ -643,7 +673,7 @@ shots:
       state: 1
     - events: set_shot_state_slots_i_locked
       state: 2
-    - events: set_shot_state_slots_i_complete_locked
+    - events: set_shot_state_slots_i_confirmed
       state: 3
     persist_enable: true
     switch: s_drop_bank_right

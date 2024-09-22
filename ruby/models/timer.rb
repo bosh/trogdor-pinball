@@ -18,7 +18,7 @@ module TrogBuild
 
     def start_event;    "timer_#{name}_start" end
     def stop_event;     "timer_#{name}_stop" end
-    def reset_event;    "timer_#{name}_reset" end
+    def restart_event;  "timer_#{name}_restart" end
     def complete_event; "timer_#{name}_complete" end
     def stopped_event;  "timer_#{name}_stopped" end
     def set_tick_interval_event(rate_name); "timer_#{name}_set_tick_interval_#{rate_name}" end
@@ -27,7 +27,7 @@ module TrogBuild
       base = [
         control_event('start', start_event),
         control_event('stop', stop_event),
-        control_event('reset', reset_event),
+        control_event('restart', restart_event),
       ]
 
       @tick_options.each do |(rate_name, speed)|
