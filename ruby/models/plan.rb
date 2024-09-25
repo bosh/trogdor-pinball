@@ -3,7 +3,7 @@ module TrogBuild
     attr_reader :modes
 
     def initialize()
-      @next_light_number = 11001
+      @next_light_number = 8801
       @lights = {}
       @modes = []
     end

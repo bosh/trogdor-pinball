@@ -30,7 +30,6 @@ module TrogBuild
 
       add_light_sequence "gl_grid", 9 do |i, config|
         lights_ab_tag = i % 2 != 0 ? 'lights_a' : 'lights_b'
-        config['number'] = 1000 + i
         config['tags'] = "lights_generated,#{lights_ab_tag},grid_lights,grid_#{lights_ab_tag}"
         config['type'] = 'rgb'
         config

@@ -13,6 +13,7 @@ lights:
 # 5-2 5-0 6-1 6-0
 # 7-1 6-2 7-0 7-2
 
+  # Ring A
   l_pop_ring_a_1:
     tags: lights_a, lights_pf, lights_pop_ring_a
     channels:
@@ -109,6 +110,7 @@ lights:
       white:
         number: exp_playfield-2-14-0
 
+  # Ring B
   l_pop_ring_b_1:
     tags: lights_a, lights_pf, lights_pop_ring_b
     channels:
@@ -204,3 +206,102 @@ lights:
         number: exp_playfield-2-25-0
       white:
         number: exp_playfield-2-24-2
+
+  # Ring C
+  l_pop_ring_c_1:
+    tags: lights_a, lights_pf, lights_pop_ring_c
+    channels:
+      red:
+        number: exp_playfield-2-25-1
+      green:
+        number: exp_playfield-2-25-2
+      blue:
+        number: exp_playfield-2-26-0
+      white:
+        number: exp_playfield-2-26-2
+
+  l_pop_ring_c_2:
+    tags: lights_b, lights_pf, lights_pop_ring_c
+    channels:
+      red:
+        number: exp_playfield-2-27-0
+      green:
+        number: exp_playfield-2-26-1
+      blue:
+        number: exp_playfield-2-27-2
+      white:
+        number: exp_playfield-2-27-1
+
+  l_pop_ring_c_3:
+    tags: lights_a, lights_pf, lights_pop_ring_c
+    channels:
+      red:
+        number: exp_playfield-2-28-2
+      green:
+        number: exp_playfield-2-28-0
+      blue:
+        number: exp_playfield-2-28-1
+      white:
+        number: exp_playfield-2-29-0
+
+  l_pop_ring_c_4:
+    tags: lights_b, lights_pf, lights_pop_ring_c
+    channels:
+      red:
+        number: exp_playfield-2-29-1
+      green:
+        number: exp_playfield-2-29-2
+      blue:
+        number: exp_playfield-2-30-0
+      white:
+        number: exp_playfield-2-30-2
+
+  l_pop_ring_c_5:
+    tags: lights_a, lights_pf, lights_pop_ring_c
+    channels:
+      red:
+        number: exp_playfield-2-31-0
+      green:
+        number: exp_playfield-2-30-1
+      blue:
+        number: exp_playfield-2-31-2
+      white:
+        number: exp_playfield-2-31-1
+
+  l_pop_ring_c_6:
+    tags: lights_b, lights_pf, lights_pop_ring_c
+    channels:
+      red:
+        number: exp_playfield-2-32-2
+      green:
+        number: exp_playfield-2-32-0
+      blue:
+        number: exp_playfield-2-32-1
+      # white:
+      #   number: exp_playfield-2-33-0
+
+  l_pop_ring_c_7:
+    tags: lights_a, lights_pf, lights_pop_ring_c
+    platform: smart_virtual
+    # channels:
+    #   red:
+    #     number: exp_playfield-2- +1
+    #   green:
+    #     number: exp_playfield-2- +1
+    #   blue:
+    #     number: exp_playfield-2- +1
+    #   white:
+    #     number: exp_playfield-2- +2
+
+  l_pop_ring_c_8:
+    tags: lights_b, lights_pf, lights_pop_ring_c
+    platform: smart_virtual
+    # channels:
+    #   red:
+    #     number: exp_playfield-2- +1
+    #   green:
+    #     number: exp_playfield-2- -2
+    #   blue:
+    #     number: exp_playfield-2- +4
+    #   white:
+    #     number: exp_playfield-2- -1
