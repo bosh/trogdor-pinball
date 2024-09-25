@@ -34,6 +34,21 @@ module TrogBuild
         config['type'] = 'rgb'
         config
       end
+
+      cobra_exp_base_address = 'exp_playfield-4-'
+      cobra_number = 0
+      ['a','b','c','d'].each do |letter|
+        add_light_sequence "gl_cobra_ring_#{letter}", 8 do |i, config|
+          cobra_number += 1
+          lights_ab_tag = i % 2 != 0 ? 'lights_a' : 'lights_b'
+          config['tags'] = "lights_generated,#{lights_ab_tag},lights_rings,lights_pf,lights_cobra_ring_#{letter}"
+          config['type'] = 'rgb'
+          config['platform'] = "fast"
+          config['number'] = "exp_playfield-3-#{cobra_number}"
+          config
+        end
+      end
+
     end
 
     def add_light_sequence(name, count)

@@ -11,7 +11,7 @@ module TrogBuild
     def add_light(name, config = nil)
       config ||= {}
       config['number'] = consume_light_number unless config['number']
-      config['platform'] = 'smart_virtual' unless config['smart_virtual']
+      config['platform'] = 'smart_virtual' unless config['platform']
       config['type'] = 'rgb' unless config['type']
       raise "Light #{name} already registered" if @lights[name]
       @lights[name] = config
