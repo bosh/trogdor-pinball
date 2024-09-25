@@ -109,14 +109,98 @@ lights:
       white:
         number: exp_playfield-2-14-0
 
-  #next available is 2-14-2 but if the sequence was to hold, it would be
-    # channels:
-    #   red:
-    #     number: exp_playfield-2-15-1
-    #   green:
-    #     number: exp_playfield-2-14-2
-    #   blue:
-    #     number: exp_playfield-2-15-0
-    #   white:
-    #   number: exp_playfield-2-15-2
-  #or if it was back to rgb, probably 2-14-2, 2-15-0, 2-15-1
+  l_pop_ring_b_1:
+    tags: lights_a, lights_pf, lights_pop_ring_b
+    channels:
+      red:
+        number: exp_playfield-2-14-2
+      green:
+        number: exp_playfield-2-15-0
+      blue:
+        number: exp_playfield-2-15-1
+      white:
+        number: exp_playfield-2-16-0
+
+  l_pop_ring_b_2:
+    tags: lights_b, lights_pf, lights_pop_ring_b
+    channels:
+      red:
+        number: exp_playfield-2-16-1
+      green:
+        number: exp_playfield-2-15-2
+      blue:
+        number: exp_playfield-2-17-0
+      white:
+        number: exp_playfield-2-16-2
+
+  l_pop_ring_b_3:
+    tags: lights_a, lights_pf, lights_pop_ring_b
+    channels:
+      red:
+        number: exp_playfield-2-18-0
+      green:
+        number: exp_playfield-2-17-1
+      blue:
+        number: exp_playfield-2-17-2
+      white:
+        number: exp_playfield-2-18-1
+
+  l_pop_ring_b_4:
+    tags: lights_b, lights_pf, lights_pop_ring_b
+    channels:
+      red:
+        number: exp_playfield-2-18-2
+      green:
+        number: exp_playfield-2-19-0
+      blue:
+        number: exp_playfield-2-19-1
+      white:
+        number: exp_playfield-2-20-0
+
+  l_pop_ring_b_5:
+    tags: lights_a, lights_pf, lights_pop_ring_b
+    channels:
+      red:
+        number: exp_playfield-2-20-1
+      green:
+        number: exp_playfield-2-19-2
+      blue:
+        number: exp_playfield-2-21-0
+      white:
+        number: exp_playfield-2-20-2
+
+  l_pop_ring_b_6:
+    tags: lights_b, lights_pf, lights_pop_ring_b
+    channels:
+      red:
+        number: exp_playfield-2-22-0
+      green:
+        number: exp_playfield-2-21-1
+      blue:
+        number: exp_playfield-2-21-2
+      white:
+        number: exp_playfield-2-22-1
+
+  l_pop_ring_b_7:
+    tags: lights_a, lights_pf, lights_pop_ring_b
+    channels:
+      red:
+        number: exp_playfield-2-22-2
+      green:
+        number: exp_playfield-2-23-0
+      blue:
+        number: exp_playfield-2-23-1
+      white:
+        number: exp_playfield-2-24-0
+
+  l_pop_ring_b_8:
+    tags: lights_b, lights_pf, lights_pop_ring_b
+    channels:
+      red:
+        number: exp_playfield-2-24-1
+      green:
+        number: exp_playfield-2-23-2
+      blue:
+        number: exp_playfield-2-25-0
+      white:
+        number: exp_playfield-2-24-2
