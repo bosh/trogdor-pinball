@@ -12,3 +12,5 @@ slide_player: #For GMC
 show_player:
   mode_attract_started:
     attract_light_loop: play
+    slots_spin_show:
+      key: slots_grid_show

@@ -61,7 +61,8 @@ module TrogBuild
         num = i + 1
         sg = ShotGroup.new("slot_row_#{num}_group", line_group, false)
         add_shot_group(sg)
-        add_event_player("slot_row_#{num}_group_locked_complete", [row_locked_event, "slots_confirm_row_#{num}", @rotate.stop_event])
+        add_event_player("slot_row_#{num}_group_locked_complete", [row_locked_event, "slots_confirm_row_#{num}"])
+        # Rest of row locked complete handling is done via complex generated completion handlers
         sg
       end
 
@@ -70,15 +71,17 @@ module TrogBuild
         num = i + 1
         sg = ShotGroup.new("slot_diagonal_#{num}_group", diag_group, false)
         add_shot_group(sg)
+
         add_event_player("slot_diagonal_#{num}_group_locked_complete", [
           @countdown.restart_event,
           @rotate.stop_event,
-          clear_all_targets,
-          "slots_set_active_diagonal_#{num}",
           diagonal_locked_event,
-          @rotate.set_tick_interval_event('fast'),
-          @rotate.restart_event
+          'slots_celebrate_diagonal',
+          clear_all_targets,
+          @rotate.restart_event,
+          "slots_set_active_diagonal_#{num}|500ms"
         ])
+
         sg
       end
 
@@ -91,7 +94,13 @@ module TrogBuild
         num = i + 1
         sg = ShotGroup.new("slot_neighborpair_#{num}_group", neighbor_group, false)
         add_shot_group(sg)
-        add_event_player("slot_neighborpair_#{num}_group_locked_complete", [neighborpair_locked_event, @rotate.stop_event])
+
+        add_event_player("slot_neighborpair_#{num}_group_locked_complete", [
+          @countdown.stop_event,
+          neighborpair_locked_event,
+          'slots_celebrate_pair',
+          "#{default_stop_event}|500ms"
+        ])
         sg
       end
 
@@ -104,7 +113,12 @@ module TrogBuild
         num = i + 1
         sg = ShotGroup.new("slot_splitpair_#{num}_group", split_group, false)
         add_shot_group(sg)
-        add_event_player("slot_splitpair_#{num}_group_locked_complete", [splitpair_locked_event, @rotate.stop_event])
+        add_event_player("slot_splitpair_#{num}_group_locked_complete", [
+          @countdown.stop_event,
+          splitpair_locked_event,
+          'slots_celebrate_split_pair',
+          "#{default_stop_event}|500ms"
+        ])
         sg
       end
 
@@ -113,7 +127,12 @@ module TrogBuild
         num = i + 1
         sg = ShotGroup.new("slot_singles_#{num}_group", single_group, false)
         add_shot_group(sg)
-        add_event_player("slot_singles_#{num}_group_locked_complete", [singles_locked_event, @rotate.stop_event])
+        add_event_player("slot_singles_#{num}_group_locked_complete", [
+          @countdown.stop_event,
+          singles_locked_event,
+          'slots_celebrate_single',
+          "#{default_stop_event}|500ms"
+        ])
         sg
       end
 
@@ -135,8 +154,7 @@ module TrogBuild
 
     def add_event_players!
       add_event_player(mode_start_event, [ensure_initial_targets, refresh_rotation_event])
-      add_event_player(@countdown.complete_event, [fail_event])
-      add_event_player(fail_event, [@stop_events])
+      add_event_player(@countdown.complete_event, [default_stop_event]) #TODO check if complete is triggered when a stop is issued
 
       add_event_player(@rotate.complete_event, [
         @left_column_rotation_group.rotate_left_event,
@@ -146,8 +164,6 @@ module TrogBuild
 
       generate_initial_state_setup
     end
-
-    def fail_event;                 "mode_fail_#{name}" end
 
     private
 
@@ -209,7 +225,7 @@ module TrogBuild
 
       # Completing with both others complete
       add_event_player("#{row_shot_group.name}_locked_complete{device.shots.#{other_rows_shots[0][0].name}.state >= 2 and device.shots.#{other_rows_shots[1][0].name}.state >= 2}",
-        [@rotate.stop_event, @countdown.stop_event, 'party_time']
+        [@rotate.stop_event, @countdown.stop_event, 'slots_party_time', "#{default_stop_event}|1500ms"]
       )
     end
 

@@ -64,3 +64,37 @@ show_player:
   ball_save_right_outlane_saver_disabled:
     center_ball_save_show:
       action: stop
+
+  slots_party_time:
+    slots_party_show:
+      key: slots_grid_show
+      loops: 3
+
+  slots_celebrate_diagonal:
+    slots_diagonal_result_show:
+      key: slots_grid_show
+      loops: 2
+
+  slots_celebrate_row:
+    slots_row_result_show:
+      key: slots_grid_show
+      loops: 2
+
+  slots_celebrate_pair:
+    slots_pair_result_show:
+      key: slots_grid_show
+      loops: 1
+
+  slots_celebrate_split_pair:
+    slots_split_pair_result_show:
+      key: slots_grid_show
+      loops: 1
+
+  slots_celebrate_single:
+    slots_single_result_show:
+      key: slots_grid_show
+      loops: 1
+
+  slots_stop_show:
+    slots_grid_show:
+      action: stop

@@ -1,0 +1,49 @@
+#show_version=6
+
+# Grid is:
+# a1 b2 c3
+# d4 e5 f6
+# g7 h8 i9
+
+# C is topmost point due to skew.
+
+# light names are gl_grid_<number1-9>
+# Letters match generated letter names, not lights
+# Numbers and letters may be unmatched for wiring ease in the future
+
+
+- duration: 200ms
+  lights:
+    grid_lights: off
+    gl_grid_2: red
+    gl_grid_4: red
+    gl_grid_5: purple
+    gl_grid_6: red
+    gl_grid_8: red
+
+- duration: 200ms
+  lights:
+    grid_lights: off
+    gl_grid_1: red
+    gl_grid_3: red
+    gl_grid_5: purple
+    gl_grid_7: red
+    gl_grid_9: red
+
+- duration: 200ms
+  lights:
+    grid_lights: red
+    gl_grid_5: off
+
+- duration: 200ms
+  lights:
+    grid_lights: off
+    gl_grid_5: purple
+
+- duration: 200ms
+  lights:
+    grid_lights: purple
+
+- duration: 50ms
+  lights:
+    grid_lights: off

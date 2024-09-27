@@ -1,0 +1,33 @@
+#show_version=6
+
+# Grid is:
+# 1 2 3
+# 4 5 6
+# 7 8 9
+
+# light names are gl_grid_<number1-9>
+
+- duration: 200ms
+  lights:
+    grid_lights: off
+    gl_grid_4: purple
+    gl_grid_5: purple
+    gl_grid_6: purple
+
+- duration: 100ms
+  lights:
+    grid_lights: off
+
+- duration: 200ms
+  lights:
+    grid_lights: off
+    gl_grid_1: red
+    gl_grid_2: red
+    gl_grid_3: red
+    gl_grid_7: red
+    gl_grid_8: red
+    gl_grid_9: red
+
+- duration: 100ms
+  lights:
+    grid_lights: off
