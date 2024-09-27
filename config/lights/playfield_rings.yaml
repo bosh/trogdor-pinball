@@ -1,17 +1,31 @@
 #config_version=6
+# Cobrapin Pop bumpers require manual channeling due to RGBW configuration
+# Don't add more lights after them in a chain
 
 lights:
-# Cobrapin Pop bumper light ring A - RGBW four channel requires manual channeling
-# Don't add more lights after it in a chain
 
 # The pattern appears to be as follows, repeating after 12 channels
 # 0-0 0-1 0-2 1-1
 # 1-2 1-0 2-1 2-0
 # 3-1 2-2 3-0 3-2
 
-# 4-0 4-1 4-2 5-1
-# 5-2 5-0 6-1 6-0
-# 7-1 6-2 7-0 7-2
+# in four channel counting it would be
+# 0-0 0-1 0-2 1-0
+# 1-1 0-3 1-3 1-2
+# 2-2 2-0 2-1 2-3
+# which doesn't really help at all
+
+# Pattern is RGBGWRWBGBRW
+# Thats, starting from the last available channel, 
+#  R   G   B   W
+# +1, +1, +1, +2
+# +1, -2, +4, -1
+# +4, -2, +1, +2
+# repeat
+
+# For some reason this pattern does not reset at the start of every
+# ring, so each set of 8 starts with the four channel pattern
+# offset by 1 from the previous round
 
   # Ring A
   l_pop_ring_a_1:
