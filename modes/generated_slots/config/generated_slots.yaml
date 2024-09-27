@@ -94,11 +94,21 @@ event_player:
   - slots_confirm_row_3
   - timer_slots_rotate_stop
   slot_diagonal_1_group_locked_complete:
-  - slots_diagonal_locked
+  - timer_slots_countdown_restart
   - timer_slots_rotate_stop
+  - clear_all_targets
+  - slots_set_active_diagonal_1
+  - slots_diagonal_locked
+  - timer_slots_rotate_set_tick_interval_fast
+  - timer_slots_rotate_restart
   slot_diagonal_2_group_locked_complete:
-  - slots_diagonal_locked
+  - timer_slots_countdown_restart
   - timer_slots_rotate_stop
+  - clear_all_targets
+  - slots_set_active_diagonal_2
+  - slots_diagonal_locked
+  - timer_slots_rotate_set_tick_interval_fast
+  - timer_slots_rotate_restart
   slot_neighborpair_1_group_locked_complete:
   - slots_neighborpair_locked
   - timer_slots_rotate_stop
@@ -430,6 +440,14 @@ event_player:
   - set_shot_state_slots_g_active
   - set_shot_state_slots_h_active
   - set_shot_state_slots_i_active
+  slots_set_active_diagonal_1:
+  - set_shot_state_slots_a_active
+  - set_shot_state_slots_e_active
+  - set_shot_state_slots_i_active
+  slots_set_active_diagonal_2:
+  - set_shot_state_slots_g_active
+  - set_shot_state_slots_e_active
+  - set_shot_state_slots_c_active
   slots_confirm_row_1:
   - set_shot_state_slots_a_confirmed
   - set_shot_state_slots_b_confirmed
@@ -442,9 +460,12 @@ event_player:
   - set_shot_state_slots_g_confirmed
   - set_shot_state_slots_h_confirmed
   - set_shot_state_slots_i_confirmed
-  slots_ensure_initial_targets:
+  clear_all_targets:
   - slots_unset_row_1
   - slots_unset_row_2
+  - slots_unset_row_3
+  slots_ensure_initial_targets:
+  - clear_all_targets
   - slots_set_active_row_3
   slot_row_3_group_locked_complete{device.shots.slots_a.state < 2 and device.shots.slots_d.state < 2}:
   - timer_slots_rotate_stop

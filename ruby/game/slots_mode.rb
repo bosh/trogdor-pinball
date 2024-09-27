@@ -40,6 +40,8 @@ module TrogBuild
       @row_1 = [a, b, c].freeze
       @row_2 = [d, e, f].freeze
       @row_3 = [g, h, i].freeze
+      @diag_1 = [a, e, i].freeze
+      @diag_2 = [g, e, c].freeze
       grid_shots = [a, b, c, d, e, f, g, h, i].freeze
 
       grid_shots.each do |s|
@@ -64,11 +66,19 @@ module TrogBuild
       end
 
       # Both diagonals report success and stop rotation
-      @diagonal_groups = [[a,e,i], [g,e,c]].map.with_index do |diag_group, i|
+      @diagonal_groups = [@diag_1, @diag_2].map.with_index do |diag_group, i|
         num = i + 1
         sg = ShotGroup.new("slot_diagonal_#{num}_group", diag_group, false)
         add_shot_group(sg)
-        add_event_player("slot_diagonal_#{num}_group_locked_complete", [diagonal_locked_event, @rotate.stop_event])
+        add_event_player("slot_diagonal_#{num}_group_locked_complete", [
+          @countdown.restart_event,
+          @rotate.stop_event,
+          clear_all_targets,
+          "slots_set_active_diagonal_#{num}",
+          diagonal_locked_event,
+          @rotate.set_tick_interval_event('fast'),
+          @rotate.restart_event
+        ])
         sg
       end
 
@@ -149,22 +159,28 @@ module TrogBuild
     def neighborpair_locked_event;  "slots_neighborpair_locked" end
     def ensure_initial_targets;     "slots_ensure_initial_targets" end
     def slots_active_scored;        "slots_active_scored" end
+    def clear_all_targets;          "clear_all_targets" end
     def custom_hash; {} end
 
     def generate_initial_state_setup
       # Simple mass setting management
-      add_event_player('slots_unset_row_1', @row_1.map {|s| s.set_state_event(0) })
-      add_event_player('slots_unset_row_2', @row_2.map {|s| s.set_state_event(0) })
-      add_event_player('slots_unset_row_3', @row_3.map {|s| s.set_state_event(0) })
-      add_event_player('slots_set_active_row_1', @row_1.map {|s| s.set_state_event(1) })
-      add_event_player('slots_set_active_row_2', @row_2.map {|s| s.set_state_event(1) })
-      add_event_player('slots_set_active_row_3', @row_3.map {|s| s.set_state_event(1) })
-      add_event_player('slots_confirm_row_1', @row_1.map {|s| s.set_state_event(3) })
-      add_event_player('slots_confirm_row_2', @row_2.map {|s| s.set_state_event(3) })
-      add_event_player('slots_confirm_row_3', @row_3.map {|s| s.set_state_event(3) })
+      add_event_player('slots_unset_row_1',           @row_1.map {|s| s.set_state_event(0) })
+      add_event_player('slots_unset_row_2',           @row_2.map {|s| s.set_state_event(0) })
+      add_event_player('slots_unset_row_3',           @row_3.map {|s| s.set_state_event(0) })
+
+      add_event_player('slots_set_active_row_1',      @row_1.map {|s| s.set_state_event(1) })
+      add_event_player('slots_set_active_row_2',      @row_2.map {|s| s.set_state_event(1) })
+      add_event_player('slots_set_active_row_3',      @row_3.map {|s| s.set_state_event(1) })
+      add_event_player('slots_set_active_diagonal_1', @diag_1.map {|s| s.set_state_event(1) })
+      add_event_player('slots_set_active_diagonal_2', @diag_2.map {|s| s.set_state_event(1) })
+
+      add_event_player('slots_confirm_row_1',         @row_1.map {|s| s.set_state_event(3) })
+      add_event_player('slots_confirm_row_2',         @row_2.map {|s| s.set_state_event(3) })
+      add_event_player('slots_confirm_row_3',         @row_3.map {|s| s.set_state_event(3) })
 
       # The actual reset on start
-      add_event_player(ensure_initial_targets, ['slots_unset_row_1', 'slots_unset_row_2', 'slots_set_active_row_3'])
+      add_event_player(clear_all_targets, ['slots_unset_row_1', 'slots_unset_row_2', 'slots_unset_row_3'])
+      add_event_player(ensure_initial_targets, [clear_all_targets, 'slots_set_active_row_3'])
 
       add_row_completion_handler(@row_groups[2], [@row_1, @row_2])
       add_row_completion_handler(@row_groups[1], [@row_1, @row_3])
