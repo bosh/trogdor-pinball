@@ -1,0 +1,46 @@
+#show_version=6
+# Wakka wakka
+
+---
+- duration: 100ms
+  lights:
+    grid_lights: 'off'
+    gl_grid_1: red
+- duration: 100ms
+  lights:
+    grid_lights: 'off'
+    gl_grid_2: red
+- duration: 100ms
+  lights:
+    grid_lights: 'off'
+    gl_grid_3: red
+- duration: 100ms
+  lights:
+    grid_lights: 'off'
+    gl_grid_6: red
+- duration: 100ms
+  lights:
+    grid_lights: 'off'
+    gl_grid_9: red
+- duration: 100ms
+  lights:
+    grid_lights: 'off'
+    gl_grid_8: red
+- duration: 100ms
+  lights:
+    grid_lights: 'off'
+    gl_grid_7: red
+- duration: 100ms
+  lights:
+    grid_lights: 'off'
+    gl_grid_4: red
+- duration: 100ms
+  lights:
+    grid_lights: 'off'
+    gl_grid_5: red
+- duration: 99ms
+  lights:
+    grid_lights: 'off'
+- duration: 1ms
+  events: slots_show_loop_complete
+

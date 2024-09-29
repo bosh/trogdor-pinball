@@ -1,0 +1,46 @@
+#show_version=6
+# akkaW akkaW
+
+---
+- duration: 100ms
+  lights:
+    grid_lights: 'off'
+    gl_grid_5: purple
+- duration: 100ms
+  lights:
+    grid_lights: 'off'
+    gl_grid_4: purple
+- duration: 100ms
+  lights:
+    grid_lights: 'off'
+    gl_grid_7: purple
+- duration: 100ms
+  lights:
+    grid_lights: 'off'
+    gl_grid_8: purple
+- duration: 100ms
+  lights:
+    grid_lights: 'off'
+    gl_grid_9: purple
+- duration: 100ms
+  lights:
+    grid_lights: 'off'
+    gl_grid_6: purple
+- duration: 100ms
+  lights:
+    grid_lights: 'off'
+    gl_grid_3: purple
+- duration: 100ms
+  lights:
+    grid_lights: 'off'
+    gl_grid_2: purple
+- duration: 100ms
+  lights:
+    grid_lights: 'off'
+    gl_grid_1: purple
+- duration: 99ms
+  lights:
+    grid_lights: 'off'
+- duration: 1ms
+  events: slots_show_loop_complete
+

@@ -5,6 +5,46 @@ module TrogBuild
     def medium_tick;'500ms' end
     def fast_tick;'375ms' end
 
+    # The shows are here for convenience, and not really used in the slots mode behaviors
+    def add_shows!
+      slots_show_loop_complete = 'slots_show_loop_complete'
+      slot_grid_stop_show = Show.new('slots_stop', 'Should allow falling through to attract base show')
+      slot_grid_stop_show.add_step('800ms', {grid_lights: 'stop'})
+      slot_grid_stop_show.add_event_step(slots_show_loop_complete)
+      add_show(slot_grid_stop_show)
+
+      spiral_in_show = Show.new('slots_spiral_in', 'Wakka wakka')
+      [1,2,3,6,9,8,7,4,5,nil].each do |i|
+        step_lights = {grid_lights: 'off'}
+        step_lights["gl_grid_#{i}"] = 'red' if i
+        spiral_in_show.add_step('100ms', step_lights)
+      end
+      spiral_in_show.add_event_step(slots_show_loop_complete)
+      add_show(spiral_in_show)
+
+      spiral_out_show = Show.new('slots_spiral_out', 'akkaW akkaW')
+      [5,4,7,8,9,6,3,2,1,nil].each do |i|
+        step_lights = {grid_lights: 'off'}
+        step_lights["gl_grid_#{i}"] = 'purple' if i
+        spiral_out_show.add_step('100ms', step_lights)
+      end
+      spiral_out_show.add_event_step(slots_show_loop_complete)
+      add_show(spiral_out_show)
+
+      out_in_in_out_show = Show.new('slots_out_in_in_out_show', 'Some flashing')
+      [:out, :in, :in, :out].each do |type|
+        if type == :out
+          out_in_in_out_show.add_step('200ms', {grid_lights: 'red', gl_grid_5: 'off'})
+        elsif type == :in
+          out_in_in_out_show.add_step('200ms', {grid_lights: 'off', gl_grid_5: 'red'})
+        else
+          out_in_in_out_show.add_step('100ms', {grid_lights: 'off'})
+        end
+      end
+      out_in_in_out_show.add_event_step(slots_show_loop_complete)
+      add_show(out_in_in_out_show)
+    end
+
     def add_timers!
       @countdown = Timer.new('slots_countdown', 6, 0, '5000ms', true, true, false) #30s with a 5s checkin to reduce spam
       add_timer(@countdown)

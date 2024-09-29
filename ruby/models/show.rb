@@ -12,6 +12,15 @@ module TrogBuild
       @steps
     end
 
+    def add_event_step(event)
+      prev = @steps.last
+      if prev
+        prev['duration'] = "#{prev['duration'].to_i - 1}ms"
+      end
+      @steps << {'duration' => '1ms', 'events' => event}
+      @steps.last
+    end
+
     def add_step(duration, lights)
       step = {
         'duration' => duration.to_s

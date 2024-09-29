@@ -9,8 +9,39 @@ slide_player: #For GMC
     startup:
       action: remove
 
+event_player:
+  mode_attract_started: start_slots_spin_show #slots_show_loop_complete
+  slots_show_loop_complete: start_slots_party_show #TODO this is a hack while random doesnt work
+
 show_player:
   mode_attract_started:
     attract_light_loop: play
+
+  start_slots_spin_show:
     slots_spin_show:
       key: slots_grid_show
+  start_slots_party_show:
+    slots_party_show:
+      key: slots_grid_show
+  start_slots_out_in_show:
+    slots_out_in_in_out_show:
+      key: slots_grid_show
+  start_slots_spiral_in_show:
+    slots_spiral_in:
+      key: slots_grid_show
+  start_slots_spiral_out_show:
+    slots_spiral_out:
+      key: slots_grid_show
+  start_slots_stop_show:
+    slots_stop:
+      key: slots_grid_show
+
+# random_event_player:
+#   slots_show_loop_complete:
+#     events:
+#       - start_slots_spin_show
+#       - start_slots_party_show
+#       - start_slots_out_in_show
+#       - start_slots_spiral_in_show
+#       - start_slots_spiral_out_show
+#       - start_slots_stop_show

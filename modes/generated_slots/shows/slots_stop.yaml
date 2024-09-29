@@ -1,0 +1,10 @@
+#show_version=6
+# Should allow falling through to attract base show
+
+---
+- duration: 799ms
+  lights:
+    grid_lights: stop
+- duration: 1ms
+  events: slots_show_loop_complete
+

@@ -32,9 +32,12 @@
     gl_grid_5: red
     gl_grid_7: red
 
-- duration: 200ms
+- duration: 199ms
   lights:
     grid_lights: off
     gl_grid_6: red
     gl_grid_5: red
     gl_grid_4: red
+
+- duration: 1ms
+  events: slots_show_loop_complete
