@@ -3,6 +3,18 @@ module TrogBuild
     def custom_top_comment; 'Majesty Achievements!' end
     def generate_start_events; 'ball_started' end
 
+    def initialize(*args)
+      super
+      @achievements = [
+        achievement('burnination', 1, 'pops_burnination'),
+        achievement('a2', 2),
+        achievement('a3', 3),
+        achievement('a4', 4),
+        achievement('a5', 5),
+        achievement('a6', 6),
+      ]
+    end
+
     def add_shows!
       @rainbow_show = Show.new('majesty_rainbow_loop', '6 majesty lights spin twice')
       6.times do |i|
@@ -32,31 +44,42 @@ module TrogBuild
     end
 
     def custom_hash
-      {
-        'achievements' => {
-          'burnination' => achievement_hash('burnination', 1, 'mode_start_pops_burnination', 'pops_burnination'),
-          'a2' => achievement_hash('a2', 2, nil, 'a2'),
-          'a3' => achievement_hash('a3', 3, nil, 'a3'),
-          'a4' => achievement_hash('a4', 4, nil, 'a4'),
-          'a5' => achievement_hash('a5', 5, nil, 'a5'),
-          'a6' => achievement_hash('a6', 6, nil, 'a6')
-        }
-      }
+      @achievements.inject({'achievements' => {}}) do |out, a|
+        out['achievements'].merge!({a.name => a.to_hash})
+        out
+      end
     end
 
-    def achievement_hash(name, majesty_number, start_events, event_template_name)
+    def achievement(name, majesty_number, mode_name=nil)
+      if mode_name
+        Achievement.new(name, majesty_number, "mode_start_#{mode_name}", "mode_fail_#{mode_name}", "mode_complete_#{mode_name}")
+      else
+        Achievement.new(name, majesty_number)
+      end
+    end
+  end
+
+  class Achievement
+    attr_reader :name
+    def initialize(name, majesty_number, start_events=nil, stop_events=nil, complete_events=nil)
+      @name = name
+      @light = "l_majesty_#{majesty_number}"
+      @start_events = start_events || "mode_start_achievement_#{name}"
+      @stop_events = stop_events || "mode_fail_achievement_#{name}"
+      @complete_events = complete_events || "mode_complete_achievement_#{name}"
+    end
+
+    def to_hash
       {
         'start_enabled' => true,
-        'show_tokens' => {
-          'light' => "l_majesty_#{majesty_number}"
-        },
+        'show_tokens' => {'light' => @light},
         'show_when_started' => 'flash',
         'show_when_completed' => 'on',
         'restart_after_stop_possible' => true,
         'events_when_completed' => 'celebrate_achievement',
-        'start_events' => start_events || "start_achievement_#{name}",
-        'stop_events' => "mode_fail_#{event_template_name}",
-        'complete_events' => "mode_complete_#{event_template_name}"
+        'start_events' => @start_events,
+        'stop_events' => @stop_events,
+        'complete_events' => @complete_events
       }
     end
   end
