@@ -195,4 +195,5 @@ drop_target_banks:
   slots_target_bank:
     drop_targets: dt_left, dt_center, dt_right
     reset_coils: c_slot_bank_reset
+    reset_events: drop_target_bank_reset_slots, machine_reset_phase_3, ball_starting #TODO do I really need to declare the default pair?
     reset_on_complete: #No

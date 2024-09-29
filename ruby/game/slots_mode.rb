@@ -79,6 +79,7 @@ module TrogBuild
           'slots_celebrate_diagonal',
           clear_all_targets,
           @rotate.restart_event,
+          drop_target_bank_reset_slots,
           "slots_set_active_diagonal_#{num}|500ms"
         ])
 
@@ -99,6 +100,7 @@ module TrogBuild
           @countdown.stop_event,
           neighborpair_locked_event,
           'slots_celebrate_pair',
+          drop_target_bank_reset_slots,
           "#{default_stop_event}|500ms"
         ])
         sg
@@ -117,6 +119,7 @@ module TrogBuild
           @countdown.stop_event,
           splitpair_locked_event,
           'slots_celebrate_split_pair',
+          # split pair does not warrant a reset on exit
           "#{default_stop_event}|500ms"
         ])
         sg
@@ -131,6 +134,7 @@ module TrogBuild
           @countdown.stop_event,
           singles_locked_event,
           'slots_celebrate_single',
+          # single does not warrant a reset on exit
           "#{default_stop_event}|500ms"
         ])
         sg
@@ -153,8 +157,8 @@ module TrogBuild
     end
 
     def add_event_players!
-      add_event_player(mode_start_event, [ensure_initial_targets, refresh_rotation_event])
-      add_event_player(@countdown.complete_event, [default_stop_event]) #TODO check if complete is triggered when a stop is issued
+      add_event_player(mode_start_event, [ensure_initial_targets, drop_target_bank_reset_slots, refresh_rotation_event])
+      add_event_player(@countdown.complete_event, [default_stop_event]) #TODO check if complete is triggered when a stop is issued on the timer
 
       add_event_player(@rotate.complete_event, [
         @left_column_rotation_group.rotate_left_event,
@@ -167,6 +171,7 @@ module TrogBuild
 
     private
 
+    def drop_target_bank_reset_slots; "drop_target_bank_reset_slots" end # Per config in future.yaml
     def refresh_rotation_event;     "slots_refresh_rotation" end
     def singles_locked_event;       "slots_singles_locked" end
     def row_locked_event;           "slots_row_locked" end
@@ -196,7 +201,7 @@ module TrogBuild
 
       # The actual reset on start
       add_event_player(clear_all_targets, ['slots_unset_row_1', 'slots_unset_row_2', 'slots_unset_row_3'])
-      add_event_player(ensure_initial_targets, [clear_all_targets, 'slots_set_active_row_3'])
+      add_event_player(ensure_initial_targets, [clear_all_targets, 'slots_set_active_row_3', drop_target_bank_reset_slots])
 
       add_row_completion_handler(@row_groups[2], [@row_1, @row_2])
       add_row_completion_handler(@row_groups[1], [@row_1, @row_3])
@@ -204,29 +209,41 @@ module TrogBuild
     end
 
     def add_row_completion_handler(row_shot_group, other_rows_shots)
+      # These handlers decide which row should be marked as the target for the next round.
+      # This could maybe be replaced with a player var for each row being complete.
+      # Right now we just check shot[0] in each row, because a finished row should be the same across [0-2]
+      # --Adding row down tracking to a player var also allows speed checking to defer to that
+
       # Completing with others both incomplete
       add_event_player("#{row_shot_group.name}_locked_complete{device.shots.#{other_rows_shots[0][0].name}.state < 2 and device.shots.#{other_rows_shots[1][0].name}.state < 2}",
         [@rotate.stop_event] + #pause for processing
         other_rows_shots[1].map {|s| s.set_state_event(1) } + #mark row 2 active
         other_rows_shots[0].map {|s| s.set_state_event(0) } + #mark row 1 inactive
-        [@rotate.restart_event]
+        [@rotate.restart_event, drop_target_bank_reset_slots]
       )
 
-      # Completing with one complete, other incomplete
+      # Completing with next complete, last incomplete
       add_event_player("#{row_shot_group.name}_locked_complete{device.shots.#{other_rows_shots[0][0].name}.state < 2 and device.shots.#{other_rows_shots[1][0].name}.state >= 2}",
         [@rotate.stop_event] + #pause because no reason to rotate on last row
-        other_rows_shots[0].map {|s| s.set_state_event(1) }
+        other_rows_shots[0].map {|s| s.set_state_event(1) } +
+        [drop_target_bank_reset_slots]
       )
-      # Completing with one complete, other incomplete
+      # Completing with next incomplete, last complete
       add_event_player("#{row_shot_group.name}_locked_complete{device.shots.#{other_rows_shots[0][0].name}.state >= 2 and device.shots.#{other_rows_shots[1][0].name}.state < 2}",
         [@rotate.stop_event] + #pause because no reason to rotate on last row
-        other_rows_shots[1].map {|s| s.set_state_event(1) }
+        other_rows_shots[1].map {|s| s.set_state_event(1) } +
+        [drop_target_bank_reset_slots]
       )
 
       # Completing with both others complete
-      add_event_player("#{row_shot_group.name}_locked_complete{device.shots.#{other_rows_shots[0][0].name}.state >= 2 and device.shots.#{other_rows_shots[1][0].name}.state >= 2}",
-        [@rotate.stop_event, @countdown.stop_event, 'slots_party_time', "#{default_stop_event}|1500ms"]
-      )
+      add_event_player("#{row_shot_group.name}_locked_complete{device.shots.#{other_rows_shots[0][0].name}.state >= 2 and device.shots.#{other_rows_shots[1][0].name}.state >= 2}", [
+        @rotate.stop_event,
+        @countdown.stop_event,
+        'slots_party_time',
+        "#{drop_target_bank_reset_slots}|1400ms",
+        "#{default_stop_event}|1500ms",
+        # TODO this need a better reward -- multiball and/or achievement?
+      ])
     end
 
     def generate_refresh_interval_hooks(grid_shots)

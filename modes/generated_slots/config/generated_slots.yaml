@@ -97,6 +97,7 @@ event_player:
   - slots_celebrate_diagonal
   - clear_all_targets
   - timer_slots_rotate_restart
+  - drop_target_bank_reset_slots
   - slots_set_active_diagonal_1|500ms
   slot_diagonal_2_group_locked_complete:
   - timer_slots_countdown_restart
@@ -105,66 +106,79 @@ event_player:
   - slots_celebrate_diagonal
   - clear_all_targets
   - timer_slots_rotate_restart
+  - drop_target_bank_reset_slots
   - slots_set_active_diagonal_2|500ms
   slot_neighborpair_1_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_neighborpair_locked
   - slots_celebrate_pair
+  - drop_target_bank_reset_slots
   - mode_stop_generated_slots|500ms
   slot_neighborpair_2_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_neighborpair_locked
   - slots_celebrate_pair
+  - drop_target_bank_reset_slots
   - mode_stop_generated_slots|500ms
   slot_neighborpair_3_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_neighborpair_locked
   - slots_celebrate_pair
+  - drop_target_bank_reset_slots
   - mode_stop_generated_slots|500ms
   slot_neighborpair_4_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_neighborpair_locked
   - slots_celebrate_pair
+  - drop_target_bank_reset_slots
   - mode_stop_generated_slots|500ms
   slot_neighborpair_5_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_neighborpair_locked
   - slots_celebrate_pair
+  - drop_target_bank_reset_slots
   - mode_stop_generated_slots|500ms
   slot_neighborpair_6_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_neighborpair_locked
   - slots_celebrate_pair
+  - drop_target_bank_reset_slots
   - mode_stop_generated_slots|500ms
   slot_neighborpair_7_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_neighborpair_locked
   - slots_celebrate_pair
+  - drop_target_bank_reset_slots
   - mode_stop_generated_slots|500ms
   slot_neighborpair_8_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_neighborpair_locked
   - slots_celebrate_pair
+  - drop_target_bank_reset_slots
   - mode_stop_generated_slots|500ms
   slot_neighborpair_9_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_neighborpair_locked
   - slots_celebrate_pair
+  - drop_target_bank_reset_slots
   - mode_stop_generated_slots|500ms
   slot_neighborpair_10_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_neighborpair_locked
   - slots_celebrate_pair
+  - drop_target_bank_reset_slots
   - mode_stop_generated_slots|500ms
   slot_neighborpair_11_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_neighborpair_locked
   - slots_celebrate_pair
+  - drop_target_bank_reset_slots
   - mode_stop_generated_slots|500ms
   slot_neighborpair_12_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_neighborpair_locked
   - slots_celebrate_pair
+  - drop_target_bank_reset_slots
   - mode_stop_generated_slots|500ms
   slot_splitpair_1_group_locked_complete:
   - timer_slots_countdown_stop
@@ -448,6 +462,7 @@ event_player:
   : timer_slots_rotate_set_tick_interval_fast
   mode_generated_slots_started:
   - slots_ensure_initial_targets
+  - drop_target_bank_reset_slots
   - slots_refresh_rotation
   timer_slots_countdown_complete:
   - mode_stop_generated_slots
@@ -506,6 +521,7 @@ event_player:
   slots_ensure_initial_targets:
   - clear_all_targets
   - slots_set_active_row_3
+  - drop_target_bank_reset_slots
   slot_row_3_group_locked_complete{device.shots.slots_a.state < 2 and device.shots.slots_d.state < 2}:
   - timer_slots_rotate_stop
   - set_shot_state_slots_d_active
@@ -515,20 +531,24 @@ event_player:
   - set_shot_state_slots_b_inactive
   - set_shot_state_slots_c_inactive
   - timer_slots_rotate_restart
+  - drop_target_bank_reset_slots
   slot_row_3_group_locked_complete{device.shots.slots_a.state < 2 and device.shots.slots_d.state >= 2}:
   - timer_slots_rotate_stop
   - set_shot_state_slots_a_active
   - set_shot_state_slots_b_active
   - set_shot_state_slots_c_active
+  - drop_target_bank_reset_slots
   slot_row_3_group_locked_complete{device.shots.slots_a.state >= 2 and device.shots.slots_d.state < 2}:
   - timer_slots_rotate_stop
   - set_shot_state_slots_d_active
   - set_shot_state_slots_e_active
   - set_shot_state_slots_f_active
+  - drop_target_bank_reset_slots
   slot_row_3_group_locked_complete{device.shots.slots_a.state >= 2 and device.shots.slots_d.state >= 2}:
   - timer_slots_rotate_stop
   - timer_slots_countdown_stop
   - slots_party_time
+  - drop_target_bank_reset_slots|1400ms
   - mode_stop_generated_slots|1500ms
   slot_row_2_group_locked_complete{device.shots.slots_a.state < 2 and device.shots.slots_g.state < 2}:
   - timer_slots_rotate_stop
@@ -539,20 +559,24 @@ event_player:
   - set_shot_state_slots_b_inactive
   - set_shot_state_slots_c_inactive
   - timer_slots_rotate_restart
+  - drop_target_bank_reset_slots
   slot_row_2_group_locked_complete{device.shots.slots_a.state < 2 and device.shots.slots_g.state >= 2}:
   - timer_slots_rotate_stop
   - set_shot_state_slots_a_active
   - set_shot_state_slots_b_active
   - set_shot_state_slots_c_active
+  - drop_target_bank_reset_slots
   slot_row_2_group_locked_complete{device.shots.slots_a.state >= 2 and device.shots.slots_g.state < 2}:
   - timer_slots_rotate_stop
   - set_shot_state_slots_g_active
   - set_shot_state_slots_h_active
   - set_shot_state_slots_i_active
+  - drop_target_bank_reset_slots
   slot_row_2_group_locked_complete{device.shots.slots_a.state >= 2 and device.shots.slots_g.state >= 2}:
   - timer_slots_rotate_stop
   - timer_slots_countdown_stop
   - slots_party_time
+  - drop_target_bank_reset_slots|1400ms
   - mode_stop_generated_slots|1500ms
   slot_row_1_group_locked_complete{device.shots.slots_d.state < 2 and device.shots.slots_g.state < 2}:
   - timer_slots_rotate_stop
@@ -563,20 +587,24 @@ event_player:
   - set_shot_state_slots_e_inactive
   - set_shot_state_slots_f_inactive
   - timer_slots_rotate_restart
+  - drop_target_bank_reset_slots
   slot_row_1_group_locked_complete{device.shots.slots_d.state < 2 and device.shots.slots_g.state >= 2}:
   - timer_slots_rotate_stop
   - set_shot_state_slots_d_active
   - set_shot_state_slots_e_active
   - set_shot_state_slots_f_active
+  - drop_target_bank_reset_slots
   slot_row_1_group_locked_complete{device.shots.slots_d.state >= 2 and device.shots.slots_g.state < 2}:
   - timer_slots_rotate_stop
   - set_shot_state_slots_g_active
   - set_shot_state_slots_h_active
   - set_shot_state_slots_i_active
+  - drop_target_bank_reset_slots
   slot_row_1_group_locked_complete{device.shots.slots_d.state >= 2 and device.shots.slots_g.state >= 2}:
   - timer_slots_rotate_stop
   - timer_slots_countdown_stop
   - slots_party_time
+  - drop_target_bank_reset_slots|1400ms
   - mode_stop_generated_slots|1500ms
 shot_profiles:
   slot_square_profile:
