@@ -7,10 +7,8 @@ module TrogBuild
 
     # The shows are here for convenience, and not really used in the slots mode behaviors
     def add_shows!
-      slots_show_loop_complete = 'slots_show_loop_complete'
       slot_grid_stop_show = Show.new('slots_stop', 'Should allow falling through to attract base show')
       slot_grid_stop_show.add_step('800ms', {grid_lights: 'stop'})
-      slot_grid_stop_show.add_event_step(slots_show_loop_complete)
       add_show(slot_grid_stop_show)
 
       spiral_in_show = Show.new('slots_spiral_in', 'Wakka wakka')
@@ -19,7 +17,6 @@ module TrogBuild
         step_lights["gl_grid_#{i}"] = 'red' if i
         spiral_in_show.add_step('100ms', step_lights)
       end
-      spiral_in_show.add_event_step(slots_show_loop_complete)
       add_show(spiral_in_show)
 
       spiral_out_show = Show.new('slots_spiral_out', 'akkaW akkaW')
@@ -28,7 +25,6 @@ module TrogBuild
         step_lights["gl_grid_#{i}"] = 'purple' if i
         spiral_out_show.add_step('100ms', step_lights)
       end
-      spiral_out_show.add_event_step(slots_show_loop_complete)
       add_show(spiral_out_show)
 
       out_in_in_out_show = Show.new('slots_out_in_in_out_show', 'Some flashing')
@@ -41,7 +37,6 @@ module TrogBuild
           out_in_in_out_show.add_step('100ms', {grid_lights: 'off'})
         end
       end
-      out_in_in_out_show.add_event_step(slots_show_loop_complete)
       add_show(out_in_in_out_show)
     end
 

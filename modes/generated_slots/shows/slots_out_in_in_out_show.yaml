@@ -14,10 +14,8 @@
   lights:
     grid_lights: 'off'
     gl_grid_5: red
-- duration: 199ms
+- duration: 200ms
   lights:
     grid_lights: red
     gl_grid_5: 'off'
-- duration: 1ms
-  events: slots_show_loop_complete
 

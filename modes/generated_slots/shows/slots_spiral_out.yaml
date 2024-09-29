@@ -38,9 +38,7 @@
   lights:
     grid_lights: 'off'
     gl_grid_1: purple
-- duration: 99ms
+- duration: 100ms
   lights:
     grid_lights: 'off'
-- duration: 1ms
-  events: slots_show_loop_complete
 

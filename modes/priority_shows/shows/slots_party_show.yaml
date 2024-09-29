@@ -44,9 +44,6 @@
   lights:
     grid_lights: purple
 
-- duration: 49ms
+- duration: 50ms
   lights:
     grid_lights: off
-
-- duration: 1ms
-  events: slots_show_loop_complete
