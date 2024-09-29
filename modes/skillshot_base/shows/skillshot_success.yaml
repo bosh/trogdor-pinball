@@ -2,20 +2,20 @@
 
 - duration: 150ms
   lights:
-    lights_a: red
-    lights_b: off
+    lights_2a: red
+    lights_2b: off
 
 - duration: 150ms
   lights:
-    lights_a: off
-    lights_b: red
+    lights_2a: off
+    lights_2b: red
 
 - duration: 150ms
   lights:
-    lights_a: purple
-    lights_b: purple
+    lights_2a: purple
+    lights_2b: purple
 
 - duration: 50ms
   lights:
-    lights_a: off
-    lights_b: off
+    lights_2a: off
+    lights_2b: off
