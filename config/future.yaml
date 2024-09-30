@@ -8,7 +8,6 @@ switches:
   s_pop_left:
     number: 801
     platform: smart_virtual
-
   s_pop_right:
     number: 802
     platform: smart_virtual
@@ -89,6 +88,13 @@ switches:
     platform: smart_virtual
   s_drop_bank_right:
     number: 823
+    platform: smart_virtual
+
+  s_captive_ball_target:
+    number: 824
+    platform: smart_virtual
+  s_captive_ball_presence: #Opto, normally blocked when undisturbed
+    number: 825
     platform: smart_virtual
 
 coils:

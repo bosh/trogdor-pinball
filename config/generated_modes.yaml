@@ -1,5 +1,6 @@
 #config_version=6
-# This file is generated to load the other generated files---
+# This file is generated to load the other generated files
+---
 modes:
 - generated_example
 - generated_achievements

@@ -22,8 +22,10 @@ player_vars:
     initial_value: 0
     value_type: int
 
-  # Slings
+  # misc features that count
   sling_hits:
+    initial_value: 0
+  captive_ball_target_hits:
     initial_value: 0
 
   # pops_burnination mode behaviors:

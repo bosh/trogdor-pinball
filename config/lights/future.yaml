@@ -146,3 +146,49 @@ lights:
     platform: smart_virtual
     type: rgb
     tags: lights_2b, lights_cab, lights_dome_ring_a
+
+  l_captive_ball_single:
+    number: 9028
+    platform: smart_virtual
+    type: rgb
+    tags: lights_2a, lights_pf
+  l_captive_ball_ring_1:
+    number: 9029
+    platform: smart_virtual
+    type: rgb
+    tags: lights_2a, lights_pf, lights_captive_ring
+  l_captive_ball_ring_2:
+    number: 9030
+    platform: smart_virtual
+    type: rgb
+    tags: lights_2b, lights_pf, lights_captive_ring
+  l_captive_ball_ring_3:
+    number: 9031
+    platform: smart_virtual
+    type: rgb
+    tags: lights_2a, lights_pf, lights_captive_ring
+  l_captive_ball_ring_4:
+    number: 9032
+    platform: smart_virtual
+    type: rgb
+    tags: lights_2b, lights_pf, lights_captive_ring
+  l_captive_ball_ring_5:
+    number: 9033
+    platform: smart_virtual
+    type: rgb
+    tags: lights_2a, lights_pf, lights_captive_ring
+  l_captive_ball_ring_6:
+    number: 9034
+    platform: smart_virtual
+    type: rgb
+    tags: lights_2b, lights_pf, lights_captive_ring
+  l_captive_ball_ring_7:
+    number: 9035
+    platform: smart_virtual
+    type: rgb
+    tags: lights_2a, lights_pf, lights_captive_ring
+  l_captive_ball_ring_8:
+    number: 9036
+    platform: smart_virtual
+    type: rgb
+    tags: lights_2b, lights_pf, lights_captive_ring

@@ -63,7 +63,7 @@ module TrogBuild
 
       mode_name_list = plan.modes.map(&:name)
       File.open(mode_manifest_path, 'w') do |file|
-        file.write("#config_version=6\n# This file is generated to load the other generated files")
+        file.write("#config_version=6\n# This file is generated to load the other generated files\n")
         file.write({'modes' => mode_name_list}.to_yaml)
         file.write("\n")
       end
