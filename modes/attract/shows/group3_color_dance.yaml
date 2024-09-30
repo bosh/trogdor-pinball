@@ -1,0 +1,49 @@
+#show_version=6
+
+# flash group3 a/b/c :: red, green, then blue
+
+- duration: 300ms
+  lights:
+    lights_3a: 'aa0000'
+    lights_3b: off
+    lights_3c: off
+
+- duration: 300ms
+  lights:
+    lights_3a: off
+    lights_3b: 'aa0000'
+
+- duration: 300ms
+  lights:
+    lights_3b: off
+    lights_3c: 'aa0000'
+
+- duration: 300ms
+  lights:
+    lights_3a: '00aa00'
+    lights_3c: off
+
+- duration: 300ms
+  lights:
+    lights_3a: off
+    lights_3b: '00aa00'
+
+- duration: 300ms
+  lights:
+    lights_3b: off
+    lights_3c: '00aa00'
+
+- duration: 300ms
+  lights:
+    lights_3a: '0000aa'
+    lights_3b: off
+
+- duration: 300ms
+  lights:
+    lights_3a: off
+    lights_3b: '0000aa'
+
+- duration: 300ms
+  lights:
+    lights_3b: off
+    lights_3c: '0000aa'

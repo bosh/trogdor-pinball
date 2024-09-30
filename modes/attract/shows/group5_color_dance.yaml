@@ -1,0 +1,86 @@
+#show_version=6
+
+# flash group4 a/b/c/d/e :: red, green, then blue
+
+- duration: 180ms
+  lights:
+    lights_5a: red
+    lights_5b: off
+    lights_5c: off
+    lights_5d: off
+    lights_5e: off
+
+- duration: 180ms
+  lights:
+    lights_5a: off
+    lights_5b: red
+
+- duration: 180ms
+  lights:
+    lights_5b: off
+    lights_5c: red
+
+- duration: 180ms
+  lights:
+    lights_5c: off
+    lights_5d: red
+
+- duration: 180ms
+  lights:
+    lights_5d: off
+    lights_5e: red
+
+- duration: 180ms
+  lights:
+    lights_5a: green
+    lights_5e: off
+
+- duration: 180ms
+  lights:
+    lights_5a: off
+    lights_5b: green
+
+- duration: 180ms
+  lights:
+    lights_5b: off
+    lights_5c: green
+
+- duration: 180ms
+  lights:
+    lights_5c: off
+    lights_5d: green
+
+- duration: 180ms
+  lights:
+    lights_5d: off
+    lights_5e: green
+
+- duration: 180ms
+  lights:
+    lights_5a: blue
+    lights_5e: off
+
+- duration: 180ms
+  lights:
+    lights_5a: off
+    lights_5b: blue
+
+- duration: 180ms
+  lights:
+    lights_5b: off
+    lights_5c: blue
+
+- duration: 180ms
+  lights:
+    lights_5b: off
+    lights_5c: blue
+
+- duration: 180ms
+  lights:
+    lights_5c: off
+    lights_5d: blue
+
+- duration: 180ms
+  lights:
+    lights_5d: off
+    lights_5e: blue

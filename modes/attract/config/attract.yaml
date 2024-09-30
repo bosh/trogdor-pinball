@@ -10,11 +10,36 @@ slide_player: #For GMC
       action: remove
 
 event_player:
-  mode_attract_started: slots_show_reloop
+  mode_attract_started:
+    - main_show_reloop
+    - slots_show_reloop
 
 show_player:
-  mode_attract_started:
-    attract_light_loop: play
+  main_show_reloop:
+    light_test_loop:
+      key: main_attract_show
+      loops: 1
+      events_when_completed: start_group2_color_dance
+  start_group2_color_dance:
+    group2_color_dance:
+      key: main_attract_show
+      loops: 2
+      events_when_completed: start_group3_color_dance
+  start_group3_color_dance:
+    group3_color_dance:
+      key: main_attract_show
+      loops: 1
+      events_when_completed: start_group4_color_dance
+  start_group4_color_dance:
+    group4_color_dance:
+      key: main_attract_show
+      loops: 0
+      events_when_completed: start_group5_color_dance
+  start_group5_color_dance:
+    group5_color_dance:
+      key: main_attract_show
+      loops: 0
+      events_when_completed: main_show_reloop
 
   start_slots_spin_show:
     slots_spin_show:

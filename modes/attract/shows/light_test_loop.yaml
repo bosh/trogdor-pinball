@@ -1,0 +1,34 @@
+#show_version=6
+
+- duration: 750ms #Start off
+  lights:
+    "*": off
+
+- duration: 220ms #Ascend 3,7,10, off
+  lights:
+    "*": '333333'
+
+- duration: 220ms
+  lights:
+    "*": '777777'
+
+- duration: 260ms
+  lights:
+    "*": 'aaaaaa'
+
+- duration: 25ms
+  lights:
+    "*": 'ffffff'
+
+- duration: 100ms
+  lights:
+    "*": off
+
+- duration: 500ms #flash PF orange and cab purple
+  lights:
+    lights_pf: '777700'
+
+- duration: 500ms
+  lights:
+    lights_pf: off
+    lights_cab: '770077'

@@ -1,0 +1,70 @@
+#show_version=6
+
+# flash group4 a/b/c/d :: red, green, then blue
+
+- duration: 225ms
+  lights:
+    lights_4a: 'aa0000'
+    lights_4b: off
+    lights_4c: off
+    lights_4d: off
+
+- duration: 225ms
+  lights:
+    lights_4a: off
+    lights_4b: 'aa0000'
+
+- duration: 225ms
+  lights:
+    lights_4b: off
+    lights_4c: 'aa0000'
+
+- duration: 225ms
+  lights:
+    lights_4c: off
+    lights_4d: 'aa0000'
+
+- duration: 225ms
+  lights:
+    lights_4a: '00aa00'
+    lights_4d: off
+
+- duration: 225ms
+  lights:
+    lights_4a: off
+    lights_4b: '00aa00'
+
+- duration: 225ms
+  lights:
+    lights_4b: off
+    lights_4c: '00aa00'
+
+- duration: 225ms
+  lights:
+    lights_4c: off
+    lights_4d: '00aa00'
+
+- duration: 225ms
+  lights:
+    lights_4a: '0000aa'
+    lights_4d: off
+
+- duration: 225ms
+  lights:
+    lights_4a: off
+    lights_4b: '0000aa'
+
+- duration: 225ms
+  lights:
+    lights_4b: off
+    lights_4c: '0000aa'
+
+- duration: 225ms
+  lights:
+    lights_4b: off
+    lights_4c: '0000aa'
+
+- duration: 225ms
+  lights:
+    lights_4c: off
+    lights_4d: '0000aa'

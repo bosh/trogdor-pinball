@@ -1,0 +1,33 @@
+#show_version=6
+
+# flash group2 a/b :: red, green, then blue
+
+- duration: 400ms
+  lights:
+    lights_2a: 'aa0000'
+    lights_2b: off
+
+- duration: 400ms
+  lights:
+    lights_2a: off
+    lights_2b: 'aa0000'
+
+- duration: 400ms
+  lights:
+    lights_2a: '00aa00'
+    lights_2b: off
+
+- duration: 400ms
+  lights:
+    lights_2a: off
+    lights_2b: '00aa00'
+
+- duration: 400ms
+  lights:
+    lights_2a: '0000aa'
+    lights_2b: off
+
+- duration: 400ms
+  lights:
+    lights_2a: off
+    lights_2b: '0000aa'
