@@ -22,15 +22,21 @@ module TrogBuild
       plan.add_light "generated_light_1"
 
       add_light_sequence "gl_ring_a", 8 do |i, config|
-        lights_2ab_tag = i % 2 != 0 ? 'lights_2a' : 'lights_2b'
-        config['tags'] = "lights_generated,#{lights_2ab_tag},lights_gl_ring_a"
+        lights_2_tag = (i-1) % 2 == 0 ? 'lights_2a' : 'lights_2b'
+        lights_3_tag = 'lights_3' + ['a','b','c'][(i-1)%3]
+        lights_4_tag = 'lights_4' + ['a','b','c', 'd'][((i-1)/2)%4]
+        lights_5_tag = 'lights_5' + ((i-1)%2==0 ? ['a','b','c', 'd'][((i-1)/2)%4] : 'e')
+        config['tags'] = "lights_generated,#{lights_2_tag},#{lights_3_tag},#{lights_4_tag},#{lights_5_tag},lights_gl_ring_a"
         config['type'] = 'rgb'
         config
       end
 
       add_light_sequence "gl_grid", 9 do |i, config|
-        lights_2ab_tag = i % 2 != 0 ? 'lights_2a' : 'lights_2b'
-        config['tags'] = "lights_generated,#{lights_2ab_tag},grid_lights"
+        lights_2_tag = (i-1) % 2 == 0 ? 'lights_2a' : 'lights_2b'
+        lights_3_tag = 'lights_3' + ['a','b','c'][(i-1)%3]
+        lights_4_tag = 'lights_4' + ['a','b','c', 'd'][(i-1)%4]
+        lights_5_tag = 'lights_5' + ['a','b','c', 'd', 'e'][(i-1)%5]
+        config['tags'] = "lights_generated,#{lights_2_tag},#{lights_3_tag},#{lights_4_tag},#{lights_5_tag},grid_lights"
         config['type'] = 'rgb'
         config
       end
@@ -40,8 +46,13 @@ module TrogBuild
       ['a','b','c','d'].each do |letter|
         add_light_sequence "gl_cobra_ring_#{letter}", 8 do |i, config|
           cobra_number += 1
-          lights_2ab_tag = i % 2 != 0 ? 'lights_2a' : 'lights_2b'
-          config['tags'] = "lights_generated,#{lights_2ab_tag},lights_rings,lights_pf,lights_cobra_ring_#{letter}"
+
+          lights_2_tag = (i-1) % 2 == 0 ? 'lights_2a' : 'lights_2b'
+          lights_3_tag = 'lights_3' + ['a','b','c'][(i-1)%3]
+          lights_4_tag = 'lights_4' + ['a','b','c', 'd'][((i-1)/2)%4]
+          lights_5_tag = 'lights_5' + ((i-1)%2==0 ? ['a','b','c', 'd'][((i-1)/2)%4] : 'e')
+
+          config['tags'] = "lights_generated,#{lights_2_tag},#{lights_3_tag},#{lights_4_tag},#{lights_5_tag},lights_rings,lights_pf,lights_cobra_ring_#{letter}"
           config['type'] = 'rgb'
           config['platform'] = "fast"
           config['number'] = "exp_playfield-3-#{cobra_number}"
