@@ -17,7 +17,7 @@ shots:
     switch: s_left_sling
   shot_sling_right_base:
     profile: sling_base_profile
-    switch: s_left_sling
+    switch: s_right_sling
 
 variable_player:
   #Simple sling scoring with sling counter
