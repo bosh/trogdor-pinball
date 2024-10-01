@@ -1,4 +1,6 @@
 alias t='cd ~/workspace/trogdor-pinball'
+alias m='cd ~/workspace/mpf'
+alias md='cd ~/workspace/mpf-docs'
 
 #-b removes bcp dependency
 #-t changes to log mode
@@ -11,4 +13,5 @@ alias tmonitor="t; mpf monitor"
 alias trogdor="clear; t; mpf game" #requires bcp connection
 alias tmc="echo TODO" #to run the mc or gmc +bcp client #probably mpf gmc ...
 
+alias mpftest="python -m unittest discover mpf/tests"
 alias mpfpenv=". ~/mpf80env/bin/activate"
