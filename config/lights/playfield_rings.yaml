@@ -1,321 +1,36 @@
 #config_version=6
-# Cobrapin Pop bumpers require manual channeling due to RGBW configuration
-# Don't add more lights after them in a chain
 
 lights:
-
-# The pattern appears to be as follows, repeating after 12 channels
-# 0-0 0-1 0-2 1-1
-# 1-2 1-0 2-1 2-0
-# 3-1 2-2 3-0 3-2
-
-# in four channel counting it would be
-# 0-0 0-1 0-2 1-0
-# 1-1 0-3 1-3 1-2
-# 2-2 2-0 2-1 2-3
-# which doesn't really help at all
-
-# Pattern is RGBGWRWBGBRW
-# Thats, starting from the last available channel, 
-#  R   G   B   W
-# +1, +1, +1, +2
-# +1, -2, +4, -1
-# +4, -2, +1, +2
-# repeat
-
-# For some reason this pattern does not reset at the start of every
-# ring, so each set of 8 starts with the four channel pattern
-# offset by 1 from the previous round
-
-  # Ring A
-  l_pop_ring_a_1:
-    tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_pf, lights_pop_ring_a
-    channels:
-      red:
-        number: exp_playfield-2-4-0 #+1
-      green:
-        number: exp_playfield-2-4-1 #+1
-      blue:
-        number: exp_playfield-2-4-2 #+1
-      white:
-        number: exp_playfield-2-5-1 #+2
-
-  l_pop_ring_a_2:
-    tags: lights_2b, lights_3b, lights_4a, lights_5e, lights_pf, lights_pop_ring_a
-    channels:
-      red:
-        number: exp_playfield-2-5-2 #+1
-      green:
-        number: exp_playfield-2-5-0 #-2
-      blue:
-        number: exp_playfield-2-6-1 #+4
-      white:
-        number: exp_playfield-2-6-0 #-1
-
-  l_pop_ring_a_3:
-    tags: lights_2a, lights_3c, lights_4b, lights_5b, lights_pf, lights_pop_ring_a
-    channels:
-      red:
-        number: exp_playfield-2-7-1 #+4
-      green:
-        number: exp_playfield-2-6-2 #-2
-      blue:
-        number: exp_playfield-2-7-0 #+1
-      white:
-        number: exp_playfield-2-7-2 #+2
-
-  l_pop_ring_a_4:
-    tags: lights_2b, lights_3a, lights_4b, lights_5e, lights_pf, lights_pop_ring_a
-    channels:
-      red:
-        number: exp_playfield-2-8-0 #+1
-      green:
-        number: exp_playfield-2-8-1 #+1
-      blue:
-        number: exp_playfield-2-8-2 #+1
-      white:
-        number: exp_playfield-2-9-1 #+2
-
-  l_pop_ring_a_5:
-    tags: lights_2a, lights_3b, lights_4c, lights_5c, lights_pf, lights_pop_ring_a
-    channels:
-      red:
-        number: exp_playfield-2-9-2 #+1
-      green:
-        number: exp_playfield-2-9-0 #-2
-      blue:
-        number: exp_playfield-2-10-1 #+4
-      white:
-        number: exp_playfield-2-10-0 #-1
-
-  l_pop_ring_a_6:
-    tags: lights_2b, lights_3c, lights_4c, lights_5e, lights_pf, lights_pop_ring_a
-    channels:
-      red:
-        number: exp_playfield-2-11-1 #+4
-      green:
-        number: exp_playfield-2-10-2 #-2
-      blue:
-        number: exp_playfield-2-11-0 #+1
-      white:
-        number: exp_playfield-2-11-2 #+2
-
-  l_pop_ring_a_7:
-    tags: lights_2a, lights_3a, lights_4d, lights_5d, lights_pf, lights_pop_ring_a
-    channels:
-      red:
-        number: exp_playfield-2-12-0 #+1
-      green:
-        number: exp_playfield-2-12-1 #+1
-      blue:
-        number: exp_playfield-2-12-2 #+1
-      white:
-        number: exp_playfield-2-13-1 #+2
-
-  l_pop_ring_a_8:
-    tags: lights_2b, lights_3b, lights_4d, lights_5e, lights_pf, lights_pop_ring_a
-    channels:
-      red:
-        number: exp_playfield-2-13-2 #+1
-      green:
-        number: exp_playfield-2-13-0 #-2
-      blue:
-        number: exp_playfield-2-14-1 #+4
-      white:
-        number: exp_playfield-2-14-0 #-1
-
-  # Ring B
-  l_pop_ring_b_1:
-    tags: lights_2a, lights_3c, lights_4a, lights_5a, lights_pf, lights_pop_ring_b
-    channels:
-      red:
-        number: exp_playfield-2-15-1 #+4
-      green:
-        number: exp_playfield-2-14-2 #-2
-      blue:
-        number: exp_playfield-2-15-0 #+1
-      white:
-        number: exp_playfield-2-15-2 #+2
-
-  l_pop_ring_b_2:
-    tags: lights_2b, lights_3a, lights_4a, lights_5e, lights_pf, lights_pop_ring_b
-    channels:
-      red:
-        number: exp_playfield-2-16-0 #+1
-      green:
-        number: exp_playfield-2-16-1 #+1
-      blue:
-        number: exp_playfield-2-16-2 #+1
-      white:
-        number: exp_playfield-2-17-1 #+2
-
-  l_pop_ring_b_3:
-    tags: lights_2a, lights_3b, lights_4b, lights_5b, lights_pf, lights_pop_ring_b
-    channels:
-      red:
-        number: exp_playfield-2-17-2 #+1
-      green:
-        number: exp_playfield-2-17-0 #-2
-      blue:
-        number: exp_playfield-2-18-1 #+4
-      white:
-        number: exp_playfield-2-18-0 #-1
-
-  l_pop_ring_b_4:
-    tags: lights_2b, lights_3c, lights_4b, lights_5e, lights_pf, lights_pop_ring_b
-    channels:
-      red:
-        number: exp_playfield-2-19-1 #+4
-      green:
-        number: exp_playfield-2-18-2 #-2
-      blue:
-        number: exp_playfield-2-19-0 #+1
-      white:
-        number: exp_playfield-2-19-2 #+2
-
-  l_pop_ring_b_5:
-    tags: lights_2a, lights_3a, lights_4c, lights_5c, lights_pf, lights_pop_ring_b
-    channels:
-      red:
-        number: exp_playfield-2-20-0 #+1
-      green:
-        number: exp_playfield-2-20-1 #+1
-      blue:
-        number: exp_playfield-2-20-2 #+1
-      white:
-        number: exp_playfield-2-21-1 #+2
-
-  l_pop_ring_b_6:
-    tags: lights_2b, lights_3b, lights_4c, lights_5e, lights_pf, lights_pop_ring_b
-    channels:
-      red:
-        number: exp_playfield-2-21-2 #+1
-      green:
-        number: exp_playfield-2-21-0 #-2
-      blue:
-        number: exp_playfield-2-22-1 #+4
-      white:
-        number: exp_playfield-2-22-0 #-1
-
-  l_pop_ring_b_7:
-    tags: lights_2a, lights_3c, lights_4d, lights_5d, lights_pf, lights_pop_ring_b
-    channels:
-      red:
-        number: exp_playfield-2-23-1 #+4
-      green:
-        number: exp_playfield-2-22-2 #-2
-      blue:
-        number: exp_playfield-2-23-0 #+1
-      white:
-        number: exp_playfield-2-23-2 #+2
-
-  l_pop_ring_b_8:
-    tags: lights_2b, lights_3a, lights_4d, lights_5e, lights_pf, lights_pop_ring_b
-    channels:
-      red:
-        number: exp_playfield-2-24-0 #+1
-      green:
-        number: exp_playfield-2-24-1 #+1
-      blue:
-        number: exp_playfield-2-24-2 #+1
-      white:
-        number: exp_playfield-2-25-1 #+2
-
-  # Ring C
-  l_pop_ring_c_1:
-    tags: lights_2a, lights_3b, lights_4a, lights_5a, lights_pf, lights_pop_ring_c
-    channels:
-      red:
-        number: exp_playfield-2-25-2 #+1
-      green:
-        number: exp_playfield-2-25-0 #-2
-      blue:
-        number: exp_playfield-2-26-1 #+4
-      white:
-        number: exp_playfield-2-26-0 #-1
-
-  l_pop_ring_c_2:
-    tags: lights_2b, lights_3c, lights_4a, lights_5e, lights_pf, lights_pop_ring_c
-    channels:
-      red:
-        number: exp_playfield-2-27-1 #+4
-      green:
-        number: exp_playfield-2-26-2 #-2
-      blue:
-        number: exp_playfield-2-27-0 #+1
-      white:
-        number: exp_playfield-2-27-2 #+2
-
-  l_pop_ring_c_3:
-    tags: lights_2a, lights_3a, lights_4b, lights_5b, lights_pf, lights_pop_ring_c
-    channels:
-      red:
-        number: exp_playfield-2-28-0 #+1
-      green:
-        number: exp_playfield-2-28-1 #+1
-      blue:
-        number: exp_playfield-2-28-2 #+1
-      white:
-        number: exp_playfield-2-29-1 #+2
-
-  l_pop_ring_c_4:
-    tags: lights_2b, lights_3b, lights_4b, lights_5e, lights_pf, lights_pop_ring_c
-    channels:
-      red:
-        number: exp_playfield-2-29-2 #+1
-      green:
-        number: exp_playfield-2-29-0 #-2
-      blue:
-        number: exp_playfield-2-30-1 #+4
-      white:
-        number: exp_playfield-2-30-0 #-1
-
-  l_pop_ring_c_5:
-    tags: lights_2a, lights_3c, lights_4c, lights_5c, lights_pf, lights_pop_ring_c
-    channels:
-      red:
-        number: exp_playfield-2-31-1 #+4
-      green:
-        number: exp_playfield-2-30-2 #-2
-      blue:
-        number: exp_playfield-2-31-0 #+1
-      white:
-        number: exp_playfield-2-31-2 #+2
-
-  l_pop_ring_c_6:
-    tags: lights_2b, lights_3a, lights_4c, lights_5e, lights_pf, lights_pop_ring_c
-    channels:
-      red:
-        number: exp_playfield-2-32-0 #+1
-      green:
-        number: exp_playfield-2-32-1 #+1
-      blue:
-        number: exp_playfield-2-32-2 #+1
-#      white:
-#        number: exp_playfield-2-33-1 #+2 too high
-
-  l_pop_ring_c_7:
-    tags: lights_2a, lights_3b, lights_4d, lights_5d, lights_pf, lights_pop_ring_c
-    platform: smart_virtual
-    # channels:
-    #   red:
-    #     number: exp_playfield-2-33-2 #+1
-    #   green:
-    #     number: exp_playfield-2-33-0 #-2
-    #   blue:
-    #     number: exp_playfield-2-34-1 #+4
-    #   white:
-    #     number: exp_playfield-2-34-0 #-1
-
-  l_pop_ring_c_8:
-    tags: lights_2b, lights_3c, lights_4d, lights_5e, lights_pf, lights_pop_ring_c
-    platform: smart_virtual
-    # channels:
-    #   red:
-    #     number: exp_playfield-2-35-1 #+4
-    #   green:
-    #     number: exp_playfield-2-34-2 #-2
-    #   blue:
-    #     number: exp_playfield-2-35-0 #+1
-    #   white:
-    #     number: exp_playfield-2-35-2 #+2
+  # Cobrapin star post ring - RGB, no hax needed
+  l_star_ring_a_1:
+    number: exp_playfield-1-3
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_cab, lights_star_ring_a
+  l_star_ring_a_2:
+    number: exp_playfield-1-4
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4a, lights_5e, lights_cab, lights_star_ring_a
+  l_star_ring_a_3:
+    number: exp_playfield-1-5
+    type: rgb
+    tags: lights_2a, lights_3c, lights_4b, lights_5b, lights_cab, lights_star_ring_a
+  l_star_ring_a_4:
+    number: exp_playfield-1-6
+    type: rgb
+    tags: lights_2b, lights_3a, lights_4b, lights_5e, lights_cab, lights_star_ring_a
+  l_star_ring_a_5:
+    number: exp_playfield-1-7
+    type: rgb
+    tags: lights_2a, lights_3b, lights_4c, lights_5c, lights_cab, lights_star_ring_a
+  l_star_ring_a_6:
+    number: exp_playfield-1-8
+    type: rgb
+    tags: lights_2b, lights_3c, lights_4c, lights_5e, lights_cab, lights_star_ring_a
+  l_star_ring_a_7:
+    number: exp_playfield-1-9
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4d, lights_5d, lights_cab, lights_star_ring_a
+  l_star_ring_a_8:
+    number: exp_playfield-1-10
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4d, lights_5e, lights_cab, lights_star_ring_a

@@ -36,7 +36,7 @@
 - duration: 300ms
   lights:
     lights_3a: '0000aa'
-    lights_3b: off
+    lights_3c: off
 
 - duration: 300ms
   lights:
