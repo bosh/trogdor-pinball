@@ -2,7 +2,7 @@
 
 mode:
   start_events: mode_start_lower_lanes_base
-  stop_events: mode_cancel_lower_lanes_base
+  stop_events: mode_stop_lower_lanes_base
   priority: 1110
 
 variable_player:

@@ -138,10 +138,20 @@ state_machines:
         label: incomplete
       done:
         label: complete
-        events_when_started: burnination_countdown_stop, increment_playfield_multiplier, mode_complete_pops_burnination
+        events_when_started:
+          - burnination_countdown_stop
+          - increment_playfield_multiplier
+          - mode_stop_burnination_rollovers
+          - mode_start_pops_burninated
+          - mode_complete_pops_burnination
       failed:
         label: failed
-        events_when_started: burnination_countdown_stop, mode_fail_pops_burnination
+        events_when_started:
+          - burnination_countdown_stop
+          - mode_start_pops_base
+          - mode_stop_burnination_rollovers
+          - mode_start_burn_rollovers
+          - mode_fail_pops_burnination
     transitions:
       - source: start
         target: done

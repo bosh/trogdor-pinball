@@ -2,7 +2,7 @@
 
 mode:
   start_events: mode_start_slings_base
-  stop_events: mode_cancel_slings_base
+  stop_events: mode_stop_slings_base
   priority: 1210
 
 shot_profiles:
