@@ -1,0 +1,75 @@
+#config_version=6
+
+mode:
+  start_events: mode_start_burnination_controller
+  stop_events: mode_stop_burnination_controller
+  priority: 905
+
+timers:
+  #Mode time limit timer
+  burnination_countdown:
+    start_value: 20 #Short for now for ease of testing
+    end_value: 0
+    direction: down
+    start_running: true
+    restart_on_complete: false
+    control_events:
+      - action: stop
+        event: burnination_countdown_stop
+
+event_player:
+  timer_burnination_countdown_complete:
+    - burnination_controller_fail
+
+  # When player variables change, test mode completion
+  player_pop_left_fire_level:
+    - check_burnination_complete
+  player_pop_right_fire_level:
+    - check_burnination_complete
+  player_pop_center_fire_level:
+    - check_burnination_complete
+
+  check_burnination_complete{current_player.pop_left_fire_level > 25 and current_player.pop_right_fire_level > 25 and current_player.pop_center_fire_level > 25}:
+    - burnination_controller_complete
+
+state_machines:
+  burnination_state:
+    persist_state: true
+    states:
+      start:
+        label: inactive
+        events_when_started:
+          - mode_start_burn_rollovers
+      burnination:
+        label: burnination
+        events_when_started:
+          - mode_stop_pops_base
+          - mode_start_pops_burnination
+          - mode_stop_burn_rollovers
+          - mode_start_burnination_rollovers
+      done:
+        label: complete
+        events_when_started:
+          - burnination_countdown_stop
+          - increment_playfield_multiplier
+          - mode_stop_burnination_rollovers
+          - mode_start_pops_burninated
+          - mode_complete_pops_burnination
+      failed:
+        label: failed
+        events_when_started:
+          - burnination_countdown_stop
+          - mode_start_pops_base
+          - mode_stop_burnination_rollovers
+          - mode_start_burn_rollovers
+          - mode_fail_pops_burnination
+    transitions:
+      - source: start
+        target: burnination
+        events: burnination_controller_begin
+      - source: burnination
+        target: done
+        events: burnination_controller_complete
+      - source: burnination
+        target: failed
+        events: burnination_controller_fail

@@ -19,8 +19,8 @@ event_player:
     - mode_start_pops_base
     - mode_start_slings_base
     - mode_start_lower_lanes_base
-    - mode_start_burn_rollovers
     - mode_start_captive_ball_base
+    - mode_start_burnination_controller
 
 variable_player:
   #Playfield multiplier always back down to 1 on new ball

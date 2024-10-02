@@ -6,7 +6,7 @@ module TrogBuild
     def initialize(*args)
       super
       @achievements = [
-        achievement('burnination', 1, 'pops_burnination'),
+        achievement('burnination', 1, 'burnination_controller'),
         achievement('a2', 2),
         achievement('a3', 3),
         achievement('a4', 4),
@@ -50,9 +50,9 @@ module TrogBuild
       end
     end
 
-    def achievement(name, majesty_number, mode_name=nil)
-      if mode_name
-        Achievement.new(name, majesty_number, "mode_start_#{mode_name}", "mode_fail_#{mode_name}", "mode_complete_#{mode_name}")
+    def achievement(name, majesty_number, custom_name=nil)
+      if custom_name
+        Achievement.new(name, majesty_number, "#{custom_name}_begin", "#{custom_name}_fail", "#{custom_name}_complete")
       else
         Achievement.new(name, majesty_number)
       end

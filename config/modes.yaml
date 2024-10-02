@@ -11,6 +11,7 @@ modes:
   - slings_base
   - slings_dead
   - burn_rollovers
+  - burnination_controller
   - burnination_rollovers
   - pops_base
   - pops_burnination

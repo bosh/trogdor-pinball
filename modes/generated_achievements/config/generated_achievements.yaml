@@ -20,9 +20,9 @@ achievements:
     show_when_completed: 'on'
     restart_after_stop_possible: true
     events_when_completed: celebrate_achievement
-    start_events: mode_start_pops_burnination
-    stop_events: mode_fail_pops_burnination
-    complete_events: mode_complete_pops_burnination
+    start_events: burnination_controller_begin
+    stop_events: burnination_controller_fail
+    complete_events: burnination_controller_complete
   a2:
     start_enabled: true
     show_tokens:
