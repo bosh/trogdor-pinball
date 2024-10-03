@@ -136,7 +136,7 @@ module TrogBuild
           neighborpair_locked_event,
           'slots_celebrate_pair',
           drop_target_bank_reset_slots,
-          "#{default_stop_event}|500ms"
+          "#{controller_stop_event}|500ms"
         ])
         sg
       end
@@ -155,7 +155,7 @@ module TrogBuild
           splitpair_locked_event,
           'slots_celebrate_split_pair',
           # split pair does not warrant a reset on exit
-          "#{default_stop_event}|500ms"
+          "#{controller_stop_event}|500ms"
         ])
         sg
       end
@@ -170,7 +170,7 @@ module TrogBuild
           singles_locked_event,
           'slots_celebrate_single',
           # single does not warrant a reset on exit
-          "#{default_stop_event}|500ms"
+          "#{controller_stop_event}|500ms"
         ])
         sg
       end
@@ -193,7 +193,7 @@ module TrogBuild
 
     def add_event_players!
       add_event_player(mode_start_event, [ensure_initial_targets, drop_target_bank_reset_slots, refresh_rotation_event])
-      add_event_player(@countdown.complete_event, [default_stop_event]) #TODO check if complete is triggered when a stop is issued on the timer
+      add_event_player(@countdown.complete_event, [controller_stop_event])
 
       add_event_player(@rotate.complete_event, [
         @left_column_rotation_group.rotate_left_event,
@@ -206,6 +206,7 @@ module TrogBuild
 
     private
 
+    def controller_stop_event;      "slots_manager_stop" end # Per slots controller state machine
     def drop_target_bank_reset_slots; "drop_target_bank_reset_slots" end # Per config in future.yaml
     def refresh_rotation_event;     "slots_refresh_rotation" end
     def singles_locked_event;       "slots_singles_locked" end
@@ -276,7 +277,7 @@ module TrogBuild
         @countdown.stop_event,
         'slots_party_time',
         "#{drop_target_bank_reset_slots}|1400ms",
-        "#{default_stop_event}|1500ms",
+        "#{controller_stop_event}|1500ms",
         # TODO this need a better reward -- multiball and/or achievement?
       ])
     end

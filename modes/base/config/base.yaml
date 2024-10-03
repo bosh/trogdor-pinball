@@ -16,11 +16,11 @@ event_player:
     - mode_start_priority_shows
     - mode_start_ball_saves
     - mode_start_skillshot_base
-    - mode_start_pops_base
+    - mode_start_pops_base #TODO do this in burnination controller
     - mode_start_slings_base
     - mode_start_lower_lanes_base
-    - mode_start_captive_ball_base
     - mode_start_burnination_controller
+    - mode_start_slots_controller
 
 variable_player:
   #Playfield multiplier always back down to 1 on new ball

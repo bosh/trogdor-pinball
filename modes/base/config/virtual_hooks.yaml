@@ -25,9 +25,9 @@ event_player:
     - mode_stop_slings_dead
 
   vswitch_toggle_slots_active:
-    - mode_start_generated_slots
+    - slots_manager_play
   vswitch_toggle_slots_inactive:
-    - mode_stop_generated_slots
+    - slots_manager_stop
 
 variable_player:
   virtual_add_10_fire_all:

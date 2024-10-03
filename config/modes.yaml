@@ -17,5 +17,6 @@ modes:
   - pops_burnination
   - pops_burninated
   - captive_ball_base
+  - slots_controller
 
   # and dont forget the modes in generated_modes.yaml

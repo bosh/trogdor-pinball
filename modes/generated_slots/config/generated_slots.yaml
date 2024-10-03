@@ -113,123 +113,123 @@ event_player:
   - slots_neighborpair_locked
   - slots_celebrate_pair
   - drop_target_bank_reset_slots
-  - mode_stop_generated_slots|500ms
+  - slots_manager_stop|500ms
   slot_neighborpair_2_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_neighborpair_locked
   - slots_celebrate_pair
   - drop_target_bank_reset_slots
-  - mode_stop_generated_slots|500ms
+  - slots_manager_stop|500ms
   slot_neighborpair_3_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_neighborpair_locked
   - slots_celebrate_pair
   - drop_target_bank_reset_slots
-  - mode_stop_generated_slots|500ms
+  - slots_manager_stop|500ms
   slot_neighborpair_4_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_neighborpair_locked
   - slots_celebrate_pair
   - drop_target_bank_reset_slots
-  - mode_stop_generated_slots|500ms
+  - slots_manager_stop|500ms
   slot_neighborpair_5_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_neighborpair_locked
   - slots_celebrate_pair
   - drop_target_bank_reset_slots
-  - mode_stop_generated_slots|500ms
+  - slots_manager_stop|500ms
   slot_neighborpair_6_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_neighborpair_locked
   - slots_celebrate_pair
   - drop_target_bank_reset_slots
-  - mode_stop_generated_slots|500ms
+  - slots_manager_stop|500ms
   slot_neighborpair_7_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_neighborpair_locked
   - slots_celebrate_pair
   - drop_target_bank_reset_slots
-  - mode_stop_generated_slots|500ms
+  - slots_manager_stop|500ms
   slot_neighborpair_8_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_neighborpair_locked
   - slots_celebrate_pair
   - drop_target_bank_reset_slots
-  - mode_stop_generated_slots|500ms
+  - slots_manager_stop|500ms
   slot_neighborpair_9_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_neighborpair_locked
   - slots_celebrate_pair
   - drop_target_bank_reset_slots
-  - mode_stop_generated_slots|500ms
+  - slots_manager_stop|500ms
   slot_neighborpair_10_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_neighborpair_locked
   - slots_celebrate_pair
   - drop_target_bank_reset_slots
-  - mode_stop_generated_slots|500ms
+  - slots_manager_stop|500ms
   slot_neighborpair_11_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_neighborpair_locked
   - slots_celebrate_pair
   - drop_target_bank_reset_slots
-  - mode_stop_generated_slots|500ms
+  - slots_manager_stop|500ms
   slot_neighborpair_12_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_neighborpair_locked
   - slots_celebrate_pair
   - drop_target_bank_reset_slots
-  - mode_stop_generated_slots|500ms
+  - slots_manager_stop|500ms
   slot_splitpair_1_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_splitpair_locked
   - slots_celebrate_split_pair
-  - mode_stop_generated_slots|500ms
+  - slots_manager_stop|500ms
   slot_splitpair_2_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_splitpair_locked
   - slots_celebrate_split_pair
-  - mode_stop_generated_slots|500ms
+  - slots_manager_stop|500ms
   slot_splitpair_3_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_splitpair_locked
   - slots_celebrate_split_pair
-  - mode_stop_generated_slots|500ms
+  - slots_manager_stop|500ms
   slot_splitpair_4_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_splitpair_locked
   - slots_celebrate_split_pair
-  - mode_stop_generated_slots|500ms
+  - slots_manager_stop|500ms
   slot_splitpair_5_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_splitpair_locked
   - slots_celebrate_split_pair
-  - mode_stop_generated_slots|500ms
+  - slots_manager_stop|500ms
   slot_splitpair_6_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_splitpair_locked
   - slots_celebrate_split_pair
-  - mode_stop_generated_slots|500ms
+  - slots_manager_stop|500ms
   slot_singles_1_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_singles_locked
   - slots_celebrate_single
-  - mode_stop_generated_slots|500ms
+  - slots_manager_stop|500ms
   slot_singles_2_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_singles_locked
   - slots_celebrate_single
-  - mode_stop_generated_slots|500ms
+  - slots_manager_stop|500ms
   slot_singles_3_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_singles_locked
   - slots_celebrate_single
-  - mode_stop_generated_slots|500ms
+  - slots_manager_stop|500ms
   slot_singles_4_group_locked_complete:
   - timer_slots_countdown_stop
   - slots_singles_locked
   - slots_celebrate_single
-  - mode_stop_generated_slots|500ms
+  - slots_manager_stop|500ms
   ? slots_refresh_rotation{device.shots.slots_a.state != 2 and device.shots.slots_b.state
     != 2 and device.shots.slots_c.state != 2 and device.shots.slots_d.state != 2 and
     device.shots.slots_e.state != 2 and device.shots.slots_f.state != 2 and device.shots.slots_g.state
@@ -465,7 +465,7 @@ event_player:
   - drop_target_bank_reset_slots
   - slots_refresh_rotation
   timer_slots_countdown_complete:
-  - mode_stop_generated_slots
+  - slots_manager_stop
   timer_slots_rotate_complete:
   - left_column_rotation_group_rotate_left
   - center_column_rotation_group_rotate_left
@@ -549,7 +549,7 @@ event_player:
   - timer_slots_countdown_stop
   - slots_party_time
   - drop_target_bank_reset_slots|1400ms
-  - mode_stop_generated_slots|1500ms
+  - slots_manager_stop|1500ms
   slot_row_2_group_locked_complete{device.shots.slots_a.state < 2 and device.shots.slots_g.state < 2}:
   - timer_slots_rotate_stop
   - set_shot_state_slots_g_active
@@ -577,7 +577,7 @@ event_player:
   - timer_slots_countdown_stop
   - slots_party_time
   - drop_target_bank_reset_slots|1400ms
-  - mode_stop_generated_slots|1500ms
+  - slots_manager_stop|1500ms
   slot_row_1_group_locked_complete{device.shots.slots_d.state < 2 and device.shots.slots_g.state < 2}:
   - timer_slots_rotate_stop
   - set_shot_state_slots_g_active
@@ -605,7 +605,7 @@ event_player:
   - timer_slots_countdown_stop
   - slots_party_time
   - drop_target_bank_reset_slots|1400ms
-  - mode_stop_generated_slots|1500ms
+  - slots_manager_stop|1500ms
 shot_profiles:
   slot_square_profile:
     advance_on_hit: false

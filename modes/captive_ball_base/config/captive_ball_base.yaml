@@ -33,51 +33,6 @@ variable_player:
   captive_ball_target_disabled_hit:
     score: 200 * current_player.playfield_multiplier
 
-event_player:
-  player_captive_ball_target_hits{current_player.captive_ball_target_hits > 4}:
-    - mode_start_generated_slots
-  player_captive_ball_target_hits{current_player.captive_ball_target_hits < 4}:
-    - drop_target_bank_reset_slots
-
-state_machines:
-  captive_ball_manager:
-    persist_state: false
-    starting_state: qualifying_for_slots
-    states:
-      qualifying_for_slots:
-        label: active
-        events_when_started: captive_ball_target_enable
-      slots_in_progress:
-        label: complete
-        events_when_started: captive_ball_target_disable
-      paused:
-        label: paused
-        events_when_started: captive_ball_target_disable
-    transitions:
-      - source: qualifying_for_slots
-        target: slots_in_progress
-        events: mode_start_generated_slots
-      - source: slots_in_progress
-        target: qualifying_for_slots
-        events: mode_generated_slots_stopped
-        events_when_transitioning: reset_captive_ball_target_hits
-
-      # Paused state in case another mode takeover wants to block slot qualification
-      - source: qualifying_for_slots
-        target: paused
-        events:
-      - source: paused
-        target: qualifying_for_slots
-        events:
-
-light_player:
-  "{device.state_machines.captive_ball_manager.state == 'qualifying_for_slots' and device.switches.s_captive_ball_presence.state == 0}":
-    l_captive_ball_single: orange
-  "{device.state_machines.captive_ball_manager.state == 'qualifying_for_slots' and device.switches.s_captive_ball_presence.state == 1}":
-    l_captive_ball_single: 'off'
-  "{device.state_machines.captive_ball_manager.state == 'slots_in_progress'}":
-    l_captive_ball_single: '003399'
-
 show_player:
   captive_ball_target_live_hit:
     cottage_burn:
