@@ -40,6 +40,7 @@ state_machines:
         label: inactive
         events_when_started:
           - mode_start_burn_rollovers
+          - mode_start_pops_base
       burnination:
         label: burnination
         events_when_started:
