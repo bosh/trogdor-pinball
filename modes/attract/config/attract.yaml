@@ -1,11 +1,10 @@
 #config_version=6
 
-slide_player: #For GMC
-  mode_attract_starting:
+slide_player:
+  mode_attract_started:
     attract:
       action: play
-
-  mode_attract_started:
+  mode_attract_started.1:
     startup:
       action: remove
 

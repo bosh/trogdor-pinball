@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://1muw6d5hkqte"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_grcpe"]
+
+[node name="Attract" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_grcpe")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 900.0
+color = Color(0.642638, 0.423257, 0.248518, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 781.0
+offset_right = 439.0
+offset_bottom = 884.0
+theme_override_font_sizes/font_size = 75
+text = "Foo bar baz"

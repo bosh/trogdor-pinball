@@ -1,14 +1,14 @@
 #config_version=6
 
-config:
-  - light_player.yaml
-  - mini_cab_multiball.yaml
-  - virtual_hooks.yaml
-
 mode:
   start_events: ball_started
   stop_events: ball_will_end
   priority: 1000
+
+config:
+  - light_player.yaml
+  - mini_cab_multiball.yaml
+  - virtual_hooks.yaml
 
 event_player:
   mode_base_started:
