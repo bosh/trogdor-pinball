@@ -10,6 +10,14 @@ config:
   - mini_cab_multiball.yaml
   - virtual_hooks.yaml
 
+slide_player:
+  mode_base_started:
+    base:
+      action: play
+  mode_base_started.1:
+    attract:
+      action: remove
+
 event_player:
   mode_base_started:
     - mode_start_code_base
