@@ -1,5 +1,8 @@
 #config_version=6
 
+mpf:
+  report_crashes: never
+
 config:
   - settings.yaml
   - hardware.yaml

@@ -18,6 +18,17 @@ slide_player:
     attract:
       action: remove
 
+sound_player:
+  s_start_active:
+    cash:
+      ducking:
+        bus: effects
+        attack: 1
+        attenuation: 1
+        release_point: 1
+        release: 1s
+
+
 event_player:
   mode_base_started:
     - mode_start_code_base
