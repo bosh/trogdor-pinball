@@ -38,47 +38,60 @@ switches:
   s_burn_b:
     number: 808
     platform: smart_virtual
+    tags: playfield_active
   s_burn_u:
     number: 809
     platform: smart_virtual
+    tags: playfield_active
   s_burn_r:
     number: 810
     platform: smart_virtual
+    tags: playfield_active
   s_burn_n:
     number: 811
     platform: smart_virtual
+    tags: playfield_active
 
   #Spinners
   s_spinner_left:
     number: 812
     platform: smart_virtual
+    tags: playfield_active
   s_spinner_right:
     number: 813
     platform: smart_virtual
+    tags: playfield_active
 
   #Passthrough optos
   s_left_orbit:
     number: 814
     platform: smart_virtual
+    tags: playfield_active
   s_right_orbit:
     number: 815
     platform: smart_virtual
+    tags: playfield_active
   s_horseshoe:
     number: 816
     platform: smart_virtual
+    tags: playfield_active
 
   s_wireform_s_entry:
     number: 817
     platform: smart_virtual
+    tags: playfield_active
   s_wireform_s_exit:
     number: 818
     platform: smart_virtual
+    tags: playfield_active
   s_wireform_left_top:
     number: 819
     platform: smart_virtual
+    tags: playfield_active
   s_wireform_right_top:
     number: 820
     platform: smart_virtual
+    tags: playfield_active
 
   s_drop_bank_left:
     number: 821
@@ -93,6 +106,7 @@ switches:
   s_captive_ball_target:
     number: 824
     platform: smart_virtual
+    tags: playfield_active
   s_captive_ball_presence: #Opto, normally blocked when undisturbed
     number: 825
     platform: smart_virtual
@@ -203,3 +217,12 @@ drop_target_banks:
     reset_coils: c_slot_bank_reset
     reset_events: drop_target_bank_reset_slots, machine_reset_phase_3, ball_starting #TODO do I really need to declare the default pair?
     reset_on_complete: #No
+
+spinners:
+  spinner_left:
+    switch: s_spinner_left
+    active_ms: 400ms
+
+  spinner_right:
+    switch: s_spinner_right
+    active_ms: 400ms
