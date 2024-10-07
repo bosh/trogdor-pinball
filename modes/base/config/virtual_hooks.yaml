@@ -5,13 +5,13 @@ event_player:
     - end_game
 
   vswitch_qualify_burnination_active:
-    - burn_group_lit_complete
+    - burnination_controller_begin
 
   vswitch_add_fire_level_active:
     - virtual_add_10_fire_all
 
   vswitch_qualify_burninated_active:
-    - mode_complete_pops_burnination
+    - burnination_controller_complete
 
   vswitch_qualify_left_outlane_save_active:
     - qualify_left_outlane_save
