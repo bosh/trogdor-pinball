@@ -1,0 +1,11 @@
+#show_version=6
+
+# all three pops pulsing once
+
+- duration: 120ms
+  lights:
+    lights_pops: purple
+
+- duration: 120ms
+  lights:
+    lights_pops: stop

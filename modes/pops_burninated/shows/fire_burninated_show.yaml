@@ -8,7 +8,7 @@
 # Using stop instead of off allows a lower priority to show led updates
 # in the 2 off lights without knowing the spinner step
 
-- duration: 200ms
+- duration: 300ms
   lights:
     (light_prefix)_1: stop
     (light_prefix)_2: "d82d08"
@@ -19,7 +19,7 @@
     (light_prefix)_7: "d82d08"
     (light_prefix)_8: stop
 
-- duration: 200ms
+- duration: 300ms
   lights:
     (light_prefix)_1: stop
     (light_prefix)_2: stop
@@ -30,7 +30,7 @@
     (light_prefix)_7: "d82d08"
     (light_prefix)_8: "d82d08"
 
-- duration: 200ms
+- duration: 300ms
   lights:
     (light_prefix)_1: "d82d08"
     (light_prefix)_2: stop
@@ -41,7 +41,7 @@
     (light_prefix)_7: "d82d08"
     (light_prefix)_8: "d82d08"
 
-- duration: 200ms
+- duration: 300ms
   lights:
     (light_prefix)_1: "d82d08"
     (light_prefix)_2: "d82d08"
@@ -52,7 +52,7 @@
     (light_prefix)_7: "d82d08"
     (light_prefix)_8: "d82d08"
 
-- duration: 200ms
+- duration: 300ms
   lights:
     (light_prefix)_1: "d82d08"
     (light_prefix)_2: "d82d08"
@@ -63,7 +63,7 @@
     (light_prefix)_7: "d82d08"
     (light_prefix)_8: "d82d08"
 
-- duration: 200ms
+- duration: 300ms
   lights:
     (light_prefix)_1: "d82d08"
     (light_prefix)_2: "d82d08"
@@ -74,7 +74,7 @@
     (light_prefix)_7: "d82d08"
     (light_prefix)_8: "d82d08"
 
-- duration: 200ms
+- duration: 300ms
   lights:
     (light_prefix)_1: "d82d08"
     (light_prefix)_2: "d82d08"
@@ -85,7 +85,7 @@
     (light_prefix)_7: stop
     (light_prefix)_8: "d82d08"
 
-- duration: 200ms
+- duration: 300ms
   lights:
     (light_prefix)_1: "d82d08"
     (light_prefix)_2: "d82d08"

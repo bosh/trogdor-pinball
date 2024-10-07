@@ -6,14 +6,34 @@ mode:
   priority: 1550
 
 variable_player:
-  s_pop_left_active:
+  burninated_pop_group_hit:
     score: 5000 * current_player.playfield_multiplier
 
-  s_pop_right_active:
-    score: 5000 * current_player.playfield_multiplier
+  burninated_pop_center_hit: #Center is worth 1k less. Hax
+    score: -1 - (1000 * current_player.playfield_multiplier)
 
-  s_pop_center_active:
-    score: 4000 * current_player.playfield_multiplier
+shot_profiles:
+  burninated_pop_profile:
+    states:
+      - name: singleton
+
+shots:
+  burninated_pop_left:
+    profile: burninated_pop_profile
+    switch: s_pop_left
+  burninated_pop_right:
+    profile: burninated_pop_profile
+    switch: s_pop_right
+  burninated_pop_center:
+    profile: burninated_pop_profile
+    switch: s_pop_center
+
+shot_groups:
+  burninated_pop_group:
+    shots:
+      - burninated_pop_left
+      - burninated_pop_right
+      - burninated_pop_center
 
 event_player:
   mode_pops_burninated_started:
@@ -22,29 +42,34 @@ event_player:
   - start_center_pop_burninated
 
 show_player:
+  burninated_pop_group_hit:
+    pulse_pops:
+      priority: 1
+      loops: 2
+
   start_left_pop_burninated:
     fire_burninated_show:
+      priority: 3
       key: pop_left_show
-      action: play
-      sync_ms: 500
+      sync_ms: 600
       start_step: 5
       show_tokens:
         light_prefix: l_pop_ring_a
 
   start_right_pop_burninated:
     fire_burninated_show:
+      priority: 3
       key: pop_right_show
-      action: play
-      sync_ms: 500
+      sync_ms: 600
       start_step: 1
       show_tokens:
         light_prefix: l_pop_ring_b
 
   start_center_pop_burninated:
     fire_burninated_show:
+      priority: 3
       key: pop_center_show
-      action: play
-      sync_ms: 500
+      sync_ms: 600
       start_step: 7
       show_tokens:
         light_prefix: l_pop_ring_c

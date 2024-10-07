@@ -53,7 +53,7 @@ lights:
 
   # Ring A
   l_pop_ring_a_1:
-    tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_pf, lights_pop_ring_a
+    tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_pf, lights_pop_ring_a, lights_pops
     channels:
       red:
         number: exp_playfield-2-4-0 #+1
@@ -65,7 +65,7 @@ lights:
         number: exp_playfield-2-5-1 #+2
 
   l_pop_ring_a_2:
-    tags: lights_2b, lights_3b, lights_4a, lights_5e, lights_pf, lights_pop_ring_a
+    tags: lights_2b, lights_3b, lights_4a, lights_5e, lights_pf, lights_pop_ring_a, lights_pops
     channels:
       red:
         number: exp_playfield-2-5-2 #+1
@@ -77,7 +77,7 @@ lights:
         number: exp_playfield-2-6-0 #-1
 
   l_pop_ring_a_3:
-    tags: lights_2a, lights_3c, lights_4b, lights_5b, lights_pf, lights_pop_ring_a
+    tags: lights_2a, lights_3c, lights_4b, lights_5b, lights_pf, lights_pop_ring_a, lights_pops
     channels:
       red:
         number: exp_playfield-2-7-1 #+4
@@ -89,7 +89,7 @@ lights:
         number: exp_playfield-2-7-2 #+2
 
   l_pop_ring_a_4:
-    tags: lights_2b, lights_3a, lights_4b, lights_5e, lights_pf, lights_pop_ring_a
+    tags: lights_2b, lights_3a, lights_4b, lights_5e, lights_pf, lights_pop_ring_a, lights_pops
     channels:
       red:
         number: exp_playfield-2-8-0 #+1
@@ -101,7 +101,7 @@ lights:
         number: exp_playfield-2-9-1 #+2
 
   l_pop_ring_a_5:
-    tags: lights_2a, lights_3b, lights_4c, lights_5c, lights_pf, lights_pop_ring_a
+    tags: lights_2a, lights_3b, lights_4c, lights_5c, lights_pf, lights_pop_ring_a, lights_pops
     channels:
       red:
         number: exp_playfield-2-9-2 #+1
@@ -113,7 +113,7 @@ lights:
         number: exp_playfield-2-10-0 #-1
 
   l_pop_ring_a_6:
-    tags: lights_2b, lights_3c, lights_4c, lights_5e, lights_pf, lights_pop_ring_a
+    tags: lights_2b, lights_3c, lights_4c, lights_5e, lights_pf, lights_pop_ring_a, lights_pops
     channels:
       red:
         number: exp_playfield-2-11-1 #+4
@@ -125,7 +125,7 @@ lights:
         number: exp_playfield-2-11-2 #+2
 
   l_pop_ring_a_7:
-    tags: lights_2a, lights_3a, lights_4d, lights_5d, lights_pf, lights_pop_ring_a
+    tags: lights_2a, lights_3a, lights_4d, lights_5d, lights_pf, lights_pop_ring_a, lights_pops
     channels:
       red:
         number: exp_playfield-2-12-0 #+1
@@ -137,7 +137,7 @@ lights:
         number: exp_playfield-2-13-1 #+2
 
   l_pop_ring_a_8:
-    tags: lights_2b, lights_3b, lights_4d, lights_5e, lights_pf, lights_pop_ring_a
+    tags: lights_2b, lights_3b, lights_4d, lights_5e, lights_pf, lights_pop_ring_a, lights_pops
     channels:
       red:
         number: exp_playfield-2-13-2 #+1
@@ -150,7 +150,7 @@ lights:
 
   # Ring B
   l_pop_ring_b_1:
-    tags: lights_2a, lights_3c, lights_4a, lights_5a, lights_pf, lights_pop_ring_b
+    tags: lights_2a, lights_3c, lights_4a, lights_5a, lights_pf, lights_pop_ring_b, lights_pops
     channels:
       red:
         number: exp_playfield-2-15-1 #+4
@@ -162,7 +162,7 @@ lights:
         number: exp_playfield-2-15-2 #+2
 
   l_pop_ring_b_2:
-    tags: lights_2b, lights_3a, lights_4a, lights_5e, lights_pf, lights_pop_ring_b
+    tags: lights_2b, lights_3a, lights_4a, lights_5e, lights_pf, lights_pop_ring_b, lights_pops
     channels:
       red:
         number: exp_playfield-2-16-0 #+1
@@ -174,7 +174,7 @@ lights:
         number: exp_playfield-2-17-1 #+2
 
   l_pop_ring_b_3:
-    tags: lights_2a, lights_3b, lights_4b, lights_5b, lights_pf, lights_pop_ring_b
+    tags: lights_2a, lights_3b, lights_4b, lights_5b, lights_pf, lights_pop_ring_b, lights_pops
     channels:
       red:
         number: exp_playfield-2-17-2 #+1
@@ -186,7 +186,7 @@ lights:
         number: exp_playfield-2-18-0 #-1
 
   l_pop_ring_b_4:
-    tags: lights_2b, lights_3c, lights_4b, lights_5e, lights_pf, lights_pop_ring_b
+    tags: lights_2b, lights_3c, lights_4b, lights_5e, lights_pf, lights_pop_ring_b, lights_pops
     channels:
       red:
         number: exp_playfield-2-19-1 #+4
@@ -198,7 +198,7 @@ lights:
         number: exp_playfield-2-19-2 #+2
 
   l_pop_ring_b_5:
-    tags: lights_2a, lights_3a, lights_4c, lights_5c, lights_pf, lights_pop_ring_b
+    tags: lights_2a, lights_3a, lights_4c, lights_5c, lights_pf, lights_pop_ring_b, lights_pops
     channels:
       red:
         number: exp_playfield-2-20-0 #+1
@@ -210,7 +210,7 @@ lights:
         number: exp_playfield-2-21-1 #+2
 
   l_pop_ring_b_6:
-    tags: lights_2b, lights_3b, lights_4c, lights_5e, lights_pf, lights_pop_ring_b
+    tags: lights_2b, lights_3b, lights_4c, lights_5e, lights_pf, lights_pop_ring_b, lights_pops
     channels:
       red:
         number: exp_playfield-2-21-2 #+1
@@ -222,7 +222,7 @@ lights:
         number: exp_playfield-2-22-0 #-1
 
   l_pop_ring_b_7:
-    tags: lights_2a, lights_3c, lights_4d, lights_5d, lights_pf, lights_pop_ring_b
+    tags: lights_2a, lights_3c, lights_4d, lights_5d, lights_pf, lights_pop_ring_b, lights_pops
     channels:
       red:
         number: exp_playfield-2-23-1 #+4
@@ -234,7 +234,7 @@ lights:
         number: exp_playfield-2-23-2 #+2
 
   l_pop_ring_b_8:
-    tags: lights_2b, lights_3a, lights_4d, lights_5e, lights_pf, lights_pop_ring_b
+    tags: lights_2b, lights_3a, lights_4d, lights_5e, lights_pf, lights_pop_ring_b, lights_pops
     channels:
       red:
         number: exp_playfield-2-24-0 #+1
@@ -247,7 +247,7 @@ lights:
 
   # Ring C
   l_pop_ring_c_1:
-    tags: lights_2a, lights_3b, lights_4a, lights_5a, lights_pf, lights_pop_ring_c
+    tags: lights_2a, lights_3b, lights_4a, lights_5a, lights_pf, lights_pop_ring_c, lights_pops
     channels:
       red:
         number: exp_playfield-2-25-2 #+1
@@ -259,7 +259,7 @@ lights:
         number: exp_playfield-2-26-0 #-1
 
   l_pop_ring_c_2:
-    tags: lights_2b, lights_3c, lights_4a, lights_5e, lights_pf, lights_pop_ring_c
+    tags: lights_2b, lights_3c, lights_4a, lights_5e, lights_pf, lights_pop_ring_c, lights_pops
     channels:
       red:
         number: exp_playfield-2-27-1 #+4
@@ -271,7 +271,7 @@ lights:
         number: exp_playfield-2-27-2 #+2
 
   l_pop_ring_c_3:
-    tags: lights_2a, lights_3a, lights_4b, lights_5b, lights_pf, lights_pop_ring_c
+    tags: lights_2a, lights_3a, lights_4b, lights_5b, lights_pf, lights_pop_ring_c, lights_pops
     channels:
       red:
         number: exp_playfield-2-28-0 #+1
@@ -283,7 +283,7 @@ lights:
         number: exp_playfield-2-29-1 #+2
 
   l_pop_ring_c_4:
-    tags: lights_2b, lights_3b, lights_4b, lights_5e, lights_pf, lights_pop_ring_c
+    tags: lights_2b, lights_3b, lights_4b, lights_5e, lights_pf, lights_pop_ring_c, lights_pops
     channels:
       red:
         number: exp_playfield-2-29-2 #+1
@@ -295,7 +295,7 @@ lights:
         number: exp_playfield-2-30-0 #-1
 
   l_pop_ring_c_5:
-    tags: lights_2a, lights_3c, lights_4c, lights_5c, lights_pf, lights_pop_ring_c
+    tags: lights_2a, lights_3c, lights_4c, lights_5c, lights_pf, lights_pop_ring_c, lights_pops
     channels:
       red:
         number: exp_playfield-2-31-1 #+4
@@ -307,7 +307,7 @@ lights:
         number: exp_playfield-2-31-2 #+2
 
   l_pop_ring_c_6:
-    tags: lights_2b, lights_3a, lights_4c, lights_5e, lights_pf, lights_pop_ring_c
+    tags: lights_2b, lights_3a, lights_4c, lights_5e, lights_pf, lights_pop_ring_c, lights_pops
     channels:
       red:
         number: exp_playfield-2-32-0 #+1
@@ -319,7 +319,7 @@ lights:
 #        number: exp_playfield-2-33-1 #+2 too high
 
   l_pop_ring_c_7:
-    tags: lights_2a, lights_3b, lights_4d, lights_5d, lights_pf, lights_pop_ring_c
+    tags: lights_2a, lights_3b, lights_4d, lights_5d, lights_pf, lights_pop_ring_c, lights_pops
     platform: smart_virtual
     # channels:
     #   red:
@@ -332,7 +332,7 @@ lights:
     #     number: exp_playfield-2-34-0 #-1
 
   l_pop_ring_c_8:
-    tags: lights_2b, lights_3c, lights_4d, lights_5e, lights_pf, lights_pop_ring_c
+    tags: lights_2b, lights_3c, lights_4d, lights_5e, lights_pf, lights_pop_ring_c, lights_pops
     platform: smart_virtual
     # channels:
     #   red:
