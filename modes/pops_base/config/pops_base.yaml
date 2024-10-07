@@ -6,15 +6,34 @@ mode:
   priority: 1510
 
 variable_player:
-  s_pop_left_active:
-    score: 500 * current_player.playfield_multiplier
-  s_pop_right_active:
-    score: 500 * current_player.playfield_multiplier
-  s_pop_center_active:
+  base_pop_group_hit:
     score: 500 * current_player.playfield_multiplier
 
+shot_profiles:
+  base_pop_profile:
+    states:
+      - name: singleton
+
+shots:
+  base_pop_left:
+    profile: base_pop_profile
+    switch: s_pop_left
+  base_pop_right:
+    profile: base_pop_profile
+    switch: s_pop_right
+  base_pop_center:
+    profile: base_pop_profile
+    switch: s_pop_center
+
+shot_groups:
+  base_pop_group:
+    shots:
+      - base_pop_left
+      - base_pop_right
+      - base_pop_center
+
 show_player:
-  s_pop_left_active:
+  base_pop_left_hit:
     pop_flash:
       key: pop_left_show
       action: play
@@ -22,7 +41,7 @@ show_player:
       show_tokens:
         light_prefix: l_pop_ring_a
 
-  s_pop_right_active:
+  base_pop_right_hit:
     pop_flash:
       key: pop_right_show
       action: play
@@ -30,7 +49,7 @@ show_player:
       show_tokens:
         light_prefix: l_pop_ring_b
 
-  s_pop_center_active:
+  base_pop_center_hit:
     pop_flash:
       key: pop_center_show
       action: play
