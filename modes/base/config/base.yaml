@@ -21,12 +21,15 @@ slide_player:
 sound_player:
   s_start_active:
     cash:
-      ducking:
+      ducking: &duck_effects
         bus: effects
         attack: 1
         attenuation: 1
         release_point: 1
         release: 1s
+  s_burn_b_active:
+    replaceme:
+      ducking: *duck_effects
 
 
 event_player:
