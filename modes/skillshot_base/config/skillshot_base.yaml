@@ -40,14 +40,14 @@ event_player:
     - mode_fail_skillshot_base
   skillshot_of_an_artist_hitme_hit:
     - increment_playfield_multiplier
-    - abort_skill_2
-    - abort_skill_3
+    - disable_skill_2
+    - disable_skill_3
   skillshot_2_hitme_hit:
-    - abort_skill_1
-    - abort_skill_3
+    - disable_skill_1
+    - disable_skill_3
   skillshot_3_hitme_hit:
-    - abort_skill_1
-    - abort_skill_2
+    - disable_skill_1
+    - disable_skill_2
 
   skillshots_group_hitme_hit:
     - priority_show_skillshot_success
@@ -58,19 +58,19 @@ shot_profiles:
     advance_on_hit: false
     block: true
     states:
-      - name: 'hitme'
+      - name: disabled
+        show: on_color
+        show_tokens:
+          color: orange
+      - name: hitme
         show: flash_color
         show_tokens:
           color: purple
-      - name: 'completed'
+      - name: completed
         show: flash_color
         show_tokens:
           color: purple
         speed: 10
-      - name: 'aborted'
-        show: on_color
-        show_tokens:
-          color: orange
 
 shots:
   skillshot_of_an_artist:
@@ -78,8 +78,10 @@ shots:
     switch: s_spinner_left
     advance_events: skillshot_of_an_artist_hitme_hit
     control_events:
-      - events: abort_skill_1
-        state: 2
+      - events: restart_skill_shots
+        state: 1
+      - events: disable_skill_1
+        state: 0
     show_tokens:
       light: l_majesty_6
 
@@ -88,8 +90,10 @@ shots:
     switch: s_spinner_right
     advance_events: skillshot_2_hitme_hit
     control_events:
-      - events: abort_skill_2
-        state: 2
+      - events: restart_skill_shots
+        state: 1
+      - events: disable_skill_2
+        state: 0
     show_tokens:
       light: l_majesty_2
 
@@ -98,12 +102,13 @@ shots:
     switches: s_burn_b, s_burn_u, s_burn_r, s_burn_n
     advance_events: skillshot_3_hitme_hit
     control_events:
-      - events: abort_skill_3
-        state: 2
+      - events: restart_skill_shots
+        state: 1
+      - events: disable_skill_3
+        state: 0
     show_tokens:
       light: l_majesty_1
 
 shot_groups:
   skillshots_group:
     shots: skillshot_of_an_artist, skillshot_2, skillshot_3
-    reset_events: restart_skill_shots
