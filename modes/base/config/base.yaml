@@ -27,10 +27,9 @@ sound_player:
         attenuation: 0
         release_point: 0
         release: 0s
-  s_burn_b_active:
-    replaceme:
+  base_pop_group_hit: #here to reuse duck effects for now
+    pop_pool:
       ducking: *duck_effects
-
 
 event_player:
   mode_base_started:
