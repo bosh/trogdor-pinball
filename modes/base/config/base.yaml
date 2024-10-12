@@ -23,10 +23,10 @@ sound_player:
     cash:
       ducking: &duck_effects
         bus: effects
-        attack: 1
-        attenuation: 1
-        release_point: 1
-        release: 1s
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
   s_burn_b_active:
     replaceme:
       ducking: *duck_effects
