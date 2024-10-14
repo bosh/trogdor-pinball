@@ -33,6 +33,16 @@ variable_player:
   captive_ball_target_disabled_hit:
     score: 200 * current_player.playfield_multiplier
 
+random_event_player:
+  s_captive_ball_presence_active:
+    force_all: true
+    disable_random: true
+    events:
+      - spawn_progressive_spiral_1
+      - spawn_progressive_spiral_2
+      - spawn_progressive_spiral_3
+      - spawn_progressive_spiral_4
+
 show_player:
   captive_ball_target_live_hit:
     cottage_burn:
@@ -48,3 +58,31 @@ show_player:
         l6: l_captive_ball_ring_6
         l7: l_captive_ball_ring_7
         l8: l_captive_ball_ring_8
+
+  spawn_progressive_spiral_1:
+    slots_progressive_spiral_in:
+      key: progressive_slots_1
+      loops: 0
+      show_tokens:
+        color: orange
+
+  spawn_progressive_spiral_2:
+    slots_progressive_spiral_in:
+      key: progressive_slots_2
+      loops: 0
+      show_tokens:
+        color: yellow
+
+  spawn_progressive_spiral_3:
+    slots_progressive_spiral_in:
+      key: progressive_slots_3
+      loops: 0
+      show_tokens:
+        color: white
+
+  spawn_progressive_spiral_4:
+    slots_progressive_spiral_in:
+      key: progressive_slots_4
+      loops: 0
+      show_tokens:
+        color: green
