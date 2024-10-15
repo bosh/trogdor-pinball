@@ -1,6 +1,6 @@
 module TrogBuild
   class PlanWriter
-    PROJECT_ROOT = "#{__FILE__}/../../.."
+    PROJECT_ROOT = File.expand_path(File.join(__FILE__, "..", "..", ".."))
     def initialize(config)
       @config = config
     end
@@ -17,15 +17,15 @@ module TrogBuild
     private
 
     def generated_lights_path
-      "#{PROJECT_ROOT}/config/lights/generated_lights.yaml"
+      File.join(PROJECT_ROOT, "config/lights/generated_lights.yaml")
     end
 
     def mode_manifest_path
-      "#{PROJECT_ROOT}/config/generated_modes.yaml"
+      File.join(PROJECT_ROOT, "config/generated_modes.yaml")
     end
 
     def mode_path(name)
-      "#{PROJECT_ROOT}/modes/#{name}"
+      File.join(PROJECT_ROOT, "modes/#{name}")
     end
 
     def clean_generated_lights!
