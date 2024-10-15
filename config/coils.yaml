@@ -7,39 +7,43 @@
 
 coils:
 
-#Board 3208 
+# No coils for Expo lol 
   c_auto_plunger:
+    platform: smart_virtual
     number: 3208-0
     default_pulse_ms: 12
 
   c_trough_eject:
+    platform: smart_virtual
     number: 3208-1
     default_pulse_ms: 15
 
 
   c_flipper_right_full:
-    number: 3208-2
+    number: 0804-0
     default_pulse_ms: 25
 
   c_flipper_right_hold:
-    number: 3208-3
+    number: 0804-1
     default_hold_power: .5
     allow_enable: true
 
   c_right_sling:
+    platform: smart_virtual
     number: 3208-4
     default_pulse_ms: 20
 
 
   c_left_sling:
+    platform: smart_virtual
     number: 3208-5
     default_pulse_ms: 20
 
   c_flipper_left_hold:
-    number: 3208-6
+    number: 0804-2
     default_hold_power: .5
     allow_enable: true
 
   c_flipper_left_full:
-    number: 3208-7
+    number: 0804-3
     default_pulse_ms: 25

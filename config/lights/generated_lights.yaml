@@ -95,160 +95,160 @@ lights:
   gl_cobra_ring_a_1:
     tags: lights_generated,lights_2a,lights_3a,lights_4a,lights_5a,lights_rings,lights_pf,lights_cobra_ring_a
     type: rgb
-    platform: fast
-    number: exp_playfield-3-1
+    platform: smart_virtual
+    number: 99-1
   gl_cobra_ring_a_2:
     tags: lights_generated,lights_2b,lights_3b,lights_4a,lights_5e,lights_rings,lights_pf,lights_cobra_ring_a
     type: rgb
-    platform: fast
-    number: exp_playfield-3-2
+    platform: smart_virtual
+    number: 99-2
   gl_cobra_ring_a_3:
     tags: lights_generated,lights_2a,lights_3c,lights_4b,lights_5b,lights_rings,lights_pf,lights_cobra_ring_a
     type: rgb
-    platform: fast
-    number: exp_playfield-3-3
+    platform: smart_virtual
+    number: 99-3
   gl_cobra_ring_a_4:
     tags: lights_generated,lights_2b,lights_3a,lights_4b,lights_5e,lights_rings,lights_pf,lights_cobra_ring_a
     type: rgb
-    platform: fast
-    number: exp_playfield-3-4
+    platform: smart_virtual
+    number: 99-4
   gl_cobra_ring_a_5:
     tags: lights_generated,lights_2a,lights_3b,lights_4c,lights_5c,lights_rings,lights_pf,lights_cobra_ring_a
     type: rgb
-    platform: fast
-    number: exp_playfield-3-5
+    platform: smart_virtual
+    number: 99-5
   gl_cobra_ring_a_6:
     tags: lights_generated,lights_2b,lights_3c,lights_4c,lights_5e,lights_rings,lights_pf,lights_cobra_ring_a
     type: rgb
-    platform: fast
-    number: exp_playfield-3-6
+    platform: smart_virtual
+    number: 99-6
   gl_cobra_ring_a_7:
     tags: lights_generated,lights_2a,lights_3a,lights_4d,lights_5d,lights_rings,lights_pf,lights_cobra_ring_a
     type: rgb
-    platform: fast
-    number: exp_playfield-3-7
+    platform: smart_virtual
+    number: 99-7
   gl_cobra_ring_a_8:
     tags: lights_generated,lights_2b,lights_3b,lights_4d,lights_5e,lights_rings,lights_pf,lights_cobra_ring_a
     type: rgb
-    platform: fast
-    number: exp_playfield-3-8
+    platform: smart_virtual
+    number: 99-8
   gl_cobra_ring_b_1:
     tags: lights_generated,lights_2a,lights_3a,lights_4a,lights_5a,lights_rings,lights_pf,lights_cobra_ring_b
     type: rgb
-    platform: fast
-    number: exp_playfield-3-9
+    platform: smart_virtual
+    number: 99-9
   gl_cobra_ring_b_2:
     tags: lights_generated,lights_2b,lights_3b,lights_4a,lights_5e,lights_rings,lights_pf,lights_cobra_ring_b
     type: rgb
-    platform: fast
-    number: exp_playfield-3-10
+    platform: smart_virtual
+    number: 99-10
   gl_cobra_ring_b_3:
     tags: lights_generated,lights_2a,lights_3c,lights_4b,lights_5b,lights_rings,lights_pf,lights_cobra_ring_b
     type: rgb
-    platform: fast
-    number: exp_playfield-3-11
+    platform: smart_virtual
+    number: 99-11
   gl_cobra_ring_b_4:
     tags: lights_generated,lights_2b,lights_3a,lights_4b,lights_5e,lights_rings,lights_pf,lights_cobra_ring_b
     type: rgb
-    platform: fast
-    number: exp_playfield-3-12
+    platform: smart_virtual
+    number: 99-12
   gl_cobra_ring_b_5:
     tags: lights_generated,lights_2a,lights_3b,lights_4c,lights_5c,lights_rings,lights_pf,lights_cobra_ring_b
     type: rgb
-    platform: fast
-    number: exp_playfield-3-13
+    platform: smart_virtual
+    number: 99-13
   gl_cobra_ring_b_6:
     tags: lights_generated,lights_2b,lights_3c,lights_4c,lights_5e,lights_rings,lights_pf,lights_cobra_ring_b
     type: rgb
-    platform: fast
-    number: exp_playfield-3-14
+    platform: smart_virtual
+    number: 99-14
   gl_cobra_ring_b_7:
     tags: lights_generated,lights_2a,lights_3a,lights_4d,lights_5d,lights_rings,lights_pf,lights_cobra_ring_b
     type: rgb
-    platform: fast
-    number: exp_playfield-3-15
+    platform: smart_virtual
+    number: 99-15
   gl_cobra_ring_b_8:
     tags: lights_generated,lights_2b,lights_3b,lights_4d,lights_5e,lights_rings,lights_pf,lights_cobra_ring_b
     type: rgb
-    platform: fast
-    number: exp_playfield-3-16
+    platform: smart_virtual
+    number: 99-16
   gl_cobra_ring_c_1:
     tags: lights_generated,lights_2a,lights_3a,lights_4a,lights_5a,lights_rings,lights_pf,lights_cobra_ring_c
     type: rgb
-    platform: fast
-    number: exp_playfield-3-17
+    platform: smart_virtual
+    number: 99-17
   gl_cobra_ring_c_2:
     tags: lights_generated,lights_2b,lights_3b,lights_4a,lights_5e,lights_rings,lights_pf,lights_cobra_ring_c
     type: rgb
-    platform: fast
-    number: exp_playfield-3-18
+    platform: smart_virtual
+    number: 99-18
   gl_cobra_ring_c_3:
     tags: lights_generated,lights_2a,lights_3c,lights_4b,lights_5b,lights_rings,lights_pf,lights_cobra_ring_c
     type: rgb
-    platform: fast
-    number: exp_playfield-3-19
+    platform: smart_virtual
+    number: 99-19
   gl_cobra_ring_c_4:
     tags: lights_generated,lights_2b,lights_3a,lights_4b,lights_5e,lights_rings,lights_pf,lights_cobra_ring_c
     type: rgb
-    platform: fast
-    number: exp_playfield-3-20
+    platform: smart_virtual
+    number: 99-20
   gl_cobra_ring_c_5:
     tags: lights_generated,lights_2a,lights_3b,lights_4c,lights_5c,lights_rings,lights_pf,lights_cobra_ring_c
     type: rgb
-    platform: fast
-    number: exp_playfield-3-21
+    platform: smart_virtual
+    number: 99-21
   gl_cobra_ring_c_6:
     tags: lights_generated,lights_2b,lights_3c,lights_4c,lights_5e,lights_rings,lights_pf,lights_cobra_ring_c
     type: rgb
-    platform: fast
-    number: exp_playfield-3-22
+    platform: smart_virtual
+    number: 99-22
   gl_cobra_ring_c_7:
     tags: lights_generated,lights_2a,lights_3a,lights_4d,lights_5d,lights_rings,lights_pf,lights_cobra_ring_c
     type: rgb
-    platform: fast
-    number: exp_playfield-3-23
+    platform: smart_virtual
+    number: 99-23
   gl_cobra_ring_c_8:
     tags: lights_generated,lights_2b,lights_3b,lights_4d,lights_5e,lights_rings,lights_pf,lights_cobra_ring_c
     type: rgb
-    platform: fast
-    number: exp_playfield-3-24
+    platform: smart_virtual
+    number: 99-24
   gl_cobra_ring_d_1:
     tags: lights_generated,lights_2a,lights_3a,lights_4a,lights_5a,lights_rings,lights_pf,lights_cobra_ring_d
     type: rgb
-    platform: fast
-    number: exp_playfield-3-25
+    platform: smart_virtual
+    number: 99-25
   gl_cobra_ring_d_2:
     tags: lights_generated,lights_2b,lights_3b,lights_4a,lights_5e,lights_rings,lights_pf,lights_cobra_ring_d
     type: rgb
-    platform: fast
-    number: exp_playfield-3-26
+    platform: smart_virtual
+    number: 99-26
   gl_cobra_ring_d_3:
     tags: lights_generated,lights_2a,lights_3c,lights_4b,lights_5b,lights_rings,lights_pf,lights_cobra_ring_d
     type: rgb
-    platform: fast
-    number: exp_playfield-3-27
+    platform: smart_virtual
+    number: 99-27
   gl_cobra_ring_d_4:
     tags: lights_generated,lights_2b,lights_3a,lights_4b,lights_5e,lights_rings,lights_pf,lights_cobra_ring_d
     type: rgb
-    platform: fast
-    number: exp_playfield-3-28
+    platform: smart_virtual
+    number: 99-28
   gl_cobra_ring_d_5:
     tags: lights_generated,lights_2a,lights_3b,lights_4c,lights_5c,lights_rings,lights_pf,lights_cobra_ring_d
     type: rgb
-    platform: fast
-    number: exp_playfield-3-29
+    platform: smart_virtual
+    number: 99-29
   gl_cobra_ring_d_6:
     tags: lights_generated,lights_2b,lights_3c,lights_4c,lights_5e,lights_rings,lights_pf,lights_cobra_ring_d
     type: rgb
-    platform: fast
-    number: exp_playfield-3-30
+    platform: smart_virtual
+    number: 99-30
   gl_cobra_ring_d_7:
     tags: lights_generated,lights_2a,lights_3a,lights_4d,lights_5d,lights_rings,lights_pf,lights_cobra_ring_d
     type: rgb
-    platform: fast
-    number: exp_playfield-3-31
+    platform: smart_virtual
+    number: 99-31
   gl_cobra_ring_d_8:
     tags: lights_generated,lights_2b,lights_3b,lights_4d,lights_5e,lights_rings,lights_pf,lights_cobra_ring_d
     type: rgb
-    platform: fast
-    number: exp_playfield-3-32
+    platform: smart_virtual
+    number: 99-32

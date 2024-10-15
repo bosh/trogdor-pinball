@@ -9,79 +9,92 @@ switches:
 #3208 Board
 ## Block D
   s_right_outer_lane:
+    platform: smart_virtual
     number: 3208-25
     tags: playfield_active
 
   s_right_inner_lane:
+    platform: smart_virtual
     number: 3208-26
     tags: playfield_active
 
   s_right_flipper_eos:
-    number: 3208-28
+    number: 0804-2
     type: 'NC'
 
   s_right_sling: # Parallel switch pair
+    platform: smart_virtual
     number: 3208-29
 
   s_plunger: # shooter lane presence
+    platform: smart_virtual
     number: 3208-31
 
 ## Block B
   s_high_voltage_status:
+    platform: smart_virtual
     number: 3208-8
 
   s_left_outer_lane:
+    platform: smart_virtual
     number: 3208-11
     tags: playfield_active
 
   s_left_inner_lane:
+    platform: smart_virtual
     number: 3208-12
     tags: playfield_active
 
   s_left_flipper_eos:
-    number: 3208-13
+    number: 0804-5
     type: 'NC'
 
   s_left_sling: # Parallel switch pair
+    platform: smart_virtual
     number: 3208-15
 
 ## Block C
   s_trough_ball_jam:
+    platform: smart_virtual
     number: 3208-17
     type: 'NC'
 
   s_trough_ball_1:
+    platform: smart_virtual
     number: 3208-16
     type: 'NC'
 
   s_trough_ball_2:
+    platform: smart_virtual
     number: 3208-18
 
   s_trough_ball_3:
+    platform: smart_virtual
     number: 3208-19
 
   s_trough_ball_4:
+    platform: smart_virtual
     number: 3208-20
 
   s_trough_ball_5:
+    platform: smart_virtual
     number: 3208-21
 
-#Cabinet switches WHILE ON 3208!
-## Block A
+#Mini cab switches for expo
   s_mini_flipper:
-    number: 3208-0
+    number: 0804-0
     tags: mini_flipper
 
   s_left_flipper:
-    number: 3208-1
+    number: 0804-1
     tags: left_flipper
 
   s_right_flipper:
-    number: 3208-3
+    number: 0804-3
     tags: right_flipper
 
   s_start:
-    number: 3208-4
+    number: 0804-4
     tags: start
 
 virtual_platform_start_active_switches:

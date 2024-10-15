@@ -3,34 +3,42 @@
 lights:
   # Cobrapin star post ring - RGB, no hax needed
   l_star_ring_a_1:
-    number: exp_playfield-1-3
+    platform: smart_virtual
+    number: 99-1-3
     type: rgb
     tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_cab, lights_star_ring_a
   l_star_ring_a_2:
-    number: exp_playfield-1-4
+    platform: smart_virtual
+    number: 99-1-4
     type: rgb
     tags: lights_2b, lights_3b, lights_4a, lights_5e, lights_cab, lights_star_ring_a
   l_star_ring_a_3:
-    number: exp_playfield-1-5
+    platform: smart_virtual
+    number: 99-1-5
     type: rgb
     tags: lights_2a, lights_3c, lights_4b, lights_5b, lights_cab, lights_star_ring_a
   l_star_ring_a_4:
-    number: exp_playfield-1-6
+    platform: smart_virtual
+    number: 99-1-6
     type: rgb
     tags: lights_2b, lights_3a, lights_4b, lights_5e, lights_cab, lights_star_ring_a
   l_star_ring_a_5:
-    number: exp_playfield-1-7
+    platform: smart_virtual
+    number: 99-1-7
     type: rgb
     tags: lights_2a, lights_3b, lights_4c, lights_5c, lights_cab, lights_star_ring_a
   l_star_ring_a_6:
-    number: exp_playfield-1-8
+    platform: smart_virtual
+    number: 99-1-8
     type: rgb
     tags: lights_2b, lights_3c, lights_4c, lights_5e, lights_cab, lights_star_ring_a
   l_star_ring_a_7:
-    number: exp_playfield-1-9
+    platform: smart_virtual
+    number: 99-1-9
     type: rgb
     tags: lights_2a, lights_3a, lights_4d, lights_5d, lights_cab, lights_star_ring_a
   l_star_ring_a_8:
-    number: exp_playfield-1-10
+    platform: smart_virtual
+    number: 99-1-10
     type: rgb
     tags: lights_2b, lights_3b, lights_4d, lights_5e, lights_cab, lights_star_ring_a

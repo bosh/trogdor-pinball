@@ -41,7 +41,7 @@ module TrogBuild
         config
       end
 
-      cobra_exp_base_address = 'exp_playfield-4-'
+      cobra_exp_base_address = '99'
       cobra_number = 0
       ['a','b','c','d'].each do |letter|
         add_light_sequence "gl_cobra_ring_#{letter}", 8 do |i, config|
@@ -54,8 +54,8 @@ module TrogBuild
 
           config['tags'] = "lights_generated,#{lights_2_tag},#{lights_3_tag},#{lights_4_tag},#{lights_5_tag},lights_rings,lights_pf,lights_cobra_ring_#{letter}"
           config['type'] = 'rgb'
-          config['platform'] = "fast"
-          config['number'] = "exp_playfield-3-#{cobra_number}"
+          config['platform'] = "smart_virtual"
+          config['number'] = "99-#{cobra_number}"
           config
         end
       end
