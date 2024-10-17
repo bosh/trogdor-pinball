@@ -34,7 +34,7 @@ variable_player:
     score: 200 * current_player.playfield_multiplier
 
 random_event_player:
-  s_captive_ball_presence_active:
+  captive_ball_target_live_hit:
     force_all: true
     disable_random: true
     events:
