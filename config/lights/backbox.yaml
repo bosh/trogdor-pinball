@@ -1,0 +1,108 @@
+#config_version=6
+
+# Just putting one light per entire section for now,
+# as the code will generally just use tags to set
+# entire sections at once instead of individuall addressing
+
+lights:
+  l_bb_trogdor_t_1:
+    number: 7700
+    platform: smart_virtual
+    type: rgb
+    tags: lights_bb, lights_bb_trogdor, lights_bb_trogdor_t
+
+  l_bb_trogdor_r_1:
+    number: 7702
+    platform: smart_virtual
+    type: rgb
+    tags: lights_bb, lights_bb_trogdor, lights_bb_trogdor_r
+
+  l_bb_trogdor_o_1:
+    number: 7704
+    platform: smart_virtual
+    type: rgb
+    tags: lights_bb, lights_bb_trogdor, lights_bb_trogdor_o
+
+  l_bb_trogdor_g_1:
+    number: 7706
+    platform: smart_virtual
+    type: rgb
+    tags: lights_bb, lights_bb_trogdor, lights_bb_trogdor_g
+
+  l_bb_trogdor_d_1:
+    number: 7708
+    platform: smart_virtual
+    type: rgb
+    tags: lights_bb, lights_bb_trogdor, lights_bb_trogdor_d
+
+  l_bb_trogdor_o2_1:
+    number: 7710
+    platform: smart_virtual
+    type: rgb
+    tags: lights_bb, lights_bb_trogdor, lights_bb_trogdor_o2
+
+  l_bb_trogdor_r2_1:
+    number: 7712
+    platform: smart_virtual
+    type: rgb
+    tags: lights_bb, lights_bb_trogdor, lights_bb_trogdor_r2
+
+  l_bb_trogdor_!_1:
+    number: 7714
+    platform: smart_virtual
+    type: rgb
+    tags: lights_bb, lights_bb_trogdor, lights_bb_trogdor_bang
+
+  l_bb_character_trogdor_1: #5-10?
+    number: 7720
+    platform: smart_virtual
+    type: rgb
+    tags: lights_bb, lights_bb_characters, lights_bb_char_trogdor
+
+  l_bb_character_knight_1: #3-8?
+    number: 7730
+    platform: smart_virtual
+    type: rgb
+    tags: lights_bb, lights_bb_characters, lights_bb_char_knight
+
+  l_bb_character_peasant_1: #3-8?
+    number: 7740
+    platform: smart_virtual
+    type: rgb
+    tags: lights_bb, lights_bb_characters, lights_bb_char_peasant
+
+  l_bb_flame_trogdor_outer_1: #2-5?
+    number: 7750
+    platform: smart_virtual
+    type: rgb
+    tags: lights_bb, lights_bb_flames, lights_bb_flames_trogdor, lights_bb_flames_trogdor_outer
+
+  l_bb_flame_trogdor_inner_1: #2-4?
+    number: 7755
+    platform: smart_virtual
+    type: rgb
+    tags: lights_bb, lights_bb_flames, lights_bb_flames_trogdor, lights_bb_flames_trogdor_inner
+
+  l_bb_flame_peasant_1: #2-4?
+    number: 7760
+    platform: smart_virtual
+    type: rgb
+    tags: lights_bb, lights_bb_flames, lights_bb_flames_peasant
+
+  l_bb_flame_background_bottom_1: #7-14?
+    number: 7770
+    platform: smart_virtual
+    type: rgb
+    tags: lights_bb, lights_bb_flames, lights_bb_flames_background, lights_bb_flames_background_bottom
+
+  l_bb_flame_background_top_1: #5-10?
+    number: 7790
+    platform: smart_virtual
+    type: rgb
+    tags: lights_bb, lights_bb_flames, lights_bb_flames_background, lights_bb_flames_background_top
+
+  l_bb_gi_1: #5-32?
+    number: 7800
+    platform: smart_virtual
+    type: rgb
+    tags: lights_bb, lights_bb_gi, lights_gi

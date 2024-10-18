@@ -7,3 +7,4 @@ config:
   - generated_lights.yaml
   - virtual_lights.yaml
   - future.yaml
+  - backbox.yaml
