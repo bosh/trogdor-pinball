@@ -1,9 +1,5 @@
 #config_version=6
 
-# Can name these to match left, right, center, or however you want.
-# The switch name defined here will be used in any modes where
-# the switches are activated, etc.
-
 switches:
 
 #3208 Board

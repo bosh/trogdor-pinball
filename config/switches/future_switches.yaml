@@ -1,0 +1,112 @@
+#config_version=6
+
+# Devices that exist in the plan but are not yet physically installed
+#   lights are already in a separate file in the light subdir
+
+switches:
+  #For coils
+  s_pop_left:
+    number: 801
+    platform: smart_virtual
+  s_pop_right:
+    number: 802
+    platform: smart_virtual
+  s_pop_center:
+    number: 803
+    platform: smart_virtual
+
+  s_vuk_presence:
+    number: 804
+    platform: smart_virtual
+    type: 'NC'
+
+  s_upper_sling:
+    number: 805
+    platform: smart_virtual
+
+  s_upper_flipper_eos:
+    number: 806
+    platform: smart_virtual
+    type: 'NC' #maybe nc
+
+  #Targets
+  s_drop_left_down: #TODO learn how drop switching works (are there two?)
+    number: 807
+    platform: smart_virtual
+
+  #Rollovers
+  s_burn_b:
+    number: 808
+    platform: smart_virtual
+    tags: playfield_active
+  s_burn_u:
+    number: 809
+    platform: smart_virtual
+    tags: playfield_active
+  s_burn_r:
+    number: 810
+    platform: smart_virtual
+    tags: playfield_active
+  s_burn_n:
+    number: 811
+    platform: smart_virtual
+    tags: playfield_active
+
+  #Spinners
+  s_spinner_left:
+    number: 812
+    platform: smart_virtual
+    tags: playfield_active
+  s_spinner_right:
+    number: 813
+    platform: smart_virtual
+    tags: playfield_active
+
+  #Passthrough optos
+  s_left_orbit:
+    number: 814
+    platform: smart_virtual
+    tags: playfield_active
+  s_right_orbit:
+    number: 815
+    platform: smart_virtual
+    tags: playfield_active
+  s_horseshoe:
+    number: 816
+    platform: smart_virtual
+    tags: playfield_active
+
+  s_wireform_s_entry:
+    number: 817
+    platform: smart_virtual
+    tags: playfield_active
+  s_wireform_s_exit:
+    number: 818
+    platform: smart_virtual
+    tags: playfield_active
+  s_wireform_left_top:
+    number: 819
+    platform: smart_virtual
+    tags: playfield_active
+  s_wireform_right_top:
+    number: 820
+    platform: smart_virtual
+    tags: playfield_active
+
+  s_drop_bank_left:
+    number: 821
+    platform: smart_virtual
+  s_drop_bank_center:
+    number: 822
+    platform: smart_virtual
+  s_drop_bank_right:
+    number: 823
+    platform: smart_virtual
+
+  s_captive_ball_target:
+    number: 824
+    platform: smart_virtual
+    tags: playfield_active
+  s_captive_ball_presence: #Opto, normally blocked when undisturbed
+    number: 825
+    platform: smart_virtual

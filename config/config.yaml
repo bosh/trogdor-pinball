@@ -11,8 +11,7 @@ config:
   - machine.yaml
   - lights/config.yaml
   - coils.yaml
-  - switches.yaml
-  - virtual_switches.yaml
+  - switches/config.yaml
   - keyboard.yaml
   - autofires.yaml
   - ball_devices.yaml

@@ -1,0 +1,6 @@
+#config_version=6
+
+config:
+  - switches.yaml
+  - future_switches.yaml
+  - virtual_switches.yaml
