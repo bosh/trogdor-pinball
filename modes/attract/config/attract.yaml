@@ -12,8 +12,15 @@ event_player:
   mode_attract_started:
     - main_show_reloop
     - slots_show_reloop
+    - backbox_show_reloop
 
 show_player:
+  backbox_show_reloop:
+    backbox_loop:
+      key: backbox_show
+      events_when_completed: backbox_show_reloop
+      priority: 8
+
   main_show_reloop:
     light_test_loop:
       key: main_attract_show
