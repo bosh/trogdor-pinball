@@ -13,6 +13,9 @@
   lights:
     lights_bb: off
     lights_bb_gi: 444444
+    lights_bb_char_peasant: yellow
+    lights_bb_char_knight: blue
+    lights_bb_char_trogdor: green
 
 - duration: 150ms
   lights:
@@ -20,67 +23,79 @@
     lights_bb_gi: 666666
     lights_bb_flames_trogdor_outer: yellow
     lights_bb_flames_trogdor_inner: orange
+    lights_bb_flames_background: red
 
 - duration: 200ms
   lights:
     lights_bb_trogdor_r: dddddd
     lights_bb_flames_trogdor_outer: orange
     lights_bb_flames_trogdor_inner: "006666"
+    lights_bb_flames_background: red
 
 - duration: 200ms
   lights:
     lights_bb_trogdor_o: dddddd
     lights_bb_flames_trogdor_outer: off
     lights_bb_flames_trogdor_inner: orange
+    lights_bb_flames_background_top: off
 
 - duration: 200ms
   lights:
     lights_bb_trogdor_g: dddddd
     lights_bb_flames_trogdor_outer: yellow
     lights_bb_flames_trogdor_inner: orange
+    lights_bb_flames_background_top: red
 
 - duration: 200ms
   lights:
     lights_bb_trogdor_d: dddddd
     lights_bb_flames_trogdor_outer: yellow
     lights_bb_flames_trogdor_inner: orange
+    lights_bb_flames_background_top: off
 
 - duration: 200ms
   lights:
     lights_bb_trogdor_o2: dddddd
     lights_bb_flames_trogdor_outer: orange
     lights_bb_flames_trogdor_inner: red
+    lights_bb_flames_background_top: red
 
 - duration: 200ms
   lights:
     lights_bb_trogdor_r2: dddddd
     lights_bb_flames_trogdor_outer: yellow
     lights_bb_flames_trogdor_inner: orange
+    lights_bb_flames_background_top: off
 
 - duration: 200ms
   lights:
     lights_bb_trogdor_bang: eeeeee
     lights_bb_flames_trogdor_outer: orange
     lights_bb_flames_trogdor_inner: orange
+    lights_bb_flames_background_top: red
 
 - duration: 100ms
   lights:
     lights_bb_trogdor: off
     lights_bb_flames_trogdor: off
+    lights_bb_flames_background_top: off
 
 - duration: 100ms
   lights:
     lights_bb_trogdor: eeeeee
     lights_bb_flames_trogdor_outer: orange
     lights_bb_flames_trogdor_inner: red
+    lights_bb_flames_background_top: red
 
 - duration: 100ms
   lights:
     lights_bb_trogdor: off
     lights_bb_flames_trogdor: off
+    lights_bb_flames_background_top: off
 
 - duration: 100ms
   lights:
     lights_bb_trogdor: eeeeee
     lights_bb_flames_trogdor_outer: orange
     lights_bb_flames_trogdor_inner: orange
+    lights_bb_flames_background_top: red
