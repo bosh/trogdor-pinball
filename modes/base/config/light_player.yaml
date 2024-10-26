@@ -4,6 +4,7 @@ event_player:
   mode_base_started:
     - start_dome_ring_spin_red
     - start_star_ring_spin_blue
+    - start_backbox_simple_loop
   s_start_active:
     - stop_dome_ring_spin_red
     - stop_star_ring_spin_blue
@@ -21,6 +22,11 @@ show_player:
       show_tokens:
         lights: lights_dome_ring_a
         color: orange
+
+  start_backbox_simple_loop:
+    backbox_simple_loop:
+      key: backbox_loop
+      priority: 2
 
   stop_dome_ring_spin_red:
     dome_ring_red_spin:

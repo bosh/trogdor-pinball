@@ -1,0 +1,35 @@
+#show_version=6
+
+- duration: 200ms
+  lights:
+    lights_bb: off
+    lights_bb_gi: 888888
+    lights_bb_trogdor: bbbbbb
+    lights_bb_flames_background: red
+    lights_bb_flames_background_top: off
+    lights_bb_flames_trogdor_inner: orange
+    lights_bb_flames_trogdor_outer: off
+
+- duration: 200ms
+  lights:
+    lights_bb_trogdor: ffffff
+    lights_bb_flames_background_top: red
+    lights_bb_flames_trogdor_outer: yellow
+
+- duration: 200ms
+  lights:
+    lights_bb_trogdor: bbbbbb
+    lights_bb_flames_background_top: off
+    lights_bb_flames_trogdor_outer: off
+
+- duration: 200ms
+  lights:
+    lights_bb_trogdor: ffffff
+    lights_bb_flames_background_top: red
+    lights_bb_flames_trogdor_outer: yellow
+
+- duration: 200ms
+  lights:
+    lights_bb_trogdor: off
+    lights_bb_flames_background_top: off
+    lights_bb_flames_trogdor_outer: off
