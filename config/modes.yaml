@@ -3,6 +3,7 @@
 modes:
   - attract
   - base
+  - backbox_controller
   - code_base
   - priority_shows
   - ball_saves

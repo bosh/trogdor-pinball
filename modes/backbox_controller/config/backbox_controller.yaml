@@ -1,0 +1,16 @@
+#config_version=6
+
+mode:
+  start_events: mode_start_backbox_controller
+  stop_events: mode_stop_backbox_controller
+  priority: 8888
+
+show_player:
+  start_backbox_simple_loop:
+    backbox_simple_loop:
+      key: backbox_loop
+      priority: 2
+
+event_player:
+  mode_backbox_controller_started:
+    - start_backbox_simple_loop
