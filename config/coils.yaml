@@ -19,11 +19,12 @@ coils:
 
   c_flipper_right_full:
     number: 3208-2
-    default_pulse_ms: 25
+    default_pulse_ms: settings.flipper_main_coil_power
 
   c_flipper_right_hold:
     number: 3208-3
-    default_hold_power: .5
+    default_hold_power: 0.5
+    # default_hold_power: settings.flipper_hold_coil_power
     allow_enable: true
 
   c_right_sling:
@@ -37,9 +38,10 @@ coils:
 
   c_flipper_left_hold:
     number: 3208-6
-    default_hold_power: .5
+    default_hold_power: 0.5
+    # default_hold_power: settings.flipper_hold_coil_power
     allow_enable: true
 
   c_flipper_left_full:
     number: 3208-7
-    default_pulse_ms: 25
+    default_pulse_ms: settings.flipper_main_coil_power
