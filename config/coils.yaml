@@ -10,11 +10,11 @@ coils:
 #Board 3208 
   c_auto_plunger:
     number: 3208-0
-    default_pulse_ms: 12
+    default_pulse_ms: settings.auto_plunger_coil_power
 
   c_trough_eject:
     number: 3208-1
-    default_pulse_ms: 15
+    default_pulse_ms: settings.trough_eject_coil_power
 
 
   c_flipper_right_full:

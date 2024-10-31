@@ -10,6 +10,7 @@ settings:
     default: 0
     key_type: int
 
+
   flipper_main_coil_power:
     sort: 151
     label: Flipper main power (ms)
@@ -27,7 +28,7 @@ settings:
       40: '40 ms'
 
   # flipper_hold_coil_power: #Coil::default_hold_power doesn't support template variables
-  #   sort: 151
+  #   sort: 152
   #   label: Flipper hold power (%)
   #   key_type: float
   #   default: 0.5
@@ -40,3 +41,35 @@ settings:
   #     0.75: '3/4'
   #     0.875: '7/8'
   #     1: 'Full'
+
+  auto_plunger_coil_power:
+    sort: 155
+    label: Auto launch power
+    key_type: int
+    default: 20
+    values:
+      12: '12 ms'
+      15: '15 ms'
+      18: '18 ms'
+      20: '20 ms (default)'
+      24: '24 ms'
+      28: '28 ms'
+      32: '32 ms'
+      36: '36 ms'
+      40: '40 ms'
+
+  trough_eject_coil_power:
+    sort: 156
+    label: Trough ball eject power
+    key_type: int
+    default: 20
+    values:
+      12: '12 ms'
+      15: '15 ms'
+      18: '18 ms'
+      20: '20 ms (default)'
+      24: '24 ms'
+      28: '28 ms'
+      32: '32 ms'
+      36: '36 ms'
+      40: '40 ms'
