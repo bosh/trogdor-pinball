@@ -1,12 +1,7 @@
 #config_version=6
 
-slide_player:
-  mode_attract_started:
-    attract:
-      action: play
-  mode_attract_started.1:
-    startup:
-      action: remove
+config:
+  - attract-media.yaml
 
 event_player:
   mode_attract_started:
