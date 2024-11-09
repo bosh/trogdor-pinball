@@ -3,7 +3,7 @@
 settings:
   ball_search_enabled:
     sort: 200
-    label: Ball Search Enabled
+    label: Ball Search Enabled?
     values:
       0: "Disabled"
       1: "Enabled"
