@@ -23,7 +23,7 @@ flippers:
     activation_switch: s_right_flipper
     enable_events: ball_started, enableAutofire #, machine_reset_phase_3 #P3 for testing
     disable_events: ball_will_end, service_mode_entered, disable_autofires
-    use_eos: true
+    use_eos: false #true
 
   left_flipper:
     main_coil: c_flipper_left_full
@@ -32,5 +32,4 @@ flippers:
     eos_switch: s_left_flipper_eos
     enable_events: ball_started, enableAutofire #, machine_reset_phase_3
     disable_events: ball_will_end, service_mode_entered, disable_autofires
-    use_eos: true
-
+    use_eos: false #true
