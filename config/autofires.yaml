@@ -37,7 +37,7 @@ flippers:
     activation_switch: s_right_flipper
     enable_events: ball_started, enable_right_flipper
     disable_events: ball_will_end, service_mode_entered, disable_right_flipper
-    use_eos: true
+    use_eos: false #true
 
   left_flipper:
     main_coil: c_flipper_left_full
@@ -46,7 +46,7 @@ flippers:
     eos_switch: s_left_flipper_eos
     enable_events: ball_started, enable_left_flipper
     disable_events: ball_will_end, service_mode_entered, disable_left_flipper
-    use_eos: true
+#    use_eos: true
 
   upper_flipper: #left flipper rotation
     ball_search_order: 200
