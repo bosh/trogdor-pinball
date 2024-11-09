@@ -11,21 +11,18 @@ slide_player:
 sound_player:
   music_play_chiptune:
     theme_chiptune:
-      ducking:
-        bus: music
-        attack: 0
-        attenuation: 0
-        release_point: 0
-        release: 0s
-  music_stop_chiptune:
-    theme_chiptune:
-      action: stop
-      ducking:
-        bus: music
-        attack: 0
-        attenuation: 0
-        release_point: 0
-        release: 0s
+      bus: music
+      fade_in: 500ms
+      fade_out: 1s
+  # music_stop_chiptune:
+  #   theme_chiptune:
+  #     action: stop
+  #     ducking:
+  #       bus: music
+  #       attack: 0
+  #       attenuation: 0
+  #       release_point: 0
+  #       release: 0s
 
 event_player:
   mode_attract_started:
