@@ -11,6 +11,7 @@ slide_player:
 sound_player:
   music_play_chiptune:
     theme_chiptune:
+      loops: -1
       ducking:
         bus: music
         attack: 0
