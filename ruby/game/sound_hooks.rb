@@ -3,10 +3,14 @@ module TrogBuild
     def custom_top_comment; 'Sound hooks because ducking is wonky on windows' end
     def generate_start_events; 'ball_started' end
 
+    HOOKS = [
+      'cash', 'pop_pool',
+    ]
+
     def custom_hash
       out = {'sound_player' => {}}
       sp = out['sound_player']
-      add_sound_hook(sp, 'cash')
+      HOOKS.each { |hook| add_sound_hook(sp, hook) }
       out
     end
 
