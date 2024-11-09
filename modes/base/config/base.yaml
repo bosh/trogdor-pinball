@@ -19,19 +19,17 @@ slide_player:
       action: remove
 
 sound_player:
-  s_start_active:
-    cash:
-      ducking: &duck_effects
+  base_pop_group_hit:
+    pop_pool:
+      ducking: #TODO might not need this
         bus: effects
         attack: 0
         attenuation: 0
         release_point: 0
         release: 0s
-  base_pop_group_hit: #here to reuse duck effects for now
-    pop_pool:
-      ducking: *duck_effects
 
 event_player:
+  s_start_active: [dj_cash]
   mode_base_started:
     - mode_start_backbox_controller
     - mode_start_code_base

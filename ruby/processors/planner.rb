@@ -13,6 +13,7 @@ module TrogBuild
       add_example_mode!
       add_achievement_modes!
       add_slots_modes!
+      add_sound_hooks!
       plan
     end
 
@@ -71,15 +72,19 @@ module TrogBuild
     end
 
     def add_example_mode!
-      plan.add_mode ExampleMode.new("generated_example", 1310)
+      plan.add_mode ExampleMode.new('generated_example', 1310)
     end
 
     def add_achievement_modes!
-      plan.add_mode AchievementMode.new("generated_achievements", 1090)
+      plan.add_mode AchievementMode.new('generated_achievements', 1090)
     end
 
     def add_slots_modes!
-      plan.add_mode SlotsMode.new("generated_slots", 1020)
+      plan.add_mode SlotsMode.new('generated_slots', 1020)
+    end
+
+    def add_sound_hooks!
+      plan.add_mode SoundHooksMode.new('generated_sound_hooks', 8080)
     end
   end
 end

@@ -1,0 +1,18 @@
+#config_version=6
+# Sound hooks because ducking is wonky on windows
+
+---
+mode:
+  priority: 8080
+  start_events: ball_started
+  stop_events: mode_stop_generated_sound_hooks
+sound_player:
+  dj_cash:
+    cash:
+      ducking:
+        bus: effects
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
+
