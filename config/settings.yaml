@@ -46,12 +46,13 @@ settings:
     sort: 155
     label: Auto launch power
     key_type: int
-    default: 20
+    default: 18
     values:
+      9: '9 ms'
       12: '12 ms'
       15: '15 ms'
-      18: '18 ms'
-      20: '20 ms (default)'
+      18: '18 ms (default)'
+      21: '21 ms'
       24: '24 ms'
       28: '28 ms'
       32: '32 ms'
