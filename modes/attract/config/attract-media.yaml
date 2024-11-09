@@ -12,21 +12,12 @@ sound_player:
   music_play_chiptune:
     theme_chiptune:
       loops: -1
-      ducking:
-        bus: music
-        attack: 0
-        attenuation: 0
-        release_point: 0
-        release: 0s
+      bus: music
+
   music_stop_chiptune:
     theme_chiptune:
+      bus: music
       action: stop
-      ducking:
-        bus: music
-        attack: 0
-        attenuation: 0
-        release_point: 0
-        release: 0s
 
 event_player:
   mode_attract_started:
