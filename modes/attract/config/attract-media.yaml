@@ -1,10 +1,10 @@
 #config_version=6
 
 slide_player:
-  mode_attract_started:
+  mode_attract_started.1:
     attract:
       action: play
-  mode_attract_started.1:
+  mode_attract_started.0:
     startup:
       action: remove
 
