@@ -1,6 +1,7 @@
 alias t='cd ~/workspace/trogdor-pinball'
 alias m='cd ~/workspace/mpf'
 alias md='cd ~/workspace/mpf-docs'
+alias mpfm='mpf monitor & mpf '
 
 #-b removes bcp dependency
 #-t changes to log mode
