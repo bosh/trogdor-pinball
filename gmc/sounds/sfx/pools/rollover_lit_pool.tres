@@ -1,0 +1,11 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=4 format=3 uid="uid://c0rwa70ybmbh0"]
+
+[ext_resource type="AudioStream" uid="uid://b67b3pnugt6vk" path="res://sounds/sfx/rollover_lit_1.wav" id="1_coxid"]
+[ext_resource type="AudioStream" uid="uid://dcm8k0j3d7yql" path="res://sounds/sfx/rollover_lit_2.wav" id="2_0vtw0"]
+[ext_resource type="AudioStream" uid="uid://2r1uesnv6i75" path="res://sounds/sfx/rollover_lit_3.wav" id="3_avabx"]
+
+[resource]
+streams_count = 3
+stream_0/stream = ExtResource("1_coxid")
+stream_1/stream = ExtResource("2_0vtw0")
+stream_2/stream = ExtResource("3_avabx")

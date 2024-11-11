@@ -1,0 +1,13 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=5 format=3 uid="uid://by18s7jdoifby"]
+
+[ext_resource type="AudioStream" uid="uid://ci7630n7f5ugb" path="res://sounds/sfx/burnination_pop_hit_1.wav" id="1_q8r62"]
+[ext_resource type="AudioStream" uid="uid://bbrea5m67qx8" path="res://sounds/sfx/burnination_pop_hit_2.wav" id="2_5atek"]
+[ext_resource type="AudioStream" uid="uid://vde8d6cm3i71" path="res://sounds/sfx/burnination_pop_hit_3.wav" id="3_qx3yr"]
+[ext_resource type="AudioStream" uid="uid://cbe7xhp57v0rr" path="res://sounds/sfx/burnination_pop_hit_4.wav" id="4_8388m"]
+
+[resource]
+streams_count = 4
+stream_0/stream = ExtResource("1_q8r62")
+stream_1/stream = ExtResource("2_5atek")
+stream_2/stream = ExtResource("3_qx3yr")
+stream_3/stream = ExtResource("4_8388m")

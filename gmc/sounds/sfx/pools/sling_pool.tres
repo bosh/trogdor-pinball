@@ -1,0 +1,11 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=4 format=3 uid="uid://c5sgj1xy0cy1h"]
+
+[ext_resource type="AudioStream" uid="uid://bjm504ph8p1os" path="res://sounds/sfx/sling_1.wav" id="1_3ye27"]
+[ext_resource type="AudioStream" uid="uid://5dwiqwe0ybeu" path="res://sounds/sfx/sling_2.wav" id="2_l4av0"]
+[ext_resource type="AudioStream" uid="uid://21gd1fr5s8kr" path="res://sounds/sfx/sling_3.wav" id="3_7jpm2"]
+
+[resource]
+streams_count = 3
+stream_0/stream = ExtResource("1_3ye27")
+stream_1/stream = ExtResource("2_l4av0")
+stream_2/stream = ExtResource("3_7jpm2")

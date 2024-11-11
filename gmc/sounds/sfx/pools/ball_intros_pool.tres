@@ -1,0 +1,15 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=6 format=3 uid="uid://dvjqbpo2hydw5"]
+
+[ext_resource type="AudioStream" uid="uid://gcdfw3gwd03b" path="res://sounds/tunes/ball_intros_1.mp3" id="1_agp1y"]
+[ext_resource type="AudioStream" uid="uid://d1v3fu2e671gi" path="res://sounds/tunes/ball_intros_2.mp3" id="2_2xpvv"]
+[ext_resource type="AudioStream" uid="uid://b32wegc5wutxs" path="res://sounds/tunes/ball_intros_3.mp3" id="3_amyqn"]
+[ext_resource type="AudioStream" uid="uid://cuuxehi8hc3hs" path="res://sounds/tunes/ball_intros_4.mp3" id="4_00w1o"]
+[ext_resource type="AudioStream" uid="uid://cf7dnemc44vym" path="res://sounds/tunes/ball_intros_5.mp3" id="5_62v6f"]
+
+[resource]
+streams_count = 5
+stream_0/stream = ExtResource("1_agp1y")
+stream_1/stream = ExtResource("2_2xpvv")
+stream_2/stream = ExtResource("3_amyqn")
+stream_3/stream = ExtResource("4_00w1o")
+stream_4/stream = ExtResource("5_62v6f")

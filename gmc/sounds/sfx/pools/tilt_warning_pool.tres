@@ -1,0 +1,10 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=3 uid="uid://d1kfvm17cmpe0"]
+
+[ext_resource type="AudioStream" uid="uid://bb76hunt1w8cv" path="res://sounds/voice/tilt_warning_ss.mp3" id="1_0sujd"]
+[ext_resource type="AudioStream" uid="uid://ck70vh737imiw" path="res://sounds/voice/tilt_warning_sb.mp3" id="2_pjphv"]
+
+[resource]
+playback_mode = 2
+streams_count = 2
+stream_0/stream = ExtResource("1_0sujd")
+stream_1/stream = ExtResource("2_pjphv")

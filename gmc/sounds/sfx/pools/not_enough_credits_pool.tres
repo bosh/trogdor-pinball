@@ -1,0 +1,12 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=3 uid="uid://hag14tyj487c"]
+
+[ext_resource type="AudioStream" uid="uid://dvfvau224vocl" path="res://sounds/tunes/not_enough_credits_1.mp3" id="1_b8mm5"]
+[ext_resource type="AudioStream" uid="uid://borbv2wo4vp6c" path="res://sounds/tunes/not_enough_credits_2.mp3" id="2_82vlj"]
+
+[resource]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("1_b8mm5")
+stream_0/weight = 9.0
+stream_1/stream = ExtResource("2_82vlj")
+stream_1/weight = 2.0

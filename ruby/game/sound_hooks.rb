@@ -9,7 +9,6 @@ module TrogBuild
     POOLS = %w(
       pop_pool
       burnination_pop_hit_pool
-      burnination_pop_up_pool
       multiplier_added_pool
       rollover_lit_pool
       rollover_unlit_pool
@@ -34,6 +33,10 @@ module TrogBuild
       theme_main
       at_max_players
       burnination_background
+      burnination_pop_up_2
+      burnination_pop_up_3
+      burnination_pop_up_4
+      burnination_pop_up_5
       burnination_mode_song
       burnination_rollover_on_target
       cancel

@@ -1,0 +1,11 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=3 uid="uid://k310bidf34xy"]
+
+[ext_resource type="AudioStream" uid="uid://33wmiyd00fso" path="res://sounds/voice/ball_end_average_1.mp3" id="1_5a8f6"]
+[ext_resource type="AudioStream" uid="uid://b6mu60gj13w02" path="res://sounds/voice/ball_end_average_2.mp3" id="2_rvle8"]
+
+[resource]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("1_5a8f6")
+stream_0/weight = 3.0
+stream_1/stream = ExtResource("2_rvle8")

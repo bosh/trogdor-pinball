@@ -23,14 +23,6 @@ sound_player:
         attenuation: 0
         release_point: 0
         release: 0s
-  dj_burnination_pop_up_pool:
-    burnination_pop_up_pool:
-      ducking:
-        bus: effects
-        attack: 0
-        attenuation: 0
-        release_point: 0
-        release: 0s
   dj_multiplier_added_pool:
     multiplier_added_pool:
       ducking:
@@ -177,6 +169,38 @@ sound_player:
         release: 0s
   dj_burnination_background:
     burnination_background:
+      ducking:
+        bus: effects
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
+  dj_burnination_pop_up_2:
+    burnination_pop_up_2:
+      ducking:
+        bus: effects
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
+  dj_burnination_pop_up_3:
+    burnination_pop_up_3:
+      ducking:
+        bus: effects
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
+  dj_burnination_pop_up_4:
+    burnination_pop_up_4:
+      ducking:
+        bus: effects
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
+  dj_burnination_pop_up_5:
+    burnination_pop_up_5:
       ducking:
         bus: effects
         attack: 0

@@ -1,0 +1,11 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=3 uid="uid://iagpbndn7dl7"]
+
+[ext_resource type="AudioStream" uid="uid://cd58c5xfap0sf" path="res://sounds/voice/ball_end_good_1.mp3" id="1_qtsp6"]
+[ext_resource type="AudioStream" uid="uid://beru36kqntxu" path="res://sounds/voice/ball_end_good_2.mp3" id="2_2yov5"]
+
+[resource]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("1_qtsp6")
+stream_0/weight = 3.0
+stream_1/stream = ExtResource("2_2yov5")
