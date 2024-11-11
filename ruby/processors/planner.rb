@@ -84,7 +84,7 @@ module TrogBuild
     end
 
     def add_sound_hooks!
-      plan.add_mode SoundHooksMode.new('generated_sound_hooks', 8080)
+      plan.add_sound_hooks SoundHooksConfig.new('generated_sound_hooks.yaml')
     end
   end
 end

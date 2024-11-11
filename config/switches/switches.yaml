@@ -84,3 +84,7 @@ virtual_platform_start_active_switches:
   - s_trough_ball_1
   - s_trough_ball_2
   - s_trough_ball_3
+
+event_player:
+  s_high_voltage_status_active: [dj_high_voltage_enabled]
+  s_high_voltage_status_inactive: [dj_high_voltage_disabled]

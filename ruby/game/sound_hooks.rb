@@ -1,8 +1,12 @@
 module TrogBuild
-  class SoundHooksMode < Mode
-    def custom_top_comment; 'Sound hooks because ducking is wonky on windows' end
-    def generate_start_events; 'ball_started' end
+  class ConfigFile
+    attr_reader :name
+    def initialize(name)
+      @name = name
+    end
+  end
 
+  class SoundHooksConfig < ConfigFile
     # Pools are sound resources from the mpf config side,
     # but are actually godot-specific files that just point to real
     # sound resources (which may have their own direct resource declaration or not)
@@ -75,7 +79,7 @@ module TrogBuild
 
     HOOKS = POOLS + SOUND_RESOURCES
 
-    def custom_hash
+    def to_hash
       out = {'sound_player' => {}}
       sp = out['sound_player']
       HOOKS.each { |hook| add_sound_hook(sp, hook) }

@@ -14,6 +14,8 @@ variable_player:
     score: 4000 * current_player.playfield_multiplier
 
 event_player:
+  burn_group_unlit_hit: [dj_rollover_unlit_pool]
+  burn_group_lit_hit: [dj_rollover_lit_pool]
   burn_group_lit_complete:
     - increment_playfield_multiplier
     - burnination_controller_begin

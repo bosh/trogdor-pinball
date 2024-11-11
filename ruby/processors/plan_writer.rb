@@ -7,10 +7,10 @@ module TrogBuild
 
     def write!(plan)
       clean_generated_lights!
-      clean_generated_modes_manifest!
+      clean_generated_config_files!(plan)
       clean_generated_modes!
       write_generated_lights!(plan)
-      write_generated_modes_manifest!(plan)
+      write_generated_config_files!(plan)
       write_generated_modes!(plan)
     end
 
@@ -21,11 +21,19 @@ module TrogBuild
     end
 
     def mode_manifest_path
-      File.join(PROJECT_ROOT, "config/generated_modes.yaml")
+      config_file_path("generated_modes.yaml")
+    end
+
+    def config_manifest_path
+      config_file_path("generated_configs.yaml")
+    end
+
+    def config_file_path(name)
+      File.join(PROJECT_ROOT, "config", name)
     end
 
     def mode_path(name)
-      File.join(PROJECT_ROOT, "modes/#{name}")
+      File.join(PROJECT_ROOT, "modes", name)
     end
 
     def clean_generated_lights!
@@ -33,9 +41,22 @@ module TrogBuild
       File.delete(generated_lights_path) if File.exist?(generated_lights_path)
     end
 
+    def clean_generated_config_files!(plan)
+      clean_generated_modes_manifest!
+      clean_generated_configs_manifest!
+      plan.config_files.each do |cf|
+        File.delete(config_file_path(cf.name)) if File.exist?(config_file_path(cf.name))
+      end
+    end
+
     def clean_generated_modes_manifest!
       puts "Cleaning modes manifest" if $debug
       File.delete(mode_manifest_path) if File.exist?(mode_manifest_path)
+    end
+
+    def clean_generated_configs_manifest!
+      puts "Cleaning configs manifest" if $debug
+      File.delete(config_manifest_path) if File.exist?(config_manifest_path)
     end
 
     def clean_generated_modes!
@@ -56,6 +77,31 @@ module TrogBuild
 
     def write_lights(plan, file)
       file.write(plan.lights.to_yaml)
+    end
+
+    def write_generated_config_files!(plan)
+      write_generated_modes_manifest!(plan)
+      write_generated_configs_manifest!(plan)
+
+      plan.config_files.each do |cf|
+        puts "Writing new config file #{cf.name}" if $debug
+        File.open(config_file_path(cf.name), 'w') do |file|
+          file.write("#config_version=6\n")
+          file.write(cf.to_hash.to_yaml)
+          file.write("\n")
+        end
+      end
+    end
+
+    def write_generated_configs_manifest!(plan)
+      puts "Writing new config manifest" if $debug
+
+      config_name_list = plan.config_files.map(&:name)
+      File.open(config_manifest_path, 'w') do |file|
+        file.write("#config_version=6\n# This file is generated to load the other generated config files\n")
+        file.write({'config' => config_name_list}.to_yaml)
+        file.write("\n")
+      end
     end
 
     def write_generated_modes_manifest!(plan)

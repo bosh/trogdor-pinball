@@ -22,7 +22,10 @@ event_player:
   # Rotate right on timer, left on objective rollover
   timer_rotating_target_clock_complete:
     - target_rollover_rotate_right
+
+  burnination_rollover_shots_off_target_hit: [dj_rollover_lit_pool]
   burnination_rollover_shots_on_target_hit:
+    - dj_burnination_rollover_on_target
     - rotating_target_clock_reset
     - target_rollover_rotate_left
 

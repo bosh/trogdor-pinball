@@ -1,11 +1,12 @@
 module TrogBuild
   class Plan
-    attr_reader :modes
+    attr_reader :modes, :config_files
 
     def initialize()
       @next_light_number = 8801
       @lights = {}
       @modes = []
+      @config_files = []
     end
 
     def add_light(name, config = nil)
@@ -19,6 +20,10 @@ module TrogBuild
 
     def add_mode(mode)
       @modes << mode
+    end
+
+    def add_sound_hooks(sound_hooks_config)
+      @config_files << sound_hooks_config
     end
 
     def consume_light_number

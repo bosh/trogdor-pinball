@@ -19,8 +19,9 @@ slide_player:
       action: remove
 
 event_player:
-  base_pop_group_hit: [dj_pop_pool]
   s_start_active: [dj_cash]
+  increment_playfield_multiplier{current_player.playfield_multiplier < 5}: [dj_multiplier_added]
+
   mode_base_started:
     - mode_start_backbox_controller
     - mode_start_code_base

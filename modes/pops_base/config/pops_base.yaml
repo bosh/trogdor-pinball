@@ -32,6 +32,9 @@ shot_groups:
       - base_pop_right
       - base_pop_center
 
+event_player:
+  base_pop_group_hit: [dj_pop_pool]
+
 show_player:
   base_pop_left_hit:
     pop_flash:

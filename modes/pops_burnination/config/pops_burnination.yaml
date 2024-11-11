@@ -84,10 +84,13 @@ variable_player:
 event_player:
   # Reset the timer when pop is hit
   s_pop_left_active:
+    - dj_burnination_pop_hit_pool
     - pop_left_burndown_reset
   s_pop_right_active:
+    - dj_burnination_pop_hit_pool
     - pop_right_burndown_reset
   s_pop_center_active:
+    - dj_burnination_pop_hit_pool
     - pop_center_burndown_reset
 
   # Stop timers on mode exit process starting

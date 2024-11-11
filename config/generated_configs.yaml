@@ -1,0 +1,6 @@
+#config_version=6
+# This file is generated to load the other generated config files
+---
+config:
+- generated_sound_hooks.yaml
+
