@@ -3,6 +3,7 @@
 mode:
   start_events: ball_started
   stop_events: ball_will_end
+  events_when_started: [dj_game_start]
   priority: 1000
 
 config:
@@ -20,7 +21,9 @@ slide_player:
 
 event_player:
   s_start_active: [dj_cash]
-  increment_playfield_multiplier{current_player.playfield_multiplier < 5}: [dj_multiplier_added]
+  s_plunger_active: [dj_ball_at_launcher]
+  playfield_active: [dj_ball_intros_pool]
+  increment_playfield_multiplier{current_player.playfield_multiplier < 5}: [dj_multiplier_added_pool]
 
   mode_base_started:
     - mode_start_backbox_controller

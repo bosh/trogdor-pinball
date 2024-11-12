@@ -48,6 +48,12 @@ sequence_shots:
       - shot_sling_left_base_hit
     sequence_timeout: 400ms
 
+event_player:
+  shot_sling_left_base_hit: [dj_sling_pool]
+  shot_sling_right_base_hit: [dj_sling_pool]
+  slings_l2r_hit: [dj_sling_combo_pool]
+  slings_r2l_hit: [dj_sling_combo_pool]
+
 show_player:
   slings_l2r_hit:
     cottage_burn:

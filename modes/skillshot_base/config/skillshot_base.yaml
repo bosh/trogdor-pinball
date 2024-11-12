@@ -39,7 +39,6 @@ event_player:
   timer_skill_shot_timeout_complete:
     - mode_fail_skillshot_base
   skillshot_of_an_artist_hitme_hit:
-    - increment_playfield_multiplier
     - disable_skill_2
     - disable_skill_3
   skillshot_2_hitme_hit:
@@ -50,8 +49,10 @@ event_player:
     - disable_skill_2
 
   skillshots_group_hitme_hit:
+    - increment_playfield_multiplier
     - priority_show_skillshot_success
     - mode_complete_skillshot_base
+    - dj_skill_shot_2|1s
 
 shot_profiles:
   skill_shot_profile:
