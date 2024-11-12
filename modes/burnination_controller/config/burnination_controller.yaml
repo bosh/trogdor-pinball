@@ -48,6 +48,7 @@ state_machines:
           - mode_start_pops_burnination
           - mode_stop_burn_rollovers
           - mode_start_burnination_rollovers
+          - dj_burnination_mode_song
       done:
         label: complete
         events_when_started:
@@ -56,6 +57,7 @@ state_machines:
           - mode_stop_burnination_rollovers
           - mode_start_pops_burninated
           - mode_complete_pops_burnination
+          - dj_burnination_background
       failed:
         label: failed
         events_when_started:

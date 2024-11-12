@@ -41,18 +41,20 @@ event_player:
   skillshot_of_an_artist_hitme_hit:
     - disable_skill_2
     - disable_skill_3
+    - dj_skill_shot_1_hit|1s
   skillshot_2_hitme_hit:
     - disable_skill_1
     - disable_skill_3
+    - dj_skill_shot_2_hit|1s
   skillshot_3_hitme_hit:
     - disable_skill_1
     - disable_skill_2
+    - dj_skill_shot_3_hit|1s
 
   skillshots_group_hitme_hit:
     - increment_playfield_multiplier
     - priority_show_skillshot_success
     - mode_complete_skillshot_base
-    - dj_skill_shot_2|1s
 
 shot_profiles:
   skill_shot_profile:
