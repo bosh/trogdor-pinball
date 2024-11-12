@@ -10,7 +10,10 @@ module TrogBuild
     # Pools are sound resources from the mpf config side,
     # but are actually godot-specific files that just point to real
     # sound resources (which may have their own direct resource declaration or not)
-    POOLS = %w(
+    # Sound resources are actual files that want to be played directly
+    # mpf doesnt care about file extension, so we leave that off
+
+    EFFECTS_HOOKS = %w(
       pop_pool
       burnination_pop_hit_pool
       multiplier_added_pool
@@ -18,25 +21,9 @@ module TrogBuild
       rollover_unlit_pool
       sling_pool
       sling_combo_pool
-      ball_intros_pool
       not_enough_credits_pool
-      ball_end_good_pool
-      ball_end_average_pool
-      ball_end_poor_pool
-      tilt_warning_pool
-    )
-
-    # Sound resources are actual files that want to be played directly
-    # mpf doesnt care about file extension, so we leave that off
-    SOUND_RESOURCES = %w(
       cash
-      theme_70s
-      theme_chiptune
-      theme_heavy_metal
-      theme_instrumental_heavy
-      theme_main
       at_max_players
-      burnination_background
       burnination_pop_up_2
       burnination_pop_up_3
       burnination_pop_up_4
@@ -51,18 +38,35 @@ module TrogBuild
       high_voltage_disabled
       high_voltage_enabled
       increment
+    )
+
+    MUSIC_HOOKS = %w(
+      ball_intros_pool
+      theme_70s
+      theme_chiptune
+      theme_heavy_metal
+      theme_instrumental_heavy
+      theme_main
+      burnination_background
       ball_at_launcher
-      bootup
       extra_ball_earned
       game_reset
       game_start
       mpf
+      videlectrix
+      bootup
+      status_menu
+      tilted
+    )
+
+    VOICE_HOOKS = %w(
+      ball_end_good_pool
+      ball_end_average_pool
+      ball_end_poor_pool
+      tilt_warning_pool
       skill_shot_1_hit
       skill_shot_2_hit
       skill_shot_3_hit
-      status_menu
-      tilted
-      videlectrix
       ball_end_amazing
       ball_end_zero
       ball_save_grace
@@ -77,13 +81,12 @@ module TrogBuild
       spinner_complete_high
     )
 
-    HOOKS = POOLS + SOUND_RESOURCES
-
     def to_hash
-      out = {'sound_player' => {}}
-      sp = out['sound_player']
-      HOOKS.each { |hook| add_sound_hook(sp, hook) }
-      out
+      hooks = {}
+      EFFECTS_HOOKS.each { |hook| add_sound_hook(hooks, hook, 'effects') }
+      MUSIC_HOOKS.each { |hook| add_sound_hook(hooks, hook, 'music') }
+      VOICE_HOOKS.each { |hook| add_sound_hook(hooks, hook, 'voice') }
+      {'sound_player' => hooks}
     end
 
     def ducking(bus)
@@ -108,7 +111,7 @@ module TrogBuild
 
     def add_windows_sound_hook(collection, sound_name, bus)
       collection[play_event_name(sound_name)] = {
-        sound_name => {'ducking' => ducking(bus)}
+        sound_name => {'bus' => bus, 'ducking' => ducking(bus)}
       }
     end
 

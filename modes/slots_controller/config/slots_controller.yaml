@@ -15,7 +15,7 @@ state_machines:
         events_when_started: captive_ball_target_enable, mode_stop_generated_slots
       playing_slots:
         label: complete
-        events_when_started: captive_ball_target_disable, mode_start_generated_slots
+        events_when_started: captive_ball_target_disable, mode_start_generated_slots, dj_ball_intros_pool
     transitions:
       - source: qualifying
         target: playing_slots

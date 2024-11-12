@@ -3,6 +3,7 @@
 sound_player:
   dj_pop_pool:
     pop_pool:
+      bus: effects
       ducking:
         bus: effects
         attack: 0
@@ -11,6 +12,7 @@ sound_player:
         release: 0s
   dj_burnination_pop_hit_pool:
     burnination_pop_hit_pool:
+      bus: effects
       ducking:
         bus: effects
         attack: 0
@@ -19,6 +21,7 @@ sound_player:
         release: 0s
   dj_multiplier_added_pool:
     multiplier_added_pool:
+      bus: effects
       ducking:
         bus: effects
         attack: 0
@@ -27,6 +30,7 @@ sound_player:
         release: 0s
   dj_rollover_lit_pool:
     rollover_lit_pool:
+      bus: effects
       ducking:
         bus: effects
         attack: 0
@@ -35,6 +39,7 @@ sound_player:
         release: 0s
   dj_rollover_unlit_pool:
     rollover_unlit_pool:
+      bus: effects
       ducking:
         bus: effects
         attack: 0
@@ -43,6 +48,7 @@ sound_player:
         release: 0s
   dj_sling_pool:
     sling_pool:
+      bus: effects
       ducking:
         bus: effects
         attack: 0
@@ -51,14 +57,7 @@ sound_player:
         release: 0s
   dj_sling_combo_pool:
     sling_combo_pool:
-      ducking:
-        bus: effects
-        attack: 0
-        attenuation: 0
-        release_point: 0
-        release: 0s
-  dj_ball_intros_pool:
-    ball_intros_pool:
+      bus: effects
       ducking:
         bus: effects
         attack: 0
@@ -67,38 +66,7 @@ sound_player:
         release: 0s
   dj_not_enough_credits_pool:
     not_enough_credits_pool:
-      ducking:
-        bus: effects
-        attack: 0
-        attenuation: 0
-        release_point: 0
-        release: 0s
-  dj_ball_end_good_pool:
-    ball_end_good_pool:
-      ducking:
-        bus: effects
-        attack: 0
-        attenuation: 0
-        release_point: 0
-        release: 0s
-  dj_ball_end_average_pool:
-    ball_end_average_pool:
-      ducking:
-        bus: effects
-        attack: 0
-        attenuation: 0
-        release_point: 0
-        release: 0s
-  dj_ball_end_poor_pool:
-    ball_end_poor_pool:
-      ducking:
-        bus: effects
-        attack: 0
-        attenuation: 0
-        release_point: 0
-        release: 0s
-  dj_tilt_warning_pool:
-    tilt_warning_pool:
+      bus: effects
       ducking:
         bus: effects
         attack: 0
@@ -107,46 +75,7 @@ sound_player:
         release: 0s
   dj_cash:
     cash:
-      ducking:
-        bus: effects
-        attack: 0
-        attenuation: 0
-        release_point: 0
-        release: 0s
-  dj_theme_70s:
-    theme_70s:
-      ducking:
-        bus: effects
-        attack: 0
-        attenuation: 0
-        release_point: 0
-        release: 0s
-  dj_theme_chiptune:
-    theme_chiptune:
-      ducking:
-        bus: effects
-        attack: 0
-        attenuation: 0
-        release_point: 0
-        release: 0s
-  dj_theme_heavy_metal:
-    theme_heavy_metal:
-      ducking:
-        bus: effects
-        attack: 0
-        attenuation: 0
-        release_point: 0
-        release: 0s
-  dj_theme_instrumental_heavy:
-    theme_instrumental_heavy:
-      ducking:
-        bus: effects
-        attack: 0
-        attenuation: 0
-        release_point: 0
-        release: 0s
-  dj_theme_main:
-    theme_main:
+      bus: effects
       ducking:
         bus: effects
         attack: 0
@@ -155,14 +84,7 @@ sound_player:
         release: 0s
   dj_at_max_players:
     at_max_players:
-      ducking:
-        bus: effects
-        attack: 0
-        attenuation: 0
-        release_point: 0
-        release: 0s
-  dj_burnination_background:
-    burnination_background:
+      bus: effects
       ducking:
         bus: effects
         attack: 0
@@ -171,6 +93,7 @@ sound_player:
         release: 0s
   dj_burnination_pop_up_2:
     burnination_pop_up_2:
+      bus: effects
       ducking:
         bus: effects
         attack: 0
@@ -179,6 +102,7 @@ sound_player:
         release: 0s
   dj_burnination_pop_up_3:
     burnination_pop_up_3:
+      bus: effects
       ducking:
         bus: effects
         attack: 0
@@ -187,6 +111,7 @@ sound_player:
         release: 0s
   dj_burnination_pop_up_4:
     burnination_pop_up_4:
+      bus: effects
       ducking:
         bus: effects
         attack: 0
@@ -195,6 +120,7 @@ sound_player:
         release: 0s
   dj_burnination_pop_up_5:
     burnination_pop_up_5:
+      bus: effects
       ducking:
         bus: effects
         attack: 0
@@ -203,6 +129,7 @@ sound_player:
         release: 0s
   dj_burnination_mode_song:
     burnination_mode_song:
+      bus: effects
       ducking:
         bus: effects
         attack: 0
@@ -211,6 +138,7 @@ sound_player:
         release: 0s
   dj_burnination_rollover_on_target:
     burnination_rollover_on_target:
+      bus: effects
       ducking:
         bus: effects
         attack: 0
@@ -219,6 +147,7 @@ sound_player:
         release: 0s
   dj_cancel:
     cancel:
+      bus: effects
       ducking:
         bus: effects
         attack: 0
@@ -227,6 +156,7 @@ sound_player:
         release: 0s
   dj_cant_incdec_more:
     cant_incdec_more:
+      bus: effects
       ducking:
         bus: effects
         attack: 0
@@ -235,6 +165,7 @@ sound_player:
         release: 0s
   dj_click_bad:
     click_bad:
+      bus: effects
       ducking:
         bus: effects
         attack: 0
@@ -243,6 +174,7 @@ sound_player:
         release: 0s
   dj_click_good:
     click_good:
+      bus: effects
       ducking:
         bus: effects
         attack: 0
@@ -251,6 +183,7 @@ sound_player:
         release: 0s
   dj_decrement:
     decrement:
+      bus: effects
       ducking:
         bus: effects
         attack: 0
@@ -259,6 +192,7 @@ sound_player:
         release: 0s
   dj_high_voltage_disabled:
     high_voltage_disabled:
+      bus: effects
       ducking:
         bus: effects
         attack: 0
@@ -267,6 +201,7 @@ sound_player:
         release: 0s
   dj_high_voltage_enabled:
     high_voltage_enabled:
+      bus: effects
       ducking:
         bus: effects
         attack: 0
@@ -275,200 +210,324 @@ sound_player:
         release: 0s
   dj_increment:
     increment:
+      bus: effects
       ducking:
         bus: effects
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
+  dj_ball_intros_pool:
+    ball_intros_pool:
+      bus: music
+      ducking:
+        bus: music
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
+  dj_theme_70s:
+    theme_70s:
+      bus: music
+      ducking:
+        bus: music
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
+  dj_theme_chiptune:
+    theme_chiptune:
+      bus: music
+      ducking:
+        bus: music
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
+  dj_theme_heavy_metal:
+    theme_heavy_metal:
+      bus: music
+      ducking:
+        bus: music
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
+  dj_theme_instrumental_heavy:
+    theme_instrumental_heavy:
+      bus: music
+      ducking:
+        bus: music
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
+  dj_theme_main:
+    theme_main:
+      bus: music
+      ducking:
+        bus: music
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
+  dj_burnination_background:
+    burnination_background:
+      bus: music
+      ducking:
+        bus: music
         attack: 0
         attenuation: 0
         release_point: 0
         release: 0s
   dj_ball_at_launcher:
     ball_at_launcher:
+      bus: music
       ducking:
-        bus: effects
-        attack: 0
-        attenuation: 0
-        release_point: 0
-        release: 0s
-  dj_bootup:
-    bootup:
-      ducking:
-        bus: effects
+        bus: music
         attack: 0
         attenuation: 0
         release_point: 0
         release: 0s
   dj_extra_ball_earned:
     extra_ball_earned:
+      bus: music
       ducking:
-        bus: effects
+        bus: music
         attack: 0
         attenuation: 0
         release_point: 0
         release: 0s
   dj_game_reset:
     game_reset:
+      bus: music
       ducking:
-        bus: effects
+        bus: music
         attack: 0
         attenuation: 0
         release_point: 0
         release: 0s
   dj_game_start:
     game_start:
+      bus: music
       ducking:
-        bus: effects
+        bus: music
         attack: 0
         attenuation: 0
         release_point: 0
         release: 0s
   dj_mpf:
     mpf:
+      bus: music
       ducking:
-        bus: effects
-        attack: 0
-        attenuation: 0
-        release_point: 0
-        release: 0s
-  dj_skill_shot_1_hit:
-    skill_shot_1_hit:
-      ducking:
-        bus: effects
-        attack: 0
-        attenuation: 0
-        release_point: 0
-        release: 0s
-  dj_skill_shot_2_hit:
-    skill_shot_2_hit:
-      ducking:
-        bus: effects
-        attack: 0
-        attenuation: 0
-        release_point: 0
-        release: 0s
-  dj_skill_shot_3_hit:
-    skill_shot_3_hit:
-      ducking:
-        bus: effects
-        attack: 0
-        attenuation: 0
-        release_point: 0
-        release: 0s
-  dj_status_menu:
-    status_menu:
-      ducking:
-        bus: effects
-        attack: 0
-        attenuation: 0
-        release_point: 0
-        release: 0s
-  dj_tilted:
-    tilted:
-      ducking:
-        bus: effects
+        bus: music
         attack: 0
         attenuation: 0
         release_point: 0
         release: 0s
   dj_videlectrix:
     videlectrix:
+      bus: music
       ducking:
-        bus: effects
+        bus: music
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
+  dj_bootup:
+    bootup:
+      bus: music
+      ducking:
+        bus: music
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
+  dj_status_menu:
+    status_menu:
+      bus: music
+      ducking:
+        bus: music
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
+  dj_tilted:
+    tilted:
+      bus: music
+      ducking:
+        bus: music
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
+  dj_ball_end_good_pool:
+    ball_end_good_pool:
+      bus: voice
+      ducking:
+        bus: voice
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
+  dj_ball_end_average_pool:
+    ball_end_average_pool:
+      bus: voice
+      ducking:
+        bus: voice
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
+  dj_ball_end_poor_pool:
+    ball_end_poor_pool:
+      bus: voice
+      ducking:
+        bus: voice
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
+  dj_tilt_warning_pool:
+    tilt_warning_pool:
+      bus: voice
+      ducking:
+        bus: voice
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
+  dj_skill_shot_1_hit:
+    skill_shot_1_hit:
+      bus: voice
+      ducking:
+        bus: voice
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
+  dj_skill_shot_2_hit:
+    skill_shot_2_hit:
+      bus: voice
+      ducking:
+        bus: voice
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
+  dj_skill_shot_3_hit:
+    skill_shot_3_hit:
+      bus: voice
+      ducking:
+        bus: voice
         attack: 0
         attenuation: 0
         release_point: 0
         release: 0s
   dj_ball_end_amazing:
     ball_end_amazing:
+      bus: voice
       ducking:
-        bus: effects
+        bus: voice
         attack: 0
         attenuation: 0
         release_point: 0
         release: 0s
   dj_ball_end_zero:
     ball_end_zero:
+      bus: voice
       ducking:
-        bus: effects
+        bus: voice
         attack: 0
         attenuation: 0
         release_point: 0
         release: 0s
   dj_ball_save_grace:
     ball_save_grace:
+      bus: voice
       ducking:
-        bus: effects
+        bus: voice
         attack: 0
         attenuation: 0
         release_point: 0
         release: 0s
   dj_ball_save_sb:
     ball_save_sb:
+      bus: voice
       ducking:
-        bus: effects
+        bus: voice
         attack: 0
         attenuation: 0
         release_point: 0
         release: 0s
   dj_ball_search_fail:
     ball_search_fail:
+      bus: voice
       ducking:
-        bus: effects
+        bus: voice
         attack: 0
         attenuation: 0
         release_point: 0
         release: 0s
   dj_ball_search_start:
     ball_search_start:
+      bus: voice
       ducking:
-        bus: effects
+        bus: voice
         attack: 0
         attenuation: 0
         release_point: 0
         release: 0s
   dj_ball_search_success:
     ball_search_success:
+      bus: voice
       ducking:
-        bus: effects
+        bus: voice
         attack: 0
         attenuation: 0
         release_point: 0
         release: 0s
   dj_burnination_pop_completed:
     burnination_pop_completed:
+      bus: voice
       ducking:
-        bus: effects
+        bus: voice
         attack: 0
         attenuation: 0
         release_point: 0
         release: 0s
   dj_credit_added:
     credit_added:
+      bus: voice
       ducking:
-        bus: effects
+        bus: voice
         attack: 0
         attenuation: 0
         release_point: 0
         release: 0s
   dj_new_high_score:
     new_high_score:
+      bus: voice
       ducking:
-        bus: effects
+        bus: voice
         attack: 0
         attenuation: 0
         release_point: 0
         release: 0s
   dj_orbit_looped:
     orbit_looped:
+      bus: voice
       ducking:
-        bus: effects
+        bus: voice
         attack: 0
         attenuation: 0
         release_point: 0
         release: 0s
   dj_spinner_complete_high:
     spinner_complete_high:
+      bus: voice
       ducking:
-        bus: effects
+        bus: voice
         attack: 0
         attenuation: 0
         release_point: 0
