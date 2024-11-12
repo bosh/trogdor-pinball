@@ -2,7 +2,18 @@
 
 require_relative './requires'
 
+PLATFORM_WINDOWS = :windows
+PLATFORM_LINUX = :linux
+def detect_platform
+  if RUBY_PLATFORM == 'x64-mingw-ucrt'
+    PLATFORM_WINDOWS
+  else
+    PLATFORM_LINUX
+  end
+end
+
 $debug = ARGV.include? '--debug'
+$platform = detect_platform
 
 module TrogBuild
   def self.generate!

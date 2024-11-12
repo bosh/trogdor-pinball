@@ -96,15 +96,32 @@ module TrogBuild
       }
     end
 
-    def add_sound_hook(collection, sound_name, bus='effects')
-      play_event_name = 'dj_' + sound_name
-      if collection[play_event_name]
-        puts "Duplicate sound hook detected - #{play_event_name}"
-        exit(1)
-      end
-      collection[play_event_name] = {
+    def play_event_name(sound_name)
+      'dj_' + sound_name
+    end
+
+    def add_linux_sound_hook(collection, sound_name, bus)
+      collection[play_event_name(sound_name)] = {
+        sound_name => {'bus' => bus}
+      }
+    end
+
+    def add_windows_sound_hook(collection, sound_name, bus)
+      collection[play_event_name(sound_name)] = {
         sound_name => {'ducking' => ducking(bus)}
       }
+    end
+
+    def add_sound_hook(collection, sound_name, bus='effects')
+      if collection[play_event_name(sound_name)]
+        puts "Duplicate sound hook detected - #{play_event_name(sound_name)}"
+        exit(1)
+      end
+      if $platform == PLATFORM_WINDOWS
+        add_windows_sound_hook(collection, sound_name, bus)
+      else
+        add_linux_sound_hook(collection, sound_name, bus)
+      end
     end
   end
 end
