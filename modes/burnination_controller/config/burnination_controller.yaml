@@ -11,11 +11,13 @@ timers:
     start_value: 20 #Short for now for ease of testing
     end_value: 0
     direction: down
-    start_running: true
+    start_running: false
     restart_on_complete: false
     control_events:
       - action: stop
         event: burnination_countdown_stop
+      - action: restart
+        event: burnination_countdown_restart
 
 event_player:
   timer_burnination_countdown_complete:
@@ -48,6 +50,7 @@ state_machines:
           - mode_start_pops_burnination
           - mode_stop_burn_rollovers
           - mode_start_burnination_rollovers
+          - burnination_countdown_restart
           - dj_burnination_mode_song
       done:
         label: complete

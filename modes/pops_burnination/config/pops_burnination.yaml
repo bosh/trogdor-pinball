@@ -120,6 +120,47 @@ shot_groups:
       - shot_burnination_pop_right
       - shot_burnination_pop_center
 
+state_machines:
+  highest_burnination_achieved:
+    persist_state: false
+    starting_state: base
+    states:
+      base:
+        label: Simmering
+      low:
+        label: Slow burn
+      medium:
+        label: Getting warmer
+      high:
+        label: Flame on
+      extreme:
+        label: Burnination!
+      complete:
+        label: TOTAL BURNINATION
+
+    transitions:
+      - source: base
+        target: low
+        events: set_burnination_pop_left_low, set_burnination_pop_right_low, set_burnination_pop_center_low
+        events_when_transitioning: dj_burnination_pop_up_1
+      - source: low
+        target: medium
+        events: set_burnination_pop_left_medium, set_burnination_pop_right_medium, set_burnination_pop_center_medium
+        events_when_transitioning: dj_burnination_pop_up_2
+      - source: medium
+        target: high
+        events: set_burnination_pop_left_high, set_burnination_pop_right_high, set_burnination_pop_center_high
+        events_when_transitioning: dj_burnination_pop_up_3
+      - source: high
+        target: extreme
+        events: set_burnination_pop_left_extreme, set_burnination_pop_right_extreme, set_burnination_pop_center_extreme
+        events_when_transitioning: dj_burnination_pop_up_4
+      - source: extreme
+        target: complete
+        events: set_burnination_pops_all_complete
+        events_when_transitioning: dj_burnination_pop_up_5
+
+
 variable_player:
   mode_pops_burnination_started:
     pop_left_fire_level:
@@ -184,14 +225,18 @@ event_player:
   update_pop_left_state{current_player.pop_left_fire_level >= 15 and current_player.pop_left_fire_level < 25}: [set_burnination_pop_left_high]
   update_pop_left_state{current_player.pop_left_fire_level >= 25}: [set_burnination_pop_left_extreme]
 
-  update_pop_left_state{current_player.pop_right_fire_level <= 0}: [set_burnination_pop_right_base]
-  update_pop_left_state{current_player.pop_right_fire_level > 0 and current_player.pop_right_fire_level < 8}: [set_burnination_pop_right_low]
-  update_pop_left_state{current_player.pop_right_fire_level >= 8 and current_player.pop_right_fire_level < 15}: [set_burnination_pop_right_medium]
-  update_pop_left_state{current_player.pop_right_fire_level >= 15 and current_player.pop_right_fire_level < 25}: [set_burnination_pop_right_high]
-  update_pop_left_state{current_player.pop_right_fire_level >= 25}: [set_burnination_pop_right_extreme]
+  update_pop_right_state{current_player.pop_right_fire_level <= 0}: [set_burnination_pop_right_base]
+  update_pop_right_state{current_player.pop_right_fire_level > 0 and current_player.pop_right_fire_level < 8}: [set_burnination_pop_right_low]
+  update_pop_right_state{current_player.pop_right_fire_level >= 8 and current_player.pop_right_fire_level < 15}: [set_burnination_pop_right_medium]
+  update_pop_right_state{current_player.pop_right_fire_level >= 15 and current_player.pop_right_fire_level < 25}: [set_burnination_pop_right_high]
+  update_pop_right_state{current_player.pop_right_fire_level >= 25}: [set_burnination_pop_right_extreme]
 
-  update_pop_left_state{current_player.pop_center_fire_level <= 0}: [set_burnination_pop_center_base]
-  update_pop_left_state{current_player.pop_center_fire_level > 0 and current_player.pop_center_fire_level < 8}: [set_burnination_pop_center_low]
-  update_pop_left_state{current_player.pop_center_fire_level >= 8 and current_player.pop_center_fire_level < 15}: [set_burnination_pop_center_medium]
-  update_pop_left_state{current_player.pop_center_fire_level >= 15 and current_player.pop_center_fire_level < 25}: [set_burnination_pop_center_high]
-  update_pop_left_state{current_player.pop_center_fire_level >= 25}: [set_burnination_pop_center_extreme]
+  update_pop_center_state{current_player.pop_center_fire_level <= 0}: [set_burnination_pop_center_base]
+  update_pop_center_state{current_player.pop_center_fire_level > 0 and current_player.pop_center_fire_level < 8}: [set_burnination_pop_center_low]
+  update_pop_center_state{current_player.pop_center_fire_level >= 8 and current_player.pop_center_fire_level < 15}: [set_burnination_pop_center_medium]
+  update_pop_center_state{current_player.pop_center_fire_level >= 15 and current_player.pop_center_fire_level < 25}: [set_burnination_pop_center_high]
+  update_pop_center_state{current_player.pop_center_fire_level >= 25}: [set_burnination_pop_center_extreme]
+
+  update_pop_left_state{current_player.pop_left_fire_level > 25 and current_player.pop_right_fire_level > 25 and current_player.pop_center_fire_level > 25}: [set_burnination_pops_all_complete]
+  update_pop_right_state{current_player.pop_left_fire_level > 25 and current_player.pop_right_fire_level > 25 and current_player.pop_center_fire_level > 25}: [set_burnination_pops_all_complete]
+  update_pop_center_state{current_player.pop_left_fire_level > 25 and current_player.pop_right_fire_level > 25 and current_player.pop_center_fire_level > 25}: [set_burnination_pops_all_complete]
