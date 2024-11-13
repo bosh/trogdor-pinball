@@ -24,6 +24,7 @@ module TrogBuild
       not_enough_credits_pool
       cash
       at_max_players
+      burnination_pop_up_1
       burnination_pop_up_2
       burnination_pop_up_3
       burnination_pop_up_4
