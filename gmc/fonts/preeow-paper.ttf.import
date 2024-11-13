@@ -15,6 +15,7 @@ dest_files=["res://.godot/imported/preeow-paper.ttf-9d4fb3c01e541bde19e0e09016ed
 Rendering=null
 antialiasing=1
 generate_mipmaps=false
+disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
 msdf_size=48
