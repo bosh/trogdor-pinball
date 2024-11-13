@@ -15,6 +15,7 @@ dest_files=["res://.godot/imported/lappy-486-extended.ttf-aab40a4a2e403a5f7e6bb2
 Rendering=null
 antialiasing=1
 generate_mipmaps=false
+disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
 msdf_size=48
