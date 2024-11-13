@@ -78,22 +78,27 @@ Game features include:
 
 ## Development
 
-Currently built on mpf v0.80.0.dev4
+Currently built on mpf v0.80.0.dev5
+and edge mpf-gmc (on Godot v4.3)
 with monitor v0.57.1
 on windows and linux
 
-not yet integrated with godot
-
 trogbuild is a ruby script built on ruby 3.2.2
-currently it only depends on the stl :)))
+currently it only depends on the stdlib :)))
 
 ## Commands
 
 Add the tsource command from bin/shell_one_time_setup.sh to your shell profile.
 This adds a hook to load the commands from bin/shell_extensions.sh
 
-`vsnake` runs monitor and the logging game window together, and is the most common testing command now.
+`mpfm` runs monitor and allows option passing, making it the new most commonly run command
+
+`vsnake` runs monitor and the logging game window together.
 
 `trogdor` runs the logging game instance against a live table
 
 `ruby trogbuild.rb [-x]` will regenerate the generated modes, shows, and hooks. Default dry run, or -x to write.
+
+## Media
+
+Audio and other media files are maintained as stubs in this repository. A separate, private repo contains all of the real assets, with commands to substitute stubs or real files based on a map, and to do other media management tasks. Stubs generally come from https://github.com/mathiasbynens/small
