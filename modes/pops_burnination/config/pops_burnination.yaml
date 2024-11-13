@@ -49,6 +49,38 @@ timers:
       - action: reset
         event: pop_center_burndown_reset
 
+shot_profiles:
+  burnination_pop_profile:
+    states:
+      - name: 'base'
+        show: 'off'
+      - name: 'low'
+        show: 'fire_low_level_show'
+      - name: 'medium'
+        show: 'fire_medium_level_show'
+      - name: 'high'
+        show: 'fire_high_level_show'
+      - name: 'extreme'
+        show: 'fire_extreme_level_show'
+
+shots:
+  shot_burnination_pop_left:
+    profile: burnination_pop_profile
+    switch: s_pop_left
+    show_tokens:
+      light_prefix: l_pop_ring_a
+  shot_burnination_pop_right:
+    profile: burnination_pop_profile
+    switch: s_pop_right
+    show_tokens:
+      light_prefix: l_pop_ring_b
+  shot_burnination_pop_center:
+    profile: burnination_pop_profile
+    switch: s_pop_center
+    show_tokens:
+      light_prefix: l_pop_ring_c
+
+
 variable_player:
   mode_pops_burnination_started:
     pop_left_fire_level:
@@ -62,15 +94,15 @@ variable_player:
       action: set
 
   # Increment fire level by three on bumper hit
-  s_pop_left_active:
+  shot_burnination_pop_left_hit:
     score: 1000 * current_player.playfield_multiplier
     pop_left_fire_level: 3
 
-  s_pop_right_active:
+  shot_burnination_pop_right_hit:
     score: 1000 * current_player.playfield_multiplier
     pop_right_fire_level: 3
 
-  s_pop_center_active:
+  shot_burnination_pop_center_hit:
     score: 1000 * current_player.playfield_multiplier
     pop_center_fire_level: 3
 
@@ -83,13 +115,13 @@ variable_player:
 
 event_player:
   # Reset the timer when pop is hit
-  s_pop_left_active:
+  shot_burnination_pop_left_hit:
     - dj_burnination_pop_hit_pool
     - pop_left_burndown_reset
-  s_pop_right_active:
+  shot_burnination_pop_right_hit:
     - dj_burnination_pop_hit_pool
     - pop_right_burndown_reset
-  s_pop_center_active:
+  shot_burnination_pop_center_hit:
     - dj_burnination_pop_hit_pool
     - pop_center_burndown_reset
 
