@@ -19,11 +19,8 @@ slide_player:
       action: remove
 
 event_player:
-  s_start_active: [dj_cash]
-  s_plunger_active: [dj_ball_at_launcher]
-  increment_playfield_multiplier{current_player.playfield_multiplier < 5}: [dj_multiplier_added_pool]
-
   mode_base_started:
+    - manage_ball_scores
     - mode_start_backbox_controller
     - mode_start_code_base
     - mode_start_priority_shows
@@ -33,9 +30,33 @@ event_player:
     - mode_start_lower_lanes_base
     - mode_start_burnination_controller
     - mode_start_slots_controller
-    - dj_game_start|1650ms
+    - dj_game_start|1800ms
+
+  s_start_active: [dj_cash]
+  s_plunger_active: [dj_ball_at_launcher]
+  increment_playfield_multiplier{current_player.playfield_multiplier < 5}: [dj_multiplier_added_pool]
+
+  manage_ball_scores:
+    - update_previous_ball_score_from_current
+    - reset_current_ball_score|1ms
+  player_score: #subscribe to var updates
+    - sync_ball_score
+
 
 variable_player:
+  update_previous_ball_score_from_current:
+    previous_ball_score:
+      action: set
+      int: current_player.score
+  reset_current_ball_score:
+    ball_score:
+      action: set
+      int: 0
+  sync_ball_score:
+    ball_score:
+      action: set
+      int: current_player.score - current_player.previous_ball_score
+
   #Playfield multiplier always back down to 1 on new ball
   mode_base_started:
     playfield_multiplier:

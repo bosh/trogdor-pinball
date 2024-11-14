@@ -1,6 +1,13 @@
 #config_version=6
 
 player_vars:
+  previous_ball_score:
+    initial_value: 0
+    value_type: int
+  ball_score:
+    initial_value: 0
+    value_type: int
+
   playfield_multiplier:
     initial_value: 1
     value_type: int
