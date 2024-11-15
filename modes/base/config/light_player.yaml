@@ -82,7 +82,7 @@ light_player:
   "{current_player.ball == 2}":
     vlight_ball_2: "ff00ff"
   "{current_player.ball == 3}":
-    vlight_ball_2: "ff00ff"
+    vlight_ball_3: "ff00ff"
 
   # High voltage status warn LED
   "{device.switches.s_high_voltage_status.state == 0}":
