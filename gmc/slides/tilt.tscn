@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://bewopa2kmr8hy"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_ji27p"]
+
+[node name="TiltWarning1" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ji27p")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1616.0
+offset_bottom = 920.0
+color = Color(0.549529, 0.0705812, 0.12824, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 475.179
+offset_top = 280.765
+offset_right = 1142.18
+offset_bottom = 775.765
+theme_override_font_sizes/font_size = 100
+text = "TILTED
+YOU FOOL"
