@@ -17,6 +17,12 @@ slide_player:
   mode_base_started.1:
     attract:
       action: remove
+    tilt:
+      action: remove
+    tilt_warning_1:
+      action: remove
+    tilt_warning_2:
+      action: remove
 
 event_player:
   mode_base_started:
@@ -50,7 +56,6 @@ event_player:
     - reset_current_ball_score|1ms
   player_score: #subscribe to var updates
     - sync_ball_score
-
 
 variable_player:
   update_previous_ball_score_from_current:
