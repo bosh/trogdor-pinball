@@ -106,11 +106,11 @@ module TrogBuild
       'mode_start_' + name
     end
 
-    def default_stop_event #Default command to stop, likely to be used outside of mode itself
-      'mode_stop_' + name
+    def default_stop_events #Default command to stop, likely to be used outside of mode itself
+      'mode_stop_' + name + ', ball_will_end'
     end
     def generate_stop_events #For overriding
-      default_stop_event
+      default_stop_events
     end
 
     def mode_start_event #not used to start the mode, used to hook onto started processing
