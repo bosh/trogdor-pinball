@@ -136,15 +136,6 @@ sound_player:
         attenuation: 0
         release_point: 0
         release: 0s
-  dj_burnination_mode_song:
-    burnination_mode_song:
-      bus: effects
-      ducking:
-        bus: effects
-        attack: 0
-        attenuation: 0
-        release_point: 0
-        release: 0s
   dj_burnination_rollover_on_target:
     burnination_rollover_on_target:
       bus: effects
@@ -280,6 +271,15 @@ sound_player:
         attenuation: 0
         release_point: 0
         release: 0s
+  dj_burnination_mode_song:
+    burnination_mode_song:
+      bus: music
+      ducking:
+        bus: music
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
   dj_burnination_background:
     burnination_background:
       bus: music
@@ -370,9 +370,28 @@ sound_player:
         attenuation: 0
         release_point: 0
         release: 0s
+  dj_stop_burnination_background:
+    burnination_background:
+      bus: music
+      ducking:
+        bus: music
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
+      action: stop
+  dj_stop_burnination_mode_song:
+    burnination_mode_song:
+      bus: music
+      ducking:
+        bus: music
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
+      action: stop
   dj_ball_end_good_pool:
     ball_end_good_pool:
-      events_when_stopped: dj_end_quip_complete
       bus: voice
       ducking:
         bus: voice
@@ -380,9 +399,9 @@ sound_player:
         attenuation: 0
         release_point: 0
         release: 0s
+      events_when_stopped: dj_end_quip_complete
   dj_ball_end_average_pool:
     ball_end_average_pool:
-      events_when_stopped: dj_end_quip_complete
       bus: voice
       ducking:
         bus: voice
@@ -390,9 +409,9 @@ sound_player:
         attenuation: 0
         release_point: 0
         release: 0s
+      events_when_stopped: dj_end_quip_complete
   dj_ball_end_poor_pool:
     ball_end_poor_pool:
-      events_when_stopped: dj_end_quip_complete
       bus: voice
       ducking:
         bus: voice
@@ -400,6 +419,7 @@ sound_player:
         attenuation: 0
         release_point: 0
         release: 0s
+      events_when_stopped: dj_end_quip_complete
   dj_tilt_warning_pool:
     tilt_warning_pool:
       bus: voice
@@ -438,7 +458,6 @@ sound_player:
         release: 0s
   dj_ball_end_amazing:
     ball_end_amazing:
-      events_when_stopped: dj_end_quip_complete
       bus: voice
       ducking:
         bus: voice
@@ -446,9 +465,9 @@ sound_player:
         attenuation: 0
         release_point: 0
         release: 0s
+      events_when_stopped: dj_end_quip_complete
   dj_ball_end_zero:
     ball_end_zero:
-      events_when_stopped: dj_end_quip_complete
       bus: voice
       ducking:
         bus: voice
@@ -456,6 +475,7 @@ sound_player:
         attenuation: 0
         release_point: 0
         release: 0s
+      events_when_stopped: dj_end_quip_complete
   dj_ball_save_grace:
     ball_save_grace:
       bus: voice

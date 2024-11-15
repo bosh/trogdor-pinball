@@ -13,6 +13,14 @@ module TrogBuild
     # Sound resources are actual files that want to be played directly
     # mpf doesnt care about file extension, so we leave that off
 
+    COMPLETION_EVENTS = {
+      'ball_end_zero' => 'dj_end_quip_complete',
+      'ball_end_poor_pool' => 'dj_end_quip_complete',
+      'ball_end_average_pool' => 'dj_end_quip_complete',
+      'ball_end_good_pool' => 'dj_end_quip_complete',
+      'ball_end_amazing' => 'dj_end_quip_complete',
+    }
+
     EFFECTS_HOOKS = %w(
       pop_pool
       burnination_pop_hit_pool
@@ -29,7 +37,6 @@ module TrogBuild
       burnination_pop_up_3
       burnination_pop_up_4
       burnination_pop_up_5
-      burnination_mode_song
       burnination_rollover_on_target
       cancel
       cant_incdec_more
@@ -48,6 +55,7 @@ module TrogBuild
       theme_heavy_metal
       theme_instrumental_heavy
       theme_main
+      burnination_mode_song
       burnination_background
       ball_at_launcher
       extra_ball_earned
@@ -58,6 +66,10 @@ module TrogBuild
       bootup
       status_menu
       tilted
+    )
+    MUSIC_HOOKS_TO_STOP = %w(
+      burnination_background
+      burnination_mode_song
     )
 
     VOICE_HOOKS = %w(
@@ -86,6 +98,7 @@ module TrogBuild
       hooks = {}
       EFFECTS_HOOKS.each { |hook| add_sound_hook(hooks, hook, 'effects') }
       MUSIC_HOOKS.each { |hook| add_sound_hook(hooks, hook, 'music') }
+      MUSIC_HOOKS_TO_STOP.each { |hook| add_stop_sound_hook(hooks, hook, 'music')}
       VOICE_HOOKS.each { |hook| add_sound_hook(hooks, hook, 'voice') }
       {'sound_player' => hooks}
     end
@@ -104,16 +117,24 @@ module TrogBuild
       'dj_' + sound_name
     end
 
-    def add_linux_sound_hook(collection, sound_name, bus)
-      collection[play_event_name(sound_name)] = {
-        sound_name => {'bus' => bus}
-      }
+    def stop_event_name(sound_name)
+      'dj_stop_' + sound_name
     end
 
-    def add_windows_sound_hook(collection, sound_name, bus)
-      collection[play_event_name(sound_name)] = {
-        sound_name => {'bus' => bus, 'ducking' => ducking(bus)}
-      }
+    def add_linux_sound_hook(collection, sound_name, bus, action = 'play')
+      record = {sound_name => {'bus' => bus}}
+      record[sound_name]['action'] = action if action != 'play'
+      register_name = action == 'play' ? play_event_name(sound_name) : stop_event_name(sound_name)
+      record[sound_name]['events_when_stopped'] = COMPLETION_EVENTS[sound_name] if COMPLETION_EVENTS[sound_name]
+      collection[register_name] = record
+    end
+
+    def add_windows_sound_hook(collection, sound_name, bus, action = 'play')
+      record = {sound_name => {'bus' => bus, 'ducking' => ducking(bus)}}
+      record[sound_name]['action'] = action if action != 'play'
+      register_name = action == 'play' ? play_event_name(sound_name) : stop_event_name(sound_name)
+      record[sound_name]['events_when_stopped'] = COMPLETION_EVENTS[sound_name] if COMPLETION_EVENTS[sound_name]
+      collection[register_name] = record
     end
 
     def add_sound_hook(collection, sound_name, bus='effects')
@@ -125,6 +146,18 @@ module TrogBuild
         add_windows_sound_hook(collection, sound_name, bus)
       else
         add_linux_sound_hook(collection, sound_name, bus)
+      end
+    end
+
+    def add_stop_sound_hook(collection, sound_name, bus='effects')
+      if collection[stop_event_name(sound_name)]
+        puts "Duplicate sound hook detected - #{stop_event_name(sound_name)}"
+        exit(1)
+      end
+      if $platform == PLATFORM_WINDOWS
+        add_windows_sound_hook(collection, sound_name, bus, 'stop')
+      else
+        add_linux_sound_hook(collection, sound_name, bus, 'stop')
       end
     end
   end

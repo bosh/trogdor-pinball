@@ -55,15 +55,17 @@ state_machines:
       done:
         label: complete
         events_when_started:
+          - dj_stop_burnination_mode_song
+          - dj_burnination_background
           - burnination_countdown_stop
           - increment_playfield_multiplier
           - mode_stop_burnination_rollovers
           - mode_start_pops_burninated
           - mode_complete_pops_burnination
-          - dj_burnination_background
       failed:
         label: failed
         events_when_started:
+          - dj_stop_burnination_mode_song
           - burnination_countdown_stop
           - mode_start_pops_base
           - mode_stop_burnination_rollovers
