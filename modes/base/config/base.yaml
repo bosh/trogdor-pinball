@@ -32,6 +32,13 @@ event_player:
     - mode_start_slots_controller
     - dj_game_start|1800ms
 
+  ball_will_end.1: [play_end_quip]
+  play_end_quip{current_player.ball_score < 100}: [dj_ball_end_zero]
+  play_end_quip{current_player.ball_score < 1000 and current_player.ball_score >= 100}: [dj_ball_end_poor_pool]
+  play_end_quip{current_player.ball_score < 5000 and current_player.ball_score >= 1000}: [dj_ball_end_average_pool]
+  play_end_quip{current_player.ball_score < 15000 and current_player.ball_score >= 5000}: [dj_ball_end_good_pool]
+  play_end_quip{current_player.ball_score >= 15000}: [dj_ball_end_amazing]
+
   s_start_active: [dj_cash]
   s_plunger_active: [dj_ball_at_launcher]
   increment_playfield_multiplier{current_player.playfield_multiplier < 5}: [dj_multiplier_added_pool]
