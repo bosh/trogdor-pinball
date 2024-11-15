@@ -38,6 +38,8 @@ event_player:
   play_end_quip{current_player.ball_score < 5000 and current_player.ball_score >= 1000}: [dj_ball_end_average_pool]
   play_end_quip{current_player.ball_score < 15000 and current_player.ball_score >= 5000}: [dj_ball_end_good_pool]
   play_end_quip{current_player.ball_score >= 15000}: [dj_ball_end_amazing]
+  tilt_warning: [dj_tilt_warning_pool]
+  tilt: [dj_tilted]
 
   s_start_active: [dj_cash]
   s_plunger_active: [dj_ball_at_launcher]

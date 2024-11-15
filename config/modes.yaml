@@ -19,5 +19,6 @@ modes:
   - pops_burninated
   - captive_ball_base
   - slots_controller
+  - tilt #builtin
 
   # and dont forget the modes in generated_modes.yaml
