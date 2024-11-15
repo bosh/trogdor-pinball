@@ -3,9 +3,9 @@
 # show token: color
 
 - duration: 100ms
-#  lights:
-#    l_drain: (color)
+  lights:
+    l_drain: (color)
 
 - duration: 100ms
-#  lights:
-#    l_drain: off
+  lights:
+    l_drain: off
