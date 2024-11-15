@@ -2,7 +2,8 @@
 
 mode:
   start_events: mode_start_pops_burninated
-  stop_events: mode_stop_pops_burninated
+  stop_events: mode_stop_pops_burninated, ball_will_end
+  events_when_stopped: dj_stop_burnination_background
   priority: 1550
 
 variable_player:

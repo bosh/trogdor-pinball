@@ -2,7 +2,7 @@
 
 mode:
   start_events: mode_start_burnination_controller
-  stop_events: mode_stop_burnination_controller
+  stop_events: mode_stop_burnination_controller, ball_will_end
   priority: 905
 
 timers:

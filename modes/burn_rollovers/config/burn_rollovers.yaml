@@ -2,7 +2,7 @@
 
 mode:
   start_events: mode_start_burn_rollovers
-  stop_events: mode_stop_burn_rollovers
+  stop_events: mode_stop_burn_rollovers, ball_will_end
   priority: 1400
 
 variable_player:

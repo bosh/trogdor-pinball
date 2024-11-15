@@ -2,7 +2,7 @@
 
 mode:
   start_events: mode_start_captive_ball_base
-  stop_events: mode_stop_captive_ball_base
+  stop_events: mode_stop_captive_ball_base, ball_will_end
   priority: 1600
 
 shot_profiles:
