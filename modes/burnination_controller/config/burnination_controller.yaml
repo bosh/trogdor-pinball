@@ -36,7 +36,7 @@ event_player:
 
 state_machines:
   burnination_state:
-    persist_state: true
+    persist_state: false
     states:
       start:
         label: inactive
