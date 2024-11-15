@@ -24,4 +24,4 @@ event_player:
   play_end_quip{current_player.ball_score >= 15000}: [dj_ball_end_amazing]
 
   dj_end_quip_complete: [mode_stop_queue_end_quip]
-  timer_rotating_target_clock_complete: [mode_stop_queue_end_quip]
+  timer_fallback_end_quip_timer_complete: [mode_stop_queue_end_quip]
