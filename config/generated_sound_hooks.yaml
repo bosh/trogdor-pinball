@@ -372,6 +372,7 @@ sound_player:
         release: 0s
   dj_ball_end_good_pool:
     ball_end_good_pool:
+      events_when_stopped: dj_end_quip_complete
       bus: voice
       ducking:
         bus: voice
@@ -381,6 +382,7 @@ sound_player:
         release: 0s
   dj_ball_end_average_pool:
     ball_end_average_pool:
+      events_when_stopped: dj_end_quip_complete
       bus: voice
       ducking:
         bus: voice
@@ -390,6 +392,7 @@ sound_player:
         release: 0s
   dj_ball_end_poor_pool:
     ball_end_poor_pool:
+      events_when_stopped: dj_end_quip_complete
       bus: voice
       ducking:
         bus: voice
@@ -435,6 +438,7 @@ sound_player:
         release: 0s
   dj_ball_end_amazing:
     ball_end_amazing:
+      events_when_stopped: dj_end_quip_complete
       bus: voice
       ducking:
         bus: voice
@@ -444,6 +448,7 @@ sound_player:
         release: 0s
   dj_ball_end_zero:
     ball_end_zero:
+      events_when_stopped: dj_end_quip_complete
       bus: voice
       ducking:
         bus: voice

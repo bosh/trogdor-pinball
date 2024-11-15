@@ -1,0 +1,27 @@
+#config_version=6
+
+mode:
+  start_events: mode_start_queue_end_quip, ball_ending
+  stop_events: mode_stop_queue_end_quip
+  use_wait_queue: true
+  priority: 9091
+  events_when_started: play_end_quip
+
+timers:
+  fallback_end_quip_timer:
+    start_value: 2
+    end_value: 0
+    tick_interval: 800ms
+    direction: down
+    start_running: true
+    restart_on_complete: false
+
+event_player:
+  play_end_quip{current_player.ball_score < 100}: [dj_ball_end_zero]
+  play_end_quip{current_player.ball_score < 1000 and current_player.ball_score >= 100}: [dj_ball_end_poor_pool]
+  play_end_quip{current_player.ball_score < 5000 and current_player.ball_score >= 1000}: [dj_ball_end_average_pool]
+  play_end_quip{current_player.ball_score < 15000 and current_player.ball_score >= 5000}: [dj_ball_end_good_pool]
+  play_end_quip{current_player.ball_score >= 15000}: [dj_ball_end_amazing]
+
+  dj_end_quip_complete: [mode_stop_queue_end_quip]
+  timer_rotating_target_clock_complete: [mode_stop_queue_end_quip]

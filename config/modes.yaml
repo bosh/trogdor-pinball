@@ -20,5 +20,6 @@ modes:
   - captive_ball_base
   - slots_controller
   - tilt #builtin
+  - queue_end_quip
 
   # and dont forget the modes in generated_modes.yaml

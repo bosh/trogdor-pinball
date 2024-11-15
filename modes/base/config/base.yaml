@@ -2,7 +2,7 @@
 
 mode:
   start_events: ball_started
-  stop_events: ball_will_end
+  stop_events: ball_ending
   priority: 1000
 
 config:
@@ -14,7 +14,6 @@ slide_player:
   mode_base_started:
     base:
       action: play
-  mode_base_started.1:
     attract:
       action: remove
     tilt:
@@ -38,12 +37,6 @@ event_player:
     - mode_start_slots_controller
     - dj_game_start|1800ms
 
-  ball_will_end.1: [play_end_quip]
-  play_end_quip{current_player.ball_score < 100}: [dj_ball_end_zero]
-  play_end_quip{current_player.ball_score < 1000 and current_player.ball_score >= 100}: [dj_ball_end_poor_pool]
-  play_end_quip{current_player.ball_score < 5000 and current_player.ball_score >= 1000}: [dj_ball_end_average_pool]
-  play_end_quip{current_player.ball_score < 15000 and current_player.ball_score >= 5000}: [dj_ball_end_good_pool]
-  play_end_quip{current_player.ball_score >= 15000}: [dj_ball_end_amazing]
   tilt_warning: [dj_tilt_warning_pool]
   tilt: [dj_tilted]
 
