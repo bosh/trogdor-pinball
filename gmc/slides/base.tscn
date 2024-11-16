@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://1muw6d5hkqte"]
+[gd_scene load_steps=6 format=3 uid="uid://1muw6d5hkqte"]
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_grcpe"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_bsdxn"]
+[ext_resource type="Texture2D" uid="uid://kxdeyef78vrh" path="res://images/base.png" id="2_ekj0u"]
 [ext_resource type="FontFile" uid="uid://dbblxkk3tmho5" path="res://fonts/preeow-paper.ttf" id="2_j6mlq"]
 
 [sub_resource type="Theme" id="Theme_t7ujo"]
@@ -13,43 +14,33 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_grcpe")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 1600.0
-offset_bottom = 900.0
-color = Color(0.22, 0.22, 0.66, 1)
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 19.0
-offset_top = 781.0
-offset_right = 439.0
-offset_bottom = 884.0
-theme_override_font_sizes/font_size = 75
-text = "Base mode yeah!"
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(799.5, 449.5)
+scale = Vector2(1.81911, 1.37462)
+texture = ExtResource("2_ekj0u")
 
 [node name="MPFVariable - Ball" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1145.0
-offset_top = 18.0
-offset_right = 1543.0
-offset_bottom = 186.0
+offset_left = 1229.0
+offset_top = 65.0
+offset_right = 1624.0
+offset_bottom = 257.0
 theme = SubResource("Theme_t7ujo")
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
-theme_override_font_sizes/font_size = 120
-text = "Ball 1"
+theme_override_font_sizes/font_size = 80
+text = "Man: 1"
 horizontal_alignment = 1
 script = ExtResource("2_bsdxn")
 variable_name = "ball"
-template_string = "Ball %s"
+template_string = "Man: %s"
 
 [node name="MPFVariable - Score" type="Label" parent="."]
 layout_mode = 0
-offset_left = 859.0
-offset_top = 667.0
-offset_right = 1582.0
-offset_bottom = 886.0
+offset_left = 418.0
+offset_top = -34.0
+offset_right = 1143.0
+offset_bottom = 185.0
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
 theme_override_font_sizes/font_size = 160
@@ -62,13 +53,13 @@ min_digits = 2
 
 [node name="MPFVariable - Ball Score" type="Label" parent="."]
 layout_mode = 0
-offset_left = 859.0
-offset_top = 334.0
-offset_right = 1582.0
-offset_bottom = 553.0
+offset_left = 61.0
+offset_top = 78.0
+offset_right = 268.0
+offset_bottom = 147.0
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
-theme_override_font_sizes/font_size = 160
+theme_override_font_sizes/font_size = 50
 text = "9,000"
 horizontal_alignment = 1
 script = ExtResource("2_bsdxn")
