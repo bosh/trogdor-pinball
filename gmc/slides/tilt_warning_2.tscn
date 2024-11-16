@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://dqint7irvt1qe"]
+[gd_scene load_steps=6 format=3 uid="uid://dqint7irvt1qe"]
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_dhvjj"]
+[ext_resource type="Texture2D" uid="uid://3uspw0udlcto" path="res://images/trogface.png" id="2_fl5c2"]
+[ext_resource type="FontFile" uid="uid://dbblxkk3tmho5" path="res://fonts/preeow-paper.ttf" id="3_l2ed5"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_oftia"]
+
+[sub_resource type="Theme" id="Theme_y2dmn"]
+Label/font_sizes/font_size = 40
+Label/fonts/font = ExtResource("3_l2ed5")
 
 [node name="TiltWarning1" type="Control"]
 layout_mode = 3
@@ -9,16 +16,53 @@ script = ExtResource("1_dhvjj")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 1616.0
-offset_bottom = 920.0
+offset_left = 1.0
+offset_right = 1600.0
+offset_bottom = 900.0
 color = Color(0.654179, 0.339315, 0.0578699, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(801, 450.999)
+scale = Vector2(1.78385, 1.32416)
+texture = ExtResource("2_fl5c2")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 475.179
-offset_top = 280.765
-offset_right = 1142.18
-offset_bottom = 775.765
+offset_left = 905.0
+offset_top = 603.0
+offset_right = 1572.0
+offset_bottom = 1098.0
 theme_override_font_sizes/font_size = 100
-text = "Tilt Warning 2
-"
+text = "Hey, watch it!"
+
+[node name="MPFVariable - Ball" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1229.0
+offset_top = 90.0
+offset_right = 1624.0
+offset_bottom = 282.0
+theme = SubResource("Theme_y2dmn")
+theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 80
+text = "Man: 1"
+horizontal_alignment = 1
+script = ExtResource("4_oftia")
+variable_name = "ball"
+template_string = "Man: %s"
+
+[node name="MPFVariable - Ball Score" type="Label" parent="."]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 96.0
+offset_right = 293.0
+offset_bottom = 165.0
+theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 50
+text = "9,000"
+horizontal_alignment = 1
+script = ExtResource("4_oftia")
+variable_name = "ball_score"
+comma_separate = true
+min_digits = 2

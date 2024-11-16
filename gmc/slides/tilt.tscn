@@ -1,24 +1,68 @@
-[gd_scene load_steps=2 format=3 uid="uid://bewopa2kmr8hy"]
+[gd_scene load_steps=6 format=3 uid="uid://bewopa2kmr8hy"]
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_ji27p"]
+[ext_resource type="Texture2D" uid="uid://3uspw0udlcto" path="res://images/trogface.png" id="2_cd05m"]
+[ext_resource type="FontFile" uid="uid://dbblxkk3tmho5" path="res://fonts/preeow-paper.ttf" id="3_as5ws"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_ayl5g"]
 
-[node name="TiltWarning1" type="Control"]
+[sub_resource type="Theme" id="Theme_kudbo"]
+Label/font_sizes/font_size = 40
+Label/fonts/font = ExtResource("3_as5ws")
+
+[node name="TiltWarning2" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_ji27p")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 1616.0
-offset_bottom = 920.0
+offset_right = 1600.0
+offset_bottom = 899.0
 color = Color(0.549529, 0.0705812, 0.12824, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(802.483, 460.607)
+rotation = 3.14159
+scale = Vector2(1.7774, 1.29238)
+texture = ExtResource("2_cd05m")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 475.179
-offset_top = 280.765
-offset_right = 1142.18
-offset_bottom = 775.765
-theme_override_font_sizes/font_size = 100
-text = "TILTED
-YOU FOOL"
+offset_left = 306.0
+offset_top = 192.0
+offset_right = 973.001
+offset_bottom = 687.0
+theme_override_font_sizes/font_size = 150
+text = "TILT!"
+
+[node name="MPFVariable - Ball" type="Label" parent="."]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 723.0
+offset_right = 406.0
+offset_bottom = 838.0
+theme = SubResource("Theme_kudbo")
+theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 80
+text = "Man: 1"
+horizontal_alignment = 1
+script = ExtResource("4_ayl5g")
+variable_name = "ball"
+template_string = "Man: %s"
+
+[node name="MPFVariable - Ball Score" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1323.0
+offset_top = 749.0
+offset_right = 1530.0
+offset_bottom = 818.0
+theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 50
+text = "9,000"
+horizontal_alignment = 1
+script = ExtResource("4_ayl5g")
+variable_name = "ball_score"
+comma_separate = true
+min_digits = 2

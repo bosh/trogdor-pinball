@@ -15,8 +15,8 @@ anchors_preset = 0
 script = ExtResource("1_grcpe")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(799.5, 449.5)
-scale = Vector2(1.81911, 1.37462)
+position = Vector2(800.001, 450)
+scale = Vector2(1.82025, 1.37615)
 texture = ExtResource("2_ekj0u")
 
 [node name="MPFVariable - Ball" type="Label" parent="."]
