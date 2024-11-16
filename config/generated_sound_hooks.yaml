@@ -262,6 +262,15 @@ sound_player:
         attenuation: 0
         release_point: 0
         release: 0s
+  dj_theme_instrumental_steel:
+    theme_instrumental_steel:
+      bus: music
+      ducking:
+        bus: music
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
   dj_theme_main:
     theme_main:
       bus: music

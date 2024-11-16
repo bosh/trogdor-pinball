@@ -54,6 +54,7 @@ module TrogBuild
       theme_chiptune
       theme_heavy_metal
       theme_instrumental_heavy
+      theme_instrumental_steel
       theme_main
       burnination_mode_song
       burnination_background
