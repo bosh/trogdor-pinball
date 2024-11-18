@@ -639,6 +639,24 @@ switch:
   vswitch_end_game:
     x: 0.9657759024847632
     y: 0.8551336146272855
+  vswitch_plunger_power_1:
+    x: 0.8872679045092837
+    y: 0.5908488063660478
+  vswitch_plunger_power_2:
+    x: 0.8819628647214853
+    y: 0.5699602122015915
+  vswitch_plunger_power_3:
+    x: 0.8740053050397877
+    y: 0.548076923076923
+  vswitch_plunger_power_4:
+    x: 0.8687002652519893
+    y: 0.5271883289124668
+  vswitch_plunger_power_5:
+    x: 0.8633952254641909
+    y: 0.5062997347480106
+  vswitch_plunger_power_6:
+    x: 0.8554376657824933
+    y: 0.48541114058355433
   vswitch_qualify_burninated:
     x: 0.014367816091954025
     y: 0.054956896551724144

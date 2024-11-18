@@ -39,6 +39,46 @@ switches:
     platform: smart_virtual
     number: 909
 
+  vswitch_plunger_power_1:
+    platform: smart_virtual
+    number: 991
+  vswitch_plunger_power_2:
+    platform: smart_virtual
+    number: 992
+  vswitch_plunger_power_3:
+    platform: smart_virtual
+    number: 993
+  vswitch_plunger_power_4:
+    platform: smart_virtual
+    number: 994
+  vswitch_plunger_power_5:
+    platform: smart_virtual
+    number: 995
+  vswitch_plunger_power_6:
+    platform: smart_virtual
+    number: 996
+
+coil_player:
+  vswitch_plunger_power_1_active:
+    c_auto_plunger:
+      pulse_ms: 9
+  vswitch_plunger_power_2_active:
+    c_auto_plunger:
+      pulse_ms: 12
+  vswitch_plunger_power_3_active:
+    c_auto_plunger:
+      pulse_ms: 15
+  vswitch_plunger_power_4_active:
+    c_auto_plunger:
+      pulse_ms: 18
+  vswitch_plunger_power_5_active:
+    c_auto_plunger:
+      pulse_ms: 21
+  vswitch_plunger_power_6_active:
+    c_auto_plunger:
+      pulse_ms: 24
+
+
 plugins: switch_player
 switch_player:
   start_event: vswitch_end_game_active
