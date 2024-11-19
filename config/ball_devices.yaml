@@ -22,6 +22,4 @@ playfields:
   playfield:
     default_source_device: bd_plunger
     tags: default
-    # enable_ball_search: settings.ball_search_enabled == 1
-    enable_ball_search: false
-
+    enable_ball_search: settings.ball_search_enabled
