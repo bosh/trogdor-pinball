@@ -13,6 +13,8 @@ alias tmonitor="t; mpf monitor"
 
 alias trogdor="clear; t; mpf game" #requires bcp connection
 alias tmc="echo TODO" #to run the mc or gmc +bcp client #probably mpf gmc ...
+alias tmedia='~/workspace/pinball-media/pinball-media.rb install trogdor'
+alias tmediax='~/workspace/pinball-media/pinball-media.rb clean trogdor'
 
 alias mpftest="python -m unittest discover mpf/tests"
 alias mpfpenv=". ~/mpf80env/bin/activate"
