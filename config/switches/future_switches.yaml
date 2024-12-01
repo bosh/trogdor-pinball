@@ -1,7 +1,6 @@
 #config_version=6
 
-# Devices that exist in the plan but are not yet physically installed
-#   lights are already in a separate file in the light subdir
+# Switches that exist in the plan but are not yet physically installed
 
 switches:
   #For coils
@@ -30,7 +29,7 @@ switches:
     type: 'NC' #maybe nc
 
   #Targets
-  s_drop_left_down: #TODO learn how drop switching works (are there two?)
+  s_drop_left_down:
     number: 807
     platform: smart_virtual
 
