@@ -119,3 +119,20 @@ spinners:
   spinner_right:
     switch: s_spinner_right
     active_ms: 400ms
+
+diverters:
+  div_left_controlled_ball_gate: #CCW orbit: left gate lifts via right orbital inbound
+    activation_coil: c_gate_left
+    type: hold
+    activation_time: 4s
+    enable_events: enable_lift_left_cbg
+    disable_events: disable_lift_left_cbg, ball_ending
+    activation_switches: s_right_orbit
+
+  div_right_controlled_ball_gate: #CW orbit: right gate lifts via left orbital inbound
+    activation_coil: c_gate_right
+    type: hold
+    activation_time: 4s
+    enable_events: enable_lift_right_cbg
+    disable_events: disable_lift_right_cbg, ball_ending
+    activation_switches: s_left_orbit

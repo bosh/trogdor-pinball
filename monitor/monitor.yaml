@@ -51,6 +51,13 @@ combo_switch:
     x: 0.9298892988929889
     y: 0.9451107011070111
 device_size: 0.02
+diverter:
+  div_left_controlled_ball_gate:
+    x: 0.3448275862068965
+    y: 0.054708222811671085
+  div_right_controlled_ball_gate:
+    x: 0.6379310344827586
+    y: 0.04476127320954907
 drop_target:
   dt_center:
     x: 0.3994252873563218
