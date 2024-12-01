@@ -58,6 +58,9 @@ diverter:
   div_right_controlled_ball_gate:
     x: 0.6379310344827586
     y: 0.04476127320954907
+  div_right_controlled_ball_gate_alternative_profile:
+    x: 0.6206896551724138
+    y: 0.0636604774535809
   div_saver_post:
     x: 0.44827586206896547
     y: 0.9828326605904931
@@ -650,14 +653,20 @@ switch:
     x: 0.3395225464190981
     y: 0.013925729442970821
   vswitch_disable_right_cbg:
-    x: 0.6591511936339522
-    y: 0.028846153846153844
+    x: 0.6604774535809018
+    y: 0.033819628647214856
+  vswitch_disable_right_cbg_alt:
+    x: 0.6193633952254642
+    y: 0.08156498673740052
   vswitch_enable_left_cbg:
     x: 0.3116710875331565
     y: 0.020888594164456233
   vswitch_enable_right_cbg:
-    x: 0.6312997347480105
-    y: 0.01989389920424403
+    x: 0.636604774535809
+    y: 0.02486737400530504
+  vswitch_enable_right_cbg_alt:
+    x: 0.5954907161803713
+    y: 0.07559681697612732
   vswitch_end_game:
     x: 0.9657759024847632
     y: 0.8551336146272855

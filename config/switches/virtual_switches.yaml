@@ -70,12 +70,20 @@ switches:
   vswitch_disable_right_cbg:
     platform: smart_virtual
     number: 923
+  vswitch_enable_right_cbg_alt:
+    platform: smart_virtual
+    number: 926
+  vswitch_disable_right_cbg_alt:
+    platform: smart_virtual
+    number: 927
 
 event_player:
   vswitch_enable_left_cbg_active: [enable_lift_left_cbg]
   vswitch_disable_left_cbg_active: [disable_lift_left_cbg]
   vswitch_enable_right_cbg_active: [enable_lift_right_cbg]
   vswitch_disable_right_cbg_active: [disable_lift_right_cbg]
+  vswitch_enable_right_cbg_alt_active: [enable_lift_right_cbg_alt]
+  vswitch_disable_right_cbg_alt_active: [disable_lift_right_cbg_alt]
 
 coil_player:
   vswitch_plunger_power_1_active:
