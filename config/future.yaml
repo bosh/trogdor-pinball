@@ -93,7 +93,7 @@ flippers:
     eos_switch: s_upper_flipper_eos
     activation_switch: #s_mini_flipper #TODO this is from real hardware
     enable_events: ball_started, enableAutofire #, machine_reset_phase_3 #P3 for testing
-    disable_events: ball_will_end, service_mode_entered, disableAutofire
+    disable_events: ball_will_end, service_mode_entered, disable_autofires
     use_eos: true
 
 drop_targets:
@@ -128,6 +128,7 @@ diverters:
     enable_events: enable_lift_left_cbg
     disable_events: disable_lift_left_cbg, ball_ending
     activation_switches: s_right_orbit
+    deactivate_events: deactivate_left_cbg
 
   div_right_controlled_ball_gate: #CW orbit: right gate lifts via left orbital inbound
     activation_coil: c_gate_right
@@ -136,3 +137,13 @@ diverters:
     enable_events: enable_lift_right_cbg
     disable_events: disable_lift_right_cbg, ball_ending
     activation_switches: s_left_orbit
+    deactivate_events: deactivate_right_cbg
+
+  div_saver_post:
+    activation_coil: c_saver_post
+    type: hold
+    activation_time: 10s
+    enable_events: enable_saver_post
+    disable_events: disable_saver_post, ball_ending
+    activate_events: activate_saver_post
+    deactivate_events: deactivate_saver_post
