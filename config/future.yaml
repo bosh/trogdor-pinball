@@ -128,6 +128,7 @@ diverters:
     enable_events: enable_lift_left_cbg
     disable_events: disable_lift_left_cbg, ball_ending
     activation_switches: s_right_orbit
+    activate_events: activate_left_cbg
     deactivate_events: deactivate_left_cbg
 
   div_right_controlled_ball_gate: #CW orbit: right gate lifts via left orbital inbound
@@ -137,6 +138,7 @@ diverters:
     enable_events: enable_lift_right_cbg
     disable_events: disable_lift_right_cbg, ball_ending
     activation_switches: s_left_orbit
+    activate_events: activate_right_cbg
     deactivate_events: deactivate_right_cbg
 
   div_saver_post:
