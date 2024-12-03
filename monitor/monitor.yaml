@@ -436,9 +436,12 @@ light:
   vlight_for_generated_example_mode:
     x: 0.022988505747126436
     y: 0.903770012050267
-  vlight_inlane_qualified:
-    x: 0.04597701149425287
-    y: 0.625
+  vlight_left_inlane_qualified:
+    x: 0.1286472148541114
+    y: 0.7718832891246683
+  vlight_right_inlane_qualified:
+    x: 0.7559681697612732
+    y: 0.7659151193633951
 multiball:
   cabinet_multiball:
     x: 0.44396551724137934
@@ -701,8 +704,8 @@ switch:
     x: 0.9195402298850576
     y: 0.6831896551724138
   vswitch_reset_inlane_detector:
-    x: 0.015804597701149427
-    y: 0.625
+    x: 0.029177718832891244
+    y: 0.764920424403183
   vswitch_toggle_slings_dead:
     x: 0.9698275862068966
     y: 0.6487068965517242

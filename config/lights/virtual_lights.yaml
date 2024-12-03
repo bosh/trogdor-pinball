@@ -26,8 +26,13 @@ lights:
     type: rgb
     tags: lights_virtual
 
-  vlight_inlane_qualified: #Could become a real light in an orbit lane etc
+  vlight_left_inlane_qualified:
     number: 9505
+    platform: smart_virtual
+    type: rgb
+    tags: lights_virtual
+  vlight_right_inlane_qualified:
+    number: 9506
     platform: smart_virtual
     type: rgb
     tags: lights_virtual

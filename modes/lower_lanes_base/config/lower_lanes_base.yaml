@@ -24,13 +24,19 @@ shot_profiles:
           color: green
 
 shots:
-  inlane_detector_shot:
+  left_inlane_detector_shot:
     profile: inlane_detector_profile
-    switches: s_left_inner_lane, s_right_inner_lane
-    reset_events: reset_inlane_detector
+    switches: s_left_inner_lane
+    reset_events: reset_inlane_detectors
     show_tokens:
-      light: vlight_inlane_qualified
+      light: vlight_left_inlane_qualified
+  right_inlane_detector_shot:
+    profile: inlane_detector_profile
+    switches: s_right_inner_lane
+    reset_events: reset_inlane_detectors
+    show_tokens:
+      light: vlight_right_inlane_qualified
 
 event_player:
   vswitch_reset_inlane_detector_active:
-    - reset_inlane_detector
+    - reset_inlane_detectors
