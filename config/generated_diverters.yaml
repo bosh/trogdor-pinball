@@ -1,4 +1,22 @@
 #config_version=6
 ---
-diverters: {}
+diverters:
+  div_right_controlled_ball_gate:
+    activation_coil: c_gate_right
+    type: hold
+    activation_time: 3s
+    enable_events: enable_lift_right_cbg
+    disable_events: disable_lift_right_cbg, ball_ending
+    activation_switches: s_left_orbit
+    activate_events: activate_right_cbg
+    deactivate_events: deactivate_right_cbg, disable_lift_right_cbg, ball_ending
+  div_right_controlled_ball_gate_alternative_profile:
+    activation_coil: c_gate_right
+    type: hold
+    activation_time: 5s
+    enable_events: enable_lift_right_cbg_alt
+    disable_events: disable_lift_right_cbg_alt, ball_ending
+    activation_switches: s_left_orbit, s_start
+    activate_events: activate_right_cbg_alt
+    deactivate_events: deactivate_right_cbg_alt, disable_lift_right_cbg_alt, ball_ending
 
