@@ -15,6 +15,7 @@ config:
   - keyboard.yaml
   - autofires.yaml
   - ball_devices.yaml
+  - diverters.yaml
   - modes.yaml
   - player_vars.yaml
   - future.yaml
