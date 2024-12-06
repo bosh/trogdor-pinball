@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_grcpe"]
 [ext_resource type="Texture2D" uid="uid://c7rku52o4c103" path="res://images/attract_bg.jpg" id="2_quk18"]
-[ext_resource type="Texture2D" uid="uid://n4cm0hpnab06" path="res://images/trogdor_nameplate.jpg" id="3_08cu3"]
+[ext_resource type="Texture2D" uid="uid://n4cm0hpnab06" path="res://images/included/trogdor_nameplate.jpg" id="3_08cu3"]
 
 [node name="Attract" type="Control"]
 layout_mode = 3

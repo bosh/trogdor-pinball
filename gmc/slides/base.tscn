@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_grcpe"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_bsdxn"]
-[ext_resource type="Texture2D" uid="uid://kxdeyef78vrh" path="res://images/base.png" id="2_ekj0u"]
+[ext_resource type="Texture2D" uid="uid://kxdeyef78vrh" path="res://images/included/base.png" id="2_ekj0u"]
 [ext_resource type="FontFile" uid="uid://dbblxkk3tmho5" path="res://fonts/preeow-paper.ttf" id="2_j6mlq"]
 
 [sub_resource type="Theme" id="Theme_t7ujo"]

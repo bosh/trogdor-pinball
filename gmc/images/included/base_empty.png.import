@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://h5mdw87chf05"
-path="res://.godot/imported/looting.png-b511e25e0bc1c69e5c5ed37a984d7567.ctex"
+uid="uid://bmmj8yrpph5cq"
+path="res://.godot/imported/base_empty.png-56855679ce6087424af56c3be5af6842.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/looting.png"
-dest_files=["res://.godot/imported/looting.png-b511e25e0bc1c69e5c5ed37a984d7567.ctex"]
+source_file="res://images/included/base_empty.png"
+dest_files=["res://.godot/imported/base_empty.png-56855679ce6087424af56c3be5af6842.ctex"]
 
 [params]
 

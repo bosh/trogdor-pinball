@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n4cm0hpnab06"
-path="res://.godot/imported/trogdor_nameplate.jpg-e6e93cd86d5bd1832e89372445773eea.ctex"
+uid="uid://3uspw0udlcto"
+path="res://.godot/imported/trogface.png-01bf2781248765976223dea2eb905b98.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/trogdor_nameplate.jpg"
-dest_files=["res://.godot/imported/trogdor_nameplate.jpg-e6e93cd86d5bd1832e89372445773eea.ctex"]
+source_file="res://images/included/trogface.png"
+dest_files=["res://.godot/imported/trogface.png-01bf2781248765976223dea2eb905b98.ctex"]
 
 [params]
 

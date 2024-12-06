@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3uspw0udlcto"
-path="res://.godot/imported/trogface.png-3a9f2e06658e3ffd06e20e20bdf3e6db.ctex"
+uid="uid://ifidd6nwlc8c"
+path="res://.godot/imported/itsover.png-d94976cbfd6057413a7749c6dfc74808.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/trogface.png"
-dest_files=["res://.godot/imported/trogface.png-3a9f2e06658e3ffd06e20e20bdf3e6db.ctex"]
+source_file="res://images/included/itsover.png"
+dest_files=["res://.godot/imported/itsover.png-d94976cbfd6057413a7749c6dfc74808.ctex"]
 
 [params]
 

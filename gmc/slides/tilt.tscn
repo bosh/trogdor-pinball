@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bewopa2kmr8hy"]
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_ji27p"]
-[ext_resource type="Texture2D" uid="uid://3uspw0udlcto" path="res://images/trogface.png" id="2_cd05m"]
+[ext_resource type="Texture2D" uid="uid://3uspw0udlcto" path="res://images/included/trogface.png" id="2_cd05m"]
 [ext_resource type="FontFile" uid="uid://dbblxkk3tmho5" path="res://fonts/preeow-paper.ttf" id="3_as5ws"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_ayl5g"]
 
