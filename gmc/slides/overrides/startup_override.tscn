@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://poj0twvqrnkc"]
+[gd_scene load_steps=5 format=3 uid="uid://poj0twvqrnkc"]
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/slides/startup.gd" id="1_ggmrt"]
 [ext_resource type="Texture2D" uid="uid://dounln3l35d26" path="res://addons/mpf-gmc/images/logo_mpf.png" id="2_egi36"]
+[ext_resource type="AudioStream" uid="uid://dma3440obvo81" path="res://sounds/tunes/mpf.wav" id="3_li7q1"]
+[ext_resource type="Script" path="res://slides/overrides/logo_sound_player.gd" id="4_spa5l"]
 
 [node name="MPFSlide" type="Control"]
 layout_mode = 3
@@ -80,3 +82,7 @@ custom_minimum_size = Vector2(2.08165e-12, 100)
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 2
+
+[node name="LogoSoundPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_li7q1")
+script = ExtResource("4_spa5l")
