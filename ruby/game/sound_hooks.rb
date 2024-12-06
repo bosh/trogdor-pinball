@@ -1,11 +1,4 @@
 module TrogBuild
-  class ConfigFile
-    attr_reader :name
-    def initialize(name)
-      @name = name
-    end
-  end
-
   class SoundHooksConfig < ConfigFile
     # Pools are sound resources from the mpf config side,
     # but are actually godot-specific files that just point to real

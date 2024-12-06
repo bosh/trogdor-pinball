@@ -2,6 +2,7 @@ require 'yaml'
 require 'fileutils'
 
 require_relative 'models/config'
+require_relative 'models/config_file'
 require_relative 'models/shot_profile'
 require_relative 'models/shot'
 require_relative 'models/shot_group'
