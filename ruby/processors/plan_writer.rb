@@ -28,6 +28,10 @@ module TrogBuild
       config_file_path("generated_configs.yaml")
     end
 
+    def diverter_manifest_path
+      config_file_path("generated_diverters.yaml")
+    end
+
     def config_file_path(name)
       File.join(PROJECT_ROOT, "config", name)
     end
@@ -44,6 +48,7 @@ module TrogBuild
     def clean_generated_config_files!(plan)
       clean_generated_modes_manifest!
       clean_generated_configs_manifest!
+      clean_generated_diverters_manifest!
       plan.config_files.each do |cf|
         File.delete(config_file_path(cf.name)) if File.exist?(config_file_path(cf.name))
       end
@@ -57,6 +62,11 @@ module TrogBuild
     def clean_generated_configs_manifest!
       puts "Cleaning configs manifest" if $debug
       File.delete(config_manifest_path) if File.exist?(config_manifest_path)
+    end
+
+    def clean_generated_diverters_manifest!
+      puts "Cleaning generated diverters" if $debug
+      File.delete(diverter_manifest_path) if File.exist?(diverter_manifest_path)
     end
 
     def clean_generated_modes!
@@ -82,6 +92,7 @@ module TrogBuild
     def write_generated_config_files!(plan)
       write_generated_modes_manifest!(plan)
       write_generated_configs_manifest!(plan)
+      write_generated_diverters!(plan)
 
       plan.config_files.each do |cf|
         puts "Writing new config file #{cf.name}" if $debug
@@ -90,6 +101,17 @@ module TrogBuild
           file.write(cf.to_hash.to_yaml)
           file.write("\n")
         end
+      end
+    end
+
+    def write_generated_diverters!(plan)
+      puts "Writing new generated diverters" if $debug
+
+      diverter_definitions = {'foo' => {'bar' => 'baz'}}
+      File.open(diverter_manifest_path, 'w') do |file|
+        file.write("#config_version=6\n# This file is generated to allow arbitrary diverter rules\n")
+        file.write({'diverters' => diverter_definitions}.to_yaml)
+        file.write("\n")
       end
     end
 

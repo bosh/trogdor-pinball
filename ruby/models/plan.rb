@@ -22,8 +22,8 @@ module TrogBuild
       @modes << mode
     end
 
-    def add_sound_hooks(sound_hooks_config)
-      @config_files << sound_hooks_config
+    def add_config(config_file)
+      @config_files << config_file
     end
 
     def consume_light_number

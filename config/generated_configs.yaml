@@ -3,4 +3,5 @@
 ---
 config:
 - generated_sound_hooks.yaml
+- generated_diverters.yaml
 

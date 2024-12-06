@@ -10,10 +10,13 @@ module TrogBuild
       @plan = Plan.new()
 
       add_generated_lights!
-      add_example_mode!
-      add_achievement_modes!
-      add_slots_modes!
-      add_sound_hooks!
+
+      plan.add_mode ExampleMode.new('generated_example', 1310)
+      plan.add_mode AchievementMode.new('generated_achievements', 1090)
+      plan.add_mode SlotsMode.new('generated_slots', 1020)
+      plan.add_config SoundHooksConfig.new('generated_sound_hooks.yaml')
+      plan.add_config DivertersConfig.new('generated_diverters.yaml')
+
       plan
     end
 
@@ -69,22 +72,6 @@ module TrogBuild
         config = yield(number, {})
         plan.add_light "#{name}_#{number}", config
       end
-    end
-
-    def add_example_mode!
-      plan.add_mode ExampleMode.new('generated_example', 1310)
-    end
-
-    def add_achievement_modes!
-      plan.add_mode AchievementMode.new('generated_achievements', 1090)
-    end
-
-    def add_slots_modes!
-      plan.add_mode SlotsMode.new('generated_slots', 1020)
-    end
-
-    def add_sound_hooks!
-      plan.add_sound_hooks SoundHooksConfig.new('generated_sound_hooks.yaml')
     end
   end
 end
