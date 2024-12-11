@@ -3,6 +3,10 @@
 # Switches that exist in the plan but are not yet physically installed
 
 switches:
+  s_burn_standup:
+    number: 800
+    platform: smart_virtual
+
   #For coils
   s_pop_left:
     number: 801
