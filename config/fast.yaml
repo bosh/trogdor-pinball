@@ -10,10 +10,9 @@ fast:
         model: FP-I/O-3208
         order: 1
 
-      # TODO: ready for 1616 upper board
-      # 1616:
-      #   model: FP-I/O-1616 #TODO check
-      #   order: 2
+      1616:
+        model: FP-I/O-1616
+        order: 2
 
       # TODO: ready for cabinet io board
       # "0024":
