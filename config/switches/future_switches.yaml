@@ -3,10 +3,6 @@
 # Switches that exist in the plan but are not yet physically installed
 
 switches:
-  s_burn_standup:
-    number: 800
-    platform: smart_virtual
-
   #For coils
   s_pop_left:
     number: 801
@@ -37,29 +33,7 @@ switches:
     number: 807
     platform: smart_virtual
 
-  #Rollovers
-  s_burn_b:
-    number: 808
-    platform: smart_virtual
-    tags: playfield_active
-  s_burn_u:
-    number: 809
-    platform: smart_virtual
-    tags: playfield_active
-  s_burn_r:
-    number: 810
-    platform: smart_virtual
-    tags: playfield_active
-  s_burn_n:
-    number: 811
-    platform: smart_virtual
-    tags: playfield_active
-
   #Spinners
-  s_spinner_left:
-    number: 812
-    platform: smart_virtual
-    tags: playfield_active
   s_spinner_right:
     number: 813
     platform: smart_virtual

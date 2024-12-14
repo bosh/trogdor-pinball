@@ -80,6 +80,31 @@ switches:
     number: 3208-4
     tags: start
 
+#1616
+  s_burn_standup:
+    number: 1616-4
+    tags: playfield_active
+  s_burn_b:
+    number: 1616-3
+    tags: playfield_active
+  s_burn_u:
+    number: 1616-2
+    tags: playfield_active
+  s_burn_r:
+    number: 1616-1
+    tags: playfield_active
+  s_burn_n:
+    number: 1616-0
+    tags: playfield_active
+  s_spinner_left:
+    number: 1616-15
+    tags: playfield_active
+
+spinners:
+  spinner_left:
+    switch: s_spinner_left
+    active_ms: 400ms
+
 virtual_platform_start_active_switches:
   - s_trough_ball_1
   - s_trough_ball_2

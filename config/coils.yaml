@@ -45,3 +45,17 @@ coils:
   c_flipper_left_full:
     number: 3208-7
     default_pulse_ms: settings.flipper_main_coil_power
+
+# 1616
+  c_gate_left:
+    number: 1616-0
+    default_pulse_ms: 10
+    default_hold_power: 0.25
+  c_gate_right:
+    number: 1616-1
+    default_pulse_ms: 10
+    default_hold_power: 0.25
+  c_saver_post:
+    number: 1616-7
+    allow_enable: true
+    default_hold_power: .25 #TODO dial in

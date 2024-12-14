@@ -24,17 +24,6 @@ coils:
     number: 3005
     platform: smart_virtual
 
-  c_gate_left:
-    number: 3006
-    platform: smart_virtual
-    default_pulse_ms: 10
-    default_hold_power: 0.25
-  c_gate_right:
-    number: 3007
-    platform: smart_virtual
-    default_pulse_ms: 10
-    default_hold_power: 0.25
-
   c_drop_left_reset:
     number: 3008
     platform: smart_virtual
@@ -42,12 +31,6 @@ coils:
     default_pulse_ms: 10 #TODO dial in
     number: 3009
     platform: smart_virtual
-
-  c_saver_post:
-    number: 3010
-    platform: smart_virtual
-    allow_enable: true
-    default_hold_power: .25 #TODO dial in
 
   c_flipper_upper_hold:
     number: 3011
@@ -112,10 +95,6 @@ drop_target_banks:
     reset_on_complete: #No
 
 spinners:
-  spinner_left:
-    switch: s_spinner_left
-    active_ms: 400ms
-
   spinner_right:
     switch: s_spinner_right
     active_ms: 400ms
