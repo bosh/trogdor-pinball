@@ -49,13 +49,14 @@ coils:
 # 1616
   c_gate_left:
     number: 1616-0
-    default_pulse_ms: 10
-    default_hold_power: 0.25
+    default_pulse_ms: 24
+    default_hold_power: 0.375
   c_gate_right:
     number: 1616-1
-    default_pulse_ms: 10
-    default_hold_power: 0.25
+    default_pulse_ms: 24
+    default_hold_power: 0.375
   c_saver_post:
     number: 1616-7
     allow_enable: true
-    default_hold_power: .25 #TODO dial in
+    default_pulse_ms: 20
+    default_hold_power: .375
