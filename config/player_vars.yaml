@@ -32,6 +32,8 @@ player_vars:
   # misc features that count
   sling_hits:
     initial_value: 0
+  spinner_spins:
+    initial_value: 0
   captive_ball_target_hits:
     initial_value: 0
 

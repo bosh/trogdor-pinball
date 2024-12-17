@@ -17,6 +17,7 @@ modes:
   - pops_base
   - pops_burnination
   - pops_burninated
+  - spinners_base
   - captive_ball_base
   - slots_controller
   - tilt #builtin

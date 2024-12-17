@@ -1,0 +1,26 @@
+#config_version=6
+
+mode:
+  start_events: mode_start_spinners_base
+  stop_events: mode_stop_spinners_base, ball_will_end
+  events_when_started: enable_spinner_left_base, enable_spinner_right_base
+  priority: 1710 #TODO
+
+variable_player:
+  base_spinner_hit:
+    score: 10 * current_player.playfield_multiplier
+    spinner_spins: 1
+
+event_player:
+  spinner_spinner_left_base_hit: [base_spinner_hit]
+  spinner_spinner_right_base_hit: [base_spinner_hit]
+
+light_player:
+  "{device.switches.s_spinner_left.state == 0}":
+    l_spinner_left_flasher: off
+  "{device.switches.s_spinner_left.state == 1}":
+    l_spinner_left_flasher: green
+  "{device.switches.s_spinner_right.state == 0}":
+    l_spinner_right_flasher: off
+  "{device.switches.s_spinner_right.state == 1}":
+    l_spinner_right_flasher: green

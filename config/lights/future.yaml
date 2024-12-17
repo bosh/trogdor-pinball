@@ -192,3 +192,14 @@ lights:
     platform: smart_virtual
     type: rgb
     tags: lights_2b, lights_3c, lights_4d, lights_5e, lights_pf, lights_captive_ring
+
+  l_spinner_left_flasher:
+    number: 9101
+    platform: smart_virtual
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_pf
+  l_spinner_right_flasher:
+    number: 9102
+    platform: smart_virtual
+    type: rgb
+    tags: lights_2b, lights_3c, lights_4c, lights_5a, lights_pf

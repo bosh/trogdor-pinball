@@ -100,11 +100,6 @@ switches:
     number: 1616-15
     tags: playfield_active
 
-spinners:
-  spinner_left:
-    switch: s_spinner_left
-    active_ms: 400ms
-
 virtual_platform_start_active_switches:
   - s_trough_ball_1
   - s_trough_ball_2

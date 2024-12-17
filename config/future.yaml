@@ -93,8 +93,3 @@ drop_target_banks:
     reset_coils: c_slot_bank_reset
     reset_events: drop_target_bank_reset_slots, machine_reset_phase_3, ball_starting #TODO do I really need to declare the default pair?
     reset_on_complete: #No
-
-spinners:
-  spinner_right:
-    switch: s_spinner_right
-    active_ms: 400ms

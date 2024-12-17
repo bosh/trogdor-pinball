@@ -35,6 +35,7 @@ event_player:
     - mode_start_lower_lanes_base
     - mode_start_burnination_controller
     - mode_start_slots_controller
+    - mode_start_spinners_base
     - dj_game_start|1800ms
 
   tilt_warning: [dj_tilt_warning_pool]

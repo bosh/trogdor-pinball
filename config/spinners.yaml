@@ -1,0 +1,14 @@
+#config_version=6
+
+spinners:
+  spinner_left_base:
+    switch: s_spinner_left
+    active_ms: 400ms
+    enable_events: enable_spinner_left_base
+    disable_events: disable_spinner_left_base
+
+  spinner_right_base:
+    switch: s_spinner_right
+    active_ms: 400ms
+    enable_events: enable_spinner_right_base
+    disable_events: disable_spinner_right_base
