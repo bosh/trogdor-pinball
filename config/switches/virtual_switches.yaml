@@ -77,6 +77,14 @@ switches:
     platform: smart_virtual
     number: 927
 
+  vswitch_enable_spinner_targets:
+    platform: smart_virtual
+    number: 950
+  vswitch_disable_spinner_targets:
+    platform: smart_virtual
+    number: 951
+
+
 event_player:
   vswitch_enable_left_cbg_active: [enable_lift_left_cbg]
   vswitch_disable_left_cbg_active: [disable_lift_left_cbg]
@@ -84,6 +92,8 @@ event_player:
   vswitch_disable_right_cbg_active: [disable_lift_right_cbg]
   vswitch_enable_right_cbg_alt_active: [enable_lift_right_cbg_alt]
   vswitch_disable_right_cbg_alt_active: [disable_lift_right_cbg_alt]
+  vswitch_disable_spinner_targets_active: [spinner_controller_unset_left_target, spinner_controller_unset_right_target]
+  vswitch_enable_spinner_targets_active: [spinner_controller_set_left_target, spinner_controller_set_right_target]
 
 coil_player:
   vswitch_plunger_power_1_active:

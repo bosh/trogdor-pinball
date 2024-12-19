@@ -12,3 +12,15 @@ spinners:
     active_ms: 400ms
     enable_events: enable_spinner_right_base
     disable_events: disable_spinner_right_base
+
+  spinner_left_targeted:
+    switch: s_spinner_left
+    active_ms: 400ms
+    enable_events: enable_spinner_left_targeted
+    disable_events: disable_spinner_left_targeted
+
+  spinner_right_targeted:
+    switch: s_spinner_right
+    active_ms: 400ms
+    enable_events: enable_spinner_right_targeted
+    disable_events: disable_spinner_right_targeted

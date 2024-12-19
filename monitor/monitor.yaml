@@ -682,6 +682,9 @@ switch:
   vswitch_disable_right_cbg_alt:
     x: 0.6193633952254642
     y: 0.08156498673740052
+  vswitch_disable_spinner_targets:
+    x: 0.0612918434700613
+    y: 0.33734087694483733
   vswitch_enable_left_cbg:
     x: 0.3116710875331565
     y: 0.020888594164456233
@@ -691,6 +694,9 @@ switch:
   vswitch_enable_right_cbg_alt:
     x: 0.5954907161803713
     y: 0.07559681697612732
+  vswitch_enable_spinner_targets:
+    x: 0.031117397454031123
+    y: 0.33734087694483733
   vswitch_end_game:
     x: 0.9657759024847632
     y: 0.8551336146272855
