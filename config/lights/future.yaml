@@ -197,9 +197,20 @@ lights:
     number: 9101
     platform: smart_virtual
     type: rgb
-    tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_pf
-  l_spinner_right_flasher:
+    tags: lights_2a, lights_3a, lights_4a, lights_5e, lights_flashers
+  l_spinner_left_indicator:
     number: 9102
     platform: smart_virtual
     type: rgb
-    tags: lights_2b, lights_3c, lights_4c, lights_5a, lights_pf
+    tags: lights_2b, lights_3c, lights_4b, lights_5a, lights_pf
+
+  l_spinner_right_flasher:
+    number: 9103
+    platform: smart_virtual
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4c, lights_5e, lights_flashers
+  l_spinner_right_indicator:
+    number: 9104
+    platform: smart_virtual
+    type: rgb
+    tags: lights_2a, lights_3c, lights_4d, lights_5b, lights_pf

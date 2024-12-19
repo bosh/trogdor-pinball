@@ -403,9 +403,15 @@ light:
   l_spinner_left_flasher:
     x: 0.21876473361621876
     y: 0.3910891089108911
+  l_spinner_left_indicator:
+    x: 0.1933050447901933
+    y: 0.43210749646393215
   l_spinner_right_flasher:
     x: 0.7307873644507308
     y: 0.28995756718529
+  l_spinner_right_indicator:
+    x: 0.6921263554926922
+    y: 0.32602545968882607
   l_star_ring_a_1:
     x: 0.2327586206896552
     y: 0.8081896551724138
