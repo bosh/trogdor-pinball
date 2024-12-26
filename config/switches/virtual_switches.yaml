@@ -86,12 +86,12 @@ switches:
 
 
 event_player:
-  vswitch_enable_left_cbg_active: [enable_lift_left_cbg]
-  vswitch_disable_left_cbg_active: [disable_lift_left_cbg]
-  vswitch_enable_right_cbg_active: [enable_lift_right_cbg]
-  vswitch_disable_right_cbg_active: [disable_lift_right_cbg]
-  vswitch_enable_right_cbg_alt_active: [enable_lift_right_cbg_alt]
-  vswitch_disable_right_cbg_alt_active: [disable_lift_right_cbg_alt]
+  vswitch_enable_left_cbg_active: [enable_left_controlled_ball_gate]
+  vswitch_disable_left_cbg_active: [disable_left_controlled_ball_gate]
+  vswitch_enable_right_cbg_active: [enable_right_controlled_ball_gate]
+  vswitch_disable_right_cbg_active: [disable_right_controlled_ball_gate]
+  vswitch_enable_right_cbg_alt_active: [enable_right_controlled_ball_gate_alternative_profile]
+  vswitch_disable_right_cbg_alt_active: [disable_right_controlled_ball_gate_alternative_profile]
   vswitch_disable_spinner_targets_active: [spinner_controller_unset_left_target, spinner_controller_unset_right_target]
   vswitch_enable_spinner_targets_active: [spinner_controller_set_left_target, spinner_controller_set_right_target]
 
