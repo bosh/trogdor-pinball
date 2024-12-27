@@ -1,26 +1,7 @@
 #config_version=6
 
-mpf:
-  report_crashes: never
-
+# This file is used by `mpf game` when no -c option is given.
+# Usually this will be when testing on the CLI completely virtually,
+# or while debugging in the cabinet long term
 config:
-  - settings.yaml
-  - hardware.yaml
-  - fast.yaml
-  - displays.yaml
-  - machine.yaml
-  - lights/config.yaml
-  - coils.yaml
-  - switches/config.yaml
-  - spinners.yaml
-  - keyboard.yaml
-  - autofires.yaml
-  - ball_devices.yaml
-  - modes.yaml
-  - player_vars.yaml
-  - future.yaml
-  - generated_configs.yaml
-  - generated_modes.yaml
-
-custom_code:
-  - trogpy.core.Core
+  - env_cabinet.yaml

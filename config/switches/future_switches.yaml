@@ -87,8 +87,3 @@ switches:
   s_captive_ball_presence: #Opto, normally blocked when undisturbed
     number: 825
     platform: smart_virtual
-
-  s_tilt_bob:
-    number: 899
-    platform: smart_virtual
-    tags: tilt_warning

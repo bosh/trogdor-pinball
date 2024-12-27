@@ -1,0 +1,5 @@
+#config_version=6
+
+config:
+  - config_base.yaml
+  - switches/minicab_switches.yaml

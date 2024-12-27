@@ -1,0 +1,26 @@
+#config_version=6
+
+mpf:
+  report_crashes: never
+
+config:
+  - settings.yaml
+  - hardware.yaml
+  - fast.yaml
+  - displays.yaml
+  - machine.yaml
+  - lights/config.yaml
+  - coils.yaml
+  - switches/config.yaml
+  - spinners.yaml
+  - keyboard.yaml
+  - autofires.yaml
+  - ball_devices.yaml
+  - modes.yaml
+  - player_vars.yaml
+  - future.yaml
+  - generated_configs.yaml
+  - generated_modes.yaml
+
+custom_code:
+  - trogpy.core.Core

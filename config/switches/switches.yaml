@@ -2,8 +2,8 @@
 
 switches:
 
-#3208 Board
-## Block D
+#IO 3208
+## J9
   s_right_outer_lane:
     number: 3208-25
     tags: playfield_active
@@ -22,7 +22,7 @@ switches:
   s_plunger: # shooter lane presence
     number: 3208-31
 
-## Block B
+## J3
   s_high_voltage_status:
     number: 3208-8
 
@@ -41,7 +41,7 @@ switches:
   s_left_sling: # Parallel switch pair
     number: 3208-15
 
-## Block C
+## J6
   s_trough_ball_jam:
     number: 3208-17
     type: 'NC'
@@ -62,25 +62,8 @@ switches:
   s_trough_ball_5:
     number: 3208-21
 
-#Cabinet switches WHILE ON 3208!
-## Block A
-  s_mini_flipper:
-    number: 3208-0
-    tags: mini_flipper
-
-  s_left_flipper:
-    number: 3208-1
-    tags: left_flipper
-
-  s_right_flipper:
-    number: 3208-3
-    tags: right_flipper
-
-  s_start:
-    number: 3208-4
-    tags: start
-
-#1616
+#IO 1616
+## J7
   s_burn_standup:
     number: 1616-4
     tags: playfield_active
@@ -100,11 +83,14 @@ switches:
     number: 1616-15
     tags: playfield_active
 
+
+# Starting balls when virtual
 virtual_platform_start_active_switches:
   - s_trough_ball_1
   - s_trough_ball_2
   - s_trough_ball_3
 
+# Audio warning on coin door open/close
 event_player:
   s_high_voltage_status_active: [dj_high_voltage_enabled]
   s_high_voltage_status_inactive: [dj_high_voltage_disabled]

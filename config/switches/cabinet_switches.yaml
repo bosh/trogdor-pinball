@@ -1,0 +1,30 @@
+#config_version=6
+
+#Native cabinet switches on 0024 Cabinet IO board
+switches:
+## J1 Cabinet Left
+  s_start:
+    number: 0024-8
+    tags: start
+
+  s_mini_flipper:
+    number: 0024-10
+    tags: mini_flipper
+
+  s_left_flipper:
+    number: 0024-11
+    tags: left_flipper
+
+  s_tilt_bob:
+    number: 0024-15
+    tags: tilt_warning
+
+## J9 Cabinet Right
+  s_right_flipper:
+    number: 0024-16
+    tags: right_flipper
+  s_right_flipper_secondary:
+    number: 0024-17
+
+## J4 Coin Door
+  # Future: Buttons 1-4
