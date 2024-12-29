@@ -8,11 +8,11 @@ switches:
     tags: start
 
   s_mini_flipper:
-    number: 0024-10
+    number: 0024-11
     tags: mini_flipper
 
   s_left_flipper:
-    number: 0024-11
+    number: 0024-10
     tags: left_flipper
 
   s_tilt_bob:
