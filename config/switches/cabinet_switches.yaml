@@ -7,13 +7,12 @@ switches:
     number: 0024-8
     tags: start
 
-  s_mini_flipper:
-    number: 0024-11
-    tags: mini_flipper
-
   s_left_flipper:
     number: 0024-10
     tags: left_flipper
+  s_left_flipper_secondary:
+    number: 0024-11
+    tags: mini_flipper
 
   s_tilt_bob:
     number: 0024-15

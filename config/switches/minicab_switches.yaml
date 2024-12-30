@@ -3,11 +3,7 @@
 #Cabinet switches WHILE ON 3208!
 switches:
 ## J8
-  s_start:
-    number: 3208-4
-    tags: start
-
-  s_mini_flipper:
+  s_left_flipper_secondary:
     number: 3208-0
     tags: mini_flipper
 
@@ -15,15 +11,20 @@ switches:
     number: 3208-1
     tags: left_flipper
 
-  s_tilt_bob:
-    number: 850
-    platform: smart_virtual #Not supported on minicab
-    tags: tilt_warning
-
   s_right_flipper:
     number: 3208-3
     tags: right_flipper
 
+  s_start:
+    number: 3208-4
+    tags: start
+
+## Unsupported in minicab:
   s_right_flipper_secondary:
+    number: 850
+    platform: smart_virtual
+  s_tilt_bob:
     number: 851
-    platform: smart_virtual #Not supported on minicab
+    platform: smart_virtual
+    tags: tilt_warning
+

@@ -12,8 +12,8 @@ multiballs:
 combo_switches:
   cab_two_button_reset: # Press both cab buttons to max for 2.5s to trigger multiball
     events_when_both: mini_cabinet_multiball_qualified
-    switches_1: s_mini_flipper
-    switches_2: s_right_flipper
+    switches_1: s_left_flipper_secondary
+    switches_2: s_right_flipper_secondary
     hold_time: 2500ms
     max_offset_time: 200ms
 

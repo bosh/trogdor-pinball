@@ -34,7 +34,7 @@ event_player:
   mode_attract_will_stop:
     - music_stop_chiptune
 
-  s_mini_flipper_inactive:
+  s_left_flipper_secondary_inactive:
     - music_play_chiptune
-  s_mini_flipper_active:
+  s_left_flipper_secondary_active:
     - music_stop_chiptune

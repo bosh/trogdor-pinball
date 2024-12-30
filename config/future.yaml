@@ -68,13 +68,12 @@ autofire_coils:
     coil: c_upper_sling
     switch: s_upper_sling
 
-
 flippers:
   upper_flipper:
     main_coil: c_flipper_upper_full
     hold_coil: c_flipper_upper_hold
     eos_switch: s_upper_flipper_eos
-    activation_switch: #s_mini_flipper #TODO this is from real hardware
+    activation_switch: #s_left_flipper_secondary #TODO this is from real hardware
     enable_events: ball_started, enableAutofire #, machine_reset_phase_3 #P3 for testing
     disable_events: ball_will_end, service_mode_entered, disable_autofires
     use_eos: true

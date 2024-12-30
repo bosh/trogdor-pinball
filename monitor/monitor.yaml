@@ -583,7 +583,7 @@ switch:
     size: 0.04
     x: 0.27298850574712646
     y: 0.6928879310344828
-  s_mini_flipper:
+  s_left_flipper_secondary:
     x: 0.36637931034482757
     y: 0.9795258620689656
   s_plunger:

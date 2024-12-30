@@ -13,7 +13,6 @@ config:
   - coils.yaml
   - switches/config.yaml
   - spinners.yaml
-  - keyboard.yaml
   - autofires.yaml
   - ball_devices.yaml
   - modes.yaml
