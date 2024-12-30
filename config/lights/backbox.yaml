@@ -5,6 +5,22 @@
 # entire sections at once instead of individuall addressing
 
 lights:
+  # Test strip on neuron:
+  l_test_1:
+    number: neuron-4-1
+    type: rgb
+    tags: lights_bb, lights_bb_trogdor, lights_2a
+
+  l_test_2:
+    number: neuron-4-2
+    type: rgb
+    tags: lights_bb, lights_bb_flames, lights_2b
+
+  l_test_3:
+    number: neuron-4-3
+    type: rgb
+    tags: lights_bb, lights_bb_characters, lights_2a
+
   # Letters: TROGDOR! - note two O's and R's
   l_bb_trogdor_t_1:
     number: 7700
