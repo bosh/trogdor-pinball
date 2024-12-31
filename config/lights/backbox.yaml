@@ -134,3 +134,187 @@ lights:
     platform: smart_virtual
     type: rgb
     tags: lights_bb, lights_bb_gi, lights_gi
+
+  # full strip, top
+  l_bb_edge_top_1:
+    number: neuron-1-1
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a
+  l_bb_edge_top_2:
+    number: neuron-1-2
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b
+  l_bb_edge_top_3:
+    number: neuron-1-3
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a
+  l_bb_edge_top_4:
+    number: neuron-1-4
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b
+  l_bb_edge_top_5:
+    number: neuron-1-5
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a
+  l_bb_edge_top_6:
+    number: neuron-1-6
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b
+  l_bb_edge_top_7:
+    number: neuron-1-7
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a
+  l_bb_edge_top_8:
+    number: neuron-1-8
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b
+  l_bb_edge_top_9:
+    number: neuron-1-9
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a
+  l_bb_edge_top_10:
+    number: neuron-1-10
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b
+  l_bb_edge_top_11:
+    number: neuron-1-11
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a
+  l_bb_edge_top_12:
+    number: neuron-1-12
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b
+  l_bb_edge_top_13:
+    number: neuron-1-13
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a
+  l_bb_edge_top_14:
+    number: neuron-1-14
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b
+  l_bb_edge_top_15:
+    number: neuron-1-15
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a
+  l_bb_edge_top_16:
+    number: neuron-1-16
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b
+  l_bb_edge_top_17:
+    number: neuron-1-17
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a
+  l_bb_edge_top_18:
+    number: neuron-1-18
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b
+  l_bb_edge_top_19:
+    number: neuron-1-19
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a
+
+  l_bb_edge_right_1:
+    number: neuron-1-20
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b
+  l_bb_edge_right_2:
+    number: neuron-1-21
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a
+  l_bb_edge_right_3:
+    number: neuron-1-22
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b
+  l_bb_edge_right_4:
+    number: neuron-1-23
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a
+  l_bb_edge_right_5:
+    number: neuron-1-24
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b
+  l_bb_edge_right_6:
+    number: neuron-1-25
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a
+  l_bb_edge_right_7:
+    number: neuron-1-26
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b
+  l_bb_edge_right_8:
+    number: neuron-1-27
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a
+  l_bb_edge_right_9:
+    number: neuron-1-28
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b
+  l_bb_edge_right_10:
+    number: neuron-1-29
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a
+  l_bb_edge_right_11:
+    number: neuron-1-30
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b
+  l_bb_edge_right_12:
+    number: neuron-1-31
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a
+  l_bb_edge_right_13:
+    number: neuron-1-32
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b
+
+  l_bb_edge_left_1:
+    number: neuron-2-1
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b
+  l_bb_edge_left_2:
+    number: neuron-2-2
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a
+  l_bb_edge_left_3:
+    number: neuron-2-3
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b
+  l_bb_edge_left_4:
+    number: neuron-2-4
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a
+  l_bb_edge_left_5:
+    number: neuron-2-5
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b
+  l_bb_edge_left_6:
+    number: neuron-2-6
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a
+  l_bb_edge_left_7:
+    number: neuron-2-7
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b
+  l_bb_edge_left_8:
+    number: neuron-2-8
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a
+  l_bb_edge_left_9:
+    number: neuron-2-9
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b
+  l_bb_edge_left_10:
+    number: neuron-2-10
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a
+  l_bb_edge_left_11:
+    number: neuron-2-11
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b
+  l_bb_edge_left_12:
+    number: neuron-2-12
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a
+  l_bb_edge_left_13:
+    number: neuron-2-13
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b
