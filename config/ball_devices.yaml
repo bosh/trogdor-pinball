@@ -16,7 +16,7 @@ ball_devices:
     mechanical_eject: true
     eject_timeouts: 2800ms #TODO research making this dynamic so active multiballs trying to add 2+ balls don't slow down, but the default can be 4s+
     eject_coil: c_auto_plunger
-    player_controlled_eject_event: s_left_flipper_secondary_active
+#    player_controlled_eject_event: s_left_flipper_secondary_active #Reenable to allow minicab left secondary to eject
 
 playfields:
   playfield:
