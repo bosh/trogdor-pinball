@@ -16,31 +16,31 @@ script = ExtResource("1_ji27p")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 1600.0
-offset_bottom = 899.0
+offset_right = 2880.0
+offset_bottom = 864.0
 color = Color(0.549529, 0.0705812, 0.12824, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(802.483, 460.607)
+position = Vector2(1437.24, 429.096)
 rotation = 3.14159
-scale = Vector2(1.7774, 1.29238)
+scale = Vector2(3.23787, 1.27766)
 texture = ExtResource("2_cd05m")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 306.0
-offset_top = 192.0
-offset_right = 973.001
-offset_bottom = 687.0
-theme_override_font_sizes/font_size = 150
+offset_left = 278.0
+offset_top = 98.0
+offset_right = 955.0
+offset_bottom = 541.0
+theme_override_font_sizes/font_size = 200
 text = "TILT!"
 
 [node name="MPFVariable - Ball" type="Label" parent="."]
 layout_mode = 0
-offset_left = 106.0
-offset_top = 723.0
-offset_right = 406.0
-offset_bottom = 838.0
+offset_left = 300.0
+offset_top = 673.0
+offset_right = 600.0
+offset_bottom = 788.0
 theme = SubResource("Theme_kudbo")
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9

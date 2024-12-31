@@ -10,11 +10,11 @@ anchors_preset = 0
 script = ExtResource("1_grcpe")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(830, 584)
-scale = Vector2(1.32185, 1.32185)
+position = Vector2(1440, 432)
+scale = Vector2(2.95082, 1.24138)
 texture = ExtResource("2_quk18")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(799.5, 121.5)
+position = Vector2(1389, 745)
 scale = Vector2(0.973844, 0.972441)
 texture = ExtResource("3_08cu3")

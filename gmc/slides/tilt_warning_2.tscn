@@ -17,30 +17,30 @@ script = ExtResource("1_dhvjj")
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 1.0
-offset_right = 1600.0
-offset_bottom = 900.0
+offset_right = 2880.0
+offset_bottom = 864.0
 color = Color(0.654179, 0.339315, 0.0578699, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(801, 450.999)
-scale = Vector2(1.78385, 1.32416)
+position = Vector2(1440, 432.999)
+scale = Vector2(3.23777, 1.26912)
 texture = ExtResource("2_fl5c2")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 905.0
-offset_top = 603.0
-offset_right = 1572.0
-offset_bottom = 1098.0
+offset_left = 1872.0
+offset_top = 490.0
+offset_right = 2539.0
+offset_bottom = 985.0
 theme_override_font_sizes/font_size = 100
 text = "Hey, watch it!"
 
 [node name="MPFVariable - Ball" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1229.0
-offset_top = 90.0
-offset_right = 1624.0
-offset_bottom = 282.0
+offset_left = 2247.0
+offset_top = 69.0
+offset_right = 2642.0
+offset_bottom = 261.0
 theme = SubResource("Theme_y2dmn")
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9

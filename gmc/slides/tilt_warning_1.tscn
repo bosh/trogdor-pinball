@@ -17,13 +17,13 @@ script = ExtResource("1_nvv85")
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 1.0
-offset_right = 1600.0
-offset_bottom = 900.0
+offset_right = 2880.0
+offset_bottom = 864.0
 color = Color(0.943914, 0.529938, 0.203057, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(804, 455.001)
-scale = Vector2(1.78612, 1.32416)
+position = Vector2(1436.5, 432)
+scale = Vector2(3.23436, 1.263)
 texture = ExtResource("2_8a5e4")
 
 [node name="Label" type="Label" parent="."]
