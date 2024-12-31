@@ -14,7 +14,7 @@ ball_saves:
     timer_start_events: balldevice_bd_plunger_ball_eject_success, playfield_active
     auto_launch: true
     balls_to_save: 1
-    early_ball_save_events: s_left_outer_lane_active, s_right_outer_lane_active #TODO maybe these should be left_outlane_off_hit ?
+    early_ball_save_events: s_left_outer_lane_active #TODO maybe should be left_outlane_off_hit ?
 
   short:
     enable_events: enable_ball_save_short
@@ -24,7 +24,7 @@ ball_saves:
     grace_period: 250ms
     auto_launch: true
     balls_to_save: 1
-    early_ball_save_events: s_left_outer_lane_active, s_right_outer_lane_active
+    early_ball_save_events: s_left_outer_lane_active
 
   left_outlane_saver:
     enable_events: enable_ball_save_left_outlane_saver
