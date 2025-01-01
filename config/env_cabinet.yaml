@@ -3,3 +3,4 @@
 config:
   - config_base.yaml
   - switches/cabinet_switches.yaml
+  - lights/virtual_minicab.yaml

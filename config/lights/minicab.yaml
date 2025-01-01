@@ -1,29 +1,18 @@
 #config_version=6
 
-light_settings:
-  default_fade_ms: 40
-
-# led name can be anything you want, 
-# the number is the board its on playfield,
-# port 1, led 1 in the chain.
-# For the 2nd led, it would be number: playfield-1-2
-
 lights:
   # EXP String 2 - mini cab
-  l_mini_cab_mini:
+  l_mini_cab_left_secondary:
     number: exp_playfield-2-1
-    type: rgb
-    tags: lights_2a, lights_3a, lights_4x, lights_5x, lights_cab
+    tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_cab
 
   l_mini_cab_left:
     number: exp_playfield-2-2
-    type: rgb
-    tags: lights_2b, lights_3b, lights_4x, lights_5x, lights_cab
+    tags: lights_2b, lights_3b, lights_4b, lights_5b, lights_cab
 
   l_mini_cab_right:
     number: exp_playfield-2-3
-    type: rgb
-    tags: lights_2a, lights_3c, lights_4x, lights_5x, lights_cab
+    tags: lights_2a, lights_3c, lights_4a, lights_5a, lights_cab
 
 # Cobrapin Pop bumpers require manual channeling due to RGBW configuration
 # Don't add more lights after them in a chain
@@ -319,8 +308,8 @@ lights:
 #        number: exp_playfield-2-33-1 #+2 too high
 
   l_pop_ring_c_7:
-    tags: lights_2a, lights_3b, lights_4d, lights_5d, lights_pf, lights_pop_ring_c, lights_pops
     platform: smart_virtual
+    tags: lights_2a, lights_3b, lights_4d, lights_5d, lights_pf, lights_pop_ring_c, lights_pops
     # channels:
     #   red:
     #     number: exp_playfield-2-33-2 #+1
@@ -332,8 +321,8 @@ lights:
     #     number: exp_playfield-2-34-0 #-1
 
   l_pop_ring_c_8:
-    tags: lights_2b, lights_3c, lights_4d, lights_5e, lights_pf, lights_pop_ring_c, lights_pops
     platform: smart_virtual
+    tags: lights_2b, lights_3c, lights_4d, lights_5e, lights_pf, lights_pop_ring_c, lights_pops
     # channels:
     #   red:
     #     number: exp_playfield-2-35-1 #+4

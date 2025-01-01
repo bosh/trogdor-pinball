@@ -1,0 +1,115 @@
+#config_version=6
+# Load this instead of lights/minicab.yaml to provide virtual lights instead of physical ones
+# because these lights are useful as flipper status checks in the base light player config
+
+lights:
+  # EXP String 2 - mini cab
+  l_mini_cab_left_secondary:
+    platform: smart_virtual
+    tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_cab
+
+  l_mini_cab_left:
+    platform: smart_virtual
+    tags: lights_2b, lights_3b, lights_4b, lights_5b, lights_cab
+
+  l_mini_cab_right:
+    platform: smart_virtual
+    tags: lights_2a, lights_3c, lights_4c, lights_5c, lights_cab
+
+  l_pop_ring_a_1:
+    platform: smart_virtual
+    tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_pf, lights_pop_ring_a, lights_pops
+
+  l_pop_ring_a_2:
+    platform: smart_virtual
+    tags: lights_2b, lights_3b, lights_4a, lights_5e, lights_pf, lights_pop_ring_a, lights_pops
+
+  l_pop_ring_a_3:
+    platform: smart_virtual
+    tags: lights_2a, lights_3c, lights_4b, lights_5b, lights_pf, lights_pop_ring_a, lights_pops
+
+  l_pop_ring_a_4:
+    platform: smart_virtual
+    tags: lights_2b, lights_3a, lights_4b, lights_5e, lights_pf, lights_pop_ring_a, lights_pops
+
+  l_pop_ring_a_5:
+    platform: smart_virtual
+    tags: lights_2a, lights_3b, lights_4c, lights_5c, lights_pf, lights_pop_ring_a, lights_pops
+
+  l_pop_ring_a_6:
+    platform: smart_virtual
+    tags: lights_2b, lights_3c, lights_4c, lights_5e, lights_pf, lights_pop_ring_a, lights_pops
+
+  l_pop_ring_a_7:
+    platform: smart_virtual
+    tags: lights_2a, lights_3a, lights_4d, lights_5d, lights_pf, lights_pop_ring_a, lights_pops
+
+  l_pop_ring_a_8:
+    platform: smart_virtual
+    tags: lights_2b, lights_3b, lights_4d, lights_5e, lights_pf, lights_pop_ring_a, lights_pops
+
+  # Ring B
+  l_pop_ring_b_1:
+    platform: smart_virtual
+    tags: lights_2a, lights_3c, lights_4a, lights_5a, lights_pf, lights_pop_ring_b, lights_pops
+
+  l_pop_ring_b_2:
+    platform: smart_virtual
+    tags: lights_2b, lights_3a, lights_4a, lights_5e, lights_pf, lights_pop_ring_b, lights_pops
+
+  l_pop_ring_b_3:
+    platform: smart_virtual
+    tags: lights_2a, lights_3b, lights_4b, lights_5b, lights_pf, lights_pop_ring_b, lights_pops
+
+  l_pop_ring_b_4:
+    platform: smart_virtual
+    tags: lights_2b, lights_3c, lights_4b, lights_5e, lights_pf, lights_pop_ring_b, lights_pops
+
+  l_pop_ring_b_5:
+    platform: smart_virtual
+    tags: lights_2a, lights_3a, lights_4c, lights_5c, lights_pf, lights_pop_ring_b, lights_pops
+
+  l_pop_ring_b_6:
+    platform: smart_virtual
+    tags: lights_2b, lights_3b, lights_4c, lights_5e, lights_pf, lights_pop_ring_b, lights_pops
+
+  l_pop_ring_b_7:
+    platform: smart_virtual
+    tags: lights_2a, lights_3c, lights_4d, lights_5d, lights_pf, lights_pop_ring_b, lights_pops
+
+  l_pop_ring_b_8:
+    platform: smart_virtual
+    tags: lights_2b, lights_3a, lights_4d, lights_5e, lights_pf, lights_pop_ring_b, lights_pops
+
+  # Ring C
+  l_pop_ring_c_1:
+    platform: smart_virtual
+    tags: lights_2a, lights_3b, lights_4a, lights_5a, lights_pf, lights_pop_ring_c, lights_pops
+
+  l_pop_ring_c_2:
+    platform: smart_virtual
+    tags: lights_2b, lights_3c, lights_4a, lights_5e, lights_pf, lights_pop_ring_c, lights_pops
+
+  l_pop_ring_c_3:
+    platform: smart_virtual
+    tags: lights_2a, lights_3a, lights_4b, lights_5b, lights_pf, lights_pop_ring_c, lights_pops
+
+  l_pop_ring_c_4:
+    platform: smart_virtual
+    tags: lights_2b, lights_3b, lights_4b, lights_5e, lights_pf, lights_pop_ring_c, lights_pops
+
+  l_pop_ring_c_5:
+    platform: smart_virtual
+    tags: lights_2a, lights_3c, lights_4c, lights_5c, lights_pf, lights_pop_ring_c, lights_pops
+
+  l_pop_ring_c_6:
+    platform: smart_virtual
+    tags: lights_2b, lights_3a, lights_4c, lights_5e, lights_pf, lights_pop_ring_c, lights_pops
+
+  l_pop_ring_c_7:
+    platform: smart_virtual
+    tags: lights_2a, lights_3b, lights_4d, lights_5d, lights_pf, lights_pop_ring_c, lights_pops
+
+  l_pop_ring_c_8:
+    platform: smart_virtual
+    tags: lights_2b, lights_3c, lights_4d, lights_5e, lights_pf, lights_pop_ring_c, lights_pops

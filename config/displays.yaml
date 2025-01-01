@@ -1,5 +1,8 @@
 #config_version=6
 
+light_settings:
+  default_fade_ms: 40
+
 bcp:
   connections:
     local_display:

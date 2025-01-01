@@ -298,7 +298,7 @@ light:
   l_mini_cab_left:
     x: 0.3908045977011494
     y: 0.9601293103448276
-  l_mini_cab_mini:
+  l_mini_cab_left_secondary:
     x: 0.3649425287356322
     y: 0.959051724137931
   l_mini_cab_right:

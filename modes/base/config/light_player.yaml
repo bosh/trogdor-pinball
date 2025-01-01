@@ -112,13 +112,13 @@ light_player:
 
   #Minicab trough status LED tracking plunger switch and mini flip button
   "{device.switches.s_plunger.state == 0 and device.switches.s_left_flipper_secondary.state == 0}":
-    l_mini_cab_mini: off
+    l_mini_cab_left_secondary: off
   "{device.switches.s_plunger.state == 1 and device.switches.s_left_flipper_secondary.state == 0}":
-    l_mini_cab_mini: "009900"
+    l_mini_cab_left_secondary: "009900"
   "{device.switches.s_plunger.state == 0 and device.switches.s_left_flipper_secondary.state == 1}":
-    l_mini_cab_mini: 990000
+    l_mini_cab_left_secondary: 990000
   "{device.switches.s_plunger.state == 1 and device.switches.s_left_flipper_secondary.state == 1}":
-    l_mini_cab_mini: cccc00
+    l_mini_cab_left_secondary: cccc00
 
 
   # Trough status GI light
