@@ -3,7 +3,7 @@
 mode:
   start_events: mode_start_spinners_base
   stop_events: mode_stop_spinners_base, ball_will_end
-  priority: 1710 #TODO
+  priority: 1710
 
 variable_player:
   base_spinner_hit:
