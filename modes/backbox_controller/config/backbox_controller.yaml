@@ -3,14 +3,120 @@
 mode:
   start_events: mode_start_backbox_controller
   stop_events: mode_stop_backbox_controller
-  priority: 8888
-
-show_player:
-  start_backbox_simple_loop:
-    backbox_simple_loop:
-      key: backbox_loop
-      priority: 2
+  priority: 8000
 
 event_player:
   mode_backbox_controller_started:
     - start_backbox_simple_loop
+    - start_backbox_perimeter_stacked_8loop
+    - start_backbox_baseline_light
+
+  start_backbox_perimeter_stacked_3loop:
+    - start_perimeter_3loop_a
+    - start_perimeter_3loop_b
+    - start_perimeter_3loop_c
+
+  start_backbox_perimeter_stacked_8loop:
+    - start_perimeter_8loop_a
+    - start_perimeter_8loop_b
+    - start_perimeter_8loop_c
+    - start_perimeter_8loop_d
+    - start_perimeter_8loop_e
+    - start_perimeter_8loop_f
+    - start_perimeter_8loop_g
+    - start_perimeter_8loop_h
+    - start_perimeter_8loop_i
+    - start_perimeter_8loop_j
+    - start_perimeter_8loop_k
+    - start_perimeter_8loop_l
+    - start_perimeter_8loop_m
+
+show_player:
+  start_backbox_baseline_light:
+    perimeter_baseline:
+      priority: 1
+  start_backbox_simple_loop:
+    backbox_simple_loop:
+      key: backbox_loop
+      priority: 50
+
+  # 3 rotating points, spaced on corners (13, 19, 13)
+  start_perimeter_3loop_a:
+    perimeter_point_scan:
+      key: backbox_perimeter_1
+      priority: 31
+      show_tokens: {color: green}
+      sync_ms: 100
+      start_step: 1
+  start_perimeter_3loop_b:
+    perimeter_point_scan:
+      key: backbox_perimeter_2
+      priority: 32
+      show_tokens: {color: red}
+      sync_ms: 100
+      start_step: 14
+  start_perimeter_3loop_c:
+    perimeter_point_scan:
+      key: backbox_perimeter_3
+      priority: 33
+      show_tokens: {color: orange}
+      sync_ms: 100
+      start_step: 33
+
+  # 8 rotating points, spaced by 5
+  start_perimeter_8loop_a:
+    perimeter_point_scan:
+      key: backbox_perimeter_1
+      priority: 61
+      show_tokens: {color: purple}
+      sync_ms: 100
+      start_step: 1
+  start_perimeter_8loop_b:
+    perimeter_point_scan:
+      key: backbox_perimeter_2
+      priority: 62
+      show_tokens: {color: green}
+      sync_ms: 100
+      start_step: 6
+  start_perimeter_8loop_c:
+    perimeter_point_scan:
+      key: backbox_perimeter_3
+      priority: 63
+      show_tokens: {color: red}
+      sync_ms: 100
+      start_step: 11
+  start_perimeter_8loop_d:
+    perimeter_point_scan:
+      key: backbox_perimeter_4
+      priority: 64
+      show_tokens: {color: green}
+      sync_ms: 100
+      start_step: 16
+  start_perimeter_8loop_e:
+    perimeter_point_scan:
+      key: backbox_perimeter_5
+      priority: 65
+      show_tokens: {color: purple}
+      sync_ms: 100
+      start_step: 21
+  start_perimeter_8loop_f:
+    perimeter_point_scan:
+      key: backbox_perimeter_6
+      priority: 66
+      show_tokens: {color: green}
+      sync_ms: 100
+      start_step: 26
+  start_perimeter_8loop_g:
+    perimeter_point_scan:
+      key: backbox_perimeter_7
+      priority: 67
+      show_tokens: {color: red}
+      sync_ms: 100
+      start_step: 31
+  start_perimeter_8loop_h:
+    perimeter_point_scan:
+      key: backbox_perimeter_8
+      priority: 68
+      show_tokens: {color: green}
+      sync_ms: 100
+      start_step: 36

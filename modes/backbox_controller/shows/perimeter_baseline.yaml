@@ -1,0 +1,5 @@
+#show_version=6
+
+- duration: 5ms
+  lights:
+    lights_bb_edge: 555555

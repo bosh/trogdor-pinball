@@ -1,0 +1,274 @@
+#show_version=6
+
+# Params:
+# color - allows different progressive shows to use different colors when stacking
+
+- duration: 100ms
+  lights:
+    l_bb_edge_left_13: (color)
+    l_bb_edge_right_13: off
+    l_bb_edge_right_12: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_left_12: (color)
+    l_bb_edge_left_13: off
+    l_bb_edge_right_13: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_left_11: (color)
+    l_bb_edge_left_12: off
+    l_bb_edge_left_13: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_left_10: (color)
+    l_bb_edge_left_11: off
+    l_bb_edge_left_12: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_left_9: (color)
+    l_bb_edge_left_10: off
+    l_bb_edge_left_11: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_left_8: (color)
+    l_bb_edge_left_9: off
+    l_bb_edge_left_10: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_left_7: (color)
+    l_bb_edge_left_8: off
+    l_bb_edge_left_9: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_left_6: (color)
+    l_bb_edge_left_7: off
+    l_bb_edge_left_8: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_left_5: (color)
+    l_bb_edge_left_6: off
+    l_bb_edge_left_7: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_left_4: (color)
+    l_bb_edge_left_5: off
+    l_bb_edge_left_6: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_left_3: (color)
+    l_bb_edge_left_4: off
+    l_bb_edge_left_5: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_left_2: (color)
+    l_bb_edge_left_3: off
+    l_bb_edge_left_4: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_left_1: (color)
+    l_bb_edge_left_2: off
+    l_bb_edge_left_3: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_top_1: (color)
+    l_bb_edge_left_1: off
+    l_bb_edge_left_2: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_top_2: (color)
+    l_bb_edge_top_1: off
+    l_bb_edge_left_1: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_top_3: (color)
+    l_bb_edge_top_2: off
+    l_bb_edge_top_1: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_top_4: (color)
+    l_bb_edge_top_3: off
+    l_bb_edge_top_2: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_top_5: (color)
+    l_bb_edge_top_4: off
+    l_bb_edge_top_3: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_top_6: (color)
+    l_bb_edge_top_5: off
+    l_bb_edge_top_4: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_top_7: (color)
+    l_bb_edge_top_6: off
+    l_bb_edge_top_5: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_top_8: (color)
+    l_bb_edge_top_7: off
+    l_bb_edge_top_6: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_top_9: (color)
+    l_bb_edge_top_8: off
+    l_bb_edge_top_7: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_top_10: (color)
+    l_bb_edge_top_9: off
+    l_bb_edge_top_8: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_top_11: (color)
+    l_bb_edge_top_10: off
+    l_bb_edge_top_9: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_top_12: (color)
+    l_bb_edge_top_11: off
+    l_bb_edge_top_10: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_top_13: (color)
+    l_bb_edge_top_12: off
+    l_bb_edge_top_11: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_top_14: (color)
+    l_bb_edge_top_13: off
+    l_bb_edge_top_12: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_top_15: (color)
+    l_bb_edge_top_14: off
+    l_bb_edge_top_13: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_top_16: (color)
+    l_bb_edge_top_15: off
+    l_bb_edge_top_14: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_top_17: (color)
+    l_bb_edge_top_16: off
+    l_bb_edge_top_15: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_top_18: (color)
+    l_bb_edge_top_17: off
+    l_bb_edge_top_16: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_top_19: (color)
+    l_bb_edge_top_18: off
+    l_bb_edge_top_17: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_right_1: (color)
+    l_bb_edge_top_19: off
+    l_bb_edge_top_18: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_right_2: (color)
+    l_bb_edge_right_1: off
+    l_bb_edge_top_19: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_right_3: (color)
+    l_bb_edge_right_2: off
+    l_bb_edge_right_1: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_right_4: (color)
+    l_bb_edge_right_3: off
+    l_bb_edge_right_2: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_right_5: (color)
+    l_bb_edge_right_4: off
+    l_bb_edge_right_3: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_right_6: (color)
+    l_bb_edge_right_5: off
+    l_bb_edge_right_4: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_right_7: (color)
+    l_bb_edge_right_6: off
+    l_bb_edge_right_5: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_right_8: (color)
+    l_bb_edge_right_7: off
+    l_bb_edge_right_6: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_right_9: (color)
+    l_bb_edge_right_8: off
+    l_bb_edge_right_7: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_right_10: (color)
+    l_bb_edge_right_9: off
+    l_bb_edge_right_8: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_right_11: (color)
+    l_bb_edge_right_10: off
+    l_bb_edge_right_9: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_right_12: (color)
+    l_bb_edge_right_11: off
+    l_bb_edge_right_10: stop
+
+- duration: 100ms
+  lights:
+    l_bb_edge_right_13: (color)
+    l_bb_edge_right_12: off
+    l_bb_edge_right_11: stop
