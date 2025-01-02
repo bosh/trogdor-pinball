@@ -28,19 +28,19 @@ texture = ExtResource("2_8a5e4")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 924.0
-offset_top = 612.0
-offset_right = 1591.0
-offset_bottom = 1107.0
+offset_left = 2097.0
+offset_top = 575.0
+offset_right = 2764.0
+offset_bottom = 1070.0
 theme_override_font_sizes/font_size = 100
 text = "Tilt Warning!"
 
 [node name="MPFVariable - Ball" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1229.0
-offset_top = 90.0
-offset_right = 1624.0
-offset_bottom = 282.0
+offset_left = 2234.0
+offset_top = 106.0
+offset_right = 2629.0
+offset_bottom = 298.0
 theme = SubResource("Theme_h7at2")
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
