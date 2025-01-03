@@ -25,3 +25,33 @@ fast:
         model: FP-EXP-2000
       exp_playfield:
         model: FP-EXP-0071
+
+  aud:
+    port: auto
+    main_amp_enabled: true
+    sub_amp_enabled: true
+    headphones_amp_enabled: true
+
+    main_steps: 20
+    sub_steps: 20
+    headphones_steps: 20
+
+    default_main_volume: 32
+    default_sub_volume: 32
+    default_headphones_volume: 12
+
+    persist_volume_settings: true
+
+    max_hw_volume_main: 63
+    max_hw_volume_sub: 63
+    max_hw_volume_headphones: 63
+
+    main_levels_list: None
+    sub_levels_list: None
+    headphones_levels_list: None
+
+    link_sub_to_main: true
+    link_headphones_to_main: false
+
+    headphones_level: headphones
+    mute_speakers_with_headphones: true
