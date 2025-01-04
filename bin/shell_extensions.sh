@@ -22,3 +22,5 @@ alias tmediax='~/workspace/pinball-media/pinball-media.rb clean trogdor'
 
 alias mpftest="python -m unittest discover mpf/tests"
 alias mpfpenv=". ~/mpf80env/bin/activate"
+
+alias prod="mpf both -t -g gmc -G ~/Desktop/Godot_v4.3-stable_linux.x86_64"
