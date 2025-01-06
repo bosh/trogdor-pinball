@@ -1,0 +1,29 @@
+#show_version=6
+
+- duration: 100ms
+  coils:
+    c_trough_eject: pulse
+- duration: 100ms
+  coils:
+    c_flipper_left_full: pulse
+- duration: 100ms
+  coils:
+    c_flipper_right_full: pulse
+- duration: 100ms
+  coils:
+    c_saver_post: pulse
+- duration: 100ms
+  coils:
+    c_auto_plunger: pulse
+- duration: 100ms
+  coils:
+    c_left_sling: pulse
+- duration: 100ms
+  coils:
+    c_right_sling: pulse
+- duration: 100ms
+  coils:
+    c_gate_left: pulse
+- duration: 100ms
+  coils:
+    c_gate_right: pulse

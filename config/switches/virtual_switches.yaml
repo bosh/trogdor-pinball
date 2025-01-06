@@ -84,6 +84,10 @@ switches:
     platform: smart_virtual
     number: 951
 
+  vswitch_test_coils:
+    platform: smart_virtual
+    number: 999
+
 
 event_player:
   vswitch_enable_left_cbg_active: [enable_left_controlled_ball_gate]
@@ -115,6 +119,10 @@ coil_player:
     c_auto_plunger:
       pulse_ms: 36
 
+show_player:
+  vswitch_test_coils_active:
+    coil_cycle_test:
+      loops: 1
 
 plugins: switch_player
 switch_player:

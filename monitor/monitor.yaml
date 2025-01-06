@@ -920,6 +920,9 @@ switch:
   vswitch_reset_inlane_detector:
     x: 0.029177718832891244
     y: 0.764920424403183
+  vswitch_test_coils:
+    x: 0.016030174446016034
+    y: 0.22065063649222066
   vswitch_toggle_slings_dead:
     x: 0.9698275862068966
     y: 0.6487068965517242
