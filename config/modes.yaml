@@ -22,5 +22,6 @@ modes:
   - slots_controller
   - tilt #builtin
   - queue_end_quip
+  - service #builtin
 
   # and dont forget the modes in generated_modes.yaml

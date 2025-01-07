@@ -25,5 +25,19 @@ switches:
   s_right_flipper_secondary:
     number: 0024-17
 
-## J4 Coin Door
-  # Future: Buttons 1-4
+## J4 Coin Door # NOTE: not actually connected yet
+  s_service_door_open: #On the second coin door switch output
+    number: 0024-0
+    tags: service_door_open
+  s_coin_door_service_1:
+    number: 0024-1
+    tags: service_esc
+  s_coin_door_service_2:
+    number: 0024-2
+    tags: service_down
+  s_coin_door_service_3:
+    number: 0024-3
+    tags: service_up
+  s_coin_door_service_4:
+    number: 0024-4
+    tags: service_enter
