@@ -62,6 +62,12 @@ switches:
   s_trough_ball_5:
     number: 3208-21
 
+## J8
+  s_spinner_left:
+    number: 3208-7
+    tags: playfield_active
+
+
 #IO 1616
 ## J7
   s_burn_standup:
@@ -79,10 +85,6 @@ switches:
   s_burn_n:
     number: 1616-0
     tags: playfield_active
-  s_spinner_left:
-    number: 1616-15
-    tags: playfield_active
-
 
 # Starting balls when virtual
 virtual_platform_start_active_switches:

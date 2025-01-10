@@ -56,7 +56,7 @@ coils:
     default_pulse_ms: 24
     default_hold_power: 0.375
   c_saver_post:
-    number: 1616-7
+    number: 1616-15
     allow_enable: true
     default_pulse_ms: 20
     default_hold_power: .375
