@@ -85,9 +85,9 @@ light_player:
     vlight_ball_3: "ff00ff"
 
   # High voltage status warn LED
-  "{device.switches.s_high_voltage_status.state == 0}":
+  "{device.switches.s_coin_door.state == 0}":
     l_pf_1: eee000
-  "{device.switches.s_high_voltage_status.state == 1}":
+  "{device.switches.s_coin_door.state == 1}":
     l_pf_1: ff0000
 
   #Minicab left status LED tracking button and EOS

@@ -2,7 +2,7 @@
 
 #Cabinet switches WHILE ON 3208!
 switches:
-## J8
+## 3208:J8
   s_left_flipper_secondary:
     number: 3208-0
     tags: mini_flipper
@@ -28,3 +28,6 @@ switches:
     platform: smart_virtual
     tags: tilt_warning
 
+## 3208:J3
+  s_coin_door:
+    number: 3208-8

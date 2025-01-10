@@ -26,7 +26,7 @@ switches:
     number: 0024-17
 
 ## J4 Coin Door # NOTE: not actually connected yet
-  s_service_door_open: #On the second coin door switch output
+  s_coin_door:
     number: 0024-0
     tags: service_door_open
   s_coin_door_service_1:

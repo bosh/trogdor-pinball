@@ -23,8 +23,8 @@ switches:
     number: 3208-31
 
 ## J3
-  s_high_voltage_status:
-    number: 3208-8
+  # s_coin_door:
+  #   number: 3208-8 # Disconnect provided on J3 header, but declared in cabinet or minicab switch configs
 
   s_left_outer_lane:
     number: 3208-11
@@ -92,5 +92,5 @@ virtual_platform_start_active_switches:
 
 # Audio warning on coin door open/close
 event_player:
-  s_high_voltage_status_active: [dj_high_voltage_enabled]
-  s_high_voltage_status_inactive: [dj_high_voltage_disabled]
+  s_coin_door_active: [dj_high_voltage_enabled]
+  s_coin_door_inactive: [dj_high_voltage_disabled]
