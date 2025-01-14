@@ -1,5 +1,11 @@
 #config_version=6
 
+playfields:
+  playfield:
+    default_source_device: bd_plunger
+    tags: default
+    enable_ball_search: settings.ball_search_enabled
+
 ball_devices:
   bd_trough:
     ball_switches: s_trough_ball_1, s_trough_ball_2, s_trough_ball_3, s_trough_ball_4, s_trough_ball_5
@@ -18,8 +24,22 @@ ball_devices:
     eject_coil: c_auto_plunger
 #    player_controlled_eject_event: s_left_flipper_secondary_active #Reenable to allow minicab left secondary to eject
 
-playfields:
-  playfield:
-    default_source_device: bd_plunger
-    tags: default
-    enable_ball_search: settings.ball_search_enabled
+  bd_vuk:
+    ball_switches: s_vuk_presence
+    eject_coil: c_vuk
+    eject_timeouts: 1s
+
+drop_targets:
+  dt_left:
+    switch: s_drop_bank_left
+  dt_center:
+    switch: s_drop_bank_center
+  dt_right:
+    switch: s_drop_bank_right
+
+drop_target_banks:
+  slots_target_bank:
+    drop_targets: dt_left, dt_center, dt_right
+    reset_coils: c_slot_bank_reset
+    reset_events: drop_target_bank_reset_slots, machine_reset_phase_3, ball_starting #TODO do I really need to declare the default pair?
+    reset_on_complete: #No

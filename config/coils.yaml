@@ -7,7 +7,8 @@
 
 coils:
 
-#Board 3208 
+#Board 3208
+  # J4
   c_auto_plunger:
     number: 3208-0
     default_pulse_ms: settings.auto_plunger_coil_power
@@ -47,6 +48,7 @@ coils:
     default_pulse_ms: settings.flipper_main_coil_power
 
 # 1616
+  # J3
   c_gate_left:
     number: 1616-0
     default_pulse_ms: 24
@@ -55,6 +57,47 @@ coils:
     number: 1616-1
     default_pulse_ms: 24
     default_hold_power: 0.375
+
+  c_pop_right:
+    number: 1616-4
+  c_pop_center:
+    number: 1616-5
+  c_pop_left:
+    number: 1616-6
+
+
+  # J4
+  c_orbit_diverter_full:
+    number: 1616-8
+    default_pulse_ms: 25
+
+  c_orbit_diverter_hold:
+    number: 1616-9
+    default_hold_power: .5
+    allow_enable: true
+
+  c_flipper_upper_full:
+    number: 1616-10
+    default_pulse_ms: 25
+
+  c_flipper_upper_hold:
+    number: 1616-11
+    default_hold_power: .5
+    allow_enable: true
+
+  c_vuk:
+    number: 1616-12
+    default_pulse_ms: 20 #TODO dial in
+
+  c_slot_bank_reset:
+    number: 1616-13
+
+  c_right_outlane_post:
+    number: 1616-14
+    allow_enable: true
+    default_pulse_ms: 20
+    default_hold_power: .375
+
   c_saver_post:
     number: 1616-15
     allow_enable: true
@@ -62,11 +105,12 @@ coils:
     default_hold_power: .375
 
 # 0024 drivers for LEDs
+  # J1
   c_start_driver:
     number: 0024-2
     allow_enable: true
 
-lights:
+lights: #TODO move this to an env-specific light
   l_start:
     number: c_start_driver
     platform: drivers

@@ -3,41 +3,14 @@
 # Switches that exist in the plan but are not yet physically installed
 
 switches:
-  #For coils
-  s_pop_left:
-    number: 801
-    platform: smart_virtual
-  s_pop_right:
-    number: 802
-    platform: smart_virtual
-  s_pop_center:
-    number: 803
-    platform: smart_virtual
-
-  s_vuk_presence:
-    number: 804
-    platform: smart_virtual
-    type: 'NC'
-
-  s_upper_sling:
+  s_upper_sling: #TODO likely remove
     number: 805
     platform: smart_virtual
 
-  s_upper_flipper_eos:
-    number: 806
-    platform: smart_virtual
-    type: 'NC' #maybe nc
-
   #Targets
-  s_drop_left_down:
+  s_drop_left_down: #TODO likely remove
     number: 807
     platform: smart_virtual
-
-  #Spinners
-  s_spinner_right:
-    number: 813
-    platform: smart_virtual
-    tags: playfield_active
 
   #Passthrough optos
   s_left_orbit:
@@ -69,16 +42,6 @@ switches:
     number: 820
     platform: smart_virtual
     tags: playfield_active
-
-  s_drop_bank_left:
-    number: 821
-    platform: smart_virtual
-  s_drop_bank_center:
-    number: 822
-    platform: smart_virtual
-  s_drop_bank_right:
-    number: 823
-    platform: smart_virtual
 
   s_captive_ball_target:
     number: 824

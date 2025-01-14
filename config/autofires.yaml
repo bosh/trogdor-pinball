@@ -14,6 +14,20 @@ autofire_coils:
     enable_events: ball_started, enable_slings
     disable_events: ball_will_end, service_mode_entered, disable_slings
 
+  pop_left:
+    coil: c_pop_left
+    switch: s_pop_left
+  pop_right:
+    coil: c_pop_right
+    switch: s_pop_right
+  pop_center:
+    coil: c_pop_center
+    switch: s_pop_center
+
+  slingshot_upper: #TODO likely remove
+    coil: c_upper_sling
+    switch: s_upper_sling
+
 #Flippers are just complex autofires
 flippers:
   right_flipper:
@@ -30,7 +44,24 @@ flippers:
     hold_coil: c_flipper_left_hold
     activation_switch: s_left_flipper
     eos_switch: s_left_flipper_eos
-    enable_events: ball_started, enableAutofire #, machine_reset_phase_3
+    enable_events: ball_started, enableAutofire
     disable_events: ball_will_end, service_mode_entered, disable_autofires
     use_eos: true
 
+  upper_flipper: #left flipper rotation
+    main_coil: c_flipper_upper_full
+    hold_coil: c_flipper_upper_hold
+    eos_switch: s_upper_flipper_eos
+    activation_switch: s_left_flipper_secondary
+    enable_events: ball_started, enableAutofire
+    disable_events: ball_will_end, service_mode_entered, disable_autofires
+    use_eos: true
+
+  diverter_as_flipper: #upper left, right flipper rotation
+    main_coil: c_orbit_diverter_full
+    hold_coil: c_orbit_diverter_hold
+    eos_switch: s_orbit_diverter_eos
+    activation_switch: s_right_flipper_secondary #TODO shouldnt trigger with right secondary in real use
+    enable_events: ball_started, enableAutofire
+    disable_events: ball_will_end, service_mode_entered, disable_autofires
+    use_eos: true

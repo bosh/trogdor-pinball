@@ -5,90 +5,14 @@
 #   switches are in switches dir
 
 coils:
-  c_pop_left:
-    number: 3001
-    platform: smart_virtual
-  c_pop_right:
-    number: 3002
-    platform: smart_virtual
-  c_pop_center:
-    number: 3003
-    platform: smart_virtual
-
-  c_vuk:
-    number: 3004
-    platform: smart_virtual
-    default_pulse_ms: 20 #TODO dial in
-
-  c_upper_sling:
+  c_upper_sling: #TODO likely remove
     number: 3005
     platform: smart_virtual
 
-  c_drop_left_reset:
+  c_drop_left_reset: #TODO likely remove
     number: 3008
     platform: smart_virtual
-  c_drop_left_knockdown:
-    default_pulse_ms: 10 #TODO dial in
+  c_drop_left_knockdown: #TODO likely remove
+    default_pulse_ms: 10
     number: 3009
     platform: smart_virtual
-
-  c_flipper_upper_hold:
-    number: 3011
-    platform: smart_virtual
-    default_hold_power: .5
-    allow_enable: true
-
-  c_flipper_upper_full:
-    number: 3012
-    platform: smart_virtual
-    default_pulse_ms: 25
-
-  c_slot_bank_reset:
-    number: 3013
-    platform: smart_virtual
-
-ball_devices:
-  bd_vuk:
-    ball_switches: s_vuk_presence
-    eject_coil: c_vuk
-    eject_timeouts: 1s
-
-autofire_coils:
-  pop_left:
-    coil: c_pop_left
-    switch: s_pop_left
-  pop_right:
-    coil: c_pop_right
-    switch: s_pop_right
-  pop_center:
-    coil: c_pop_center
-    switch: s_pop_center
-
-  slingshot_upper:
-    coil: c_upper_sling
-    switch: s_upper_sling
-
-flippers:
-  upper_flipper:
-    main_coil: c_flipper_upper_full
-    hold_coil: c_flipper_upper_hold
-    eos_switch: s_upper_flipper_eos
-    activation_switch: #s_left_flipper_secondary #TODO this is from real hardware
-    enable_events: ball_started, enableAutofire #, machine_reset_phase_3 #P3 for testing
-    disable_events: ball_will_end, service_mode_entered, disable_autofires
-    use_eos: true
-
-drop_targets:
-  dt_left:
-    switch: s_drop_bank_left
-  dt_center:
-    switch: s_drop_bank_center
-  dt_right:
-    switch: s_drop_bank_right
-
-drop_target_banks:
-  slots_target_bank:
-    drop_targets: dt_left, dt_center, dt_right
-    reset_coils: c_slot_bank_reset
-    reset_events: drop_target_bank_reset_slots, machine_reset_phase_3, ball_starting #TODO do I really need to declare the default pair?
-    reset_on_complete: #No
