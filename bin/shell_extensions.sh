@@ -14,7 +14,6 @@ alias vsnake="clear; t; mpfm game -btX -c env_cabinet.yaml" #Used by windows tas
 
 #'both' requires godot executable on the path
 alias vboth="clear; t; mpfm both -g gmc -tX"
-alias prod="clear; t; tmedia; mpf both -g gmc -t -c env_cabinet.yaml"
 alias minilive="clear; t; mpf both -g gmc -t -c env_minicab.yaml"
 
 alias tmedia='~/workspace/pinball-media/pinball-media.rb install trogdor'
@@ -24,3 +23,5 @@ alias mpftest="python -m unittest discover mpf/tests"
 alias mpfpenv=". ~/mpf80env/bin/activate"
 
 alias tplay="t; godot --path gmc/"
+alias wprod="clear; t; mpf both -t -c env_cabinet.yaml" #windows has godot on the path
+alias prod="clear; t; mpf both -t -g gmc -G ~/Desktop/Godot_v4.3-stable_linux.x86_64 -c env_cabinet.yaml" #linux has godot on the desktop for now
