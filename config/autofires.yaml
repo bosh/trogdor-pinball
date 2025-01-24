@@ -24,10 +24,6 @@ autofire_coils:
     coil: c_pop_center
     switch: s_pop_center
 
-  slingshot_upper: #TODO likely remove
-    coil: c_upper_sling
-    switch: s_upper_sling
-
 #Flippers are just complex autofires
 flippers:
   right_flipper:

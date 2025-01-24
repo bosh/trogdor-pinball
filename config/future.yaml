@@ -5,10 +5,6 @@
 #   switches are in switches dir
 
 coils:
-  c_upper_sling: #TODO likely remove
-    number: 3005
-    platform: smart_virtual
-
   c_drop_left_reset: #TODO likely remove
     number: 3008
     platform: smart_virtual

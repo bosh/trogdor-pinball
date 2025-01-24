@@ -3,10 +3,6 @@
 # Switches that exist in the plan but are not yet physically installed
 
 switches:
-  s_upper_sling: #TODO likely remove
-    number: 805
-    platform: smart_virtual
-
   #Targets
   s_drop_left_down: #TODO likely remove
     number: 807
