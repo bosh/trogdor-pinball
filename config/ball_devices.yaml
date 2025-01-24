@@ -30,16 +30,22 @@ ball_devices:
     eject_timeouts: 1s
 
 drop_targets:
-  dt_left:
+  dt_slots_left:
     switch: s_drop_bank_left
-  dt_center:
+    # knockdown_coil: c_slot_bank_left_drop #not hooked up
+    knockdown_events: knock_slots_left_down
+  dt_slots_center:
     switch: s_drop_bank_center
-  dt_right:
+    knockdown_coil: c_slot_bank_center_drop
+    knockdown_events: knock_slots_center_down
+  dt_slots_right:
     switch: s_drop_bank_right
+    knockdown_coil: c_slot_bank_right_drop
+    knockdown_events: knock_slots_right_down
 
 drop_target_banks:
   slots_target_bank:
-    drop_targets: dt_left, dt_center, dt_right
+    drop_targets: dt_slots_left, dt_slots_center, dt_slots_right
     reset_coils: c_slot_bank_reset
     reset_events: drop_target_bank_reset_slots, machine_reset_phase_3, ball_starting #TODO do I really need to declare the default pair?
     reset_on_complete: #No

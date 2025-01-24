@@ -62,13 +62,13 @@ diverter:
     x: 0.44827586206896547
     y: 0.9828326605904931
 drop_target:
-  dt_center:
+  dt_slots_center:
     x: 0.3994252873563218
     y: 0.23383620689655174
-  dt_left:
+  dt_slots_left:
     x: 0.38074712643678166
     y: 0.2553879310344828
-  dt_right:
+  dt_slots_right:
     x: 0.4181034482758621
     y: 0.2144396551724138
 drop_target_bank:

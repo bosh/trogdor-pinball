@@ -65,6 +65,14 @@ coils:
   c_pop_left:
     number: 1616-6
 
+  c_slot_bank_reset:
+    number: 1616-7 #temp moved from blown up 13
+  c_slot_bank_right_drop:
+    number: 1616-2
+  c_slot_bank_center_drop:
+    number: 1616-3
+#  c_slot_bank_left_drop:
+#    number: 1616-x #temp unavailable, maybe used at position 7 in the end
 
   # J4
   c_orbit_diverter_full:
@@ -88,9 +96,6 @@ coils:
   c_vuk:
     number: 1616-12
     default_pulse_ms: 20 #TODO dial in
-
-  c_slot_bank_reset:
-    number: 1616-13
 
   c_right_outlane_post:
     number: 1616-14
