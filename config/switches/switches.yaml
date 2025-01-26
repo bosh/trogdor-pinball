@@ -80,6 +80,9 @@ switches:
     number: 3208-7
     tags: playfield_active
 
+  s_proximity_test:
+    number: 3208-8
+    tags: playfield_active
 
 
 #IO 1616
@@ -114,10 +117,13 @@ switches:
 
   s_drop_bank_right:
     number: 1616-13
+    type: 'NC'
   s_drop_bank_center:
     number: 1616-14
+    type: 'NC'
   s_drop_bank_left:
     number: 1616-15
+    type: 'NC'
 
 # Starting balls when virtual
 virtual_platform_start_active_switches:
