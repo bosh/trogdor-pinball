@@ -58,9 +58,15 @@ diverter:
   div_right_controlled_ball_gate_alternative_profile:
     x: 0.6206896551724138
     y: 0.0636604774535809
+  div_right_outlane_post:
+    x: 0.8271954674220964
+    y: 0.8271954674220964
   div_saver_post:
     x: 0.44827586206896547
     y: 0.9828326605904931
+  orbit_diverter:
+    x: 0.26817752596789424
+    y: 0.12889518413597736
 drop_target:
   dt_slots_center:
     x: 0.3994252873563218
