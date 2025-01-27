@@ -67,6 +67,7 @@ coils:
 
   c_slot_bank_reset:
     number: 1616-7 #temp moved from blown up 13
+    default_pulse_ms: 30
   c_slot_bank_right_drop:
     number: 1616-2
   c_slot_bank_center_drop:
@@ -77,7 +78,10 @@ coils:
   # J4
   c_orbit_diverter_full:
     number: 1616-8
-    default_pulse_ms: 25
+    default_pulse_ms: 35
+    allow_enable: true
+    default_hold_power: .25
+
 
   c_orbit_diverter_hold:
     number: 1616-9
@@ -95,7 +99,7 @@ coils:
 
   c_vuk:
     number: 1616-12
-    default_pulse_ms: 20 #TODO dial in
+    default_pulse_ms: 32
 
   c_right_outlane_post:
     number: 1616-14
@@ -121,11 +125,11 @@ lights: #TODO move this to an env-specific light
     platform: drivers
     type: r
 
-dual_wound_coils:
-  c_orbit_diverter_dual_coil:
-    hold_coil: c_orbit_diverter_hold
-    main_coil: c_orbit_diverter_full
-    eos_switch: s_orbit_diverter_eos
+#dual_wound_coils:
+#  c_orbit_diverter_dual_coil:
+#    hold_coil: c_orbit_diverter_hold
+#    main_coil: c_orbit_diverter_full
+#    eos_switch: s_orbit_diverter_eos
 
 diverters:
   orbit_diverter:
@@ -133,7 +137,7 @@ diverters:
     deactivate_events: deactivate_orbit_diverter, disable_orbit_diverter, ball_ending
     enable_events: enable_orbit_diverter
     disable_events: disable_orbit_diverter, ball_ending
-    activation_coil: c_orbit_diverter_dual_coil
+    activation_coil: c_orbit_diverter_full #c_orbit_diverter_dual_coil
     activation_switches:
     activation_time: 6s
     feeder_devices: bd_plunger, playfield

@@ -51,13 +51,4 @@ flippers:
     activation_switch: s_left_flipper_secondary
     enable_events: ball_started, enableAutofire
     disable_events: ball_will_end, service_mode_entered, disable_autofires
-    use_eos: true
-
-  diverter_as_flipper: #upper left, right flipper rotation
-    main_coil: c_orbit_diverter_full
-    hold_coil: c_orbit_diverter_hold
-    eos_switch: s_orbit_diverter_eos
-    activation_switch: s_right_flipper_secondary #TODO shouldnt trigger with right secondary in real use
-    enable_events: ball_started, enableAutofire
-    disable_events: ball_will_end, service_mode_entered, disable_autofires
-    use_eos: true
+#    use_eos: true
