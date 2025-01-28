@@ -76,6 +76,11 @@ switches:
     number: 3208-1
     tags: playfield_active
 
+  s_wireform_right_top:
+    number: 3208-2
+    type: 'NC'
+    tags: playfield_active
+
   s_spinner_left:
     number: 3208-7
     tags: playfield_active

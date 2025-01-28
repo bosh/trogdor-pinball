@@ -34,10 +34,6 @@ switches:
     number: 819
     platform: smart_virtual
     tags: playfield_active
-  s_wireform_right_top:
-    number: 820
-    platform: smart_virtual
-    tags: playfield_active
 
   s_captive_ball_target:
     number: 824

@@ -60,10 +60,13 @@ coils:
 
   c_pop_right:
     number: 1616-4
+    default_pulse_ms: settings.pop_bumper_power
   c_pop_center:
     number: 1616-5
+    default_pulse_ms: settings.pop_bumper_power
   c_pop_left:
     number: 1616-6
+    default_pulse_ms: settings.pop_bumper_power
 
   c_slot_bank_reset:
     number: 1616-7 #temp moved from blown up 13

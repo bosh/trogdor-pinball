@@ -74,3 +74,17 @@ settings:
       32: '32 ms'
       36: '36 ms'
       40: '40 ms'
+
+  pop_bumper_power:
+    sort: 157
+    label: Pop bumper power
+    key_type: int
+    default: 14
+    values:
+      8: '8 ms'
+      11: '11 ms'
+      14: '14 ms (default)'
+      18: '18 ms'
+      20: '20 ms'
+      25: '25 ms'
+      30: '30 ms'
