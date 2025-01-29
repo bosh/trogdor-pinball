@@ -101,3 +101,29 @@ settings:
       20: '20 ms'
       25: '25 ms'
       30: '30 ms'
+
+  gate_power:
+    sort: 159
+    label: Controlled ball gate pulse power
+    key_type: int
+    default: 24
+    values:
+      12: '12 ms'
+      16: '16 ms'
+      20: '20 ms'
+      24: '24 ms (default)'
+      30: '30 ms'
+      35: '35 ms'
+
+  diverter_flipper_power:
+    sort: 160
+    label: Upper diverter (flipper) pulse power
+    key_type: int
+    default: 25
+    values:
+      12: '12 ms'
+      15: '15 ms'
+      20: '20 ms'
+      25: '25 ms (default)'
+      30: '30 ms'
+      35: '35 ms'

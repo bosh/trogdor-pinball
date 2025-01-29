@@ -50,11 +50,11 @@ coils:
   # J3
   c_gate_left:
     number: 1616-0
-    default_pulse_ms: 24
+    default_pulse_ms: settings.gate_power
     default_hold_power: 0.375
   c_gate_right:
     number: 1616-1
-    default_pulse_ms: 24
+    default_pulse_ms: settings.gate_power
     default_hold_power: 0.375
 
   c_pop_right:
@@ -80,9 +80,9 @@ coils:
   # J4
   c_orbit_diverter_full:
     number: 1616-8
-    default_pulse_ms: 35
+    default_pulse_ms: settings.diverter_flipper_power
     allow_enable: true
-    default_hold_power: .25
+    default_hold_power: .125
 
 
   c_orbit_diverter_hold:
@@ -127,7 +127,7 @@ lights: #TODO move this to an env-specific light
     platform: drivers
     type: r
 
-#dual_wound_coils:
+#dual_wound_coils: #TODO fix mpf crash when using dual wound coil
 #  c_orbit_diverter_dual_coil:
 #    hold_coil: c_orbit_diverter_hold
 #    main_coil: c_orbit_diverter_full
