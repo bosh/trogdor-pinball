@@ -69,11 +69,14 @@ coils:
 
   c_slot_bank_reset:
     number: 1616-7 #temp moved from blown up 13
-    default_pulse_ms: 30
+    default_pulse_ms: settings.slot_bank_reset_power
+
   c_slot_bank_right_drop:
     number: 1616-2
+    default_pulse_ms: settings.slot_bank_knockdown_power
   c_slot_bank_center_drop:
     number: 1616-3
+    default_pulse_ms: settings.slot_bank_knockdown_power
 #  c_slot_bank_left_drop:
 #    number: 1616-x #temp unavailable, maybe used at position 7 in the end
 
@@ -84,7 +87,6 @@ coils:
     allow_enable: true
     default_hold_power: .125
 
-
   c_orbit_diverter_hold:
     number: 1616-9
     default_hold_power: .5
@@ -92,7 +94,7 @@ coils:
 
   c_flipper_upper_full:
     number: 1616-10
-    default_pulse_ms: 25
+    default_pulse_ms: settings.upper_flipper_main_coil_power
 
   c_flipper_upper_hold:
     number: 1616-11
@@ -101,18 +103,18 @@ coils:
 
   c_vuk:
     number: 1616-12
-    default_pulse_ms: 32
+    default_pulse_ms: settings.vuk_power
 
   c_right_outlane_post:
     number: 1616-14
     allow_enable: true
-    default_pulse_ms: 20
+    default_pulse_ms: settings.outlane_post_power
     default_hold_power: .375
 
   c_saver_post:
     number: 1616-15
     allow_enable: true
-    default_pulse_ms: 20
+    default_pulse_ms: settings.saver_post_power
     default_hold_power: .375
 
 # 0024 drivers for LEDs

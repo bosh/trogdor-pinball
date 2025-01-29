@@ -13,7 +13,7 @@ settings:
 
   flipper_main_coil_power:
     sort: 151
-    label: Flipper main power (ms)
+    label: Flipper main power
     key_type: int
     default: 24
     values:
@@ -41,6 +41,22 @@ settings:
   #     0.75: '3/4'
   #     0.875: '7/8'
   #     1: 'Full'
+
+  upper_flipper_main_coil_power:
+    sort: 153
+    label: Upper flipper main power
+    key_type: int
+    default: 24
+    values:
+      12: '12 ms'
+      15: '15 ms'
+      18: '18 ms'
+      20: '20 ms'
+      24: '24 ms (default)'
+      28: '28 ms'
+      32: '32 ms'
+      36: '36 ms'
+      40: '40 ms'
 
   auto_plunger_coil_power:
     sort: 155
@@ -127,3 +143,61 @@ settings:
       25: '25 ms (default)'
       30: '30 ms'
       35: '35 ms'
+
+  slot_bank_reset_power:
+    sort: 161
+    label: Slot (three-target) bank reset power
+    key_type: int
+    default: 30
+    values:
+      18: '18 ms'
+      24: '24 ms'
+      30: '30 ms (default)'
+      35: '35 ms'
+      40: '40 ms'
+
+  slot_bank_knockdown_power:
+    sort: 162
+    label: Slot (three-target) bank single-target knockdown power
+    key_type: int
+    default: 18
+    values:
+      14: '14 ms'
+      18: '18 ms (default)'
+      22: '22 ms'
+      26: '26 ms'
+      30: '30 ms'
+
+  vuk_power:
+    sort: 163
+    label: Right side VUK eject power
+    key_type: int
+    default: 25
+    values:
+      15: '15 ms'
+      20: '20 ms'
+      25: '25 ms (default)'
+      30: '30 ms'
+      35: '35 ms'
+
+  outlane_post_power:
+    sort: 163
+    label: Right outlane post pulse power
+    key_type: int
+    default: 20
+    values:
+      15: '15 ms'
+      20: '20 ms (default)'
+      25: '25 ms'
+      30: '30 ms'
+
+  saver_post_power:
+    sort: 163
+    label: Center save post pulse power
+    key_type: int
+    default: 20
+    values:
+      15: '15 ms'
+      20: '20 ms (default)'
+      25: '25 ms'
+      30: '30 ms'
