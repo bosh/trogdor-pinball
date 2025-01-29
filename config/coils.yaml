@@ -30,12 +30,11 @@ coils:
 
   c_right_sling:
     number: 3208-4
-    default_pulse_ms: 20
-
+    default_pulse_ms: settings.slingshot_power
 
   c_left_sling:
     number: 3208-5
-    default_pulse_ms: 20
+    default_pulse_ms: settings.slingshot_power
 
   c_flipper_left_hold:
     number: 3208-6
