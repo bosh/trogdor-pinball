@@ -61,6 +61,9 @@ diverter:
   div_right_outlane_post:
     x: 0.7656903765690377
     y: 0.7887432899324158
+  div_right_outlane_post_ramp_save:
+    x: 0.7719665271966528
+    y: 0.7730125523012552
   div_saver_post:
     x: 0.45467224546722457
     y: 0.9220299293842158

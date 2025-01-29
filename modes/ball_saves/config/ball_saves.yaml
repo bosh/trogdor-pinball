@@ -36,10 +36,10 @@ ball_saves:
 
   right_outlane_saver:
     enable_events: enable_ball_save_right_outlane_saver
-    active_time: 4s # Auto starting timer
+    active_time: 6s # Auto starting timer
     hurry_up_time: 0
     grace_period: 0
-    auto_launch: true
+    auto_launch: false
     balls_to_save: 1
 
 event_player:

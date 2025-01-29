@@ -45,4 +45,12 @@ diverters:
     activate_events: activate_right_outlane_post
     deactivate_events: deactivate_right_outlane_post,disable_right_outlane_post,ball_ending
     activation_switches: s_right_outer_lane
+  div_right_outlane_post_ramp_save:
+    activation_coil: c_right_outlane_post
+    type: hold
+    activation_time: 10s
+    enable_events: enable_right_outlane_post_ramp_save
+    disable_events: disable_right_outlane_post_ramp_save,ball_ending
+    activate_events: activate_right_outlane_post_ramp_save
+    deactivate_events: deactivate_right_outlane_post_ramp_save,disable_right_outlane_post_ramp_save,ball_ending
 

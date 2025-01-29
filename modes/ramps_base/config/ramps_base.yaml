@@ -1,0 +1,38 @@
+#config_version=6
+
+mode:
+  start_events: mode_start_ramps_base
+  stop_events: mode_stop_ramps_base, ball_will_end
+  priority: 1410
+
+shot_profiles:
+  ramp_base_profile:
+    advance_on_hit: false
+    states:
+      - name: 'live'
+
+shots:
+  shot_ramp_right:
+    profile: ramp_base_profile
+    switch: s_wireform_right_top
+
+variable_player:
+  #Simple ramp scoring with counting
+  shot_ramp_right_live_hit:
+    score: 5000 * current_player.playfield_multiplier
+    ramp_hits: 1
+
+event_player:
+  mode_ramps_base_started: [enable_right_outlane_post_ramp_save]
+  shot_ramp_right_live_hit: [qualify_right_outlane_ramp_save]
+  qualify_right_outlane_ramp_save:
+    - activate_right_outlane_post_ramp_save
+    - enable_ball_save_right_outlane_saver
+    # - deactivate the auto launch for 10s #TBD if possible - auto_fire_on_unexpected_ball on the bd_plunger needs to be dynamic
+    # it may also Just Work(TM) if the ball save overrides the auto launch in general, instead of just when actually saving
+
+show_player:
+  shot_ramp_right_live_hit:
+    slots_diagonal_result_show:
+      action: play
+      loops: 3
