@@ -34,6 +34,9 @@ player_vars:
     initial_value: 0
   spinner_spins:
     initial_value: 0
+  half_spinner_spins: # this counts to 1 to save a half spin, and 2 to reset and increment a spinner spin instead
+    initial_value: 0
+
   captive_ball_target_hits:
     initial_value: 0
 

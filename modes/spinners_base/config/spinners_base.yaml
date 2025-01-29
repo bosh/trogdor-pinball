@@ -13,11 +13,33 @@ variable_player:
     score: 50 * current_player.playfield_multiplier
     spinner_spins: 1
 
+  base_spinner_half_hit: 
+    half_spinner_spins: 1
+
+  targeted_spinner_half_hit: 
+    half_spinner_spins: 1
+
+  spinner_spinner_right_base_inactive:
+    half_spinner_spins:
+      int: 0
+      action: set
+
+  spinner_spinner_right_targeted_inactive:
+    half_spinner_spins:
+      int: 0
+      action: set
+
+  exchange_half_spinner:
+    half_spinner_spins: -2
+
 event_player:
+  base_spinner_half_hit{current_player.half_spinner_spins >= 1}: [base_spinner_hit, exchange_half_spinner]
+  targeted_spinner_half_hit{current_player.half_spinner_spins >= 1}: [targeted_spinner_hit, exchange_half_spinner]
+
   spinner_spinner_left_base_hit: [base_spinner_hit]
-  spinner_spinner_right_base_hit: [base_spinner_hit]
   spinner_spinner_left_targeted_hit: [targeted_spinner_hit]
-  spinner_spinner_right_targeted_hit: [targeted_spinner_hit]
+  spinner_spinner_right_base_hit: [base_spinner_half_hit]
+  spinner_spinner_right_targeted_hit: [targeted_spinner_half_hit]
 
 light_player:
   "{device.switches.s_spinner_left.state == 0}":

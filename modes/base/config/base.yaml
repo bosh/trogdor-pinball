@@ -70,6 +70,9 @@ variable_player:
     playfield_multiplier:
       action: set
       int: 1
+    half_spinner_spins:
+      action: set
+      int: 0
 
   #indirection so players can hook onto increment instead of the player var event
   increment_playfield_multiplier{current_player.playfield_multiplier < 5}:
