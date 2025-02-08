@@ -28,8 +28,8 @@ event_player:
   qualify_right_outlane_ramp_save:
     - activate_right_outlane_post_ramp_save
     - enable_ball_save_right_outlane_saver
-    # - deactivate the auto launch for 10s #TBD if possible - auto_fire_on_unexpected_ball on the bd_plunger needs to be dynamic
-    # it may also Just Work(TM) if the ball save overrides the auto launch in general, instead of just when actually saving
+    - enable_plunger_hold
+    - disable_plunger_hold|10s
 
 show_player:
   shot_ramp_right_live_hit:
