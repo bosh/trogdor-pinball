@@ -129,11 +129,11 @@ lights: #TODO move this to an env-specific light
     platform: drivers
     type: r
 
-#dual_wound_coils: #TODO fix mpf crash when using dual wound coil
-#  c_orbit_diverter_dual_coil:
-#    hold_coil: c_orbit_diverter_hold
-#    main_coil: c_orbit_diverter_full
-#    eos_switch: s_orbit_diverter_eos
+dual_wound_coils:
+ c_orbit_diverter_dual_coil:
+   hold_coil: c_orbit_diverter_hold
+   main_coil: c_orbit_diverter_full
+   eos_switch: s_orbit_diverter_eos
 
 diverters:
   orbit_diverter:
@@ -141,7 +141,7 @@ diverters:
     deactivate_events: deactivate_orbit_diverter, disable_orbit_diverter, ball_ending
     enable_events: enable_orbit_diverter
     disable_events: disable_orbit_diverter, ball_ending
-    activation_coil: c_orbit_diverter_full #c_orbit_diverter_dual_coil
+    activation_coil: c_orbit_diverter_dual_coil #c_orbit_diverter_full #fallback if not using dual
     activation_switches:
     activation_time: 6s
     feeder_devices: bd_plunger, playfield
