@@ -57,6 +57,13 @@ coils:
     default_pulse_ms: settings.gate_power
     default_hold_power: 0.375
 
+  c_slot_bank_right_drop:
+    number: 1616-2
+    default_pulse_ms: settings.slot_bank_knockdown_power
+  c_slot_bank_center_drop:
+    number: 1616-3
+    default_pulse_ms: settings.slot_bank_knockdown_power
+
   c_pop_right:
     number: 1616-4
     default_pulse_ms: settings.pop_bumper_power
@@ -68,17 +75,8 @@ coils:
     default_pulse_ms: settings.pop_bumper_power
 
   c_slot_bank_reset:
-    number: 1616-7 #temp moved from blown up 13
+    number: 1616-7 #moved from blown up 13
     default_pulse_ms: settings.slot_bank_reset_power
-
-  c_slot_bank_right_drop:
-    number: 1616-2
-    default_pulse_ms: settings.slot_bank_knockdown_power
-  c_slot_bank_center_drop:
-    number: 1616-3
-    default_pulse_ms: settings.slot_bank_knockdown_power
-#  c_slot_bank_left_drop:
-#    number: 1616-x #temp unavailable, maybe used at position 7 in the end
 
   # J4
   c_orbit_diverter_full:
@@ -104,6 +102,9 @@ coils:
   c_vuk:
     number: 1616-12
     default_pulse_ms: settings.vuk_power
+
+#  c_slot_bank_left_drop:
+#    number: 1616-x #13 unavailable, possible after repair
 
   c_right_outlane_post:
     number: 1616-14
