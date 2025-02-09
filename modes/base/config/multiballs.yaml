@@ -17,6 +17,14 @@ multiballs:
     start_events: burnination_multiball_qualified
     shoot_again: 15000ms
 
+  skillshot_addaball:
+    ball_count: 1
+    ball_count_type: add
+    enable_events: playfield_active
+    disable_events: ball_ending
+    start_events: skillshot_addaball_qualified
+    shoot_again: 500ms
+
 combo_switches:
   cab_two_button_reset: # Press both cab buttons to max for 2.5s to trigger multiball
     events_when_both: mini_cabinet_multiball_qualified

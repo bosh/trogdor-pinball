@@ -52,6 +52,7 @@ event_player:
     - dj_skill_shot_3_hit|1s
 
   skillshots_group_hitme_hit:
+    - skillshot_addaball_qualified
     - increment_playfield_multiplier
     - priority_show_skillshot_success
     - mode_complete_skillshot_base
