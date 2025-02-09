@@ -6,10 +6,10 @@ mode:
   priority: 1540
 
 timers:
-  # Three separate burndown timers completing every three seconds
+  # Each burndown on a separate timer
   pop_left_burndown:
     start_value: 0
-    end_value: 3
+    end_value: settings.burnination_pop_countdown_seconds
     direction: up
     start_running: true
     restart_on_complete: true
@@ -23,7 +23,7 @@ timers:
 
   pop_right_burndown:
     start_value: 0
-    end_value: 3
+    end_value: settings.burnination_pop_countdown_seconds
     direction: up
     start_running: true
     restart_on_complete: true
@@ -37,7 +37,7 @@ timers:
 
   pop_center_burndown:
     start_value: 0
-    end_value: 3
+    end_value: settings.burnination_pop_countdown_seconds
     direction: up
     start_running: true
     restart_on_complete: true

@@ -201,3 +201,28 @@ settings:
       20: '20 ms (default)'
       25: '25 ms'
       30: '30 ms'
+
+  burnination_timer_seconds:
+    sort: 301
+    label: Burnination mode - overall length
+    key_type: int
+    default: 35
+    values:
+      20: '20 seconds'
+      25: '25 seconds'
+      30: '30 seconds'
+      35: '35 seconds (default)'
+      40: '40 seconds'
+      45: '45 seconds'
+
+  burnination_pop_countdown_seconds:
+    sort: 302
+    label: Burnination mode - seconds per pop burndown reduction
+    key_type: int
+    default: 4
+    values:
+      3: '3 seconds'
+      4: '4 seconds (default)'
+      5: '5 seconds'
+      6: '6 seconds'
+      7: '7 seconds'

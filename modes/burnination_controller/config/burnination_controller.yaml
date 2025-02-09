@@ -8,7 +8,7 @@ mode:
 timers:
   #Mode time limit timer
   burnination_countdown:
-    start_value: 20 #Short for now for ease of testing
+    start_value: settings.burnination_timer_seconds
     end_value: 0
     direction: down
     start_running: false
