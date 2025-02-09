@@ -7,7 +7,7 @@ mode:
 
 config:
   - light_player.yaml
-  - mini_cab_multiball.yaml
+  - multiballs.yaml
   - virtual_hooks.yaml
 
 slide_player:

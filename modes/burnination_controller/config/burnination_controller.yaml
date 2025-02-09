@@ -51,6 +51,7 @@ state_machines:
           - mode_stop_burn_rollovers
           - mode_start_burnination_rollovers
           - burnination_countdown_restart
+          - burnination_multiball_qualified
           - dj_burnination_mode_song
       done:
         label: complete
