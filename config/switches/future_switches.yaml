@@ -3,11 +3,6 @@
 # Switches that exist in the plan but are not yet physically installed
 
 switches:
-  #Targets
-  s_drop_left_down: #TODO likely remove
-    number: 807
-    platform: smart_virtual
-
   #Passthrough optos
   s_left_orbit:
     number: 814

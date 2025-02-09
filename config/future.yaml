@@ -4,11 +4,4 @@
 #   lights are already in a separate file in the light subdir
 #   switches are in switches dir
 
-coils:
-  c_drop_left_reset: #TODO likely remove
-    number: 3008
-    platform: smart_virtual
-  c_drop_left_knockdown: #TODO likely remove
-    default_pulse_ms: 10
-    number: 3009
-    platform: smart_virtual
+# coils: #Empty for now!
