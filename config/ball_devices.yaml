@@ -30,14 +30,14 @@ ball_devices:
     eject_coil: c_vuk
     eject_timeouts: 1s
 
-ball_holds:
-  plunger_hold:
-    hold_devices: bd_plunger
-    balls_to_hold: 1
-    disable_events: ball_ending, disable_plunger_hold #, s_plunger_exit_active #FUTURE Proximity switch disable on lane exit
-    enable_events: enable_plunger_hold
-    release_all_events: ball_ending, ball_starting, disable_plunger_hold
-    reset_events: ball_starting, ball_ending
+# ball_holds:
+#   plunger_hold: #Broken - once used, ball is "lost" and mpf will try looking for ball#4 before new game
+#     hold_devices: bd_plunger
+#     balls_to_hold: 1
+#     disable_events: ball_ending, disable_plunger_hold #, s_plunger_exit_active #FUTURE Proximity switch disable on lane exit
+#     enable_events: enable_plunger_hold
+#     release_all_events: ball_ending, ball_starting, disable_plunger_hold
+#     reset_events: ball_starting, ball_ending
 
 drop_targets:
   dt_slots_left:
