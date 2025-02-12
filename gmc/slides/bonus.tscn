@@ -1,0 +1,124 @@
+[gd_scene load_steps=4 format=3 uid="uid://5y7wh8nfffm1"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_miwhv"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_conditional_children.gd" id="2_6y1qa"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_b6tp2"]
+
+[node name="Bonus" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_miwhv")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 2880.0
+offset_bottom = 864.0
+color = Color(0.296413, 0.145254, 0.519703, 1)
+
+[node name="MPFConditionalChildren" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 30.0
+offset_top = 34.0
+offset_right = 2850.0
+offset_bottom = 832.0
+script = ExtResource("2_6y1qa")
+variable_type = 1
+variable_name = "entry"
+
+[node name="initial" type="Node2D" parent="MPFConditionalChildren"]
+visible = false
+
+[node name="end of ball text" type="Label" parent="MPFConditionalChildren/initial"]
+offset_right = 538.0
+offset_bottom = 511.0
+theme_override_font_sizes/font_size = 133
+text = "End of Ball 1"
+script = ExtResource("3_b6tp2")
+variable_name = "ball"
+template_string = "End of Ball %s"
+
+[node name="__default__" type="Node2D" parent="MPFConditionalChildren"]
+visible = false
+
+[node name="text" type="Label" parent="MPFConditionalChildren/__default__"]
+offset_right = 577.0
+offset_bottom = 655.0
+theme_override_font_sizes/font_size = 122
+text = "Bonus Entry Text"
+script = ExtResource("3_b6tp2")
+variable_type = 1
+variable_name = "text"
+
+[node name="score" type="Label" parent="MPFConditionalChildren/__default__"]
+offset_left = 4.0
+offset_top = 175.0
+offset_right = 581.0
+offset_bottom = 830.0
+theme_override_font_sizes/font_size = 133
+text = "100000"
+script = ExtResource("3_b6tp2")
+variable_type = 1
+variable_name = "score"
+comma_separate = true
+
+[node name="subtotal" type="Node2D" parent="MPFConditionalChildren"]
+visible = false
+
+[node name="Label" type="Label" parent="MPFConditionalChildren/subtotal"]
+offset_right = 999.0
+offset_bottom = 655.0
+theme_override_font_sizes/font_size = 122
+text = "Bonus Subtotal"
+
+[node name="score" type="Label" parent="MPFConditionalChildren/subtotal"]
+offset_left = 4.0
+offset_top = 175.0
+offset_right = 581.0
+offset_bottom = 830.0
+theme_override_font_sizes/font_size = 133
+text = "100000"
+script = ExtResource("3_b6tp2")
+variable_type = 1
+variable_name = "score"
+comma_separate = true
+
+[node name="total" type="Node2D" parent="MPFConditionalChildren"]
+visible = false
+
+[node name="Label" type="Label" parent="MPFConditionalChildren/total"]
+offset_right = 999.0
+offset_bottom = 655.0
+theme_override_font_sizes/font_size = 122
+text = "Total Bonus"
+
+[node name="score" type="Label" parent="MPFConditionalChildren/total"]
+offset_left = 4.0
+offset_top = 175.0
+offset_right = 581.0
+offset_bottom = 830.0
+theme_override_font_sizes/font_size = 133
+text = "100000"
+script = ExtResource("3_b6tp2")
+variable_type = 1
+variable_name = "score"
+comma_separate = true
+
+[node name="multiplier" type="Node2D" parent="MPFConditionalChildren"]
+
+[node name="Label" type="Label" parent="MPFConditionalChildren/multiplier"]
+offset_right = 999.0
+offset_bottom = 655.0
+theme_override_font_sizes/font_size = 122
+text = "Bonus Multiplier"
+
+[node name="score" type="Label" parent="MPFConditionalChildren/multiplier"]
+offset_left = 4.0
+offset_top = 175.0
+offset_right = 581.0
+offset_bottom = 830.0
+theme_override_font_sizes/font_size = 133
+text = "100000"
+script = ExtResource("3_b6tp2")
+variable_type = 1
+variable_name = "score"
+template_string = "%sx"

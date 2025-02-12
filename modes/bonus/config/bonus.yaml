@@ -1,0 +1,23 @@
+#config_version=6
+
+mode_settings:
+  bonus_entries:
+    - entry: loops_completed
+      text: "Loops"
+      score: 1000
+      player_score_entry: loop_hits
+      reset_player_score_entry: true
+      skip_if_zero: true
+
+slide_player:
+  mode_bonus_started: bonus
+
+  bonus_start:
+      bonus:
+        action: update
+        tokens:
+          entry: initial
+
+  bonus_entry:
+    bonus:
+      action: update
