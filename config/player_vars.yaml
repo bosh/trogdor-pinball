@@ -12,6 +12,10 @@ player_vars:
     initial_value: 1
     value_type: int
 
+  bonus_multiplier:
+    initial_value: 1
+    value_type: int
+
   # Skill shots
   total_skillshot_successes:
     initial_value: 0

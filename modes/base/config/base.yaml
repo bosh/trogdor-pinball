@@ -45,6 +45,7 @@ event_player:
   s_start_active: [dj_cash]
   s_plunger_active: [dj_ball_at_launcher]
   increment_playfield_multiplier{current_player.playfield_multiplier < 5}: [dj_multiplier_added_pool]
+  increment_bonus_multiplier{current_player.bonus_multiplier < 10}: [dj_bonus_multiplier_added_pool]
 
   manage_ball_scores:
     - update_previous_ball_score_from_current
@@ -71,6 +72,9 @@ variable_player:
     playfield_multiplier:
       action: set
       int: 1
+    bonus_multiplier:
+      action: set
+      int: 1
     half_spinner_spins:
       action: set
       int: 0
@@ -78,6 +82,11 @@ variable_player:
   #indirection so players can hook onto increment instead of the player var event
   increment_playfield_multiplier{current_player.playfield_multiplier < 5}:
     playfield_multiplier:
+      action: add
+      int: 1
+
+  increment_bonus_multiplier{current_player.bonus_multiplier < 10}:
+    bonus_multiplier:
       action: add
       int: 1
 

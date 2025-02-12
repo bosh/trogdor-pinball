@@ -1,0 +1,10 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=3 uid="uid://bai844n8j18lq"]
+
+[ext_resource type="AudioStream" uid="uid://drrhgenqctquy" path="res://sounds/sfx/multiplier_added_1.wav" id="1_7noku"]
+[ext_resource type="AudioStream" uid="uid://b3ht8kvwmgvqe" path="res://sounds/sfx/multiplier_added_2.wav" id="2_e66h2"]
+
+[resource]
+streams_count = 2
+stream_0/stream = ExtResource("1_7noku")
+stream_1/stream = ExtResource("2_e66h2")
+stream_1/weight = 4.0

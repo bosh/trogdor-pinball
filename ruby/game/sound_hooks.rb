@@ -18,6 +18,7 @@ module TrogBuild
       pop_pool
       burnination_pop_hit_pool
       multiplier_added_pool
+      bonus_multiplier_added_pool
       rollover_lit_pool
       rollover_unlit_pool
       sling_pool
