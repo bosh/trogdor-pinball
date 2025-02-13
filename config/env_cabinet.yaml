@@ -4,3 +4,10 @@ config:
   - config_base.yaml
   - switches/cabinet_switches.yaml
   - lights/virtual_minicab.yaml
+
+lights:
+  l_start:
+    number: c_start_driver
+    platform: drivers
+    type: r
+

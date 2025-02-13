@@ -19,6 +19,10 @@ switches:
     number: 3208-4
     tags: start
 
+## 3208:J3
+  s_coin_door:
+    number: 3208-8
+
 ## Unsupported in minicab:
   s_right_flipper_secondary:
     number: 850
@@ -28,6 +32,19 @@ switches:
     platform: smart_virtual
     tags: tilt_warning
 
-## 3208:J3
-  s_coin_door:
-    number: 3208-8
+  s_coin_door_service_1:
+    number: 852
+    platform: smart_virtual
+    tags: service_esc
+  s_coin_door_service_2:
+    number: 853
+    platform: smart_virtual
+    tags: service_down
+  s_coin_door_service_3:
+    number: 854
+    platform: smart_virtual
+    tags: service_up
+  s_coin_door_service_4:
+    number: 855
+    platform: smart_virtual
+    tags: service_enter

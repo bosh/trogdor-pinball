@@ -4,3 +4,8 @@ config:
   - config_base.yaml
   - switches/minicab_switches.yaml
   - lights/minicab.yaml
+
+lights:
+  l_start:
+    platform: smart_virtual
+    type: r
