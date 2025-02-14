@@ -2,30 +2,7 @@
 
 #Native cabinet switches on 0024 Cabinet IO board
 switches:
-## J1 Cabinet Left
-  s_start:
-    number: 0024-8
-    tags: start
-
-  s_left_flipper:
-    number: 0024-10
-    tags: left_flipper
-  s_left_flipper_secondary:
-    number: 0024-11
-    tags: mini_flipper
-
-  s_tilt_bob:
-    number: 0024-15
-    tags: tilt_warning
-
-## J9 Cabinet Right
-  s_right_flipper:
-    number: 0024-16
-    tags: right_flipper
-  s_right_flipper_secondary:
-    number: 0024-17
-
-## J4 Coin Door # NOTE: not actually connected yet
+## J4 Coin Door
   s_coin_door:
     number: 0024-0
     tags: service_door_open
@@ -41,3 +18,32 @@ switches:
   s_coin_door_service_4:
     number: 0024-4
     tags: service_enter
+  # 3 2 1 available
+
+## J1 Cabinet Left
+  s_start:
+    number: 0024-8
+    tags: start
+
+  # 9 available
+
+  s_left_flipper:
+    number: 0024-10
+    tags: left_flipper
+  s_left_flipper_secondary:
+    number: 0024-11
+    tags: mini_flipper
+
+  # 12 13 14 available
+
+  s_tilt_bob:
+    number: 0024-15
+    tags: tilt_warning
+
+## J9 Cabinet Right
+  s_right_flipper:
+    number: 0024-16
+    tags: right_flipper
+  s_right_flipper_secondary:
+    number: 0024-17
+  # 18, 19, 20, 21, 22, 23, 24 available

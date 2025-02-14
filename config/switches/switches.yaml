@@ -3,69 +3,6 @@
 switches:
 
 #IO 3208
-## J9
-  s_right_outer_lane:
-    number: 3208-25
-    tags: playfield_active
-
-  s_right_inner_lane:
-    number: 3208-26
-    tags: playfield_active
-
-  s_right_flipper_eos:
-    number: 3208-28
-    type: 'NC'
-
-  s_right_sling: # Parallel switch pair
-    number: 3208-29
-
-  s_plunger: # shooter lane presence
-    number: 3208-31
-
-## J3
-  s_upper_flipper_eos:
-    number: 3208-9
-    type: 'NC'
-
-  # s_coin_door:
-  #   number: 3208-8 # Disconnect provided on J3 header, but declared in cabinet or minicab switch configs
-
-  s_left_outer_lane:
-    number: 3208-11
-    tags: playfield_active
-
-  s_left_inner_lane:
-    number: 3208-12
-    tags: playfield_active
-
-  s_left_flipper_eos:
-    number: 3208-13
-    type: 'NC'
-
-  s_left_sling: # Parallel switch pair
-    number: 3208-15
-
-## J6
-  s_trough_ball_jam:
-    number: 3208-17
-    type: 'NC'
-
-  s_trough_ball_1:
-    number: 3208-16
-    type: 'NC'
-
-  s_trough_ball_2:
-    number: 3208-18
-
-  s_trough_ball_3:
-    number: 3208-19
-
-  s_trough_ball_4:
-    number: 3208-20
-
-  s_trough_ball_5:
-    number: 3208-21
-
 ## J8
   s_vuk_presence:
     number: 3208-0
@@ -81,13 +18,88 @@ switches:
     type: 'NC'
     tags: playfield_active
 
+  # 3 4 5 6 available
+
   s_spinner_left:
     number: 3208-7
     tags: playfield_active
 
-  s_proximity_test:
-    number: 3208-8
+## J3
+  # s_coin_door:
+  #   number: 3208-8 # Disconnect provided on J3 header, but declared in cabinet or minicab switch configs
+
+  # s_proximity_test:
+  #   number: 3208-8
+  #   tags: playfield_active # Also used switch 8 as an easy disconnect test input
+
+  s_upper_flipper_eos:
+    number: 3208-9
+    type: 'NC'
+
+  # 10 available
+
+  s_left_outer_lane:
+    number: 3208-11
     tags: playfield_active
+
+  s_left_inner_lane:
+    number: 3208-12
+    tags: playfield_active
+
+  s_left_flipper_eos:
+    number: 3208-13
+    type: 'NC'
+
+  # 14 available
+
+  s_left_sling: # Parallel switch pair
+    number: 3208-15
+
+## J6
+  s_trough_ball_1:
+    number: 3208-16
+    type: 'NC'
+
+  s_trough_ball_jam:
+    number: 3208-17
+    type: 'NC'
+
+  s_trough_ball_2:
+    number: 3208-18
+
+  s_trough_ball_3:
+    number: 3208-19
+
+  s_trough_ball_4:
+    number: 3208-20
+
+  s_trough_ball_5:
+    number: 3208-21
+
+  # 22 23 available
+
+## J9
+  # 24 available
+
+  s_right_outer_lane:
+    number: 3208-25
+    tags: playfield_active
+
+  s_right_inner_lane:
+    number: 3208-26
+    tags: playfield_active
+
+  # 27 available
+
+  s_right_flipper_eos:
+    number: 3208-28
+    type: 'NC'
+
+  s_right_sling: # Parallel switch pair
+    number: 3208-29
+
+  s_plunger: # shooter lane presence
+    number: 3208-31
 
 
 #IO 1616
@@ -107,6 +119,7 @@ switches:
   s_burn_standup:
     number: 1616-4
     tags: playfield_active
+  # 5 6 7 available
 
 ## J8
   s_pop_left:
@@ -115,6 +128,8 @@ switches:
     number: 1616-9
   s_pop_right:
     number: 1616-10
+
+  # 11 available
 
   s_orbit_diverter_eos:
     number: 1616-12
