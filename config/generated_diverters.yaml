@@ -9,7 +9,7 @@ diverters:
     disable_events: disable_right_controlled_ball_gate,ball_ending
     activate_events: activate_right_controlled_ball_gate
     deactivate_events: deactivate_right_controlled_ball_gate,disable_right_controlled_ball_gate,ball_ending
-    activation_switches: s_left_orbit
+    activation_switches: s_left_orbit_outer
   div_right_controlled_ball_gate_alternative_profile:
     activation_coil: c_gate_right
     type: hold
@@ -18,7 +18,7 @@ diverters:
     disable_events: disable_right_controlled_ball_gate_alternative_profile,ball_ending
     activate_events: activate_right_controlled_ball_gate_alternative_profile
     deactivate_events: deactivate_right_controlled_ball_gate_alternative_profile,disable_right_controlled_ball_gate_alternative_profile,ball_ending
-    activation_switches: s_left_orbit
+    activation_switches: s_left_orbit_outer
   div_left_controlled_ball_gate:
     activation_coil: c_gate_left
     type: hold
@@ -27,7 +27,7 @@ diverters:
     disable_events: disable_left_controlled_ball_gate,ball_ending
     activate_events: activate_left_controlled_ball_gate
     deactivate_events: deactivate_left_controlled_ball_gate,disable_left_controlled_ball_gate,ball_ending
-    activation_switches: s_right_orbit
+    activation_switches: s_right_orbit_outer
   div_saver_post:
     activation_coil: c_saver_post
     type: hold

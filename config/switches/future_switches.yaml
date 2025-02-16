@@ -3,37 +3,93 @@
 # Switches that exist in the plan but are not yet physically installed
 
 switches:
-  #Passthrough optos
-  s_left_orbit:
+  # Orbit proxy detectors
+  s_left_orbit_outer:
     number: 814
     platform: smart_virtual
     tags: playfield_active
-  s_right_orbit:
+  s_left_orbit_inner:
     number: 815
     platform: smart_virtual
     tags: playfield_active
-  s_horseshoe:
+  s_right_orbit_outer:
     number: 816
     platform: smart_virtual
     tags: playfield_active
-
-  s_wireform_s_entry:
+  s_right_orbit_inner:
     number: 817
     platform: smart_virtual
     tags: playfield_active
-  s_wireform_s_exit:
+
+  # U Horseshoe possibly opto
+  s_horseshoe_left:
     number: 818
     platform: smart_virtual
     tags: playfield_active
-  s_wireform_left_top:
+  s_horseshoe_right:
     number: 819
     platform: smart_virtual
     tags: playfield_active
 
-  s_captive_ball_target:
-    number: 824
+  # U Elbow prox
+  s_elbow_upper:
+    number: 820
     platform: smart_virtual
     tags: playfield_active
-  s_captive_ball_presence: #Opto, normally blocked when undisturbed
-    number: 825
+  s_elbow_lower:
+    number: 821
+    platform: smart_virtual
+    tags: playfield_active
+
+  # S wireform proxy entry, opto top point
+  s_wireform_s_entry:
+    number: 831
+    platform: smart_virtual
+    tags: playfield_active
+  s_wireform_s_exit:
+    number: 832
+    platform: smart_virtual
+    tags: playfield_active
+
+  # Captive ball one or two targets to confirm hits
+  s_captive_ball_target:
+    number: 841
+    platform: smart_virtual
+    tags: playfield_active
+  # Captive ball presence proxy, normally closed due to ball sitting at bottom
+  s_captive_ball_presence:
+    number: 842
+    platform: smart_virtual
+
+  # 5+ standups in the left pop corner
+  s_blue_standups_a:
+    number: 851
+    platform: smart_virtual
+    tags: playfield_active
+  s_blue_standups_b:
+    number: 852
+    platform: smart_virtual
+    tags: playfield_active
+  s_blue_standups_c:
+    number: 853
+    platform: smart_virtual
+    tags: playfield_active
+  s_blue_standups_d:
+    number: 854
+    platform: smart_virtual
+    tags: playfield_active
+  s_blue_standups_e:
+    number: 855
+    platform: smart_virtual
+    tags: playfield_active
+
+  # Upper subway entrance opto
+  s_subway_entrance:
+    number: 861
+    platform: smart_virtual
+    tags: playfield_active
+
+  # Left VUK/subway destination opto
+  s_subway_vuk_presence:
+    number: 862
     platform: smart_virtual

@@ -30,6 +30,11 @@ ball_devices:
     eject_coil: c_vuk
     eject_timeouts: 1s
 
+  bd_subway_vuk:
+    ball_switches: s_subway_vuk_presence
+    eject_coil: c_subway_vuk
+    eject_timeouts: 1s
+
 # ball_holds:
 #   plunger_hold: #Broken - once used, ball is "lost" and mpf will try looking for ball#4 before new game
 #     hold_devices: bd_plunger
