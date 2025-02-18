@@ -4,5 +4,5 @@ config:
   - switches.yaml
   - future_switches.yaml
   - virtual_switches.yaml
-
+  - sequence_shots.yaml
 # Minicab and cabinet switch configs are loaded via higher level configs one level up

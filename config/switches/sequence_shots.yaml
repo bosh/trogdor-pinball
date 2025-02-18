@@ -1,0 +1,52 @@
+#config_version=6
+
+# Sequence shots defined at a machine common level
+# IE they are standing in for switches as a way to
+# detect directional travel or completed hit pairs
+
+sequence_shots:
+  ss_left_orbit_open:
+    switch_sequence: s_left_orbit_outer, s_right_orbit_outer
+    sequence_timeout: 1500ms
+    # cancel_switches: #
+    # delay_switch_list: #
+
+  ss_left_orbit_closed:
+    switch_sequence: s_left_orbit_outer, s_right_orbit_inner
+    sequence_timeout: 1200ms
+
+  ss_right_orbit_open:
+    switch_sequence: s_right_orbit_outer, s_left_orbit_outer
+    sequence_timeout: 1500ms
+
+  ss_right_orbit_closed:
+    switch_sequence: s_right_orbit_outer, s_left_orbit_inner
+    sequence_timeout: 1200ms
+
+  ss_horseshoe_clockwise:
+    switch_sequence: s_horseshoe_left, s_horseshoe_right
+    sequence_timeout: 800ms
+
+  ss_horseshoe_widdershins:
+    switch_sequence: s_horseshoe_right, s_horseshoe_left
+    sequence_timeout: 800ms
+
+  ss_elbow_upwards:
+    switch_sequence: s_elbow_lower, s_elbow_upper
+    sequence_timeout: 800ms
+
+  ss_elbow_downwards:
+    switch_sequence: s_elbow_upper, s_elbow_lower
+    sequence_timeout: 800ms
+
+  ss_right_ramp_travel:
+    switch_sequence: s_wireform_right_top, s_right_outer_lane
+    sequence_timeout: 4500ms
+
+  ss_s_ramp_travel:
+    switch_sequence: s_wireform_s_entry, s_wireform_s_exit
+    sequence_timeout: 5500ms
+
+  ss_subway_travel:
+    switch_sequence: s_subway_entrance, s_subway_vuk_presence
+    sequence_timeout: 5500ms
