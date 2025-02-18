@@ -41,12 +41,17 @@ switches:
     platform: smart_virtual
     tags: playfield_active
 
-  # S wireform proxy entry, opto top point
-  s_wireform_s_entry:
+  # Right wireform proxy entrance
+  s_wireform_right_entrance:
+    number: 830
+    platform: smart_virtual
+    tags: playfield_active
+  # S wireform proxy entrance, opto top point
+  s_wireform_s_entrance:
     number: 831
     platform: smart_virtual
     tags: playfield_active
-  s_wireform_s_exit:
+  s_wireform_s_top:
     number: 832
     platform: smart_virtual
     tags: playfield_active

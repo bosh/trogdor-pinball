@@ -7,7 +7,6 @@ switches:
   s_vuk_presence:
     number: 3208-0
     type: 'NC'
-    # tags: playfield_active #TODO maybe needed
 
   s_spinner_right:
     number: 3208-1

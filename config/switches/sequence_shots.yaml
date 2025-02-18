@@ -39,14 +39,27 @@ sequence_shots:
     switch_sequence: s_elbow_upper, s_elbow_lower
     sequence_timeout: 800ms
 
+  ss_right_ramp_summit:
+    switch_sequence: s_wireform_right_entrance, s_wireform_right_top
+    sequence_timeout: 300ms
+
   ss_right_ramp_travel:
     switch_sequence: s_wireform_right_top, s_right_outer_lane
     sequence_timeout: 4500ms
 
+  ss_s_ramp_summit:
+    switch_sequence: s_wireform_s_entrance, s_wireform_s_top
+    sequence_timeout: 300ms
+
   ss_s_ramp_travel:
-    switch_sequence: s_wireform_s_entry, s_wireform_s_exit
+    switch_sequence: s_wireform_s_top, s_left_inner_lane
     sequence_timeout: 5500ms
 
   ss_subway_travel:
     switch_sequence: s_subway_entrance, s_subway_vuk_presence
     sequence_timeout: 5500ms
+
+  ss_right_outlane_escape:
+    switch_sequence: s_right_outer_lane, s_plunger
+    sequence_timeout: 500ms
+    cancel_switches: s_trough_ball_jam

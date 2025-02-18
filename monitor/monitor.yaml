@@ -908,15 +908,18 @@ switch:
   s_vuk_presence:
     x: 0.6792189679218968
     y: 0.43746904085303856
+  s_wireform_right_entrance:
+    x: 0.7147838214783823
+    y: 0.32792887029288703
   s_wireform_right_top:
     x: 0.7642956764295676
     y: 0.2977292280418177
-  s_wireform_s_entry:
+  s_wireform_s_entrance:
     x: 0.5439330543933054
     y: 0.2792887029288703
-  s_wireform_s_exit:
-    x: 0.5529986052998606
-    y: 0.24529288702928873
+  s_wireform_s_top:
+    x: 0.5432357043235705
+    y: 0.2547071129707113
   vswitch_add_fire_level:
     x: 0.034038414782397275
     y: 0.034281546316557256
