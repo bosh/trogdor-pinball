@@ -1,6 +1,7 @@
 module TrogBuild
   class Planner
     attr_reader :plan
+
     def initialize(config)
       @config = config
       @plan = nil
@@ -16,11 +17,20 @@ module TrogBuild
       plan.add_mode SlotsMode.new('generated_slots', 1020)
       plan.add_config SoundHooksConfig.new('generated_sound_hooks.yaml')
       plan.add_config DivertersConfig.new('generated_diverters.yaml')
+      sequence_shot_config = SequenceShotsConfig.new('generated_sequence_shot_hooks.yaml')
+      plan.add_config sequence_shot_config
+      add_sequence_shot_lights! sequence_shot_config.sequence_shots
 
       plan
     end
 
     private
+
+    def add_sequence_shot_lights!(sequence_shots)
+      sequence_shots.each do |ss|
+        plan.add_light "gl_#{ss}", {'tags' => "lights_generated,lights_sequence_shots"}
+      end
+    end
 
     def add_generated_lights!
       plan.add_light "generated_light_1"

@@ -252,3 +252,73 @@ lights:
     type: rgb
     platform: fast
     number: exp_playfield-3-32
+  gl_ss_elbow_downwards:
+    tags: lights_generated,lights_sequence_shots
+    number: 8819
+    platform: smart_virtual
+    type: rgb
+  gl_ss_elbow_upwards:
+    tags: lights_generated,lights_sequence_shots
+    number: 8820
+    platform: smart_virtual
+    type: rgb
+  gl_ss_horseshoe_clockwise:
+    tags: lights_generated,lights_sequence_shots
+    number: 8821
+    platform: smart_virtual
+    type: rgb
+  gl_ss_horseshoe_widdershins:
+    tags: lights_generated,lights_sequence_shots
+    number: 8822
+    platform: smart_virtual
+    type: rgb
+  gl_ss_left_orbit_open:
+    tags: lights_generated,lights_sequence_shots
+    number: 8823
+    platform: smart_virtual
+    type: rgb
+  gl_ss_left_orbit_closed:
+    tags: lights_generated,lights_sequence_shots
+    number: 8824
+    platform: smart_virtual
+    type: rgb
+  gl_ss_right_orbit_open:
+    tags: lights_generated,lights_sequence_shots
+    number: 8825
+    platform: smart_virtual
+    type: rgb
+  gl_ss_right_orbit_closed:
+    tags: lights_generated,lights_sequence_shots
+    number: 8826
+    platform: smart_virtual
+    type: rgb
+  gl_ss_right_ramp_summit:
+    tags: lights_generated,lights_sequence_shots
+    number: 8827
+    platform: smart_virtual
+    type: rgb
+  gl_ss_right_ramp_travel:
+    tags: lights_generated,lights_sequence_shots
+    number: 8828
+    platform: smart_virtual
+    type: rgb
+  gl_ss_right_outlane_escape:
+    tags: lights_generated,lights_sequence_shots
+    number: 8829
+    platform: smart_virtual
+    type: rgb
+  gl_ss_s_ramp_summit:
+    tags: lights_generated,lights_sequence_shots
+    number: 8830
+    platform: smart_virtual
+    type: rgb
+  gl_ss_s_ramp_travel:
+    tags: lights_generated,lights_sequence_shots
+    number: 8831
+    platform: smart_virtual
+    type: rgb
+  gl_ss_subway_travel:
+    tags: lights_generated,lights_sequence_shots
+    number: 8832
+    platform: smart_virtual
+    type: rgb
