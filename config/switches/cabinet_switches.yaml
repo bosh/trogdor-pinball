@@ -5,7 +5,7 @@ switches:
 ## J4 Coin Door
   s_coin_door:
     number: 0024-0
-    tags: service_door_open
+    tags: service_door_open, power_off
   s_coin_door_service_1:
     number: 0024-7
     tags: service_esc
