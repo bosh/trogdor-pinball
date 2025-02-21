@@ -66,28 +66,6 @@ switches:
     number: 842
     platform: smart_virtual
 
-  # 5+ standups in the left pop corner
-  s_blue_standups_a:
-    number: 851
-    platform: smart_virtual
-    tags: playfield_active
-  s_blue_standups_b:
-    number: 852
-    platform: smart_virtual
-    tags: playfield_active
-  s_blue_standups_c:
-    number: 853
-    platform: smart_virtual
-    tags: playfield_active
-  s_blue_standups_d:
-    number: 854
-    platform: smart_virtual
-    tags: playfield_active
-  s_blue_standups_e:
-    number: 855
-    platform: smart_virtual
-    tags: playfield_active
-
   # Upper subway entrance opto
   s_subway_entrance:
     number: 861
@@ -98,3 +76,33 @@ switches:
   s_subway_vuk_presence:
     number: 862
     platform: smart_virtual
+
+  # 7 Blue standup switches, CW from 8oclock to 12oclock
+  s_blue_standup_1:
+    number: 871
+    platform: smart_virtual
+    tags: playfield_active, blue_standup
+  s_blue_standup_2:
+    number: 872
+    platform: smart_virtual
+    tags: playfield_active, blue_standup
+  s_blue_standup_3:
+    number: 873
+    platform: smart_virtual
+    tags: playfield_active, blue_standup
+  s_blue_standup_4:
+    number: 874
+    platform: smart_virtual
+    tags: playfield_active, blue_standup
+  s_blue_standup_5:
+    number: 875
+    platform: smart_virtual
+    tags: playfield_active, blue_standup
+  s_blue_standup_6:
+    number: 876
+    platform: smart_virtual
+    tags: playfield_active, blue_standup
+  s_blue_standup_7:
+    number: 877
+    platform: smart_virtual
+    tags: playfield_active, blue_standup
