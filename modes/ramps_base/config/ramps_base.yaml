@@ -27,7 +27,7 @@ event_player:
   shot_ramp_right_live_hit: [qualify_right_outlane_ramp_save]
   qualify_right_outlane_ramp_save:
     - activate_right_outlane_post_ramp_save
-    - enable_ball_save_right_outlane_saver
+    - enable_ball_save_right_wireform_save
     - enable_plunger_hold
     - disable_plunger_hold|10s
 

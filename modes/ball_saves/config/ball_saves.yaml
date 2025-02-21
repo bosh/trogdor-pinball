@@ -12,19 +12,17 @@ ball_saves:
     grace_period: 2s
     enable_events: mode_ball_saves_started
     timer_start_events: balldevice_bd_plunger_ball_eject_success, playfield_active
-    auto_launch: true
+    auto_launch: false
     balls_to_save: 1
-    early_ball_save_events: s_left_outer_lane_active #TODO maybe should be left_outlane_off_hit ?
 
   short:
     enable_events: enable_ball_save_short
-    timer_start_events: balldevice_bd_plunger_ball_eject_success, playfield_active #TODO maybe it just starts on lane presence inactive
+    timer_start_events: balldevice_bd_plunger_ball_eject_success, playfield_active
     active_time: 5s # Delayed timer
     hurry_up_time: 0
     grace_period: 250ms
     auto_launch: true
     balls_to_save: 1
-    early_ball_save_events: s_left_outer_lane_active
 
   left_outlane_saver:
     enable_events: enable_ball_save_left_outlane_saver
@@ -39,6 +37,14 @@ ball_saves:
     active_time: 6s # Auto starting timer
     hurry_up_time: 0
     grace_period: 0
+    auto_launch: false
+    balls_to_save: 1
+
+  right_outlane_wireform_save:
+    enable_events: enable_ball_save_right_wireform_save
+    active_time: 1ms # Auto starting timer
+    hurry_up_time: 0
+    grace_period: 7500ms # "Hidden" save behavior because it's not really a save
     auto_launch: false
     balls_to_save: 1
 
