@@ -41,7 +41,7 @@ player_vars:
     initial_value: 0
   loop_hits: #Not counting any orbits or loops yet #Needs: left outer orbit, right outer orbit, top loop, right loop
     initial_value: 0
-  target_hits: #Not counting any yet #Needs: drops, rollover lane center, upper left box, TBD others
+  target_hits: #Not counting any yet #Needs: drops, rollover lane center, TBD others
     initial_value: 0
   rollover_hits: #Not counting any yet #Needs: top lanes, inlanes, outlanes?
     initial_value: 0
