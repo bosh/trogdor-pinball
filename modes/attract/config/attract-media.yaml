@@ -8,33 +8,10 @@ slide_player:
     startup:
       action: remove
 
-sound_player:
-  music_play_chiptune:
-    theme_chiptune:
-      loops: -1
-      ducking:
-        bus: music
-        attack: 0
-        attenuation: 0
-        release_point: 0
-        release: 0s
-  music_stop_chiptune:
-    theme_chiptune:
-      action: stop
-      ducking:
-        bus: music
-        attack: 0
-        attenuation: 0
-        release_point: 0
-        release: 0s
-
 event_player:
   mode_attract_started:
-    - music_play_chiptune
+    - dj_attract_music_pool
+  flipper_cancel: #Does not actually happen in attract it seems
+    - dj_attract_music_pool
   mode_attract_will_stop:
-    - music_stop_chiptune
-
-  s_left_flipper_secondary_inactive:
-    - music_play_chiptune
-  s_left_flipper_secondary_active:
-    - music_stop_chiptune
+    - dj_music_stop

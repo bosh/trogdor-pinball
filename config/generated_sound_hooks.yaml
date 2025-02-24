@@ -226,6 +226,15 @@ sound_player:
         attenuation: 0
         release_point: 0
         release: 0s
+  dj_attract_music_pool:
+    attract_music_pool:
+      bus: music
+      ducking:
+        bus: music
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
   dj_ball_intros_pool:
     ball_intros_pool:
       bus: music
@@ -381,6 +390,15 @@ sound_player:
         release: 0s
   dj_tilted:
     tilted:
+      bus: music
+      ducking:
+        bus: music
+        attack: 0
+        attenuation: 0
+        release_point: 0
+        release: 0s
+  dj_music_stop:
+    music_stop:
       bus: music
       ducking:
         bus: music

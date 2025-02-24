@@ -43,6 +43,7 @@ module TrogBuild
     )
 
     MUSIC_HOOKS = %w(
+      attract_music_pool
       ball_intros_pool
       theme_70s
       theme_chiptune
@@ -61,6 +62,7 @@ module TrogBuild
       bootup
       status_menu
       tilted
+      music_stop
     )
     MUSIC_HOOKS_TO_STOP = %w(
       burnination_background
