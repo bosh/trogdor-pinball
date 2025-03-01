@@ -22,16 +22,16 @@ offset_bottom = 864.0
 color = Color(0.654179, 0.339315, 0.0578699, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1440, 432.999)
-scale = Vector2(3.23777, 1.26912)
+position = Vector2(1432, 441)
+scale = Vector2(0.96875, 0.907408)
 texture = ExtResource("2_fl5c2")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1872.0
-offset_top = 490.0
-offset_right = 2539.0
-offset_bottom = 985.0
+offset_left = 1193.0
+offset_top = 466.0
+offset_right = 1860.0
+offset_bottom = 961.0
 theme_override_font_sizes/font_size = 100
 text = "Hey, watch it!"
 
