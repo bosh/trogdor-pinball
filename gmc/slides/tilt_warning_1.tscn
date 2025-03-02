@@ -14,33 +14,26 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_nvv85")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = 1.0
-offset_right = 2880.0
-offset_bottom = 864.0
-color = Color(0.943914, 0.529938, 0.203057, 1)
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1436.5, 428)
-scale = Vector2(0.982292, 0.939815)
+position = Vector2(1440.5, 431.5)
+scale = Vector2(0.999653, 0.998843)
 texture = ExtResource("2_8a5e4")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1344.0
-offset_top = 418.0
-offset_right = 2011.0
-offset_bottom = 913.0
-theme_override_font_sizes/font_size = 100
+offset_left = 1129.0
+offset_top = 409.0
+offset_right = 2352.0
+offset_bottom = 904.0
+theme_override_font_sizes/font_size = 200
 text = "Tilt Warning!"
 
 [node name="MPFVariable - Ball" type="Label" parent="."]
 layout_mode = 0
-offset_left = 2234.0
-offset_top = 106.0
-offset_right = 2629.0
-offset_bottom = 298.0
+offset_left = 2391.0
+offset_top = 44.0
+offset_right = 2786.0
+offset_bottom = 236.0
 theme = SubResource("Theme_h7at2")
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
@@ -53,16 +46,30 @@ template_string = "Man: %s"
 
 [node name="MPFVariable - Ball Score" type="Label" parent="."]
 layout_mode = 0
-offset_left = 86.0
-offset_top = 96.0
-offset_right = 293.0
-offset_bottom = 165.0
+offset_left = 1079.0
+offset_top = 34.0
+offset_right = 1852.0
+offset_bottom = 171.0
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
-theme_override_font_sizes/font_size = 50
-text = "9,000"
+theme_override_font_sizes/font_size = 100
+text = "Score: 1,234,000"
 horizontal_alignment = 1
 script = ExtResource("4_egah8")
 variable_name = "ball_score"
 comma_separate = true
 min_digits = 2
+template_string = "Score: %s"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 26.0
+offset_bottom = 864.0
+color = Color(0.943914, 0.529938, 0.203057, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 2855.0
+offset_right = 2880.0
+offset_bottom = 864.0
+color = Color(0.943914, 0.529938, 0.203057, 1)

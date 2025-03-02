@@ -11,10 +11,9 @@ script = ExtResource("1_grcpe")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(1440, 432)
-scale = Vector2(1, 1)
 texture = ExtResource("2_quk18")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(2530, 78)
+position = Vector2(2531, 782)
 scale = Vector2(0.42427, 0.643701)
 texture = ExtResource("3_08cu3")
