@@ -31,8 +31,8 @@ flippers:
     hold_coil: c_flipper_right_hold
     eos_switch: s_right_flipper_eos
     activation_switch: s_right_flipper
-    enable_events: ball_started, enableAutofire #, machine_reset_phase_3 #P3 for testing
-    disable_events: ball_will_end, service_mode_entered, disable_autofires
+    enable_events: ball_started, enable_right_flipper
+    disable_events: ball_will_end, service_mode_entered, disable_right_flipper
     use_eos: true
 
   left_flipper:
@@ -40,8 +40,8 @@ flippers:
     hold_coil: c_flipper_left_hold
     activation_switch: s_left_flipper
     eos_switch: s_left_flipper_eos
-    enable_events: ball_started, enableAutofire
-    disable_events: ball_will_end, service_mode_entered, disable_autofires
+    enable_events: ball_started, enable_left_flipper
+    disable_events: ball_will_end, service_mode_entered, disable_left_flipper
     use_eos: true
 
   upper_flipper: #left flipper rotation
@@ -49,6 +49,6 @@ flippers:
     hold_coil: c_flipper_upper_hold
     eos_switch: s_upper_flipper_eos
     activation_switch: s_left_flipper_secondary
-    enable_events: ball_started, enableAutofire
-    disable_events: ball_will_end, service_mode_entered, disable_autofires
+    enable_events: ball_started, enable_upper_flipper
+    disable_events: ball_will_end, service_mode_entered, disable_upper_flipper
 #    use_eos: true
