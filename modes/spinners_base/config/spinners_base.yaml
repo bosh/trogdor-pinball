@@ -41,15 +41,15 @@ event_player:
   spinner_spinner_right_base_hit: [base_spinner_half_hit]
   spinner_spinner_right_targeted_hit: [targeted_spinner_half_hit]
 
-light_player:
-  "{device.switches.s_spinner_left.state == 0}":
-    l_spinner_left_flasher: off
-  "{device.switches.s_spinner_left.state == 1}":
-    l_spinner_left_flasher: green
-  "{device.switches.s_spinner_right.state == 0}":
-    l_spinner_right_flasher: off
-  "{device.switches.s_spinner_right.state == 1}":
-    l_spinner_right_flasher: green
+flasher_player:
+  s_spinner_left_active:
+    l_spinner_left_flasher:
+      color: green
+      ms: 100ms
+  s_spinner_right_active:
+    l_spinner_right_flasher:
+      color: green
+      ms: 100ms
 
 state_machines:
   left_spinner_state:
