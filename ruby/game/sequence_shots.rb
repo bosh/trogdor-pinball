@@ -23,25 +23,21 @@ module TrogBuild
 
     def to_hash
       hooks = {}
-      @sequence_shots.each { |ss_name| add_show_player_hook(hooks, ss_name) }
-      {'show_player' => hooks}
+      @sequence_shots.each { |ss_name| add_flasher_player_hook(hooks, ss_name) }
+      {'flasher_player' => hooks}
     end
 
-    def add_show_player_hook(collection, ss_name)
+    def add_flasher_player_hook(collection, ss_name)
       hook_name = hit_event_name(ss_name)
       if collection[hook_name]
-        puts "Duplicate show hook detected - #{hook_name}"
+        puts "Duplicate flasher hook detected - #{hook_name}"
         exit(1)
       end
 
       collection[hook_name] = {
-        'one_hundred_ms_flash' => {
-          'loops' => 5,
-          'key' => "#{ss_name}_hook",
-          'show_tokens' => {
-            'light' => light_name(ss_name),
-            'color' => 'purple'
-          }
+        light_name(ss_name) => {
+          'ms' => '400ms',
+          'color' => 'purple'
         }
       }
     end
