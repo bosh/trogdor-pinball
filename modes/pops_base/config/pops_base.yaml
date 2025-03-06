@@ -3,7 +3,7 @@
 mode:
   start_events: mode_start_pops_base
   stop_events: mode_stop_pops_base, ball_will_end
-  priority: 1510
+  priority: 1550
 
 variable_player:
   base_pop_group_hit:

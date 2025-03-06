@@ -12,9 +12,9 @@ module TrogBuild
 
       add_generated_lights!
 
-      plan.add_mode ExampleMode.new('generated_example', 1310)
-      plan.add_mode AchievementMode.new('generated_achievements', 1090)
-      plan.add_mode SlotsMode.new('generated_slots', 1020)
+      plan.add_mode ExampleMode.new('generated_example', 2099)
+      plan.add_mode AchievementMode.new('generated_achievements', 2075)
+      plan.add_mode SlotsMode.new('generated_slots', 2066)
       plan.add_config SoundHooksConfig.new('generated_sound_hooks.yaml')
       plan.add_config DivertersConfig.new('generated_diverters.yaml')
       sequence_shot_config = SequenceShotsConfig.new('generated_sequence_shot_hooks.yaml')

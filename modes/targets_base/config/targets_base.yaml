@@ -3,7 +3,7 @@
 mode:
   start_events: mode_start_targets_base
   stop_events: mode_stop_targets_base, ball_will_end
-  priority: 1550 #TODO 20250221 all priorities should be revisited 
+  priority: 1570
 
 variable_player:
   sw_blue_standup:

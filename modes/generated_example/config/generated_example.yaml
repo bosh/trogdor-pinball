@@ -3,7 +3,7 @@
 
 ---
 mode:
-  priority: 1310
+  priority: 2099
   start_events: ball_started
   stop_events: mode_stop_generated_example, ball_will_end
 show_player:

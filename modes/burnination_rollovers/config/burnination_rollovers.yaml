@@ -3,7 +3,7 @@
 mode:
   start_events: mode_start_burnination_rollovers
   stop_events: mode_stop_burnination_rollovers, ball_will_end
-  priority: 1440
+  priority: 2530
 
 timers:
   # timer for changing where the target rollover is

@@ -3,7 +3,7 @@
 mode:
   start_events: mode_start_slings_dead
   stop_events: mode_stop_slings_dead
-  priority: 1250
+  priority: 2520
   events_when_started: disable_slings
   events_when_stopped: enable_slings
 

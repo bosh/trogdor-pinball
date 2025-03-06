@@ -3,7 +3,7 @@
 
 ---
 mode:
-  priority: 1020
+  priority: 2066
   start_events: mode_start_generated_slots
   stop_events: mode_stop_generated_slots, ball_will_end
 timers:

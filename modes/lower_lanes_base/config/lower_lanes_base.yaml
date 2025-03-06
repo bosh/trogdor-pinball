@@ -3,7 +3,7 @@
 mode:
   start_events: mode_start_lower_lanes_base
   stop_events: mode_stop_lower_lanes_base, ball_will_end
-  priority: 1110
+  priority: 1510
 
 variable_player:
   inlane_detector_shot_off_hit:

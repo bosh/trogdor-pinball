@@ -3,7 +3,7 @@
 mode:
   start_events: mode_start_slots_controller
   stop_events: mode_stop_slots_controller, ball_will_end
-  priority: 915
+  priority: 7015
 
 state_machines:
   slots_manager:
