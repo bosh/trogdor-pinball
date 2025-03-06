@@ -2,6 +2,7 @@ alias t='cd ~/workspace/trogdor-pinball'
 alias m='cd ~/workspace/mpf'
 alias md='cd ~/workspace/mpf-docs'
 alias mg='cd ~/workspace/mpf-gmc'
+alias mm='cd ~/workspace/mpf-monitor'
 alias mh='cd ~/workspace/mpf-hardware'
 alias mpfm='mpf monitor & mpf ' # Root call for many other calls with monitor added on
 
