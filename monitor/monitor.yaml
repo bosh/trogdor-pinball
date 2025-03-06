@@ -159,45 +159,60 @@ light:
     x: 0.1178521617852162
     y: 0.9465964864596457
   gl_ss_elbow_downwards:
+    shape: TRIANGLE
     x: 0.7078103207810321
     y: 0.37081589958159
   gl_ss_elbow_upwards:
+    shape: TRIANGLE
     x: 0.7161785216178523
     y: 0.469142259414226
   gl_ss_horseshoe_clockwise:
+    shape: TRIANGLE
     x: 0.49581589958159
     y: 0.28347280334728037
   gl_ss_horseshoe_widdershins:
+    shape: TRIANGLE
     x: 0.597629009762901
     y: 0.2860878661087866
   gl_ss_left_orbit_closed:
+    shape: TRIANGLE
     x: 0.18619246861924688
     y: 0.13127615062761508
   gl_ss_left_orbit_open:
+    shape: TRIANGLE
     x: 0.16317991631799164
     y: 0.1297071129707113
   gl_ss_right_orbit_closed:
+    shape: TRIANGLE
     x: 0.7043235704323572
     y: 0.11663179916317992
   gl_ss_right_orbit_open:
+    shape: TRIANGLE
     x: 0.6813110181311018
     y: 0.11610878661087866
   gl_ss_right_outlane_escape:
+    shape: TRIANGLE
     x: 0.799163179916318
     y: 0.7714435146443516
   gl_ss_right_ramp_summit:
+    shape: TRIANGLE
     x: 0.7391910739191074
     y: 0.32740585774058584
   gl_ss_right_ramp_travel:
+    shape: TRIANGLE
+    size: 0.02
     x: 0.790097629009763
     y: 0.2981171548117155
   gl_ss_s_ramp_summit:
+    shape: TRIANGLE
     x: 0.5676429567642958
     y: 0.2792887029288703
   gl_ss_s_ramp_travel:
+    shape: TRIANGLE
     x: 0.5669456066945607
     y: 0.2552301255230126
   gl_ss_subway_travel:
+    shape: TRIANGLE
     x: 0.24198047419804744
     y: 0.19089958158995818
   l_bb_character_knight_1:
