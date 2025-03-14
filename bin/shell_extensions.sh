@@ -15,7 +15,7 @@ alias mpfm='mpf monitor & mpf ' # Root call for many other calls with monitor ad
 alias vsnake="clear; t; mpfm game -btX -c env_cabinet.yaml" #Used by windows taskbar integration - monitor, no gmc, smart_virtual, cabinet config
 
 #'both' requires godot executable on the path
-alias vboth="clear; t; mpfm both -g gmc -tX"
+alias vboth="clear; t; mpfm both -g gmc -tXp"
 alias minilive="clear; t; mpf both -g gmc -t -c env_minicab.yaml"
 
 alias tmedia='~/workspace/pinball-media/pinball-media.rb install trogdor'
