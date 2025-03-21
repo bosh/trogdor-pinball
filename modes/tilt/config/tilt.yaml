@@ -1,9 +1,9 @@
 #config_version=6
 
 tilt:
-  multiple_hit_window: 300ms
-  settle_time: 5s
-  warnings_to_tilt: 3
+  warnings_to_tilt: settings.warnings_to_tilt
+  settle_time: settings.tilt_settle_time
+  multiple_hit_window: settings.tilt_multiple_hit_window
 
 slide_player:
   _overwrite: True

@@ -226,3 +226,35 @@ settings:
       5: '5 seconds'
       6: '6 seconds'
       7: '7 seconds'
+
+  warnings_to_tilt:
+    label: "Tilt on warning number:"
+    values:
+      0: "Tilt Disabled"
+      1: "1"
+      2: "2"
+      3: "3 (default)"
+      5: "5"
+      10: "10"
+    default: 3
+    key_type: int
+    sort: 401
+  tilt_settle_time:
+    label: Time to wait on tilt to settle bob
+    values:
+      3000: "3s"
+      5000: "5s (default)"
+      8000: "8s"
+    default: 5000
+    key_type: int
+    sort: 402
+  tilt_multiple_hit_window:
+    label: Tilt Sensitivity
+    values:
+      150: "sensitive"
+      300: "default"
+      500: "insensitive"
+      8000: "very insensitive"
+    default: 300
+    key_type: int
+    sort: 403
