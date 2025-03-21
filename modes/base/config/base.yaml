@@ -34,7 +34,8 @@ event_player:
     - mode_start_spinners_base
     - dj_game_start|1800ms
 
-  tilt_warning: [dj_tilt_warning_pool]
+  tilt_warning_1: [dj_tilt_warning_pool]
+  tilt_warning_2: [dj_tilt_warning_pool]
   tilt: [dj_tilted]
 
   s_start_active: [dj_cash]

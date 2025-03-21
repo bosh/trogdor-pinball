@@ -23,7 +23,7 @@ modes:
   - captive_ball_base
   - slots_controller
   - targets_base
-  - tilt #builtin
+  - tilt #base+override
   - queue_end_quip
   - service #builtin
 

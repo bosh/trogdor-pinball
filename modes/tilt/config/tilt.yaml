@@ -1,0 +1,24 @@
+#config_version=6
+
+tilt:
+  multiple_hit_window: 300ms
+  settle_time: 5s
+  warnings_to_tilt: 3
+
+slide_player:
+  _overwrite: True
+  tilt_warning_1:
+    tilt_warning_1:
+      expire: 1s
+  tilt_warning_2:
+    tilt_warning_2:
+      expire: 1s
+  tilt: tilt
+
+  tilt_clear:
+    tilt_warning_1:
+      action: remove
+    tilt_warning_2:
+      action: remove
+    tilt:
+      action: remove
