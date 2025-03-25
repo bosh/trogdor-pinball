@@ -176,15 +176,15 @@ variable_player:
   # Increment fire level by three on bumper hit
   shot_burnination_pop_left_hit:
     score: 1000 * current_player.playfield_multiplier
-    pop_left_fire_level: 3
+    pop_left_fire_level: settings.burnination_pop_hit_increment
 
   shot_burnination_pop_right_hit:
     score: 1000 * current_player.playfield_multiplier
-    pop_right_fire_level: 3
+    pop_right_fire_level: settings.burnination_pop_hit_increment
 
   shot_burnination_pop_center_hit:
     score: 1000 * current_player.playfield_multiplier
-    pop_center_fire_level: 3
+    pop_center_fire_level: settings.burnination_pop_hit_increment
 
   timer_pop_left_burndown_complete{current_player.pop_left_fire_level > 0}:
     pop_left_fire_level: -1
@@ -220,23 +220,23 @@ event_player:
     - update_pop_center_state
 
   update_pop_left_state{current_player.pop_left_fire_level <= 0}: [set_burnination_pop_left_base]
-  update_pop_left_state{current_player.pop_left_fire_level > 0 and current_player.pop_left_fire_level < 8}: [set_burnination_pop_left_low]
-  update_pop_left_state{current_player.pop_left_fire_level >= 8 and current_player.pop_left_fire_level < 15}: [set_burnination_pop_left_medium]
-  update_pop_left_state{current_player.pop_left_fire_level >= 15 and current_player.pop_left_fire_level < 25}: [set_burnination_pop_left_high]
-  update_pop_left_state{current_player.pop_left_fire_level >= 25}: [set_burnination_pop_left_extreme]
+  update_pop_left_state{current_player.pop_left_fire_level > 0 and current_player.pop_left_fire_level < settings.burnination_fire_level_one}: [set_burnination_pop_left_low]
+  update_pop_left_state{current_player.pop_left_fire_level >= settings.burnination_fire_level_one and current_player.pop_left_fire_level < settings.burnination_fire_level_two}: [set_burnination_pop_left_medium]
+  update_pop_left_state{current_player.pop_left_fire_level >= settings.burnination_fire_level_two and current_player.pop_left_fire_level < settings.burnination_fire_level_goal}: [set_burnination_pop_left_high]
+  update_pop_left_state{current_player.pop_left_fire_level >= settings.burnination_fire_level_goal}: [set_burnination_pop_left_extreme]
 
   update_pop_right_state{current_player.pop_right_fire_level <= 0}: [set_burnination_pop_right_base]
-  update_pop_right_state{current_player.pop_right_fire_level > 0 and current_player.pop_right_fire_level < 8}: [set_burnination_pop_right_low]
-  update_pop_right_state{current_player.pop_right_fire_level >= 8 and current_player.pop_right_fire_level < 15}: [set_burnination_pop_right_medium]
-  update_pop_right_state{current_player.pop_right_fire_level >= 15 and current_player.pop_right_fire_level < 25}: [set_burnination_pop_right_high]
-  update_pop_right_state{current_player.pop_right_fire_level >= 25}: [set_burnination_pop_right_extreme]
+  update_pop_right_state{current_player.pop_right_fire_level > 0 and current_player.pop_right_fire_level < settings.burnination_fire_level_one}: [set_burnination_pop_right_low]
+  update_pop_right_state{current_player.pop_right_fire_level >= settings.burnination_fire_level_one and current_player.pop_right_fire_level < settings.burnination_fire_level_two}: [set_burnination_pop_right_medium]
+  update_pop_right_state{current_player.pop_right_fire_level >= settings.burnination_fire_level_two and current_player.pop_right_fire_level < settings.burnination_fire_level_goal}: [set_burnination_pop_right_high]
+  update_pop_right_state{current_player.pop_right_fire_level >= settings.burnination_fire_level_goal}: [set_burnination_pop_right_extreme]
 
   update_pop_center_state{current_player.pop_center_fire_level <= 0}: [set_burnination_pop_center_base]
-  update_pop_center_state{current_player.pop_center_fire_level > 0 and current_player.pop_center_fire_level < 8}: [set_burnination_pop_center_low]
-  update_pop_center_state{current_player.pop_center_fire_level >= 8 and current_player.pop_center_fire_level < 15}: [set_burnination_pop_center_medium]
-  update_pop_center_state{current_player.pop_center_fire_level >= 15 and current_player.pop_center_fire_level < 25}: [set_burnination_pop_center_high]
-  update_pop_center_state{current_player.pop_center_fire_level >= 25}: [set_burnination_pop_center_extreme]
+  update_pop_center_state{current_player.pop_center_fire_level > 0 and current_player.pop_center_fire_level < settings.burnination_fire_level_one}: [set_burnination_pop_center_low]
+  update_pop_center_state{current_player.pop_center_fire_level >= settings.burnination_fire_level_one and current_player.pop_center_fire_level < settings.burnination_fire_level_two}: [set_burnination_pop_center_medium]
+  update_pop_center_state{current_player.pop_center_fire_level >= settings.burnination_fire_level_two and current_player.pop_center_fire_level < settings.burnination_fire_level_goal}: [set_burnination_pop_center_high]
+  update_pop_center_state{current_player.pop_center_fire_level >= settings.burnination_fire_level_goal}: [set_burnination_pop_center_extreme]
 
-  update_pop_left_state{current_player.pop_left_fire_level > 25 and current_player.pop_right_fire_level > 25 and current_player.pop_center_fire_level > 25}: [set_burnination_pops_all_complete]
-  update_pop_right_state{current_player.pop_left_fire_level > 25 and current_player.pop_right_fire_level > 25 and current_player.pop_center_fire_level > 25}: [set_burnination_pops_all_complete]
-  update_pop_center_state{current_player.pop_left_fire_level > 25 and current_player.pop_right_fire_level > 25 and current_player.pop_center_fire_level > 25}: [set_burnination_pops_all_complete]
+  update_pop_left_state{current_player.pop_left_fire_level > settings.burnination_fire_level_goal and current_player.pop_right_fire_level > settings.burnination_fire_level_goal and current_player.pop_center_fire_level > settings.burnination_fire_level_goal}: [set_burnination_pops_all_complete]
+  update_pop_right_state{current_player.pop_left_fire_level > settings.burnination_fire_level_goal and current_player.pop_right_fire_level > settings.burnination_fire_level_goal and current_player.pop_center_fire_level > settings.burnination_fire_level_goal}: [set_burnination_pops_all_complete]
+  update_pop_center_state{current_player.pop_left_fire_level > settings.burnination_fire_level_goal and current_player.pop_right_fire_level > settings.burnination_fire_level_goal and current_player.pop_center_fire_level > settings.burnination_fire_level_goal}: [set_burnination_pops_all_complete]

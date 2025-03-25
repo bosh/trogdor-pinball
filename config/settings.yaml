@@ -202,8 +202,77 @@ settings:
       25: '25 ms'
       30: '30 ms'
 
-  burnination_timer_seconds:
+  burnination_fire_level_one:
     sort: 301
+    label: Burnination mode - target fire level one
+    key_type: int
+    default: 5
+    values:
+      4: '4'
+      6: '6 (default)'
+      8: '8'
+      10: '10'
+  burnination_fire_level_two:
+    sort: 302
+    label: Burnination mode - target fire level two
+    key_type: int
+    default: 10
+    values:
+      7: '7'
+      10: '10 (default)'
+      12: '12'
+      15: '15'
+      18: '18'
+  burnination_fire_level_goal:
+    sort: 304
+    label: Burnination mode - target fire level per-pop
+    key_type: int
+    default: 20
+    values:
+      12: '12'
+      16: '16'
+      20: '20 (default)'
+      25: '25'
+      30: '30'
+
+  burnination_pop_hit_increment:
+    sort: 305
+    label: Burnination mode - levels added per pop hit
+    key_type: int
+    default: 3
+    values:
+      1: '1'
+      2: '2'
+      3: '3 (default)'
+      4: '4'
+      5: '5'
+  burnination_rollover_ontarget_increment:
+    sort: 306
+    label: Burnination mode - levels added per on-target rollover hit
+    key_type: int
+    default: 5
+    values:
+      0: '0'
+      1: '1'
+      2: '2'
+      3: '3'
+      4: '4'
+      5: '5 (default)'
+      6: '6'
+  burnination_rollover_offtarget_increment:
+    sort: 307
+    label: Burnination mode - levels added per off-target rollover hit
+    key_type: int
+    default: 1
+    values:
+      0: '0'
+      1: '1 (default)'
+      2: '2'
+      3: '3'
+      4: '4'
+
+  burnination_timer_seconds:
+    sort: 310
     label: Burnination mode - overall length
     key_type: int
     default: 35
@@ -215,20 +284,8 @@ settings:
       40: '40 seconds'
       45: '45 seconds'
 
-  burnination_fire_level_goal:
-    sort: 302
-    label: Burnination mode - target fire level per-pop
-    key_type: int
-    default: 25
-    values:
-      12: '12'
-      16: '16'
-      20: '20'
-      25: '25 (default)'
-      30: '30'
-
   burnination_pop_countdown_seconds:
-    sort: 302
+    sort: 311
     label: Burnination mode - seconds per pop burndown reduction
     key_type: int
     default: 4
