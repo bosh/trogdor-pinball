@@ -31,7 +31,7 @@ event_player:
   player_pop_center_fire_level:
     - check_burnination_complete
 
-  check_burnination_complete{current_player.pop_left_fire_level > 25 and current_player.pop_right_fire_level > 25 and current_player.pop_center_fire_level > 25}:
+  check_burnination_complete{current_player.pop_left_fire_level > settings.burnination_fire_level_goal and current_player.pop_right_fire_level > settings.burnination_fire_level_goal and current_player.pop_center_fire_level > settings.burnination_fire_level_goal}:
     - burnination_controller_complete
 
 state_machines:

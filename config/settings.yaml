@@ -215,6 +215,18 @@ settings:
       40: '40 seconds'
       45: '45 seconds'
 
+  burnination_fire_level_goal:
+    sort: 302
+    label: Burnination mode - target fire level per-pop
+    key_type: int
+    default: 25
+    values:
+      12: '12'
+      16: '16'
+      20: '20'
+      25: '25 (default)'
+      30: '30'
+
   burnination_pop_countdown_seconds:
     sort: 302
     label: Burnination mode - seconds per pop burndown reduction
