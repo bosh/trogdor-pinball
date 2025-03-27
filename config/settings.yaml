@@ -1,16 +1,6 @@
 #config_version=6
 
 settings:
-  ball_search_enabled:
-    sort: 200
-    label: Ball Search Enabled?
-    values:
-      0: "Disabled"
-      1: "Enabled"
-    default: 0
-    key_type: int
-
-
   flipper_main_coil_power:
     sort: 151
     label: Flipper main power
@@ -202,6 +192,16 @@ settings:
       25: '25 ms'
       30: '30 ms'
 
+  ball_search_enabled:
+    sort: 200
+    label: Ball Search Enabled?
+    values:
+      0: "Disabled"
+      1: "Enabled"
+    default: 0
+    key_type: int
+
+
   burnination_fire_level_one:
     sort: 301
     label: Burnination mode - target fire level one
@@ -327,3 +327,14 @@ settings:
     default: 300
     key_type: int
     sort: 403
+
+  attract_carousel_timer_tick:
+    label: Attract Carousel Rotation Time
+    values:
+      3000: "3 seconds"
+      5000: "5 seconds (default)"
+      7000: "7 seconds"
+      10000: "10 seconds"
+    default: "5000"
+    key_type: int
+    sort: 501
