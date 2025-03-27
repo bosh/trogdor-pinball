@@ -861,6 +861,9 @@ switch:
   s_horseshoe_right:
     x: 0.596931659693166
     y: 0.2677824267782427
+  s_launch_exit:
+    x: 0.7437238493723849
+    y: 0.5185669456066945
   s_left_flipper:
     size: 0.02
     x: 0.394700139470014
@@ -923,6 +926,9 @@ switch:
   s_right_outer_lane:
     x: 0.7580195258019526
     y: 0.7589498058196607
+  s_right_outlane_lower:
+    x: 0.6474895397489538
+    y: 0.8457112970711296
   s_right_sling:
     size: 0.04
     x: 0.6108786610878661

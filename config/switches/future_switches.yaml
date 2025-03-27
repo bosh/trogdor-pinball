@@ -106,3 +106,11 @@ switches:
     number: 877
     platform: smart_virtual
     tags: playfield_active, blue_standup
+
+  # Other proxy switches
+  s_right_outlane_lower:
+    number: 880
+    platform: smart_virtual
+  s_launch_exit:
+    number: 881
+    platform: smart_virtual
