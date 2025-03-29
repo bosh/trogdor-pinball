@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://1muw6d5hkqte"]
+[gd_scene load_steps=7 format=3 uid="uid://1muw6d5hkqte"]
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_grcpe"]
 [ext_resource type="Texture2D" uid="uid://c7rku52o4c103" path="res://images/attract_bg.jpg" id="2_quk18"]
 [ext_resource type="Texture2D" uid="uid://n4cm0hpnab06" path="res://images/included/trogdor_nameplate.jpg" id="3_08cu3"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="3_ivb84"]
 [ext_resource type="Texture2D" uid="uid://dounln3l35d26" path="res://addons/mpf-gmc/images/logo_mpf.png" id="5_5y4l4"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="5_ose3f"]
 
 [node name="Attract" type="Control"]
 layout_mode = 3
@@ -26,25 +27,25 @@ script = ExtResource("3_ivb84")
 carousel_name = "attract"
 
 [node name="title" type="Sprite2D" parent="MPFCarousel"]
-position = Vector2(1543, 439)
+position = Vector2(1419, 409)
 scale = Vector2(0.42427, 0.643701)
 texture = ExtResource("3_08cu3")
 
 [node name="credits" type="Label" parent="MPFCarousel"]
 layout_mode = 0
-offset_left = 991.0
-offset_top = 314.0
-offset_right = 2004.0
-offset_bottom = 519.0
-theme_override_font_sizes/font_size = 150
-text = "Credits to me!"
+offset_left = 590.0
+offset_top = 165.0
+offset_right = 2222.0
+offset_bottom = 651.0
+theme_override_font_sizes/font_size = 200
+text = "CREDIT AMOUNT"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("5_ose3f")
+variable_type = 2
+variable_name = "credits_string"
 
 [node name="mpf_logo" type="Sprite2D" parent="MPFCarousel"]
-position = Vector2(1429, 451)
+position = Vector2(1419, 413)
 scale = Vector2(3.41875, 3.41875)
 texture = ExtResource("5_5y4l4")
-
-[node name="CenterContainer" type="CenterContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
