@@ -5,9 +5,9 @@ mpf:
 
 config:
   - settings.yaml
+  - bcp.yaml
   - hardware.yaml
   - fast.yaml
-  - displays.yaml
   - machine.yaml
   - lights/config.yaml
   - coils.yaml

@@ -1,5 +1,8 @@
 #config_version=6
 
+light_settings:
+  default_fade_ms: 40
+
 settings:
   balls_per_game:
     sort: 10

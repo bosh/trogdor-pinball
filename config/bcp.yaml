@@ -1,0 +1,6 @@
+#config_version=6
+
+bcp:
+  connections:
+    local_display:
+      # port: 5050
