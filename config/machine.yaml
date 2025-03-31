@@ -4,5 +4,5 @@ machine:
   balls_installed: 3
 
 game:
-  balls_per_game: 3
-  max_players: 1
+  balls_per_game: settings.balls_per_game
+  max_players: settings.max_players

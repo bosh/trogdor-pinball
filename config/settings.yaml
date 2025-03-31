@@ -1,6 +1,29 @@
 #config_version=6
 
 settings:
+  balls_per_game:
+    sort: 10
+    label: Balls per game
+    key_type: int
+    default: 3
+    values:
+      1: '1'
+      2: '2'
+      3: '3 (default)'
+      4: '4'
+      5: '5'
+
+  max_players:
+    sort: 11
+    label: Max players
+    key_type: int
+    default: 4
+    values:
+      1: '1'
+      2: '2'
+      3: '3'
+      4: '4 (default)'
+
   flipper_main_coil_power:
     sort: 151
     label: Flipper main power
