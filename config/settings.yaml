@@ -357,10 +357,10 @@ settings:
   attract_carousel_timer_tick:
     label: Attract Carousel Rotation Time
     values:
-      3000: "3 seconds"
-      5000: "5 seconds (default)"
-      7000: "7 seconds"
-      10000: "10 seconds"
-    default: "5000"
-    key_type: int
+      3.0: "3 seconds"
+      5.0: "5 seconds (default)"
+      7.0: "7 seconds"
+      10.0: "10 seconds"
+    default: 5.0
+    key_type: float
     sort: 501

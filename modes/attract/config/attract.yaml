@@ -18,7 +18,7 @@ mode_settings:
 timers:
   attract_carousel_timer:
     end_value: 1
-    tick_interval: 5s #settings.attract_carousel_timer_tick
+    tick_interval: settings.attract_carousel_timer_tick
     start_running: true
     control_events:
       - event: item_highlighted
