@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://5y7wh8nfffm1"]
+[gd_scene load_steps=5 format=3 uid="uid://5y7wh8nfffm1"]
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_miwhv"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_conditional_children.gd" id="2_6y1qa"]
+[ext_resource type="Texture2D" uid="uid://h5mdw87chf05" path="res://images/included/looting.png" id="2_u32y8"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_b6tp2"]
 
 [node name="Bonus" type="Control"]
@@ -13,7 +14,11 @@ script = ExtResource("1_miwhv")
 layout_mode = 0
 offset_right = 2880.0
 offset_bottom = 864.0
-color = Color(0.296413, 0.145254, 0.519703, 1)
+color = Color(0.220064, 0.100356, 0.39574, 1)
+
+[node name="Looting" type="Sprite2D" parent="."]
+position = Vector2(1440, 432)
+texture = ExtResource("2_u32y8")
 
 [node name="MPFConditionalChildren" type="Control" parent="."]
 anchors_preset = 0
@@ -26,7 +31,6 @@ variable_type = 1
 variable_name = "entry"
 
 [node name="initial" type="Node2D" parent="MPFConditionalChildren"]
-visible = false
 
 [node name="end of ball text" type="Label" parent="MPFConditionalChildren/initial"]
 offset_right = 538.0
@@ -38,7 +42,6 @@ variable_name = "ball"
 template_string = "End of Ball %s"
 
 [node name="__default__" type="Node2D" parent="MPFConditionalChildren"]
-visible = false
 
 [node name="text" type="Label" parent="MPFConditionalChildren/__default__"]
 offset_right = 577.0
@@ -62,7 +65,6 @@ variable_name = "score"
 comma_separate = true
 
 [node name="subtotal" type="Node2D" parent="MPFConditionalChildren"]
-visible = false
 
 [node name="Label" type="Label" parent="MPFConditionalChildren/subtotal"]
 offset_right = 999.0
@@ -83,7 +85,6 @@ variable_name = "score"
 comma_separate = true
 
 [node name="total" type="Node2D" parent="MPFConditionalChildren"]
-visible = false
 
 [node name="Label" type="Label" parent="MPFConditionalChildren/total"]
 offset_right = 999.0
@@ -122,3 +123,13 @@ script = ExtResource("3_b6tp2")
 variable_type = 1
 variable_name = "score"
 template_string = "%sx"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2278.0
+offset_top = 39.0
+offset_right = 3071.0
+offset_bottom = 346.0
+rotation = 0.785398
+theme_override_font_sizes/font_size = 225
+text = "BONUS"
