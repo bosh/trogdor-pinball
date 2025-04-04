@@ -31,6 +31,7 @@ variable_type = 1
 variable_name = "entry"
 
 [node name="initial" type="Node2D" parent="MPFConditionalChildren"]
+visible = false
 
 [node name="end of ball text" type="Label" parent="MPFConditionalChildren/initial"]
 offset_right = 538.0
@@ -58,13 +59,14 @@ offset_top = 175.0
 offset_right = 581.0
 offset_bottom = 830.0
 theme_override_font_sizes/font_size = 133
-text = "100000"
+text = "100,000"
 script = ExtResource("3_b6tp2")
 variable_type = 1
 variable_name = "score"
 comma_separate = true
 
 [node name="subtotal" type="Node2D" parent="MPFConditionalChildren"]
+visible = false
 
 [node name="Label" type="Label" parent="MPFConditionalChildren/subtotal"]
 offset_right = 999.0
@@ -85,6 +87,7 @@ variable_name = "score"
 comma_separate = true
 
 [node name="total" type="Node2D" parent="MPFConditionalChildren"]
+visible = false
 
 [node name="Label" type="Label" parent="MPFConditionalChildren/total"]
 offset_right = 999.0
@@ -98,13 +101,14 @@ offset_top = 175.0
 offset_right = 581.0
 offset_bottom = 830.0
 theme_override_font_sizes/font_size = 133
-text = "100000"
+text = "100,000"
 script = ExtResource("3_b6tp2")
 variable_type = 1
 variable_name = "score"
 comma_separate = true
 
 [node name="multiplier" type="Node2D" parent="MPFConditionalChildren"]
+visible = false
 
 [node name="Label" type="Label" parent="MPFConditionalChildren/multiplier"]
 offset_right = 999.0
@@ -118,7 +122,7 @@ offset_top = 175.0
 offset_right = 581.0
 offset_bottom = 830.0
 theme_override_font_sizes/font_size = 133
-text = "100000"
+text = "100,000"
 script = ExtResource("3_b6tp2")
 variable_type = 1
 variable_name = "score"
