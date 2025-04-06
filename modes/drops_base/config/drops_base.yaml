@@ -1,0 +1,78 @@
+#config_version=6
+
+mode:
+  start_events: mode_start_drops_base
+  stop_events: mode_stop_drops_base, ball_will_end
+  priority: 2061 #TODO
+
+shot_profiles:
+  drops_base_profile:
+    advance_on_hit: false
+    states:
+      - name: 'live'
+
+shots:
+  shot_drop_left_base:
+    profile: drops_base_profile
+    switch: s_drop_bank_left
+  shot_drop_center_base:
+    profile: drops_base_profile
+    switch: s_drop_bank_center
+  shot_drop_right_base:
+    profile: drops_base_profile
+    switch: s_drop_bank_right
+
+shot_groups:
+  base_drop_group:
+    shots:
+      - shot_drop_left_base
+      - shot_drop_center_base
+      - shot_drop_right_base
+
+event_player:
+  base_drops_full_sweep_complete: [dj_cash|1ms]
+  base_drop_group_hit: [dj_drop_pool]
+
+  drop_target_bank_slots_target_bank_down: [drop_target_bank_reset_slots] #actually reset when all down
+
+  drop_target_bank_slots_target_bank_up: [base_drop_full_sweep_reset] # reset sweep on reset
+  timer_base_drop_full_sweep_timer_complete: [base_drop_full_sweep_reset] # reset sweep on timeout
+
+variable_player:
+  #Simple drop scoring with target counter
+  base_drop_group_live_hit:
+    score: 250 * current_player.playfield_multiplier
+    target_hits: 1
+
+  drop_target_bank_slots_target_bank_down:
+    score: 1000 * current_player.playfield_multiplier
+
+  base_drops_full_sweep_complete:
+    score: 3333
+    target_hits: 3
+
+accruals:
+  base_drop_full_sweep:
+    events:
+      - shot_drop_left_base_hit
+      - shot_drop_center_base_hit
+      - shot_drop_right_base_hit
+    events_when_hit:
+      - base_drops_full_sweep_hit
+    events_when_complete:
+      - base_drop_full_sweep_timer_stop
+      - base_drops_full_sweep_complete
+    reset_events:
+      - drop_target_bank_reset_slots #ensure it resets on bank reset
+      - base_drop_full_sweep_reset #the standard hook, prefer this to ^
+
+timers:
+  base_drop_full_sweep_timer:
+    end_value: 1
+    tick_interval: 500ms #TODO temp long time for hand testing
+    start_running: False
+    control_events:
+      - event: base_drops_full_sweep_hit
+        action: restart
+      - event: base_drop_full_sweep_timer_stop
+        action: stop

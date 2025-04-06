@@ -22,6 +22,7 @@ modes:
   - spinners_base
   - captive_ball_base
   - slots_controller
+  - drops_base
   - targets_base
   - tilt #base+override
   - queue_end_quip
