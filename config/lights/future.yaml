@@ -214,3 +214,75 @@ lights:
     platform: smart_virtual
     type: rgb
     tags: lights_2a, lights_3c, lights_4d, lights_5b, lights_pf
+
+  l_orbit_left:
+    number: 9201
+    platform: smart_virtual
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4c, lights_5a, lights_pf
+
+  l_orbit_right:
+    number: 9202
+    platform: smart_virtual
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4d, lights_5c, lights_pf
+
+  l_vuk_left:
+    number: 9203
+    platform: smart_virtual
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4a, lights_5b, lights_pf
+
+  l_vuk_right:
+    number: 9204
+    platform: smart_virtual
+    type: rgb
+    tags: lights_2a, lights_3c, lights_4b, lights_5d, lights_pf
+
+  l_elbow_lower:
+    number: 9205
+    platform: smart_virtual
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4d, lights_5e, lights_pf
+
+  l_burn_center:
+    number: 9206
+    platform: smart_virtual
+    type: rgb
+    tags: lights_2a, lights_3b, lights_4a, lights_5b, lights_pf
+
+  l_ramp_right:
+    number: 9207
+    platform: smart_virtual
+    type: rgb
+    tags: lights_2a, lights_3c, lights_4c, lights_5e, lights_pf
+
+  l_ramp_left:
+    number: 9208
+    platform: smart_virtual
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b, lights_5c, lights_pf
+
+  l_loop_left:
+    number: 9209
+    platform: smart_virtual
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_5b, lights_pf
+
+  l_loop_right:
+    number: 9210
+    platform: smart_virtual
+    type: rgb
+    tags: lights_2a, lights_3b, lights_4c, lights_5d, lights_pf
+
+  l_gate_left:
+    number: 9211
+    platform: smart_virtual
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4d, lights_5a, lights_pf
+
+  l_gate_right:
+    number: 9212
+    platform: smart_virtual
+    type: rgb
+    tags: lights_2b, lights_3c, lights_4a, lights_5b, lights_pf
