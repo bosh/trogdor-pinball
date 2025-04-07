@@ -27,7 +27,7 @@ state_machines:
       - source: qualifying
         target: qualifying
         events: slots_manager_reset_bank
-        events_when_transitioning: drop_target_bank_reset_slots
+        events_when_transitioning: slots_target_bank_full_reset
 
 event_player:
   mode_slots_controller_started:

@@ -33,10 +33,6 @@ variable_player:
   captive_ball_target_disabled_hit:
     score: 200 * current_player.playfield_multiplier
 
-event_player:
-  captive_ball_target_live_hit:
-    - drop_target_bank_reset_slots
-
 random_event_player:
   captive_ball_target_live_hit:
     force_all: true

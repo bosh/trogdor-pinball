@@ -62,5 +62,5 @@ drop_target_banks:
   slots_target_bank:
     drop_targets: dt_slots_left, dt_slots_center, dt_slots_right
     reset_coils: c_slot_bank_reset
-    reset_events: drop_target_bank_reset_slots, machine_reset_phase_3, ball_starting
-    reset_on_complete: #No
+    reset_events: slots_target_bank_full_reset, machine_reset_phase_3, ball_starting
+    reset_on_complete: #Not automatically
