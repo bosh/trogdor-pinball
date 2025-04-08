@@ -1,0 +1,21 @@
+#config_version=6
+
+event_player:
+  service_button{button=='PAGE_LEFT'}: [dj_decrement] #TODO replace
+  service_button{button=='PAGE_RIGHT'}: [dj_increment] #TODO replace
+  service_button{button=='UP'}: [dj_increment]
+  service_button{button=='DOWN'}: [dj_decrement]
+  service_button{button=='TOGGLE'}: [dj_cancel]
+  service_button{button=='ENTER'}: [dj_click_good]
+  service_button{button=='ESC'}: [dj_click_bad]
+  service_button{button=='START'}: [dj_cant_incdec_more] #TODO replace
+  service_button{button=='TRIGGER'}: [dj_cant_incdec_more] #TODO replace
+
+  service_mode_entered: [dj_status_menu]
+  service_mode_exited: [dj_bootup]
+
+# other events to listen for:
+# service_power_on dj_high_voltage_enabled
+# service_power_off dj_high_voltage_disabled
+# service_door_opened #TODO hinge
+# service_door_closed #TODO door close
