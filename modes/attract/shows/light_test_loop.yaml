@@ -1,6 +1,6 @@
 #show_version=6
 
-- duration: 750ms #Start off
+- duration: 500ms #Start off
   lights:
     "*": off
 
@@ -12,13 +12,13 @@
   lights:
     "*": '777777'
 
-- duration: 260ms
+- duration: 220ms
   lights:
     "*": 'aaaaaa'
 
-- duration: 25ms
+- duration: 300ms
   lights:
-    "*": 'ffffff'
+    "*": on #show the default colors
 
 - duration: 100ms
   lights:
