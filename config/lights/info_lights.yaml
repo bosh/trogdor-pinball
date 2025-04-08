@@ -1,0 +1,17 @@
+#config_version=6
+
+info_lights:
+  ball_1:
+    light: vlight_ball_1
+  ball_2:
+    light: vlight_ball_2
+  ball_3:
+    light: vlight_ball_3
+  # player_1:
+  #   light:
+  # player_2:
+  #   light:
+  # player_3:
+  #   light:
+  # player_4:
+  #   light:

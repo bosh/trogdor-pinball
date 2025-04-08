@@ -15,16 +15,19 @@ lights:
     platform: smart_virtual
     type: rgb
     tags: lights_virtual
+    default_on_color: ff00ff
   vlight_ball_2:
     number: 9503
     platform: smart_virtual
     type: rgb
     tags: lights_virtual
+    default_on_color: ff00ff
   vlight_ball_3:
     number: 9504
     platform: smart_virtual
     type: rgb
     tags: lights_virtual
+    default_on_color: ff00ff
 
   vlight_left_inlane_qualified:
     number: 9505
