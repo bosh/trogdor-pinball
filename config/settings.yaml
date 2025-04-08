@@ -232,7 +232,7 @@ settings:
     sort: 301
     label: Burnination mode - target fire level one
     key_type: int
-    default: 5
+    default: 4
     values:
       4: '4'
       6: '6 (default)'
