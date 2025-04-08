@@ -29,13 +29,39 @@ lights:
     tags: lights_virtual
     default_on_color: ff00ff
 
+  vlight_player_1:
+    number: 9511
+    platform: smart_virtual
+    type: rgb
+    tags: lights_virtual
+    default_on_color: red
+  vlight_player_2:
+    number: 9512
+    platform: smart_virtual
+    type: rgb
+    tags: lights_virtual
+    default_on_color: blue
+  vlight_player_3:
+    number: 9513
+    platform: smart_virtual
+    type: rgb
+    tags: lights_virtual
+    default_on_color: teal
+  vlight_player_4:
+    number: 9514
+    platform: smart_virtual
+    type: rgb
+    tags: lights_virtual
+    default_on_color: purple
+
   vlight_left_inlane_qualified:
-    number: 9505
+    number: 9521
     platform: smart_virtual
     type: rgb
     tags: lights_virtual
   vlight_right_inlane_qualified:
-    number: 9506
+    number: 9522
     platform: smart_virtual
     type: rgb
     tags: lights_virtual
+

@@ -7,11 +7,11 @@ info_lights:
     light: vlight_ball_2
   ball_3:
     light: vlight_ball_3
-  # player_1:
-  #   light:
-  # player_2:
-  #   light:
-  # player_3:
-  #   light:
-  # player_4:
-  #   light:
+  player_1:
+    light: vlight_player_1
+  player_2:
+    light: vlight_player_2
+  player_3:
+    light: vlight_player_3
+  player_4:
+    light: vlight_player_4
