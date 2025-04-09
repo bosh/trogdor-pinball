@@ -10,6 +10,7 @@ lights:
     type: rgb
     tags: lights_virtual
 
+  # for info_lights, see: https://missionpinball.org/latest/config/info_lights/
   vlight_ball_1:
     number: 9502
     platform: smart_virtual
@@ -28,6 +29,18 @@ lights:
     type: rgb
     tags: lights_virtual
     default_on_color: ff00ff
+  vlight_tilt:
+    number: 9505
+    platform: smart_virtual
+    type: rgb
+    tags: lights_virtual
+    default_on_color: red
+  vlight_game_over:
+    number: 9506
+    platform: smart_virtual
+    type: rgb
+    tags: lights_virtual
+    default_on_color: red
 
   vlight_player_1:
     number: 9511

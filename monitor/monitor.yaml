@@ -737,6 +737,9 @@ light:
   vlight_for_generated_example_mode:
     x: 0.07182705718270573
     y: 0.8577313137106656
+  vlight_game_over:
+    x: 0.7426778242677823
+    y: 0.8959205020920501
   vlight_left_inlane_qualified:
     x: 0.11297071129707115
     y: 0.7139982332986614
@@ -755,6 +758,9 @@ light:
   vlight_right_inlane_qualified:
     x: 0.7684797768479777
     y: 0.6862955200008364
+  vlight_tilt:
+    x: 0.016736401673640166
+    y: 0.20083682008368198
 multiball:
   cabinet_multiball:
     x: 0.4560669456066946

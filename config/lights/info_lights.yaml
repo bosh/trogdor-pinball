@@ -15,3 +15,7 @@ info_lights:
     light: vlight_player_3
   player_4:
     light: vlight_player_4
+  tilt:
+    light: vlight_tilt
+  game_over:
+    light: vlight_game_over
