@@ -123,6 +123,7 @@ coils:
   c_start_driver:
     number: 0024-2
     allow_enable: true
+    psu: 12v
 
 dual_wound_coils:
  c_orbit_diverter_dual_coil:

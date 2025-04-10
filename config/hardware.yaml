@@ -2,3 +2,7 @@
 
 hardware:
   platform: fast, smart_virtual
+
+psus:
+  12v:
+    voltage: 12
