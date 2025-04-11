@@ -6,6 +6,8 @@ module TrogBuild
     # Sound resources are actual files that want to be played directly
     # mpf doesnt care about file extension, so we leave that off
 
+    DEFAULT_BUS = 'effects'
+
     COMPLETION_EVENTS = {
       'ball_end_zero' => 'dj_end_quip_complete',
       'ball_end_poor_pool' => 'dj_end_quip_complete',
@@ -123,27 +125,31 @@ module TrogBuild
       record[sound_name]['action'] = action if action != 'play'
       register_name = action == 'play' ? play_event_name(sound_name) : stop_event_name(sound_name)
       record[sound_name]['events_when_stopped'] = COMPLETION_EVENTS[sound_name] if COMPLETION_EVENTS[sound_name]
-      collection[register_name] = record
+      if record == {sound_name => {'bus' => DEFAULT_BUS}} # if the record is inlineable with default bus
+        collection[register_name] = sound_name
+      else
+        collection[register_name] = record
+      end
     end
 
-    def add_windows_sound_hook(collection, sound_name, bus, action = 'play')
-      record = {sound_name => {'bus' => bus, 'ducking' => ducking(bus)}}
-      record[sound_name]['action'] = action if action != 'play'
-      register_name = action == 'play' ? play_event_name(sound_name) : stop_event_name(sound_name)
-      record[sound_name]['events_when_stopped'] = COMPLETION_EVENTS[sound_name] if COMPLETION_EVENTS[sound_name]
-      collection[register_name] = record
-    end
+    # def add_windows_sound_hook(collection, sound_name, bus, action = 'play')
+    #   record = {sound_name => {'bus' => bus, 'ducking' => ducking(bus)}}
+    #   record[sound_name]['action'] = action if action != 'play'
+    #   register_name = action == 'play' ? play_event_name(sound_name) : stop_event_name(sound_name)
+    #   record[sound_name]['events_when_stopped'] = COMPLETION_EVENTS[sound_name] if COMPLETION_EVENTS[sound_name]
+    #   collection[register_name] = record
+    # end
 
     def add_sound_hook(collection, sound_name, bus='effects')
       if collection[play_event_name(sound_name)]
         puts "Duplicate sound hook detected - #{play_event_name(sound_name)}"
         exit(1)
       end
-      if $platform == PLATFORM_WINDOWS
-        add_windows_sound_hook(collection, sound_name, bus)
-      else
+      # if $platform == PLATFORM_WINDOWS
+      #   add_windows_sound_hook(collection, sound_name, bus)
+      # else
         add_linux_sound_hook(collection, sound_name, bus)
-      end
+      # end
     end
 
     def add_stop_sound_hook(collection, sound_name, bus='effects')
@@ -151,11 +157,11 @@ module TrogBuild
         puts "Duplicate sound hook detected - #{stop_event_name(sound_name)}"
         exit(1)
       end
-      if $platform == PLATFORM_WINDOWS
-        add_windows_sound_hook(collection, sound_name, bus, 'stop')
-      else
+      # if $platform == PLATFORM_WINDOWS
+      #   add_windows_sound_hook(collection, sound_name, bus, 'stop')
+      # else
         add_linux_sound_hook(collection, sound_name, bus, 'stop')
-      end
+      # end
     end
   end
 end
