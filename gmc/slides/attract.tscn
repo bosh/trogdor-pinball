@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://1muw6d5hkqte"]
+[gd_scene load_steps=10 format=3 uid="uid://1muw6d5hkqte"]
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_grcpe"]
 [ext_resource type="Texture2D" uid="uid://c7rku52o4c103" path="res://images/attract_bg.jpg" id="2_quk18"]
@@ -6,6 +6,9 @@
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="3_ivb84"]
 [ext_resource type="Texture2D" uid="uid://dounln3l35d26" path="res://addons/mpf-gmc/images/logo_mpf.png" id="5_5y4l4"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="5_ose3f"]
+[ext_resource type="Texture2D" uid="uid://7olwyw21atb2" path="res://images/included/FAST logo.png" id="7_ardjk"]
+[ext_resource type="Texture2D" uid="uid://dvkseqcqepdtk" path="res://images/included/hsr logo.jpg" id="8_0ti1i"]
+[ext_resource type="FontFile" uid="uid://b23p1dqnrdsfu" path="res://fonts/AHNBH.ttf" id="9_ne241"]
 
 [node name="Attract" type="Control"]
 layout_mode = 3
@@ -50,11 +53,38 @@ script = ExtResource("5_ose3f")
 variable_type = 2
 variable_name = "credits_string"
 
-[node name="mpf_logo" type="Sprite2D" parent="MPFCarousel"]
-visible = false
-position = Vector2(1416.25, 411)
-scale = Vector2(5.1875, 5.1875)
+[node name="logos" type="Node2D" parent="MPFCarousel"]
+
+[node name="blackout" type="ColorRect" parent="MPFCarousel/logos"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 2860.0
+offset_bottom = 844.0
+color = Color(0, 0, 0, 1)
+
+[node name="mpf_logo" type="Sprite2D" parent="MPFCarousel/logos"]
+position = Vector2(2412, 396)
+scale = Vector2(2.9875, 2.9875)
 texture = ExtResource("5_5y4l4")
+
+[node name="fast_logo" type="Sprite2D" parent="MPFCarousel/logos"]
+position = Vector2(576, 383)
+scale = Vector2(0.542683, 0.542683)
+texture = ExtResource("7_ardjk")
+
+[node name="hsr_logo" type="Sprite2D" parent="MPFCarousel/logos"]
+position = Vector2(1592, 587)
+scale = Vector2(1.2551, 1.2551)
+texture = ExtResource("8_0ti1i")
+
+[node name="Label" type="Label" parent="MPFCarousel/logos"]
+offset_left = 1219.0
+offset_top = -15.0
+offset_right = 1982.0
+offset_bottom = 204.0
+theme_override_fonts/font = ExtResource("9_ne241")
+theme_override_font_sizes/font_size = 45
+text = "Trogdor (C) 2003 Strong Bad"
 
 [node name="last_scores_1p" type="Node2D" parent="MPFCarousel"]
 visible = false
@@ -146,6 +176,7 @@ variable_name = "player3_score"
 comma_separate = true
 
 [node name="last_scores_4p" type="Node2D" parent="MPFCarousel"]
+visible = false
 
 [node name="player1_score" type="Label" parent="MPFCarousel/last_scores_4p"]
 offset_right = 40.0
