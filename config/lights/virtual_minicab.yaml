@@ -15,3 +15,7 @@ lights:
   l_mini_cab_right:
     platform: smart_virtual
     tags: lights_2a, lights_3c, lights_4c, lights_5c, lights_cab
+
+  l_mini_cab_right_secondary:
+    platform: smart_virtual
+    tags: lights_2b, lights_3b, lights_4d, lights_5e, lights_cab

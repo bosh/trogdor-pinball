@@ -113,6 +113,11 @@ light_player:
   "{device.switches.s_plunger.state == 1 and device.switches.s_left_flipper_secondary.state == 1}":
     l_mini_cab_left_secondary: cccc00
 
+  #Minicab right secondary status LED tracking button and EOS
+  "{device.switches.s_right_flipper_secondary.state == 0}":
+    l_mini_cab_right_secondary: off
+  "{device.switches.s_right_flipper_secondary.state == 1}":
+    l_mini_cab_right_secondary: cc00cc
 
   # Trough status GI light
   "{device.switches.s_trough_ball_jam.state == 1}":

@@ -12,4 +12,8 @@ lights:
 
   l_mini_cab_right:
     number: exp_playfield-2-3
-    tags: lights_2a, lights_3c, lights_4a, lights_5a, lights_cab
+    tags: lights_2a, lights_3c, lights_4c, lights_5d, lights_cab
+
+  l_mini_cab_right_secondary: #virtual, for completeness
+    platform: smart_virtual
+    tags: lights_2b, lights_3b, lights_4d, lights_5e, lights_cab
