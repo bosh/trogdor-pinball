@@ -82,7 +82,6 @@ coils:
   c_orbit_diverter_full:
     number: 1616-8
     default_pulse_ms: settings.diverter_flipper_power
-    allow_enable: true
     default_hold_power: .125
 
   c_orbit_diverter_hold:
