@@ -1,0 +1,38 @@
+#config_version=6
+
+mode:
+  priority: 9999 #TODO, TBD but high
+  start_events: mode_start_music_selection
+  stop_events: mode_stop_music_selection, ball_will_end, service_mode_entered
+  events_when_started: advance_carousel_to_current_track
+  code: music_selection.MusicSelection
+
+mode_settings:
+  selectable_items:
+    - music_1 # classic
+    - music_2 # heavy
+    - music_3 # 70s
+    - music_4 # chip
+    - music_5 # steel
+  previous_item_events: reverse_music_selection_carousel
+  next_item_events: advance_music_selection_carousel
+  select_item_events: s_start_active
+
+slide_player:
+  mode_music_selection_started:
+    music_selection:
+      action: play
+  mode_stop_music_selection.1:
+    music_selection:
+      action: remove
+
+event_player:
+  flipper_cancel: [music_controller_quiet] #For now quieting is jukebox off for the ball. Maybe make this a flipper cancel _hold_
+  s_left_flipper_secondary_active: [reverse_music_selection_carousel, reverse_current_track]
+  s_right_flipper_secondary_active: [advance_music_selection_carousel, advance_current_track]
+
+  playfield_active: # Active play immediately ends music selection. Maybe s_plunger_inactive even as well
+    - mode_stop_music_selection
+
+  music_selection_item_selected: # Carousel selection event
+    - mode_stop_music_selection

@@ -1,0 +1,133 @@
+#config_version=6
+
+mode:
+  priority: 5005 #TODO, TBD but medium to high
+  start_events: game_start, service_mode_exited
+  stop_events: game_ended, service_mode_entered #TODO or could go quiet on service mode instead of turning off
+  game_mode: False
+  stop_on_ball_end: False
+  events_when_started: music_controller_begin
+
+event_player:
+  ball_started:
+    - pick_random_track
+    - mode_start_music_selection # Carousel on every ball. Could make this configurable in settings
+
+random_event_player:
+  pick_random_track:
+    scope: machine
+    events:
+      - pick_track_1
+      - pick_track_2
+      - pick_track_3
+      - pick_track_4
+      - pick_track_5
+
+state_machines:
+  music_jukebox:
+    persist_state: False #Since this lasts the whole game, seems like it shouldn't need persisting
+    states:
+      start:
+        label: starting state
+      picking_track:
+        label: Jukebox selecting next track
+        events_when_started: [] # after putting into this state you must choose a picking mode
+        # Could put a long timer that automatically picks music if in this state for too long (since it should never stay here)
+      music_1:
+        label: Track 1 - Trogdor the Burninator
+        events_when_started: [dj_theme_main]
+      music_2:
+        label: Track 2 - Instrumental Heavy
+        events_when_started: [dj_theme_instrumental_heavy]
+      music_3:
+        label: Track 3 - 70s
+        events_when_started: [dj_theme_70s]
+      music_4:
+        label: Track 4 - Chiptune
+        events_when_started: [dj_theme_chiptune]
+      music_5:
+        label: Track 5 - Instrumental Steel
+        events_when_started: [dj_theme_instrumental_steel]
+      quiet:
+        label: Turn off music and remain off
+        events_when_started: [dj_music_stop]
+
+    # all states: picking_track, music_1, music_2, music_3, music_4, music_5, quiet
+    transitions:
+      # Automatically transition on start, and when resuming from quiet
+      - source: start, quiet
+        target: picking_track
+        events: music_controller_begin #TODO this isnt enough for quiet resumption
+
+      # Any state can pick directly
+      - source: picking_track, music_1, music_2, music_3, music_4, music_5, quiet
+        target: music_1
+        events: pick_track_1
+      - source: picking_track, music_1, music_2, music_3, music_4, music_5, quiet
+        target: music_2
+        events: pick_track_2
+      - source: picking_track, music_1, music_2, music_3, music_4, music_5, quiet
+        target: music_3
+        events: pick_track_3
+      - source: picking_track, music_1, music_2, music_3, music_4, music_5, quiet
+        target: music_4
+        events: pick_track_4
+      - source: picking_track, music_1, music_2, music_3, music_4, music_5, quiet
+        target: music_5
+        events: pick_track_5
+
+      # Relooping a track
+      - source: music_1
+        target: music_1
+        events: loop_current_track
+      - source: music_2
+        target: music_2
+        events: loop_current_track
+      - source: music_3
+        target: music_3
+        events: loop_current_track
+      - source: music_4
+        target: music_4
+        events: loop_current_track
+      - source: music_5
+        target: music_5
+        events: loop_current_track
+
+      # Advancing to next track
+      - source: music_1
+        target: music_2
+        events: advance_current_track
+      - source: music_2
+        target: music_3
+        events: advance_current_track
+      - source: music_3
+        target: music_4
+        events: advance_current_track
+      - source: music_4
+        target: music_5
+        events: advance_current_track
+      - source: music_5
+        target: music_1
+        events: advance_current_track
+
+      # Reverse to previous track
+      - source: music_1
+        target: music_5
+        events: reverse_current_track
+      - source: music_2
+        target: music_1
+        events: reverse_current_track
+      - source: music_3
+        target: music_2
+        events: reverse_current_track
+      - source: music_4
+        target: music_3
+        events: reverse_current_track
+      - source: music_5
+        target: music_4
+        events: reverse_current_track
+
+      # Any track can be quieted
+      - source: music_1, music_2, music_3, music_4, music_5, picking_track
+        target: quiet
+        events: music_controller_quiet
