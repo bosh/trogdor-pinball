@@ -23,6 +23,7 @@ event_player:
     - mode_start_backbox_controller
     - mode_start_code_base
     - mode_start_priority_shows
+    - mode_start_music_controller
     - mode_start_ball_saves
     - mode_start_ramps_base
     - mode_start_skillshot_base
@@ -32,7 +33,7 @@ event_player:
     - mode_start_burnination_controller
     - mode_start_slots_controller
     - mode_start_spinners_base
-    - dj_game_start|1800ms
+    # - dj_game_start|1800ms #TODO figure out what to do with this vs music carousel
 
   tilt_warning_1: [dj_tilt_warning_pool]
   tilt_warning_2: [dj_tilt_warning_pool]

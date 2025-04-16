@@ -3,6 +3,8 @@
 modes:
   - attract
   - base
+  - music_selection
+  - music_controller
   - backbox_controller
   - bonus
   - code_base
