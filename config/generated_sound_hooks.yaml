@@ -29,9 +29,6 @@ sound_player:
   dj_attract_music_pool:
     attract_music_pool:
       bus: music
-  dj_ball_intros_pool:
-    ball_intros_pool:
-      bus: music
   dj_theme_70s:
     theme_70s:
       bus: music
@@ -56,17 +53,11 @@ sound_player:
   dj_burnination_background:
     burnination_background:
       bus: music
-  dj_ball_at_launcher:
-    ball_at_launcher:
-      bus: music
   dj_extra_ball_earned:
     extra_ball_earned:
       bus: music
   dj_game_reset:
     game_reset:
-      bus: music
-  dj_game_start:
-    game_start:
       bus: music
   dj_mpf:
     mpf:
@@ -94,6 +85,15 @@ sound_player:
     burnination_mode_song:
       bus: music
       action: stop
+  dj_ball_intros_pool:
+    ball_intros_pool:
+      bus: voice
+  dj_ball_at_launcher:
+    ball_at_launcher:
+      bus: voice
+  dj_game_start:
+    game_start:
+      bus: voice
   dj_ball_end_good_pool:
     ball_end_good_pool:
       bus: voice

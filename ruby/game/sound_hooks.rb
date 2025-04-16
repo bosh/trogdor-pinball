@@ -46,7 +46,6 @@ module TrogBuild
 
     MUSIC_HOOKS = %w(
       attract_music_pool
-      ball_intros_pool
       theme_70s
       theme_chiptune
       theme_heavy_metal
@@ -55,10 +54,8 @@ module TrogBuild
       theme_main
       burnination_mode_song
       burnination_background
-      ball_at_launcher
       extra_ball_earned
       game_reset
-      game_start
       mpf
       videlectrix
       bootup
@@ -72,6 +69,10 @@ module TrogBuild
     )
 
     VOICE_HOOKS = %w(
+      ball_intros_pool
+      ball_at_launcher
+      game_start
+
       ball_end_good_pool
       ball_end_average_pool
       ball_end_poor_pool
