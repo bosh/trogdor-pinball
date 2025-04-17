@@ -22,6 +22,7 @@ random_event_player:
       - pick_track_3
       - pick_track_4
       - pick_track_5
+      - pick_track_6
 
 state_machines:
   music_jukebox:
@@ -34,47 +35,53 @@ state_machines:
         events_when_started: [] # after putting into this state you must choose a picking mode
         # Could put a long timer that automatically picks music if in this state for too long (since it should never stay here)
       music_1:
-        label: Track 1 - Trogdor the Burninator
-        events_when_started: [dj_theme_main]
-      music_2:
-        label: Track 2 - Instrumental Heavy
+        label: Track 1 - Matthew Beckham
         events_when_started: [dj_theme_instrumental_heavy]
+      music_2:
+        label: Track 2 - Chiptune
+        events_when_started: [dj_theme_chiptune]
       music_3:
-        label: Track 3 - 70s
+        label: Track 3 - 70s Cheat
         events_when_started: [dj_theme_70s]
       music_4:
-        label: Track 4 - Chiptune
-        events_when_started: [dj_theme_chiptune]
-      music_5:
-        label: Track 5 - Instrumental Steel
+        label: Track 4 - Poker Night at the Inventory
         events_when_started: [dj_theme_instrumental_steel]
+      music_5:
+        label: Track 5 - Musix Box Rox
+        events_when_started: [dj_theme_music_box]
+      music_6:
+        label: Track 6 - The Four Trogdors
+        events_when_started: [dj_theme_motown]
       quiet:
         label: Turn off music and remain off
         events_when_started: [dj_music_stop]
 
-    # all states: picking_track, music_1, music_2, music_3, music_4, music_5, quiet
+    # all states: picking_track, music_1, music_2, music_3, music_4, music_5, music_6, quiet
     transitions:
       # Automatically transition on start, and when resuming from quiet
       - source: start, quiet
         target: picking_track
-        events: music_controller_begin #TODO this isnt enough for quiet resumption
+        events: music_controller_begin #TODO this isnt enough for quiet resumption because resumption tries to use advance/reverse
 
       # Any state can pick directly
-      - source: picking_track, music_1, music_2, music_3, music_4, music_5, quiet
+      - source: picking_track, music_1, music_2, music_3, music_4, music_5, music_6, quiet
         target: music_1
         events: pick_track_1
-      - source: picking_track, music_1, music_2, music_3, music_4, music_5, quiet
+      - source: picking_track, music_1, music_2, music_3, music_4, music_5, music_6, quiet
         target: music_2
         events: pick_track_2
-      - source: picking_track, music_1, music_2, music_3, music_4, music_5, quiet
+      - source: picking_track, music_1, music_2, music_3, music_4, music_5, music_6, quiet
         target: music_3
         events: pick_track_3
-      - source: picking_track, music_1, music_2, music_3, music_4, music_5, quiet
+      - source: picking_track, music_1, music_2, music_3, music_4, music_5, music_6, quiet
         target: music_4
         events: pick_track_4
-      - source: picking_track, music_1, music_2, music_3, music_4, music_5, quiet
+      - source: picking_track, music_1, music_2, music_3, music_4, music_5, music_6, quiet
         target: music_5
         events: pick_track_5
+      - source: picking_track, music_1, music_2, music_3, music_4, music_5, music_6, quiet
+        target: music_6
+        events: pick_track_6
 
       # Relooping a track
       - source: music_1
@@ -92,6 +99,9 @@ state_machines:
       - source: music_5
         target: music_5
         events: loop_current_track
+      - source: music_6
+        target: music_6
+        events: loop_current_track
 
       # Advancing to next track
       - source: music_1
@@ -107,12 +117,15 @@ state_machines:
         target: music_5
         events: advance_current_track
       - source: music_5
+        target: music_6
+        events: advance_current_track
+      - source: music_6
         target: music_1
         events: advance_current_track
 
       # Reverse to previous track
       - source: music_1
-        target: music_5
+        target: music_6
         events: reverse_current_track
       - source: music_2
         target: music_1
@@ -126,8 +139,11 @@ state_machines:
       - source: music_5
         target: music_4
         events: reverse_current_track
+      - source: music_6
+        target: music_5
+        events: reverse_current_track
 
       # Any track can be quieted
-      - source: music_1, music_2, music_3, music_4, music_5, picking_track
+      - source: music_1, music_2, music_3, music_4, music_5, music_6, picking_track
         target: quiet
         events: music_controller_quiet

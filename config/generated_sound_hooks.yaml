@@ -44,6 +44,12 @@ sound_player:
   dj_theme_instrumental_steel:
     theme_instrumental_steel:
       bus: music
+  dj_theme_motown:
+    theme_motown:
+      bus: music
+  dj_theme_music_box:
+    theme_music_box:
+      bus: music
   dj_theme_main:
     theme_main:
       bus: music

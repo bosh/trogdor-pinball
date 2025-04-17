@@ -51,6 +51,8 @@ module TrogBuild
       theme_heavy_metal
       theme_instrumental_heavy
       theme_instrumental_steel
+      theme_motown
+      theme_music_box
       theme_main
       burnination_mode_song
       burnination_background

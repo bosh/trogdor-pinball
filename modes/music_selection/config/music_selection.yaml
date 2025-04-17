@@ -9,11 +9,12 @@ mode:
 
 mode_settings:
   selectable_items:
-    - music_1 # classic
-    - music_2 # heavy
-    - music_3 # 70s
-    - music_4 # chip
-    - music_5 # steel
+    - music_1 # heavy instrumental
+    - music_2 # chiptune
+    - music_3 # 70s instrumental
+    - music_4 # groove instrumental
+    - music_5 # music box
+    - music_6 # motown
   previous_item_events: reverse_music_selection_carousel
   next_item_events: advance_music_selection_carousel
   select_item_events: s_start_active

@@ -1,27 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://ddn5dimw4gtb7"]
+[gd_scene load_steps=11 format=3 uid="uid://ddn5dimw4gtb7"]
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_djs37"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="2_30ecx"]
 [ext_resource type="Texture2D" uid="uid://bmmj8yrpph5cq" path="res://images/included/base_empty.png" id="2_aopol"]
+[ext_resource type="Texture2D" uid="uid://c8n74lsfudb5j" path="res://images/music_1.jpg" id="3_qpixw"]
+[ext_resource type="FontFile" uid="uid://8fxyhoilejnt" path="res://fonts/everybody-dot-matrix.ttf" id="4_qrlcs"]
+[ext_resource type="Texture2D" uid="uid://c58vhxft1sj8n" path="res://images/music_2.jpg" id="4_vlrw4"]
+[ext_resource type="Texture2D" uid="uid://buc254wx4hr16" path="res://images/music_3.jpg" id="5_g3jtg"]
+[ext_resource type="Texture2D" uid="uid://cadc4w8gomxu6" path="res://images/music_4.jpg" id="6_ugckl"]
+[ext_resource type="Texture2D" uid="uid://f1r2t5qioo7t" path="res://images/music_5.jpg" id="7_qf44x"]
+[ext_resource type="Texture2D" uid="uid://bc4vl0kwhs3da" path="res://images/music_6.jpg" id="8_um5lv"]
 
 [node name="MusicSelection" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_djs37")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1440, 432)
-texture = ExtResource("2_aopol")
-
-[node name="header" type="Label" parent="."]
+[node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 710.0
-offset_top = 24.0
-offset_right = 2259.0
-offset_bottom = 297.0
-theme_override_font_sizes/font_size = 100
-text = "Music Selection:"
-horizontal_alignment = 1
+offset_right = 2880.0
+offset_bottom = 864.0
+color = Color(0.0650388, 0.279252, 0.196636, 1)
 
 [node name="MPFCarousel" type="Control" parent="."]
 layout_mode = 3
@@ -35,66 +34,60 @@ carousel_name = "music_selection"
 
 [node name="music_1" type="Node2D" parent="MPFCarousel"]
 
-[node name="Classic" type="Label" parent="MPFCarousel/music_1"]
-offset_left = 1192.0
-offset_top = 273.0
-offset_right = 1887.0
-offset_bottom = 546.0
-theme_override_font_sizes/font_size = 200
-text = "Track 1"
-horizontal_alignment = 1
+[node name="Heavy Instrumental" type="Sprite2D" parent="MPFCarousel/music_1"]
+position = Vector2(1420, 412)
+texture = ExtResource("3_qpixw")
 
 [node name="music_2" type="Node2D" parent="MPFCarousel"]
 
-[node name="Heavy Metal" type="Label" parent="MPFCarousel/music_2"]
-offset_left = 1192.0
-offset_top = 273.0
-offset_right = 1887.0
-offset_bottom = 546.0
-theme_override_font_sizes/font_size = 200
-text = "Track 2"
-horizontal_alignment = 1
+[node name="Chiptune" type="Sprite2D" parent="MPFCarousel/music_2"]
+position = Vector2(1420, 412)
+texture = ExtResource("4_vlrw4")
 
 [node name="music_3" type="Node2D" parent="MPFCarousel"]
 
-[node name="70s" type="Label" parent="MPFCarousel/music_3"]
-offset_left = 1192.0
-offset_top = 273.0
-offset_right = 1887.0
-offset_bottom = 546.0
-theme_override_font_sizes/font_size = 200
-text = "Track 3"
-horizontal_alignment = 1
+[node name="70s" type="Sprite2D" parent="MPFCarousel/music_3"]
+position = Vector2(1420, 412)
+texture = ExtResource("5_g3jtg")
 
 [node name="music_4" type="Node2D" parent="MPFCarousel"]
 
-[node name="Chiptune" type="Label" parent="MPFCarousel/music_4"]
-offset_left = 1192.0
-offset_top = 273.0
-offset_right = 1887.0
-offset_bottom = 546.0
-theme_override_font_sizes/font_size = 200
-text = "Track 4"
-horizontal_alignment = 1
+[node name="Groove" type="Sprite2D" parent="MPFCarousel/music_4"]
+position = Vector2(1420, 412)
+texture = ExtResource("6_ugckl")
 
 [node name="music_5" type="Node2D" parent="MPFCarousel"]
 
-[node name="Steel" type="Label" parent="MPFCarousel/music_5"]
-offset_left = 1192.0
-offset_top = 273.0
-offset_right = 1887.0
-offset_bottom = 546.0
-theme_override_font_sizes/font_size = 200
-text = "Track 5"
-horizontal_alignment = 1
+[node name="Music Box" type="Sprite2D" parent="MPFCarousel/music_5"]
+position = Vector2(1420, 412)
+texture = ExtResource("7_qf44x")
+
+[node name="music_6" type="Node2D" parent="MPFCarousel"]
+
+[node name="Motown" type="Sprite2D" parent="MPFCarousel/music_6"]
+position = Vector2(1420, 412)
+texture = ExtResource("8_um5lv")
 
 [node name="quiet_mode" type="Node2D" parent="MPFCarousel"]
 
-[node name="Quiet Mode" type="Label" parent="MPFCarousel/quiet_mode"]
-offset_left = 942.0
-offset_top = 273.0
-offset_right = 2075.0
-offset_bottom = 546.0
-theme_override_font_sizes/font_size = 200
+[node name="Quiet Mode" type="Sprite2D" parent="MPFCarousel/quiet_mode"]
+position = Vector2(1420, 412)
+texture = ExtResource("2_aopol")
+
+[node name="Label" type="Label" parent="MPFCarousel/quiet_mode"]
+offset_left = 484.0
+offset_top = 372.0
+offset_right = 2390.0
+offset_bottom = 714.0
+theme_override_fonts/font = ExtResource("4_qrlcs")
+theme_override_font_sizes/font_size = 250
 text = "Quiet Mode"
+
+[node name="header" type="Label" parent="MPFCarousel"]
+offset_left = 690.0
+offset_top = 4.0
+offset_right = 2239.0
+offset_bottom = 277.0
+theme_override_font_sizes/font_size = 100
+text = "Select Music"
 horizontal_alignment = 1
