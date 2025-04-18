@@ -25,6 +25,8 @@ MPF="*res://addons/mpf-gmc/mpf_gmc.gd"
 
 window/size/viewport_width=2880
 window/size/viewport_height=864
+window/size/initial_position_type=0
+window/size/initial_position=Vector2i(2100, 100)
 window/size/resizable=false
 window/size/borderless=true
 mouse_cursor/custom_image="uid://e1lfl52llkvu"
