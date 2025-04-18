@@ -1,20 +1,25 @@
-[gd_resource type="AudioStreamRandomizer" load_steps=6 format=3 uid="uid://dusqlr8wn5g02"]
+[gd_resource type="AudioStreamRandomizer" load_steps=8 format=3 uid="uid://dusqlr8wn5g02"]
 
-[ext_resource type="AudioStream" uid="uid://dq2n81vysfbwf" path="res://sounds/music/theme_70s.mp3" id="1_rg5x7"]
 [ext_resource type="AudioStream" uid="uid://nv2cc3bonqoj" path="res://sounds/music/theme_chiptune.mp3" id="2_3mxoq"]
+[ext_resource type="AudioStream" uid="uid://dn8m4xwtey1wd" path="res://sounds/music/theme_heavy_metal.mp3" id="3_7agx1"]
 [ext_resource type="AudioStream" uid="uid://c3xmmsjbj0ijq" path="res://sounds/music/theme_instrumental_steel.mp3" id="3_8v86s"]
-[ext_resource type="AudioStream" uid="uid://cao0hd2as6pxk" path="res://sounds/music/theme_main.mp3" id="4_luwt0"]
-[ext_resource type="AudioStream" uid="uid://bjsbilj4qxc20" path="res://sounds/music/theme_instrumental_heavy.mp3" id="5_4p7hw"]
+[ext_resource type="AudioStream" uid="uid://cb6kq101gnlij" path="res://sounds/music/theme_70s_vocals.mp3" id="4_csnln"]
+[ext_resource type="AudioStream" uid="uid://cn8upqxme17jj" path="res://sounds/music/theme_adlib_short.mp3" id="5_esxom"]
+[ext_resource type="AudioStream" uid="uid://c7fuovkvhcla8" path="res://sounds/music/theme_attract_misc.mp3" id="6_p4lnd"]
+[ext_resource type="AudioStream" uid="uid://c3kd62tts6f8j" path="res://sounds/music/theme_bad_karaoke.mp3" id="7_ttuct"]
 
 [resource]
-streams_count = 5
-stream_0/stream = ExtResource("1_rg5x7")
-stream_0/weight = 6.0
-stream_1/stream = ExtResource("2_3mxoq")
-stream_1/weight = 3.0
-stream_2/stream = ExtResource("3_8v86s")
-stream_2/weight = 4.0
-stream_3/stream = ExtResource("4_luwt0")
+streams_count = 7
+stream_0/stream = ExtResource("2_3mxoq")
+stream_0/weight = 8.0
+stream_1/stream = ExtResource("3_8v86s")
+stream_1/weight = 10.0
+stream_2/stream = ExtResource("3_7agx1")
+stream_2/weight = 6.0
+stream_3/stream = ExtResource("4_csnln")
 stream_3/weight = 5.0
-stream_4/stream = ExtResource("5_4p7hw")
-stream_4/weight = 4.0
+stream_4/stream = ExtResource("5_esxom")
+stream_4/weight = 2.0
+stream_5/stream = ExtResource("6_p4lnd")
+stream_5/weight = 3.0
+stream_6/stream = ExtResource("7_ttuct")

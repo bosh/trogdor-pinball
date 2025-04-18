@@ -84,6 +84,7 @@ theme_override_font_sizes/font_size = 250
 text = "Quiet Mode"
 
 [node name="header" type="Label" parent="MPFCarousel"]
+layout_mode = 0
 offset_left = 690.0
 offset_top = 4.0
 offset_right = 2239.0
