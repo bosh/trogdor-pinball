@@ -32,30 +32,39 @@ sound_player:
   dj_theme_70s:
     theme_70s:
       bus: music
+      events_when_stopped: music_track_finished
   dj_theme_chiptune:
     theme_chiptune:
       bus: music
+      events_when_stopped: music_track_finished
   dj_theme_heavy_metal:
     theme_heavy_metal:
       bus: music
+      events_when_stopped: music_track_finished
   dj_theme_instrumental_heavy:
     theme_instrumental_heavy:
       bus: music
+      events_when_stopped: music_track_finished
   dj_theme_instrumental_steel:
     theme_instrumental_steel:
       bus: music
+      events_when_stopped: music_track_finished
   dj_theme_motown:
     theme_motown:
       bus: music
+      events_when_stopped: music_track_finished
   dj_theme_music_box:
     theme_music_box:
       bus: music
+      events_when_stopped: music_track_finished
   dj_theme_main:
     theme_main:
       bus: music
+      events_when_stopped: special_music_finished
   dj_burnination_mode_song:
     burnination_mode_song:
       bus: music
+      events_when_stopped: special_music_finished
   dj_burnination_background:
     burnination_background:
       bus: music
@@ -91,6 +100,7 @@ sound_player:
     burnination_mode_song:
       bus: music
       action: stop
+      events_when_stopped: special_music_finished
   dj_ball_intros_pool:
     ball_intros_pool:
       bus: voice

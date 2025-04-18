@@ -8,14 +8,6 @@ module TrogBuild
 
     DEFAULT_BUS = 'effects'
 
-    COMPLETION_EVENTS = {
-      'ball_end_zero' => 'dj_end_quip_complete',
-      'ball_end_poor_pool' => 'dj_end_quip_complete',
-      'ball_end_average_pool' => 'dj_end_quip_complete',
-      'ball_end_good_pool' => 'dj_end_quip_complete',
-      'ball_end_amazing' => 'dj_end_quip_complete',
-    }
-
     EFFECTS_HOOKS = %w(
       pop_pool
       burnination_pop_hit_pool
@@ -69,6 +61,23 @@ module TrogBuild
       burnination_background
       burnination_mode_song
     )
+
+    COMPLETION_EVENTS = {
+      'ball_end_zero' => 'dj_end_quip_complete',
+      'ball_end_poor_pool' => 'dj_end_quip_complete',
+      'ball_end_average_pool' => 'dj_end_quip_complete',
+      'ball_end_good_pool' => 'dj_end_quip_complete',
+      'ball_end_amazing' => 'dj_end_quip_complete',
+      'theme_70s' => 'music_track_finished',
+      'theme_chiptune' => 'music_track_finished',
+      'theme_heavy_metal' => 'music_track_finished',
+      'theme_instrumental_heavy' => 'music_track_finished',
+      'theme_instrumental_steel' => 'music_track_finished',
+      'theme_motown' => 'music_track_finished',
+      'theme_music_box' => 'music_track_finished',
+      'theme_main' => 'special_music_finished',
+      'burnination_mode_song' => 'special_music_finished',
+    }
 
     VOICE_HOOKS = %w(
       ball_intros_pool

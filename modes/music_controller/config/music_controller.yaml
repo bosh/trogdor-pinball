@@ -12,6 +12,10 @@ event_player:
   ball_started:
     - pick_random_track
     - mode_start_music_selection # Carousel on every ball. Could make this configurable in settings
+  music_track_finished:
+    - advance_current_track
+  special_track_finished:
+    - loop_current_track # For now, restores previously playing track. In the future the special tracks probably want more control
 
 random_event_player:
   pick_random_track:
