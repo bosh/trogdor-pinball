@@ -23,13 +23,13 @@ switches:
 ## J1 Cabinet Left
   s_start:
     number: 0024-8
-    tags: start
+    tags: start, text_input_select
 
   # 9 available
 
   s_left_flipper:
     number: 0024-10
-    tags: left_flipper
+    tags: left_flipper, text_input_left
   s_left_flipper_secondary:
     number: 0024-11
     tags: mini_flipper
@@ -43,7 +43,7 @@ switches:
 ## J9 Cabinet Right
   s_right_flipper:
     number: 0024-16
-    tags: right_flipper
+    tags: right_flipper, text_input_right
   s_right_flipper_secondary:
     number: 0024-17
   # 18, 19, 20, 21, 22, 23, 24 available

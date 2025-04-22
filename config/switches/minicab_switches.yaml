@@ -9,15 +9,15 @@ switches:
 
   s_left_flipper:
     number: 3208-1
-    tags: left_flipper
+    tags: left_flipper, text_input_left
 
   s_right_flipper:
     number: 3208-3
-    tags: right_flipper
+    tags: right_flipper, text_input_right
 
   s_start:
     number: 3208-4
-    tags: start
+    tags: start, text_input_select
 
 ## 3208:J3
   s_coin_door:
