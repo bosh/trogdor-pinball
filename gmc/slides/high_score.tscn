@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dxpvno44c1578"]
+[gd_scene load_steps=6 format=3 uid="uid://dxpvno44c1578"]
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_ko5a2"]
 [ext_resource type="Texture2D" uid="uid://3uspw0udlcto" path="res://images/included/trogface.png" id="2_e8urn"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_text_input.gd" id="3_u6yse"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_qd6me"]
+[ext_resource type="FontFile" uid="uid://dhi02px4iy4jf" path="res://fonts/lappy-486-extended.ttf" id="4_torhw"]
 
 [node name="HighScore" type="Control"]
 layout_mode = 3
@@ -41,6 +42,7 @@ offset_left = 1246.0
 offset_top = 749.0
 offset_right = 2485.0
 offset_bottom = 891.0
+theme_override_fonts/font = ExtResource("4_torhw")
 theme_override_font_sizes/font_size = 50
 text = "Use Flippers to scroll and Start to enter your initials"
 
@@ -50,6 +52,7 @@ offset_left = 1229.0
 offset_top = 61.0
 offset_right = 2517.0
 offset_bottom = 231.0
+theme_override_fonts/font = ExtResource("4_torhw")
 theme_override_font_sizes/font_size = 100
 text = "High Score Category Name"
 script = ExtResource("4_qd6me")
@@ -57,10 +60,12 @@ variable_type = 1
 variable_name = "award"
 
 [node name="event_player" type="Label" parent="."]
+layout_mode = 0
 offset_left = 973.0
 offset_top = 292.0
 offset_right = 1636.0
 offset_bottom = 552.0
+theme_override_fonts/font = ExtResource("4_torhw")
 theme_override_font_sizes/font_size = 150
 text = "Player N:"
 script = ExtResource("4_qd6me")

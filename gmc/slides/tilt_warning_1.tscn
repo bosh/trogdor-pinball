@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://ddqg8k15i6ll7"]
+[gd_scene load_steps=7 format=3 uid="uid://ddqg8k15i6ll7"]
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_nvv85"]
 [ext_resource type="Texture2D" uid="uid://3uspw0udlcto" path="res://images/included/trogface.png" id="2_8a5e4"]
+[ext_resource type="FontFile" uid="uid://dhi02px4iy4jf" path="res://fonts/lappy-486-extended.ttf" id="3_mixho"]
 [ext_resource type="FontFile" uid="uid://dbblxkk3tmho5" path="res://fonts/preeow-paper.ttf" id="3_yrrrd"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_egah8"]
 
@@ -25,6 +26,7 @@ offset_left = 1129.0
 offset_top = 409.0
 offset_right = 2352.0
 offset_bottom = 904.0
+theme_override_fonts/font = ExtResource("3_mixho")
 theme_override_font_sizes/font_size = 200
 text = "Tilt Warning!"
 
@@ -37,6 +39,7 @@ offset_bottom = 236.0
 theme = SubResource("Theme_h7at2")
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("3_mixho")
 theme_override_font_sizes/font_size = 80
 text = "Man: 1"
 horizontal_alignment = 1
@@ -52,6 +55,7 @@ offset_right = 1852.0
 offset_bottom = 171.0
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("3_mixho")
 theme_override_font_sizes/font_size = 100
 text = "Score: 1,234,000"
 horizontal_alignment = 1
@@ -69,6 +73,7 @@ offset_bottom = 864.0
 color = Color(0.943914, 0.529938, 0.203057, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 2855.0
 offset_right = 2880.0
 offset_bottom = 864.0

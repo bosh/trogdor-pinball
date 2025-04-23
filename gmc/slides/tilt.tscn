@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bewopa2kmr8hy"]
+[gd_scene load_steps=7 format=3 uid="uid://bewopa2kmr8hy"]
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_ji27p"]
 [ext_resource type="Texture2D" uid="uid://3uspw0udlcto" path="res://images/included/trogface.png" id="2_cd05m"]
+[ext_resource type="FontFile" uid="uid://dhi02px4iy4jf" path="res://fonts/lappy-486-extended.ttf" id="3_263pw"]
 [ext_resource type="FontFile" uid="uid://dbblxkk3tmho5" path="res://fonts/preeow-paper.ttf" id="3_as5ws"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_ayl5g"]
 
@@ -25,6 +26,7 @@ offset_left = 1132.0
 offset_top = 187.0
 offset_right = 1734.0
 offset_bottom = 630.0
+theme_override_fonts/font = ExtResource("3_263pw")
 theme_override_font_sizes/font_size = 250
 text = "TILT!"
 
@@ -38,6 +40,7 @@ rotation = 3.14159
 theme = SubResource("Theme_kudbo")
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("3_263pw")
 theme_override_font_sizes/font_size = 80
 text = "Man: 1"
 horizontal_alignment = 1
@@ -54,6 +57,7 @@ offset_bottom = 1052.0
 rotation = 3.14159
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("3_263pw")
 theme_override_font_sizes/font_size = 100
 text = "Score: 1,234,000"
 horizontal_alignment = 1
@@ -70,6 +74,7 @@ offset_bottom = 864.0
 color = Color(0.549529, 0.0705812, 0.12824, 1)
 
 [node name="ColorRect" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
 offset_left = 2855.0
 offset_right = 2880.0
 offset_bottom = 864.0

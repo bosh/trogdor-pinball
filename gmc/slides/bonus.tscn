@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://5y7wh8nfffm1"]
+[gd_scene load_steps=6 format=3 uid="uid://5y7wh8nfffm1"]
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_miwhv"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_conditional_children.gd" id="2_6y1qa"]
 [ext_resource type="Texture2D" uid="uid://h5mdw87chf05" path="res://images/included/looting.png" id="2_u32y8"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_b6tp2"]
+[ext_resource type="FontFile" uid="uid://dhi02px4iy4jf" path="res://fonts/lappy-486-extended.ttf" id="4_1i0xs"]
 
 [node name="Bonus" type="Control"]
 layout_mode = 3
@@ -36,6 +37,7 @@ visible = false
 [node name="end of ball text" type="Label" parent="MPFConditionalChildren/initial"]
 offset_right = 538.0
 offset_bottom = 511.0
+theme_override_fonts/font = ExtResource("4_1i0xs")
 theme_override_font_sizes/font_size = 133
 text = "End of Ball 1"
 script = ExtResource("3_b6tp2")
@@ -47,6 +49,7 @@ template_string = "End of Ball %s"
 [node name="text" type="Label" parent="MPFConditionalChildren/__default__"]
 offset_right = 577.0
 offset_bottom = 655.0
+theme_override_fonts/font = ExtResource("4_1i0xs")
 theme_override_font_sizes/font_size = 122
 text = "Bonus Entry Text"
 script = ExtResource("3_b6tp2")
@@ -58,6 +61,7 @@ offset_left = 4.0
 offset_top = 175.0
 offset_right = 581.0
 offset_bottom = 830.0
+theme_override_fonts/font = ExtResource("4_1i0xs")
 theme_override_font_sizes/font_size = 133
 text = "100,000"
 script = ExtResource("3_b6tp2")
@@ -71,6 +75,7 @@ visible = false
 [node name="Label" type="Label" parent="MPFConditionalChildren/subtotal"]
 offset_right = 999.0
 offset_bottom = 655.0
+theme_override_fonts/font = ExtResource("4_1i0xs")
 theme_override_font_sizes/font_size = 122
 text = "Bonus Subtotal"
 
@@ -79,6 +84,7 @@ offset_left = 4.0
 offset_top = 175.0
 offset_right = 581.0
 offset_bottom = 830.0
+theme_override_fonts/font = ExtResource("4_1i0xs")
 theme_override_font_sizes/font_size = 133
 text = "100000"
 script = ExtResource("3_b6tp2")
@@ -92,6 +98,7 @@ visible = false
 [node name="Label" type="Label" parent="MPFConditionalChildren/total"]
 offset_right = 999.0
 offset_bottom = 655.0
+theme_override_fonts/font = ExtResource("4_1i0xs")
 theme_override_font_sizes/font_size = 122
 text = "Total Bonus"
 
@@ -100,6 +107,7 @@ offset_left = 4.0
 offset_top = 175.0
 offset_right = 581.0
 offset_bottom = 830.0
+theme_override_fonts/font = ExtResource("4_1i0xs")
 theme_override_font_sizes/font_size = 133
 text = "100,000"
 script = ExtResource("3_b6tp2")
@@ -113,6 +121,7 @@ visible = false
 [node name="Label" type="Label" parent="MPFConditionalChildren/multiplier"]
 offset_right = 999.0
 offset_bottom = 655.0
+theme_override_fonts/font = ExtResource("4_1i0xs")
 theme_override_font_sizes/font_size = 122
 text = "Bonus Multiplier"
 
@@ -121,6 +130,7 @@ offset_left = 4.0
 offset_top = 175.0
 offset_right = 581.0
 offset_bottom = 830.0
+theme_override_fonts/font = ExtResource("4_1i0xs")
 theme_override_font_sizes/font_size = 133
 text = "100,000"
 script = ExtResource("3_b6tp2")
@@ -135,5 +145,6 @@ offset_top = 39.0
 offset_right = 3071.0
 offset_bottom = 346.0
 rotation = 0.785398
+theme_override_fonts/font = ExtResource("4_1i0xs")
 theme_override_font_sizes/font_size = 225
 text = "BONUS"

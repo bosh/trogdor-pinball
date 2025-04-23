@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://1muw6d5hkqte"]
+[gd_scene load_steps=7 format=3 uid="uid://1muw6d5hkqte"]
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_grcpe"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_bsdxn"]
 [ext_resource type="Texture2D" uid="uid://kxdeyef78vrh" path="res://images/included/base.png" id="2_ekj0u"]
 [ext_resource type="FontFile" uid="uid://dbblxkk3tmho5" path="res://fonts/preeow-paper.ttf" id="2_j6mlq"]
+[ext_resource type="FontFile" uid="uid://dhi02px4iy4jf" path="res://fonts/lappy-486-extended.ttf" id="4_l2x7l"]
 
 [sub_resource type="Theme" id="Theme_t7ujo"]
 Label/font_sizes/font_size = 40
@@ -27,6 +28,7 @@ offset_bottom = 219.0
 theme = SubResource("Theme_t7ujo")
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_l2x7l")
 theme_override_font_sizes/font_size = 80
 text = "Man: 1"
 horizontal_alignment = 1
@@ -42,6 +44,7 @@ offset_right = 998.0
 offset_bottom = 220.0
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_l2x7l")
 theme_override_font_sizes/font_size = 125
 text = "Score: 1,000,000"
 horizontal_alignment = 1
@@ -59,6 +62,7 @@ offset_right = 1374.0
 offset_bottom = 141.0
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_l2x7l")
 theme_override_font_sizes/font_size = 75
 text = "(123,000)"
 horizontal_alignment = 1
