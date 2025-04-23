@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://1muw6d5hkqte"]
+[gd_scene load_steps=11 format=3 uid="uid://1muw6d5hkqte"]
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_grcpe"]
 [ext_resource type="Texture2D" uid="uid://c7rku52o4c103" path="res://images/attract_bg.jpg" id="2_quk18"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://7olwyw21atb2" path="res://images/included/FAST logo.png" id="7_ardjk"]
 [ext_resource type="Texture2D" uid="uid://dvkseqcqepdtk" path="res://images/included/hsr logo.jpg" id="8_0ti1i"]
 [ext_resource type="FontFile" uid="uid://b23p1dqnrdsfu" path="res://fonts/AHNBH.ttf" id="9_ne241"]
+[ext_resource type="FontFile" uid="uid://dhi02px4iy4jf" path="res://fonts/lappy-486-extended.ttf" id="10_8giox"]
 
 [node name="Attract" type="Control"]
 layout_mode = 3
@@ -54,6 +55,7 @@ variable_type = 2
 variable_name = "credits_string"
 
 [node name="logos" type="Node2D" parent="MPFCarousel"]
+visible = false
 
 [node name="blackout" type="ColorRect" parent="MPFCarousel/logos"]
 offset_left = -20.0
@@ -232,4 +234,218 @@ horizontal_alignment = 2
 script = ExtResource("5_ose3f")
 variable_type = 2
 variable_name = "player3_score"
+comma_separate = true
+
+[node name="grand_champ" type="Node2D" parent="MPFCarousel"]
+visible = false
+
+[node name="label" type="Label" parent="MPFCarousel/grand_champ"]
+offset_left = 1226.0
+offset_top = 53.0
+offset_right = 2778.0
+offset_bottom = 258.0
+theme_override_fonts/font = ExtResource("10_8giox")
+theme_override_font_sizes/font_size = 150
+text = "GRAND CHAMP"
+horizontal_alignment = 2
+script = ExtResource("5_ose3f")
+variable_type = 2
+variable_name = "score1_label"
+
+[node name="name" type="Label" parent="MPFCarousel/grand_champ"]
+offset_left = 1734.0
+offset_top = 215.0
+offset_right = 2782.0
+offset_bottom = 420.0
+theme_override_fonts/font = ExtResource("10_8giox")
+theme_override_font_sizes/font_size = 150
+text = "BOSH"
+horizontal_alignment = 2
+script = ExtResource("5_ose3f")
+variable_type = 2
+variable_name = "score1_name"
+
+[node name="value" type="Label" parent="MPFCarousel/grand_champ"]
+offset_left = 1021.0
+offset_top = 377.0
+offset_right = 2781.0
+offset_bottom = 582.0
+theme_override_fonts/font = ExtResource("10_8giox")
+theme_override_font_sizes/font_size = 150
+text = "1,234,567"
+horizontal_alignment = 2
+script = ExtResource("5_ose3f")
+variable_type = 2
+variable_name = "score1_value"
+comma_separate = true
+
+[node name="high_score_1" type="Node2D" parent="MPFCarousel"]
+visible = false
+
+[node name="label" type="Label" parent="MPFCarousel/high_score_1"]
+offset_left = 1226.0
+offset_top = 53.0
+offset_right = 2778.0
+offset_bottom = 258.0
+theme_override_fonts/font = ExtResource("10_8giox")
+theme_override_font_sizes/font_size = 150
+text = "HIGH SCORE 1"
+horizontal_alignment = 2
+script = ExtResource("5_ose3f")
+variable_type = 2
+variable_name = "score2_label"
+
+[node name="name" type="Label" parent="MPFCarousel/high_score_1"]
+offset_left = 1734.0
+offset_top = 215.0
+offset_right = 2782.0
+offset_bottom = 420.0
+theme_override_fonts/font = ExtResource("10_8giox")
+theme_override_font_sizes/font_size = 150
+text = "BOSH"
+horizontal_alignment = 2
+script = ExtResource("5_ose3f")
+variable_type = 2
+variable_name = "score2_name"
+
+[node name="value" type="Label" parent="MPFCarousel/high_score_1"]
+offset_left = 1021.0
+offset_top = 377.0
+offset_right = 2781.0
+offset_bottom = 582.0
+theme_override_fonts/font = ExtResource("10_8giox")
+theme_override_font_sizes/font_size = 150
+text = "1,234,560"
+horizontal_alignment = 2
+script = ExtResource("5_ose3f")
+variable_type = 2
+variable_name = "score2_value"
+comma_separate = true
+
+[node name="high_score_2" type="Node2D" parent="MPFCarousel"]
+visible = false
+
+[node name="label" type="Label" parent="MPFCarousel/high_score_2"]
+offset_left = 1226.0
+offset_top = 53.0
+offset_right = 2778.0
+offset_bottom = 258.0
+theme_override_fonts/font = ExtResource("10_8giox")
+theme_override_font_sizes/font_size = 150
+text = "HIGH SCORE 2"
+horizontal_alignment = 2
+script = ExtResource("5_ose3f")
+variable_type = 2
+variable_name = "score3_label"
+
+[node name="name" type="Label" parent="MPFCarousel/high_score_2"]
+offset_left = 1734.0
+offset_top = 215.0
+offset_right = 2782.0
+offset_bottom = 420.0
+theme_override_fonts/font = ExtResource("10_8giox")
+theme_override_font_sizes/font_size = 150
+text = "BOSH"
+horizontal_alignment = 2
+script = ExtResource("5_ose3f")
+variable_type = 2
+variable_name = "score3_name"
+
+[node name="value" type="Label" parent="MPFCarousel/high_score_2"]
+offset_left = 1021.0
+offset_top = 377.0
+offset_right = 2781.0
+offset_bottom = 582.0
+theme_override_fonts/font = ExtResource("10_8giox")
+theme_override_font_sizes/font_size = 150
+text = "1,234,500"
+horizontal_alignment = 2
+script = ExtResource("5_ose3f")
+variable_type = 2
+variable_name = "score3_value"
+comma_separate = true
+
+[node name="high_score_3" type="Node2D" parent="MPFCarousel"]
+visible = false
+
+[node name="label" type="Label" parent="MPFCarousel/high_score_3"]
+offset_left = 1226.0
+offset_top = 53.0
+offset_right = 2778.0
+offset_bottom = 258.0
+theme_override_fonts/font = ExtResource("10_8giox")
+theme_override_font_sizes/font_size = 150
+text = "HIGH SCORE 3"
+horizontal_alignment = 2
+script = ExtResource("5_ose3f")
+variable_type = 2
+variable_name = "score4_label"
+
+[node name="name" type="Label" parent="MPFCarousel/high_score_3"]
+offset_left = 1734.0
+offset_top = 215.0
+offset_right = 2782.0
+offset_bottom = 420.0
+theme_override_fonts/font = ExtResource("10_8giox")
+theme_override_font_sizes/font_size = 150
+text = "BOSH"
+horizontal_alignment = 2
+script = ExtResource("5_ose3f")
+variable_type = 2
+variable_name = "score4_name"
+
+[node name="value" type="Label" parent="MPFCarousel/high_score_3"]
+offset_left = 1021.0
+offset_top = 377.0
+offset_right = 2781.0
+offset_bottom = 582.0
+theme_override_fonts/font = ExtResource("10_8giox")
+theme_override_font_sizes/font_size = 150
+text = "1,234,000"
+horizontal_alignment = 2
+script = ExtResource("5_ose3f")
+variable_type = 2
+variable_name = "score4_value"
+comma_separate = true
+
+[node name="high_score_4" type="Node2D" parent="MPFCarousel"]
+
+[node name="label" type="Label" parent="MPFCarousel/high_score_4"]
+offset_left = 1226.0
+offset_top = 53.0
+offset_right = 2778.0
+offset_bottom = 258.0
+theme_override_fonts/font = ExtResource("10_8giox")
+theme_override_font_sizes/font_size = 150
+text = "HIGH SCORE 4"
+horizontal_alignment = 2
+script = ExtResource("5_ose3f")
+variable_type = 2
+variable_name = "score5_label"
+
+[node name="name" type="Label" parent="MPFCarousel/high_score_4"]
+offset_left = 1734.0
+offset_top = 215.0
+offset_right = 2782.0
+offset_bottom = 420.0
+theme_override_fonts/font = ExtResource("10_8giox")
+theme_override_font_sizes/font_size = 150
+text = "BOSH"
+horizontal_alignment = 2
+script = ExtResource("5_ose3f")
+variable_type = 2
+variable_name = "score5_name"
+
+[node name="value" type="Label" parent="MPFCarousel/high_score_4"]
+offset_left = 1021.0
+offset_top = 377.0
+offset_right = 2781.0
+offset_bottom = 582.0
+theme_override_fonts/font = ExtResource("10_8giox")
+theme_override_font_sizes/font_size = 150
+text = "1,230,000"
+horizontal_alignment = 2
+script = ExtResource("5_ose3f")
+variable_type = 2
+variable_name = "score5_value"
 comma_separate = true
