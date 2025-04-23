@@ -17,6 +17,7 @@ timers:
     restart_on_complete: false
 
 event_player:
+  play_end_quip.1: [dj_music_stop]
   play_end_quip{current_player.ball_score < 100}: [dj_ball_end_zero]
   play_end_quip{current_player.ball_score < 1000 and current_player.ball_score >= 100}: [dj_ball_end_poor_pool]
   play_end_quip{current_player.ball_score < 5000 and current_player.ball_score >= 1000}: [dj_ball_end_average_pool]
