@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxpvno44c1578"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_ko5a2"]
+[ext_resource type="Texture2D" uid="uid://3uspw0udlcto" path="res://images/included/trogface.png" id="2_e8urn"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_text_input.gd" id="3_u6yse"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_qd6me"]
+
+[node name="HighScore" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ko5a2")
+
+[node name="Trogface" type="Sprite2D" parent="."]
+position = Vector2(1440, 432)
+texture = ExtResource("2_e8urn")
+
+[node name="MPFTextInput" type="HFlowContainer" parent="." node_paths=PackedStringArray("display_node")]
+layout_mode = 0
+offset_left = 929.0
+offset_top = 530.0
+offset_right = 1463.0
+offset_bottom = 689.0
+scale = Vector2(3.65, 3.65)
+script = ExtResource("3_u6yse")
+grid_width = 30
+display_node = NodePath("../RichTextLabel")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 1637.0
+offset_top = 245.0
+offset_right = 2838.0
+offset_bottom = 505.0
+theme_override_font_sizes/normal_font_size = 200
+bbcode_enabled = true
+text = "[pulse freq=3.0 color=#ff00ffff ease=-1.0]A[/pulse]"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1246.0
+offset_top = 749.0
+offset_right = 2485.0
+offset_bottom = 891.0
+theme_override_font_sizes/font_size = 50
+text = "Use Flippers to scroll and Start to enter your initials"
+
+[node name="event_award" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1229.0
+offset_top = 61.0
+offset_right = 2517.0
+offset_bottom = 231.0
+theme_override_font_sizes/font_size = 100
+text = "High Score Category Name"
+script = ExtResource("4_qd6me")
+variable_type = 1
+variable_name = "award"
+
+[node name="event_player" type="Label" parent="."]
+offset_left = 973.0
+offset_top = 292.0
+offset_right = 1636.0
+offset_bottom = 552.0
+theme_override_font_sizes/font_size = 150
+text = "Player N:"
+script = ExtResource("4_qd6me")
+variable_type = 1
+variable_name = "player_num"
+template_string = "Player %s:"
