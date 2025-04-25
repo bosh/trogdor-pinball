@@ -24,47 +24,62 @@ offset_bottom = 689.0
 scale = Vector2(3.65, 3.65)
 script = ExtResource("3_u6yse")
 grid_width = 30
+max_length = 4
 display_node = NodePath("../RichTextLabel")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 1637.0
-offset_top = 245.0
-offset_right = 2838.0
-offset_bottom = 505.0
+offset_left = 1884.0
+offset_top = 256.0
+offset_right = 3072.0
+offset_bottom = 548.0
 theme_override_font_sizes/normal_font_size = 200
 bbcode_enabled = true
 text = "[pulse freq=3.0 color=#ff00ffff ease=-1.0]A[/pulse]"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1246.0
-offset_top = 749.0
-offset_right = 2485.0
-offset_bottom = 891.0
+offset_left = 1184.0
+offset_top = 751.0
+offset_right = 2583.0
+offset_bottom = 893.0
 theme_override_fonts/font = ExtResource("4_torhw")
 theme_override_font_sizes/font_size = 50
-text = "Use Flippers to scroll and Start to enter your initials"
+text = "Use Flippers to scroll then press Start to enter your initials"
+
+[node name="event_value" type="Label" parent="."]
+offset_left = 2110.0
+offset_top = 35.0
+offset_right = 2881.0
+offset_bottom = 214.0
+theme_override_fonts/font = ExtResource("4_torhw")
+theme_override_font_sizes/font_size = 150
+text = "1,234,567"
+script = ExtResource("4_qd6me")
+variable_type = 1
+variable_name = "value"
+comma_separate = true
 
 [node name="event_award" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1229.0
-offset_top = 61.0
-offset_right = 2517.0
-offset_bottom = 231.0
+offset_left = 831.0
+offset_top = 62.0
+offset_right = 2071.0
+offset_bottom = 232.0
 theme_override_fonts/font = ExtResource("4_torhw")
 theme_override_font_sizes/font_size = 100
 text = "High Score Category Name"
+horizontal_alignment = 2
 script = ExtResource("4_qd6me")
 variable_type = 1
 variable_name = "award"
 
 [node name="event_player" type="Label" parent="."]
 layout_mode = 0
-offset_left = 973.0
-offset_top = 292.0
-offset_right = 1636.0
-offset_bottom = 552.0
+offset_left = 1220.0
+offset_top = 303.0
+offset_right = 1883.0
+offset_bottom = 563.0
 theme_override_fonts/font = ExtResource("4_torhw")
 theme_override_font_sizes/font_size = 150
 text = "Player N:"
