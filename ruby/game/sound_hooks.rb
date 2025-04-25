@@ -77,6 +77,7 @@ module TrogBuild
       'theme_music_box' => 'music_track_finished',
       'theme_main' => 'special_music_finished',
       'burnination_mode_song' => 'special_music_finished',
+      'attract_music_pool' => 'music_track_finished'
     }
 
     VOICE_HOOKS = %w(

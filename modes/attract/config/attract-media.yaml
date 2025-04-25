@@ -9,9 +9,16 @@ slide_player:
       action: remove
 
 event_player:
+  # Play pool music on start, flipper cancel, or when a track finishes
   mode_attract_started:
     - dj_attract_music_pool
-  flipper_cancel: #Does not actually happen in attract it seems
+  flipper_cancel:
     - dj_attract_music_pool
+  music_track_finished:
+    - dj_attract_music_pool
+
+  # Stop music when flipper cradle (as a manual override) and on mode end
+  flipper_cradle:
+    - dj_music_stop
   mode_attract_will_stop:
     - dj_music_stop

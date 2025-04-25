@@ -29,6 +29,7 @@ sound_player:
   dj_attract_music_pool:
     attract_music_pool:
       bus: music
+      events_when_stopped: music_track_finished
   dj_theme_70s:
     theme_70s:
       bus: music
