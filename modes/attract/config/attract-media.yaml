@@ -15,7 +15,7 @@ event_player:
   flipper_cancel:
     - dj_attract_music_pool
   music_track_finished:
-    - dj_attract_music_pool
+    - dj_attract_music_pool|1000ms
 
   # Stop music when flipper cradle (as a manual override) and on mode end
   flipper_cradle:
