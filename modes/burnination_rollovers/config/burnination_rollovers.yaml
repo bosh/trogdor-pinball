@@ -69,7 +69,9 @@ shot_profiles:
     advance_on_hit: false
     states:
       - name: 'off_target'
-        show: 'nonobjective_rollover'
+        show: 'on_color'
+        show_tokens:
+          color: '331111'
       - name: 'on_target'
         show: 'objective_rollover'
 
