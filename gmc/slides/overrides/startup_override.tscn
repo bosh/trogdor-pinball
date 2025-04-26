@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://poj0twvqrnkc"]
 
-[ext_resource type="Script" path="res://addons/mpf-gmc/slides/startup.gd" id="1_ggmrt"]
+[ext_resource type="Script" uid="uid://detmlgkxupgk7" path="res://addons/mpf-gmc/slides/startup.gd" id="1_ggmrt"]
 [ext_resource type="Texture2D" uid="uid://dounln3l35d26" path="res://addons/mpf-gmc/images/logo_mpf.png" id="2_egi36"]
 [ext_resource type="AudioStream" uid="uid://dma3440obvo81" path="res://sounds/tunes/mpf.wav" id="3_li7q1"]
-[ext_resource type="Script" path="res://slides/overrides/logo_sound_player.gd" id="4_spa5l"]
+[ext_resource type="Script" uid="uid://0xd70pscacc0" path="res://slides/overrides/logo_sound_player.gd" id="4_spa5l"]
 
 [node name="MPFSlide" type="Control"]
 layout_mode = 3

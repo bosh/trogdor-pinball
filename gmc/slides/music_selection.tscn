@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://ddn5dimw4gtb7"]
 
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_djs37"]
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="2_30ecx"]
+[ext_resource type="Script" uid="uid://6mdcui7wkc47" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_djs37"]
+[ext_resource type="Script" uid="uid://bnssoxshet8be" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="2_30ecx"]
 [ext_resource type="Texture2D" uid="uid://bmmj8yrpph5cq" path="res://images/included/base_empty.png" id="2_aopol"]
 [ext_resource type="Texture2D" uid="uid://c8n74lsfudb5j" path="res://images/music_1.jpg" id="3_qpixw"]
 [ext_resource type="FontFile" uid="uid://8fxyhoilejnt" path="res://fonts/everybody-dot-matrix.ttf" id="4_qrlcs"]

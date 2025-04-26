@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://5y7wh8nfffm1"]
 
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_miwhv"]
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_conditional_children.gd" id="2_6y1qa"]
+[ext_resource type="Script" uid="uid://6mdcui7wkc47" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_miwhv"]
+[ext_resource type="Script" uid="uid://cl2fwawg56l5e" path="res://addons/mpf-gmc/classes/mpf_conditional_children.gd" id="2_6y1qa"]
 [ext_resource type="Texture2D" uid="uid://h5mdw87chf05" path="res://images/included/looting.png" id="2_u32y8"]
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_b6tp2"]
+[ext_resource type="Script" uid="uid://cm7sg7wq6hq8s" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_b6tp2"]
 [ext_resource type="FontFile" uid="uid://dhi02px4iy4jf" path="res://fonts/lappy-486-extended.ttf" id="4_1i0xs"]
 
 [node name="Bonus" type="Control"]
