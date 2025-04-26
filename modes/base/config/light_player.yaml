@@ -119,6 +119,12 @@ light_player:
   "{device.switches.s_right_flipper_secondary.state == 1}":
     l_mini_cab_right_secondary: cc00cc
 
+  #Start button lights when you press it
+  "{device.switches.s_start.state == 0}":
+    l_start: off
+  "{device.switches.s_start.state == 1}":
+    l_start: on
+
   # Trough status GI light
   "{device.switches.s_trough_ball_jam.state == 1}":
     l_pf_2: cc3333
