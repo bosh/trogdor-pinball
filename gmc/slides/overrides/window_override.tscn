@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ds4gduf8660uj"]
+[gd_scene load_steps=11 format=3 uid="uid://dsm5b6gyeowis"]
 
 [ext_resource type="Script" uid="uid://i2lf36tt7jt1" path="res://addons/mpf-gmc/classes/mpf_window.gd" id="1_ixxnq"]
 [ext_resource type="Shader" uid="uid://fdutviby2krc" path="res://addons/mpf-gmc/resources/virtual_dmd.gdshader" id="2_cbmcr"]
