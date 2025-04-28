@@ -30,10 +30,60 @@ offset_bottom = 20.0
 script = ExtResource("3_ivb84")
 carousel_name = "attract"
 
-[node name="title" type="Sprite2D" parent="MPFCarousel"]
+[node name="title" type="Node2D" parent="MPFCarousel"]
 position = Vector2(1420, 412)
 scale = Vector2(1.75182, 3.40157)
+
+[node name="image" type="Sprite2D" parent="MPFCarousel/title"]
+scale = Vector2(1, 1)
 texture = ExtResource("3_08cu3")
+
+[node name="byline" type="Node2D" parent="MPFCarousel"]
+position = Vector2(1420, 412)
+scale = Vector2(1.75182, 3.40157)
+
+[node name="event" type="Label" parent="MPFCarousel/byline"]
+offset_left = -695.848
+offset_top = -64.97
+offset_right = 94.1522
+offset_bottom = 68.03
+theme_override_colors/font_shadow_color = Color(0.388235, 0.054902, 0.0509804, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("10_8giox")
+theme_override_font_sizes/font_size = 100
+text = "GSPF 2025"
+
+[node name="name" type="Label" parent="MPFCarousel/byline"]
+offset_left = 301.401
+offset_top = 45.8612
+offset_right = 1091.4
+offset_bottom = 178.861
+theme_override_colors/font_shadow_color = Color(0.388235, 0.054902, 0.0509804, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("10_8giox")
+theme_override_font_sizes/font_size = 60
+text = "by Alex Lobascio"
+
+[node name="name" type="Label" parent="MPFCarousel/byline/name"]
+offset_left = 79.346
+offset_top = -158.162
+offset_right = 869.346
+offset_bottom = -25.1623
+theme_override_colors/font_shadow_color = Color(0.388235, 0.054902, 0.0509804, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("10_8giox")
+theme_override_font_sizes/font_size = 45
+text = "trogdorpinball.com"
 
 [node name="credits" type="Label" parent="MPFCarousel"]
 layout_mode = 0

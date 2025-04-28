@@ -6,6 +6,7 @@ config:
 mode_settings:
   selectable_items:
     - title
+    - byline
     - credits
     - logos
     - last_scores_1p{machine.player1_score and not machine.player2_score}
