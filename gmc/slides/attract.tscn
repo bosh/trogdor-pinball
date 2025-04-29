@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://1muw6d5hkqte"]
+[gd_scene load_steps=12 format=3 uid="uid://1muw6d5hkqte"]
 
 [ext_resource type="Script" uid="uid://6mdcui7wkc47" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_grcpe"]
 [ext_resource type="Texture2D" uid="uid://c7rku52o4c103" path="res://images/attract_bg.jpg" id="2_quk18"]
 [ext_resource type="Texture2D" uid="uid://n4cm0hpnab06" path="res://images/included/trogdor_nameplate.jpg" id="3_08cu3"]
 [ext_resource type="Script" uid="uid://bnssoxshet8be" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="3_ivb84"]
 [ext_resource type="Texture2D" uid="uid://dounln3l35d26" path="res://addons/mpf-gmc/images/logo_mpf.png" id="5_5y4l4"]
+[ext_resource type="Texture2D" uid="uid://cp8gsdaumsu5g" path="res://images/included/cheat graffiti.png" id="5_bo6y5"]
 [ext_resource type="Script" uid="uid://cm7sg7wq6hq8s" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="5_ose3f"]
 [ext_resource type="Texture2D" uid="uid://7olwyw21atb2" path="res://images/included/FAST logo.png" id="7_ardjk"]
 [ext_resource type="Texture2D" uid="uid://dvkseqcqepdtk" path="res://images/included/hsr logo.jpg" id="8_0ti1i"]
@@ -34,11 +35,41 @@ carousel_name = "attract"
 position = Vector2(1420, 412)
 scale = Vector2(1.75182, 3.40157)
 
-[node name="image" type="Sprite2D" parent="MPFCarousel/title"]
-scale = Vector2(1, 1)
+[node name="blackout" type="ColorRect" parent="MPFCarousel/title"]
+offset_left = -822.002
+offset_top = -127.0
+offset_right = 821.998
+offset_bottom = 127.0
+color = Color(0, 0, 0, 1)
+
+[node name="name" type="Sprite2D" parent="MPFCarousel/title"]
+position = Vector2(-3.05176e-05, -24.4004)
+scale = Vector2(0.702085, 0.425926)
 texture = ExtResource("3_08cu3")
 
+[node name="cheat" type="Sprite2D" parent="MPFCarousel/title"]
+position = Vector2(743.798, 92.3103)
+scale = Vector2(1, 0.465158)
+texture = ExtResource("5_bo6y5")
+
+[node name="subtitle" type="Label" parent="MPFCarousel/title"]
+offset_left = -23.9751
+offset_top = 44.6852
+offset_right = 527.025
+offset_bottom = 124.685
+rotation = -0.0628319
+scale = Vector2(1.505, 1)
+theme_override_colors/font_color = Color(0.701961, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.650336, 0.584727, 0.168464, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("9_ne241")
+theme_override_font_sizes/font_size = 45
+text = "THE BURNINATOR"
+
 [node name="byline" type="Node2D" parent="MPFCarousel"]
+visible = false
 position = Vector2(1420, 412)
 scale = Vector2(1.75182, 3.40157)
 
@@ -57,6 +88,19 @@ theme_override_fonts/font = ExtResource("10_8giox")
 theme_override_font_sizes/font_size = 100
 text = "GSPF 2025"
 
+[node name="website" type="Label" parent="MPFCarousel/byline"]
+offset_left = 380.747
+offset_top = -112.301
+offset_right = 1170.75
+offset_bottom = 20.6989
+theme_override_colors/font_shadow_color = Color(0.388235, 0.054902, 0.0509804, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("10_8giox")
+theme_override_font_sizes/font_size = 45
+text = "trogdorpinball.com"
+
 [node name="name" type="Label" parent="MPFCarousel/byline"]
 offset_left = 301.401
 offset_top = 45.8612
@@ -72,20 +116,8 @@ theme_override_fonts/font = ExtResource("10_8giox")
 theme_override_font_sizes/font_size = 60
 text = "by Alex Lobascio"
 
-[node name="name" type="Label" parent="MPFCarousel/byline/name"]
-offset_left = 79.346
-offset_top = -158.162
-offset_right = 869.346
-offset_bottom = -25.1623
-theme_override_colors/font_shadow_color = Color(0.388235, 0.054902, 0.0509804, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 2
-theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("10_8giox")
-theme_override_font_sizes/font_size = 45
-text = "trogdorpinball.com"
-
 [node name="credits" type="Label" parent="MPFCarousel"]
+visible = false
 layout_mode = 0
 offset_left = 185.0
 offset_top = 1.0
@@ -106,6 +138,7 @@ variable_type = 2
 variable_name = "credits_string"
 
 [node name="logos" type="Node2D" parent="MPFCarousel"]
+visible = false
 
 [node name="blackout" type="ColorRect" parent="MPFCarousel/logos"]
 offset_left = -20.0
@@ -139,6 +172,7 @@ theme_override_font_sizes/font_size = 45
 text = "Trogdor (C) 2003 Strong Bad"
 
 [node name="last_scores_1p" type="Node2D" parent="MPFCarousel"]
+visible = false
 
 [node name="player1_score" type="Label" parent="MPFCarousel/last_scores_1p"]
 offset_right = 40.0
@@ -154,6 +188,7 @@ variable_name = "player1_score"
 comma_separate = true
 
 [node name="last_scores_2p" type="Node2D" parent="MPFCarousel"]
+visible = false
 
 [node name="player1_score" type="Label" parent="MPFCarousel/last_scores_2p"]
 offset_right = 1002.0
@@ -185,6 +220,7 @@ variable_name = "player2_score"
 comma_separate = true
 
 [node name="last_scores_3p" type="Node2D" parent="MPFCarousel"]
+visible = false
 
 [node name="player1_score" type="Label" parent="MPFCarousel/last_scores_3p"]
 offset_right = 40.0
@@ -231,6 +267,7 @@ variable_name = "player3_score"
 comma_separate = true
 
 [node name="last_scores_4p" type="Node2D" parent="MPFCarousel"]
+visible = false
 
 [node name="player1_score" type="Label" parent="MPFCarousel/last_scores_4p"]
 offset_left = 72.0
@@ -295,6 +332,7 @@ variable_name = "player3_score"
 comma_separate = true
 
 [node name="grand_champ" type="Node2D" parent="MPFCarousel"]
+visible = false
 
 [node name="label" type="Label" parent="MPFCarousel/grand_champ"]
 offset_left = 1226.0
@@ -337,6 +375,7 @@ variable_name = "score1_value"
 comma_separate = true
 
 [node name="high_score_1" type="Node2D" parent="MPFCarousel"]
+visible = false
 
 [node name="label" type="Label" parent="MPFCarousel/high_score_1"]
 offset_left = 1226.0
@@ -379,6 +418,7 @@ variable_name = "score2_value"
 comma_separate = true
 
 [node name="high_score_2" type="Node2D" parent="MPFCarousel"]
+visible = false
 
 [node name="label" type="Label" parent="MPFCarousel/high_score_2"]
 offset_left = 1226.0
@@ -421,6 +461,7 @@ variable_name = "score3_value"
 comma_separate = true
 
 [node name="high_score_3" type="Node2D" parent="MPFCarousel"]
+visible = false
 
 [node name="label" type="Label" parent="MPFCarousel/high_score_3"]
 offset_left = 1226.0
@@ -463,6 +504,7 @@ variable_name = "score4_value"
 comma_separate = true
 
 [node name="high_score_4" type="Node2D" parent="MPFCarousel"]
+visible = false
 
 [node name="label" type="Label" parent="MPFCarousel/high_score_4"]
 offset_left = 1226.0
