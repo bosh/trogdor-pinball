@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://1muw6d5hkqte"]
+[gd_scene load_steps=13 format=3 uid="uid://1muw6d5hkqte"]
 
 [ext_resource type="Script" uid="uid://6mdcui7wkc47" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_grcpe"]
 [ext_resource type="Texture2D" uid="uid://c7rku52o4c103" path="res://images/attract_bg.jpg" id="2_quk18"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dvkseqcqepdtk" path="res://images/included/hsr logo.jpg" id="8_0ti1i"]
 [ext_resource type="FontFile" uid="uid://b23p1dqnrdsfu" path="res://fonts/AHNBH.ttf" id="9_ne241"]
 [ext_resource type="FontFile" uid="uid://dhi02px4iy4jf" path="res://fonts/lappy-486-extended.ttf" id="10_8giox"]
+[ext_resource type="Theme" uid="uid://cx5kw5e8kdnr6" path="res://themes/attract_scores_text.tres" id="12_bvyxe"]
 
 [node name="Attract" type="Control"]
 layout_mode = 3
@@ -69,7 +70,6 @@ theme_override_font_sizes/font_size = 45
 text = "THE BURNINATOR"
 
 [node name="byline" type="Node2D" parent="MPFCarousel"]
-visible = false
 position = Vector2(1420, 412)
 scale = Vector2(1.75182, 3.40157)
 
@@ -117,7 +117,6 @@ theme_override_font_sizes/font_size = 60
 text = "by Alex Lobascio"
 
 [node name="credits" type="Label" parent="MPFCarousel"]
-visible = false
 layout_mode = 0
 offset_left = 185.0
 offset_top = 1.0
@@ -138,7 +137,6 @@ variable_type = 2
 variable_name = "credits_string"
 
 [node name="logos" type="Node2D" parent="MPFCarousel"]
-visible = false
 
 [node name="blackout" type="ColorRect" parent="MPFCarousel/logos"]
 offset_left = -20.0
@@ -172,14 +170,11 @@ theme_override_font_sizes/font_size = 45
 text = "Trogdor (C) 2003 Strong Bad"
 
 [node name="last_scores_1p" type="Node2D" parent="MPFCarousel"]
-visible = false
 
 [node name="player1_score" type="Label" parent="MPFCarousel/last_scores_1p"]
 offset_right = 40.0
 offset_bottom = 23.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("10_8giox")
+theme = ExtResource("12_bvyxe")
 theme_override_font_sizes/font_size = 200
 text = "1,234,567"
 script = ExtResource("5_ose3f")
@@ -188,11 +183,11 @@ variable_name = "player1_score"
 comma_separate = true
 
 [node name="last_scores_2p" type="Node2D" parent="MPFCarousel"]
-visible = false
 
 [node name="player1_score" type="Label" parent="MPFCarousel/last_scores_2p"]
 offset_right = 1002.0
 offset_bottom = 273.0
+theme = ExtResource("12_bvyxe")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("10_8giox")
@@ -208,6 +203,7 @@ offset_left = 1683.0
 offset_top = -14.0
 offset_right = 2853.0
 offset_bottom = 259.0
+theme = ExtResource("12_bvyxe")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("10_8giox")
@@ -220,11 +216,11 @@ variable_name = "player2_score"
 comma_separate = true
 
 [node name="last_scores_3p" type="Node2D" parent="MPFCarousel"]
-visible = false
 
 [node name="player1_score" type="Label" parent="MPFCarousel/last_scores_3p"]
 offset_right = 40.0
 offset_bottom = 23.0
+theme = ExtResource("12_bvyxe")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("10_8giox")
@@ -240,6 +236,7 @@ offset_left = 1947.0
 offset_top = -14.0
 offset_right = 2853.0
 offset_bottom = 259.0
+theme = ExtResource("12_bvyxe")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("10_8giox")
@@ -256,6 +253,7 @@ offset_left = -9.0
 offset_top = 567.0
 offset_right = 897.0
 offset_bottom = 840.0
+theme = ExtResource("12_bvyxe")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("10_8giox")
@@ -267,13 +265,13 @@ variable_name = "player3_score"
 comma_separate = true
 
 [node name="last_scores_4p" type="Node2D" parent="MPFCarousel"]
-visible = false
 
 [node name="player1_score" type="Label" parent="MPFCarousel/last_scores_4p"]
 offset_left = 72.0
 offset_top = 25.0
 offset_right = 1005.0
 offset_bottom = 264.0
+theme = ExtResource("12_bvyxe")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("10_8giox")
@@ -289,6 +287,7 @@ offset_left = 1866.0
 offset_top = 21.0
 offset_right = 2799.0
 offset_bottom = 294.0
+theme = ExtResource("12_bvyxe")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("10_8giox")
@@ -305,6 +304,7 @@ offset_left = 82.0
 offset_top = 557.0
 offset_right = 1015.0
 offset_bottom = 830.0
+theme = ExtResource("12_bvyxe")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("10_8giox")
@@ -320,6 +320,7 @@ offset_left = 1605.0
 offset_top = 565.0
 offset_right = 2799.0
 offset_bottom = 838.0
+theme = ExtResource("12_bvyxe")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("10_8giox")
@@ -332,13 +333,13 @@ variable_name = "player3_score"
 comma_separate = true
 
 [node name="grand_champ" type="Node2D" parent="MPFCarousel"]
-visible = false
 
 [node name="label" type="Label" parent="MPFCarousel/grand_champ"]
 offset_left = 1226.0
 offset_top = 53.0
 offset_right = 2778.0
 offset_bottom = 258.0
+theme = ExtResource("12_bvyxe")
 theme_override_fonts/font = ExtResource("10_8giox")
 theme_override_font_sizes/font_size = 150
 text = "GRAND CHAMP"
@@ -352,6 +353,7 @@ offset_left = 1734.0
 offset_top = 215.0
 offset_right = 2782.0
 offset_bottom = 420.0
+theme = ExtResource("12_bvyxe")
 theme_override_fonts/font = ExtResource("10_8giox")
 theme_override_font_sizes/font_size = 150
 text = "BOSH"
@@ -365,6 +367,7 @@ offset_left = 1021.0
 offset_top = 377.0
 offset_right = 2781.0
 offset_bottom = 582.0
+theme = ExtResource("12_bvyxe")
 theme_override_fonts/font = ExtResource("10_8giox")
 theme_override_font_sizes/font_size = 150
 text = "1,234,567"
@@ -375,13 +378,13 @@ variable_name = "score1_value"
 comma_separate = true
 
 [node name="high_score_1" type="Node2D" parent="MPFCarousel"]
-visible = false
 
 [node name="label" type="Label" parent="MPFCarousel/high_score_1"]
 offset_left = 1226.0
 offset_top = 53.0
 offset_right = 2778.0
 offset_bottom = 258.0
+theme = ExtResource("12_bvyxe")
 theme_override_fonts/font = ExtResource("10_8giox")
 theme_override_font_sizes/font_size = 150
 text = "HIGH SCORE 1"
@@ -395,6 +398,7 @@ offset_left = 1734.0
 offset_top = 215.0
 offset_right = 2782.0
 offset_bottom = 420.0
+theme = ExtResource("12_bvyxe")
 theme_override_fonts/font = ExtResource("10_8giox")
 theme_override_font_sizes/font_size = 150
 text = "BOSH"
@@ -408,6 +412,7 @@ offset_left = 1021.0
 offset_top = 377.0
 offset_right = 2781.0
 offset_bottom = 582.0
+theme = ExtResource("12_bvyxe")
 theme_override_fonts/font = ExtResource("10_8giox")
 theme_override_font_sizes/font_size = 150
 text = "1,234,560"
@@ -418,13 +423,13 @@ variable_name = "score2_value"
 comma_separate = true
 
 [node name="high_score_2" type="Node2D" parent="MPFCarousel"]
-visible = false
 
 [node name="label" type="Label" parent="MPFCarousel/high_score_2"]
 offset_left = 1226.0
 offset_top = 53.0
 offset_right = 2778.0
 offset_bottom = 258.0
+theme = ExtResource("12_bvyxe")
 theme_override_fonts/font = ExtResource("10_8giox")
 theme_override_font_sizes/font_size = 150
 text = "HIGH SCORE 2"
@@ -438,6 +443,7 @@ offset_left = 1734.0
 offset_top = 215.0
 offset_right = 2782.0
 offset_bottom = 420.0
+theme = ExtResource("12_bvyxe")
 theme_override_fonts/font = ExtResource("10_8giox")
 theme_override_font_sizes/font_size = 150
 text = "BOSH"
@@ -451,6 +457,7 @@ offset_left = 1021.0
 offset_top = 377.0
 offset_right = 2781.0
 offset_bottom = 582.0
+theme = ExtResource("12_bvyxe")
 theme_override_fonts/font = ExtResource("10_8giox")
 theme_override_font_sizes/font_size = 150
 text = "1,234,500"
@@ -461,13 +468,13 @@ variable_name = "score3_value"
 comma_separate = true
 
 [node name="high_score_3" type="Node2D" parent="MPFCarousel"]
-visible = false
 
 [node name="label" type="Label" parent="MPFCarousel/high_score_3"]
 offset_left = 1226.0
 offset_top = 53.0
 offset_right = 2778.0
 offset_bottom = 258.0
+theme = ExtResource("12_bvyxe")
 theme_override_fonts/font = ExtResource("10_8giox")
 theme_override_font_sizes/font_size = 150
 text = "HIGH SCORE 3"
@@ -481,6 +488,7 @@ offset_left = 1734.0
 offset_top = 215.0
 offset_right = 2782.0
 offset_bottom = 420.0
+theme = ExtResource("12_bvyxe")
 theme_override_fonts/font = ExtResource("10_8giox")
 theme_override_font_sizes/font_size = 150
 text = "BOSH"
@@ -494,6 +502,7 @@ offset_left = 1021.0
 offset_top = 377.0
 offset_right = 2781.0
 offset_bottom = 582.0
+theme = ExtResource("12_bvyxe")
 theme_override_fonts/font = ExtResource("10_8giox")
 theme_override_font_sizes/font_size = 150
 text = "1,234,000"
@@ -504,13 +513,13 @@ variable_name = "score4_value"
 comma_separate = true
 
 [node name="high_score_4" type="Node2D" parent="MPFCarousel"]
-visible = false
 
 [node name="label" type="Label" parent="MPFCarousel/high_score_4"]
 offset_left = 1226.0
 offset_top = 53.0
 offset_right = 2778.0
 offset_bottom = 258.0
+theme = ExtResource("12_bvyxe")
 theme_override_fonts/font = ExtResource("10_8giox")
 theme_override_font_sizes/font_size = 150
 text = "HIGH SCORE 4"
@@ -524,6 +533,7 @@ offset_left = 1734.0
 offset_top = 215.0
 offset_right = 2782.0
 offset_bottom = 420.0
+theme = ExtResource("12_bvyxe")
 theme_override_fonts/font = ExtResource("10_8giox")
 theme_override_font_sizes/font_size = 150
 text = "BOSH"
@@ -537,6 +547,7 @@ offset_left = 1021.0
 offset_top = 377.0
 offset_right = 2781.0
 offset_bottom = 582.0
+theme = ExtResource("12_bvyxe")
 theme_override_fonts/font = ExtResource("10_8giox")
 theme_override_font_sizes/font_size = 150
 text = "1,230,000"
