@@ -78,8 +78,8 @@ Game features include:
 
 ## Development
 
-Currently built on mpf v0.80.0.dev5
-and edge mpf-gmc (on Godot v4.3)
+Currently built on mpf v0.80.0.dev6
+and edge mpf-gmc (on Godot v4.4)
 with monitor v0.57.1
 on windows and linux
 
