@@ -74,18 +74,18 @@ position = Vector2(1420, 412)
 scale = Vector2(1.75182, 3.40157)
 
 [node name="event" type="Label" parent="MPFCarousel/byline"]
-offset_left = -695.848
-offset_top = -64.97
-offset_right = 94.1522
-offset_bottom = 68.03
+offset_left = -727.244
+offset_top = -73.7895
+offset_right = 62.7565
+offset_bottom = 105.211
 theme_override_colors/font_shadow_color = Color(0.388235, 0.054902, 0.0509804, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 2
-theme_override_constants/outline_size = 2
-theme_override_constants/shadow_outline_size = 0
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 2
 theme_override_fonts/font = ExtResource("10_8giox")
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 150
 text = "GSPF 2025"
 
 [node name="website" type="Label" parent="MPFCarousel/byline"]
@@ -101,11 +101,24 @@ theme_override_fonts/font = ExtResource("10_8giox")
 theme_override_font_sizes/font_size = 45
 text = "trogdorpinball.com"
 
+[node name="github" type="Label" parent="MPFCarousel/byline"]
+offset_left = 604.514
+offset_top = 82.6089
+offset_right = 1394.52
+offset_bottom = 215.609
+theme_override_colors/font_shadow_color = Color(0.388235, 0.054902, 0.0509804, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("10_8giox")
+theme_override_font_sizes/font_size = 22
+text = "github.com/bosh"
+
 [node name="name" type="Label" parent="MPFCarousel/byline"]
-offset_left = 301.401
-offset_top = 45.8612
-offset_right = 1091.4
-offset_bottom = 178.861
+offset_left = 305.397
+offset_top = 24.4005
+offset_right = 1095.4
+offset_bottom = 157.4
 theme_override_colors/font_shadow_color = Color(0.388235, 0.054902, 0.0509804, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 2
