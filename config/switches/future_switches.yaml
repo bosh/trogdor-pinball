@@ -77,7 +77,7 @@ switches:
     number: 862
     platform: smart_virtual
 
-  # 7 Blue standup switches, CW from 8oclock to 12oclock
+  # 6 Blue standup switches, CW from 8oclock to 12oclock
   s_blue_standup_1:
     number: 871
     platform: smart_virtual
@@ -100,10 +100,6 @@ switches:
     tags: playfield_active, blue_standup
   s_blue_standup_6:
     number: 876
-    platform: smart_virtual
-    tags: playfield_active, blue_standup
-  s_blue_standup_7:
-    number: 877
     platform: smart_virtual
     tags: playfield_active, blue_standup
 
