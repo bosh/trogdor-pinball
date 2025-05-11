@@ -8,114 +8,100 @@
 coils:
 
 #Board 3208
-  # J4
+## A J4
   c_auto_plunger:
     number: 3208-0
     default_pulse_ms: settings.auto_plunger_coil_power
-
-  c_trough_eject:
-    number: 3208-1
-    default_pulse_ms: settings.trough_eject_coil_power
-
-
-  c_flipper_right_full:
-    number: 3208-2
-    default_pulse_ms: settings.flipper_main_coil_power
-
-  c_flipper_right_hold:
-    number: 3208-3
-    default_hold_power: 0.5
-    # default_hold_power: settings.flipper_hold_coil_power
-    allow_enable: true
-
-  c_right_sling:
-    number: 3208-4
-    default_pulse_ms: settings.slingshot_power
-
-  c_left_sling:
-    number: 3208-5
-    default_pulse_ms: settings.slingshot_power
-
-  c_flipper_left_hold:
-    number: 3208-6
-    default_hold_power: 0.5
-    # default_hold_power: settings.flipper_hold_coil_power
-    allow_enable: true
-
-  c_flipper_left_full:
-    number: 3208-7
-    default_pulse_ms: settings.flipper_main_coil_power
-
-# 1616
-  # J3
-  c_gate_left:
-    number: 1616-0
-    default_pulse_ms: settings.gate_power
-    default_hold_power: 0.375
-  c_gate_right:
-    number: 1616-1
-    default_pulse_ms: settings.gate_power
-    default_hold_power: 0.375
-
-  c_slot_bank_right_drop:
-    number: 1616-2
-    default_pulse_ms: settings.slot_bank_knockdown_power
-  c_slot_bank_center_drop:
-    number: 1616-3
-    default_pulse_ms: settings.slot_bank_knockdown_power
-
-  c_pop_right:
-    number: 1616-4
-    default_pulse_ms: settings.pop_bumper_power
-  c_pop_center:
-    number: 1616-5
-    default_pulse_ms: settings.pop_bumper_power
-  c_pop_left:
-    number: 1616-6
-    default_pulse_ms: settings.pop_bumper_power
-
-  c_slot_bank_reset:
-    number: 1616-7 #moved from blown up 13
-    default_pulse_ms: settings.slot_bank_reset_power
-
-  # J4
-  c_orbit_diverter_full:
-    number: 1616-8
-    default_pulse_ms: settings.diverter_flipper_power
-    default_hold_power: .125
-
-  c_orbit_diverter_hold:
-    number: 1616-9
-    default_hold_power: .5
-    allow_enable: true
-
-  c_flipper_upper_full:
-    number: 1616-10
-    default_pulse_ms: settings.upper_flipper_main_coil_power
-
-  c_flipper_upper_hold:
-    number: 1616-11
-    default_hold_power: .5
-    allow_enable: true
-
-  c_vuk:
-    number: 1616-12
-    default_pulse_ms: settings.vuk_power
-
-#  c_slot_bank_left_drop:
-#    number: 1616-x #13 unavailable, possible after repair
-
   c_right_outlane_post:
-    number: 1616-14
+    number: 3208-1
     allow_enable: true
     default_pulse_ms: settings.outlane_post_power
     default_hold_power: .375
-
-  c_saver_post:
-    number: 1616-15
+  c_trough_eject:
+    number: 3208-2
+    default_pulse_ms: settings.trough_eject_coil_power
+  c_flipper_left_full:
+    number: 3208-3
+    default_pulse_ms: settings.flipper_main_coil_power
+  c_flipper_left_hold:
+    number: 3208-4
+    default_hold_power: 0.5
+    # default_hold_power: settings.flipper_hold_coil_power
     allow_enable: true
-    default_pulse_ms: settings.saver_post_power
-    default_hold_power: .375
+  c_flipper_right_hold:
+    number: 3208-5
+    default_hold_power: 0.5
+    # default_hold_power: settings.flipper_hold_coil_power
+    allow_enable: true
+  c_flipper_right_full:
+    number: 3208-6
+    default_pulse_ms: settings.flipper_main_coil_power
+  c_pop_left: #TEMP while 1616-13 is out of commission
+    number: 3208-7
+    default_pulse_ms: settings.pop_bumper_power
+  # c_saver_post:
+  #   number: 1616-15
+  #   allow_enable: true
+  #   default_pulse_ms: settings.saver_post_power
+  #   default_hold_power: .375
+
+# 1616
+## A J3
+  c_right_sling:
+    number: 1616-0
+    default_pulse_ms: settings.slingshot_power
+  c_left_sling:
+    number: 1616-1
+    default_pulse_ms: settings.slingshot_power
+  c_flipper_upper_full:
+    number: 1616-2
+    default_pulse_ms: settings.upper_flipper_main_coil_power
+  c_flipper_upper_hold:
+    number: 1616-3
+    default_hold_power: .5
+    allow_enable: true
+  c_subway_vuk:
+    number: 1616-4
+  c_slot_bank_left_drop:
+    number: 1616-5
+    default_pulse_ms: settings.slot_bank_knockdown_power
+  c_slot_bank_center_drop:
+    number: 1616-6
+    default_pulse_ms: settings.slot_bank_knockdown_power
+  c_slot_bank_right_drop:
+    number: 1616-7
+    default_pulse_ms: settings.slot_bank_knockdown_power
+
+## B J4
+  c_slot_bank_reset:
+    number: 1616-8
+    default_pulse_ms: settings.slot_bank_reset_power
+  c_gate_left:
+    number: 1616-9
+    default_pulse_ms: settings.gate_power
+    default_hold_power: 0.375
+  c_orbit_diverter_full:
+    number: 1616=10
+    default_pulse_ms: settings.diverter_flipper_power
+    default_hold_power: .125
+  # c_orbit_diverter_hold:
+  #   number: 1616-x #not enough drivers available
+  #   default_hold_power: .5
+  #   allow_enable: true
+  c_pop_center:
+    number: 1616-11
+    default_pulse_ms: settings.pop_bumper_power
+  c_pop_right:
+    number: 1616-12
+    default_pulse_ms: settings.pop_bumper_power
+  # 13 broken for now
+  c_gate_right:
+    number: 1616-14
+    default_pulse_ms: settings.gate_power
+    default_hold_power: 0.375
+  c_vuk:
+    number: 1616-15
+    default_pulse_ms: settings.vuk_power
 
 # 0024 drivers for LEDs
   # J1
