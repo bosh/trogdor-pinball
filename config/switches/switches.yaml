@@ -3,152 +3,162 @@
 switches:
 
 #IO 3208
-## J8
-  s_vuk_presence:
+
+## A J8
+  s_drop_bank_right:
     number: 3208-0
     type: 'NC'
-
-  s_spinner_right:
+  s_drop_bank_center:
     number: 3208-1
-    tags: playfield_active
-
-  s_wireform_right_top:
+    type: 'NC'
+  s_drop_bank_left:
     number: 3208-2
     type: 'NC'
+  s_horseshoe_right: #proxy
+    number: 3208-3
     tags: playfield_active
-
-  # 3 4 5 6 available
-
-  s_spinner_left:
+  s_horseshoe_left: #proxy
+    number: 3208-4
+    tags: playfield_active
+  s_captive_ball_presence: #small proxy, might be NC
+    number: 3208-5
+    tags: playfield_active #unsure due to how it'll be triggered
+  s_spinner_right: #opto, double reports spins, might be NC?
+    number: 3208-6
+    tags: playfield_active
+  s_wireform_right_top: #opto
     number: 3208-7
+    type: 'NC'
     tags: playfield_active
 
-## J3
-  # s_coin_door:
-  #   number: 3208-8 # Disconnect provided on J3 header, but declared in cabinet or minicab switch configs
-
-  # s_proximity_test:
-  #   number: 3208-8
-  #   tags: playfield_active # Also used switch 8 as an easy disconnect test input
-
-  s_upper_flipper_eos:
+## B J3
+  s_subway_entrance: #opto
+    number: 3208-8
+    tags: playfield_active
+  s_spinner_left:
     number: 3208-9
+    tags: playfield_active
+  s_upper_flipper_eos:
+    number: 3208-10
     type: 'NC'
-
-  # 10 available
-
-  s_left_outer_lane:
-    number: 3208-11
-    tags: playfield_active
-
-  s_left_inner_lane:
-    number: 3208-12
-    tags: playfield_active
-
   s_left_flipper_eos:
+    number: 3208-11
+    type: 'NC'
+  s_left_sling: # Parallel switch pair
+    number: 3208-12
+  s_left_inner_lane:
     number: 3208-13
+    tags: playfield_active
+  s_left_outer_lane:
+    number: 3208-14
+    tags: playfield_active
+  s_subway_vuk_presence: #opto, probably nc
+    number: 3208-15
     type: 'NC'
 
-  # 14 available
-
-  s_left_sling: # Parallel switch pair
-    number: 3208-15
-
-## J6
-  s_trough_ball_1:
+## C J6
+  s_trough_ball_1: #opto
     number: 3208-16
     type: 'NC'
-
-  s_trough_ball_jam:
+  s_trough_ball_jam: #opto
     number: 3208-17
     type: 'NC'
-
-  s_trough_ball_2:
-    number: 3208-18
-
-  s_trough_ball_3:
-    number: 3208-19
-
-  s_trough_ball_4:
-    number: 3208-20
-
-  s_trough_ball_5:
-    number: 3208-21
-
-  # 22 23 available
-
-## J9
-  # 24 available
-
-  s_right_outer_lane:
-    number: 3208-25
-    tags: playfield_active
-
-  s_right_inner_lane:
-    number: 3208-26
-    tags: playfield_active
-
-  # 27 available
-
   s_right_flipper_eos:
-    number: 3208-28
+    number: 3208-18
     type: 'NC'
-
   s_right_sling: # Parallel switch pair
-    number: 3208-29
+    number: 3208-19
+  s_trough_ball_5:
+    number: 3208-20
+  s_trough_ball_4:
+    number: 3208-21
+  s_trough_ball_3:
+    number: 3208-22
+  s_trough_ball_2:
+    number: 3208-23
 
+## D J9
+  s_wireform_s_entrance: #opto
+    number: 831
+    platform: smart_virtual
+    tags: playfield_active
+  s_wireform_s_top: #opto, which is the real one?
+    number: 832
+    platform: smart_virtual
+    tags: playfield_active
+
+  s_vuk_presence:
+    number: 3208-25
+    type: 'NC' #might be an opto? needs distinguishing from subway vuk anyway
+  s_launch_exit: #proxy
+    number: 3208-26
+  s_elbow_lower: #proxy
+    number: 3208-27
+    tags: playfield_active
+  s_elbow_upper: #proxy
+    number: 3208-28
+    tags: playfield_active
+  s_right_outer_lane:
+    number: 3208-29
+    tags: playfield_active
+  s_right_inner_lane:
+    number: 3208-30
+    tags: playfield_active
   s_plunger: # shooter lane presence
     number: 3208-31
 
-
 #IO 1616
-## J7
-  s_burn_n:
+## A J7
+  s_pop_left:
     number: 1616-0
-    tags: playfield_active
-  s_burn_r:
+
+  # 6 Blue standup switches, CCW from 12:00 back to 8:00
+  s_blue_standup_1:
     number: 1616-1
+    tags: playfield_active, blue_standup
+  s_blue_standup_2:
+    number: 1616-2
+    tags: playfield_active, blue_standup
+  s_blue_standup_3:
+    number: 1616-3
+    tags: playfield_active, blue_standup
+  s_blue_standup_4:
+    number: 1616-4
+    tags: playfield_active, blue_standup
+  s_blue_standup_5:
+    number: 1616-5
+    tags: playfield_active, blue_standup
+  s_blue_standup_6:
+    number: 1616-6
+    tags: playfield_active, blue_standup
+  s_left_orbit_outer: #proxy
+    number: 1616-7
+    tags: playfield_active
+
+## B J8
+  s_burn_b:
+    number: 1616-8
     tags: playfield_active
   s_burn_u:
-    number: 1616-2
-    tags: playfield_active
-  s_burn_b:
-    number: 1616-3
-    tags: playfield_active
-  s_burn_standup:
-    number: 1616-4
-    tags: playfield_active
-  # 5 6 7 available
-
-## J8
-  s_pop_left:
-    number: 1616-8
-  s_pop_center:
     number: 1616-9
-  s_pop_right:
+    tags: playfield_active
+  s_burn_r:
     number: 1616-10
-
-  # 11 available
-
-  s_orbit_diverter_eos:
+    tags: playfield_active
+  s_burn_n:
+    number: 1616-11
+    tags: playfield_active
+  s_right_orbit_outer:
     number: 1616-12
-    type: 'NO'
-
-  s_drop_bank_right:
+    tags: playfield_active
+  s_pop_right:
     number: 1616-13
-    type: 'NC'
-  s_drop_bank_center:
+  s_pop_center:
     number: 1616-14
-    type: 'NC'
-  s_drop_bank_left:
+  s_burn_standup:
     number: 1616-15
-    type: 'NC'
+    tags: playfield_active
 
-# Starting balls when virtual
-virtual_platform_start_active_switches:
-  - s_trough_ball_1
-  - s_trough_ball_2
-  - s_trough_ball_3
 
 # Audio warning on coin door open/close
 event_player:

@@ -3,110 +3,34 @@
 # Switches that exist in the plan but are not yet physically installed
 
 switches:
-  # Orbit proxy detectors
-  s_left_orbit_outer:
-    number: 814
+  s_orbit_diverter_eos:
+    number: 801
     platform: smart_virtual
-    tags: playfield_active
+    type: 'NO'
+
   s_left_orbit_inner:
-    number: 815
-    platform: smart_virtual
-    tags: playfield_active
-  s_right_orbit_outer:
-    number: 816
+    number: 802
     platform: smart_virtual
     tags: playfield_active
   s_right_orbit_inner:
-    number: 817
-    platform: smart_virtual
-    tags: playfield_active
-
-  # U Horseshoe possibly opto
-  s_horseshoe_left:
-    number: 818
-    platform: smart_virtual
-    tags: playfield_active
-  s_horseshoe_right:
-    number: 819
-    platform: smart_virtual
-    tags: playfield_active
-
-  # U Elbow prox
-  s_elbow_upper:
-    number: 820
-    platform: smart_virtual
-    tags: playfield_active
-  s_elbow_lower:
-    number: 821
+    number: 803
     platform: smart_virtual
     tags: playfield_active
 
   # Right wireform proxy entrance
   s_wireform_right_entrance:
-    number: 830
-    platform: smart_virtual
-    tags: playfield_active
-  # S wireform proxy entrance, opto top point
-  s_wireform_s_entrance:
-    number: 831
-    platform: smart_virtual
-    tags: playfield_active
-  s_wireform_s_top:
-    number: 832
+    number: 804
     platform: smart_virtual
     tags: playfield_active
 
   # Captive ball one or two targets to confirm hits
   s_captive_ball_target:
-    number: 841
-    platform: smart_virtual
-    tags: playfield_active
-  # Captive ball presence proxy, normally closed due to ball sitting at bottom
-  s_captive_ball_presence:
-    number: 842
-    platform: smart_virtual
-
-  # Upper subway entrance opto
-  s_subway_entrance:
-    number: 861
+    number: 805
     platform: smart_virtual
     tags: playfield_active
 
-  # Left VUK/subway destination opto
-  s_subway_vuk_presence:
-    number: 862
-    platform: smart_virtual
-
-  # 6 Blue standup switches, CW from 8oclock to 12oclock
-  s_blue_standup_1:
-    number: 871
-    platform: smart_virtual
-    tags: playfield_active, blue_standup
-  s_blue_standup_2:
-    number: 872
-    platform: smart_virtual
-    tags: playfield_active, blue_standup
-  s_blue_standup_3:
-    number: 873
-    platform: smart_virtual
-    tags: playfield_active, blue_standup
-  s_blue_standup_4:
-    number: 874
-    platform: smart_virtual
-    tags: playfield_active, blue_standup
-  s_blue_standup_5:
-    number: 875
-    platform: smart_virtual
-    tags: playfield_active, blue_standup
-  s_blue_standup_6:
-    number: 876
-    platform: smart_virtual
-    tags: playfield_active, blue_standup
 
   # Other proxy switches
   s_right_outlane_lower:
-    number: 880
-    platform: smart_virtual
-  s_launch_exit:
-    number: 881
+    number: 806
     platform: smart_virtual

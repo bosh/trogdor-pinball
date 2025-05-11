@@ -124,6 +124,12 @@ show_player:
     coil_cycle_test:
       loops: 1
 
+# Starting balls when virtual
+virtual_platform_start_active_switches:
+  - s_trough_ball_1
+  - s_trough_ball_2
+  - s_trough_ball_3
+
 plugins: switch_player
 switch_player:
   start_event: vswitch_end_game_active
