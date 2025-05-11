@@ -1,0 +1,131 @@
+#config_version=6
+
+lights:
+
+#EXP header #1
+
+  #new on exp-1-1 #gi behind ramp,
+  #gi burn right,
+
+  # B U R N rollovers: (3-6)
+  l_burn_n:
+    type: grb
+    number: exp_playfield-1-3
+    tags: lights_2b, lights_3b, lights_4d, lights_5d, lights_pf, lights_burn
+  l_burn_r:
+    type: grb
+    number: exp_playfield-1-4
+    tags: lights_2a, lights_3a, lights_4c, lights_5c, lights_pf, lights_burn
+  l_burn_u:
+    type: grb
+    number: exp_playfield-1-5
+    tags: lights_2b, lights_3c, lights_4b, lights_5b, lights_pf, lights_burn
+  l_burn_b:
+    type: grb
+    number: exp_playfield-1-6
+    tags: lights_2a, lights_3b, lights_4a, lights_5a, lights_pf, lights_burn
+
+  #gi behind blue targets,
+
+  # cobra post ring over captive ball: (8-15)
+  l_captive_ball_ring_1:
+    number: exp_playfield-1-8
+    tags: lights_2a, lights_3b, lights_4a, lights_5a, lights_pf, lights_captive_ring
+  l_captive_ball_ring_2:
+    number: exp_playfield-1-9
+    tags: lights_2b, lights_3c, lights_4a, lights_5e, lights_pf, lights_captive_ring
+  l_captive_ball_ring_3:
+    number: exp_playfield-1-10
+    tags: lights_2a, lights_3a, lights_4b, lights_5b, lights_pf, lights_captive_ring
+  l_captive_ball_ring_4:
+    number: exp_playfield-1-11
+    tags: lights_2b, lights_3b, lights_4b, lights_5e, lights_pf, lights_captive_ring
+  l_captive_ball_ring_5:
+    number: exp_playfield-1-12
+    tags: lights_2a, lights_3c, lights_4c, lights_5c, lights_pf, lights_captive_ring
+  l_captive_ball_ring_6:
+    number: exp_playfield-1-13
+    tags: lights_2b, lights_3a, lights_4c, lights_5e, lights_pf, lights_captive_ring
+  l_captive_ball_ring_7:
+    number: exp_playfield-1-14
+    tags: lights_2a, lights_3b, lights_4d, lights_5d, lights_pf, lights_captive_ring
+  l_captive_ball_ring_8:
+    number: exp_playfield-1-15
+    tags: lights_2b, lights_3c, lights_4d, lights_5e, lights_pf, lights_captive_ring
+
+  l_captive_ball_single:
+    number: exp_playfield-1-16
+    type: grb
+    tags: lights_2a, lights_3a, lights_4d, lights_5e, lights_pf
+
+#EXP header #4
+  # gi right sling top,
+  # gi right sling bottom,
+  # gi right flipper top,
+  # gi right flipper bottom,
+
+# Cobrapin post ring, right side (TODO rename): (5-12)
+  l_dome_ring_a_1:
+    number: exp_playfield-4-5
+    tags: lights_2a, lights_3b, lights_4a, lights_5a, lights_cab, lights_dome_ring_a
+  l_dome_ring_a_2:
+    number: exp_playfield-4-6
+    tags: lights_2b, lights_3c, lights_4a, lights_5e, lights_cab, lights_dome_ring_a
+  l_dome_ring_a_3:
+    number: exp_playfield-4-7
+    tags: lights_2a, lights_3a, lights_4b, lights_5b, lights_cab, lights_dome_ring_a
+  l_dome_ring_a_4:
+    number: exp_playfield-4-8
+    tags: lights_2b, lights_3b, lights_4b, lights_5e, lights_cab, lights_dome_ring_a
+  l_dome_ring_a_5:
+    number: exp_playfield-4-9
+    tags: lights_2a, lights_3c, lights_4c, lights_5c, lights_cab, lights_dome_ring_a
+  l_dome_ring_a_6:
+    number: exp_playfield-4-10
+    tags: lights_2b, lights_3a, lights_4c, lights_5e, lights_cab, lights_dome_ring_a
+  l_dome_ring_a_7:
+    number: exp_playfield-4-11
+    tags: lights_2a, lights_3b, lights_4d, lights_5d, lights_cab, lights_dome_ring_a
+  l_dome_ring_a_8:
+    number: exp_playfield-4-12
+    tags: lights_2b, lights_3c, lights_4d, lights_5e, lights_cab, lights_dome_ring_a
+
+  # gi left sling top,
+
+  # left sling bottom:
+  l_pf_2:
+    number: exp_playfield-4-14
+    type: grb
+    tags: lights_2b, lights_3b, lights_4d, lights_5a, lights_pf, lights_gi, lights_lower_third
+
+# Cobrapin post ring, left side (TODO rename): (15-22)
+  l_star_ring_a_1:
+    number: exp_playfield-4-15
+    tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_cab, lights_star_ring_a
+  l_star_ring_a_2:
+    number: exp_playfield-4-16
+    tags: lights_2b, lights_3b, lights_4a, lights_5e, lights_cab, lights_star_ring_a
+  l_star_ring_a_3:
+    number: exp_playfield-4-17
+    tags: lights_2a, lights_3c, lights_4b, lights_5b, lights_cab, lights_star_ring_a
+  l_star_ring_a_4:
+    number: exp_playfield-4-18
+    tags: lights_2b, lights_3a, lights_4b, lights_5e, lights_cab, lights_star_ring_a
+  l_star_ring_a_5:
+    number: exp_playfield-4-19
+    tags: lights_2a, lights_3b, lights_4c, lights_5c, lights_cab, lights_star_ring_a
+  l_star_ring_a_6:
+    number: exp_playfield-4-20
+    tags: lights_2b, lights_3c, lights_4c, lights_5e, lights_cab, lights_star_ring_a
+  l_star_ring_a_7:
+    number: exp_playfield-4-21
+    tags: lights_2a, lights_3a, lights_4d, lights_5d, lights_cab, lights_star_ring_a
+  l_star_ring_a_8:
+    number: exp_playfield-4-22
+    tags: lights_2b, lights_3b, lights_4d, lights_5e, lights_cab, lights_star_ring_a
+
+  # gi left flipper top,
+  # gi left flipper bottom:
+  l_pf_1:
+    number: exp_playfield-4-24
+    tags: lights_2a, lights_3a, lights_4c, lights_5e, lights_pf, lights_ci, lights_lower_third

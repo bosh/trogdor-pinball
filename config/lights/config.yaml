@@ -1,10 +1,10 @@
 #config_version=6
 
 config:
-  - playfield_misc.yaml
   - playfield_rings.yaml
   - generated_lights.yaml
   - virtual_lights.yaml
   - future.yaml
   - backbox.yaml
   - info_lights.yaml
+  - gspf.yaml
