@@ -102,10 +102,10 @@ theme_override_font_sizes/font_size = 45
 text = "trogdorpinball.com"
 
 [node name="github" type="Label" parent="MPFCarousel/byline"]
-offset_left = 604.514
-offset_top = 82.6089
-offset_right = 1394.52
-offset_bottom = 215.609
+offset_left = 605.0
+offset_top = 83.0
+offset_right = 844.0
+offset_bottom = 137.0
 theme_override_colors/font_shadow_color = Color(0.388235, 0.054902, 0.0509804, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
@@ -185,9 +185,14 @@ text = "Trogdor (C) 2003 Strong Bad"
 [node name="last_scores_1p" type="Node2D" parent="MPFCarousel"]
 
 [node name="player1_score" type="Label" parent="MPFCarousel/last_scores_1p"]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 74.0
+offset_top = 26.0
+offset_right = 1007.0
+offset_bottom = 265.0
 theme = ExtResource("12_bvyxe")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("10_8giox")
 theme_override_font_sizes/font_size = 200
 text = "1,234,567"
 script = ExtResource("5_ose3f")
@@ -198,8 +203,10 @@ comma_separate = true
 [node name="last_scores_2p" type="Node2D" parent="MPFCarousel"]
 
 [node name="player1_score" type="Label" parent="MPFCarousel/last_scores_2p"]
-offset_right = 1002.0
-offset_bottom = 273.0
+offset_left = 74.0
+offset_top = 26.0
+offset_right = 1007.0
+offset_bottom = 265.0
 theme = ExtResource("12_bvyxe")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
@@ -212,10 +219,10 @@ variable_name = "player1_score"
 comma_separate = true
 
 [node name="player2_score" type="Label" parent="MPFCarousel/last_scores_2p"]
-offset_left = 1683.0
-offset_top = -14.0
-offset_right = 2853.0
-offset_bottom = 259.0
+offset_left = 1866.0
+offset_top = 21.0
+offset_right = 2799.0
+offset_bottom = 294.0
 theme = ExtResource("12_bvyxe")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
@@ -231,8 +238,10 @@ comma_separate = true
 [node name="last_scores_3p" type="Node2D" parent="MPFCarousel"]
 
 [node name="player1_score" type="Label" parent="MPFCarousel/last_scores_3p"]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 74.0
+offset_top = 26.0
+offset_right = 1007.0
+offset_bottom = 265.0
 theme = ExtResource("12_bvyxe")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
@@ -245,10 +254,10 @@ variable_name = "player1_score"
 comma_separate = true
 
 [node name="player2_score" type="Label" parent="MPFCarousel/last_scores_3p"]
-offset_left = 1947.0
-offset_top = -14.0
-offset_right = 2853.0
-offset_bottom = 259.0
+offset_left = 1866.0
+offset_top = 21.0
+offset_right = 2799.0
+offset_bottom = 294.0
 theme = ExtResource("12_bvyxe")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
@@ -262,10 +271,10 @@ variable_name = "player2_score"
 comma_separate = true
 
 [node name="player3_score" type="Label" parent="MPFCarousel/last_scores_3p"]
-offset_left = -9.0
-offset_top = 567.0
-offset_right = 897.0
-offset_bottom = 840.0
+offset_left = 82.0
+offset_top = 557.0
+offset_right = 1015.0
+offset_bottom = 830.0
 theme = ExtResource("12_bvyxe")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
@@ -280,10 +289,10 @@ comma_separate = true
 [node name="last_scores_4p" type="Node2D" parent="MPFCarousel"]
 
 [node name="player1_score" type="Label" parent="MPFCarousel/last_scores_4p"]
-offset_left = 72.0
-offset_top = 25.0
-offset_right = 1005.0
-offset_bottom = 264.0
+offset_left = 74.0
+offset_top = 26.0
+offset_right = 1007.0
+offset_bottom = 265.0
 theme = ExtResource("12_bvyxe")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
