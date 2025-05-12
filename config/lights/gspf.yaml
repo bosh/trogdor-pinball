@@ -4,8 +4,14 @@ lights:
 
 #EXP header #1
 
-  #new on exp-1-1 #gi behind ramp,
-  #gi burn right,
+  gi_horseshoe_behind:
+    type: grb
+    number: exp_playfield-1-1
+    tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_pf, lights_gi
+  gi_burn_after:
+    type: grb
+    number: exp_playfield-1-2
+    tags: lights_2b, lights_3b, lights_4b, lights_5b, lights_pf, lights_gi
 
   # B U R N rollovers: (3-6)
   l_burn_n:
@@ -25,7 +31,10 @@ lights:
     number: exp_playfield-1-6
     tags: lights_2a, lights_3b, lights_4a, lights_5a, lights_pf, lights_burn
 
-  #gi behind blue targets,
+  gi_blue_target_back:
+    type: grb
+    number: exp_playfield-1-7
+    tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_pf, lights_gi
 
   # cobra post ring over captive ball: (8-15)
   l_captive_ball_ring_1:
@@ -59,10 +68,22 @@ lights:
     tags: lights_2a, lights_3a, lights_4d, lights_5e, lights_pf
 
 #EXP header #4
-  # gi right sling top,
-  # gi right sling bottom,
-  # gi right flipper top,
-  # gi right flipper bottom,
+  gi_sling_right_top:
+    type: grb
+    number: exp_playfield-4-1
+    tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_pf, lights_gi
+  gi_sling_right_bottom:
+    type: grb
+    number: exp_playfield-4-2
+    tags: lights_2b, lights_3b, lights_4b, lights_5b, lights_pf, lights_gi
+  gi_sling_right_flipper_top:
+    type: grb
+    number: exp_playfield-4-3
+    tags: lights_2a, lights_3a, lights_4c, lights_5c, lights_pf, lights_gi
+  gi_sling_right_flipper_bottom:
+    type: grb
+    number: exp_playfield-4-4
+    tags: lights_2b, lights_3b, lights_4d, lights_5d, lights_pf, lights_gi
 
 # Cobrapin post ring, right side (TODO rename): (5-12)
   l_dome_ring_a_1:
@@ -90,13 +111,15 @@ lights:
     number: exp_playfield-4-12
     tags: lights_2b, lights_3c, lights_4d, lights_5e, lights_cab, lights_dome_ring_a
 
-  # gi left sling top,
+  gi_sling_left_top:
+    type: grb
+    number: exp_playfield-4-13
+    tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_pf, lights_gi
 
-  # left sling bottom:
-  l_pf_2:
+  l_pf_2: #TODO rename gi_sling_left_bottom
     number: exp_playfield-4-14
     type: grb
-    tags: lights_2b, lights_3b, lights_4d, lights_5a, lights_pf, lights_gi, lights_lower_third
+    tags: lights_2b, lights_3b, lights_4b, lights_5b, lights_pf, lights_gi
 
 # Cobrapin post ring, left side (TODO rename): (15-22)
   l_star_ring_a_1:
@@ -124,8 +147,11 @@ lights:
     number: exp_playfield-4-22
     tags: lights_2b, lights_3b, lights_4d, lights_5e, lights_cab, lights_star_ring_a
 
-  # gi left flipper top,
-  # gi left flipper bottom:
-  l_pf_1:
+  gi_sling_left_flipper_top:
+    type: grb
+    number: exp_playfield-4-23
+    tags: lights_2a, lights_3a, lights_4c, lights_5c, lights_pf, lights_gi
+  l_pf_1: #TODO rename gi_sling_left_flipper_bottom
     number: exp_playfield-4-24
-    tags: lights_2a, lights_3a, lights_4c, lights_5e, lights_pf, lights_ci, lights_lower_third
+    type: grb
+    tags: lights_2b, lights_3b, lights_4d, lights_5d, lights_pf, lights_gi
