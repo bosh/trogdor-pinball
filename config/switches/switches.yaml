@@ -89,7 +89,6 @@ switches:
 
   s_vuk_presence:
     number: 3208-25
-    type: 'NC' #might be an opto? needs distinguishing from subway vuk anyway
   s_launch_exit: #proxy
     number: 3208-26
   s_elbow_lower: #proxy

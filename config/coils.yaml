@@ -81,7 +81,7 @@ coils:
     default_pulse_ms: settings.gate_power
     default_hold_power: 0.375
   c_orbit_diverter_full:
-    number: 1616=10
+    number: 1616-10
     default_pulse_ms: settings.diverter_flipper_power
     default_hold_power: .125
   # c_orbit_diverter_hold:
