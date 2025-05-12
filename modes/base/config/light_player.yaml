@@ -2,44 +2,44 @@
 
 event_player:
   mode_base_started:
-    - start_dome_ring_spin_red
-    - start_star_ring_spin_blue
+    - start_post_ring_right_spin_red
+    - start_post_ring_left_spin_blue
   s_start_active:
-    - stop_dome_ring_spin_red
-    - stop_star_ring_spin_blue
+    - stop_post_ring_right_spin_red
+    - stop_post_ring_left_spin_blue
   s_start_inactive:
-    - start_dome_ring_spin_red
-    - start_star_ring_spin_blue
+    - start_post_ring_right_spin_red
+    - start_post_ring_left_spin_blue
 
 show_player:
   ts_start_button_active:
     light_ring_flash:
-      key: dome_ring_a_menu_flash_x3
+      key: post_ring_right_a_menu_flash_x3
       action: play
       speed: 2
       loops: 2
       show_tokens:
-        lights: lights_dome_ring_a
+        lights: lights_sling_post_ring_right, lights_sling_post_ring_left
         color: orange
 
-  stop_dome_ring_spin_red:
-    dome_ring_red_spin:
+  stop_post_ring_right_spin_red:
+    post_ring_right_red_spin:
       action: stop
 
-  start_dome_ring_spin_red:
+  start_post_ring_right_spin_red:
     tokenized_ring_spin:
       action: play
-      key: dome_ring_red_spin
+      key: post_ring_right_red_spin
       show_tokens:
         # Asc order should spin CCW
-        l1: l_dome_ring_a_1
-        l2: l_dome_ring_a_2
-        l3: l_dome_ring_a_3
-        l4: l_dome_ring_a_4
-        l5: l_dome_ring_a_5
-        l6: l_dome_ring_a_6
-        l7: l_dome_ring_a_7
-        l8: l_dome_ring_a_8
+        l1: l_sling_post_ring_right_1
+        l2: l_sling_post_ring_right_2
+        l3: l_sling_post_ring_right_3
+        l4: l_sling_post_ring_right_4
+        l5: l_sling_post_ring_right_5
+        l6: l_sling_post_ring_right_6
+        l7: l_sling_post_ring_right_7
+        l8: l_sling_post_ring_right_8
         level1: 0a0000
         level2: 1a0000
         level3: 220000
@@ -49,24 +49,24 @@ show_player:
         level7: "000000"
         level8: "000000"
 
-  stop_star_ring_spin_blue:
-    star_ring_blue_spin:
+  stop_post_ring_left_spin_blue:
+    post_ring_left_blue_spin:
       action: stop
 
-  start_star_ring_spin_blue:
+  start_post_ring_left_spin_blue:
     tokenized_ring_spin:
       action: play
-      key: star_ring_blue_spin
+      key: post_ring_left_blue_spin
       show_tokens:
         # Reverse order should spin CW
-        l1: l_star_ring_a_8
-        l2: l_star_ring_a_7
-        l3: l_star_ring_a_6
-        l4: l_star_ring_a_5
-        l5: l_star_ring_a_4
-        l6: l_star_ring_a_3
-        l7: l_star_ring_a_2
-        l8: l_star_ring_a_1
+        l1: l_sling_post_ring_left_8
+        l2: l_sling_post_ring_left_7
+        l3: l_sling_post_ring_left_6
+        l4: l_sling_post_ring_left_5
+        l5: l_sling_post_ring_left_4
+        l6: l_sling_post_ring_left_3
+        l7: l_sling_post_ring_left_2
+        l8: l_sling_post_ring_left_1
         level1: 00000a
         level2: 00001a
         level3: "000022"
