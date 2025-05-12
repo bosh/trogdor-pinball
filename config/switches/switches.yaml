@@ -5,15 +5,14 @@ switches:
 #IO 3208
 
 ## A J8
+  #TODO drop bank is not fully tested, might be NC?
   s_drop_bank_right:
     number: 3208-0
-    type: 'NC'
   s_drop_bank_center:
     number: 3208-1
-    type: 'NC'
   s_drop_bank_left:
     number: 3208-2
-    type: 'NC'
+
   s_horseshoe_right: #proxy
     number: 3208-3
     tags: playfield_active
@@ -23,9 +22,10 @@ switches:
   s_captive_ball_presence: #small proxy is nc but also not working yet
     number: 3208-5
     type: 'NC'
-    tags: playfield_active #unsure due to how it'll be triggered
-  s_spinner_right: #opto, double reports spins, might be NC?
+    tags: playfield_active
+  s_spinner_right: #opto, double reports spins
     number: 3208-6
+    type: 'NC' #not sure how important this nc is
     tags: playfield_active
   s_wireform_right_top: #opto
     number: 3208-7
@@ -35,16 +35,17 @@ switches:
 ## B J3
   s_subway_entrance: #opto
     number: 3208-8
+    type: 'NC'
     tags: playfield_active
   s_spinner_left:
     number: 3208-9
     tags: playfield_active
   s_upper_flipper_eos:
     number: 3208-10
-    type: 'NC'
+    type: 'NC' #needs check
   s_left_flipper_eos:
     number: 3208-11
-    type: 'NC'
+    type: 'NC' #needs check
   s_left_sling: # Parallel switch pair
     number: 3208-12
   s_left_inner_lane:
@@ -53,7 +54,7 @@ switches:
   s_left_outer_lane:
     number: 3208-14
     tags: playfield_active
-  s_subway_vuk_presence: #opto, probably nc
+  s_subway_vuk_presence: #opto
     number: 3208-15
     type: 'NC'
 
@@ -66,7 +67,7 @@ switches:
     type: 'NC'
   s_right_flipper_eos:
     number: 3208-18
-    type: 'NC'
+    type: 'NC' #needs check
   s_right_sling: # Parallel switch pair
     number: 3208-19
   s_trough_ball_5:
@@ -79,15 +80,16 @@ switches:
     number: 3208-23
 
 ## D J9
-  s_wireform_s_entrance: #opto
+  s_wireform_s_entrance: #proxy, not real, to be removed
     number: 831
-    platform: smart_virtual
-    tags: playfield_active
-  s_wireform_s_top: #opto, which is the real one?
-    number: 832
+    type: 'NC'
     platform: smart_virtual
     tags: playfield_active
 
+  s_wireform_s_top: #opto
+    number: 3208-24
+    type: 'NC'
+    tags: playfield_active
   s_vuk_presence:
     number: 3208-25
   s_launch_exit: #proxy

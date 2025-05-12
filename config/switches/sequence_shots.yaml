@@ -47,7 +47,7 @@ sequence_shots:
     switch_sequence: s_wireform_right_top, s_right_outer_lane
     sequence_timeout: 4500ms
 
-  ss_s_ramp_summit:
+  ss_s_ramp_summit: #TODO remove this
     switch_sequence: s_wireform_s_entrance, s_wireform_s_top
     sequence_timeout: 300ms
 
