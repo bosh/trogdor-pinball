@@ -21,7 +21,7 @@ lights:
     number: 9004
     platform: smart_virtual
     type: rgb
-    tags: lights_2a, lights_3a, lights_4d, lights_5d, lights_pf, lights_lights_multipliersburn
+    tags: lights_2a, lights_3a, lights_4d, lights_5d, lights_pf, lights_multipliers
 
   # MAJESTY counters (from 12:00 clockwise rotating)
   l_majesty_1: #Consider splitting into R G and B channels to separately light colors without mounting multiple LED packages into one insert
@@ -61,28 +61,28 @@ lights:
     number: 9015
     platform: smart_virtual
     type: rgb
-    tags: lights_2a, lights_3c, lights_4a, lights_5a, lights_pf, lights_lanes, lights_outlanes, lights_lower_third
+    tags: lights_2a, lights_3c, lights_4a, lights_5a, lights_pf, lights_lanes, lights_outlanes
   l_left_inlane:
     number: 9016
     platform: smart_virtual
     type: rgb
-    tags: lights_2b, lights_3a, lights_4b, lights_5b, lights_pf, lights_lanes, lights_inlanes, lights_lower_third
+    tags: lights_2b, lights_3a, lights_4b, lights_5b, lights_pf, lights_lanes, lights_inlanes
   l_right_inlane:
     number: 9017
     platform: smart_virtual
     type: rgb
-    tags: lights_2a, lights_3b, lights_4c, lights_5c, lights_pf, lights_lanes, lights_inlanes, lights_lower_third
+    tags: lights_2a, lights_3b, lights_4c, lights_5c, lights_pf, lights_lanes, lights_inlanes
   l_right_outlane:
     number: 9018
     platform: smart_virtual
     type: rgb
-    tags: lights_2b, lights_3c, lights_4d, lights_5d, lights_pf, lights_lanes, lights_outlanes, lights_lower_third
+    tags: lights_2b, lights_3c, lights_4d, lights_5d, lights_pf, lights_lanes, lights_outlanes
 
   l_drain:
     number: 9019
     platform: smart_virtual
     type: rgb
-    tags: lights_2b, lights_3a, lights_4c, lights_5e, lights_pf, lights_lower_third
+    tags: lights_2b, lights_3a, lights_4c, lights_5e, lights_pf
 
   l_spinner_left_flasher:
     number: 9101
