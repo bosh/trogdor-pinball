@@ -116,7 +116,7 @@ lights:
     number: exp_playfield-4-13
     tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_pf, lights_gi
 
-  l_pf_2: #TODO rename gi_sling_left_bottom
+  gi_sling_left_bottom:
     number: exp_playfield-4-14
     type: grb
     tags: lights_2b, lights_3b, lights_4b, lights_5b, lights_pf, lights_gi
@@ -151,7 +151,7 @@ lights:
     type: grb
     number: exp_playfield-4-23
     tags: lights_2a, lights_3a, lights_4c, lights_5c, lights_pf, lights_gi
-  l_pf_1: #TODO rename gi_sling_left_flipper_bottom
+  gi_sling_left_flipper_bottom:
     number: exp_playfield-4-24
     type: grb
     tags: lights_2b, lights_3b, lights_4d, lights_5d, lights_pf, lights_gi

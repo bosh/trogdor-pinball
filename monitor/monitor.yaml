@@ -583,10 +583,10 @@ light:
   l_orbit_right:
     x: 0.8019525801952582
     y: 0.16108786610878661
-  l_pf_1:
+  gi_sling_left_flipper_bottom:
     x: 0.21478382147838215
     y: 0.8263598326359832
-  l_pf_2:
+  gi_sling_left_bottom:
     x: 0.2216358839050132
     y: 0.729221635883905
   l_pf_x2:

@@ -79,9 +79,9 @@ show_player:
 light_player:
   # High voltage status warn LED
   "{device.switches.s_coin_door.state == 0}":
-    l_pf_1: eee000
+    gi_sling_left_flipper_bottom: eee000
   "{device.switches.s_coin_door.state == 1}":
-    l_pf_1: ff0000
+    gi_sling_left_flipper_bottom: ff0000
 
   #Minicab left status LED tracking button and EOS
   "{device.switches.s_left_flipper.state == 0 and device.switches.s_left_flipper_eos.state == 0}":
@@ -127,17 +127,17 @@ light_player:
 
   # Trough status GI light
   "{device.switches.s_trough_ball_jam.state == 1}":
-    l_pf_2: cc3333
+    gi_sling_left_bottom: cc3333
   "{device.switches.s_trough_ball_jam.state == 0 and device.switches.s_trough_ball_1.state + device.switches.s_trough_ball_2.state + device.switches.s_trough_ball_3.state + device.switches.s_trough_ball_4.state + device.switches.s_trough_ball_5.state == 0}":
-    l_pf_2: ff0000 #Empty is red
+    gi_sling_left_bottom: ff0000 #Empty is red
   "{device.switches.s_trough_ball_jam.state == 0 and device.switches.s_trough_ball_1.state + device.switches.s_trough_ball_2.state + device.switches.s_trough_ball_3.state + device.switches.s_trough_ball_4.state + device.switches.s_trough_ball_5.state == 1}":
-    l_pf_2: 994400
+    gi_sling_left_bottom: 994400
   "{device.switches.s_trough_ball_jam.state == 0 and device.switches.s_trough_ball_1.state + device.switches.s_trough_ball_2.state + device.switches.s_trough_ball_3.state + device.switches.s_trough_ball_4.state + device.switches.s_trough_ball_5.state == 2}":
-    l_pf_2: 557700
+    gi_sling_left_bottom: 557700
   "{device.switches.s_trough_ball_jam.state == 0 and device.switches.s_trough_ball_1.state + device.switches.s_trough_ball_2.state + device.switches.s_trough_ball_3.state + device.switches.s_trough_ball_4.state + device.switches.s_trough_ball_5.state == 3}":
-    l_pf_2: 33aa00
+    gi_sling_left_bottom: 33aa00
   "{device.switches.s_trough_ball_jam.state == 0 and device.switches.s_trough_ball_1.state + device.switches.s_trough_ball_2.state + device.switches.s_trough_ball_3.state + device.switches.s_trough_ball_4.state + device.switches.s_trough_ball_5.state > 3}":
-    l_pf_2: 0066ff #intended for 3 balls, so 4+ is unexpected blue state
+    gi_sling_left_bottom: 0066ff #intended for 3 balls, so 4+ is unexpected blue state
 
   # Playfield Multiplier
   "{current_player.playfield_multiplier == 2}":
