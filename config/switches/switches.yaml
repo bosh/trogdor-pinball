@@ -20,8 +20,9 @@ switches:
   s_horseshoe_left: #proxy
     number: 3208-4
     tags: playfield_active
-  s_captive_ball_presence: #small proxy, might be NC
+  s_captive_ball_presence: #small proxy is nc but also not working yet
     number: 3208-5
+    type: 'NC'
     tags: playfield_active #unsure due to how it'll be triggered
   s_spinner_right: #opto, double reports spins, might be NC?
     number: 3208-6
