@@ -7,7 +7,7 @@ modes:
   - music_selection
   - music_controller
   - backbox_controller
-  - bonus
+  # - bonus #GSPF bonus off for now since nothing scores into it
   - code_base
   - priority_shows
   - ball_saves

@@ -48,6 +48,7 @@ theme_override_font_sizes/font_size = 50
 text = "Use Flippers to scroll then press Start to enter your initials"
 
 [node name="event_value" type="Label" parent="."]
+layout_mode = 0
 offset_left = 2110.0
 offset_top = 35.0
 offset_right = 2881.0
@@ -76,13 +77,14 @@ variable_name = "award"
 
 [node name="event_player" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1220.0
-offset_top = 303.0
-offset_right = 1883.0
-offset_bottom = 563.0
+offset_left = 937.0
+offset_top = 322.0
+offset_right = 1868.0
+offset_bottom = 582.0
 theme_override_fonts/font = ExtResource("4_torhw")
 theme_override_font_sizes/font_size = 150
 text = "Player N:"
+horizontal_alignment = 2
 script = ExtResource("4_qd6me")
 variable_type = 1
 variable_name = "player_num"
