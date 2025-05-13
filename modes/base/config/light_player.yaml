@@ -4,6 +4,7 @@ event_player:
   mode_base_started:
     - start_post_ring_right_spin_red
     - start_post_ring_left_spin_blue
+    - start_gi_base
   s_start_active:
     - stop_post_ring_right_spin_red
     - stop_post_ring_left_spin_blue
@@ -12,6 +13,14 @@ event_player:
     - start_post_ring_left_spin_blue
 
 show_player:
+  start_gi_base:
+    led_color:
+      key: gi_show
+      action: play
+      show_tokens:
+        lights: lights_gi
+        color: aaaaaa
+
   ts_start_button_active:
     light_ring_flash:
       key: post_ring_right_a_menu_flash_x3
@@ -77,11 +86,12 @@ show_player:
         level8: "000000"
 
 light_player:
-  # High voltage status warn LED
-  "{device.switches.s_coin_door.state == 0}":
-    gi_sling_left_flipper_bottom: eee000
-  "{device.switches.s_coin_door.state == 1}":
-    gi_sling_left_flipper_bottom: ff0000
+  # Disabled due to no good light to choose for show
+  # # High voltage status warn LED
+  # "{device.switches.s_coin_door.state == 0}":
+  #   gi_sling_left_flipper_bottom: eee000
+  # "{device.switches.s_coin_door.state == 1}":
+  #   gi_sling_left_flipper_bottom: ff0000
 
   #Minicab left status LED tracking button and EOS
   "{device.switches.s_left_flipper.state == 0 and device.switches.s_left_flipper_eos.state == 0}":
@@ -119,25 +129,26 @@ light_player:
   "{device.switches.s_right_flipper_secondary.state == 1}":
     l_mini_cab_right_secondary: cc00cc
 
-  #Start button lights when you press it
+  #Start button lights by default and turns off when pressed
   "{device.switches.s_start.state == 0}":
-    l_start: off
-  "{device.switches.s_start.state == 1}":
     l_start: on
+  "{device.switches.s_start.state == 1}":
+    l_start: off
 
-  # Trough status GI light
-  "{device.switches.s_trough_ball_jam.state == 1}":
-    gi_sling_left_bottom: cc3333
-  "{device.switches.s_trough_ball_jam.state == 0 and device.switches.s_trough_ball_1.state + device.switches.s_trough_ball_2.state + device.switches.s_trough_ball_3.state + device.switches.s_trough_ball_4.state + device.switches.s_trough_ball_5.state == 0}":
-    gi_sling_left_bottom: ff0000 #Empty is red
-  "{device.switches.s_trough_ball_jam.state == 0 and device.switches.s_trough_ball_1.state + device.switches.s_trough_ball_2.state + device.switches.s_trough_ball_3.state + device.switches.s_trough_ball_4.state + device.switches.s_trough_ball_5.state == 1}":
-    gi_sling_left_bottom: 994400
-  "{device.switches.s_trough_ball_jam.state == 0 and device.switches.s_trough_ball_1.state + device.switches.s_trough_ball_2.state + device.switches.s_trough_ball_3.state + device.switches.s_trough_ball_4.state + device.switches.s_trough_ball_5.state == 2}":
-    gi_sling_left_bottom: 557700
-  "{device.switches.s_trough_ball_jam.state == 0 and device.switches.s_trough_ball_1.state + device.switches.s_trough_ball_2.state + device.switches.s_trough_ball_3.state + device.switches.s_trough_ball_4.state + device.switches.s_trough_ball_5.state == 3}":
-    gi_sling_left_bottom: 33aa00
-  "{device.switches.s_trough_ball_jam.state == 0 and device.switches.s_trough_ball_1.state + device.switches.s_trough_ball_2.state + device.switches.s_trough_ball_3.state + device.switches.s_trough_ball_4.state + device.switches.s_trough_ball_5.state > 3}":
-    gi_sling_left_bottom: 0066ff #intended for 3 balls, so 4+ is unexpected blue state
+  # Disabled due to no good light to choose for show
+  # # Trough status GI light
+  # "{device.switches.s_trough_ball_jam.state == 1}":
+  #   gi_sling_left_bottom: cc3333
+  # "{device.switches.s_trough_ball_jam.state == 0 and device.switches.s_trough_ball_1.state + device.switches.s_trough_ball_2.state + device.switches.s_trough_ball_3.state + device.switches.s_trough_ball_4.state + device.switches.s_trough_ball_5.state == 0}":
+  #   gi_sling_left_bottom: ff0000 #Empty is red
+  # "{device.switches.s_trough_ball_jam.state == 0 and device.switches.s_trough_ball_1.state + device.switches.s_trough_ball_2.state + device.switches.s_trough_ball_3.state + device.switches.s_trough_ball_4.state + device.switches.s_trough_ball_5.state == 1}":
+  #   gi_sling_left_bottom: 994400
+  # "{device.switches.s_trough_ball_jam.state == 0 and device.switches.s_trough_ball_1.state + device.switches.s_trough_ball_2.state + device.switches.s_trough_ball_3.state + device.switches.s_trough_ball_4.state + device.switches.s_trough_ball_5.state == 2}":
+  #   gi_sling_left_bottom: 557700
+  # "{device.switches.s_trough_ball_jam.state == 0 and device.switches.s_trough_ball_1.state + device.switches.s_trough_ball_2.state + device.switches.s_trough_ball_3.state + device.switches.s_trough_ball_4.state + device.switches.s_trough_ball_5.state == 3}":
+  #   gi_sling_left_bottom: 33aa00
+  # "{device.switches.s_trough_ball_jam.state == 0 and device.switches.s_trough_ball_1.state + device.switches.s_trough_ball_2.state + device.switches.s_trough_ball_3.state + device.switches.s_trough_ball_4.state + device.switches.s_trough_ball_5.state > 3}":
+  #   gi_sling_left_bottom: 0066ff #intended for 3 balls, so 4+ is unexpected blue state
 
   # Playfield Multiplier
   "{current_player.playfield_multiplier == 2}":

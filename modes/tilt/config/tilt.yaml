@@ -22,3 +22,34 @@ slide_player:
       action: remove
     tilt:
       action: remove
+
+show_player:
+  tilt_warning_1:
+    flash_color:
+      key: gi_flash
+      action: play
+      loops: 2
+      speed: 5
+      show_tokens:
+        lights: lights_gi
+        color: yellow
+
+  tilt_warning_2:
+    flash_color:
+      key: gi_flash
+      action: play
+      loops: 3
+      speed: 7
+      show_tokens:
+        lights: lights_gi
+        color: orange
+
+  tilt:
+    flash_color:
+      key: gi_flash
+      action: play
+      loops: 1
+      speed: 2
+      show_tokens:
+        lights: lights_gi
+        color: red

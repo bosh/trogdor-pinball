@@ -4,18 +4,22 @@
   lights:
     lights_2a: red
     lights_2b: off
+    lights_gi: purple
 
 - duration: 150ms
   lights:
     lights_2a: off
     lights_2b: red
+    lights_gi: orange
 
 - duration: 150ms
   lights:
     lights_2a: purple
     lights_2b: purple
+    lights_gi: off
 
 - duration: 50ms
   lights:
     lights_2a: off
     lights_2b: off
+    lights_gi: green
