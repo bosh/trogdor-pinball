@@ -93,7 +93,6 @@ variable_name = "score"
 comma_separate = true
 
 [node name="total" type="Node2D" parent="MPFConditionalChildren"]
-visible = false
 
 [node name="Label" type="Label" parent="MPFConditionalChildren/total"]
 offset_right = 999.0
@@ -114,6 +113,7 @@ script = ExtResource("3_b6tp2")
 variable_type = 1
 variable_name = "score"
 comma_separate = true
+min_digits = 0
 
 [node name="multiplier" type="Node2D" parent="MPFConditionalChildren"]
 visible = false
