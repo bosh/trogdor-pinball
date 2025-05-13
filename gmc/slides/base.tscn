@@ -56,10 +56,10 @@ template_string = "Score: %s"
 
 [node name="MPFVariable - Ball Score" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1050.0
-offset_top = 38.0
-offset_right = 1374.0
-offset_bottom = 141.0
+offset_left = 1053.0
+offset_top = -130.0
+offset_right = 1385.0
+offset_bottom = -27.0
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
 theme_override_fonts/font = ExtResource("4_l2x7l")
