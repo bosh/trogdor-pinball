@@ -88,4 +88,4 @@ horizontal_alignment = 2
 script = ExtResource("4_qd6me")
 variable_type = 1
 variable_name = "player_num"
-template_string = "Player %s:"
+template_string = "Player %d:"

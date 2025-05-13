@@ -68,6 +68,7 @@ script = ExtResource("3_b6tp2")
 variable_type = 1
 variable_name = "score"
 comma_separate = true
+template_string = "%d"
 
 [node name="subtotal" type="Node2D" parent="MPFConditionalChildren"]
 visible = false
@@ -91,6 +92,7 @@ script = ExtResource("3_b6tp2")
 variable_type = 1
 variable_name = "score"
 comma_separate = true
+template_string = "%d"
 
 [node name="total" type="Node2D" parent="MPFConditionalChildren"]
 
@@ -113,7 +115,7 @@ script = ExtResource("3_b6tp2")
 variable_type = 1
 variable_name = "score"
 comma_separate = true
-min_digits = 0
+template_string = "%d"
 
 [node name="multiplier" type="Node2D" parent="MPFConditionalChildren"]
 visible = false
@@ -132,11 +134,11 @@ offset_right = 581.0
 offset_bottom = 830.0
 theme_override_fonts/font = ExtResource("4_1i0xs")
 theme_override_font_sizes/font_size = 133
-text = "100,000"
+text = "N X"
 script = ExtResource("3_b6tp2")
 variable_type = 1
 variable_name = "score"
-template_string = "%sx"
+template_string = "%s X"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
