@@ -113,7 +113,7 @@ light:
   gi_horseshoe_behind:
     x: 0.5633245382585752
     y: 0.1870052770448549
-  gi_sling_left_flipper_top:
+  gi_left_flipper_top:
     x: 0.1503957783641161
     y: 0.7945250659630607
   gi_sling_left_top:
@@ -122,10 +122,10 @@ light:
   gi_sling_right_bottom:
     x: 0.6873350923482849
     y: 0.7232849604221636
-  gi_sling_right_flipper_bottom:
+  gi_right_flipper_bottom:
     x: 0.691292875989446
     y: 0.8172823218997363
-  gi_sling_right_flipper_top:
+  gi_right_flipper_top:
     x: 0.7532981530343008
     y: 0.7875989445910291
   gi_sling_right_top:
@@ -583,7 +583,7 @@ light:
   l_orbit_right:
     x: 0.8019525801952582
     y: 0.16108786610878661
-  gi_sling_left_flipper_bottom:
+  gi_left_flipper_bottom:
     x: 0.21478382147838215
     y: 0.8263598326359832
   gi_sling_left_bottom:

@@ -76,14 +76,14 @@ lights:
     type: grb
     number: exp_playfield-4-2
     tags: lights_2b, lights_3b, lights_4b, lights_5b, lights_pf, lights_gi
-  gi_sling_right_flipper_top:
+  gi_right_flipper_top:
     type: grb
     number: exp_playfield-4-3
-    tags: lights_2a, lights_3a, lights_4c, lights_5c, lights_pf, lights_gi
-  gi_sling_right_flipper_bottom:
+    tags: lights_2a, lights_3a, lights_4c, lights_5c, lights_pf, lights_gi, l_right_outlane
+  gi_right_flipper_bottom:
     type: grb
     number: exp_playfield-4-4
-    tags: lights_2b, lights_3b, lights_4d, lights_5d, lights_pf, lights_gi
+    tags: lights_2b, lights_3b, lights_4d, lights_5d, lights_pf, lights_gi, l_right_inlane
 
 # Cobrapin post ring, right side (TODO rename): (5-12)
   l_sling_post_ring_right_1:
@@ -147,11 +147,11 @@ lights:
     number: exp_playfield-4-22
     tags: lights_2b, lights_3b, lights_4d, lights_5e, lights_cab, lights_sling_post_ring_left
 
-  gi_sling_left_flipper_top:
+  gi_left_flipper_top:
     type: grb
     number: exp_playfield-4-23
-    tags: lights_2a, lights_3a, lights_4c, lights_5c, lights_pf, lights_gi
-  gi_sling_left_flipper_bottom:
+    tags: lights_2a, lights_3a, lights_4c, lights_5c, lights_pf, lights_gi, l_left_outlane
+  gi_left_flipper_bottom:
     number: exp_playfield-4-24
     type: grb
-    tags: lights_2b, lights_3b, lights_4d, lights_5d, lights_pf, lights_gi
+    tags: lights_2b, lights_3b, lights_4d, lights_5d, lights_pf, lights_gi, l_left_inlane

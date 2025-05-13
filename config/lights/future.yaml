@@ -57,26 +57,26 @@ lights:
 
 
   # Inlanes and Outlanes
-  l_left_outlane:
-    number: 9015
-    platform: smart_virtual
-    type: rgb
-    tags: lights_2a, lights_3c, lights_4a, lights_5a, lights_pf, lights_lanes, lights_outlanes
-  l_left_inlane:
-    number: 9016
-    platform: smart_virtual
-    type: rgb
-    tags: lights_2b, lights_3a, lights_4b, lights_5b, lights_pf, lights_lanes, lights_inlanes
-  l_right_inlane:
-    number: 9017
-    platform: smart_virtual
-    type: rgb
-    tags: lights_2a, lights_3b, lights_4c, lights_5c, lights_pf, lights_lanes, lights_inlanes
-  l_right_outlane:
-    number: 9018
-    platform: smart_virtual
-    type: rgb
-    tags: lights_2b, lights_3c, lights_4d, lights_5d, lights_pf, lights_lanes, lights_outlanes
+  # l_left_outlane: #GSPF assigned to gi left flipper top
+  #   number: 9015
+  #   platform: smart_virtual
+  #   type: rgb
+  #   tags: lights_2a, lights_3c, lights_4a, lights_5a, lights_pf, lights_lanes, lights_outlanes
+  # l_left_inlane: #GSPF assigned to gi left flipper bottom
+  #   number: 9016
+  #   platform: smart_virtual
+  #   type: rgb
+  #   tags: lights_2b, lights_3a, lights_4b, lights_5b, lights_pf, lights_lanes, lights_inlanes
+  # l_right_inlane: #GSPF assigned to gi right flipper bottom
+  #   number: 9017
+  #   platform: smart_virtual
+  #   type: rgb
+  #   tags: lights_2a, lights_3b, lights_4c, lights_5c, lights_pf, lights_lanes, lights_inlanes
+  # l_right_outlane: #GSPF assigned to gi right flipper top
+  #   number: 9018
+  #   platform: smart_virtual
+  #   type: rgb
+  #   tags: lights_2b, lights_3c, lights_4d, lights_5d, lights_pf, lights_lanes, lights_outlanes
 
   l_drain:
     number: 9019
