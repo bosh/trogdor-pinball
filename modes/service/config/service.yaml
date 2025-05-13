@@ -14,6 +14,14 @@ event_player:
   service_mode_entered: [dj_status_menu]
   service_mode_exited: [dj_bootup]
 
+  master_volume_increase: [dj_increment|1ms]
+  master_volume_decrease: [dj_decrement|1ms]
+
+
+# Audio warning on coin door open/close
+  s_coin_door_active: [dj_high_voltage_enabled]
+  s_coin_door_inactive: [dj_high_voltage_disabled]
+# TODO or maybe use some of these:
 # other events to listen for:
 # service_power_on dj_high_voltage_enabled
 # service_power_off dj_high_voltage_disabled

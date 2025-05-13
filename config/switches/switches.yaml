@@ -160,9 +160,3 @@ switches:
   s_burn_standup:
     number: 1616-15
     tags: playfield_active
-
-
-# Audio warning on coin door open/close
-event_player:
-  s_coin_door_active: [dj_high_voltage_enabled]
-  s_coin_door_inactive: [dj_high_voltage_disabled]
