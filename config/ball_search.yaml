@@ -7,7 +7,7 @@ settings:
     values:
       0: "Disabled"
       1: "Enabled"
-    default: 0
+    default: 1 
     key_type: int
 
 timed_switches:
