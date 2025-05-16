@@ -16,3 +16,14 @@ high_score:
       - HSR: 123456
       - AML: 98414
       - TST: 1
+
+event_player:
+  mode_high_score_started:
+    - start_gi_highscore
+
+show_player:
+  start_gi_highscore:
+    led_color:
+      show_tokens:
+        lights: lights_gi
+        color: orange
