@@ -184,9 +184,9 @@ settings:
       26: '26 ms'
       30: '30 ms'
 
-  vuk_power:
+  left_vuk_power:
     sort: 163
-    label: Right side VUK eject power
+    label: Left side VUK eject power
     key_type: int
     default: 25
     values:
@@ -196,8 +196,22 @@ settings:
       30: '30 ms'
       35: '35 ms'
 
+  right_vuk_power:
+    sort: 164
+    label: Right side VUK eject power
+    key_type: int
+    default: 18
+    values:
+      10: '10 ms'
+      12: '12 ms'
+      15: '15 ms (default)'
+      18: '18 ms'
+      21: '21 ms'
+      24: '24 ms'
+      28: '28 ms'
+
   outlane_post_power:
-    sort: 163
+    sort: 165
     label: Right outlane post pulse power
     key_type: int
     default: 20
@@ -208,7 +222,7 @@ settings:
       30: '30 ms'
 
   saver_post_power:
-    sort: 163
+    sort: 166
     label: Center save post pulse power
     key_type: int
     default: 20

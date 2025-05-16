@@ -62,6 +62,7 @@ coils:
     allow_enable: true
   c_subway_vuk:
     number: 1616-4
+    default_pulse_ms: settings.left_vuk_power
   c_slot_bank_left_drop:
     number: 1616-5
     default_pulse_ms: settings.slot_bank_knockdown_power
@@ -101,7 +102,7 @@ coils:
     default_hold_power: 0.375
   c_vuk:
     number: 1616-15
-    default_pulse_ms: settings.vuk_power
+    default_pulse_ms: settings.right_vuk_power
 
 # 0024 drivers for LEDs
   # J1
