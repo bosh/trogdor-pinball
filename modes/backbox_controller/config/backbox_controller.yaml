@@ -6,6 +6,11 @@ mode:
   priority: 7001
 
 event_player:
+  mode_base_started:
+    - start_gi_base
+  mode_high_score_started:
+    - start_gi_highscore
+
   mode_backbox_controller_started:
     - start_backbox_simple_loop
     - start_backbox_perimeter_stacked_8loop
@@ -32,6 +37,20 @@ event_player:
     - start_perimeter_8loop_m
 
 show_player:
+  start_gi_base:
+    led_color:
+      key: gi_show
+      action: play
+      show_tokens:
+        lights: lights_gi
+        color: aaaaaa
+
+  start_gi_highscore:
+    led_color:
+      show_tokens:
+        lights: lights_gi
+        color: red
+
   start_backbox_baseline_light:
     perimeter_baseline:
       priority: 1

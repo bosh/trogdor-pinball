@@ -23,13 +23,6 @@ switches:
     platform: smart_virtual
     tags: playfield_active
 
-  # Captive ball one or two targets to confirm hits
-  s_captive_ball_target:
-    number: 805
-    platform: smart_virtual
-    tags: playfield_active
-
-
   # Other proxy switches
   s_right_outlane_lower:
     number: 806

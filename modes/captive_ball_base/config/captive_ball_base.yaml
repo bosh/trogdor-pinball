@@ -15,7 +15,7 @@ shot_profiles:
 shots:
   captive_ball_target:
     profile: captive_ball_base_profile
-    switch: s_captive_ball_target
+    switch: s_captive_ball_presence
     control_events:
       - events: captive_ball_target_disable
         state: 1

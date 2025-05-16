@@ -4,7 +4,6 @@ event_player:
   mode_base_started:
     - start_post_ring_right_spin_red
     - start_post_ring_left_spin_blue
-    - start_gi_base
   s_start_active:
     - stop_post_ring_right_spin_red
     - stop_post_ring_left_spin_blue
@@ -13,14 +12,6 @@ event_player:
     - start_post_ring_left_spin_blue
 
 show_player:
-  start_gi_base:
-    led_color:
-      key: gi_show
-      action: play
-      show_tokens:
-        lights: lights_gi
-        color: aaaaaa
-
   ts_start_button_active:
     light_ring_flash:
       key: post_ring_right_a_menu_flash_x3
