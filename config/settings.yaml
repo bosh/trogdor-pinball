@@ -124,18 +124,30 @@ settings:
     sort: 158
     label: Pop bumper power
     key_type: int
-    default: 14
+    default: 11
     values:
-      8: '8 ms'
-      11: '11 ms'
-      14: '14 ms (default)'
-      18: '18 ms'
+      7: '7 ms'
+      9: '9 ms'
+      11: '11 ms (default)'
+      13: '13 ms'
+      16: '16 ms'
       20: '20 ms'
-      25: '25 ms'
-      30: '30 ms'
+
+  reduced_level_pop_bumper_power:
+    sort: 159
+    label: Pop bumper power
+    key_type: int
+    default: 9
+    values:
+      5: '5 ms'
+      7: '7 ms'
+      9: '9 ms (default)'
+      12: '12 ms'
+      15: '15 ms'
+      18: '18 ms'
 
   gate_power:
-    sort: 159
+    sort: 160
     label: Controlled ball gate pulse power
     key_type: int
     default: 24
@@ -148,7 +160,7 @@ settings:
       35: '35 ms'
 
   diverter_flipper_power:
-    sort: 160
+    sort: 161
     label: Upper diverter (flipper) pulse power
     key_type: int
     default: 25
@@ -161,7 +173,7 @@ settings:
       35: '35 ms'
 
   slot_bank_reset_power:
-    sort: 161
+    sort: 162
     label: Slot (three-target) bank reset power
     key_type: int
     default: 70
@@ -173,7 +185,7 @@ settings:
       90: '90 ms'
 
   slot_bank_knockdown_power:
-    sort: 162
+    sort: 163
     label: Slot (three-target) bank single-target knockdown power
     key_type: int
     default: 18
@@ -185,7 +197,7 @@ settings:
       30: '30 ms'
 
   left_vuk_power:
-    sort: 163
+    sort: 164
     label: Left side VUK eject power
     key_type: int
     default: 25
@@ -197,7 +209,7 @@ settings:
       35: '35 ms'
 
   right_vuk_power:
-    sort: 164
+    sort: 165
     label: Right side VUK eject power
     key_type: int
     default: 18
@@ -211,7 +223,7 @@ settings:
       28: '28 ms'
 
   outlane_post_power:
-    sort: 165
+    sort: 166
     label: Right outlane post pulse power
     key_type: int
     default: 20
@@ -222,7 +234,7 @@ settings:
       30: '30 ms'
 
   saver_post_power:
-    sort: 166
+    sort: 167
     label: Center save post pulse power
     key_type: int
     default: 20
@@ -315,24 +327,24 @@ settings:
     sort: 310
     label: Burnination mode - overall length
     key_type: int
-    default: 35
+    default: 50
     values:
-      20: '20 seconds'
-      25: '25 seconds'
-      30: '30 seconds'
-      35: '35 seconds (default)'
-      40: '40 seconds'
+      10: '10 seconds (for testing)'
+      32: '32 seconds'
       45: '45 seconds'
+      50: '50 seconds (default)'
+      60: '60 seconds'
+      70: '70 seconds'
 
   burnination_pop_countdown_seconds:
     sort: 311
     label: Burnination mode - seconds per pop burndown reduction
     key_type: int
-    default: 4
+    default: 5
     values:
       3: '3 seconds'
-      4: '4 seconds (default)'
-      5: '5 seconds'
+      4: '4 seconds'
+      5: '5 seconds (default)'
       6: '6 seconds'
       7: '7 seconds'
 
