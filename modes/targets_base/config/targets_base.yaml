@@ -8,3 +8,4 @@ mode:
 variable_player:
   sw_blue_standup:
     target_hits: 1
+    score: 100 * current_player.playfield_multiplier
