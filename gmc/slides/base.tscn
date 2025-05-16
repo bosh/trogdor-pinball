@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://wnn1blxym12s"]
+[gd_scene load_steps=8 format=3 uid="uid://wnn1blxym12s"]
 
 [ext_resource type="Script" uid="uid://6mdcui7wkc47" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_grcpe"]
 [ext_resource type="Script" uid="uid://cm7sg7wq6hq8s" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_bsdxn"]
 [ext_resource type="Texture2D" uid="uid://kxdeyef78vrh" path="res://images/included/base.png" id="2_ekj0u"]
 [ext_resource type="FontFile" uid="uid://dbblxkk3tmho5" path="res://fonts/preeow-paper.ttf" id="2_j6mlq"]
 [ext_resource type="FontFile" uid="uid://dhi02px4iy4jf" path="res://fonts/lappy-486-extended.ttf" id="4_l2x7l"]
+[ext_resource type="Script" uid="uid://b846v662darst" path="res://addons/mpf-gmc/classes/mpf_conditional.gd" id="6_6vrr4"]
 
 [sub_resource type="Theme" id="Theme_t7ujo"]
 Label/font_sizes/font_size = 40
@@ -21,38 +22,156 @@ texture = ExtResource("2_ekj0u")
 
 [node name="MPFVariable - Ball" type="Label" parent="."]
 layout_mode = 0
-offset_left = 2454.0
-offset_top = 27.0
-offset_right = 2849.0
-offset_bottom = 219.0
+offset_left = 2478.0
+offset_top = 38.0
+offset_right = 2873.0
+offset_bottom = 230.0
 theme = SubResource("Theme_t7ujo")
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
 theme_override_fonts/font = ExtResource("4_l2x7l")
 theme_override_font_sizes/font_size = 80
-text = "Man: 1"
+text = "Ball: 1"
 horizontal_alignment = 1
 script = ExtResource("2_bsdxn")
 variable_name = "ball"
-template_string = "Man: %s"
+template_string = "Ball: %s"
 
-[node name="MPFVariable - Score" type="Label" parent="."]
+[node name="MPFVariable - Score Main" type="Label" parent="."]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 1.0
-offset_right = 998.0
+offset_right = 1455.0
 offset_bottom = 220.0
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
 theme_override_fonts/font = ExtResource("4_l2x7l")
 theme_override_font_sizes/font_size = 125
 text = "Score: 1,000,000"
-horizontal_alignment = 1
 script = ExtResource("2_bsdxn")
 variable_name = "score"
 comma_separate = true
 min_digits = 2
 template_string = "Score: %s"
+
+[node name="MPFConditional !=p1" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_6vrr4")
+variable_name = "number"
+condition_type = 1
+condition_value = "1"
+metadata/_custom_type_script = "uid://b846v662darst"
+
+[node name="MPFVariable - ScoreP1" type="Label" parent="MPFConditional !=p1"]
+offset_left = -208.0
+offset_top = 758.0
+offset_right = 801.0
+offset_bottom = 977.0
+theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_l2x7l")
+theme_override_font_sizes/font_size = 75
+text = "P1: 1,000,000"
+horizontal_alignment = 1
+script = ExtResource("2_bsdxn")
+variable_type = 4
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+template_string = "P1: %s"
+
+[node name="MPFConditional !=p2" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_6vrr4")
+variable_name = "number"
+condition_type = 1
+condition_value = "2"
+metadata/_custom_type_script = "uid://b846v662darst"
+
+[node name="MPFVariable - ScoreP2" type="Label" parent="MPFConditional !=p2"]
+offset_left = 594.0
+offset_top = 751.0
+offset_right = 1603.0
+offset_bottom = 970.0
+theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_l2x7l")
+theme_override_font_sizes/font_size = 75
+text = "P2: 1,000,000"
+horizontal_alignment = 1
+script = ExtResource("2_bsdxn")
+variable_type = 5
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+template_string = "P2: %s"
+min_players = 2
+
+[node name="MPFConditional !=p3" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 594.0
+offset_top = 751.0
+offset_right = 634.0
+offset_bottom = 791.0
+script = ExtResource("6_6vrr4")
+variable_name = "number"
+condition_type = 1
+condition_value = "3"
+metadata/_custom_type_script = "uid://b846v662darst"
+
+[node name="MPFVariable - ScoreP3" type="Label" parent="MPFConditional !=p3"]
+offset_left = 775.0
+offset_top = -8.0
+offset_right = 1784.0
+offset_bottom = 211.0
+theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_l2x7l")
+theme_override_font_sizes/font_size = 75
+text = "P3: 1,000,000"
+horizontal_alignment = 1
+script = ExtResource("2_bsdxn")
+variable_type = 6
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+template_string = "P3: %s"
+min_players = 3
+
+[node name="MPFConditional !=p4" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 594.0
+offset_top = 751.0
+offset_right = 634.0
+offset_bottom = 791.0
+script = ExtResource("6_6vrr4")
+variable_name = "number"
+condition_type = 1
+condition_value = "4"
+metadata/_custom_type_script = "uid://b846v662darst"
+
+[node name="MPFVariable - ScoreP4" type="Label" parent="MPFConditional !=p4"]
+offset_left = 1491.0
+offset_top = -10.0
+offset_right = 2500.0
+offset_bottom = 209.0
+theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_l2x7l")
+theme_override_font_sizes/font_size = 75
+text = "P4: 1,000,000"
+horizontal_alignment = 1
+script = ExtResource("2_bsdxn")
+variable_type = 7
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+template_string = "P4: %s"
+min_players = 4
 
 [node name="MPFVariable - Ball Score" type="Label" parent="."]
 layout_mode = 0
@@ -71,3 +190,22 @@ variable_name = "ball_score"
 comma_separate = true
 min_digits = 2
 template_string = "(%s)"
+
+[node name="MPFVariable - Current P#" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1983.0
+offset_top = 2.0
+offset_right = 2480.0
+offset_bottom = 152.0
+theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_l2x7l")
+theme_override_font_sizes/font_size = 125
+text = "Player N"
+horizontal_alignment = 1
+script = ExtResource("2_bsdxn")
+variable_name = "number"
+comma_separate = true
+min_digits = 2
+template_string = "Player %s"
+min_players = 2
