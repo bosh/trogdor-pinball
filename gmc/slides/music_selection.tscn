@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ddn5dimw4gtb7"]
+[gd_scene load_steps=13 format=3 uid="uid://ddn5dimw4gtb7"]
 
 [ext_resource type="Script" uid="uid://6mdcui7wkc47" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_djs37"]
 [ext_resource type="Script" uid="uid://bnssoxshet8be" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="2_30ecx"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://cadc4w8gomxu6" path="res://images/music_4.jpg" id="6_ugckl"]
 [ext_resource type="Texture2D" uid="uid://f1r2t5qioo7t" path="res://images/music_5.jpg" id="7_qf44x"]
 [ext_resource type="Texture2D" uid="uid://bc4vl0kwhs3da" path="res://images/music_6.jpg" id="8_um5lv"]
+[ext_resource type="FontFile" uid="uid://dhi02px4iy4jf" path="res://fonts/lappy-486-extended.ttf" id="11_qtovp"]
+[ext_resource type="Script" uid="uid://cm7sg7wq6hq8s" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="12_mdj60"]
 
 [node name="MusicSelection" type="Control"]
 layout_mode = 3
@@ -86,10 +88,45 @@ text = "Quiet Mode"
 
 [node name="header" type="Label" parent="MPFCarousel"]
 layout_mode = 0
-offset_left = 690.0
-offset_top = 4.0
-offset_right = 2239.0
-offset_bottom = 277.0
-theme_override_font_sizes/font_size = 100
-text = "Select Music"
+offset_left = 228.0
+offset_top = 741.0
+offset_right = 1777.0
+offset_bottom = 1014.0
+theme_override_font_sizes/font_size = 75
+text = "Use Flippers to Select Music"
 horizontal_alignment = 1
+
+[node name="MPFVariable - Current P#" type="Label" parent="."]
+offset_left = 37.0
+offset_top = -24.0
+offset_right = 832.0
+offset_bottom = 215.0
+theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("11_qtovp")
+theme_override_font_sizes/font_size = 200
+text = "Player N"
+horizontal_alignment = 1
+script = ExtResource("12_mdj60")
+variable_name = "number"
+comma_separate = true
+min_digits = 2
+template_string = "Player %s"
+min_players = 2
+
+[node name="MPFVariable - Ball" type="Label" parent="."]
+offset_left = -135.0
+offset_top = 706.0
+offset_right = 660.0
+offset_bottom = 945.0
+theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("11_qtovp")
+theme_override_font_sizes/font_size = 150
+text = "Ball #"
+horizontal_alignment = 1
+script = ExtResource("12_mdj60")
+variable_name = "ball"
+comma_separate = true
+min_digits = 2
+template_string = "Ball %s"
