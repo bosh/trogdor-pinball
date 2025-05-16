@@ -12,12 +12,45 @@ event_player:
     - start_post_ring_right_spin_red
     - start_post_ring_left_spin_blue
 
+  player_playfield_multiplier{value==2}: [start_gi_pfm_2]
+  player_playfield_multiplier{value==3}: [start_gi_pfm_3]
+  player_playfield_multiplier{value==4}: [start_gi_pfm_4]
+  player_playfield_multiplier{value==5}: [start_gi_pfm_5]
+
 show_player:
   start_gi_base:
     led_color:
       show_tokens:
         lights: lights_gi
         color: aaaaaa
+  start_gi_pfm_2:
+    led_color:
+      key: gi_pf_multiplier_show
+      priority: 11
+      show_tokens:
+        lights: lights_gi
+        color: yellow
+  start_gi_pfm_3:
+    led_color:
+      key: gi_pf_multiplier_show
+      priority: 12
+      show_tokens:
+        lights: lights_gi
+        color: orange
+  start_gi_pfm_4:
+    led_color:
+      key: gi_pf_multiplier_show
+      priority: 13
+      show_tokens:
+        lights: lights_gi
+        color: purple
+  start_gi_pfm_5:
+    led_color:
+      key: gi_pf_multiplier_show
+      priority: 14
+      show_tokens:
+        lights: lights_gi
+        color: green
 
   ts_start_button_active:
     light_ring_flash:
