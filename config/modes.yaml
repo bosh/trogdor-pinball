@@ -3,7 +3,7 @@
 modes:
   - attract
   - base
-  # - high_score #GSPF the screen shows but controls do not function. Maybe test in monitor?
+  - high_score
   - music_selection
   - music_controller
   - backbox_controller
