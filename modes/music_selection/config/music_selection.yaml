@@ -29,10 +29,10 @@ slide_player:
 
 event_player:
   flipper_cancel: [music_controller_quiet] #For now quieting is jukebox off for the ball. Maybe make this a flipper cancel _hold_
-  s_left_flipper_secondary_active: [reverse_music_selection_carousel, reverse_current_track]
-  s_right_flipper_secondary_active: [advance_music_selection_carousel, advance_current_track]
+  s_left_flipper_secondary_active{device.switches.s_left_flipper.state == 1}: [reverse_music_selection_carousel, reverse_current_track]
+  s_right_flipper_secondary_active{device.switches.s_left_flipper.state == 1}: [advance_music_selection_carousel, advance_current_track]
 
-  playfield_active: # Active play immediately ends music selection. Maybe s_plunger_inactive even as well
+  playfield_active: # Active play immediately ends music selection
     - mode_stop_music_selection
 
   music_selection_item_selected: # Carousel selection event
