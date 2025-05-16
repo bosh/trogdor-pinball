@@ -3,24 +3,29 @@
 #Autofire devices are defined here by switch and what coil is cycled when that switch is active.
 autofire_coils:
   slingshot_left:
+    ball_search_order: 221
     coil: c_left_sling
     switch: s_left_sling
     enable_events: ball_started, enable_slings
     disable_events: ball_will_end, service_mode_entered, disable_slings
 
   slingshot_right:
+    ball_search_order: 222
     coil: c_right_sling
     switch: s_right_sling
     enable_events: ball_started, enable_slings
     disable_events: ball_will_end, service_mode_entered, disable_slings
 
   pop_left:
+    ball_search_order: 253
     coil: c_pop_left
     switch: s_pop_left
   pop_right:
+    ball_search_order: 251
     coil: c_pop_right
     switch: s_pop_right
   pop_center:
+    ball_search_order: 252
     coil: c_pop_center
     switch: s_pop_center
 
@@ -45,6 +50,7 @@ flippers:
     use_eos: true
 
   upper_flipper: #left flipper rotation
+    ball_search_order: 200
     main_coil: c_flipper_upper_full
     hold_coil: c_flipper_upper_hold
     eos_switch: s_upper_flipper_eos

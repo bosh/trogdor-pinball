@@ -38,5 +38,5 @@ event_player:
   music_selection_item_selected: # Carousel selection event
     - mode_stop_music_selection
 
-  music_track_finished: # Rare case - ball ejected into music selection and the song completes fully with no inputs
+  music_track_finished: # Rare case - ball ejected into music selection and the song completes fully with no inputs #actually also happens with 0 duration tracks ending immediately
     - mode_stop_music_selection

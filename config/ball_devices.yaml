@@ -18,6 +18,7 @@ ball_devices:
     debug: true
 
   bd_plunger:
+    ball_search_order: 199 #right before default
     ball_switches: s_plunger
     mechanical_eject: true
     eject_timeouts: 2800ms #TODO research making this dynamic so active multiballs trying to add 2+ balls don't slow down, but the default can be 4s+
@@ -26,11 +27,13 @@ ball_devices:
     auto_fire_on_unexpected_ball: true
 
   bd_vuk:
+    ball_search_order: 202
     ball_switches: s_vuk_presence
     eject_coil: c_vuk
     eject_timeouts: 1s
 
   bd_subway_vuk:
+    ball_search_order: 201
     ball_switches: s_subway_vuk_presence
     eject_coil: c_subway_vuk
     eject_timeouts: 1s
@@ -46,14 +49,17 @@ ball_devices:
 
 drop_targets:
   dt_slots_left:
+    ball_search_order: 150
     switch: s_drop_bank_left
-    # knockdown_coil: c_slot_bank_left_drop #FUTURE not hooked up
-    # knockdown_events: knock_slots_left_down
+    knockdown_coil: c_slot_bank_left_drop
+    knockdown_events: knock_slots_left_down
   dt_slots_center:
+    ball_search_order: 151
     switch: s_drop_bank_center
     knockdown_coil: c_slot_bank_center_drop
     knockdown_events: knock_slots_center_down
   dt_slots_right:
+    ball_search_order: 152
     switch: s_drop_bank_right
     knockdown_coil: c_slot_bank_right_drop
     knockdown_events: knock_slots_right_down
