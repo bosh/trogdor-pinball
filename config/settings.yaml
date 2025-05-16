@@ -361,7 +361,7 @@ settings:
     key_type: int
     sort: 401
   tilt_settle_time:
-    label: Time to wait on tilt to settle bob
+    label: Time to wait on fully tilting out to settle bob
     values:
       3000: "3s"
       5000: "5s (default)"
@@ -372,11 +372,13 @@ settings:
   tilt_multiple_hit_window:
     label: Tilt Sensitivity
     values:
-      150: "sensitive"
-      300: "default"
-      500: "insensitive"
-      8000: "very insensitive"
-    default: 300
+      200: "very sensitive"
+      350: "sensitive"
+      550: "default"
+      750: "loose"
+      1000: "very loose"
+      2000: "generous"
+    default: 550
     key_type: int
     sort: 403
 
