@@ -91,7 +91,7 @@ shots:
 
   skillshot_2:
     profile: skill_shot_profile
-    switch: s_spinner_right
+    switch: s_captive_ball_presence
     advance_events: skillshot_2_hitme_hit
     control_events:
       - events: restart_skill_shots
@@ -103,7 +103,7 @@ shots:
 
   skillshot_3:
     profile: skill_shot_profile
-    switches: s_burn_b, s_burn_u, s_burn_r, s_burn_n
+    switches: s_burn_b, s_burn_n
     advance_events: skillshot_3_hitme_hit
     control_events:
       - events: restart_skill_shots
