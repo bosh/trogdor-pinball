@@ -29,9 +29,9 @@ switches:
     tags: playfield_active
   s_captive_ball_presence:
     number: 3208-5
-    debounce: quick #needs dialing in but we want high sensitivity
+    # debounce: quick #needs dialing in but we want high sensitivity #Later: quick is too sensitive oops
     type: 'NC' #actually NO but the ball sits on it to make it NC
-    tags: playfield_active
+    # tags: playfield_active #GSPF turn this off due to failing ball search on bank reset. Future: special handler on captive ball as skillshot on launch
   s_spinner_right: #opto, double reports spins
     number: 3208-6
     type: 'NC' #not sure how important this nc is
