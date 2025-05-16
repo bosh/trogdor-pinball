@@ -28,8 +28,8 @@ show_player:
     flash_color:
       key: gi_flash
       action: play
-      loops: 2
-      speed: 5
+      loops: 3
+      speed: 4
       show_tokens:
         lights: lights_gi
         color: yellow
@@ -38,8 +38,8 @@ show_player:
     flash_color:
       key: gi_flash
       action: play
-      loops: 3
-      speed: 7
+      loops: 4
+      speed: 6
       show_tokens:
         lights: lights_gi
         color: orange
@@ -48,7 +48,7 @@ show_player:
     flash_color:
       key: gi_flash
       action: play
-      loops: 1
+      loops: 2
       speed: 2
       show_tokens:
         lights: lights_gi
