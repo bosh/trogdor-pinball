@@ -36,6 +36,9 @@ variable_player:
     skillshot_3_successes: 1
 
 event_player:
+  mode_skillshot_base_started:
+    - enable_orbit_diverter_skillshot
+    - activate_orbit_diverter_skillshot
   timer_skill_shot_timeout_complete:
     - mode_fail_skillshot_base
   skillshot_of_an_artist_hitme_hit:
@@ -79,7 +82,7 @@ shot_profiles:
 shots:
   skillshot_of_an_artist:
     profile: skill_shot_profile
-    switch: s_spinner_left
+    switch: s_left_outer_lane
     advance_events: skillshot_of_an_artist_hitme_hit
     control_events:
       - events: restart_skill_shots
@@ -91,7 +94,7 @@ shots:
 
   skillshot_2:
     profile: skill_shot_profile
-    switch: s_captive_ball_presence
+    switch: s_subway_entrance
     advance_events: skillshot_2_hitme_hit
     control_events:
       - events: restart_skill_shots
@@ -103,7 +106,7 @@ shots:
 
   skillshot_3:
     profile: skill_shot_profile
-    switches: s_burn_b, s_burn_n
+    switches: s_spinner_right
     advance_events: skillshot_3_hitme_hit
     control_events:
       - events: restart_skill_shots
