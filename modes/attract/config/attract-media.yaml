@@ -1,5 +1,11 @@
 #config_version=6
 
+show_player:
+  mode_attract_started:
+    on:
+      show_tokens:
+        led: l_start
+
 slide_player:
   mode_attract_started.1:
     attract:
