@@ -77,7 +77,7 @@ coils:
   c_slot_bank_reset:
     number: 1616-8
     default_pulse_ms: settings.slot_bank_reset_power
-    default_pulse_power: 0.625 #Dialing in
+    default_pulse_power: 0.875 #Dialing in
   c_gate_left:
     number: 1616-9
     default_pulse_ms: settings.gate_power
@@ -119,6 +119,9 @@ coils:
 #    hold_coil: c_orbit_diverter_hold
 #    main_coil: c_orbit_diverter_full
 #    eos_switch: s_orbit_diverter_eos
+
+coil_player:
+  ball_search_phase_1: c_slot_bank_left_drop
 
 diverters:
   orbit_diverter:
