@@ -5,19 +5,19 @@ config:
 
 mode_settings:
   selectable_items:
-    - title
-    - byline
-    - credits
-    - logos
     - last_scores_1p{machine.player1_score and not machine.player2_score}
     - last_scores_2p{machine.player2_score and not machine.player3_score}
     - last_scores_3p{machine.player3_score and not machine.player4_score}
     - last_scores_4p{machine.player4_score}
+    - title
+    - byline
     - grand_champ{machine.score1_value}
     - high_score_1{machine.score2_value}
     - high_score_2{machine.score3_value}
     - high_score_3{machine.score4_value}
     - high_score_4{machine.score5_value}
+    - logos
+    - credits
   next_item_events: advance_attract_carousel
   previous_item_events: reverse_attract_carousel
 
