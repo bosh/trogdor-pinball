@@ -188,7 +188,7 @@ settings:
     sort: 163
     label: Slot (three-target) bank single-target knockdown power
     key_type: int
-    default: 18
+    default: 30 
     values:
       14: '14 ms'
       18: '18 ms (default)'
@@ -200,11 +200,11 @@ settings:
     sort: 164
     label: Left side VUK eject power
     key_type: int
-    default: 25
+    default: 12
     values:
-      15: '15 ms'
-      20: '20 ms'
-      25: '25 ms (default)'
+      12: '12 ms'
+      20: '20 ms (default)'
+      25: '25 ms'
       30: '30 ms'
       35: '35 ms'
 
@@ -212,11 +212,11 @@ settings:
     sort: 165
     label: Right side VUK eject power
     key_type: int
-    default: 18
+    default: 10
     values:
-      10: '10 ms'
+      10: '10 ms (show default)'
       12: '12 ms'
-      15: '15 ms (default)'
+      15: '15 ms'
       18: '18 ms'
       21: '21 ms'
       24: '24 ms'
