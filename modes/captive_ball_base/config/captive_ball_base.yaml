@@ -9,8 +9,8 @@ shot_profiles:
   captive_ball_base_profile:
     advance_on_hit: false
     states:
-      - name: 'live'
       - name: 'disabled'
+      - name: 'live'
 
 shots:
   captive_ball_target:
@@ -18,9 +18,9 @@ shots:
     switch: s_captive_ball_presence
     control_events:
       - events: captive_ball_target_disable
-        state: 1
-      - events: captive_ball_target_enable
         state: 0
+      - events: captive_ball_target_enable
+        state: 1
 
 variable_player:
   reset_captive_ball_target_hits:
