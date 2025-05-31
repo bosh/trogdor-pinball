@@ -66,12 +66,15 @@ coils:
   c_slot_bank_left_drop:
     number: 1616-5
     default_pulse_ms: settings.slot_bank_knockdown_power
+    default_pulse_power: .375
   c_slot_bank_center_drop:
     number: 1616-6
     default_pulse_ms: settings.slot_bank_knockdown_power
+    default_pulse_power: .375
   c_slot_bank_right_drop:
     number: 1616-7
     default_pulse_ms: settings.slot_bank_knockdown_power
+    default_pulse_power: .375
 
 ## B J4
   c_slot_bank_reset:
@@ -121,7 +124,15 @@ coils:
 #    eos_switch: s_orbit_diverter_eos
 
 coil_player:
-  ball_search_phase_1: c_slot_bank_left_drop
+  ball_search_phase_1:
+    c_slot_bank_left_drop:
+      pulse: 15ms
+  ball_search_phase_1:
+    c_slot_bank_left_drop:
+      pulse: 25ms
+  ball_search_phase_1:
+    c_slot_bank_left_drop:
+      pulse: 30ms
 
 diverters:
   orbit_diverter:

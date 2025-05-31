@@ -188,13 +188,13 @@ settings:
     sort: 163
     label: Slot (three-target) bank single-target knockdown power
     key_type: int
-    default: 30 
+    default: 17
     values:
       14: '14 ms'
-      18: '18 ms (default)'
-      22: '22 ms'
-      26: '26 ms'
-      30: '30 ms'
+      17: '17 ms (default)'
+      20: '20 ms'
+      23: '23 ms'
+      27: '27 ms'
 
   left_vuk_power:
     sort: 164
