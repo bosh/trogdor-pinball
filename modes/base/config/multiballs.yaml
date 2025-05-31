@@ -13,9 +13,9 @@ multiballs:
     ball_count: 2
     ball_count_type: total
     enable_events: playfield_active
-    disable_events: ball_ending
+    disable_events: ball_ending #TODO subscribe to the mode ending
     start_events: burnination_multiball_qualified
-    shoot_again: 15000ms
+    shoot_again: 30000ms #TODO make a setting to conform to overall mode length
 
   skillshot_addaball:
     ball_count: 1
@@ -23,11 +23,11 @@ multiballs:
     enable_events: playfield_active
     disable_events: ball_ending
     start_events: skillshot_addaball_qualified
-    shoot_again: 500ms
+    shoot_again: 5000ms
 
 combo_switches:
   cab_two_button_reset: # Press both cab buttons to max for 2.5s to trigger multiball
-    events_when_both: mini_cabinet_multiball_qualified
+    # events_when_both: mini_cabinet_multiball_qualified # Disable the cheat multiball lol
     switches_1: s_left_flipper_secondary
     switches_2: s_right_flipper_secondary
     hold_time: 2500ms
