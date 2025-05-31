@@ -8,12 +8,24 @@ mode:
 variable_player:
   base_vuk_group_hit:
     score: 1500 * current_player.playfield_multiplier
-    vuk_hits: 1
+    capture_hits: 1
+  base_subway_capture_expected_hit:
+    score: 5000 * current_player.playfield_multiplier
+    capture_hits: 1
+  base_subway_capture_unexpected_hit:
+    score: 2000 * current_player.playfield_multiplier
+    capture_hits: 0
 
 shot_profiles:
   vuk_base_profile:
+    advance_on_hit: False
     states:
       - name: singleton
+  subway_base_profile:
+    advance_on_hit: False
+    states:
+      - name: expected
+      - name: unexpected
 
 shots:
   base_left_vuk:
@@ -22,6 +34,10 @@ shots:
   base_right_vuk:
     profile: vuk_base_profile
     switch: s_vuk_presence
+
+  base_subway_capture:
+    profile: subway_base_profile
+    switch: s_subway_entrance
 
 shot_groups:
   base_vuk_group:

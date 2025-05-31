@@ -48,7 +48,7 @@ player_vars:
     initial_value: 0
   rollover_hits: #Not counting any yet #Needs: top lanes, inlanes, outlanes?
     initial_value: 0
-  capture_hits: #Not counting any yet #Needs: vuk, TBD left capture spot
+  capture_hits:
     initial_value: 0
   pop_hits: #Not counting any yet #Needs: all three pops lol
     initial_value: 0
