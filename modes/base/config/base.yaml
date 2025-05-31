@@ -17,6 +17,15 @@ slide_player:
     attract:
       action: remove
 
+widget_player:
+  player_playfield_multiplier.1{value>1}:
+    playfield_multiplier_overlay:
+      slide: base
+      action: remove
+  player_playfield_multiplier{value>1}:
+    playfield_multiplier_overlay:
+      slide: base
+
 event_player:
   mode_base_started:
     - manage_ball_scores
