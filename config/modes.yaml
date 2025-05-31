@@ -28,6 +28,7 @@ modes:
   - captive_ball_base
   - slots_controller
   - drops_base
+  - vuks_base
   - targets_base
   - tilt #base+override
   - queue_end_quip

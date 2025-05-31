@@ -1,0 +1,30 @@
+#config_version=6
+
+mode:
+  priority: 7888 #TODO
+  start_events: mode_start_vuks_base
+  stop_events: mode_stop_vuks_base, ball_will_end
+
+variable_player:
+  base_vuk_group_hit:
+    score: 1500 * current_player.playfield_multiplier
+    vuk_hits: 1
+
+shot_profiles:
+  vuk_base_profile:
+    states:
+      - name: singleton
+
+shots:
+  base_left_vuk:
+    profile: vuk_base_profile
+    switch: s_subway_vuk_presence
+  base_right_vuk:
+    profile: vuk_base_profile
+    switch: s_vuk_presence
+
+shot_groups:
+  base_vuk_group:
+    shots:
+      - base_left_vuk
+      - base_right_vuk

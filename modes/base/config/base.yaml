@@ -39,6 +39,7 @@ event_player:
     - mode_start_skillshot_base
     - mode_start_slings_base
     - mode_start_lower_lanes_base
+    - mode_start_vuks_base
     - mode_start_targets_base
     - mode_start_burnination_controller
     - mode_start_slots_controller
