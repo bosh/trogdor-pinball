@@ -12,12 +12,18 @@ shot_profiles:
       - name: 'live'
 
 shots:
+  shot_ramp_middle:
+    profile: ramp_base_profile
+    switch: s_wireform_s_top
   shot_ramp_right:
     profile: ramp_base_profile
     switch: s_wireform_right_top
 
 variable_player:
   #Simple ramp scoring with counting
+  shot_ramp_middle_live_hit:
+    score: 3000 * current_player.playfield_multiplier
+    ramp_hits: 1
   shot_ramp_right_live_hit:
     score: 5000 * current_player.playfield_multiplier
     ramp_hits: 1
@@ -32,6 +38,10 @@ event_player:
     - disable_plunger_hold|10s
 
 show_player:
+  shot_ramp_middle_live_hit:
+    slots_spin_show:
+      action: play
+      loops: 3
   shot_ramp_right_live_hit:
     slots_diagonal_result_show:
       action: play
