@@ -25,6 +25,8 @@ ball_devices:
     eject_coil: c_auto_plunger
 #    player_controlled_eject_event: s_left_flipper_secondary_active #Reenable to allow minicab left secondary to eject
     auto_fire_on_unexpected_ball: true
+    confirm_eject_type: switch
+    confirm_eject_switch: s_launch_exit
 
   bd_vuk:
     ball_search_order: 202
