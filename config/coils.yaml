@@ -127,12 +127,13 @@ coil_player:
   ball_search_phase_1:
     c_slot_bank_left_drop:
       pulse: 15ms
-  ball_search_phase_1:
+  ball_search_phase_2:
     c_slot_bank_left_drop:
       pulse: 25ms
-  ball_search_phase_1:
+  ball_search_phase_3:
     c_slot_bank_left_drop:
       pulse: 30ms
+    c_slot_bank_center_drop: pulse
 
 diverters:
   orbit_diverter:
