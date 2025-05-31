@@ -5,6 +5,12 @@ mode:
   start_events: mode_start_vuks_base
   stop_events: mode_stop_vuks_base, ball_will_end
 
+event_player:
+  activate_orbit_diverter:              [set_base_subway_capture_expected]
+  activate_orbit_diverter_skillshot:    [set_base_subway_capture_expected]
+  deactivate_orbit_diverter:            [set_base_subway_capture_unexpected]
+  deactivate_orbit_diverter_skillshot:  [set_base_subway_capture_unexpected]
+
 variable_player:
   base_vuk_group_hit:
     score: 1500 * current_player.playfield_multiplier
@@ -38,6 +44,11 @@ shots:
   base_subway_capture:
     profile: subway_base_profile
     switch: s_subway_entrance
+    control_events:
+      - events: set_base_subway_capture_expected
+        state: 0
+      - events: set_base_subway_capture_unexpected
+        state: 1
 
 shot_groups:
   base_vuk_group:

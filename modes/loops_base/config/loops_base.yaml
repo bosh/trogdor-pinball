@@ -5,6 +5,12 @@ mode:
   start_events: mode_start_loops_base
   stop_events: mode_stop_loops_base, ball_will_end
 
+event_player:
+  mode_loops_base_started: [enable_orbit_diverter]
+  base_left_uturn_hit: [activate_orbit_diverter]  # combo from upper loop
+  upper_elbow_hit: [activate_orbit_diverter]      # rare occasion to open diverter
+  ss_subway_travel_hit: [activate_orbit_diverter] # VUK eject loop combo
+
 variable_player:
   left_uturn_hit:
     score: 2000 * current_player.playfield_multiplier

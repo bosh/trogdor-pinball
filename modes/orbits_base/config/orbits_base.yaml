@@ -5,6 +5,9 @@ mode:
   start_events: mode_start_orbits_base
   stop_events: mode_stop_orbits_base, ball_will_end
 
+event_player:
+  base_right_orbit_open_hit: [deactivate_orbit_diverter, deactivate_orbit_diverter_skillshot]
+
 variable_player:
   base_orbit_open_group_hit:
     score: 2000 * current_player.playfield_multiplier
