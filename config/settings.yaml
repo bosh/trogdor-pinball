@@ -253,6 +253,29 @@ settings:
     default: 0
     key_type: int
 
+  open_diverter_time_standard:
+    sort: 250
+    label: Subway diverter open time - standard occurrence
+    key_type: int
+    default: 8000
+    values:
+      6000: '6 seconds'
+      7000: '7 seconds'
+      8000: '8 seconds (default)'
+      10000: '10 seconds'
+      12000: '12 seconds'
+
+  open_diverter_time_skillshot:
+    sort: 251
+    label: Subway diverter open time - skillshot
+    key_type: int
+    default: 12000
+    values:
+      8000: '8 seconds'
+      10000: '10 seconds'
+      12000: '12 seconds (default)'
+      14000: '14 seconds'
+      16000: '16 seconds'
 
   burnination_fire_level_one:
     sort: 301
