@@ -13,6 +13,8 @@ modes:
   - ball_saves
   - skillshot_base
   - lower_lanes_base
+  - loops_base
+  - orbits_base
   - ramps_base
   - slings_base
   - slings_dead

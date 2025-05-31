@@ -1,0 +1,46 @@
+#config_version=6
+
+mode:
+  priority: 7777 #TODO
+  start_events: mode_start_loops_base
+  stop_events: mode_stop_loops_base, ball_will_end
+
+variable_player:
+  left_uturn_hit:
+    score: 2000 * current_player.playfield_multiplier
+  right_uturn_hit:
+    score: 1000 * current_player.playfield_multiplier
+  lower_elbow_hit:
+    score: 1500 * current_player.playfield_multiplier
+  upper_elbow_hit:
+    score: 2222 * current_player.playfield_multiplier
+
+  base_loop_group_hit:
+    loop_hits: 1
+
+shot_profiles:
+  loop_base_profile:
+    states:
+      - name: singleton
+
+shots:
+  base_left_uturn:
+    profile: loop_base_profile
+    hit_events: ss_horseshoe_clockwise_hit
+  base_right_uturn:
+    profile: loop_base_profile
+    hit_events: ss_horseshoe_widdershins_hit
+  base_lower_elbow:
+    profile: loop_base_profile
+    hit_events: ss_elbow_upwards_hit
+  base_upper_elbow:
+    profile: loop_base_profile
+    hit_events: ss_elbow_downwards_hit
+
+shot_groups:
+  base_loop_group:
+    shots:
+      - base_left_uturn
+      - base_right_uturn
+      - base_lower_elbow
+      - base_upper_elbow

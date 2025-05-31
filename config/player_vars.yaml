@@ -38,9 +38,11 @@ player_vars:
   half_spinner_spins: # this counts to 1 to save a half spin, and 2 to reset and increment a spinner spin instead
     initial_value: 0
 
-  ramp_hits: #Only has right ramp counting #Needs: s ramp
+  ramp_hits:
     initial_value: 0
-  loop_hits: #Not counting any orbits or loops yet #Needs: left outer orbit, right outer orbit, top loop, right loop
+  loop_hits:
+    initial_value: 0
+  orbit_hits:
     initial_value: 0
   target_hits: #Not counting any yet #Needs: drops, rollover lane center, TBD others
     initial_value: 0

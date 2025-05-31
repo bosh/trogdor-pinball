@@ -33,6 +33,8 @@ event_player:
     - mode_start_code_base
     - mode_start_priority_shows
     - mode_start_ball_saves
+    - mode_start_loops_base
+    - mode_start_orbits_base
     - mode_start_ramps_base
     - mode_start_skillshot_base
     - mode_start_slings_base
