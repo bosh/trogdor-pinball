@@ -608,7 +608,7 @@ event_player:
   - slots_manager_stop|1500ms
 shot_profiles:
   slot_square_profile:
-    advance_on_hit: False
+    advance_on_hit: false
     states:
     - name: inactive
       show: 'off'

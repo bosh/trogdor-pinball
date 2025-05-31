@@ -4,7 +4,7 @@
 ---
 - duration: 150ms
   lights:
-    lights_gi: yellow
+    lights_gi: green
     l_majesty_1: yellow
     l_majesty_2: orange
     l_majesty_3: red
@@ -13,7 +13,7 @@
     l_majesty_6: green
 - duration: 150ms
   lights:
-    lights_gi: orange
+    lights_gi: yellow
     l_majesty_1: orange
     l_majesty_2: red
     l_majesty_3: purple
@@ -22,7 +22,7 @@
     l_majesty_6: yellow
 - duration: 150ms
   lights:
-    lights_gi: red
+    lights_gi: orange
     l_majesty_1: red
     l_majesty_2: purple
     l_majesty_3: blue
@@ -31,7 +31,7 @@
     l_majesty_6: orange
 - duration: 150ms
   lights:
-    lights_gi: purple
+    lights_gi: red
     l_majesty_1: purple
     l_majesty_2: blue
     l_majesty_3: green
@@ -40,7 +40,7 @@
     l_majesty_6: red
 - duration: 150ms
   lights:
-    lights_gi: blue
+    lights_gi: purple
     l_majesty_1: blue
     l_majesty_2: green
     l_majesty_3: yellow
@@ -49,10 +49,11 @@
     l_majesty_6: purple
 - duration: 150ms
   lights:
-    lights_gi: green
+    lights_gi: blue
     l_majesty_1: green
     l_majesty_2: yellow
     l_majesty_3: orange
     l_majesty_4: red
     l_majesty_5: purple
     l_majesty_6: blue
+

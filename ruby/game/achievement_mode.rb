@@ -26,7 +26,7 @@ module TrogBuild
 
     def rainbow_step(i)
       colors = %w(green yellow orange red purple blue)
-      (1..6).inject({}) do |memo, light_number|
+      (1..6).inject({'lights_gi' => colors[i%6]}) do |memo, light_number|
         memo["l_majesty_#{light_number}"] = colors[(light_number+i) % 6]
         memo
       end
