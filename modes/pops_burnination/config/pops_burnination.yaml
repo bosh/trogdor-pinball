@@ -51,6 +51,7 @@ timers:
 
 shot_profiles:
   burnination_pop_profile:
+    advance_on_hit: True
     states:
       - name: 'base'
         show: 'off'

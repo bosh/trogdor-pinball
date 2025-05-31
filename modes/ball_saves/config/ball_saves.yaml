@@ -142,7 +142,7 @@ shots:
 
 shot_profiles:
   outlane_rollover_profile:
-    advance_on_hit: false
+    advance_on_hit: False
     states:
       - name: "off"
         show: "off"

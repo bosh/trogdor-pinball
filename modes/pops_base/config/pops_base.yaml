@@ -11,6 +11,7 @@ variable_player:
 
 shot_profiles:
   base_pop_profile:
+    advance_on_hit: False
     states:
       - name: singleton
 

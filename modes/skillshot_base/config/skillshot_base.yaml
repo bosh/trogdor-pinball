@@ -62,8 +62,8 @@ event_player:
 
 shot_profiles:
   skill_shot_profile:
-    advance_on_hit: false
-    block: true
+    advance_on_hit: False
+    block: True
     states:
       - name: disabled
         show: on_color

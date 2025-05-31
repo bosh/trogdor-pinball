@@ -13,8 +13,8 @@ variable_player:
 
 shot_profiles:
   inlane_detector_profile:
-    advance_on_hit: true
-    block: false
+    advance_on_hit: True
+    block: False
     states:
       - name: 'off'
         show: 'off'

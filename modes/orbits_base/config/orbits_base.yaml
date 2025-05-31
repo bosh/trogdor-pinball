@@ -15,6 +15,7 @@ variable_player:
 
 shot_profiles:
   orbit_base_profile:
+    advance_on_hit: False
     states:
       - name: singleton
 

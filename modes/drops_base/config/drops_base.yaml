@@ -7,7 +7,7 @@ mode:
 
 shot_profiles:
   drops_base_profile:
-    advance_on_hit: false
+    advance_on_hit: False
     states:
       - name: 'live'
 

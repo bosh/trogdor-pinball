@@ -15,6 +15,7 @@ variable_player:
 
 shot_profiles:
   burninated_pop_profile:
+    advance_on_hit: False
     states:
       - name: singleton
 
