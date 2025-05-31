@@ -143,7 +143,7 @@ diverters:
     disable_events: disable_orbit_diverter, ball_ending
     activation_coil: c_orbit_diverter_full # c_orbit_diverter_dual_coil # not currently wired for dual coil
     activation_switches:
-    activation_time: settings.open_diverter_time_standard
+    activation_time: 8s #settings.open_diverter_time_standard
     feeder_devices: bd_plunger, playfield
 
   orbit_diverter_skillshot:
@@ -153,5 +153,5 @@ diverters:
     disable_events: disable_orbit_diverter_skillshot, ball_ending
     activation_coil: c_orbit_diverter_full # c_orbit_diverter_dual_coil # not currently wired for dual coil
     activation_switches:
-    activation_time: settings.open_diverter_time_skillshot
+    activation_time: 12s #settings.open_diverter_time_skillshot
     feeder_devices: bd_plunger, playfield
