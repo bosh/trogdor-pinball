@@ -6,3 +6,6 @@ machine:
 game:
   balls_per_game: settings.balls_per_game
   max_players: settings.max_players
+
+event_player:
+  player_added: [dj_cash]

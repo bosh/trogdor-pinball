@@ -50,7 +50,6 @@ event_player:
   tilt_warning_2: [dj_tilt_warning_pool]
   tilt: [dj_tilted]
 
-  s_start_active: [dj_cash]
   s_plunger_active: [dj_ball_at_launcher]
   increment_playfield_multiplier{current_player.playfield_multiplier < 5}: [dj_multiplier_added_pool]
   increment_bonus_multiplier{current_player.bonus_multiplier < 10}: [dj_bonus_multiplier_added_pool]
