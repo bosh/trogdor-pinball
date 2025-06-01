@@ -354,6 +354,55 @@ variable_type = 2
 variable_name = "player3_score"
 comma_separate = true
 
+[node name="burnination_champ" type="Node2D" parent="MPFCarousel"]
+
+[node name="label" type="Label" parent="MPFCarousel/burnination_champ"]
+offset_left = 1226.0
+offset_top = 53.0
+offset_right = 2778.0
+offset_bottom = 258.0
+theme = ExtResource("12_bvyxe")
+theme_override_colors/font_color = Color(0.666667, 0.133333, 0, 1)
+theme_override_colors/font_outline_color = Color(0.727428, 0.727428, 0.727428, 1)
+theme_override_constants/outline_size = 25
+theme_override_fonts/font = ExtResource("10_8giox")
+theme_override_font_sizes/font_size = 150
+text = "BURNINATION CHAMP"
+horizontal_alignment = 2
+script = ExtResource("5_ose3f")
+variable_type = 2
+variable_name = "burnination_points1_label"
+
+[node name="name" type="Label" parent="MPFCarousel/burnination_champ"]
+offset_left = 1734.0
+offset_top = 215.0
+offset_right = 2782.0
+offset_bottom = 420.0
+theme = ExtResource("12_bvyxe")
+theme_override_fonts/font = ExtResource("10_8giox")
+theme_override_font_sizes/font_size = 150
+text = "BOSH"
+horizontal_alignment = 2
+script = ExtResource("5_ose3f")
+variable_type = 2
+variable_name = "burnination_points1_name"
+
+[node name="value" type="Label" parent="MPFCarousel/burnination_champ"]
+offset_left = 1021.0
+offset_top = 377.0
+offset_right = 2781.0
+offset_bottom = 582.0
+theme = ExtResource("12_bvyxe")
+theme_override_fonts/font = ExtResource("10_8giox")
+theme_override_font_sizes/font_size = 150
+text = "%s Peasants Burninated"
+horizontal_alignment = 2
+script = ExtResource("5_ose3f")
+variable_type = 2
+variable_name = "burnination_points1_value"
+comma_separate = true
+template_string = "%s Peasants Burninated"
+
 [node name="grand_champ" type="Node2D" parent="MPFCarousel"]
 
 [node name="label" type="Label" parent="MPFCarousel/grand_champ"]

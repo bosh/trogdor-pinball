@@ -184,22 +184,19 @@ variable_player:
 
   # Increment fire level by three on bumper hit
   shot_burnination_pop_left_hit:
-    score: 1000 * current_player.playfield_multiplier
     pop_left_fire_level: settings.burnination_pop_hit_increment
-    pop_hits: 1
-    power_hits: 1
 
   shot_burnination_pop_right_hit:
-    score: 1000 * current_player.playfield_multiplier
     pop_right_fire_level: settings.burnination_pop_hit_increment
-    pop_hits: 1
-    power_hits: 1
 
   shot_burnination_pop_center_hit:
-    score: 1000 * current_player.playfield_multiplier
     pop_center_fire_level: settings.burnination_pop_hit_increment
+
+  burnination_pop_group_hit:
+    score: 1000 * current_player.playfield_multiplier
     pop_hits: 1
     power_hits: 1
+    burnination_points: 1
 
   timer_pop_left_burndown_complete{current_player.pop_left_fire_level > 0}:
     pop_left_fire_level: -1

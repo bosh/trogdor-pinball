@@ -67,3 +67,6 @@ player_vars:
 
   pop_center_fire_level:
     initial_value: 0
+
+  burnination_points:
+    initial_value: 0

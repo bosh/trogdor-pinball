@@ -9,6 +9,8 @@ high_score:
       - HIGH SCORE 2
       - HIGH SCORE 3
       - HIGH SCORE 4
+    burnination_points:
+      - BURNINATION CHAMP
   defaults:
     score:
       - TRG: 999999
@@ -16,6 +18,8 @@ high_score:
       - HSR: 123456
       - AML: 98414
       - TST: 1
+    burnination_points:
+      - BOSH: 23
 
 event_player:
   mode_high_score_started:

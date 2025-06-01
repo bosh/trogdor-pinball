@@ -11,6 +11,7 @@ mode_settings:
     - last_scores_4p{machine.player4_score}
     - title
     - byline
+    - burnination_champ{machine.burnination_points1_value}
     - grand_champ{machine.score1_value}
     - high_score_1{machine.score2_value}
     - high_score_2{machine.score3_value}
