@@ -201,16 +201,17 @@ variable_player:
     pop_center_fire_level: -1
 
 event_player:
-  # Reset the timer when pop is hit
+  # Reset the specific pop timer when pop is hit
   shot_burnination_pop_left_hit:
-    - dj_burnination_pop_hit_pool
     - pop_left_burndown_reset
   shot_burnination_pop_right_hit:
-    - dj_burnination_pop_hit_pool
     - pop_right_burndown_reset
   shot_burnination_pop_center_hit:
-    - dj_burnination_pop_hit_pool
     - pop_center_burndown_reset
+
+  burnination_pop_group_hit:
+    - dj_burnination_pop_hit_pool
+    - increment_burnination_time_remaining
 
   # Stop timers on mode exit process starting
   mode_pops_burnination_will_stop:

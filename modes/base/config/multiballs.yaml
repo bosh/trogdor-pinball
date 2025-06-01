@@ -15,7 +15,7 @@ multiballs:
     enable_events: playfield_active
     disable_events: ball_ending #TODO subscribe to the mode ending
     start_events: burnination_multiball_qualified
-    shoot_again: 30000ms #TODO make a setting to conform to overall mode length
+    shoot_again: settings.burnination_timer_seconds #Uses the base setting but does not increment like the overall timer does
 
   skillshot_addaball:
     ball_count: 1

@@ -18,6 +18,9 @@ timers:
         event: burnination_countdown_stop
       - action: restart
         event: burnination_countdown_restart
+      - action: add
+        value: settings.burnination_pop_hit_add_time
+        event: increment_burnination_time_remaining
 
 event_player:
   timer_burnination_countdown_complete:
