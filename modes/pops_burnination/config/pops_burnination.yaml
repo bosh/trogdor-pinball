@@ -5,6 +5,14 @@ mode:
   stop_events: mode_complete_pops_burnination, mode_fail_pops_burnination, ball_will_end
   priority: 2550
 
+slide_player:
+  mode_pops_burnination_started:
+    burnination:
+      action: play
+  mode_pops_burnination_will_stop:
+    burnination:
+      action: remove
+
 timers:
   # Each burndown on a separate timer
   pop_left_burndown:
