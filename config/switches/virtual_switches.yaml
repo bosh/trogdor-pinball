@@ -39,6 +39,31 @@ switches:
     platform: smart_virtual
     number: 909
 
+  vswitch_set_bank_000:
+    platform: smart_virtual
+    number: 930
+  vswitch_set_bank_100:
+    platform: smart_virtual
+    number: 931
+  vswitch_set_bank_010:
+    platform: smart_virtual
+    number: 932
+  vswitch_set_bank_001:
+    platform: smart_virtual
+    number: 933
+  vswitch_set_bank_110:
+    platform: smart_virtual
+    number: 934
+  vswitch_set_bank_101:
+    platform: smart_virtual
+    number: 935
+  vswitch_set_bank_011:
+    platform: smart_virtual
+    number: 936
+  vswitch_set_bank_111:
+    platform: smart_virtual
+    number: 938
+
   vswitch_plunger_power_1:
     platform: smart_virtual
     number: 991
@@ -118,6 +143,29 @@ coil_player:
   vswitch_plunger_power_6_active:
     c_auto_plunger:
       pulse_ms: 36
+
+  vswitch_set_bank_000_active:
+    c_slot_bank_left_drop: pulse
+    c_slot_bank_center_drop: pulse
+    c_slot_bank_right_drop: pulse
+  vswitch_set_bank_100_active: #TODO reset first
+    c_slot_bank_center_drop: pulse
+    c_slot_bank_right_drop: pulse
+  vswitch_set_bank_010_active: #TODO reset first
+    c_slot_bank_left_drop: pulse
+    c_slot_bank_right_drop: pulse
+  vswitch_set_bank_001_active: #TODO reset first
+    c_slot_bank_left_drop: pulse
+    c_slot_bank_center_drop: pulse
+
+  vswitch_set_bank_110_active: #TODO reset first
+    c_slot_bank_right_drop: pulse
+  vswitch_set_bank_101_active: #TODO reset first
+    c_slot_bank_center_drop: pulse
+  vswitch_set_bank_011_active: #TODO reset first
+    c_slot_bank_left_drop: pulse
+  vswitch_set_bank_111_active:
+    c_slot_bank_reset: pulse
 
 show_player:
   vswitch_test_coils_active:
