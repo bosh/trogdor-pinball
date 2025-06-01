@@ -44,13 +44,15 @@ player_vars:
     initial_value: 0
   orbit_hits:
     initial_value: 0
-  target_hits: #Not counting any yet #Needs: drops, rollover lane center, TBD others
+  target_hits:
     initial_value: 0
-  rollover_hits: #Not counting any yet #Needs: top lanes, inlanes, outlanes?
+  rollover_hits:
     initial_value: 0
   capture_hits:
     initial_value: 0
-  pop_hits: #Not counting any yet #Needs: all three pops lol
+  pop_hits:
+    initial_value: 0
+  power_hits: #Combination of pop and sling for bonus calculation
     initial_value: 0
 
   captive_ball_target_hits:

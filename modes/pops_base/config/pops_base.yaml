@@ -8,6 +8,8 @@ mode:
 variable_player:
   base_pop_group_hit:
     score: 500 * current_player.playfield_multiplier
+    pop_hits: 1
+    power_hits: 1
 
 shot_profiles:
   base_pop_profile:

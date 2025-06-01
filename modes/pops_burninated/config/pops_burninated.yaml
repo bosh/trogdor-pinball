@@ -9,6 +9,8 @@ mode:
 variable_player:
   burninated_pop_group_hit:
     score: 5000 * current_player.playfield_multiplier
+    pop_hits: 1
+    power_hits: 1
 
   burninated_pop_center_hit: #Center is worth 1k less. Hax
     score: -1 - (1000 * current_player.playfield_multiplier)

@@ -21,19 +21,22 @@ timers:
 
 variable_player:
   skillshot_of_an_artist_hitme_hit:
-    score: 13000 + current_player.total_skillshot_successes * 111
+    score: 20000 + current_player.total_skillshot_successes * 12500
     total_skillshot_successes: 1
     skillshot_of_an_artist_successes: 1
+    rollover_hits: 5
 
   skillshot_2_hitme_hit:
-    score: 12000 + current_player.total_skillshot_successes * 111
+    score: 10000 + current_player.total_skillshot_successes * 7500
     total_skillshot_successes: 1
     skillshot_2_successes: 1
+    capture_hits: 3
 
   skillshot_3_hitme_hit:
-    score: 14000 + current_player.total_skillshot_successes * 111
+    score: 15000 + current_player.total_skillshot_successes * 1000
     total_skillshot_successes: 1
     skillshot_3_successes: 1
+    spinner_spins: 10
 
 event_player:
   mode_skillshot_base_started:

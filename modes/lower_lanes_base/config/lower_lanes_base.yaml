@@ -8,8 +8,10 @@ mode:
 variable_player:
   inlane_detector_shot_off_hit:
     score: 100 * current_player.playfield_multiplier
+    rollover_hits: 1
   inlane_detector_shot_qualified_hit: # Probable schatz
-    score: 2000 * current_player.playfield_multiplier
+    score: 750 * current_player.playfield_multiplier
+    rollover_hits: 1
 
 shot_profiles:
   inlane_detector_profile:

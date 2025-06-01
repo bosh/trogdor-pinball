@@ -99,13 +99,17 @@ event_player:
 variable_player:
   left_outlane_rollover_off_hit:
     score: 1000 * current_player.playfield_multiplier - 1
+    rollover_hits: 1
   right_outlane_rollover_off_hit:
     score: 1200 * current_player.playfield_multiplier - 11
+    rollover_hits: 1
 
   left_outlane_rollover_qualified_hit:
     score: 3030 * current_player.playfield_multiplier
+    rollover_hits: 1
   right_outlane_rollover_qualified_hit:
     score: 3300 * current_player.playfield_multiplier
+    rollover_hits: 1
 
 shots:
   left_outlane_rollover:

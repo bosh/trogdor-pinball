@@ -11,9 +11,11 @@ variable_player:
   s_left_sling_active:
     score: 999|block
     sling_hits: 0|block
+    power_hits: 0|block
   s_right_sling_active:
     score: 999|block
     sling_hits: 0|block
+    power_hits: 0|block
 
 event_player:
   mode_slings_dead_started: [enable_right_outlane_post, enable_saver_post]

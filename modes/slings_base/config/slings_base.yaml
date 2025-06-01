@@ -25,9 +25,11 @@ variable_player:
   shot_sling_left_base_hit:
     score: 25 * current_player.playfield_multiplier
     sling_hits: 1
+    power_hits: 1
   shot_sling_right_base_hit:
     score: 50 * current_player.playfield_multiplier
     sling_hits: 1
+    power_hits: 1
 
   #Hooks for sling sequence pairs
   #Sequence starting with left scores less because plunge start
