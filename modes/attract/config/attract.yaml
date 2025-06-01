@@ -56,6 +56,10 @@ show_player:
       key: main_attract_show
       loops: 1
       events_when_completed: start_group2_color_dance
+    target_dance:
+      key: drop_bank_show
+      loops: 1
+      speed: 0.3
   start_group2_color_dance:
     group2_color_dance:
       key: main_attract_show
