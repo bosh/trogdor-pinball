@@ -22,6 +22,30 @@ shots:
       - events: captive_ball_target_enable
         state: 1
 
+  captive_ball_combo:
+    switch: s_captive_ball_presence
+    profile: singleton_profile
+    enable_events: enable_captive_ball_combo
+    disable_events: disable_captive_ball_combo
+    persist_enable: False
+
+timers:
+  captive_ball_combo_timeout:
+    start_value: 1
+    end_value: 0
+    direction: down
+    tick_interval: 300ms #TODO dial in, probably shorter
+    start_running: false
+    restart_on_complete: false
+    control_events:
+    - event: timer_captive_ball_combo_timeout_restart
+      action: restart
+
+event_player:
+  spinner_spinner_left_base_active: [enable_captive_ball_combo, timer_captive_ball_combo_timeout_restart]
+  spinner_spinner_left_targeted_active: [enable_captive_ball_combo, timer_captive_ball_combo_timeout_restart]
+  timer_captive_ball_combo_timeout_complete: [disable_captive_ball_combo]
+
 variable_player:
   reset_captive_ball_target_hits:
     captive_ball_target_hits:
@@ -32,6 +56,8 @@ variable_player:
     score: 1250 * current_player.playfield_multiplier
   captive_ball_target_disabled_hit:
     score: 200 * current_player.playfield_multiplier
+  captive_ball_combo_hit:
+    score: 2500 # flat - should add to the target hit that is multiplied and credits the hit category
 
 random_event_player:
   captive_ball_target_live_hit:

@@ -1,0 +1,7 @@
+#config_version=6
+
+shot_profiles:
+  singleton_profile:
+    advance_on_hit: False
+    states:
+      - name: singleton

@@ -11,6 +11,7 @@ config:
   - machine.yaml
   - lights/config.yaml
   - coils.yaml
+  - shot_profiles.yaml
   - switches/config.yaml
   - ball_search.yaml
   - spinners.yaml
