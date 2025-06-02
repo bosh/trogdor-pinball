@@ -46,8 +46,14 @@ flasher_player:
     l_spinner_left_flasher:
       color: green
       ms: 100ms
+    gi_sling_left_top:
+      color: green
+      ms: 100ms
   s_spinner_right_active:
     l_spinner_right_flasher:
+      color: green
+      ms: 100ms
+    gi_sling_right_top:
       color: green
       ms: 100ms
 

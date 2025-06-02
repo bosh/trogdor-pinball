@@ -71,7 +71,7 @@ lights:
   gi_sling_right_top:
     type: grb
     number: exp_playfield-4-1
-    tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_pf, lights_gi
+    tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_pf
   gi_sling_right_bottom:
     type: grb
     number: exp_playfield-4-2
@@ -114,7 +114,7 @@ lights:
   gi_sling_left_top:
     type: grb
     number: exp_playfield-4-13
-    tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_pf, lights_gi
+    tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_pf
 
   gi_sling_left_bottom:
     number: exp_playfield-4-14
