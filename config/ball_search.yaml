@@ -1,0 +1,38 @@
+#config_version=6
+
+settings:
+  ball_search_enabled:
+    sort: 200
+    label: Ball Search Enabled
+    values:
+      0: "Disabled"
+      1: "Enabled"
+    default: 0
+    key_type: int
+
+timed_switches:
+  ts_drop_bank_stuck_ball:
+    time: 750ms
+    switches:
+      - s_drop_bank_stuck_ball_detector
+
+widget_player:
+  ball_search_started: ball_search_overlay
+  ball_search_stopped:
+    ball_search_overlay:
+      action: remove
+
+coil_player:
+  ts_drop_bank_stuck_ball_active:
+    c_slot_bank_left_drop: pulse
+  ball_search_phase_1:
+    c_slot_bank_left_drop:
+      pulse_ms: 15
+  ball_search_phase_2:
+    c_slot_bank_left_drop:
+      pulse_ms: 25
+  ball_search_phase_3:
+    c_slot_bank_left_drop:
+      pulse_ms: 30
+    c_slot_bank_center_drop:
+      action: pulse

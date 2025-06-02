@@ -27,3 +27,7 @@ switches:
   s_right_outlane_lower:
     number: 806
     platform: smart_virtual
+
+  s_drop_bank_stuck_ball_detector:
+    number: 888
+    platform: smart_virtual

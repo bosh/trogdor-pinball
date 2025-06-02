@@ -12,6 +12,7 @@ config:
   - lights/config.yaml
   - coils.yaml
   - switches/config.yaml
+  - ball_search.yaml
   - spinners.yaml
   - autofires.yaml
   - ball_devices.yaml

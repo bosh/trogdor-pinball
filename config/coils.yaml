@@ -123,19 +123,6 @@ coils:
 #    main_coil: c_orbit_diverter_full
 #    eos_switch: s_orbit_diverter_eos
 
-coil_player:
-  ball_search_phase_1:
-    c_slot_bank_left_drop:
-      pulse_ms: 15
-  ball_search_phase_2:
-    c_slot_bank_left_drop:
-      pulse_ms: 25
-  ball_search_phase_3:
-    c_slot_bank_left_drop:
-      pulse_ms: 30
-    c_slot_bank_center_drop:
-      action: pulse
-
 diverters:
   orbit_diverter:
     activate_events: activate_orbit_diverter

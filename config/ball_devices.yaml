@@ -6,12 +6,6 @@ playfields:
     tags: default
     enable_ball_search: settings.ball_search_enabled
 
-widget_player:
-  ball_search_started: ball_search_overlay
-  ball_search_stopped:
-    ball_search_overlay:
-      action: remove
-
 ball_devices:
   bd_trough:
     ball_switches: s_trough_ball_1, s_trough_ball_2, s_trough_ball_3, s_trough_ball_4, s_trough_ball_5

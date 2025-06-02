@@ -244,14 +244,8 @@ settings:
       25: '25 ms'
       30: '30 ms'
 
-  ball_search_enabled:
-    sort: 200
-    label: Ball Search Enabled
-    values:
-      0: "Disabled"
-      1: "Enabled"
-    default: 0
-    key_type: int
+  # ball_search_enabled: #Actually found in ball_search.yaml
+  #   sort: 200
 
   # LATER: Diverter#activation_time doesnt support settings or templates yet
   # open_diverter_time_standard:
