@@ -82,7 +82,7 @@ lights:
     number: 9019
     platform: smart_virtual
     type: rgb
-    tags: lights_2b, lights_3a, lights_4c, lights_5e, lights_pf
+    tags: lights_2b, lights_3a, lights_4c, lights_5e, lights_pf, lights_ball_save
 
   l_spinner_left_flasher:
     number: 9101

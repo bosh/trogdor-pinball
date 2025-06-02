@@ -4,8 +4,8 @@
 
 - duration: 100ms
   lights:
-    l_drain: (color)
+    lights_ball_save: (color)
 
 - duration: 100ms
   lights:
-    l_drain: off
+    lights_ball_save: off
