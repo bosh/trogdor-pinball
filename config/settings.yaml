@@ -428,3 +428,48 @@ settings:
     default: 5.0
     key_type: float
     sort: 501
+
+  ball_score_tier_0_max:
+    label: Ball score worst tier max score
+    sort: 650
+    key_type: int
+    default: 5000
+    values:
+      1000: '1k'
+      5000: '5k (default)'
+      10000: '10k'
+      20000: '20k'
+
+  ball_score_tier_1_max:
+    label: Ball score 2nd worst tier max score
+    sort: 651
+    key_type: int
+    default: 20000
+    values:
+      10000: '10k'
+      20000: '20k (default)'
+      30000: '30k'
+      40000: '40k'
+
+  ball_score_tier_2_max:
+    label: Ball score mid tier max score
+    sort: 652
+    key_type: int
+    default: 40000
+    values:
+      20000: '20k'
+      40000: '40k (default)'
+      60000: '60k'
+      80000: '80k'
+
+  ball_score_tier_3_max:
+    label: Ball score second best tier max score
+    sort: 653
+    key_type: int
+    default: 80000
+    values:
+      40000: '40k'
+      60000: '60k'
+      80000: '80k (default)'
+      100000: '100k'
+      150000: '150k'

@@ -18,11 +18,11 @@ timers:
 
 event_player:
   play_end_quip.1: [dj_music_stop]
-  play_end_quip{current_player.ball_score < 100}: [dj_ball_end_zero]
-  play_end_quip{current_player.ball_score < 1000 and current_player.ball_score >= 100}: [dj_ball_end_poor_pool]
-  play_end_quip{current_player.ball_score < 5000 and current_player.ball_score >= 1000}: [dj_ball_end_average_pool]
-  play_end_quip{current_player.ball_score < 15000 and current_player.ball_score >= 5000}: [dj_ball_end_good_pool]
-  play_end_quip{current_player.ball_score >= 15000}: [dj_ball_end_amazing]
+  play_end_quip{current_player.ball_score < settings.ball_score_tier_0_max}: [dj_ball_end_zero]
+  play_end_quip{current_player.ball_score < settings.ball_score_tier_1_max and current_player.ball_score >= settings.ball_score_tier_0_max}: [dj_ball_end_poor_pool]
+  play_end_quip{current_player.ball_score < settings.ball_score_tier_2_max and current_player.ball_score >= settings.ball_score_tier_1_max}: [dj_ball_end_average_pool]
+  play_end_quip{current_player.ball_score < settings.ball_score_tier_3_max and current_player.ball_score >= settings.ball_score_tier_2_max}: [dj_ball_end_good_pool]
+  play_end_quip{current_player.ball_score >= settings.ball_score_tier_3_max}: [dj_ball_end_amazing]
 
   dj_end_quip_complete: [mode_stop_queue_end_quip]
   timer_fallback_end_quip_timer_complete: [mode_stop_queue_end_quip]
