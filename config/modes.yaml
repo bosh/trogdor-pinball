@@ -32,6 +32,7 @@ modes:
   - targets_base
   - tilt #base+override
   - queue_end_quip
+  - queue_game_over_media
   - service #builtin
 
   # and dont forget the modes in generated_modes.yaml

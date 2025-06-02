@@ -1,0 +1,115 @@
+[gd_scene load_steps=5 format=3 uid="uid://bi1sluov5gfy1"]
+
+[ext_resource type="Script" uid="uid://6mdcui7wkc47" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_rw631"]
+[ext_resource type="Texture2D" uid="uid://ifidd6nwlc8c" path="res://images/included/itsover.png" id="2_e5v4t"]
+[ext_resource type="FontFile" uid="uid://dhi02px4iy4jf" path="res://fonts/lappy-486-extended.ttf" id="4_4764p"]
+[ext_resource type="Script" uid="uid://cm7sg7wq6hq8s" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="5_qskb2"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_rw631")
+metadata/_custom_type_script = "uid://6mdcui7wkc47"
+
+[node name="Itsover" type="Sprite2D" parent="."]
+position = Vector2(1440, 432)
+texture = ExtResource("2_e5v4t")
+
+[node name="MPFVariable - Single Player Score" type="Label" parent="."]
+offset_left = 1827.0
+offset_top = 605.0
+offset_right = 2836.0
+offset_bottom = 844.0
+theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_4764p")
+theme_override_font_sizes/font_size = 200
+text = "1,000,000"
+horizontal_alignment = 2
+script = ExtResource("5_qskb2")
+variable_type = 4
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+template_string = "%s"
+max_players = 1
+
+[node name="MPFVariable - ScoreP1" type="Label" parent="."]
+layout_mode = 0
+offset_left = -205.0
+offset_top = 35.0
+offset_right = 804.0
+offset_bottom = 254.0
+theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_4764p")
+theme_override_font_sizes/font_size = 75
+text = "P1: 1,000,000"
+horizontal_alignment = 1
+script = ExtResource("5_qskb2")
+variable_type = 4
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+template_string = "P1: %s"
+min_players = 2
+
+[node name="MPFVariable - ScoreP2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 597.0
+offset_top = 28.0
+offset_right = 1606.0
+offset_bottom = 247.0
+theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_4764p")
+theme_override_font_sizes/font_size = 75
+text = "P2: 1,000,000"
+horizontal_alignment = 1
+script = ExtResource("5_qskb2")
+variable_type = 5
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+template_string = "P2: %s"
+min_players = 2
+
+[node name="MPFVariable - ScoreP3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1372.0
+offset_top = 20.0
+offset_right = 2381.0
+offset_bottom = 239.0
+theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_4764p")
+theme_override_font_sizes/font_size = 75
+text = "P3: 1,000,000"
+horizontal_alignment = 1
+script = ExtResource("5_qskb2")
+variable_type = 6
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+template_string = "P3: %s"
+min_players = 3
+
+[node name="MPFVariable - ScoreP4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2088.0
+offset_top = 18.0
+offset_right = 3097.0
+offset_bottom = 237.0
+theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_4764p")
+theme_override_font_sizes/font_size = 75
+text = "P4: 1,000,000"
+horizontal_alignment = 1
+script = ExtResource("5_qskb2")
+variable_type = 7
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+template_string = "P4: %s"
+min_players = 4
