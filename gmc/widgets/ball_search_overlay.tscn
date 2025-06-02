@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8drr4m3qox6x"]
+
+[ext_resource type="Script" uid="uid://ct36ftwq5qpfo" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_sp3fi"]
+[ext_resource type="Texture2D" uid="uid://dl5tobto8s5i1" path="res://images/included/ball_search.jpg" id="2_3q5pv"]
+[ext_resource type="Theme" uid="uid://cx5kw5e8kdnr6" path="res://themes/attract_scores_text.tres" id="3_nfbdc"]
+
+[node name="BallSearchOverlay" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_sp3fi")
+metadata/_custom_type_script = "uid://ct36ftwq5qpfo"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1457, 434)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("2_3q5pv")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1101.0
+offset_top = 556.0
+offset_right = 2817.0
+offset_bottom = 883.0
+theme = ExtResource("3_nfbdc")
+theme_override_font_sizes/font_size = 125
+text = "Ball         Search"
