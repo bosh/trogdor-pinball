@@ -37,6 +37,9 @@ shots:
   base_left_vuk:
     profile: vuk_base_profile
     switch: s_subway_vuk_presence
+    delay_switch:
+      s_subway_entrance: 6s #TODO dial in speed.
+
   base_right_vuk:
     profile: vuk_base_profile
     switch: s_vuk_presence
