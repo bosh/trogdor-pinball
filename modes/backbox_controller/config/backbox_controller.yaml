@@ -8,7 +8,8 @@ mode:
 event_player:
   mode_backbox_controller_started:
     - start_backbox_simple_loop
-    - start_backbox_perimeter_stacked_8loop
+    # - start_backbox_perimeter_stacked_8loop
+    - start_backbox_all_high
     - start_backbox_baseline_light
 
   start_backbox_perimeter_stacked_3loop:
@@ -32,6 +33,13 @@ event_player:
     - start_perimeter_8loop_m
 
 show_player:
+  start_backbox_all_high:
+    led_color:
+      priority: 69
+      show_tokens:
+        lights: lights_bb
+        color: ffffff
+
   start_backbox_baseline_light:
     perimeter_baseline:
       priority: 1
