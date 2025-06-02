@@ -30,6 +30,7 @@ event_player:
   mode_base_started:
     - manage_ball_scores
     - mode_start_backbox_controller
+    - mode_start_scoring_mode_controller
     - mode_start_code_base
     - mode_start_priority_shows
     - mode_start_ball_saves

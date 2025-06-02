@@ -10,6 +10,7 @@ modes:
   # - bonus #GSPF bonus off for now since nothing scores into it
   - code_base
   - priority_shows
+  - scoring_mode_controller
   - ball_saves
   - skillshot_base
   - lower_lanes_base

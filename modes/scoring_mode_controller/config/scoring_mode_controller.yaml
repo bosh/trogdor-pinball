@@ -1,0 +1,21 @@
+#config_version=6
+
+mode:
+  priority: 42 #TODO very low for delayed processing on shots
+  start_events: mode_start_scoring_mode_controller
+  stop_events: mode_stop_scoring_mode_controller, ball_will_end
+
+state_machines:
+  scoring_mode:
+    persist_state: False
+    states:
+      start:
+        label: starting state
+      one_ball_base:
+        label: Standard single ball with base shots and scoring
+        events_when_started: [] # Move all base scoring here from base
+    transitions:
+      # Automatically transition on start
+      - source: start
+        target: one_ball_base
+        events: ball_started
