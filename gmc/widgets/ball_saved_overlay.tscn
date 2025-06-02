@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce8e66ukeqjor"]
+
+[ext_resource type="Script" uid="uid://ct36ftwq5qpfo" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_cgrvh"]
+[ext_resource type="Theme" uid="uid://cx5kw5e8kdnr6" path="res://themes/attract_scores_text.tres" id="2_1ksl7"]
+
+[node name="BallSavedOverlay" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_cgrvh")
+metadata/_custom_type_script = "uid://ct36ftwq5qpfo"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1099.0
+offset_top = 320.0
+offset_right = 1852.0
+offset_bottom = 596.0
+theme = ExtResource("2_1ksl7")
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 150
+text = "Ball Saved!"

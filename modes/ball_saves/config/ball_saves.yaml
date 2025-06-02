@@ -49,8 +49,8 @@ ball_saves:
     balls_to_save: 1
 
 event_player:
-  ball_save_default_saving_ball: [dj_ball_save_sb]
-  ball_save_short_saving_ball: [dj_ball_save_sb]
+  ball_save_default_saving_ball: [dj_ball_save_sb, flash_ball_save_overlay]
+  ball_save_short_saving_ball: [dj_ball_save_sb, flash_ball_save_overlay]
 
   # External interface to turn on left outlane save
   qualify_left_outlane_save:
@@ -68,6 +68,7 @@ event_player:
   # Trigger short save for the inbound ball when draining ball is actually saved
   ball_save_left_outlane_saver_saving_ball:
     - dj_ball_save_grace
+    - flash_ball_save_overlay
     - enable_ball_save_short
 
   # Reset shot state if save times out
@@ -90,11 +91,25 @@ event_player:
   # Trigger short save for the inbound ball when draining ball is actually saved
   ball_save_right_outlane_saver_saving_ball:
     - dj_ball_save_grace
+    - flash_ball_save_overlay
     - enable_ball_save_short
 
   # Reset shot state if save times out
   ball_save_right_outlane_saver_disabled:
     - advance_right_outlane_to_off
+
+  flash_ball_save_overlay:
+    - show_ball_save_overlay
+    - hide_ball_save_overlay|2500ms
+
+widget_player:
+  show_ball_save_overlay:
+    ball_saved_overlay:
+      # slide: base
+  hide_ball_save_overlay:
+    ball_saved_overlay:
+      # slide: base
+      action: remove
 
 variable_player:
   left_outlane_rollover_off_hit:
