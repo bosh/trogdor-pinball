@@ -5,38 +5,38 @@
 # c_slot_bank_right_drop
 # c_slot_bank_reset
 
-- duration: 100ms
+- duration: 50ms
   coils:
     c_slot_bank_reset: pulse
 
-- duration: 100ms
+- duration: 1000ms
   coils:
     c_slot_bank_center_drop: pulse
     c_slot_bank_right_drop: pulse
 
-- duration: 100ms
+- duration: 50ms
   coils:
     c_slot_bank_reset: pulse
 
-- duration: 100ms
+- duration: 1000ms
   coils:
     c_slot_bank_left_drop: pulse
     c_slot_bank_right_drop: pulse
 
-- duration: 100ms
+- duration: 50ms
   coils:
     c_slot_bank_reset: pulse
 
-- duration: 100ms
+- duration: 1000ms
   coils:
     c_slot_bank_left_drop: pulse
     c_slot_bank_center_drop: pulse
 
-- duration: 100ms
+- duration: 50ms
   coils:
     c_slot_bank_reset: pulse
 
-- duration: 100ms
+- duration: 1000ms
   coils:
     c_slot_bank_left_drop: pulse
     c_slot_bank_right_drop: pulse
