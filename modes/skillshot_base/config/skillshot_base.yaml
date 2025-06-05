@@ -109,7 +109,7 @@ shots:
 
   skillshot_3:
     profile: skill_shot_profile
-    switches: s_spinner_right
+    switches: s_wireform_s_top
     advance_events: skillshot_3_hitme_hit
     control_events:
       - events: restart_skill_shots
