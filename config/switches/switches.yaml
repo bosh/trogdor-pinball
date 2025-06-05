@@ -5,28 +5,30 @@ switches:
 #IO 3208
 
 ## A J8
-  s_drop_bank_right:
-    number: 3208-2
-    platform_settings:
-      debounce_open: 3ms
-      debounce_close: 8ms
-  s_drop_bank_center:
-    number: 3208-1
-    platform_settings:
-      debounce_open: 4ms
-      debounce_close: 10ms
   s_drop_bank_left:
     number: 3208-0
     platform_settings:
       debounce_open: 5ms
       debounce_close: 12ms
+  s_drop_bank_center:
+    number: 3208-1
+    platform_settings:
+      debounce_open: 4ms
+      debounce_close: 10ms
+  s_drop_bank_right:
+    number: 3208-2
+    platform_settings:
+      debounce_open: 3ms
+      debounce_close: 8ms
 
   s_horseshoe_right: #proxy
     number: 3208-3
     tags: playfield_active
+    debounce: quick
   s_horseshoe_left: #proxy
     number: 3208-4
     tags: playfield_active
+    debounce: quick
   s_captive_ball_presence:
     number: 3208-5
     # debounce: quick #needs dialing in but we want high sensitivity #Later: quick is too sensitive oops
@@ -102,12 +104,15 @@ switches:
     number: 3208-25
   s_launch_exit: #proxy
     number: 3208-26
+    debounce: quick
   s_elbow_lower: #proxy
     number: 3208-27
     tags: playfield_active
+    debounce: quick
   s_elbow_upper: #proxy
     number: 3208-28
     tags: playfield_active
+    debounce: quick
   s_right_outer_lane:
     number: 3208-29
     tags: playfield_active
@@ -144,6 +149,7 @@ switches:
   s_left_orbit_outer: #proxy
     number: 1616-7
     tags: playfield_active
+    debounce: quick
 
 ## B J8
   s_burn_b:
