@@ -11,11 +11,14 @@ metadata/_custom_type_script = "uid://ct36ftwq5qpfo"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1099.0
-offset_top = 320.0
-offset_right = 1852.0
-offset_bottom = 596.0
+offset_left = 8.0
+offset_top = 7.0
+offset_right = 2874.0
+offset_bottom = 886.0
 theme = ExtResource("2_1ksl7")
-theme_override_constants/outline_size = 4
-theme_override_font_sizes/font_size = 150
+theme_override_colors/font_color = Color(0, 0.67451, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 250
 text = "Ball Saved!"
+horizontal_alignment = 1
+vertical_alignment = 1

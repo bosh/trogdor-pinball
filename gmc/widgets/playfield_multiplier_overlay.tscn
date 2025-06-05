@@ -37,7 +37,7 @@ offset_right = 1419.0
 offset_bottom = 65.0
 theme = ExtResource("3_stehb")
 theme_override_colors/font_color = Color(0.670588, 0.682353, 0, 1)
-theme_override_font_sizes/font_size = 105
+theme_override_font_sizes/font_size = 125
 text = "PFx2"
 
 [node name="3" type="Node2D" parent="MPFConditionalChildren"]
@@ -50,7 +50,7 @@ offset_bottom = 65.0
 theme = ExtResource("3_stehb")
 theme_override_colors/font_color = Color(0.866667, 0.584314, 0.364706, 1)
 theme_override_colors/font_outline_color = Color(0.760784, 0, 0, 1)
-theme_override_font_sizes/font_size = 105
+theme_override_font_sizes/font_size = 125
 text = "PFx3"
 
 [node name="4" type="Node2D" parent="MPFConditionalChildren"]
@@ -63,7 +63,7 @@ offset_bottom = 65.0
 theme = ExtResource("3_stehb")
 theme_override_colors/font_color = Color(0.766236, 0.248177, 0.709524, 1)
 theme_override_colors/font_outline_color = Color(0.867387, 0.554019, 0.254814, 1)
-theme_override_font_sizes/font_size = 105
+theme_override_font_sizes/font_size = 125
 text = "PFx4"
 
 [node name="5" type="Node2D" parent="MPFConditionalChildren"]
@@ -76,5 +76,5 @@ offset_bottom = 65.0
 theme = ExtResource("3_stehb")
 theme_override_colors/font_color = Color(0.017168, 0.518574, 0, 1)
 theme_override_colors/font_outline_color = Color(0.933333, 0, 0.768627, 1)
-theme_override_font_sizes/font_size = 105
+theme_override_font_sizes/font_size = 125
 text = "PFx5"

@@ -87,10 +87,10 @@ min_players = 2
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 315.0
-offset_top = 187.0
-offset_right = 2029.0
-offset_bottom = 735.0
+offset_left = 57.0
+offset_top = 163.0
+offset_right = 1771.0
+offset_bottom = 711.0
 theme = ExtResource("7_vxcka")
 theme_override_colors/font_color = Color(0.294118, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.721643, 0.751015, 0.449429, 1)
