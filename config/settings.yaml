@@ -124,11 +124,11 @@ settings:
     sort: 158
     label: Pop bumper power
     key_type: int
-    default: 11
+    default: 9
     values:
       7: '7 ms'
-      9: '9 ms'
-      11: '11 ms (default)'
+      9: '9 ms (default)'
+      11: '11 ms'
       13: '13 ms'
       16: '16 ms'
       20: '20 ms'
