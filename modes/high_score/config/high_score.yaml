@@ -24,6 +24,8 @@ high_score:
 event_player:
   mode_high_score_started:
     - start_gi_highscore
+  high_score_enter_initials:
+    - dj_new_high_score
 
 show_player:
   start_gi_highscore:
