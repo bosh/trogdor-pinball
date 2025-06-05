@@ -84,6 +84,7 @@ module TrogBuild
       ball_intros_pool
       ball_at_launcher
       game_start
+      game_over
 
       ball_end_good_pool
       ball_end_average_pool

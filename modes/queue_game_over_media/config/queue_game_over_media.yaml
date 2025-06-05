@@ -5,7 +5,7 @@ mode:
   stop_events: mode_stop_queue_game_over_media
   use_wait_queue: true
   priority: 9099
-  events_when_started: show_game_over_slide
+  events_when_started: show_game_over_slide, dj_game_over
   stop_on_ball_end: False
   game_mode: False
 

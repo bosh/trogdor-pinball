@@ -111,6 +111,9 @@ sound_player:
   dj_game_start:
     game_start:
       bus: voice
+  dj_game_over:
+    game_over:
+      bus: voice
   dj_ball_end_good_pool:
     ball_end_good_pool:
       bus: voice
