@@ -1,0 +1,12 @@
+For windows:
+
+In admin CMD shell run:
+
+mklink /d "C:\PATH\TO\trogdor-pinball\gmc\addons\mpf-gmc" "C:\PATH\TO\mpf-gmc\addons\mpf-gmc"
+
+For unix:
+
+sudo ln -s PATH/TO/mpf-gmc/addons/mpf-gmc PATH/TO/trogdor-pinball/addons/mpf-gmc
+
+See:
+https://missionpinball.org/latest/gmc/installation/#install-the-gmc-plugin
