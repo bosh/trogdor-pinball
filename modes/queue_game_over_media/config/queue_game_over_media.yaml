@@ -11,9 +11,9 @@ mode:
 
 timers:
   game_over_slide_timer:
-    start_value: 10
+    start_value: 5
     end_value: 0
-    tick_interval: 800ms
+    tick_interval: 1000ms
     direction: down
     start_running: true
     restart_on_complete: false
