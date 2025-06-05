@@ -66,15 +66,15 @@ coils:
   c_slot_bank_left_drop:
     number: 1616-5
     default_pulse_ms: settings.slot_bank_knockdown_power
-    default_pulse_power: .625
+    default_pulse_power: .75
   c_slot_bank_center_drop:
     number: 1616-6
     default_pulse_ms: settings.slot_bank_knockdown_power
-    default_pulse_power: .625
+    default_pulse_power: .75
   c_slot_bank_right_drop:
     number: 1616-7
     default_pulse_ms: settings.slot_bank_knockdown_power
-    default_pulse_power: .625
+    default_pulse_power: .75
 
 ## B J4
   c_slot_bank_reset:
@@ -84,7 +84,7 @@ coils:
   c_gate_left:
     number: 1616-9
     default_pulse_ms: settings.gate_power
-    default_hold_power: 0.375
+    default_hold_power: 0.5
   c_orbit_diverter_full:
     number: 1616-10
     default_pulse_ms: settings.diverter_flipper_power
@@ -103,7 +103,7 @@ coils:
   c_gate_right:
     number: 1616-14
     default_pulse_ms: settings.gate_power
-    default_hold_power: 0.375
+    default_hold_power: 0.5
   c_vuk:
     number: 1616-15
     default_pulse_ms: settings.right_vuk_power

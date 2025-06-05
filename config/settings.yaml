@@ -150,14 +150,13 @@ settings:
     sort: 160
     label: Controlled ball gate pulse power
     key_type: int
-    default: 24
+    default: 26
     values:
-      12: '12 ms'
-      16: '16 ms'
-      20: '20 ms'
-      24: '24 ms (default)'
+      18: '18 ms'
+      22: '22 ms'
+      26: '26 ms (default)'
       30: '30 ms'
-      35: '35 ms'
+      34: '34 ms'
 
   diverter_flipper_power:
     sort: 161
@@ -200,25 +199,25 @@ settings:
     sort: 164
     label: Left side VUK eject power
     key_type: int
-    default: 12
+    default: 16
     values:
-      12: '12 ms'
-      20: '20 ms (default)'
+      13: '13 ms'
+      16: '16 ms (default)'
+      19: '19 ms'
+      22: '22 ms'
       25: '25 ms'
-      30: '30 ms'
-      35: '35 ms'
 
   right_vuk_power:
     sort: 165
     label: Right side VUK eject power
     key_type: int
-    default: 10
+    default: 12
     values:
-      10: '10 ms (show default)'
-      12: '12 ms'
+      10: '10 ms'
+      12: '12 ms (show default)'
       15: '15 ms'
       18: '18 ms'
-      21: '21 ms'
+      21: '21 ms (likely default when scoop lifted)'
       24: '24 ms'
       28: '28 ms'
 
@@ -345,26 +344,26 @@ settings:
     sort: 310
     label: Burnination mode - overall length
     key_type: int
-    default: 50
+    default: 55
     values:
       10: '10 seconds (for testing)'
-      32: '32 seconds'
+      30: '30 seconds'
       45: '45 seconds'
-      50: '50 seconds (default)'
-      60: '60 seconds'
-      70: '70 seconds'
+      55: '55 seconds (default)'
+      65: '65 seconds'
+      75: '75 seconds'
 
   burnination_pop_countdown_seconds:
     sort: 311
     label: Burnination mode - seconds per pop burndown reduction
     key_type: int
-    default: 5
+    default: 6
     values:
-      3: '3 seconds'
       4: '4 seconds'
-      5: '5 seconds (default)'
-      6: '6 seconds'
+      5: '5 seconds'
+      6: '6 seconds (default)'
       7: '7 seconds'
+      8: '8 seconds'
 
   burnination_pop_hit_add_time:
     sort: 312
