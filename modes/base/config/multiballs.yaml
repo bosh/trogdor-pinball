@@ -46,9 +46,25 @@ show_player:
       loops: 1 # Should play TWICE
 
 event_player:
+  cheat_multiball_qualified:
+    - show_cheat_multiball_qualified_overlay
+#     - dj_cheat_multiball_qualified
+    - hide_cheat_multiball_qualified_overlay|4000ms
+  multiball_cheat_multiball_started:
+    - show_cheat_multiball_started_overlay
+    - hide_cheat_multiball_started_overlay|4000ms
+#     - dj_cheat_multiball_started
+#     - flash gi and backbox all yellow
+
   multiball_cheat_multiball_ended:
     - reset_cheat_multiball_qualifying_spins
 
-#   cheat_multiball_begin:
-#     - dj_something
-#     - flash gi and backbox all yellow
+widget_player:
+  show_cheat_multiball_qualified_overlay: cheat_multiball_qualified_overlay
+  hide_cheat_multiball_qualified_overlay:
+    cheat_multiball_qualified_overlay:
+      action: remove
+  show_cheat_multiball_started_overlay: cheat_multiball_started_overlay
+  hide_cheat_multiball_started_overlay:
+    cheat_multiball_started_overlay:
+      action: remove

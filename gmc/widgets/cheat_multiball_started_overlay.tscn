@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bydyw3xbd27d0"]
+
+[ext_resource type="Script" uid="uid://ct36ftwq5qpfo" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_6moiy"]
+[ext_resource type="Theme" uid="uid://cx5kw5e8kdnr6" path="res://themes/attract_scores_text.tres" id="2_cw6la"]
+
+[node name="CheatMultiballOverlay" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_6moiy")
+metadata/_custom_type_script = "uid://ct36ftwq5qpfo"
+
+[node name="Label" type="Label" parent="."]
+offset_top = 2.0
+offset_right = 2877.0
+offset_bottom = 545.0
+theme = ExtResource("2_cw6la")
+theme_override_colors/font_color = Color(0.721569, 0.898039, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 150
+text = "THE CHEAT'S
+AWEXOME CROSS
+EARNED"
+horizontal_alignment = 1

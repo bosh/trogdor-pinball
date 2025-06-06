@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgjxg85wga8s1"]
+
+[ext_resource type="Script" uid="uid://ct36ftwq5qpfo" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_m0vak"]
+[ext_resource type="Theme" uid="uid://cx5kw5e8kdnr6" path="res://themes/attract_scores_text.tres" id="2_h8a31"]
+
+[node name="CheatMultiballQualified" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_m0vak")
+metadata/_custom_type_script = "uid://ct36ftwq5qpfo"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 2880.0
+offset_bottom = 547.0
+theme = ExtResource("2_h8a31")
+theme_override_colors/font_color = Color(0.894118, 0.956863, 0.223529, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 150
+text = "THE CHEAT'S
+AWEXOME CROSS
+QUALIFIED"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 584.0
+offset_right = 2871.0
+offset_bottom = 704.0
+theme = ExtResource("2_h8a31")
+theme_override_font_sizes/font_size = 100
+text = "Shoot a VUK or the subway entrance to add a ball!"
+horizontal_alignment = 1
