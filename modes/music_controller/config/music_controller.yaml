@@ -91,22 +91,22 @@ state_machines:
       # Relooping a track
       - source: music_1
         target: music_1
-        events: loop_current_track
+        events: loop_current_track, special_music_finished
       - source: music_2
         target: music_2
-        events: loop_current_track
+        events: loop_current_track, special_music_finished
       - source: music_3
         target: music_3
-        events: loop_current_track
+        events: loop_current_track, special_music_finished
       - source: music_4
         target: music_4
-        events: loop_current_track
+        events: loop_current_track, special_music_finished
       - source: music_5
         target: music_5
-        events: loop_current_track
+        events: loop_current_track, special_music_finished
       - source: music_6
         target: music_6
-        events: loop_current_track
+        events: loop_current_track, special_music_finished
 
       # Advancing to next track
       - source: music_1
