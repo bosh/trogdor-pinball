@@ -53,6 +53,11 @@ event_player:
   spinner_spinner_right_base_hit: [base_spinner_half_hit]
   spinner_spinner_right_targeted_hit: [targeted_spinner_half_hit]
 
+  spinner_spinner_left_base_active:       [dj_spinner_temp]
+  spinner_spinner_left_targeted_active:   [dj_spinner_temp]
+  spinner_spinner_right_base_active:      [dj_spinner_temp]
+  spinner_spinner_right_targeted_active:  [dj_spinner_temp]
+
   player_cheat_multiball_spins_left_to_qualify{value<=0}:
     - block_cheat_multiball_qualifying_spins
     - cheat_multiball_qualified
