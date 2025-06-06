@@ -34,6 +34,7 @@ module TrogBuild
       high_voltage_disabled
       high_voltage_enabled
       increment
+      spinner_temp
     )
 
     MUSIC_HOOKS = %w(
@@ -56,6 +57,8 @@ module TrogBuild
       status_menu
       tilted
       music_stop
+      special_cheat_multiball
+      special_cheat_multiball_qualified
     )
     MUSIC_HOOKS_TO_STOP = %w(
       burnination_background
@@ -77,7 +80,9 @@ module TrogBuild
       'theme_music_box' => 'music_track_finished',
       'theme_main' => 'special_music_finished',
       'burnination_mode_song' => 'special_music_finished',
-      'attract_music_pool' => 'music_track_finished'
+      'attract_music_pool' => 'music_track_finished',
+      'special_cheat_multiball' => 'special_music_finished',
+      'special_cheat_multiball_qualified' => 'special_music_finished'
     }
 
     VOICE_HOOKS = %w(

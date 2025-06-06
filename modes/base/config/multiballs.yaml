@@ -48,12 +48,13 @@ show_player:
 event_player:
   cheat_multiball_qualified:
     - show_cheat_multiball_qualified_overlay
-#     - dj_cheat_multiball_qualified
+    - dj_special_cheat_multiball_qualified
     - hide_cheat_multiball_qualified_overlay|4000ms
   multiball_cheat_multiball_started:
+    - hide_cheat_multiball_qualified_overlay
     - show_cheat_multiball_started_overlay
     - hide_cheat_multiball_started_overlay|4000ms
-#     - dj_cheat_multiball_started
+    - dj_special_cheat_multiball
 #     - flash gi and backbox all yellow
 
   multiball_cheat_multiball_ended:

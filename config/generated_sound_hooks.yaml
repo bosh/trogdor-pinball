@@ -26,6 +26,7 @@ sound_player:
   dj_high_voltage_disabled: high_voltage_disabled
   dj_high_voltage_enabled: high_voltage_enabled
   dj_increment: increment
+  dj_spinner_temp: spinner_temp
   dj_attract_music_pool:
     attract_music_pool:
       bus: music
@@ -93,6 +94,14 @@ sound_player:
   dj_music_stop:
     music_stop:
       bus: music
+  dj_special_cheat_multiball:
+    special_cheat_multiball:
+      bus: music
+      events_when_stopped: special_music_finished
+  dj_special_cheat_multiball_qualified:
+    special_cheat_multiball_qualified:
+      bus: music
+      events_when_stopped: special_music_finished
   dj_stop_burnination_background:
     burnination_background:
       bus: music

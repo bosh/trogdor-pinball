@@ -48,7 +48,7 @@ diverters:
   div_right_outlane_post_ramp_save:
     activation_coil: c_right_outlane_post
     type: hold
-    activation_time: 8s
+    activation_time: 8000ms
     enable_events: enable_right_outlane_post_ramp_save
     disable_events: disable_right_outlane_post_ramp_save,ball_ending
     activate_events: activate_right_outlane_post_ramp_save
