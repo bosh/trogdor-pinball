@@ -4,22 +4,25 @@ mode:
   start_events: mode_start_captive_ball_base
   stop_events: mode_stop_captive_ball_base, ball_will_end
   priority: 1580
+  events_when_started: captive_ball_target_dead
 
 shot_profiles:
   captive_ball_base_profile:
     advance_on_hit: False
     states:
-      - name: 'disabled'
+      - name: 'dead'
       - name: 'live'
 
 shots:
   captive_ball_target:
     profile: captive_ball_base_profile
     switch: s_captive_ball_presence
+    persist_enable: false
+    start_enabled: true
     control_events:
-      - events: captive_ball_target_disable
+      - events: captive_ball_target_dead
         state: 0
-      - events: captive_ball_target_enable
+      - events: captive_ball_target_live
         state: 1
 
   captive_ball_combo:
@@ -27,7 +30,8 @@ shots:
     profile: singleton_profile
     enable_events: enable_captive_ball_combo
     disable_events: disable_captive_ball_combo
-    persist_enable: False
+    persist_enable: false
+    start_enabled: false
 
 timers:
   captive_ball_combo_timeout:

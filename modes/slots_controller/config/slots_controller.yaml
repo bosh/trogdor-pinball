@@ -12,10 +12,10 @@ state_machines:
     states:
       setup:
         label: setup #needed for the playfield_active transition to avoid early hits
-        events_when_started: captive_ball_target_disable
+        events_when_started: captive_ball_target_dead
       qualifying:
         label: qualifying
-        events_when_started: delayed_captive_ball_target_enable, mode_stop_generated_slots, mode_start_drops_base
+        events_when_started: delayed_captive_ball_target_live, mode_stop_generated_slots, mode_start_drops_base
       playing_slots:
         label: playing slots
         events_when_started: captive_ball_target_disable, mode_stop_drops_base, mode_start_generated_slots, dj_ball_intros_pool
@@ -36,8 +36,8 @@ state_machines:
         events_when_transitioning: slots_target_bank_full_reset
 
 event_player:
-  delayed_captive_ball_target_enable:
-    - captive_ball_target_enable|1ms
+  delayed_captive_ball_target_live:
+    - captive_ball_target_live|1ms
   mode_slots_controller_started:
     - mode_start_captive_ball_base
 
