@@ -377,6 +377,17 @@ settings:
       2.0: '2 seconds'
       3.0: '3 seconds'
 
+  cheat_multiball_spins_to_qualify:
+    sort: 320
+    label: Cheat Multiball - spins required to qualify
+    key_type: int
+    default: 30
+    values:
+      20: '20 spins'
+      30: '30 spins (default)'
+      40: '40 spins'
+      60: '60 spins'
+
   warnings_to_tilt:
     label: "Tilt on warning number:"
     values:

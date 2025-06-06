@@ -10,7 +10,7 @@ multiballs:
     shoot_again: 7000ms
 
   burnination_multiball:
-    ball_count: 2
+    ball_count: 3
     ball_count_type: total
     enable_events: playfield_active
     disable_events: ball_ending #TODO subscribe to the mode ending
@@ -20,10 +20,17 @@ multiballs:
   skillshot_addaball:
     ball_count: 1
     ball_count_type: add
-    enable_events: playfield_active
+    enable_events: ball_starting
     disable_events: ball_ending
     start_events: skillshot_addaball_qualified
     shoot_again: 5000ms
+
+  cheat_multiball:
+    ball_count: 1
+    ball_count_type: add
+    enable_events: cheat_multiball_qualified
+    start_events: cheat_multiball_begin
+    shoot_again: 3000ms #only intended to save the captured ball
 
 combo_switches:
   cab_two_button_reset: # Press both cab buttons to max for 2.5s to trigger multiball
@@ -38,3 +45,10 @@ show_player:
     cabinet_multiball_flash:
       loops: 1 # Should play TWICE
 
+event_player:
+  multiball_cheat_multiball_ended:
+    - reset_cheat_multiball_qualifying_spins
+
+#   cheat_multiball_begin:
+#     - dj_something
+#     - flash gi and backbox all yellow

@@ -9,9 +9,16 @@ variable_player:
   base_spinner_hit:
     score: 10 * current_player.playfield_multiplier
     spinner_spins: 1
+    cheat_multiball_spins_left_to_qualify: -1
   targeted_spinner_hit:
     score: 50 * current_player.playfield_multiplier
     spinner_spins: 1
+    cheat_multiball_spins_left_to_qualify: -1
+
+  reset_cheat_multiball_qualifying_spins:
+    cheat_multiball_spins_left_to_qualify:
+      action: set
+      int: 30 #settings.cheat_multiball_spins_to_qualify #TODO doesnt support templates?
 
   base_spinner_half_hit: 
     half_spinner_spins: 1
@@ -40,6 +47,10 @@ event_player:
   spinner_spinner_left_targeted_hit: [targeted_spinner_hit]
   spinner_spinner_right_base_hit: [base_spinner_half_hit]
   spinner_spinner_right_targeted_hit: [targeted_spinner_half_hit]
+
+  player_cheat_multiball_spins_left_to_qualify{value<=0}:
+    - cheat_multiball_qualified
+    - reset_cheat_multiball_qualifying_spins
 
 flasher_player:
   s_spinner_left_active:

@@ -23,9 +23,9 @@ Trogdor Pinball is built on the FAST Neuron hardware stack using MPF, the Missio
 Game features include:
 - Beefy muscle arm upper flipper
 - More different S reverso-ramp and wireform
-- Your Head A Splode minigame
+- Your Head A Splode minigame (TBD)
 - Miniatures from the Kickstarter board game
-- The Cheat Commando multiball
+- The Cheat's Awexome Cross multiball
 - THATCHED ROOF COTTAGE JET BUMPERS
 - The King of Town. That's right.
 
