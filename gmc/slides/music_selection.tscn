@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://ddn5dimw4gtb7"]
 
-[ext_resource type="Script" uid="uid://3pdl22gx2xdk" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_djs37"]
-[ext_resource type="Script" uid="uid://dis4hdmyfesv" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="2_30ecx"]
+[ext_resource type="Script" uid="uid://6mdcui7wkc47" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_djs37"]
+[ext_resource type="Script" uid="uid://bnssoxshet8be" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="2_30ecx"]
 [ext_resource type="Texture2D" uid="uid://bmmj8yrpph5cq" path="res://images/included/base_empty.png" id="2_aopol"]
 [ext_resource type="Texture2D" uid="uid://c8n74lsfudb5j" path="res://images/music_1.jpg" id="3_qpixw"]
 [ext_resource type="FontFile" uid="uid://8fxyhoilejnt" path="res://fonts/everybody-dot-matrix.ttf" id="4_qrlcs"]
@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://f1r2t5qioo7t" path="res://images/music_5.jpg" id="7_qf44x"]
 [ext_resource type="Texture2D" uid="uid://bc4vl0kwhs3da" path="res://images/music_6.jpg" id="8_um5lv"]
 [ext_resource type="FontFile" uid="uid://dhi02px4iy4jf" path="res://fonts/lappy-486-extended.ttf" id="11_qtovp"]
-[ext_resource type="Script" uid="uid://cnjmggusghgda" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="12_mdj60"]
+[ext_resource type="Script" uid="uid://cm7sg7wq6hq8s" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="12_mdj60"]
 
 [node name="MusicSelection" type="Control"]
 layout_mode = 3

@@ -22,12 +22,14 @@ texture = ExtResource("2_cd05m")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1132.0
-offset_top = 187.0
-offset_right = 1734.0
-offset_bottom = 630.0
+offset_left = 869.0
+offset_top = 189.0
+offset_right = 1818.0
+offset_bottom = 632.0
+theme_override_colors/font_color = Color(0.942709, 2.69532e-06, 1.15514e-06, 1)
+theme_override_colors/font_shadow_color = Color(0.777534, 0.709176, 0.2615, 1)
 theme_override_fonts/font = ExtResource("3_263pw")
-theme_override_font_sizes/font_size = 250
+theme_override_font_sizes/font_size = 350
 text = "TILT!"
 
 [node name="MPFVariable - Ball" type="Label" parent="."]
@@ -71,11 +73,11 @@ template_string = "Score: %s"
 layout_mode = 0
 offset_right = 25.0
 offset_bottom = 864.0
-color = Color(0.549529, 0.0705812, 0.12824, 1)
+color = Color(0.941176, 0, 0, 1)
 
 [node name="ColorRect" type="ColorRect" parent="ColorRect"]
 layout_mode = 0
 offset_left = 2855.0
 offset_right = 2880.0
 offset_bottom = 864.0
-color = Color(0.549529, 0.0705812, 0.12824, 1)
+color = Color(0.941176, 0, 0, 1)

@@ -21,13 +21,18 @@ texture = ExtResource("2_fl5c2")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1036.0
-offset_top = 420.0
-offset_right = 2340.0
-offset_bottom = 915.0
+offset_left = 926.0
+offset_top = 198.0
+offset_right = 2753.0
+offset_bottom = 917.0
+theme_override_colors/font_color = Color(0.690196, 0.360784, 0.0666667, 1)
+theme_override_colors/font_outline_color = Color(0.941176, 0, 0, 1)
+theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("3_7hy85")
-theme_override_font_sizes/font_size = 200
-text = "Hey, watch it!"
+theme_override_font_sizes/font_size = 280
+text = "TILT WARNING"
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="MPFVariable - Ball" type="Label" parent="."]
 layout_mode = 0
@@ -67,11 +72,11 @@ min_digits = 2
 layout_mode = 0
 offset_right = 25.0
 offset_bottom = 864.0
-color = Color(0.654179, 0.339315, 0.0578699, 1)
+color = Color(0.691209, 0.360285, 0.0654829, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 2855.0
 offset_right = 2880.0
 offset_bottom = 864.0
-color = Color(0.654179, 0.339315, 0.0578699, 1)
+color = Color(0.690196, 0.360784, 0.0666667, 1)

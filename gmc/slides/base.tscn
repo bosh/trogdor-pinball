@@ -22,15 +22,15 @@ texture = ExtResource("2_ekj0u")
 
 [node name="MPFVariable - Ball" type="Label" parent="."]
 layout_mode = 0
-offset_left = 2478.0
-offset_top = 38.0
-offset_right = 2873.0
-offset_bottom = 230.0
+offset_left = 2476.0
+offset_top = 2.0
+offset_right = 2871.0
+offset_bottom = 194.0
 theme = SubResource("Theme_t7ujo")
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
 theme_override_fonts/font = ExtResource("4_l2x7l")
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 150
 text = "Ball: 1"
 horizontal_alignment = 1
 script = ExtResource("2_bsdxn")
@@ -77,14 +77,14 @@ metadata/_custom_type_script = "uid://b846v662darst"
 
 [node name="MPFVariable - ScoreP1" type="Label" parent="MPFConditional !=p1"]
 layout_mode = 0
-offset_left = -208.0
-offset_top = 758.0
-offset_right = 801.0
-offset_bottom = 977.0
+offset_left = -156.0
+offset_top = 737.0
+offset_right = 853.0
+offset_bottom = 956.0
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
 theme_override_fonts/font = ExtResource("4_l2x7l")
-theme_override_font_sizes/font_size = 75
+theme_override_font_sizes/font_size = 100
 text = "P1: 1,000,000"
 horizontal_alignment = 1
 script = ExtResource("2_bsdxn")
@@ -106,14 +106,14 @@ metadata/_custom_type_script = "uid://b846v662darst"
 
 [node name="MPFVariable - ScoreP2" type="Label" parent="MPFConditional !=p2"]
 layout_mode = 0
-offset_left = 594.0
-offset_top = 751.0
-offset_right = 1603.0
-offset_bottom = 970.0
+offset_left = 598.0
+offset_top = 736.0
+offset_right = 1607.0
+offset_bottom = 955.0
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
 theme_override_fonts/font = ExtResource("4_l2x7l")
-theme_override_font_sizes/font_size = 75
+theme_override_font_sizes/font_size = 100
 text = "P2: 1,000,000"
 horizontal_alignment = 1
 script = ExtResource("2_bsdxn")
@@ -138,14 +138,14 @@ metadata/_custom_type_script = "uid://b846v662darst"
 
 [node name="MPFVariable - ScoreP3" type="Label" parent="MPFConditional !=p3"]
 layout_mode = 0
-offset_left = 775.0
-offset_top = -8.0
-offset_right = 1784.0
-offset_bottom = 211.0
+offset_left = 728.0
+offset_top = -10.0
+offset_right = 1737.0
+offset_bottom = 209.0
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
 theme_override_fonts/font = ExtResource("4_l2x7l")
-theme_override_font_sizes/font_size = 75
+theme_override_font_sizes/font_size = 100
 text = "P3: 1,000,000"
 horizontal_alignment = 1
 script = ExtResource("2_bsdxn")
@@ -170,14 +170,14 @@ metadata/_custom_type_script = "uid://b846v662darst"
 
 [node name="MPFVariable - ScoreP4" type="Label" parent="MPFConditional !=p4"]
 layout_mode = 0
-offset_left = 1491.0
-offset_top = -10.0
-offset_right = 2500.0
-offset_bottom = 209.0
+offset_left = 1444.0
+offset_top = -13.0
+offset_right = 2453.0
+offset_bottom = 206.0
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
 theme_override_fonts/font = ExtResource("4_l2x7l")
-theme_override_font_sizes/font_size = 75
+theme_override_font_sizes/font_size = 100
 text = "P4: 1,000,000"
 horizontal_alignment = 1
 script = ExtResource("2_bsdxn")
@@ -208,10 +208,10 @@ template_string = "(%s)"
 
 [node name="MPFVariable - Current P#" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1983.0
-offset_top = 7.0
-offset_right = 2480.0
-offset_bottom = 157.0
+offset_left = 1226.0
+offset_top = 9.0
+offset_right = 1723.0
+offset_bottom = 159.0
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
 theme_override_fonts/font = ExtResource("4_l2x7l")
