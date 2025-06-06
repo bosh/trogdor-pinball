@@ -102,3 +102,7 @@ This adds a hook to load the commands from bin/shell_extensions.sh
 ## Media
 
 Audio and other media files are maintained as stubs in this repository. A separate, private repo contains all of the real assets, with commands to substitute stubs or real files based on a map, and to do other media management tasks. Stubs generally come from https://github.com/mathiasbynens/small
+
+
+## Rules card:
+![Current rules card](https://github.com/bosh/trogdor-pinball/blob/master/gmc/images/included/rules_card.png)
