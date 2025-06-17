@@ -25,7 +25,6 @@ window/size/viewport_width=2880
 window/size/viewport_height=864
 window/size/resizable=false
 window/size/borderless=true
-window/energy_saving/keep_screen_on=true
 mouse_cursor/custom_image="uid://e1lfl52llkvu"
 
 [editor_plugins]
