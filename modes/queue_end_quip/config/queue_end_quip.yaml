@@ -9,9 +9,9 @@ mode:
 
 timers:
   fallback_end_quip_timer:
-    start_value: 2
+    start_value: 4
     end_value: 0
-    tick_interval: 800ms
+    tick_interval: 1000ms
     direction: down
     start_running: true
     restart_on_complete: false
