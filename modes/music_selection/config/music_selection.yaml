@@ -27,8 +27,15 @@ slide_player:
     music_selection:
       action: remove
 
+combo_switches:
+  combo_both_flippers_hold:
+    tag_1: left_flipper
+    tag_2: right_flipper
+    hold_time: 2s
+    max_offset_time: 250ms
+
 event_player:
-  flipper_cancel: [music_controller_quiet] #For now quieting is jukebox off for the ball. Maybe make this a flipper cancel _hold_
+  combo_both_flippers_hold_both: [music_controller_quiet]
   s_left_flipper_secondary_active{device.switches.s_plunger.state == 1}: [reverse_music_selection_carousel, reverse_current_track]
   s_right_flipper_secondary_active{device.switches.s_plunger.state == 1}: [advance_music_selection_carousel, advance_current_track]
 
