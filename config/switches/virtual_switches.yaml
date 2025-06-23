@@ -145,6 +145,14 @@ switches:
     number: 951
     tags: no_audit
 
+  vswitch_fast_audio_disables:
+    platform: virtual
+    number: 988
+  vswitch_fast_audio_enables:
+    platform: virtual
+    number: 989
+
+
   vswitch_test_coils:
     platform: virtual
     number: 999
@@ -161,6 +169,8 @@ event_player:
   vswitch_disable_spinner_targets_active: [spinner_controller_unset_left_target, spinner_controller_unset_right_target]
   vswitch_enable_spinner_targets_active: [spinner_controller_set_left_target, spinner_controller_set_right_target]
   vswitch_start_minigame_active: [mode_start_minigame]
+  vswitch_fast_audio_disables_active: [fast_audio_headphones_v1]
+  vswitch_fast_audio_enables_active: [fast_audio_headphones_v2]
 
 coil_player:
   vswitch_plunger_power_1_active:

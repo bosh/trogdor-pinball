@@ -1217,6 +1217,12 @@ switch:
   vswitch_start_minigame:
     x: 0.019955654101995568
     y: 0.07649667405764968
+  vswitch_fast_audio_enables:
+    x: 0.068
+    y: 0.11
+  vswitch_fast_audio_disables:
+    x: 0.068
+    y: 0.12
   vswitch_test_coils:
     x: 0.06728232189973615
     y: 0.10092348284960423
