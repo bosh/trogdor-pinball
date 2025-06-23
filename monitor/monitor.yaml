@@ -1163,6 +1163,12 @@ switch:
   vswitch_set_bank_111:
     x: 0.18549511854951184
     y: 0.075836820083682
+  vswitch_fast_audio_enables:
+    x: 0.068
+    y: 0.11
+  vswitch_fast_audio_disables:
+    x: 0.068
+    y: 0.12
   vswitch_test_coils:
     x: 0.06728232189973615
     y: 0.10092348284960423
