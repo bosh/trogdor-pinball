@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://wnn1blxym12s"]
 
-[ext_resource type="Script" uid="uid://6mdcui7wkc47" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_grcpe"]
-[ext_resource type="Script" uid="uid://cm7sg7wq6hq8s" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_bsdxn"]
+[ext_resource type="Script" uid="uid://3pdl22gx2xdk" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_grcpe"]
+[ext_resource type="Script" uid="uid://cnjmggusghgda" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_bsdxn"]
 [ext_resource type="Texture2D" uid="uid://kxdeyef78vrh" path="res://images/included/base.png" id="2_ekj0u"]
 [ext_resource type="FontFile" uid="uid://dbblxkk3tmho5" path="res://fonts/preeow-paper.ttf" id="2_j6mlq"]
 [ext_resource type="FontFile" uid="uid://dhi02px4iy4jf" path="res://fonts/lappy-486-extended.ttf" id="4_l2x7l"]
-[ext_resource type="Script" uid="uid://b846v662darst" path="res://addons/mpf-gmc/classes/mpf_conditional.gd" id="6_6vrr4"]
+[ext_resource type="Script" uid="uid://cxjrwo72ycv1q" path="res://addons/mpf-gmc/classes/mpf_conditional.gd" id="6_6vrr4"]
 
 [sub_resource type="Theme" id="Theme_t7ujo"]
 Label/font_sizes/font_size = 40
@@ -63,7 +63,6 @@ script = ExtResource("6_6vrr4")
 variable_name = "playfield_multiplier"
 condition_type = 4
 condition_value = "1"
-metadata/_custom_type_script = "uid://b846v662darst"
 
 [node name="MPFConditional !=p1" type="Control" parent="."]
 anchors_preset = 0
@@ -73,7 +72,6 @@ script = ExtResource("6_6vrr4")
 variable_name = "number"
 condition_type = 1
 condition_value = "1"
-metadata/_custom_type_script = "uid://b846v662darst"
 
 [node name="MPFVariable - ScoreP1" type="Label" parent="MPFConditional !=p1"]
 layout_mode = 0
@@ -102,7 +100,6 @@ script = ExtResource("6_6vrr4")
 variable_name = "number"
 condition_type = 1
 condition_value = "2"
-metadata/_custom_type_script = "uid://b846v662darst"
 
 [node name="MPFVariable - ScoreP2" type="Label" parent="MPFConditional !=p2"]
 layout_mode = 0
@@ -134,7 +131,6 @@ script = ExtResource("6_6vrr4")
 variable_name = "number"
 condition_type = 1
 condition_value = "3"
-metadata/_custom_type_script = "uid://b846v662darst"
 
 [node name="MPFVariable - ScoreP3" type="Label" parent="MPFConditional !=p3"]
 layout_mode = 0
@@ -166,7 +162,6 @@ script = ExtResource("6_6vrr4")
 variable_name = "number"
 condition_type = 1
 condition_value = "4"
-metadata/_custom_type_script = "uid://b846v662darst"
 
 [node name="MPFVariable - ScoreP4" type="Label" parent="MPFConditional !=p4"]
 layout_mode = 0
@@ -208,10 +203,10 @@ template_string = "(%s)"
 
 [node name="MPFVariable - Current P#" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1226.0
-offset_top = 9.0
-offset_right = 1723.0
-offset_bottom = 159.0
+offset_left = 1931.0
+offset_top = 12.0
+offset_right = 2428.0
+offset_bottom = 162.0
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
 theme_override_fonts/font = ExtResource("4_l2x7l")
