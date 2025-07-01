@@ -36,14 +36,11 @@ coils:
   c_flipper_right_full:
     number: 3208-6
     default_pulse_ms: settings.flipper_main_coil_power
-  c_pop_left: #TEMP while 1616-13 is out of commission
+  c_saver_post:
     number: 3208-7
-    default_pulse_ms: settings.pop_bumper_power
-  # c_saver_post:
-  #   number: 1616-15
-  #   allow_enable: true
-  #   default_pulse_ms: settings.saver_post_power
-  #   default_hold_power: .375
+    allow_enable: true
+    default_pulse_ms: settings.saver_post_power
+    default_hold_power: .375
 
 # 1616
 ## A J3
@@ -99,7 +96,9 @@ coils:
   c_pop_right:
     number: 1616-12
     default_pulse_ms: settings.pop_bumper_power
-  # 13 broken for now
+  c_pop_left:
+    number: 1616-13
+    default_pulse_ms: settings.pop_bumper_power
   c_gate_right:
     number: 1616-14
     default_pulse_ms: settings.gate_power
