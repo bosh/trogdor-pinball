@@ -243,6 +243,18 @@ settings:
       25: '25 ms'
       30: '30 ms'
 
+  saver_post_time:
+    sort: 168
+    key_type: int
+    label: Saver post basic save up time
+    default: 6000
+    values:
+      4000: '4s'
+      6000: '6s'
+      8000: '8s'
+      10000: '10s'
+      12000: '12s'
+
   # ball_search_enabled: #Actually found in ball_search.yaml
   #   sort: 200
 

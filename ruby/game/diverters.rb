@@ -13,7 +13,7 @@ module TrogBuild
       add_diverter!('right_controlled_ball_gate', 'c_gate_right', '3s', 's_left_orbit_outer')
       add_diverter!('right_controlled_ball_gate_alternative_profile', 'c_gate_right', '6s', 's_left_orbit_outer')
       add_diverter!('left_controlled_ball_gate', 'c_gate_left', '3s', 's_right_orbit_outer')
-      add_diverter!('saver_post', 'c_saver_post', '10s')
+      add_diverter!('saver_post', 'c_saver_post', 'settings.saver_post_time') #setting only works with fork that handles activation_time eval
       add_diverter!('right_outlane_post', 'c_right_outlane_post', '3s', 's_right_outer_lane')
       add_diverter!('right_outlane_post_ramp_save', 'c_right_outlane_post', '8000ms', nil, {active: 'bd_plunger', inactive: 'bd_trough'})
     end

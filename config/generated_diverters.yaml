@@ -31,7 +31,7 @@ diverters:
   div_saver_post:
     activation_coil: c_saver_post
     type: hold
-    activation_time: 10s
+    activation_time: settings.saver_post_time
     enable_events: enable_saver_post
     disable_events: disable_saver_post,ball_ending
     activate_events: activate_saver_post
