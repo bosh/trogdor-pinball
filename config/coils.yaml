@@ -142,3 +142,8 @@ diverters:
     activation_switches:
     activation_time: 12s #settings.open_diverter_time_skillshot
     feeder_devices: bd_plunger, playfield
+
+show_player:
+  init_phase_5:
+    machine_init_coil_test:
+      loops: 0

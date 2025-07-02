@@ -1,0 +1,41 @@
+#show_version=6
+
+- duration: 80ms
+  coils:
+    c_right_outlane_post:
+      pulse_ms: 30
+    c_saver_post:
+      pulse_ms: 30
+
+- duration: 50ms
+  coils:
+    c_slot_bank_left_drop:
+      pulse_ms: 25
+
+- duration: 50ms
+  coils:
+    c_slot_bank_center_drop:
+      pulse_ms: 25
+
+- duration: 50ms
+  coils:
+    c_slot_bank_right_drop:
+      pulse_ms: 25
+
+- duration: 25ms #hold off for drop timing separation
+- duration: 80ms
+  coils:
+    c_slot_bank_reset:
+      pulse_ms: 40
+
+- duration: 80ms
+  coils:
+    c_gate_left:
+      pulse_ms: 30
+    c_gate_right:
+      pulse_ms: 30
+
+- duration: 80ms
+  coils:
+    c_orbit_diverter_full:
+      pulse_ms: 40
