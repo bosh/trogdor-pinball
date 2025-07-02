@@ -4,9 +4,9 @@
   coils:
     c_trough_eject: pulse
 
-# - duration: 200ms
-#   coils:
-#     c_saver_post: pulse
+- duration: 200ms
+  coils:
+    c_saver_post: pulse
 
 - duration: 200ms
   coils:
