@@ -16,11 +16,37 @@ variable_player:
     score: 4000 * current_player.playfield_multiplier
 
 event_player:
-  burn_group_unlit_hit: [dj_rollover_unlit_pool]
+  burn_group_unlit_hit: [dj_rollover_unlit_pool, burn_updated|1ms]
   burn_group_lit_hit: [dj_rollover_lit_pool]
   burn_group_lit_complete:
     - increment_playfield_multiplier
     - burnination_controller_begin
+  s_left_flipper_active: [rotate_burn_left, burn_updated|1ms]
+  s_right_flipper_active: [rotate_burn_right, burn_updated|1ms]
+  mode_burn_rollovers_started: [burn_updated|1ms]
+  burn_updated.1:
+    widget_show_burn_letters:
+      total_lit:
+        value: 0
+        type: int
+
+  burn_updated:
+    widget_update_burn_letters:
+      total_lit:
+        value: device.shots.shot_burn_b.state + device.shots.shot_burn_u.state + device.shots.shot_burn_r.state + device.shots.shot_burn_n.state
+        type: int
+      b_lit:
+        value: device.shots.shot_burn_b.state_name == 'lit'
+        type: bool
+      u_lit:
+        value: device.shots.shot_burn_u.state_name == 'lit'
+        type: bool
+      r_lit:
+        value: device.shots.shot_burn_r.state_name == 'lit'
+        type: bool
+      n_lit:
+        value: device.shots.shot_burn_n.state_name == 'lit'
+        type: bool
 
 shot_profiles:
   rollover_profile:
@@ -59,6 +85,6 @@ shots:
 shot_groups:
   burn_group:
     shots: shot_burn_b, shot_burn_u, shot_burn_r, shot_burn_n
-    rotate_left_events: s_left_flipper_active
-    rotate_right_events: s_right_flipper_active
+    rotate_left_events: rotate_burn_left
+    rotate_right_events: rotate_burn_right
     reset_events: mode_burn_rollovers_started

@@ -1,0 +1,220 @@
+[gd_scene load_steps=4 format=3 uid="uid://dem68nhsurmgb"]
+
+[ext_resource type="Script" uid="uid://ct36ftwq5qpfo" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_r4pks"]
+[ext_resource type="Script" uid="uid://b846v662darst" path="res://addons/mpf-gmc/classes/mpf_conditional.gd" id="2_2aylp"]
+[ext_resource type="Theme" uid="uid://cx5kw5e8kdnr6" path="res://themes/attract_scores_text.tres" id="3_bjegw"]
+
+[node name="BurnLetters" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_r4pks")
+metadata/_custom_type_script = "uid://ct36ftwq5qpfo"
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 300.0
+text = "BURN LETTERS TM"
+
+[node name="MPFConditional - total lit > 0" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 2795.0
+offset_bottom = 813.0
+script = ExtResource("2_2aylp")
+variable_type = 1
+variable_name = "total_lit"
+condition_type = 4
+condition_value = "0"
+metadata/_custom_type_script = "uid://b846v662darst"
+
+[node name="Unlit B" type="Control" parent="MPFConditional - total lit > 0"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 744.0
+offset_top = 248.0
+offset_right = 1044.0
+offset_bottom = 548.0
+script = ExtResource("2_2aylp")
+variable_type = 1
+variable_name = "b_lit"
+condition_type = 1
+condition_value = "True"
+metadata/_custom_type_script = "uid://b846v662darst"
+
+[node name="B" type="Label" parent="MPFConditional - total lit > 0/Unlit B"]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 300.0
+theme = ExtResource("3_bjegw")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.721569, 0.65098, 0, 1)
+theme_override_font_sizes/font_size = 400
+text = "B"
+
+[node name="Unlit U" type="Control" parent="MPFConditional - total lit > 0"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1144.0
+offset_top = 248.0
+offset_right = 1444.0
+offset_bottom = 548.0
+script = ExtResource("2_2aylp")
+variable_type = 1
+variable_name = "u_lit"
+condition_type = 1
+condition_value = "True"
+metadata/_custom_type_script = "uid://b846v662darst"
+
+[node name="U" type="Label" parent="MPFConditional - total lit > 0/Unlit U"]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 300.0
+theme = ExtResource("3_bjegw")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.721569, 0.65098, 0, 1)
+theme_override_font_sizes/font_size = 400
+text = "U"
+
+[node name="Unlit R" type="Control" parent="MPFConditional - total lit > 0"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1544.0
+offset_top = 248.0
+offset_right = 1844.0
+offset_bottom = 548.0
+script = ExtResource("2_2aylp")
+variable_type = 1
+variable_name = "r_lit"
+condition_type = 1
+condition_value = "True"
+metadata/_custom_type_script = "uid://b846v662darst"
+
+[node name="R" type="Label" parent="MPFConditional - total lit > 0/Unlit R"]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 300.0
+theme = ExtResource("3_bjegw")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.721569, 0.65098, 0, 1)
+theme_override_font_sizes/font_size = 400
+text = "R"
+
+[node name="Unlit N" type="Control" parent="MPFConditional - total lit > 0"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1944.0
+offset_top = 248.0
+offset_right = 2244.0
+offset_bottom = 548.0
+script = ExtResource("2_2aylp")
+variable_type = 1
+variable_name = "n_lit"
+condition_type = 1
+condition_value = "True"
+metadata/_custom_type_script = "uid://b846v662darst"
+
+[node name="N" type="Label" parent="MPFConditional - total lit > 0/Unlit N"]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 300.0
+theme = ExtResource("3_bjegw")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.721569, 0.65098, 0, 1)
+theme_override_font_sizes/font_size = 400
+text = "N"
+
+[node name="Lit B" type="Control" parent="MPFConditional - total lit > 0"]
+anchors_preset = 0
+offset_left = 744.0
+offset_top = 248.0
+offset_right = 1044.0
+offset_bottom = 548.0
+script = ExtResource("2_2aylp")
+variable_type = 1
+variable_name = "b_lit"
+condition_value = "True"
+metadata/_custom_type_script = "uid://b846v662darst"
+
+[node name="B" type="Label" parent="MPFConditional - total lit > 0/Lit B"]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 300.0
+theme = ExtResource("3_bjegw")
+theme_override_colors/font_color = Color(0.752941, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.909804, 0.678431, 0, 1)
+theme_override_colors/font_outline_color = Color(0.829912, 0.498005, 0.366082, 1)
+theme_override_font_sizes/font_size = 400
+text = "B"
+
+[node name="Lit U" type="Control" parent="MPFConditional - total lit > 0"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1144.0
+offset_top = 248.0
+offset_right = 1444.0
+offset_bottom = 548.0
+script = ExtResource("2_2aylp")
+variable_type = 1
+variable_name = "u_lit"
+condition_value = "True"
+metadata/_custom_type_script = "uid://b846v662darst"
+
+[node name="U" type="Label" parent="MPFConditional - total lit > 0/Lit U"]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 300.0
+theme = ExtResource("3_bjegw")
+theme_override_colors/font_color = Color(0.752941, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.909804, 0.678431, 0, 1)
+theme_override_colors/font_outline_color = Color(0.829912, 0.498005, 0.366082, 1)
+theme_override_font_sizes/font_size = 400
+text = "U"
+
+[node name="Lit R" type="Control" parent="MPFConditional - total lit > 0"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1544.0
+offset_top = 248.0
+offset_right = 1844.0
+offset_bottom = 548.0
+script = ExtResource("2_2aylp")
+variable_type = 1
+variable_name = "r_lit"
+condition_value = "True"
+metadata/_custom_type_script = "uid://b846v662darst"
+
+[node name="R" type="Label" parent="MPFConditional - total lit > 0/Lit R"]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 300.0
+theme = ExtResource("3_bjegw")
+theme_override_colors/font_color = Color(0.752941, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.909804, 0.678431, 0, 1)
+theme_override_colors/font_outline_color = Color(0.829912, 0.498005, 0.366082, 1)
+theme_override_font_sizes/font_size = 400
+text = "R"
+
+[node name="Lit N" type="Control" parent="MPFConditional - total lit > 0"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1944.0
+offset_top = 248.0
+offset_right = 2244.0
+offset_bottom = 548.0
+script = ExtResource("2_2aylp")
+variable_type = 1
+variable_name = "n_lit"
+condition_value = "True"
+metadata/_custom_type_script = "uid://b846v662darst"
+
+[node name="N" type="Label" parent="MPFConditional - total lit > 0/Lit N"]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 300.0
+theme = ExtResource("3_bjegw")
+theme_override_colors/font_color = Color(0.752941, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.909804, 0.678431, 0, 1)
+theme_override_colors/font_outline_color = Color(0.829912, 0.498005, 0.366082, 1)
+theme_override_font_sizes/font_size = 400
+text = "N"

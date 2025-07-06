@@ -37,6 +37,17 @@ event_player:
   check_burnination_complete{current_player.pop_left_fire_level > settings.burnination_fire_level_goal and current_player.pop_right_fire_level > settings.burnination_fire_level_goal and current_player.pop_center_fire_level > settings.burnination_fire_level_goal}:
     - burnination_controller_complete
 
+widget_player:
+  widget_hide_burn_letters:
+    burn_letters:
+      action: remove
+  widget_show_burn_letters:
+    burn_letters:
+      slide: base
+  widget_update_burn_letters:
+    burn_letters:
+      action: update
+
 state_machines:
   burnination_state:
     persist_state: false
@@ -56,6 +67,7 @@ state_machines:
           - burnination_countdown_restart
           - burnination_multiball_qualified
           - dj_burnination_mode_song
+          - widget_hide_burn_letters
       done:
         label: complete
         events_when_started:
@@ -75,6 +87,7 @@ state_machines:
           - mode_stop_burnination_rollovers
           - mode_start_burn_rollovers
           - mode_fail_pops_burnination
+          - widget_show_burn_letters #this probably needs to pass a total lit value of 0
     transitions:
       - source: start
         target: burnination
