@@ -32,7 +32,6 @@ variable_type = 1
 variable_name = "entry"
 
 [node name="initial" type="Node2D" parent="MPFConditionalChildren"]
-visible = false
 
 [node name="end of ball text" type="Label" parent="MPFConditionalChildren/initial"]
 offset_right = 538.0
@@ -71,7 +70,6 @@ comma_separate = true
 template_string = "%d"
 
 [node name="subtotal" type="Node2D" parent="MPFConditionalChildren"]
-visible = false
 
 [node name="Label" type="Label" parent="MPFConditionalChildren/subtotal"]
 offset_right = 999.0
@@ -118,7 +116,6 @@ comma_separate = true
 template_string = "%d"
 
 [node name="multiplier" type="Node2D" parent="MPFConditionalChildren"]
-visible = false
 
 [node name="Label" type="Label" parent="MPFConditionalChildren/multiplier"]
 offset_right = 999.0

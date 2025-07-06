@@ -71,7 +71,6 @@ position = Vector2(1420, 412)
 texture = ExtResource("8_um5lv")
 
 [node name="quiet_mode" type="Node2D" parent="MPFCarousel"]
-visible = false
 
 [node name="Quiet Mode" type="Sprite2D" parent="MPFCarousel/quiet_mode"]
 position = Vector2(1420, 412)
