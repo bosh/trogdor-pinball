@@ -74,19 +74,21 @@ position = Vector2(1420, 412)
 scale = Vector2(1.75182, 3.40157)
 
 [node name="event" type="Label" parent="MPFCarousel/byline"]
-offset_left = -727.244
-offset_top = -73.7895
-offset_right = 62.7565
-offset_bottom = 105.211
+offset_left = -755.215
+offset_top = -109.949
+offset_right = 34.7859
+offset_bottom = 133.051
 theme_override_colors/font_shadow_color = Color(0.388235, 0.054902, 0.0509804, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -31
 theme_override_constants/shadow_offset_x = 4
 theme_override_constants/shadow_offset_y = 4
 theme_override_constants/outline_size = 4
 theme_override_constants/shadow_outline_size = 2
 theme_override_fonts/font = ExtResource("10_8giox")
-theme_override_font_sizes/font_size = 150
-text = "NWPAS 2025"
+theme_override_font_sizes/font_size = 100
+text = "CALIFORNIA
+EXTREME  2025"
 
 [node name="website" type="Label" parent="MPFCarousel/byline"]
 offset_left = 380.747
