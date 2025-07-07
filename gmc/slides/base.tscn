@@ -1,11 +1,27 @@
-[gd_scene load_steps=8 format=3 uid="uid://wnn1blxym12s"]
+[gd_scene load_steps=24 format=3 uid="uid://wnn1blxym12s"]
 
-[ext_resource type="Script" uid="uid://3pdl22gx2xdk" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_grcpe"]
-[ext_resource type="Script" uid="uid://cnjmggusghgda" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_bsdxn"]
-[ext_resource type="Texture2D" uid="uid://kxdeyef78vrh" path="res://images/included/base.png" id="2_ekj0u"]
+[ext_resource type="Script" uid="uid://6mdcui7wkc47" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_grcpe"]
+[ext_resource type="Texture2D" uid="uid://djxqwdhxk0b0e" path="res://images/included/sprites/bg/bga.png" id="2_avh2n"]
+[ext_resource type="Script" uid="uid://cm7sg7wq6hq8s" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_bsdxn"]
 [ext_resource type="FontFile" uid="uid://dbblxkk3tmho5" path="res://fonts/preeow-paper.ttf" id="2_j6mlq"]
+[ext_resource type="Texture2D" uid="uid://ctmrf02mkceh8" path="res://images/included/sprites/bg/bgb.png" id="3_ukjfp"]
 [ext_resource type="FontFile" uid="uid://dhi02px4iy4jf" path="res://fonts/lappy-486-extended.ttf" id="4_l2x7l"]
-[ext_resource type="Script" uid="uid://cxjrwo72ycv1q" path="res://addons/mpf-gmc/classes/mpf_conditional.gd" id="6_6vrr4"]
+[ext_resource type="Texture2D" uid="uid://bt4jl34sdav6w" path="res://images/included/sprites/bg/bgc.png" id="4_r1rew"]
+[ext_resource type="Texture2D" uid="uid://ka6sgwtimbcv" path="res://images/included/sprites/bg/bgd.png" id="5_2y4wy"]
+[ext_resource type="Script" uid="uid://b846v662darst" path="res://addons/mpf-gmc/classes/mpf_conditional.gd" id="6_6vrr4"]
+[ext_resource type="Texture2D" uid="uid://djpf3crq72u2x" path="res://images/included/base_frame.png" id="6_e3lof"]
+[ext_resource type="Texture2D" uid="uid://bx650ogkck0ml" path="res://images/included/sprites/cottage/ruined/left.png" id="7_gx7cy"]
+[ext_resource type="Texture2D" uid="uid://csdva5wyxm8h2" path="res://images/included/sprites/cottage/intact/left.png" id="8_cnhqp"]
+[ext_resource type="Texture2D" uid="uid://b6ln4kpjqf2yr" path="res://images/included/sprites/cottage/intact/right.png" id="9_ovcnp"]
+[ext_resource type="Texture2D" uid="uid://ca73rxgtday54" path="res://images/included/sprites/trogdor/roar.png" id="10_gvfig"]
+[ext_resource type="Texture2D" uid="uid://cd3kc40gy24c5" path="res://images/included/sprites/knight/k1.png" id="11_6vceq"]
+[ext_resource type="Texture2D" uid="uid://y5o03e0k28cp" path="res://images/included/sprites/knight/k2.png" id="12_yk3m8"]
+[ext_resource type="Texture2D" uid="uid://b2k3evhxd3wmy" path="res://images/included/sprites/peasant/p1.png" id="13_oj564"]
+[ext_resource type="Texture2D" uid="uid://siu4beqmeawh" path="res://images/included/sprites/peasant/p2.png" id="14_ume64"]
+[ext_resource type="Texture2D" uid="uid://cjjwclru2l14i" path="res://images/included/sprites/peasant/pdead.png" id="15_gjonj"]
+[ext_resource type="Texture2D" uid="uid://dpyb0otc7b0mj" path="res://images/included/sprites/peasant/pf2.png" id="16_77bry"]
+[ext_resource type="Texture2D" uid="uid://bawsin2181wj7" path="res://images/included/sprites/trogdor/breath/breath 1.png" id="21_6wvah"]
+[ext_resource type="Texture2D" uid="uid://dc82exoatqycv" path="res://images/included/sprites/cottage/fire/f1.png" id="22_tfc7s"]
 
 [sub_resource type="Theme" id="Theme_t7ujo"]
 Label/font_sizes/font_size = 40
@@ -16,9 +32,95 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_grcpe")
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Static Assets" type="Node2D" parent="."]
+
+[node name="Background A" type="Sprite2D" parent="Static Assets"]
+visible = false
 position = Vector2(1440, 432)
-texture = ExtResource("2_ekj0u")
+texture = ExtResource("2_avh2n")
+
+[node name="Background B" type="Sprite2D" parent="Static Assets"]
+position = Vector2(1440, 432)
+texture = ExtResource("3_ukjfp")
+
+[node name="Background C" type="Sprite2D" parent="Static Assets"]
+visible = false
+position = Vector2(1440, 432)
+texture = ExtResource("4_r1rew")
+
+[node name="Background D" type="Sprite2D" parent="Static Assets"]
+visible = false
+position = Vector2(1440, 432)
+texture = ExtResource("5_2y4wy")
+
+[node name="Frame" type="Sprite2D" parent="Static Assets"]
+position = Vector2(1440, 432)
+texture = ExtResource("6_e3lof")
+
+[node name="Left" type="Sprite2D" parent="Static Assets"]
+position = Vector2(829, 598)
+scale = Vector2(3.73256, 4.64285)
+texture = ExtResource("7_gx7cy")
+
+[node name="Left2" type="Sprite2D" parent="Static Assets"]
+position = Vector2(2663.25, 507.5)
+scale = Vector2(3.48438, 4.41667)
+texture = ExtResource("8_cnhqp")
+
+[node name="Right1" type="Sprite2D" parent="Static Assets"]
+position = Vector2(451.5, 637.5)
+scale = Vector2(3.59375, 4.58333)
+texture = ExtResource("9_ovcnp")
+
+[node name="Right2" type="Sprite2D" parent="Static Assets"]
+position = Vector2(2052.5, 483)
+scale = Vector2(3.34375, 4.5)
+texture = ExtResource("9_ovcnp")
+
+[node name="F1" type="Sprite2D" parent="Static Assets"]
+position = Vector2(2052, 411)
+scale = Vector2(4.3125, 5.9)
+texture = ExtResource("22_tfc7s")
+
+[node name="Roar" type="Sprite2D" parent="Static Assets"]
+position = Vector2(1461, 494)
+scale = Vector2(5.19872, 4.96111)
+texture = ExtResource("10_gvfig")
+
+[node name="K1" type="Sprite2D" parent="Static Assets"]
+position = Vector2(624.75, 393.5)
+scale = Vector2(2.88095, 4.20833)
+texture = ExtResource("11_6vceq")
+
+[node name="K2" type="Sprite2D" parent="Static Assets"]
+position = Vector2(2224.5, 726.5)
+scale = Vector2(2.90476, 4.45833)
+texture = ExtResource("12_yk3m8")
+
+[node name="P1" type="Sprite2D" parent="Static Assets"]
+position = Vector2(490.5, 707)
+scale = Vector2(3.875, 3.07895)
+texture = ExtResource("13_oj564")
+
+[node name="P2" type="Sprite2D" parent="Static Assets"]
+position = Vector2(2551, 635)
+scale = Vector2(3.625, 3.81579)
+texture = ExtResource("14_ume64")
+
+[node name="Pdead" type="Sprite2D" parent="Static Assets"]
+position = Vector2(1574, 636)
+scale = Vector2(4.16667, 4.7)
+texture = ExtResource("15_gjonj")
+
+[node name="Pf2" type="Sprite2D" parent="Static Assets"]
+position = Vector2(1109, 635)
+scale = Vector2(3.53572, 2.83333)
+texture = ExtResource("16_77bry")
+
+[node name="Breath1" type="Sprite2D" parent="Static Assets"]
+position = Vector2(1282, 455)
+scale = Vector2(6.54167, 7.83333)
+texture = ExtResource("21_6wvah")
 
 [node name="MPFVariable - Ball" type="Label" parent="."]
 layout_mode = 0
@@ -54,135 +156,6 @@ comma_separate = true
 min_digits = 2
 template_string = "Score: %s"
 
-[node name="MPFConditional pf x>1" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("6_6vrr4")
-variable_name = "playfield_multiplier"
-condition_type = 4
-condition_value = "1"
-
-[node name="MPFConditional !=p1" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("6_6vrr4")
-variable_name = "number"
-condition_type = 1
-condition_value = "1"
-
-[node name="MPFVariable - ScoreP1" type="Label" parent="MPFConditional !=p1"]
-layout_mode = 0
-offset_left = -156.0
-offset_top = 737.0
-offset_right = 853.0
-offset_bottom = 956.0
-theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
-theme_override_constants/outline_size = 9
-theme_override_fonts/font = ExtResource("4_l2x7l")
-theme_override_font_sizes/font_size = 100
-text = "P1: 1,000,000"
-horizontal_alignment = 1
-script = ExtResource("2_bsdxn")
-variable_type = 4
-variable_name = "score"
-comma_separate = true
-min_digits = 2
-template_string = "P1: %s"
-
-[node name="MPFConditional !=p2" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("6_6vrr4")
-variable_name = "number"
-condition_type = 1
-condition_value = "2"
-
-[node name="MPFVariable - ScoreP2" type="Label" parent="MPFConditional !=p2"]
-layout_mode = 0
-offset_left = 598.0
-offset_top = 736.0
-offset_right = 1607.0
-offset_bottom = 955.0
-theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
-theme_override_constants/outline_size = 9
-theme_override_fonts/font = ExtResource("4_l2x7l")
-theme_override_font_sizes/font_size = 100
-text = "P2: 1,000,000"
-horizontal_alignment = 1
-script = ExtResource("2_bsdxn")
-variable_type = 5
-variable_name = "score"
-comma_separate = true
-min_digits = 2
-template_string = "P2: %s"
-min_players = 2
-
-[node name="MPFConditional !=p3" type="Control" parent="."]
-anchors_preset = 0
-offset_left = 594.0
-offset_top = 751.0
-offset_right = 634.0
-offset_bottom = 791.0
-script = ExtResource("6_6vrr4")
-variable_name = "number"
-condition_type = 1
-condition_value = "3"
-
-[node name="MPFVariable - ScoreP3" type="Label" parent="MPFConditional !=p3"]
-layout_mode = 0
-offset_left = 728.0
-offset_top = -10.0
-offset_right = 1737.0
-offset_bottom = 209.0
-theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
-theme_override_constants/outline_size = 9
-theme_override_fonts/font = ExtResource("4_l2x7l")
-theme_override_font_sizes/font_size = 100
-text = "P3: 1,000,000"
-horizontal_alignment = 1
-script = ExtResource("2_bsdxn")
-variable_type = 6
-variable_name = "score"
-comma_separate = true
-min_digits = 2
-template_string = "P3: %s"
-min_players = 3
-
-[node name="MPFConditional !=p4" type="Control" parent="."]
-anchors_preset = 0
-offset_left = 594.0
-offset_top = 751.0
-offset_right = 634.0
-offset_bottom = 791.0
-script = ExtResource("6_6vrr4")
-variable_name = "number"
-condition_type = 1
-condition_value = "4"
-
-[node name="MPFVariable - ScoreP4" type="Label" parent="MPFConditional !=p4"]
-layout_mode = 0
-offset_left = 1444.0
-offset_top = -13.0
-offset_right = 2453.0
-offset_bottom = 206.0
-theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
-theme_override_constants/outline_size = 9
-theme_override_fonts/font = ExtResource("4_l2x7l")
-theme_override_font_sizes/font_size = 100
-text = "P4: 1,000,000"
-horizontal_alignment = 1
-script = ExtResource("2_bsdxn")
-variable_type = 7
-variable_name = "score"
-comma_separate = true
-min_digits = 2
-template_string = "P4: %s"
-min_players = 4
-
 [node name="MPFVariable - Ball Score" type="Label" parent="."]
 layout_mode = 0
 offset_left = 1053.0
@@ -204,9 +177,9 @@ template_string = "(%s)"
 [node name="MPFVariable - Current P#" type="Label" parent="."]
 layout_mode = 0
 offset_left = 1931.0
-offset_top = 12.0
+offset_top = 11.0
 offset_right = 2428.0
-offset_bottom = 162.0
+offset_bottom = 161.0
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
 theme_override_fonts/font = ExtResource("4_l2x7l")
@@ -219,3 +192,128 @@ comma_separate = true
 min_digits = 2
 template_string = "Player %s"
 min_players = 2
+
+[node name="Off-player scores" type="Node2D" parent="."]
+
+[node name="MPFConditional !=p1" type="Control" parent="Off-player scores"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_6vrr4")
+variable_name = "number"
+condition_type = 1
+condition_value = "1"
+
+[node name="MPFVariable - ScoreP1" type="Label" parent="Off-player scores/MPFConditional !=p1"]
+layout_mode = 0
+offset_left = -156.0
+offset_top = 737.0
+offset_right = 853.0
+offset_bottom = 956.0
+theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_l2x7l")
+theme_override_font_sizes/font_size = 100
+text = "P1: 1,000,000"
+horizontal_alignment = 1
+script = ExtResource("2_bsdxn")
+variable_type = 4
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+template_string = "P1: %s"
+
+[node name="MPFConditional !=p2" type="Control" parent="Off-player scores"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_6vrr4")
+variable_name = "number"
+condition_type = 1
+condition_value = "2"
+
+[node name="MPFVariable - ScoreP2" type="Label" parent="Off-player scores/MPFConditional !=p2"]
+layout_mode = 0
+offset_left = 598.0
+offset_top = 736.0
+offset_right = 1607.0
+offset_bottom = 955.0
+theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_l2x7l")
+theme_override_font_sizes/font_size = 100
+text = "P2: 1,000,000"
+horizontal_alignment = 1
+script = ExtResource("2_bsdxn")
+variable_type = 5
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+template_string = "P2: %s"
+min_players = 2
+
+[node name="MPFConditional !=p3" type="Control" parent="Off-player scores"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 594.0
+offset_top = 751.0
+offset_right = 634.0
+offset_bottom = 791.0
+script = ExtResource("6_6vrr4")
+variable_name = "number"
+condition_type = 1
+condition_value = "3"
+
+[node name="MPFVariable - ScoreP3" type="Label" parent="Off-player scores/MPFConditional !=p3"]
+layout_mode = 0
+offset_left = 728.0
+offset_top = -10.0
+offset_right = 1737.0
+offset_bottom = 209.0
+theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_l2x7l")
+theme_override_font_sizes/font_size = 100
+text = "P3: 1,000,000"
+horizontal_alignment = 1
+script = ExtResource("2_bsdxn")
+variable_type = 6
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+template_string = "P3: %s"
+min_players = 3
+
+[node name="MPFConditional !=p4" type="Control" parent="Off-player scores"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 594.0
+offset_top = 751.0
+offset_right = 634.0
+offset_bottom = 791.0
+script = ExtResource("6_6vrr4")
+variable_name = "number"
+condition_type = 1
+condition_value = "4"
+
+[node name="MPFVariable - ScoreP4" type="Label" parent="Off-player scores/MPFConditional !=p4"]
+layout_mode = 0
+offset_left = 1444.0
+offset_top = -13.0
+offset_right = 2453.0
+offset_bottom = 206.0
+theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_l2x7l")
+theme_override_font_sizes/font_size = 100
+text = "P4: 1,000,000"
+horizontal_alignment = 1
+script = ExtResource("2_bsdxn")
+variable_type = 7
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+template_string = "P4: %s"
+min_players = 4
