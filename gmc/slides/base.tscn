@@ -1,6 +1,6 @@
-[gd_scene load_steps=24 format=3 uid="uid://wnn1blxym12s"]
+[gd_scene load_steps=34 format=3 uid="uid://wnn1blxym12s"]
 
-[ext_resource type="Script" uid="uid://6mdcui7wkc47" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_grcpe"]
+[ext_resource type="Script" uid="uid://26gxb32nccfs" path="res://slides/base.gd" id="1_cnhqp"]
 [ext_resource type="Texture2D" uid="uid://djxqwdhxk0b0e" path="res://images/included/sprites/bg/bga.png" id="2_avh2n"]
 [ext_resource type="Script" uid="uid://cm7sg7wq6hq8s" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_bsdxn"]
 [ext_resource type="FontFile" uid="uid://dbblxkk3tmho5" path="res://fonts/preeow-paper.ttf" id="2_j6mlq"]
@@ -20,8 +20,69 @@
 [ext_resource type="Texture2D" uid="uid://siu4beqmeawh" path="res://images/included/sprites/peasant/p2.png" id="14_ume64"]
 [ext_resource type="Texture2D" uid="uid://cjjwclru2l14i" path="res://images/included/sprites/peasant/pdead.png" id="15_gjonj"]
 [ext_resource type="Texture2D" uid="uid://dpyb0otc7b0mj" path="res://images/included/sprites/peasant/pf2.png" id="16_77bry"]
+[ext_resource type="Texture2D" uid="uid://oa5ardk7rlpf" path="res://images/included/sprites/peasant/pf1.png" id="16_ovcnp"]
+[ext_resource type="Texture2D" uid="uid://crcwqk0lmv8ns" path="res://images/included/sprites/trogdor/breath/breath 2.png" id="18_cnhqp"]
+[ext_resource type="Texture2D" uid="uid://vb4e51uk5quv" path="res://images/included/sprites/trogdor/breath/breath 3.png" id="19_ovcnp"]
+[ext_resource type="Texture2D" uid="uid://dihsa6yr7ktti" path="res://images/included/sprites/trogdor/breath/breath 4.png" id="20_gvfig"]
 [ext_resource type="Texture2D" uid="uid://bawsin2181wj7" path="res://images/included/sprites/trogdor/breath/breath 1.png" id="21_6wvah"]
+[ext_resource type="Texture2D" uid="uid://cfsqo1vpoo5gq" path="res://images/included/sprites/cottage/fire/f2.png" id="22_6vceq"]
 [ext_resource type="Texture2D" uid="uid://dc82exoatqycv" path="res://images/included/sprites/cottage/fire/f1.png" id="22_tfc7s"]
+[ext_resource type="Texture2D" uid="uid://d3j6o6u0p02q" path="res://images/included/sprites/cottage/fire/f3.png" id="23_yk3m8"]
+[ext_resource type="Texture2D" uid="uid://c308oc3f1qieu" path="res://images/included/sprites/cottage/fire/f4.png" id="24_oj564"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gvfig"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_ovcnp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_77bry")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ume64"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_6wvah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_cnhqp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ovcnp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_gvfig")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gjonj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_tfc7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_6vceq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_yk3m8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_oj564")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
 
 [sub_resource type="Theme" id="Theme_t7ujo"]
 Label/font_sizes/font_size = 40
@@ -30,7 +91,7 @@ Label/fonts/font = ExtResource("2_j6mlq")
 [node name="Base" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_grcpe")
+script = ExtResource("1_cnhqp")
 
 [node name="Static Assets" type="Node2D" parent="."]
 
@@ -73,10 +134,6 @@ texture = ExtResource("9_ovcnp")
 position = Vector2(2084, 453)
 texture = ExtResource("9_ovcnp")
 
-[node name="F1" type="Sprite2D" parent="Static Assets"]
-position = Vector2(2082, 345)
-texture = ExtResource("22_tfc7s")
-
 [node name="Roar" type="Sprite2D" parent="Static Assets"]
 position = Vector2(1486, 461)
 texture = ExtResource("10_gvfig")
@@ -102,13 +159,17 @@ texture = ExtResource("14_ume64")
 position = Vector2(1742, 607)
 texture = ExtResource("15_gjonj")
 
-[node name="Pf2" type="Sprite2D" parent="Static Assets"]
+[node name="peasant_animation" type="AnimatedSprite2D" parent="Static Assets"]
 position = Vector2(1145, 626)
-texture = ExtResource("16_77bry")
+sprite_frames = SubResource("SpriteFrames_gvfig")
 
-[node name="Breath1" type="Sprite2D" parent="Static Assets"]
-position = Vector2(1241, 403)
-texture = ExtResource("21_6wvah")
+[node name="breath_animation" type="AnimatedSprite2D" parent="Static Assets"]
+position = Vector2(1223, 390)
+sprite_frames = SubResource("SpriteFrames_ume64")
+
+[node name="cottage_fire_animation" type="AnimatedSprite2D" parent="Static Assets"]
+position = Vector2(2088, 370)
+sprite_frames = SubResource("SpriteFrames_gjonj")
 
 [node name="MPFVariable - Ball" type="Label" parent="."]
 layout_mode = 0
