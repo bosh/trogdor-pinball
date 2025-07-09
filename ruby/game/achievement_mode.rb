@@ -6,12 +6,12 @@ module TrogBuild
     def initialize(*args)
       super
       @achievements = [
-        achievement('burnination', 1, 'burnination_controller'),
-        achievement('a2', 2),
-        achievement('a3', 3),
-        achievement('a4', 4),
-        achievement('a5', 5),
-        achievement('a6', 6),
+        achievement('burnination',        1, 'burnination_controller'),
+        achievement('power_puncher',      2, 'achievement_pp'), #slings and pops
+        achievement('capture_capturerer', 3, 'achievement_qq'), #vuks and capture diverter
+        achievement('ramp_rider',         4, 'achievement_rr'),
+        achievement('spinner_spinner',    5, 'achievement_ss'),
+        achievement('target_targeter',    6, 'achievement_tt'),
       ]
     end
 
@@ -73,12 +73,12 @@ module TrogBuild
       {
         'start_enabled' => true,
         'show_tokens' => {'light' => @light},
-        'show_when_started' => 'flash',
+        'show_when_started' => nil,
         'show_when_completed' => 'on',
         'restart_after_stop_possible' => true,
         'events_when_completed' => 'celebrate_achievement',
-        'start_events' => @start_events,
-        'stop_events' => @stop_events,
+        'start_events' => 'mode_generated_achievements_started',
+        'stop_events' => nil,
         'complete_events' => @complete_events
       }
     end

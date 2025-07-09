@@ -16,66 +16,66 @@ achievements:
     start_enabled: true
     show_tokens:
       light: l_majesty_1
-    show_when_started: flash
+    show_when_started:
     show_when_completed: 'on'
     restart_after_stop_possible: true
     events_when_completed: celebrate_achievement
-    start_events: burnination_controller_begin
-    stop_events: burnination_controller_fail
+    start_events: mode_generated_achievements_started
+    stop_events:
     complete_events: burnination_controller_complete
-  a2:
+  power_puncher:
     start_enabled: true
     show_tokens:
       light: l_majesty_2
-    show_when_started: flash
+    show_when_started:
     show_when_completed: 'on'
     restart_after_stop_possible: true
     events_when_completed: celebrate_achievement
-    start_events: mode_start_achievement_a2
-    stop_events: mode_fail_achievement_a2
-    complete_events: mode_complete_achievement_a2
-  a3:
+    start_events: mode_generated_achievements_started
+    stop_events:
+    complete_events: achievement_pp_complete
+  capture_capturerer:
     start_enabled: true
     show_tokens:
       light: l_majesty_3
-    show_when_started: flash
+    show_when_started:
     show_when_completed: 'on'
     restart_after_stop_possible: true
     events_when_completed: celebrate_achievement
-    start_events: mode_start_achievement_a3
-    stop_events: mode_fail_achievement_a3
-    complete_events: mode_complete_achievement_a3
-  a4:
+    start_events: mode_generated_achievements_started
+    stop_events:
+    complete_events: achievement_qq_complete
+  ramp_rider:
     start_enabled: true
     show_tokens:
       light: l_majesty_4
-    show_when_started: flash
+    show_when_started:
     show_when_completed: 'on'
     restart_after_stop_possible: true
     events_when_completed: celebrate_achievement
-    start_events: mode_start_achievement_a4
-    stop_events: mode_fail_achievement_a4
-    complete_events: mode_complete_achievement_a4
-  a5:
+    start_events: mode_generated_achievements_started
+    stop_events:
+    complete_events: achievement_rr_complete
+  spinner_spinner:
     start_enabled: true
     show_tokens:
       light: l_majesty_5
-    show_when_started: flash
+    show_when_started:
     show_when_completed: 'on'
     restart_after_stop_possible: true
     events_when_completed: celebrate_achievement
-    start_events: mode_start_achievement_a5
-    stop_events: mode_fail_achievement_a5
-    complete_events: mode_complete_achievement_a5
-  a6:
+    start_events: mode_generated_achievements_started
+    stop_events:
+    complete_events: achievement_ss_complete
+  target_targeter:
     start_enabled: true
     show_tokens:
       light: l_majesty_6
-    show_when_started: flash
+    show_when_started:
     show_when_completed: 'on'
     restart_after_stop_possible: true
     events_when_completed: celebrate_achievement
-    start_events: mode_start_achievement_a6
-    stop_events: mode_fail_achievement_a6
-    complete_events: mode_complete_achievement_a6
+    start_events: mode_generated_achievements_started
+    stop_events:
+    complete_events: achievement_tt_complete
 

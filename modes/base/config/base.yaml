@@ -9,6 +9,7 @@ config:
   - light_player.yaml
   - multiballs.yaml
   - virtual_hooks.yaml
+  - achievement_hooks.yaml
 
 slide_player:
   mode_base_started:

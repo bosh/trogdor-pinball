@@ -256,11 +256,11 @@ settings:
       12000: '12s'
 
   # ball_search_enabled: #Actually found in ball_search.yaml
-  #   sort: 200
+  #   sort: 199
 
   # LATER: Diverter#activation_time doesnt support settings or templates yet
   # open_diverter_time_standard:
-  #   sort: 250
+  #   sort: 180
   #   label: Subway diverter open time - standard occurrence
   #   key_type: int
   #   default: 8000
@@ -272,7 +272,7 @@ settings:
   #     12000: '12 seconds'
 
   # open_diverter_time_skillshot:
-  #   sort: 251
+  #   sort: 181
   #   label: Subway diverter open time - skillshot
   #   key_type: int
   #   default: 12000
@@ -282,6 +282,52 @@ settings:
   #     12000: '12 seconds (default)'
   #     14000: '14 seconds'
   #     16000: '16 seconds'
+
+  achievement_goal_power_hits:
+    sort: 202
+    label: Achievement 2 Goal - Power Hits
+    key_type: int
+    default: 50
+    values:
+      40: '40'
+      50: '50'
+      60: '60'
+  achievement_goal_captures:
+    sort: 203
+    label: Achievement 3 Goal - Captures (VUK/Diverter)
+    key_type: int
+    default: 15
+    values:
+      10: '10'
+      15: '15'
+      20: '20'
+  achievement_goal_ramps:
+    sort: 204
+    label: Achievement 4 Goal - Ramp Hits
+    key_type: int
+    default: 20
+    values:
+      16: '16'
+      20: '20'
+      25: '25'
+  achievement_goal_spins:
+    sort: 205
+    label: Achievement 5 Goal - Spinner Spins
+    key_type: int
+    default: 100
+    values:
+      64: '64'
+      100: '100'
+      150: '150'
+  achievement_goal_targets:
+    sort: 206
+    label: Achievement 6 Goal - Target Hits
+    key_type: int
+    default: 24
+    values:
+      16: '16'
+      24: '24'
+      32: '32'
 
   burnination_fire_level_one:
     sort: 301

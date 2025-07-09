@@ -1,0 +1,8 @@
+#config_version=6
+
+event_player:
+  player_power_hits{value >= settings.achievement_goal_power_hits}: [achievement_pp_complete]
+  player_capture_hits{value >= settings.achievement_goal_captures}: [achievement_qq_complete]
+  player_ramp_hits{value >= settings.achievement_goal_ramps}: [achievement_rr_complete]
+  player_spinner_spins{value >= settings.achievement_goal_spins}: [achievement_ss_complete]
+  player_target_hits{value >= settings.achievement_goal_targets}: [achievement_tt_complete]
