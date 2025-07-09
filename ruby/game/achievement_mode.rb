@@ -34,7 +34,7 @@ module TrogBuild
 
     def show_player
       {
-        "celebrate_achievement" => {
+        "celebrate_achievement{restore == False}" => {
           @rainbow_show.name => {
             'action' => 'play',
             'loops' => 2

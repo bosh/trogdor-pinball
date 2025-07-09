@@ -1,8 +1,14 @@
 #config_version=6
 
 event_player:
-  player_power_hits{value >= settings.achievement_goal_power_hits}: [achievement_pp_complete]
-  player_capture_hits{value >= settings.achievement_goal_captures}: [achievement_qq_complete]
-  player_ramp_hits{value >= settings.achievement_goal_ramps}: [achievement_rr_complete]
-  player_spinner_spins{value >= settings.achievement_goal_spins}: [achievement_ss_complete]
-  player_target_hits{value >= settings.achievement_goal_targets}: [achievement_tt_complete]
+  player_power_hits{value >= settings.achievement_goal_power_hits and device.achievements.power_puncher.state != 'completed'}: [achievement_pp_complete]
+  player_capture_hits{value >= settings.achievement_goal_captures and device.achievements.capture_capturerer.state != 'completed'}: [achievement_qq_complete]
+  player_ramp_hits{value >= settings.achievement_goal_ramps and device.achievements.ramp_rider.state != 'completed'}: [achievement_rr_complete]
+  player_spinner_spins{value >= settings.achievement_goal_spins and device.achievements.spinner_spinner.state != 'completed'}: [achievement_ss_complete]
+  player_target_hits{value >= settings.achievement_goal_targets and device.achievements.target_targeter.state != 'completed'}: [achievement_tt_complete]
+  burnination_supreme_complete: [mode_start_burnination_supreme]
+
+achievement_groups:
+  burnination_supreme:
+    achievements: burnination, power_puncher, capture_capturerer, ramp_rider, spinner_spinner, target_targeter
+    events_when_all_completed: burnination_supreme_complete

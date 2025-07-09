@@ -7,7 +7,7 @@ mode:
   start_events: ball_started
   stop_events: mode_stop_generated_achievements, ball_will_end
 show_player:
-  celebrate_achievement:
+  celebrate_achievement{restore == False}:
     majesty_rainbow_loop:
       action: play
       loops: 2
