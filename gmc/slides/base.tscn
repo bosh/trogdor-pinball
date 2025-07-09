@@ -58,68 +58,56 @@ position = Vector2(1440, 432)
 texture = ExtResource("6_e3lof")
 
 [node name="Left" type="Sprite2D" parent="Static Assets"]
-position = Vector2(829, 598)
-scale = Vector2(3.73256, 4.64285)
+position = Vector2(930, 513)
 texture = ExtResource("7_gx7cy")
 
 [node name="Left2" type="Sprite2D" parent="Static Assets"]
-position = Vector2(2663.25, 507.5)
-scale = Vector2(3.48438, 4.41667)
+position = Vector2(2720, 399)
 texture = ExtResource("8_cnhqp")
 
 [node name="Right1" type="Sprite2D" parent="Static Assets"]
-position = Vector2(451.5, 637.5)
-scale = Vector2(3.59375, 4.58333)
+position = Vector2(233, 562)
 texture = ExtResource("9_ovcnp")
 
 [node name="Right2" type="Sprite2D" parent="Static Assets"]
-position = Vector2(2052.5, 483)
-scale = Vector2(3.34375, 4.5)
+position = Vector2(2084, 453)
 texture = ExtResource("9_ovcnp")
 
 [node name="F1" type="Sprite2D" parent="Static Assets"]
-position = Vector2(2052, 411)
-scale = Vector2(4.3125, 5.9)
+position = Vector2(2082, 345)
 texture = ExtResource("22_tfc7s")
 
 [node name="Roar" type="Sprite2D" parent="Static Assets"]
-position = Vector2(1461, 494)
-scale = Vector2(5.19872, 4.96111)
+position = Vector2(1486, 461)
 texture = ExtResource("10_gvfig")
 
 [node name="K1" type="Sprite2D" parent="Static Assets"]
-position = Vector2(624.75, 393.5)
-scale = Vector2(2.88095, 4.20833)
+position = Vector2(692, 354)
 texture = ExtResource("11_6vceq")
 
 [node name="K2" type="Sprite2D" parent="Static Assets"]
-position = Vector2(2224.5, 726.5)
-scale = Vector2(2.90476, 4.45833)
+position = Vector2(2347, 625)
+scale = Vector2(-1, 1)
 texture = ExtResource("12_yk3m8")
 
 [node name="P1" type="Sprite2D" parent="Static Assets"]
-position = Vector2(490.5, 707)
-scale = Vector2(3.875, 3.07895)
+position = Vector2(439, 649)
 texture = ExtResource("13_oj564")
 
 [node name="P2" type="Sprite2D" parent="Static Assets"]
-position = Vector2(2551, 635)
-scale = Vector2(3.625, 3.81579)
+position = Vector2(2589, 586)
 texture = ExtResource("14_ume64")
 
 [node name="Pdead" type="Sprite2D" parent="Static Assets"]
-position = Vector2(1574, 636)
-scale = Vector2(4.16667, 4.7)
+position = Vector2(1742, 607)
 texture = ExtResource("15_gjonj")
 
 [node name="Pf2" type="Sprite2D" parent="Static Assets"]
-position = Vector2(1109, 635)
-scale = Vector2(3.53572, 2.83333)
+position = Vector2(1145, 626)
 texture = ExtResource("16_77bry")
 
 [node name="Breath1" type="Sprite2D" parent="Static Assets"]
-position = Vector2(1282, 455)
-scale = Vector2(6.54167, 7.83333)
+position = Vector2(1241, 403)
 texture = ExtResource("21_6wvah")
 
 [node name="MPFVariable - Ball" type="Label" parent="."]
