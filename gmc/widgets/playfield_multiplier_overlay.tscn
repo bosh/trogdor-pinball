@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cchog2y3im32q"]
 
-[ext_resource type="Script" uid="uid://csg14352p72n0" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_elpmy"]
+[ext_resource type="Script" uid="uid://ct36ftwq5qpfo" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_elpmy"]
 [ext_resource type="Theme" uid="uid://cx5kw5e8kdnr6" path="res://themes/attract_scores_text.tres" id="3_stehb"]
-[ext_resource type="Script" uid="uid://bswvvnh28aujg" path="res://addons/mpf-gmc/classes/mpf_conditional_children.gd" id="4_fy4dd"]
+[ext_resource type="Script" uid="uid://cl2fwawg56l5e" path="res://addons/mpf-gmc/classes/mpf_conditional_children.gd" id="4_fy4dd"]
 
 [node name="PlayfieldMultiplierOverlay" type="Control"]
 layout_mode = 3
