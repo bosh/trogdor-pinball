@@ -4,7 +4,6 @@ multiballs:
   cabinet_multiball:
     ball_count: 3
     ball_count_type: total
-    enable_events: playfield_active
     disable_events: ball_ending
     start_events: mini_cabinet_multiball_qualified
     shoot_again: 7000ms
@@ -12,7 +11,6 @@ multiballs:
   burnination_multiball:
     ball_count: 3
     ball_count_type: total
-    enable_events: playfield_active, burnination_controller_begin
     disable_events: ball_ending, mode_stop_burnination_rollovers
     start_events: burnination_multiball_qualified
     shoot_again: settings.burnination_timer_seconds*1000 #Uses the base setting but does not increment like the overall timer does
@@ -20,10 +18,9 @@ multiballs:
   skillshot_addaball:
     ball_count: 1
     ball_count_type: add
-    enable_events: ball_starting
     disable_events: ball_ending
     start_events: skillshot_addaball_qualified
-    shoot_again: 5000ms
+    shoot_again: 8000ms
 
   cheat_multiball:
     ball_count: 1
