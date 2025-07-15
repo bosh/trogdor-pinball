@@ -1,0 +1,25 @@
+#config_version=6
+
+mode:
+  start_events: mode_start_queue_ball_end_analytics, ball_ending
+  stop_events: mode_stop_queue_ball_end_analytics
+  use_wait_queue: true
+  priority: 9092
+  events_when_started: send_ball_end_analytics
+
+timers:
+  fallback_ball_end_analytics_timer:
+    start_value: 1
+    end_value: 0
+    tick_interval: 50ms
+    direction: down
+    start_running: true
+    restart_on_complete: false
+
+event_player:
+  timer_fallback_ball_end_analytics_timer_complete: [mode_stop_queue_ball_end_analytics]
+  send_ball_end_analytics:
+    analytics__ball_end_v1:
+      ball_number: {type: int, value: current_player.ball}
+      score: {type: int, value: current_player.score}
+      ball_score: {type: int, value: current_player.ball_score}
