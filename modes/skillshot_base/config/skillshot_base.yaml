@@ -65,6 +65,10 @@ event_player:
     - priority_show_skillshot_success
     - mode_complete_skillshot_base
 
+  sw_skill_shot_failure_active:
+    - deactivate_orbit_diverter_skillshot
+    - mode_fail_skillshot_base
+
 shot_profiles:
   skill_shot_profile:
     advance_on_hit: False
@@ -111,7 +115,7 @@ shots:
 
   skillshot_3:
     profile: skill_shot_profile
-    switches: s_wireform_s_top
+    switches: s_wireform_s_top, s_wireform_right_top #either wireform will do!
     advance_events: skillshot_3_hitme_hit
     control_events:
       - events: restart_skill_shots
