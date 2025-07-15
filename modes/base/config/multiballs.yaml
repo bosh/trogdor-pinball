@@ -15,7 +15,7 @@ multiballs:
     enable_events: playfield_active, burnination_controller_begin
     disable_events: ball_ending, mode_stop_burnination_rollovers
     start_events: burnination_multiball_qualified
-    shoot_again: settings.burnination_timer_seconds #Uses the base setting but does not increment like the overall timer does
+    shoot_again: settings.burnination_timer_seconds*1000 #Uses the base setting but does not increment like the overall timer does
 
   skillshot_addaball:
     ball_count: 1
