@@ -43,6 +43,7 @@ event_player:
     - enable_orbit_diverter_skillshot
     - activate_orbit_diverter_skillshot
   timer_skill_shot_timeout_complete:
+    - deactivate_orbit_diverter_skillshot
     - mode_fail_skillshot_base
   skillshot_of_an_artist_hitme_hit:
     - disable_skill_2
@@ -58,6 +59,7 @@ event_player:
     - dj_skill_shot_3_hit|1s
 
   skillshots_group_hitme_hit:
+    - deactivate_orbit_diverter_skillshot
     - skillshot_addaball_qualified
     - increment_playfield_multiplier
     - priority_show_skillshot_success

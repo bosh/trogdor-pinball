@@ -8,8 +8,8 @@ mode:
 event_player:
   activate_orbit_diverter:              [set_base_subway_capture_expected]
   activate_orbit_diverter_skillshot:    [set_base_subway_capture_expected]
-  deactivate_orbit_diverter:            [set_base_subway_capture_unexpected]
-  deactivate_orbit_diverter_skillshot:  [set_base_subway_capture_unexpected]
+  deactivate_orbit_diverter:            [set_base_subway_capture_unexpected|2s] #delay deactivation because a just-in-time shot might still be rolling down
+  deactivate_orbit_diverter_skillshot:  [set_base_subway_capture_unexpected|2s]
   base_vuk_group_hit:      [cheat_multiball_begin] #will not actually begin unless qualified
   base_subway_capture_hit: [cheat_multiball_begin]
 
