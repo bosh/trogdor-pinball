@@ -26,9 +26,11 @@ event_player:
   mode_burn_rollovers_started: [burn_updated|1ms]
   burn_updated.1:
     widget_show_burn_letters:
-      total_lit:
-        value: 0
-        type: int
+      total_lit: {value: 0, type: int}
+      b_lit: {value: False, type: bool}
+      u_lit: {value: False, type: bool}
+      r_lit: {value: False, type: bool}
+      n_lit: {value: False, type: bool}
 
   burn_updated:
     widget_update_burn_letters:
