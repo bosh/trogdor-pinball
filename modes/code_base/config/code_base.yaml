@@ -2,6 +2,6 @@
 
 mode:
   start_events: mode_start_code_base
-  stop_events: mode_stop_code_base
+  stop_events: mode_stop_code_base, ball_will_end
   priority: 11000
   code: code_base.CodeBase

@@ -1,6 +1,13 @@
 #config_version=6
 
 player_vars:
+  ball_start_time:
+    initial_value: 0
+    value_type: float
+  ball_end_time:
+    initial_value: -1
+    value_type: float
+
   previous_ball_score:
     initial_value: 0
     value_type: int

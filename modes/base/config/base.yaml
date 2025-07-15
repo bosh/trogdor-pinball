@@ -63,6 +63,18 @@ event_player:
     - sync_ball_score
 
 variable_player:
+  update_player_ball_start:
+    ball_start_time:
+      float: timestamp
+      action: set
+    ball_end_time:
+      float: -1
+      action: set
+  update_player_ball_end:
+    ball_end_time:
+      float: timestamp
+      action: set
+
   update_previous_ball_score_from_current:
     previous_ball_score:
       action: set

@@ -22,6 +22,9 @@ event_player:
     analytics__ball_end_v1:
       player_number: {type: int, value: current_player.number}
       total_players: {type: int, value: game.num_players}
+      ball_start_timestamp: {type: float, value: current_player.ball_start_time}
+      ball_end_timestamp: {type: float, value: current_player.ball_end_time}
+      ball_duration: {type: float, value: current_player.ball_end_time - current_player.ball_start_time}
       ball_number: {type: int, value: current_player.ball}
       score: {type: int, value: current_player.score}
       ball_score: {type: int, value: current_player.ball_score}
