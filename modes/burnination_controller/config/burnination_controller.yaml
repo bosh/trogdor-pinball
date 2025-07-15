@@ -87,7 +87,6 @@ state_machines:
           - mode_stop_burnination_rollovers
           - mode_start_burn_rollovers
           - mode_fail_pops_burnination
-          - widget_show_burn_letters #this probably needs to pass a total lit value of 0
     transitions:
       - source: start
         target: burnination
