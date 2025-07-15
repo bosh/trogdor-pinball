@@ -5,6 +5,7 @@ playfields:
     default_source_device: bd_plunger
     tags: default
     enable_ball_search: settings.ball_search_enabled
+    ball_search_timeout: 10s # 10s instead of 15 default -- settings.ball_search_timeout # does not support templates yet
 
 ball_devices:
   bd_trough:
