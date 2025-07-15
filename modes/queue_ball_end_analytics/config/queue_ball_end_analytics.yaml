@@ -20,6 +20,24 @@ event_player:
   timer_fallback_ball_end_analytics_timer_complete: [mode_stop_queue_ball_end_analytics]
   send_ball_end_analytics:
     analytics__ball_end_v1:
+      player_number: {type: int, value: current_player.number}
+      total_players: {type: int, value: game.num_players}
       ball_number: {type: int, value: current_player.ball}
       score: {type: int, value: current_player.score}
       ball_score: {type: int, value: current_player.ball_score}
+      tilted: {type: bool, value: game.tilted}
+      playfield_multiplier: {type: int, value: current_player.playfield_multiplier}
+      bonus_multiplier: {type: int, value: current_player.bonus_multiplier}
+      total_skillshot_successes: {type: int, value: current_player.total_skillshot_successes}
+      sling_hits: {type: int, value: current_player.sling_hits}
+      spinner_spins: {type: int, value: current_player.spinner_spins}
+      ramp_hits: {type: int, value: current_player.ramp_hits}
+      loop_hits: {type: int, value: current_player.loop_hits}
+      orbit_hits: {type: int, value: current_player.orbit_hits}
+      target_hits: {type: int, value: current_player.target_hits}
+      rollover_hits: {type: int, value: current_player.rollover_hits}
+      capture_hits: {type: int, value: current_player.capture_hits}
+      pop_hits: {type: int, value: current_player.pop_hits}
+      power_hits: {type: int, value: current_player.power_hits}
+      captive_ball_target_hits: {type: int, value: current_player.captive_ball_target_hits}
+      burnination_points: {type: int, value: current_player.burnination_points}
