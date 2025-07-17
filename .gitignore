@@ -6,3 +6,4 @@ __pycache__/
 # Godot 4+ specific ignores
 .godot/
 
+*.x86_64
