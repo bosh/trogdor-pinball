@@ -5,29 +5,29 @@
 switches:
   s_orbit_diverter_eos:
     number: 801
-    platform: smart_virtual
+    platform: virtual
     type: 'NO'
 
   s_left_orbit_inner:
     number: 802
-    platform: smart_virtual
+    platform: virtual
     tags: playfield_active
   s_right_orbit_inner:
     number: 803
-    platform: smart_virtual
+    platform: virtual
     tags: playfield_active
 
   # Right wireform proxy entrance
   s_wireform_right_entrance:
     number: 804
-    platform: smart_virtual
+    platform: virtual
     tags: playfield_active
 
   # Other proxy switches
   s_right_outlane_lower:
     number: 806
-    platform: smart_virtual
+    platform: virtual
 
   s_drop_bank_stuck_ball_detector:
     number: 888
-    platform: smart_virtual
+    platform: virtual

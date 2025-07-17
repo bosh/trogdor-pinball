@@ -26,25 +26,25 @@ switches:
 ## Unsupported in minicab:
   s_right_flipper_secondary:
     number: 850
-    platform: smart_virtual
+    platform: virtual
   s_tilt_bob:
     number: 851
-    platform: smart_virtual
+    platform: virtual
     tags: tilt_warning
 
   s_coin_door_service_1:
     number: 852
-    platform: smart_virtual
+    platform: virtual
     tags: service_esc
   s_coin_door_service_2:
     number: 853
-    platform: smart_virtual
+    platform: virtual
     tags: service_down
   s_coin_door_service_3:
     number: 854
-    platform: smart_virtual
+    platform: virtual
     tags: service_up
   s_coin_door_service_4:
     number: 855
-    platform: smart_virtual
+    platform: virtual
     tags: service_enter

@@ -12,7 +12,7 @@ alias mpfm='mpf monitor & mpf ' # Root call for many other calls with monitor ad
 #-x/X dumb/smart virtual interface to remove hardware dependency
 #-g GMC project directory
 #-G GMC executable if not on path
-alias vsnake="clear; t; mpfm game -btX -c env_cabinet.yaml" #Used by windows taskbar integration - monitor, no gmc, smart_virtual, cabinet config
+alias vsnake="clear; t; mpfm game -btX -c env_cabinet.yaml" #Used by windows taskbar integration - monitor, no gmc, virtual, cabinet config
 
 #'both' requires godot executable on the path
 alias vboth="clear; t; mpfm both -g gmc -tXp"

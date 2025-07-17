@@ -96,7 +96,7 @@ switches:
   s_wireform_s_entrance: #proxy, not real, to be removed
     number: 831
     type: 'NC'
-    platform: smart_virtual
+    platform: virtual
     tags: playfield_active
 
   s_wireform_s_top: #opto

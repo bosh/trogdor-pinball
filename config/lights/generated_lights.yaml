@@ -5,93 +5,93 @@
 lights:
   generated_light_1:
     number: 8801
-    platform: smart_virtual
+    platform: virtual
     type: rgb
   gl_ring_a_1:
     tags: lights_generated,lights_2a,lights_3a,lights_4a,lights_5a,lights_gl_ring_a
     type: rgb
     number: 8802
-    platform: smart_virtual
+    platform: virtual
   gl_ring_a_2:
     tags: lights_generated,lights_2b,lights_3b,lights_4a,lights_5e,lights_gl_ring_a
     type: rgb
     number: 8803
-    platform: smart_virtual
+    platform: virtual
   gl_ring_a_3:
     tags: lights_generated,lights_2a,lights_3c,lights_4b,lights_5b,lights_gl_ring_a
     type: rgb
     number: 8804
-    platform: smart_virtual
+    platform: virtual
   gl_ring_a_4:
     tags: lights_generated,lights_2b,lights_3a,lights_4b,lights_5e,lights_gl_ring_a
     type: rgb
     number: 8805
-    platform: smart_virtual
+    platform: virtual
   gl_ring_a_5:
     tags: lights_generated,lights_2a,lights_3b,lights_4c,lights_5c,lights_gl_ring_a
     type: rgb
     number: 8806
-    platform: smart_virtual
+    platform: virtual
   gl_ring_a_6:
     tags: lights_generated,lights_2b,lights_3c,lights_4c,lights_5e,lights_gl_ring_a
     type: rgb
     number: 8807
-    platform: smart_virtual
+    platform: virtual
   gl_ring_a_7:
     tags: lights_generated,lights_2a,lights_3a,lights_4d,lights_5d,lights_gl_ring_a
     type: rgb
     number: 8808
-    platform: smart_virtual
+    platform: virtual
   gl_ring_a_8:
     tags: lights_generated,lights_2b,lights_3b,lights_4d,lights_5e,lights_gl_ring_a
     type: rgb
     number: 8809
-    platform: smart_virtual
+    platform: virtual
   gl_grid_1:
     tags: lights_generated,lights_2a,lights_3a,lights_4a,lights_5a,grid_lights
     type: rgb
     number: 8810
-    platform: smart_virtual
+    platform: virtual
   gl_grid_2:
     tags: lights_generated,lights_2b,lights_3b,lights_4b,lights_5b,grid_lights
     type: rgb
     number: 8811
-    platform: smart_virtual
+    platform: virtual
   gl_grid_3:
     tags: lights_generated,lights_2a,lights_3c,lights_4c,lights_5c,grid_lights
     type: rgb
     number: 8812
-    platform: smart_virtual
+    platform: virtual
   gl_grid_4:
     tags: lights_generated,lights_2b,lights_3a,lights_4d,lights_5d,grid_lights
     type: rgb
     number: 8813
-    platform: smart_virtual
+    platform: virtual
   gl_grid_5:
     tags: lights_generated,lights_2a,lights_3b,lights_4a,lights_5e,grid_lights
     type: rgb
     number: 8814
-    platform: smart_virtual
+    platform: virtual
   gl_grid_6:
     tags: lights_generated,lights_2b,lights_3c,lights_4b,lights_5a,grid_lights
     type: rgb
     number: 8815
-    platform: smart_virtual
+    platform: virtual
   gl_grid_7:
     tags: lights_generated,lights_2a,lights_3a,lights_4c,lights_5b,grid_lights
     type: rgb
     number: 8816
-    platform: smart_virtual
+    platform: virtual
   gl_grid_8:
     tags: lights_generated,lights_2b,lights_3b,lights_4d,lights_5c,grid_lights
     type: rgb
     number: 8817
-    platform: smart_virtual
+    platform: virtual
   gl_grid_9:
     tags: lights_generated,lights_2a,lights_3c,lights_4a,lights_5d,grid_lights
     type: rgb
     number: 8818
-    platform: smart_virtual
+    platform: virtual
   gl_cobra_ring_a_1:
     tags: lights_generated,lights_2a,lights_3a,lights_4a,lights_5a,lights_rings,lights_pf,lights_cobra_ring_a
     type: rgb
@@ -255,70 +255,70 @@ lights:
   gl_ss_elbow_downwards:
     tags: lights_generated,lights_sequence_shots
     number: 8819
-    platform: smart_virtual
+    platform: virtual
     type: rgb
   gl_ss_elbow_upwards:
     tags: lights_generated,lights_sequence_shots
     number: 8820
-    platform: smart_virtual
+    platform: virtual
     type: rgb
   gl_ss_horseshoe_clockwise:
     tags: lights_generated,lights_sequence_shots
     number: 8821
-    platform: smart_virtual
+    platform: virtual
     type: rgb
   gl_ss_horseshoe_widdershins:
     tags: lights_generated,lights_sequence_shots
     number: 8822
-    platform: smart_virtual
+    platform: virtual
     type: rgb
   gl_ss_left_orbit_open:
     tags: lights_generated,lights_sequence_shots
     number: 8823
-    platform: smart_virtual
+    platform: virtual
     type: rgb
   gl_ss_left_orbit_closed:
     tags: lights_generated,lights_sequence_shots
     number: 8824
-    platform: smart_virtual
+    platform: virtual
     type: rgb
   gl_ss_right_orbit_open:
     tags: lights_generated,lights_sequence_shots
     number: 8825
-    platform: smart_virtual
+    platform: virtual
     type: rgb
   gl_ss_right_orbit_closed:
     tags: lights_generated,lights_sequence_shots
     number: 8826
-    platform: smart_virtual
+    platform: virtual
     type: rgb
   gl_ss_right_ramp_summit:
     tags: lights_generated,lights_sequence_shots
     number: 8827
-    platform: smart_virtual
+    platform: virtual
     type: rgb
   gl_ss_right_ramp_travel:
     tags: lights_generated,lights_sequence_shots
     number: 8828
-    platform: smart_virtual
+    platform: virtual
     type: rgb
   gl_ss_right_outlane_escape:
     tags: lights_generated,lights_sequence_shots
     number: 8829
-    platform: smart_virtual
+    platform: virtual
     type: rgb
   gl_ss_s_ramp_summit:
     tags: lights_generated,lights_sequence_shots
     number: 8830
-    platform: smart_virtual
+    platform: virtual
     type: rgb
   gl_ss_s_ramp_travel:
     tags: lights_generated,lights_sequence_shots
     number: 8831
-    platform: smart_virtual
+    platform: virtual
     type: rgb
   gl_ss_subway_travel:
     tags: lights_generated,lights_sequence_shots
     number: 8832
-    platform: smart_virtual
+    platform: virtual
     type: rgb

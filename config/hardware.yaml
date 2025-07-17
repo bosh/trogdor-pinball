@@ -1,7 +1,7 @@
 #config_version=6
 
 hardware:
-  platform: fast, smart_virtual
+  platform: fast, virtual
 
 psus:
   12v:

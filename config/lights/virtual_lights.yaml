@@ -6,75 +6,75 @@
 lights:
   vlight_for_generated_example_mode:
     number: 9501
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_virtual
 
   # for info_lights, see: https://missionpinball.org/latest/config/info_lights/
   vlight_ball_1:
     number: 9502
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_virtual
     default_on_color: ff00ff
   vlight_ball_2:
     number: 9503
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_virtual
     default_on_color: ff00ff
   vlight_ball_3:
     number: 9504
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_virtual
     default_on_color: ff00ff
   vlight_tilt:
     number: 9505
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_virtual
     default_on_color: red
   vlight_game_over:
     number: 9506
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_virtual
     default_on_color: red
 
   vlight_player_1:
     number: 9511
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_virtual
     default_on_color: red
   vlight_player_2:
     number: 9512
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_virtual
     default_on_color: blue
   vlight_player_3:
     number: 9513
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_virtual
     default_on_color: teal
   vlight_player_4:
     number: 9514
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_virtual
     default_on_color: purple
 
   vlight_left_inlane_qualified:
     number: 9521
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_virtual
   vlight_right_inlane_qualified:
     number: 9522
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_virtual
 

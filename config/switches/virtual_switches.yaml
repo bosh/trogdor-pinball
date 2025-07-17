@@ -4,113 +4,113 @@
 
 switches:
   vswitch_end_game:
-    platform: smart_virtual
+    platform: virtual
     number: 901
 
   vswitch_qualify_burnination:
-    platform: smart_virtual
+    platform: virtual
     number: 902
 
   vswitch_add_fire_level:
-    platform: smart_virtual
+    platform: virtual
     number: 903
 
   vswitch_qualify_burninated:
-    platform: smart_virtual
+    platform: virtual
     number: 904
 
   vswitch_qualify_left_outlane_save:
-    platform: smart_virtual
+    platform: virtual
     number: 905
 
   vswitch_qualify_right_outlane_save:
-    platform: smart_virtual
+    platform: virtual
     number: 906
 
   vswitch_reset_inlane_detector:
-    platform: smart_virtual
+    platform: virtual
     number: 907
 
   vswitch_toggle_slings_dead:
-    platform: smart_virtual
+    platform: virtual
     number: 908
 
   vswitch_toggle_slots:
-    platform: smart_virtual
+    platform: virtual
     number: 909
 
   vswitch_set_bank_000:
-    platform: smart_virtual
+    platform: virtual
     number: 930
   vswitch_set_bank_100:
-    platform: smart_virtual
+    platform: virtual
     number: 931
   vswitch_set_bank_010:
-    platform: smart_virtual
+    platform: virtual
     number: 932
   vswitch_set_bank_001:
-    platform: smart_virtual
+    platform: virtual
     number: 933
   vswitch_set_bank_110:
-    platform: smart_virtual
+    platform: virtual
     number: 934
   vswitch_set_bank_101:
-    platform: smart_virtual
+    platform: virtual
     number: 935
   vswitch_set_bank_011:
-    platform: smart_virtual
+    platform: virtual
     number: 936
   vswitch_set_bank_111:
-    platform: smart_virtual
+    platform: virtual
     number: 938
 
   vswitch_plunger_power_1:
-    platform: smart_virtual
+    platform: virtual
     number: 991
   vswitch_plunger_power_2:
-    platform: smart_virtual
+    platform: virtual
     number: 992
   vswitch_plunger_power_3:
-    platform: smart_virtual
+    platform: virtual
     number: 993
   vswitch_plunger_power_4:
-    platform: smart_virtual
+    platform: virtual
     number: 994
   vswitch_plunger_power_5:
-    platform: smart_virtual
+    platform: virtual
     number: 995
   vswitch_plunger_power_6:
-    platform: smart_virtual
+    platform: virtual
     number: 996
 
   vswitch_enable_left_cbg:
-    platform: smart_virtual
+    platform: virtual
     number: 920
   vswitch_disable_left_cbg:
-    platform: smart_virtual
+    platform: virtual
     number: 921
   vswitch_enable_right_cbg:
-    platform: smart_virtual
+    platform: virtual
     number: 922
   vswitch_disable_right_cbg:
-    platform: smart_virtual
+    platform: virtual
     number: 923
   vswitch_enable_right_cbg_alt:
-    platform: smart_virtual
+    platform: virtual
     number: 926
   vswitch_disable_right_cbg_alt:
-    platform: smart_virtual
+    platform: virtual
     number: 927
 
   vswitch_enable_spinner_targets:
-    platform: smart_virtual
+    platform: virtual
     number: 950
   vswitch_disable_spinner_targets:
-    platform: smart_virtual
+    platform: virtual
     number: 951
 
   vswitch_test_coils:
-    platform: smart_virtual
+    platform: virtual
     number: 999
 
 

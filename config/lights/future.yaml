@@ -4,54 +4,54 @@ lights:
   # playfield multipliers
   l_pf_x2:
     number: 9001
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2b, lights_3a, lights_4a, lights_5a, lights_pf, lights_multipliers
   l_pf_x3:
     number: 9002
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2a, lights_3b, lights_4b, lights_5b, lights_pf, lights_multipliers
   l_pf_x4:
     number: 9003
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2b, lights_3c, lights_4c, lights_5c, lights_pf, lights_multipliers
   l_pf_x5:
     number: 9004
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2a, lights_3a, lights_4d, lights_5d, lights_pf, lights_multipliers
 
   # MAJESTY counters (from 12:00 clockwise rotating)
   l_majesty_1: #Consider splitting into R G and B channels to separately light colors without mounting multiple LED packages into one insert
     number: 9005
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2a, lights_3b, lights_4a, lights_5e, lights_pf, lights_majesty
   l_majesty_2:
     number: 9006
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2b, lights_3c, lights_4b, lights_5a, lights_pf, lights_majesty
   l_majesty_3:
     number: 9007
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2a, lights_3a, lights_4c, lights_5b, lights_pf, lights_majesty
   l_majesty_4:
     number: 9008
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2b, lights_3b, lights_4d, lights_5c, lights_pf, lights_majesty
   l_majesty_5:
     number: 9009
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2a, lights_3c, lights_4a, lights_5d, lights_pf, lights_majesty
   l_majesty_6:
     number: 9010
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2b, lights_3a, lights_4b, lights_5e, lights_pf, lights_majesty
 
@@ -59,121 +59,121 @@ lights:
   # Inlanes and Outlanes
   # l_left_outlane: #GSPF assigned to gi left flipper top
   #   number: 9015
-  #   platform: smart_virtual
+  #   platform: virtual
   #   type: rgb
   #   tags: lights_2a, lights_3c, lights_4a, lights_5a, lights_pf, lights_lanes, lights_outlanes
   # l_left_inlane: #GSPF assigned to gi left flipper bottom
   #   number: 9016
-  #   platform: smart_virtual
+  #   platform: virtual
   #   type: rgb
   #   tags: lights_2b, lights_3a, lights_4b, lights_5b, lights_pf, lights_lanes, lights_inlanes
   # l_right_inlane: #GSPF assigned to gi right flipper bottom
   #   number: 9017
-  #   platform: smart_virtual
+  #   platform: virtual
   #   type: rgb
   #   tags: lights_2a, lights_3b, lights_4c, lights_5c, lights_pf, lights_lanes, lights_inlanes
   # l_right_outlane: #GSPF assigned to gi right flipper top
   #   number: 9018
-  #   platform: smart_virtual
+  #   platform: virtual
   #   type: rgb
   #   tags: lights_2b, lights_3c, lights_4d, lights_5d, lights_pf, lights_lanes, lights_outlanes
 
   l_drain:
     number: 9019
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2b, lights_3a, lights_4c, lights_5e, lights_pf, lights_ball_save
 
   l_spinner_left_flasher:
     number: 9101
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2a, lights_3a, lights_4a, lights_5e, lights_flashers
   l_spinner_left_indicator:
     number: 9102
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2b, lights_3c, lights_4b, lights_5a, lights_pf
 
   l_spinner_right_flasher:
     number: 9103
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2b, lights_3b, lights_4c, lights_5e, lights_flashers
   l_spinner_right_indicator:
     number: 9104
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2a, lights_3c, lights_4d, lights_5b, lights_pf
 
   l_orbit_left:
     number: 9201
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2a, lights_3a, lights_4c, lights_5a, lights_pf
 
   l_orbit_right:
     number: 9202
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2b, lights_3b, lights_4d, lights_5c, lights_pf
 
   l_vuk_left:
     number: 9203
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2b, lights_3b, lights_4a, lights_5b, lights_pf
 
   l_vuk_right:
     number: 9204
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2a, lights_3c, lights_4b, lights_5d, lights_pf
 
   l_elbow_lower:
     number: 9205
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2a, lights_3a, lights_4d, lights_5e, lights_pf
 
   l_burn_center:
     number: 9206
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2a, lights_3b, lights_4a, lights_5b, lights_pf
 
   l_ramp_right:
     number: 9207
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2a, lights_3c, lights_4c, lights_5e, lights_pf
 
   l_ramp_left:
     number: 9208
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2b, lights_3b, lights_4b, lights_5c, lights_pf
 
   l_loop_left:
     number: 9209
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2a, lights_3a, lights_4a, lights_5b, lights_pf
 
   l_loop_right:
     number: 9210
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2a, lights_3b, lights_4c, lights_5d, lights_pf
 
   l_gate_left:
     number: 9211
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2b, lights_3b, lights_4d, lights_5a, lights_pf
 
   l_gate_right:
     number: 9212
-    platform: smart_virtual
+    platform: virtual
     type: rgb
     tags: lights_2b, lights_3c, lights_4a, lights_5b, lights_pf
