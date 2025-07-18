@@ -1,0 +1,24 @@
+#config_version=6
+
+mode:
+  start_events: enable_plunger_hold
+  stop_events: disable_plunger_hold, ball_ending
+  priority: 11111
+
+timers:
+  fallback_plunger_eject_blocker_timer:
+    start_value: 10
+    end_value: 0
+    tick_interval: 1000ms
+    direction: down
+    start_running: true
+    restart_on_complete: false
+
+event_player:
+  timer_fallback_plunger_eject_blocker_timer_complete: [stop_holding_for_manual_plunge, disable_plunger_hold|10ms]
+  s_launch_exit_active: [stop_holding_for_manual_plunge, disable_plunger_hold|10ms]
+
+queue_relay_player:
+  balldevice_bd_plunger_ball_eject_attempt:
+    post: holding_for_manual_plunge
+    wait_for: stop_holding_for_manual_plunge

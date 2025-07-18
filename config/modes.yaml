@@ -35,6 +35,7 @@ modes:
   - queue_ball_end_analytics
   - queue_end_quip
   - queue_game_over_media
+  - queue_plunger_eject_blocker
   - service #builtin
 
   # and dont forget the modes in generated_modes.yaml
