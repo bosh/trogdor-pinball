@@ -12,7 +12,7 @@ settings:
 
 timed_switches:
   ts_drop_bank_stuck_ball:
-    time: 750ms
+    time: 1200ms
     switches:
       - s_drop_bank_stuck_ball_detector
 
@@ -24,15 +24,16 @@ widget_player:
 
 coil_player:
   ts_drop_bank_stuck_ball_active:
-    c_slot_bank_left_drop: pulse
+    c_slot_bank_left_drop:
+      pulse_ms: 50
   ball_search_phase_1:
     c_slot_bank_left_drop:
-      pulse_ms: 15
+      pulse_ms: 25
   ball_search_phase_2:
     c_slot_bank_left_drop:
-      pulse_ms: 25
+      pulse_ms: 35
   ball_search_phase_3:
     c_slot_bank_left_drop:
-      pulse_ms: 30
+      pulse_ms: 45
     c_slot_bank_center_drop:
       action: pulse

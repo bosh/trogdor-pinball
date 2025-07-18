@@ -175,7 +175,7 @@ settings:
     sort: 162
     label: Slot (three-target) bank reset power
     key_type: int
-    default: 70
+    default: 90
     values:
       50: '50 ms'
       60: '60 ms'
@@ -187,11 +187,11 @@ settings:
     sort: 163
     label: Slot (three-target) bank single-target knockdown power
     key_type: int
-    default: 17
+    default: 20
     values:
       14: '14 ms'
-      17: '17 ms (default)'
-      20: '20 ms'
+      17: '17 ms'
+      20: '20 ms (default)'
       23: '23 ms'
       27: '27 ms'
 
