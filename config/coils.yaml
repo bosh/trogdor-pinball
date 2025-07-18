@@ -63,7 +63,7 @@ coils:
   c_slot_bank_left_drop:
     number: 1616-5
     default_pulse_ms: settings.slot_bank_knockdown_power
-    default_pulse_power: .75
+    default_pulse_power: 1.0
   c_slot_bank_center_drop:
     number: 1616-6
     default_pulse_ms: settings.slot_bank_knockdown_power
