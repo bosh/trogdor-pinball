@@ -148,11 +148,14 @@ switches:
   s_blue_standup_5:
     number: 1616-5
     tags: playfield_active, blue_standup, skill_shot_failure
-  s_blue_standup_6:
-    number: 1616-6
-    tags: playfield_active, blue_standup, skill_shot_failure
-  s_left_orbit_outer: #proxy
+#  s_blue_standup_6:
+#    number: 1616-6
+#    tags: playfield_active, blue_standup, skill_shot_failure
+  s_drop_bank_stuck_ball_detector:
     number: 1616-7
+    tags: playfield_active, skill_shot_failure
+  s_left_orbit_outer: #proxy
+    number: 1616-6
     tags: playfield_active, skill_shot_failure
     debounce: quick
 
