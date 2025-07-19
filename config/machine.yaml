@@ -1,7 +1,7 @@
 #config_version=6
 
 machine:
-  balls_installed: 3
+  balls_installed: 5
 
 game:
   balls_per_game: settings.balls_per_game
