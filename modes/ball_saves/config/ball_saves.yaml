@@ -9,11 +9,12 @@ ball_saves:
   default:
     active_time: 5s
     hurry_up_time: 2s
-    grace_period: 2s
+    grace_period: 2.5s
     enable_events: mode_ball_saves_started
     timer_start_events: balldevice_bd_plunger_ball_eject_success, playfield_active
     auto_launch: false
     balls_to_save: 1
+    only_last_ball: true
 
   short:
     enable_events: enable_ball_save_short
@@ -42,11 +43,12 @@ ball_saves:
 
   right_outlane_wireform_save:
     enable_events: enable_ball_save_right_wireform_save
-    active_time: 1ms # Auto starting timer
+    active_time: 10ms # Auto starting timer
     hurry_up_time: 0
     grace_period: 7500ms # "Hidden" save behavior because it's not really a save
     auto_launch: false
     balls_to_save: 1
+    only_last_ball: true
 
 event_player:
   ball_save_default_saving_ball: [dj_ball_save_sb, flash_ball_save_overlay]
