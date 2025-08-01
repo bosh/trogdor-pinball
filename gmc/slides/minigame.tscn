@@ -1,7 +1,55 @@
-[gd_scene load_steps=3 format=3 uid="uid://brjib3kyg6i18"]
+[gd_scene load_steps=13 format=3 uid="uid://brjib3kyg6i18"]
 
 [ext_resource type="Script" uid="uid://cakyur8sjr1j7" path="res://slides/minigame.gd" id="1_dn0tp"]
 [ext_resource type="Texture2D" uid="uid://cp8gsdaumsu5g" path="res://images/included/cheat graffiti.png" id="2_cqw1w"]
+[ext_resource type="Texture2D" uid="uid://b5l3waskt6uu2" path="res://images/included/sprites/trogdor/walk/left 1.png" id="3_dx1fx"]
+[ext_resource type="Texture2D" uid="uid://bsj1t83wyq0vf" path="res://images/included/sprites/trogdor/walk/left 2.png" id="4_p3nlj"]
+[ext_resource type="Texture2D" uid="uid://b6uay3pgaeb4i" path="res://images/included/sprites/trogdor/walk/left 3.png" id="5_k0fis"]
+[ext_resource type="Texture2D" uid="uid://0qjnxvdbygk3" path="res://images/included/sprites/trogdor/walk/left 4.png" id="6_uq202"]
+[ext_resource type="Texture2D" uid="uid://bstv22ofcgnjd" path="res://images/included/sprites/trogdor/walk/right 1.png" id="7_thg2h"]
+[ext_resource type="Texture2D" uid="uid://dgjhsin1rnv21" path="res://images/included/sprites/trogdor/walk/right 2.png" id="8_6dqxt"]
+[ext_resource type="Texture2D" uid="uid://dfeg82lnh51xv" path="res://images/included/sprites/trogdor/walk/right 3.png" id="9_vu1mo"]
+[ext_resource type="Texture2D" uid="uid://bx74aaylfwqex" path="res://images/included/sprites/trogdor/walk/right 4.png" id="10_q6w76"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6dg4r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_dx1fx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_p3nlj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_k0fis")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_uq202")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_thg2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6dqxt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vu1mo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_q6w76")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_dw6jo"]
+points = PackedVector2Array(-156, -69, -60, 179, 60, 179, 156, -69, 0, -150)
 
 [node name="Minigame" type="Control"]
 layout_mode = 3
@@ -16,11 +64,25 @@ offset_bottom = 864.0
 color = Color(0, 0, 0, 1)
 
 [node name="right" type="Sprite2D" parent="."]
-position = Vector2(1858, 461)
+position = Vector2(2049, 477)
 rotation = 3.14159
 scale = Vector2(1, -1)
 texture = ExtResource("2_cqw1w")
 
 [node name="left" type="Sprite2D" parent="."]
-position = Vector2(1106, 456)
+position = Vector2(897, 454)
 texture = ExtResource("2_cqw1w")
+
+[node name="player" type="Area2D" parent="."]
+position = Vector2(1494, 411)
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player"]
+sprite_frames = SubResource("SpriteFrames_6dg4r")
+animation = &"walk_right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+shape = SubResource("ConvexPolygonShape2D_dw6jo")
+debug_color = Color(0.925946, 0.215229, 0.426355, 0.42)
+
+[connection signal="body_entered" from="player" to="." method="_on_player_body_entered"]
