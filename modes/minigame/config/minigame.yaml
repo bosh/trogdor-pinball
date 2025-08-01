@@ -1,0 +1,41 @@
+#config_version=6
+
+mode:
+  priority: 121212
+  code: minigame.Minigame
+  start_events: mode_start_minigame
+  stop_events: mode_stop_minigame, ball_will_end
+
+event_player:
+  mode_minigame_started:
+    - show_minigame
+  timer_fallback_minigame_timer_complete: [mode_stop_minigame]
+
+slide_player:
+  show_minigame:
+    minigame:
+      action: play
+  hide_minigame:
+    minigame:
+      action: remove
+  minigame_action{action=="LEFT"}:
+    minigame:
+      action: method
+      method: action_left
+  minigame_action{action=="RIGHT"}:
+    minigame:
+      action: method
+      method: action_right
+  minigame_action{action=="START"}:
+    minigame:
+      action: method
+      method: action_start
+
+timers:
+  fallback_minigame_timer:
+    start_value: 10
+    end_value: 0
+    tick_interval: 1000ms
+    direction: down
+    start_running: true
+    restart_on_complete: false

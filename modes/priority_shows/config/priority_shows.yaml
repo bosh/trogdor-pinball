@@ -19,7 +19,10 @@ show_player:
       key: center_ball_save_show
       show_tokens:
         color: blue
-  ball_save_default_disabled:
+  # ball_save_default_disabled:
+  #   center_ball_save_show:
+  #     action: stop
+  ball_save_default_timer_complete:
     center_ball_save_show:
       action: stop
 

@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://brjib3kyg6i18"]
+
+[ext_resource type="Script" uid="uid://cakyur8sjr1j7" path="res://slides/minigame.gd" id="1_dn0tp"]
+[ext_resource type="Texture2D" uid="uid://cp8gsdaumsu5g" path="res://images/included/cheat graffiti.png" id="2_cqw1w"]
+
+[node name="Minigame" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_dn0tp")
+metadata/_custom_type_script = "uid://6mdcui7wkc47"
+
+[node name="background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 2880.0
+offset_bottom = 864.0
+color = Color(0, 0, 0, 1)
+
+[node name="right" type="Sprite2D" parent="."]
+position = Vector2(1858, 461)
+rotation = 3.14159
+scale = Vector2(1, -1)
+texture = ExtResource("2_cqw1w")
+
+[node name="left" type="Sprite2D" parent="."]
+position = Vector2(1106, 456)
+texture = ExtResource("2_cqw1w")

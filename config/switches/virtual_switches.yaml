@@ -39,6 +39,10 @@ switches:
     platform: virtual
     number: 909
 
+  vswitch_start_minigame:
+    platform: virtual
+    number: 910
+
   vswitch_set_bank_000:
     platform: virtual
     number: 930
@@ -123,6 +127,7 @@ event_player:
   vswitch_disable_right_cbg_alt_active: [disable_right_controlled_ball_gate_alternative_profile]
   vswitch_disable_spinner_targets_active: [spinner_controller_unset_left_target, spinner_controller_unset_right_target]
   vswitch_enable_spinner_targets_active: [spinner_controller_set_left_target, spinner_controller_set_right_target]
+  vswitch_start_minigame_active: [mode_start_minigame]
 
 coil_player:
   vswitch_plunger_power_1_active:
