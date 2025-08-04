@@ -1,5 +1,7 @@
 TROGDOR!
 
+![Backbox art](https://github.com/bosh/trogdor-pinball/blob/master/monitor/backglass.png)
+
 He was a man
 I mean, he was a dragon man
 Or maybe he was just a dragon
