@@ -14,7 +14,8 @@ config/name="Videlectrix"
 run/main_scene="uid://dsm5b6gyeowis"
 config/features=PackedStringArray("4.4", "Mobile")
 run/low_processor_mode_sleep_usec=0
-config/icon="res://icon.svg"
+config/icon="uid://bqov4rcjabtvf"
+config/windows_native_icon="res://icon.ico"
 
 [autoload]
 
