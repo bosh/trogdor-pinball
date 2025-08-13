@@ -2,6 +2,7 @@
 
 high_score:
   _overwrite: true
+  enter_initials_timeout: 60s
   categories:
     score:
       - GRAND CHAMP
