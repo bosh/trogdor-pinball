@@ -12,8 +12,7 @@ func _ready():
 	$left.visible = false
 	$right.visible = false
 	$player/CollisionShape2D.disabled = false
-	$player/FlameSpriteLeft.visible = false
-	$player/FlameSpriteRight.visible = false
+	$player/FlameSprite.visible = false
 	$GameTimer.start()
 	trogdor_facing = "right"
 	$player.position = $PlayerStart.position
@@ -26,7 +25,7 @@ func _process(delta):
 # SIGNAL BINDINGS
 
 func _on_player_body_entered(body):
-	$player/CollisionShape2D.set_deferred("disabled", true)
+	$player/CollisionShape2D.set_deferred("disabled", true) # TODO this maybe should disable collision on the body other than the player
 	if body == $Heart:
 		$Heart/HeartAnimation.play()
 		print("Heart captured")
@@ -65,15 +64,26 @@ func stop_player():
 	continuous_action = "stop"
 	$player/TrogdorSprite.stop()
 
+func update_flame_sprite():
+	var direction = _get_continuous_velocity()
+	if trogdor_facing == "left":
+		$player/FlameSprite.position.x = - abs($player/FlameSprite.position.x)
+		$player/FlameSprite.scale.x = - abs($player/FlameSprite.scale.x)
+	elif trogdor_facing == "right":
+		$player/FlameSprite.position.x = abs($player/FlameSprite.position.x)
+		$player/FlameSprite.scale.x = abs($player/FlameSprite.scale.x)
+
 func move_player(delta):
 	var direction = _get_continuous_velocity()
 
 	if direction < 0:
 		trogdor_facing = "left"
 		$player/TrogdorSprite.play("walk_left")
+		update_flame_sprite()
 	elif direction > 0:
 		trogdor_facing = "right"
 		$player/TrogdorSprite.play("walk_right")
+		update_flame_sprite()
 	else:
 		stop_player()
 
@@ -81,13 +91,9 @@ func move_player(delta):
 	_check_edges()
 
 func activate_flames():
-	# TODO changing direction should swap the animation direction. Maybe position and scale should be changed instead
-	if trogdor_facing == "left": # TODO this is actually different than action because frozen still has facing...
-		$player/FlameSpriteLeft.visible = true
-		$player/FlameSpriteLeft.play()
-	else:
-		$player/FlameSpriteRight.visible = true
-		$player/FlameSpriteRight.play()
+	$player/FlameSprite.visible = true
+	$player/FlameSprite.play()
+	#update_flame_sprite() #TODO unnecessary?
 
 # CUSTOM PRIVATE FNS
 
@@ -105,8 +111,5 @@ func _check_edges():
 		$player.position = clamped_position
 		stop_player()
 
-func _on_flame_sprite_right_animation_finished():
-	$player/FlameSpriteRight.visible = false
-
-func _on_flame_sprite_left_animation_finished():
-	$player/FlameSpriteLeft.visible = false
+func _on_flame_sprite_animation_finished():
+	$player/FlameSprite.visible = false

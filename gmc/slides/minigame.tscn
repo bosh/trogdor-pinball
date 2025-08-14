@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://brjib3kyg6i18"]
+[gd_scene load_steps=26 format=3 uid="uid://brjib3kyg6i18"]
 
 [ext_resource type="Script" uid="uid://cakyur8sjr1j7" path="res://slides/minigame.gd" id="1_dn0tp"]
 [ext_resource type="Texture2D" uid="uid://cp8gsdaumsu5g" path="res://images/included/cheat graffiti.png" id="2_cqw1w"]
@@ -19,6 +19,9 @@
 [ext_resource type="Texture2D" uid="uid://rprrx63s3u5i" path="res://images/included/sprites/items/h3.png" id="14_q6w76"]
 [ext_resource type="Texture2D" uid="uid://dihsa6yr7ktti" path="res://images/included/sprites/trogdor/breath/breath 4.png" id="15_5rfjy"]
 [ext_resource type="Texture2D" uid="uid://colfjtlcs48v0" path="res://images/included/sprites/items/h4.png" id="15_6dg4r"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_dw6jo"]
+points = PackedVector2Array(-135, -85, -60, 110, 50, 110, 135, -85, 0, -115)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6dg4r"]
 animations = [{
@@ -57,9 +60,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_dw6jo"]
-points = PackedVector2Array(-156, -69, -60, 179, 60, 179, 156, -69, 0, -150)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_um71o"]
 animations = [{
 "frames": [{
@@ -91,6 +91,9 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dw6jo"]
+size = Vector2(192.867, 83.704)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dw6jo"]
 animations = [{
@@ -148,28 +151,30 @@ position = Vector2(392.059, 413.658)
 scale = Vector2(1.02143, 1.25442)
 metadata/_edit_group_ = true
 
-[node name="TrogdorSprite" type="AnimatedSprite2D" parent="player"]
-scale = Vector2(1.44932, 1.48536)
-sprite_frames = SubResource("SpriteFrames_6dg4r")
-animation = &"walk_right"
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 scale = Vector2(1.44932, 1.48536)
 shape = SubResource("ConvexPolygonShape2D_dw6jo")
 debug_color = Color(0.925946, 0.215229, 0.426355, 0.42)
 
-[node name="FlameSpriteLeft" type="AnimatedSprite2D" parent="player"]
-position = Vector2(-325, -100)
+[node name="TrogdorSprite" type="AnimatedSprite2D" parent="player"]
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_6dg4r")
+animation = &"walk_right"
+
+[node name="FlameSprite" type="AnimatedSprite2D" parent="player"]
+position = Vector2(269.092, -80.7885)
+rotation = -3.14159
+scale = Vector2(1.2, 1.2)
 sprite_frames = SubResource("SpriteFrames_um71o")
 frame = 7
 frame_progress = 1.0
 
-[node name="FlameSpriteRight" type="AnimatedSprite2D" parent="player"]
-position = Vector2(325, -100)
-scale = Vector2(-1, 1)
-sprite_frames = SubResource("SpriteFrames_um71o")
-frame = 7
-frame_progress = 1.0
+[node name="Area2D" type="Area2D" parent="player/FlameSprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player/FlameSprite/Area2D"]
+position = Vector2(0.512756, -5.10509)
+scale = Vector2(0.999999, 1)
+shape = SubResource("RectangleShape2D_dw6jo")
 
 [node name="Heart" type="RigidBody2D" parent="."]
 collision_mask = 0
@@ -202,7 +207,6 @@ position = Vector2(2248.55, 621.157)
 scale = Vector2(1.11178, 1.34242)
 
 [connection signal="body_entered" from="player" to="." method="_on_player_body_entered"]
-[connection signal="animation_finished" from="player/FlameSpriteLeft" to="." method="_on_flame_sprite_left_animation_finished"]
-[connection signal="animation_finished" from="player/FlameSpriteRight" to="." method="_on_flame_sprite_right_animation_finished"]
+[connection signal="animation_finished" from="player/FlameSprite" to="." method="_on_flame_sprite_animation_finished"]
 [connection signal="animation_finished" from="Heart/HeartAnimation" to="." method="_on_heart_animation_animation_finished"]
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
