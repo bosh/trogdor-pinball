@@ -9,13 +9,13 @@ var continuous_action = "stop"
 
 func _ready():
 	screen_size = get_viewport_rect().size
-	trogdor_facing = "right"
 	$left.visible = false
 	$right.visible = false
 	$player/CollisionShape2D.disabled = false
-	$GameTimer.start()
 	$player/FlameSpriteLeft.visible = false
 	$player/FlameSpriteRight.visible = false
+	$GameTimer.start()
+	trogdor_facing = "right"
 	$player.position = $PlayerStart.position
 
 func _process(delta):
@@ -31,13 +31,14 @@ func _on_player_body_entered(body):
 		$Heart/HeartAnimation.play()
 		print("Heart captured")
 		activate_flames()
-		# TODO report heart capture to MPF
+		MPF.server.send_event("minigame_heart_capture")
 
 func _on_heart_animation_animation_finished():
 	$Heart.queue_free()
 
 func _on_game_timer_timeout():
-	pass # TODO report game over to MPF and then swap to end content
+	MPF.server.send_event("minigame_timer_expired")
+	pass # TODO swap to end content
 
 # CUSTOM EVENT ACTION HOOKS (PUBLIC REMOTE)
 
@@ -45,7 +46,6 @@ func action_left(_settings, _kwargs):
 	print("Minigame Action - Left")
 	trogdor_facing = "left"
 	continuous_action = "left"
-
 
 func action_right(_settings, _kwargs):
 	print("Minigame Action - Right")
