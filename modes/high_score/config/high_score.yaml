@@ -21,6 +21,9 @@ high_score:
       - TST: 1
     burnination_points:
       - BOSH: 23
+  vars:
+    score:
+      - player: ball_end_time #TODO add support for game start and end instead
 
 event_player:
   mode_high_score_started:
