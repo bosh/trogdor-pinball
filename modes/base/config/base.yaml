@@ -86,7 +86,7 @@ variable_player:
   sync_ball_score:
     ball_score:
       action: set
-      int: current_player.score - current_player.previous_ball_score
+      int: current_player.score - current_player.previous_ball_score #TODO maybe can just use change to add it
 
   #Playfield multiplier always back down to 1 on new ball
   mode_base_started:

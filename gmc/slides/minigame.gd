@@ -1,6 +1,6 @@
 extends MPFSlide
 
-@export var player_speed = 10 # pixels/second
+@export var player_speed = 300 # pixels/second
 var screen_size # window size
 var trogdor_facing = "right"
 var continuous_action = "stop"
@@ -12,7 +12,8 @@ func _ready():
 	$left.visible = false
 	$right.visible = false
 	$player/CollisionShape2D.disabled = false
-	$player/FlameSprite.visible = false
+	$player/firebreath.visible = false
+	$player/TrogdorSprite.play("idle")
 	$GameTimer.start()
 	trogdor_facing = "right"
 	$player.position = $PlayerStart.position
@@ -25,34 +26,40 @@ func _process(delta):
 # SIGNAL BINDINGS
 
 func _on_player_body_entered(body):
-	$player/CollisionShape2D.set_deferred("disabled", true) # TODO this maybe should disable collision on the body other than the player
 	if body == $Heart:
+		$Heart/CollisionShape2D.set_deferred("disabled", true)
 		$Heart/HeartAnimation.play()
 		print("Heart captured")
 		activate_flames()
 		MPF.server.send_event("minigame_heart_capture")
+	if body == $Coins:
+		$Coins.visible = false
+		$Coins/CollisionShape2D.set_deferred("disabled", true)
+		print("Coins captured")
+		activate_flames()
+		MPF.server.send_event("minigame_coin_capture")
 
 func _on_heart_animation_animation_finished():
 	$Heart.queue_free()
 
 func _on_game_timer_timeout():
 	MPF.server.send_event("minigame_timer_expired")
-	pass # TODO swap to end content
+	# TODO swap to end content
 
 # CUSTOM EVENT ACTION HOOKS (PUBLIC REMOTE)
 
 func action_left(_settings, _kwargs):
-	print("Minigame Action - Left")
+	print("Minigame Action Received - Left")
 	trogdor_facing = "left"
 	continuous_action = "left"
 
 func action_right(_settings, _kwargs):
-	print("Minigame Action - Right")
+	print("Minigame Action Received - Right")
 	continuous_action = "right"
 	trogdor_facing = "right"
 
 func action_start(_settings, _kwargs):
-	print("Minigame Action - Start")
+	print("Minigame Action Received - Start")
 	if continuous_action == "stop":
 		continuous_action = trogdor_facing
 	else:
@@ -62,38 +69,35 @@ func action_start(_settings, _kwargs):
 
 func stop_player():
 	continuous_action = "stop"
-	$player/TrogdorSprite.stop()
-
-func update_flame_sprite():
-	var direction = _get_continuous_velocity()
-	if trogdor_facing == "left":
-		$player/FlameSprite.position.x = - abs($player/FlameSprite.position.x)
-		$player/FlameSprite.scale.x = - abs($player/FlameSprite.scale.x)
-	elif trogdor_facing == "right":
-		$player/FlameSprite.position.x = abs($player/FlameSprite.position.x)
-		$player/FlameSprite.scale.x = abs($player/FlameSprite.scale.x)
+	$player/TrogdorSprite.play("idle")
 
 func move_player(delta):
 	var direction = _get_continuous_velocity()
 
 	if direction < 0:
 		trogdor_facing = "left"
-		$player/TrogdorSprite.play("walk_left")
-		update_flame_sprite()
+		$player/TrogdorSprite.play("walk_right")
 	elif direction > 0:
 		trogdor_facing = "right"
 		$player/TrogdorSprite.play("walk_right")
-		update_flame_sprite()
 	else:
 		stop_player()
 
-	$player.move_local_x(direction * player_speed, false)
+	var player = $player
+	var abs_x_position = abs(player.position.x)
+	var abs_x_scale = abs(player.scale.x)
+
+	if trogdor_facing == "left":
+		player.scale.x = - abs_x_scale
+	elif trogdor_facing == "right":
+		player.scale.x = abs_x_scale
+
+	$player.position.x = $player.position.x + (direction * player_speed * delta)
 	_check_edges()
 
 func activate_flames():
-	$player/FlameSprite.visible = true
-	$player/FlameSprite.play()
-	#update_flame_sprite() #TODO unnecessary?
+	$player/firebreath.visible = true
+	$player/firebreath/FlameSprite.play()
 
 # CUSTOM PRIVATE FNS
 
@@ -112,4 +116,4 @@ func _check_edges():
 		stop_player()
 
 func _on_flame_sprite_animation_finished():
-	$player/FlameSprite.visible = false
+	$player/firebreath.visible = false

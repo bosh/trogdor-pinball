@@ -1,12 +1,16 @@
-[gd_scene load_steps=26 format=3 uid="uid://brjib3kyg6i18"]
+[gd_scene load_steps=32 format=3 uid="uid://brjib3kyg6i18"]
 
 [ext_resource type="Script" uid="uid://cakyur8sjr1j7" path="res://slides/minigame.gd" id="1_dn0tp"]
 [ext_resource type="Texture2D" uid="uid://cp8gsdaumsu5g" path="res://images/included/cheat graffiti.png" id="2_cqw1w"]
 [ext_resource type="Texture2D" uid="uid://dhbacou6hki8u" path="res://images/included/sprites/bg/bge.png" id="2_p3nlj"]
 [ext_resource type="Texture2D" uid="uid://b5l3waskt6uu2" path="res://images/included/sprites/trogdor/walk/left 1.png" id="3_dx1fx"]
+[ext_resource type="Texture2D" uid="uid://d1g4aki8kog1j" path="res://images/included/sprites/trogdor/flex/flex 1.png" id="4_d27xo"]
 [ext_resource type="Texture2D" uid="uid://bsj1t83wyq0vf" path="res://images/included/sprites/trogdor/walk/left 2.png" id="4_p3nlj"]
+[ext_resource type="Texture2D" uid="uid://63q4bnxa4ros" path="res://images/included/sprites/trogdor/flex/flex 2.png" id="5_fsfuh"]
 [ext_resource type="Texture2D" uid="uid://b6uay3pgaeb4i" path="res://images/included/sprites/trogdor/walk/left 3.png" id="5_k0fis"]
+[ext_resource type="Texture2D" uid="uid://dwdrh3e7vmfih" path="res://images/included/sprites/trogdor/flex/flex 3.png" id="6_6lopn"]
 [ext_resource type="Texture2D" uid="uid://0qjnxvdbygk3" path="res://images/included/sprites/trogdor/walk/left 4.png" id="6_uq202"]
+[ext_resource type="Texture2D" uid="uid://cujcgu2aa2sej" path="res://images/included/sprites/trogdor/flex/flex 4.png" id="7_66836"]
 [ext_resource type="Texture2D" uid="uid://bstv22ofcgnjd" path="res://images/included/sprites/trogdor/walk/right 1.png" id="7_thg2h"]
 [ext_resource type="Texture2D" uid="uid://dgjhsin1rnv21" path="res://images/included/sprites/trogdor/walk/right 2.png" id="8_6dqxt"]
 [ext_resource type="Texture2D" uid="uid://dfeg82lnh51xv" path="res://images/included/sprites/trogdor/walk/right 3.png" id="9_vu1mo"]
@@ -19,12 +23,59 @@
 [ext_resource type="Texture2D" uid="uid://rprrx63s3u5i" path="res://images/included/sprites/items/h3.png" id="14_q6w76"]
 [ext_resource type="Texture2D" uid="uid://dihsa6yr7ktti" path="res://images/included/sprites/trogdor/breath/breath 4.png" id="15_5rfjy"]
 [ext_resource type="Texture2D" uid="uid://colfjtlcs48v0" path="res://images/included/sprites/items/h4.png" id="15_6dg4r"]
+[ext_resource type="Texture2D" uid="uid://blbt3i5lrw48n" path="res://images/included/sprites/items/treasure.png" id="20_5y7ei"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_dw6jo"]
 points = PackedVector2Array(-135, -85, -60, 110, 50, 110, 135, -85, 0, -115)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6dg4r"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_d27xo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fsfuh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6lopn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_66836")
+}],
+"loop": true,
+"name": &"flex_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("8_6dqxt")
+}, {
+"duration": 2.0,
+"texture": ExtResource("7_thg2h")
+}, {
+"duration": 4.0,
+"texture": ExtResource("8_6dqxt")
+}, {
+"duration": 1.5,
+"texture": ExtResource("7_thg2h")
+}, {
+"duration": 3.0,
+"texture": ExtResource("8_6dqxt")
+}, {
+"duration": 1.25,
+"texture": ExtResource("7_thg2h")
+}, {
+"duration": 4.0,
+"texture": ExtResource("8_6dqxt")
+}, {
+"duration": 2.0,
+"texture": ExtResource("7_thg2h")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_dx1fx")
@@ -60,6 +111,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dw6jo"]
+size = Vector2(192.867, 83.704)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_um71o"]
 animations = [{
 "frames": [{
@@ -92,13 +146,10 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dw6jo"]
-size = Vector2(192.867, 83.704)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_dw6jo"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 0.25,
 "texture": ExtResource("12_6dqxt")
 }, {
 "duration": 1.0,
@@ -119,6 +170,10 @@ animations = [{
 radius = 176.867
 height = 353.734
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_23j15"]
+radius = 94.0
+height = 248.0
+
 [node name="Minigame" type="Control"]
 layout_mode = 3
 anchors_preset = 0
@@ -131,10 +186,14 @@ offset_right = 2880.0
 offset_bottom = 864.0
 color = Color(0, 0, 0, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="interior" type="Sprite2D" parent="."]
 position = Vector2(1445, 431)
 scale = Vector2(6.69688, 3.79798)
 texture = ExtResource("2_p3nlj")
+
+[node name="PlayerStart" type="Marker2D" parent="."]
+position = Vector2(1371, 541)
+scale = Vector2(1.11178, 1.34242)
 
 [node name="right" type="Sprite2D" parent="."]
 position = Vector2(2772, 774)
@@ -147,9 +206,8 @@ position = Vector2(128, 778)
 texture = ExtResource("2_cqw1w")
 
 [node name="player" type="Area2D" parent="."]
-position = Vector2(392.059, 413.658)
+position = Vector2(193, 247)
 scale = Vector2(1.02143, 1.25442)
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 scale = Vector2(1.44932, 1.48536)
@@ -159,54 +217,61 @@ debug_color = Color(0.925946, 0.215229, 0.426355, 0.42)
 [node name="TrogdorSprite" type="AnimatedSprite2D" parent="player"]
 scale = Vector2(1.2, 1.2)
 sprite_frames = SubResource("SpriteFrames_6dg4r")
-animation = &"walk_right"
+animation = &"idle"
+frame_progress = 0.645176
 
-[node name="FlameSprite" type="AnimatedSprite2D" parent="player"]
-position = Vector2(269.092, -80.7885)
+[node name="firebreath" type="Area2D" parent="player"]
+position = Vector2(298.601, -71.7463)
 rotation = -3.14159
 scale = Vector2(1.2, 1.2)
-sprite_frames = SubResource("SpriteFrames_um71o")
-frame = 7
-frame_progress = 1.0
+metadata/_edit_group_ = true
 
-[node name="Area2D" type="Area2D" parent="player/FlameSprite"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player/FlameSprite/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player/firebreath"]
 position = Vector2(0.512756, -5.10509)
 scale = Vector2(0.999999, 1)
 shape = SubResource("RectangleShape2D_dw6jo")
 
+[node name="FlameSprite" type="AnimatedSprite2D" parent="player/firebreath"]
+sprite_frames = SubResource("SpriteFrames_um71o")
+frame = 7
+frame_progress = 1.0
+
 [node name="Heart" type="RigidBody2D" parent="."]
+position = Vector2(2078, 650)
 collision_mask = 0
 gravity_scale = 0.0
+metadata/_edit_group_ = true
 
 [node name="HeartAnimation" type="AnimatedSprite2D" parent="Heart"]
-position = Vector2(1061.07, 614.717)
+position = Vector2(27.1819, -65.8181)
 scale = Vector2(2.44697, 2.44697)
 sprite_frames = SubResource("SpriteFrames_dw6jo")
 animation = &"collect"
-metadata/_edit_group_ = true
-
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Heart"]
-position = Vector2(1033.13, 623.162)
-scale = Vector2(5.14882, 3.632)
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Heart"]
-position = Vector2(1030.61, 680.149)
+position = Vector2(-3.2782, -0.386108)
 scale = Vector2(0.545464, 0.498918)
 shape = SubResource("CapsuleShape2D_5y7ei")
-metadata/_edit_group_ = true
 
 [node name="GameTimer" type="Timer" parent="."]
 wait_time = 20.0
 one_shot = true
 
-[node name="PlayerStart" type="Marker2D" parent="."]
-position = Vector2(2248.55, 621.157)
-scale = Vector2(1.11178, 1.34242)
+[node name="Coins" type="RigidBody2D" parent="."]
+position = Vector2(669, 620)
+gravity_scale = 0.0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Coins"]
+texture = ExtResource("20_5y7ei")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Coins"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coins"]
+position = Vector2(-4, 4)
+shape = SubResource("CapsuleShape2D_23j15")
 
 [connection signal="body_entered" from="player" to="." method="_on_player_body_entered"]
-[connection signal="animation_finished" from="player/FlameSprite" to="." method="_on_flame_sprite_animation_finished"]
+[connection signal="animation_finished" from="player/firebreath/FlameSprite" to="." method="_on_flame_sprite_animation_finished"]
 [connection signal="animation_finished" from="Heart/HeartAnimation" to="." method="_on_heart_animation_animation_finished"]
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]

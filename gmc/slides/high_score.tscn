@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://dxpvno44c1578"]
 
-[ext_resource type="Script" uid="uid://3pdl22gx2xdk" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_ko5a2"]
+[ext_resource type="Script" uid="uid://6mdcui7wkc47" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_ko5a2"]
 [ext_resource type="Texture2D" uid="uid://3uspw0udlcto" path="res://images/included/trogface.png" id="2_e8urn"]
-[ext_resource type="Script" uid="uid://cipireu2k4wms" path="res://addons/mpf-gmc/classes/mpf_text_input.gd" id="3_u6yse"]
-[ext_resource type="Script" uid="uid://cnjmggusghgda" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_qd6me"]
+[ext_resource type="Script" uid="uid://f25uakg7a7nq" path="res://addons/mpf-gmc/classes/mpf_text_input.gd" id="3_u6yse"]
+[ext_resource type="Script" uid="uid://cm7sg7wq6hq8s" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_qd6me"]
 [ext_resource type="FontFile" uid="uid://dhi02px4iy4jf" path="res://fonts/lappy-486-extended.ttf" id="4_torhw"]
 
 [node name="HighScore" type="Control"]
