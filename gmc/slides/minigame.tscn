@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://brjib3kyg6i18"]
+[gd_scene load_steps=29 format=3 uid="uid://brjib3kyg6i18"]
 
 [ext_resource type="Script" uid="uid://cakyur8sjr1j7" path="res://slides/minigame.gd" id="1_dn0tp"]
 [ext_resource type="Texture2D" uid="uid://cp8gsdaumsu5g" path="res://images/included/cheat graffiti.png" id="2_cqw1w"]
@@ -20,6 +20,9 @@
 [ext_resource type="Texture2D" uid="uid://dihsa6yr7ktti" path="res://images/included/sprites/trogdor/breath/breath 4.png" id="15_5rfjy"]
 [ext_resource type="Texture2D" uid="uid://colfjtlcs48v0" path="res://images/included/sprites/items/h4.png" id="15_6dg4r"]
 [ext_resource type="Texture2D" uid="uid://blbt3i5lrw48n" path="res://images/included/sprites/items/treasure.png" id="20_5y7ei"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5y7ei"]
+size = Vector2(57, 861)
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_dw6jo"]
 points = PackedVector2Array(-135, -85, -60, 110, 50, 110, 135, -85, 0, -115)
@@ -211,8 +214,26 @@ position = Vector2(1445, 431)
 scale = Vector2(6.69688, 3.79798)
 texture = ExtResource("2_p3nlj")
 
+[node name="Left Edge" type="StaticBody2D" parent="."]
+position = Vector2(131, 435)
+collision_layer = 4
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left Edge"]
+position = Vector2(110, 0)
+shape = SubResource("RectangleShape2D_5y7ei")
+
+[node name="Right Edge" type="StaticBody2D" parent="."]
+position = Vector2(2652, 433)
+collision_layer = 4
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right Edge"]
+position = Vector2(-4, -3)
+shape = SubResource("RectangleShape2D_5y7ei")
+
 [node name="PlayerStart" type="Marker2D" parent="."]
-position = Vector2(1371, 541)
+position = Vector2(1342, 522)
 scale = Vector2(1.11178, 1.34242)
 
 [node name="right" type="Sprite2D" parent="."]
@@ -225,9 +246,12 @@ texture = ExtResource("2_cqw1w")
 position = Vector2(128, 778)
 texture = ExtResource("2_cqw1w")
 
-[node name="player" type="Area2D" parent="."]
-position = Vector2(193, 247)
+[node name="player" type="CharacterBody2D" parent="."]
+position = Vector2(1189, -325)
 scale = Vector2(1.02143, 1.25442)
+collision_mask = 4
+motion_mode = 1
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 scale = Vector2(1.44932, 1.48536)
@@ -243,6 +267,8 @@ animation = &"idle"
 position = Vector2(298.601, -71.7463)
 rotation = -3.14159
 scale = Vector2(1.2, 1.2)
+collision_layer = 0
+collision_mask = 0
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/firebreath"]
@@ -257,9 +283,8 @@ frame_progress = 1.0
 
 [node name="Heart" type="RigidBody2D" parent="."]
 position = Vector2(2078, 650)
-collision_mask = 0
+collision_layer = 2
 gravity_scale = 0.0
-metadata/_edit_group_ = true
 
 [node name="HeartAnimation" type="AnimatedSprite2D" parent="Heart"]
 position = Vector2(27.1819, -65.8181)
@@ -268,18 +293,14 @@ sprite_frames = SubResource("SpriteFrames_dw6jo")
 animation = &"collect"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Heart"]
-position = Vector2(-3.2782, -0.386108)
+position = Vector2(-3.27832, -0.386108)
 scale = Vector2(0.545464, 0.498918)
 shape = SubResource("CapsuleShape2D_5y7ei")
 
-[node name="GameTimer" type="Timer" parent="."]
-wait_time = 20.0
-one_shot = true
-
 [node name="Coins" type="RigidBody2D" parent="."]
 position = Vector2(669, 620)
+collision_layer = 2
 gravity_scale = 0.0
-metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Coins"]
 texture = ExtResource("20_5y7ei")
@@ -290,8 +311,13 @@ texture = ExtResource("20_5y7ei")
 position = Vector2(-4, 4)
 shape = SubResource("CapsuleShape2D_23j15")
 
-[connection signal="body_entered" from="player" to="." method="_on_player_body_entered"]
+[node name="GameTimer" type="Timer" parent="."]
+wait_time = 20.0
+one_shot = true
+
 [connection signal="animation_finished" from="player/TrogdorSprite" to="." method="_on_trogdor_sprite_animation_finished"]
 [connection signal="animation_finished" from="player/firebreath/FlameSprite" to="." method="_on_flame_sprite_animation_finished"]
+[connection signal="body_entered" from="Heart" to="." method="_on_heart_body_entered"]
 [connection signal="animation_finished" from="Heart/HeartAnimation" to="." method="_on_heart_animation_animation_finished"]
+[connection signal="body_entered" from="Coins" to="." method="_on_coins_body_entered"]
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
