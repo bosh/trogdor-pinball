@@ -33,10 +33,11 @@ func _on_player_body_entered(body):
 		activate_flames()
 		MPF.server.send_event("minigame_heart_capture")
 	if body == $Coins:
-		$Coins.visible = false
 		$Coins/CollisionShape2D.set_deferred("disabled", true)
 		print("Coins captured")
-		activate_flames()
+		continuous_action = "stop"
+		$player/TrogdorSprite.play("flex")
+		$Coins.queue_free()
 		MPF.server.send_event("minigame_coin_capture")
 
 func _on_heart_animation_animation_finished():
@@ -63,7 +64,7 @@ func action_start(_settings, _kwargs):
 	if continuous_action == "stop":
 		continuous_action = trogdor_facing
 	else:
-		continuous_action = "stop"
+		stop_player()
 
 # CUSTOM PUBLIC FNS
 
@@ -76,15 +77,15 @@ func move_player(delta):
 
 	if direction < 0:
 		trogdor_facing = "left"
-		$player/TrogdorSprite.play("walk_right")
+		$player/TrogdorSprite.play("walk")
 	elif direction > 0:
 		trogdor_facing = "right"
-		$player/TrogdorSprite.play("walk_right")
+		$player/TrogdorSprite.play("walk")
 	else:
-		stop_player()
+		pass
+		#not moving
 
 	var player = $player
-	var abs_x_position = abs(player.position.x)
 	var abs_x_scale = abs(player.scale.x)
 
 	if trogdor_facing == "left":
@@ -117,3 +118,8 @@ func _check_edges():
 
 func _on_flame_sprite_animation_finished():
 	$player/firebreath.visible = false
+
+func _on_trogdor_sprite_animation_finished():
+	if $player/TrogdorSprite.animation == "flex":
+		$player/TrogdorSprite.play("idle")
+		activate_flames()

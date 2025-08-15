@@ -1,15 +1,11 @@
-[gd_scene load_steps=32 format=3 uid="uid://brjib3kyg6i18"]
+[gd_scene load_steps=28 format=3 uid="uid://brjib3kyg6i18"]
 
 [ext_resource type="Script" uid="uid://cakyur8sjr1j7" path="res://slides/minigame.gd" id="1_dn0tp"]
 [ext_resource type="Texture2D" uid="uid://cp8gsdaumsu5g" path="res://images/included/cheat graffiti.png" id="2_cqw1w"]
 [ext_resource type="Texture2D" uid="uid://dhbacou6hki8u" path="res://images/included/sprites/bg/bge.png" id="2_p3nlj"]
-[ext_resource type="Texture2D" uid="uid://b5l3waskt6uu2" path="res://images/included/sprites/trogdor/walk/left 1.png" id="3_dx1fx"]
 [ext_resource type="Texture2D" uid="uid://d1g4aki8kog1j" path="res://images/included/sprites/trogdor/flex/flex 1.png" id="4_d27xo"]
-[ext_resource type="Texture2D" uid="uid://bsj1t83wyq0vf" path="res://images/included/sprites/trogdor/walk/left 2.png" id="4_p3nlj"]
 [ext_resource type="Texture2D" uid="uid://63q4bnxa4ros" path="res://images/included/sprites/trogdor/flex/flex 2.png" id="5_fsfuh"]
-[ext_resource type="Texture2D" uid="uid://b6uay3pgaeb4i" path="res://images/included/sprites/trogdor/walk/left 3.png" id="5_k0fis"]
 [ext_resource type="Texture2D" uid="uid://dwdrh3e7vmfih" path="res://images/included/sprites/trogdor/flex/flex 3.png" id="6_6lopn"]
-[ext_resource type="Texture2D" uid="uid://0qjnxvdbygk3" path="res://images/included/sprites/trogdor/walk/left 4.png" id="6_uq202"]
 [ext_resource type="Texture2D" uid="uid://cujcgu2aa2sej" path="res://images/included/sprites/trogdor/flex/flex 4.png" id="7_66836"]
 [ext_resource type="Texture2D" uid="uid://bstv22ofcgnjd" path="res://images/included/sprites/trogdor/walk/right 1.png" id="7_thg2h"]
 [ext_resource type="Texture2D" uid="uid://dgjhsin1rnv21" path="res://images/included/sprites/trogdor/walk/right 2.png" id="8_6dqxt"]
@@ -42,9 +38,50 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("7_66836")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6lopn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fsfuh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_d27xo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fsfuh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6lopn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_66836")
+}],
+"loop": false,
+"name": &"flex",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_d27xo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fsfuh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6lopn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_66836")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6lopn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fsfuh")
 }],
 "loop": true,
-"name": &"flex_right",
+"name": &"flex_loop",
 "speed": 5.0
 }, {
 "frames": [{
@@ -78,23 +115,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_dx1fx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_p3nlj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_k0fis")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_uq202")
-}],
-"loop": true,
-"name": &"walk_left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": ExtResource("7_thg2h")
 }, {
 "duration": 1.0,
@@ -107,7 +127,7 @@ animations = [{
 "texture": ExtResource("10_q6w76")
 }],
 "loop": true,
-"name": &"walk_right",
+"name": &"walk",
 "speed": 5.0
 }]
 
@@ -218,7 +238,6 @@ debug_color = Color(0.925946, 0.215229, 0.426355, 0.42)
 scale = Vector2(1.2, 1.2)
 sprite_frames = SubResource("SpriteFrames_6dg4r")
 animation = &"idle"
-frame_progress = 0.645176
 
 [node name="firebreath" type="Area2D" parent="player"]
 position = Vector2(298.601, -71.7463)
@@ -272,6 +291,7 @@ position = Vector2(-4, 4)
 shape = SubResource("CapsuleShape2D_23j15")
 
 [connection signal="body_entered" from="player" to="." method="_on_player_body_entered"]
+[connection signal="animation_finished" from="player/TrogdorSprite" to="." method="_on_trogdor_sprite_animation_finished"]
 [connection signal="animation_finished" from="player/firebreath/FlameSprite" to="." method="_on_flame_sprite_animation_finished"]
 [connection signal="animation_finished" from="Heart/HeartAnimation" to="." method="_on_heart_animation_animation_finished"]
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
