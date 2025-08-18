@@ -6,116 +6,149 @@ switches:
   vswitch_end_game:
     platform: virtual
     number: 901
+    tags: no_audit
 
   vswitch_qualify_burnination:
     platform: virtual
     number: 902
+    tags: no_audit
 
   vswitch_add_fire_level:
     platform: virtual
     number: 903
+    tags: no_audit
 
   vswitch_qualify_burninated:
     platform: virtual
     number: 904
+    tags: no_audit
 
   vswitch_qualify_left_outlane_save:
     platform: virtual
     number: 905
+    tags: no_audit
 
   vswitch_qualify_right_outlane_save:
     platform: virtual
     number: 906
+    tags: no_audit
 
   vswitch_reset_inlane_detector:
     platform: virtual
     number: 907
+    tags: no_audit
 
   vswitch_toggle_slings_dead:
     platform: virtual
     number: 908
+    tags: no_audit
 
   vswitch_toggle_slots:
     platform: virtual
     number: 909
+    tags: no_audit
 
   vswitch_start_minigame:
     platform: virtual
     number: 910
+    tags: no_audit
 
   vswitch_set_bank_000:
     platform: virtual
     number: 930
+    tags: no_audit
   vswitch_set_bank_100:
     platform: virtual
     number: 931
+    tags: no_audit
   vswitch_set_bank_010:
     platform: virtual
     number: 932
+    tags: no_audit
   vswitch_set_bank_001:
     platform: virtual
     number: 933
+    tags: no_audit
   vswitch_set_bank_110:
     platform: virtual
     number: 934
+    tags: no_audit
   vswitch_set_bank_101:
     platform: virtual
     number: 935
+    tags: no_audit
   vswitch_set_bank_011:
     platform: virtual
     number: 936
+    tags: no_audit
   vswitch_set_bank_111:
     platform: virtual
     number: 938
+    tags: no_audit
 
   vswitch_plunger_power_1:
     platform: virtual
     number: 991
+    tags: no_audit
   vswitch_plunger_power_2:
     platform: virtual
     number: 992
+    tags: no_audit
   vswitch_plunger_power_3:
     platform: virtual
     number: 993
+    tags: no_audit
   vswitch_plunger_power_4:
     platform: virtual
     number: 994
+    tags: no_audit
   vswitch_plunger_power_5:
     platform: virtual
     number: 995
+    tags: no_audit
   vswitch_plunger_power_6:
     platform: virtual
     number: 996
+    tags: no_audit
 
   vswitch_enable_left_cbg:
     platform: virtual
     number: 920
+    tags: no_audit
   vswitch_disable_left_cbg:
     platform: virtual
     number: 921
+    tags: no_audit
   vswitch_enable_right_cbg:
     platform: virtual
     number: 922
+    tags: no_audit
   vswitch_disable_right_cbg:
     platform: virtual
     number: 923
+    tags: no_audit
   vswitch_enable_right_cbg_alt:
     platform: virtual
     number: 926
+    tags: no_audit
   vswitch_disable_right_cbg_alt:
     platform: virtual
     number: 927
+    tags: no_audit
 
   vswitch_enable_spinner_targets:
     platform: virtual
     number: 950
+    tags: no_audit
   vswitch_disable_spinner_targets:
     platform: virtual
     number: 951
+    tags: no_audit
 
   vswitch_test_coils:
     platform: virtual
     number: 999
+    tags: no_audit
 
 
 event_player:

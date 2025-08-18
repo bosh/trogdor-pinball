@@ -1,0 +1,4 @@
+#config_version=6
+
+auditor:
+  num_player_top_records: 99999

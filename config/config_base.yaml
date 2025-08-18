@@ -4,6 +4,7 @@ mpf:
   report_crashes: never
 
 config:
+  - auditor.yaml
   - settings.yaml
   - bcp.yaml
   - hardware.yaml
