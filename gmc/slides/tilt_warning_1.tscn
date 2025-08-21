@@ -10,7 +10,7 @@
 Label/font_sizes/font_size = 40
 Label/fonts/font = ExtResource("3_yrrrd")
 
-[node name="TiltWarning2" type="Control"]
+[node name="TiltWarning1" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_nvv85")

@@ -30,7 +30,7 @@ shader_parameter/rows = 36.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_t6y31"]
 
-[node name="MPFWindow" type="Control"]
+[node name="MPFWindow - WindowOverride" type="Control"]
 custom_minimum_size = Vector2(1920, 720)
 layout_mode = 3
 anchors_preset = 15

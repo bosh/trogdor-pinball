@@ -12,7 +12,7 @@
 Label/font_sizes/font_size = 40
 Label/fonts/font = ExtResource("3_d7jgd")
 
-[node name="Base" type="Control"]
+[node name="Burnination" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_qu402")
@@ -51,6 +51,7 @@ text = "BURNINATE THOSE COTTAGES"
 autowrap_mode = 2
 
 [node name="MPFVariable - Ball" type="Label" parent="."]
+layout_mode = 0
 offset_left = 2476.0
 offset_top = 2.0
 offset_right = 2871.0
@@ -67,6 +68,7 @@ variable_name = "ball"
 template_string = "Ball: %s"
 
 [node name="MPFVariable - Score Main" type="Label" parent="."]
+layout_mode = 0
 offset_left = 32.0
 offset_top = 10.0
 offset_right = 1455.0
@@ -83,6 +85,7 @@ min_digits = 2
 template_string = "Score: %s"
 
 [node name="MPFVariable - Current P#" type="Label" parent="."]
+layout_mode = 0
 offset_left = 1226.0
 offset_top = 9.0
 offset_right = 1723.0
