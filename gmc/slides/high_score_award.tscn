@@ -1,0 +1,142 @@
+[gd_scene load_steps=5 format=3 uid="uid://btqpjma4mjyav"]
+
+[ext_resource type="Script" uid="uid://ch3cf1mv44fpb" path="res://addons/mpf-gmc/classes/mpf_scene_base.gd" id="1_kofol"]
+[ext_resource type="Theme" uid="uid://cx5kw5e8kdnr6" path="res://themes/attract_scores_text.tres" id="2_fgc81"]
+[ext_resource type="Script" uid="uid://cm7sg7wq6hq8s" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_06a0i"]
+[ext_resource type="Script" uid="uid://b846v662darst" path="res://addons/mpf-gmc/classes/mpf_conditional.gd" id="4_06a0i"]
+
+[node name="HighScoreAward" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_kofol")
+metadata/_custom_type_script = "uid://ch3cf1mv44fpb"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 2880.0
+offset_bottom = 864.0
+color = Color(0, 0.239523, 0.239523, 1)
+
+[node name="player_name" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1241.0
+offset_top = 244.0
+offset_right = 1828.0
+offset_bottom = 653.0
+theme = ExtResource("2_fgc81")
+theme_override_colors/font_color = Color(0.716878, 0.0616367, 9.62615e-08, 1)
+theme_override_colors/font_shadow_color = Color(0.591341, 0.876614, 3.85046e-07, 1)
+theme_override_constants/shadow_outline_size = 25
+theme_override_font_sizes/font_size = 300
+text = "ABC"
+script = ExtResource("3_06a0i")
+variable_type = 1
+variable_name = "player_name"
+metadata/_custom_type_script = "uid://cm7sg7wq6hq8s"
+
+[node name="player_num" type="Label" parent="."]
+layout_mode = 0
+offset_left = 947.0
+offset_top = 287.0
+offset_right = 1210.0
+offset_bottom = 430.0
+theme = ExtResource("2_fgc81")
+theme_override_colors/font_color = Color(0.716878, 0.0616367, 9.62615e-08, 1)
+theme_override_colors/font_shadow_color = Color(0.591341, 0.876614, 3.85046e-07, 1)
+theme_override_constants/shadow_outline_size = 25
+theme_override_font_sizes/font_size = 100
+text = "P1:	"
+horizontal_alignment = 2
+script = ExtResource("3_06a0i")
+variable_type = 1
+variable_name = "player_num"
+template_string = "P%s:"
+metadata/_custom_type_script = "uid://cm7sg7wq6hq8s"
+
+[node name="Award" type="Label" parent="."]
+layout_mode = 0
+offset_left = 167.0
+offset_top = -2.0
+offset_right = 2744.0
+offset_bottom = 297.0
+theme = ExtResource("2_fgc81")
+theme_override_colors/font_color = Color(0.716878, 0.0616367, 9.62615e-08, 1)
+theme_override_colors/font_shadow_color = Color(0.591341, 0.876614, 3.85046e-07, 1)
+theme_override_font_sizes/font_size = 250
+text = "BURNINATION CHAMP"
+horizontal_alignment = 1
+script = ExtResource("3_06a0i")
+variable_type = 1
+variable_name = "award"
+metadata/_custom_type_script = "uid://cm7sg7wq6hq8s"
+
+[node name="MPFConditional - default" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 147.0
+offset_bottom = 147.0
+script = ExtResource("4_06a0i")
+variable_type = 1
+variable_name = "category_name"
+condition_type = 1
+condition_value = "burnination_points"
+metadata/_custom_type_script = "uid://b846v662darst"
+
+[node name="Value" type="Label" parent="MPFConditional - default"]
+layout_mode = 0
+offset_left = 805.0
+offset_top = 564.0
+offset_right = 2218.0
+offset_bottom = 973.0
+theme = ExtResource("2_fgc81")
+theme_override_colors/font_color = Color(0.716878, 0.0616367, 9.62615e-08, 1)
+theme_override_colors/font_shadow_color = Color(0.591341, 0.876614, 3.85046e-07, 1)
+theme_override_font_sizes/font_size = 250
+text = "1,000,000"
+horizontal_alignment = 1
+script = ExtResource("3_06a0i")
+variable_type = 1
+variable_name = "value"
+comma_separate = true
+min_digits = 1
+metadata/_custom_type_script = "uid://cm7sg7wq6hq8s"
+
+[node name="MPFConditional - burnination_points" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 147.0
+offset_bottom = 147.0
+script = ExtResource("4_06a0i")
+variable_type = 1
+variable_name = "category_name"
+condition_type = 1
+condition_value = "burnination_points"
+metadata/_custom_type_script = "uid://b846v662darst"
+
+[node name="Value" type="Label" parent="MPFConditional - burnination_points"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 551.0
+offset_right = 725.0
+offset_bottom = 850.0
+theme = ExtResource("2_fgc81")
+theme_override_colors/font_color = Color(0.716878, 0.0616367, 9.62615e-08, 1)
+theme_override_colors/font_shadow_color = Color(0.591341, 0.876614, 3.85046e-07, 1)
+theme_override_font_sizes/font_size = 250
+text = "150"
+horizontal_alignment = 2
+script = ExtResource("3_06a0i")
+variable_type = 1
+variable_name = "value"
+min_digits = 1
+metadata/_custom_type_script = "uid://cm7sg7wq6hq8s"
+
+[node name="Label" type="Label" parent="MPFConditional - burnination_points"]
+layout_mode = 0
+offset_left = 764.0
+offset_top = 601.0
+offset_right = 3024.0
+offset_bottom = 840.0
+theme = ExtResource("2_fgc81")
+theme_override_colors/font_color = Color(0.716878, 0.0616367, 9.62615e-08, 1)
+theme_override_colors/font_shadow_color = Color(0.591341, 0.876614, 3.85046e-07, 1)
+theme_override_font_sizes/font_size = 180
+text = "PEASANTS BURNINATED"

@@ -27,4 +27,4 @@ class MusicSelection(Carousel):
     initial_item = self.machine.state_machines['music_jukebox'].state
     self._highlighted_item_index = int(initial_item.split("_")[-1]) - 1
     self.machine.log.info(f"TrogPy::MusicSelection initial highlighting item {initial_item}")
-    self.machine.events.post('item_highlighted', carousel=self.name, direction='forward', item=initial_item)
+    self.machine.events.post('carousel_item_highlighted', carousel=self.name, direction='forward', item=initial_item)

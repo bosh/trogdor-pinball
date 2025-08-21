@@ -37,18 +37,3 @@ show_player:
       show_tokens:
         lights: lights_gi
         color: orange
-
-widget_player:
-  text_input_high_score_complete:
-    high_score_confirmation:
-      slide: high_score
-
-  high_score_enter_initials:
-    high_score_confirmation:
-      slide: high_score
-      action: remove
-
-  mode_high_score_ending:
-    high_score_confirmation:
-      slide: high_score
-      action: remove

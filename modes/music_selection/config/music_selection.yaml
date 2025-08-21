@@ -49,7 +49,7 @@ event_player:
     - remove_music_selection_slide
     - mode_stop_music_selection
 
-  music_selection_item_selected: # Carousel selection event
+  carousel_item_selected{carousel=="music_selection"}: # Carousel selection event
     - remove_music_selection_slide
     - mode_stop_music_selection
 

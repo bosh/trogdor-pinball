@@ -28,7 +28,7 @@ timers:
     tick_interval: settings.attract_carousel_timer_tick
     start_running: true
     control_events:
-      - event: item_highlighted
+      - event: carousel_item_highlighted
         action: restart
       - event: flipper_cradle
         action: stop
