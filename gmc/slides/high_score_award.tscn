@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://btqpjma4mjyav"]
 
-[ext_resource type="Script" uid="uid://ch3cf1mv44fpb" path="res://addons/mpf-gmc/classes/mpf_scene_base.gd" id="1_kofol"]
+[ext_resource type="Script" uid="uid://6mdcui7wkc47" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_06a0i"]
 [ext_resource type="Theme" uid="uid://cx5kw5e8kdnr6" path="res://themes/attract_scores_text.tres" id="2_fgc81"]
 [ext_resource type="Script" uid="uid://cm7sg7wq6hq8s" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_06a0i"]
 [ext_resource type="Script" uid="uid://b846v662darst" path="res://addons/mpf-gmc/classes/mpf_conditional.gd" id="4_06a0i"]
@@ -8,8 +8,8 @@
 [node name="HighScoreAward" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_kofol")
-metadata/_custom_type_script = "uid://ch3cf1mv44fpb"
+script = ExtResource("1_06a0i")
+metadata/_custom_type_script = "uid://6mdcui7wkc47"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -37,9 +37,9 @@ metadata/_custom_type_script = "uid://cm7sg7wq6hq8s"
 [node name="player_num" type="Label" parent="."]
 layout_mode = 0
 offset_left = 947.0
-offset_top = 287.0
+offset_top = 286.0
 offset_right = 1210.0
-offset_bottom = 430.0
+offset_bottom = 429.0
 theme = ExtResource("2_fgc81")
 theme_override_colors/font_color = Color(0.716878, 0.0616367, 9.62615e-08, 1)
 theme_override_colors/font_shadow_color = Color(0.591341, 0.876614, 3.85046e-07, 1)
@@ -50,14 +50,14 @@ horizontal_alignment = 2
 script = ExtResource("3_06a0i")
 variable_type = 1
 variable_name = "player_num"
-template_string = "P%s:"
+template_string = "P%d:"
 metadata/_custom_type_script = "uid://cm7sg7wq6hq8s"
 
 [node name="Award" type="Label" parent="."]
 layout_mode = 0
 offset_left = 167.0
 offset_top = -2.0
-offset_right = 2744.0
+offset_right = 2767.0
 offset_bottom = 297.0
 theme = ExtResource("2_fgc81")
 theme_override_colors/font_color = Color(0.716878, 0.0616367, 9.62615e-08, 1)
@@ -107,7 +107,6 @@ offset_bottom = 147.0
 script = ExtResource("4_06a0i")
 variable_type = 1
 variable_name = "category_name"
-condition_type = 1
 condition_value = "burnination_points"
 metadata/_custom_type_script = "uid://b846v662darst"
 
