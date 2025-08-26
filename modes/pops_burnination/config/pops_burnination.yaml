@@ -193,7 +193,7 @@ variable_player:
     pop_center_fire_level: settings.burnination_pop_hit_increment
 
   burnination_pop_group_hit:
-    score: 1000 * current_player.playfield_multiplier
+    points: 1000
     pop_hits: 1
     power_hits: 1
     burnination_points: 1

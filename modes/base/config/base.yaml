@@ -63,6 +63,9 @@ event_player:
     - sync_ball_score
 
 variable_player:
+  player_points:
+    score: change * current_player.playfield_multiplier
+
   update_player_ball_start:
     ball_start_time:
       float: timestamp

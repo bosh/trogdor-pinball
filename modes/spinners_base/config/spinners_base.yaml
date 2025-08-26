@@ -7,11 +7,11 @@ mode:
 
 variable_player:
   base_spinner_hit:
-    score: 10 * current_player.playfield_multiplier
+    points: 10
     spinner_spins: 1
     cheat_multiball_spins_left_to_qualify: -1
   targeted_spinner_hit:
-    score: 50 * current_player.playfield_multiplier
+    points: 50
     spinner_spins: 1
     cheat_multiball_spins_left_to_qualify: -1
 

@@ -8,7 +8,8 @@ mode:
 variable_player:
   sw_blue_standup:
     target_hits: 1
-    score: 100 * current_player.playfield_multiplier
+    points: 100
   s_burn_standup_active:
     target_hits: 1
-    score: 5000 + 1000 * current_player.playfield_multiplier
+    score: 5000 # Hopefully it can score and get multiplied points in one
+    points: 1000

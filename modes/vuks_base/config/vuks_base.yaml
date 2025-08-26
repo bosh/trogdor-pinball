@@ -15,13 +15,13 @@ event_player:
 
 variable_player:
   base_vuk_group_hit:
-    score: 1500 * current_player.playfield_multiplier
+    points: 1500
     capture_hits: 1
   base_subway_capture_expected_hit:
-    score: 5000 * current_player.playfield_multiplier
+    points: 5000
     capture_hits: 1
   base_subway_capture_unexpected_hit:
-    score: 2000 * current_player.playfield_multiplier
+    points: 2000
     capture_hits: 0
 
 shot_profiles:

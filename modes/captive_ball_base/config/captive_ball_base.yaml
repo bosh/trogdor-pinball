@@ -57,9 +57,9 @@ variable_player:
       int: 0
   captive_ball_target_live_hit:
     captive_ball_target_hits: 1
-    score: 1250 * current_player.playfield_multiplier
+    points: 1250
   captive_ball_target_disabled_hit:
-    score: 200 * current_player.playfield_multiplier
+    points: 200
   captive_ball_combo_hit:
     score: 2500 # flat - should add to the target hit that is multiplied and credits the hit category
 

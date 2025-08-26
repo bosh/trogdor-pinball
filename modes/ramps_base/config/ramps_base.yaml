@@ -22,10 +22,10 @@ shots:
 variable_player:
   #Simple ramp scoring with counting
   shot_ramp_middle_live_hit:
-    score: 3000 * current_player.playfield_multiplier
+    points: 3000
     ramp_hits: 1
   shot_ramp_right_live_hit:
-    score: 5000 * current_player.playfield_multiplier
+    points: 5000
     ramp_hits: 1
 
 event_player:

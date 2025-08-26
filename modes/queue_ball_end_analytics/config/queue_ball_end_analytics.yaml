@@ -26,6 +26,7 @@ event_player:
       ball_end_timestamp: {type: float, value: current_player.ball_end_time}
       ball_duration: {type: float, value: current_player.ball_end_time - current_player.ball_start_time}
       ball_number: {type: int, value: current_player.ball}
+      points: {type: int, value: current_player.points}
       score: {type: int, value: current_player.score}
       ball_score: {type: int, value: current_player.ball_score}
       tilted: {type: bool, value: game.tilted}

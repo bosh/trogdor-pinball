@@ -7,7 +7,7 @@ mode:
 
 variable_player:
   base_pop_group_hit:
-    score: 500 * current_player.playfield_multiplier
+    points: 500
     pop_hits: 1
     power_hits: 1
 

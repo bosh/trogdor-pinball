@@ -23,20 +23,20 @@ variable_player:
   #Simple sling scoring with sling counter
   #Left scores less because plunge to left is common
   shot_sling_left_base_hit:
-    score: 25 * current_player.playfield_multiplier
+    points: 25
     sling_hits: 1
     power_hits: 1
   shot_sling_right_base_hit:
-    score: 50 * current_player.playfield_multiplier
+    points: 50
     sling_hits: 1
     power_hits: 1
 
   #Hooks for sling sequence pairs
   #Sequence starting with left scores less because plunge start
   slings_l2r_hit:
-    score: 250 * current_player.playfield_multiplier
+    points: 250
   slings_r2l_hit:
-    score: 555 * current_player.playfield_multiplier
+    points: 555
 
 sequence_shots:
   slings_l2r:

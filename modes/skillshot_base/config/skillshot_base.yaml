@@ -20,6 +20,7 @@ timers:
         event: skillshots_group_hit
 
 variable_player:
+  # Skill shots all score directly, no playfield multiplier
   skillshot_of_an_artist_hitme_hit:
     score: 20000 + current_player.total_skillshot_successes * 12500
     total_skillshot_successes: 1

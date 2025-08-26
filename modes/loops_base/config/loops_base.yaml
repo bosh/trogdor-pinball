@@ -13,13 +13,13 @@ event_player:
 
 variable_player:
   left_uturn_hit:
-    score: 2000 * current_player.playfield_multiplier
+    points: 2000
   right_uturn_hit:
-    score: 1000 * current_player.playfield_multiplier
+    points: 1000
   lower_elbow_hit:
-    score: 1500 * current_player.playfield_multiplier
+    points: 1500
   upper_elbow_hit:
-    score: 2222 * current_player.playfield_multiplier
+    points: 2222
 
   base_loop_group_hit:
     loop_hits: 1

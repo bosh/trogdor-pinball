@@ -8,6 +8,10 @@ player_vars:
     initial_value: -1
     value_type: float
 
+  points: # These represent scoring before modifiers are applied (and some scoring may bypass points)
+    initial_value: 0
+    value_type: int
+
   previous_ball_score:
     initial_value: 0
     value_type: int

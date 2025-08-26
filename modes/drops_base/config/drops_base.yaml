@@ -41,14 +41,14 @@ event_player:
 variable_player:
   #Simple drop scoring with target counter
   base_drop_group_live_hit:
-    score: 250 * current_player.playfield_multiplier
+    points: 250
     target_hits: 1
 
   drop_target_bank_slots_target_bank_down:
-    score: 1000 * current_player.playfield_multiplier
+    points: 1000
 
   base_drops_full_sweep_complete:
-    score: 3333
+    score: 3333 # flat score
     target_hits: 3
 
 accruals:

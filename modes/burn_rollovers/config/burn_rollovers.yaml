@@ -7,13 +7,13 @@ mode:
 
 variable_player:
   burn_group_lit_hit:
-    score: 100 * current_player.playfield_multiplier
+    points: 100
     rollover_hits: 1
   burn_group_unlit_hit:
-    score: 1000 * current_player.playfield_multiplier
+    points: 1000
     rollover_hits: 1
   burn_group_lit_complete:
-    score: 4000 * current_player.playfield_multiplier
+    points: 4000
 
 event_player:
   burn_group_unlit_hit: [dj_rollover_unlit_pool, burn_updated|1ms]
