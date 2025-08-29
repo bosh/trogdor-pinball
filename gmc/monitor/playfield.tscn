@@ -1,0 +1,2840 @@
+[gd_scene load_steps=8 format=3 uid="uid://chyog7myb8bwp"]
+
+[ext_resource type="Texture2D" uid="uid://wg607gucu3dr" path="res://monitor/playfield.jpg" id="1_5cimo"]
+[ext_resource type="Script" uid="uid://c0tpjusq5lf14" path="res://addons/gmc-toolbox/playfield/GMCPlayfield.gd" id="1_57m3d"]
+[ext_resource type="Script" uid="uid://dcqe5orubpwrx" path="res://addons/gmc-toolbox/playfield/GMCLight.gd" id="2_omy47"]
+[ext_resource type="Texture2D" uid="uid://u5hp0m0sfd0a" path="res://addons/gmc-toolbox/playfield/inserts/circle-insert.svg" id="2_vgxr8"]
+[ext_resource type="Texture2D" uid="uid://dnyvyrnbf1qpv" path="res://addons/gmc-toolbox/playfield/icons/switch-inactive.svg" id="5_e2jqc"]
+[ext_resource type="Script" uid="uid://7bg8av230cxk" path="res://addons/gmc-toolbox/playfield/GMCSwitch.gd" id="5_v1su3"]
+[ext_resource type="Texture2D" uid="uid://dty6coaegtiyf" path="res://addons/gmc-toolbox/playfield/icons/switch-active.svg" id="6_tn0qe"]
+
+[node name="Playfield" type="TextureRect"]
+texture = ExtResource("1_5cimo")
+script = ExtResource("1_57m3d")
+monitor_size = Vector2(1512, 2012)
+metadata/_custom_type_script = "uid://c0tpjusq5lf14"
+metadata/_edit_lock_ = true
+
+[node name="switches" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+metadata/_edit_lock_ = true
+
+[node name="s_drop_bank_left" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -695.0
+offset_top = 576.0
+offset_right = -547.0
+offset_bottom = 724.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+
+[node name="s_drop_bank_center" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -695.0
+offset_top = 576.0
+offset_right = -547.0
+offset_bottom = 724.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+
+[node name="s_drop_bank_right" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -695.0
+offset_top = 576.0
+offset_right = -547.0
+offset_bottom = 724.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+
+[node name="s_horseshoe_right" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -695.0
+offset_top = 576.0
+offset_right = -547.0
+offset_bottom = 724.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active", "skill_shot_failure"]
+
+[node name="s_horseshoe_left" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -695.0
+offset_top = 576.0
+offset_right = -547.0
+offset_bottom = 724.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active", "skill_shot_failure"]
+
+[node name="s_captive_ball_presence" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -695.0
+offset_top = 576.0
+offset_right = -547.0
+offset_bottom = 724.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+
+[node name="s_spinner_right" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -695.0
+offset_top = 576.0
+offset_right = -547.0
+offset_bottom = 724.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active", "skill_shot_failure"]
+
+[node name="s_wireform_right_top" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -695.0
+offset_top = 576.0
+offset_right = -547.0
+offset_bottom = 724.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active"]
+
+[node name="s_subway_entrance" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -695.0
+offset_top = 576.0
+offset_right = -547.0
+offset_bottom = 724.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active"]
+
+[node name="s_spinner_left" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -695.0
+offset_top = 576.0
+offset_right = -547.0
+offset_bottom = 724.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active", "skill_shot_failure"]
+
+[node name="s_upper_flipper_eos" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -695.0
+offset_top = 576.0
+offset_right = -547.0
+offset_bottom = 724.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+
+[node name="s_left_flipper_eos" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -695.0
+offset_top = 576.0
+offset_right = -547.0
+offset_bottom = 724.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+
+[node name="s_left_sling" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -695.0
+offset_top = 576.0
+offset_right = -547.0
+offset_bottom = 724.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["skill_shot_failure"]
+
+[node name="s_left_inner_lane" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -695.0
+offset_top = 576.0
+offset_right = -547.0
+offset_bottom = 724.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active", "skill_shot_failure"]
+
+[node name="s_left_outer_lane" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -695.0
+offset_top = 576.0
+offset_right = -547.0
+offset_bottom = 724.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active"]
+
+[node name="s_subway_vuk_presence" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -695.0
+offset_top = 576.0
+offset_right = -547.0
+offset_bottom = 724.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["skill_shot_failure"]
+
+[node name="s_trough_ball_1" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -695.0
+offset_top = 576.0
+offset_right = -547.0
+offset_bottom = 724.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+
+[node name="s_trough_ball_jam" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -695.0
+offset_top = 576.0
+offset_right = -547.0
+offset_bottom = 724.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+
+[node name="s_right_flipper_eos" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -695.0
+offset_top = 576.0
+offset_right = -547.0
+offset_bottom = 724.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+
+[node name="s_right_sling" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -695.0
+offset_top = 576.0
+offset_right = -547.0
+offset_bottom = 724.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["skill_shot_failure"]
+
+[node name="s_trough_ball_5" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 2192.0
+offset_top = 3398.0
+offset_right = 2340.0
+offset_bottom = 3546.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+
+[node name="s_trough_ball_4" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 2192.0
+offset_top = 3398.0
+offset_right = 2340.0
+offset_bottom = 3546.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+
+[node name="s_trough_ball_3" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 2192.0
+offset_top = 3398.0
+offset_right = 2340.0
+offset_bottom = 3546.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+
+[node name="s_trough_ball_2" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 2192.0
+offset_top = 3398.0
+offset_right = 2340.0
+offset_bottom = 3546.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+
+[node name="s_wireform_s_entrance" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -683.0
+offset_top = 959.0
+offset_right = -535.0
+offset_bottom = 1107.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active"]
+
+[node name="s_wireform_s_top" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -683.0
+offset_top = 959.0
+offset_right = -535.0
+offset_bottom = 1107.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active"]
+
+[node name="s_vuk_presence" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -683.0
+offset_top = 959.0
+offset_right = -535.0
+offset_bottom = 1107.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["skill_shot_failure"]
+
+[node name="s_launch_exit" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -683.0
+offset_top = 959.0
+offset_right = -535.0
+offset_bottom = 1107.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+
+[node name="s_elbow_lower" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -683.0
+offset_top = 959.0
+offset_right = -535.0
+offset_bottom = 1107.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active", "skill_shot_failure"]
+
+[node name="s_elbow_upper" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -683.0
+offset_top = 959.0
+offset_right = -535.0
+offset_bottom = 1107.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active", "skill_shot_failure"]
+
+[node name="s_right_outer_lane" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -683.0
+offset_top = 959.0
+offset_right = -535.0
+offset_bottom = 1107.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active", "skill_shot_failure"]
+
+[node name="s_right_inner_lane" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -683.0
+offset_top = 959.0
+offset_right = -535.0
+offset_bottom = 1107.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active", "skill_shot_failure"]
+
+[node name="s_plunger" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -683.0
+offset_top = 959.0
+offset_right = -535.0
+offset_bottom = 1107.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+
+[node name="s_pop_left" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -683.0
+offset_top = 959.0
+offset_right = -535.0
+offset_bottom = 1107.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["skill_shot_failure"]
+
+[node name="s_blue_standup_1" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 965.0
+offset_top = 164.0
+offset_right = 1113.0
+offset_bottom = 312.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active", "blue_standup", "skill_shot_failure"]
+
+[node name="s_blue_standup_2" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 965.0
+offset_top = 164.0
+offset_right = 1113.0
+offset_bottom = 312.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active", "blue_standup", "skill_shot_failure"]
+
+[node name="s_blue_standup_3" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 965.0
+offset_top = 164.0
+offset_right = 1113.0
+offset_bottom = 312.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active", "blue_standup", "skill_shot_failure"]
+
+[node name="s_blue_standup_4" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 965.0
+offset_top = 164.0
+offset_right = 1113.0
+offset_bottom = 312.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active", "blue_standup", "skill_shot_failure"]
+
+[node name="s_blue_standup_5" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 965.0
+offset_top = 164.0
+offset_right = 1113.0
+offset_bottom = 312.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active", "blue_standup", "skill_shot_failure"]
+
+[node name="s_drop_bank_stuck_ball_detector" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 997.0
+offset_top = 596.0
+offset_right = 1145.0
+offset_bottom = 744.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active", "skill_shot_failure"]
+
+[node name="s_left_orbit_outer" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -691.0
+offset_top = 788.0
+offset_right = -543.0
+offset_bottom = 936.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active", "skill_shot_failure"]
+
+[node name="s_burn_b" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 1474.0
+offset_top = 30.0
+offset_right = 1622.0
+offset_bottom = 178.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active", "skill_shot_failure"]
+
+[node name="s_burn_u" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 1474.0
+offset_top = 30.0
+offset_right = 1622.0
+offset_bottom = 178.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active", "skill_shot_failure"]
+
+[node name="s_burn_r" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 1474.0
+offset_top = 30.0
+offset_right = 1622.0
+offset_bottom = 178.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active", "skill_shot_failure"]
+
+[node name="s_burn_n" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 1474.0
+offset_top = 30.0
+offset_right = 1622.0
+offset_bottom = 178.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active", "skill_shot_failure"]
+
+[node name="s_right_orbit_outer" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -250.0
+offset_top = 1355.0
+offset_right = -102.0
+offset_bottom = 1503.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active", "skill_shot_failure"]
+
+[node name="s_pop_right" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -250.0
+offset_top = 1355.0
+offset_right = -102.0
+offset_bottom = 1503.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["skill_shot_failure"]
+
+[node name="s_pop_center" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -250.0
+offset_top = 1355.0
+offset_right = -102.0
+offset_bottom = 1503.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["skill_shot_failure"]
+
+[node name="s_burn_standup" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -250.0
+offset_top = 1355.0
+offset_right = -102.0
+offset_bottom = 1503.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active", "skill_shot_failure"]
+
+[node name="s_orbit_diverter_eos" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -250.0
+offset_top = 1355.0
+offset_right = -102.0
+offset_bottom = 1503.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+
+[node name="s_left_orbit_inner" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -250.0
+offset_top = 1355.0
+offset_right = -102.0
+offset_bottom = 1503.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active"]
+
+[node name="s_right_orbit_inner" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -250.0
+offset_top = 1355.0
+offset_right = -102.0
+offset_bottom = 1503.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active"]
+
+[node name="s_wireform_right_entrance" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -250.0
+offset_top = 1355.0
+offset_right = -102.0
+offset_bottom = 1503.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["playfield_active"]
+
+[node name="s_right_outlane_lower" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -250.0
+offset_top = 1355.0
+offset_right = -102.0
+offset_bottom = 1503.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+
+[node name="vswitch_end_game" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 446.0
+offset_right = 154.0
+offset_bottom = 594.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_qualify_burnination" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 446.0
+offset_right = 154.0
+offset_bottom = 594.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_add_fire_level" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 446.0
+offset_right = 154.0
+offset_bottom = 594.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_qualify_burninated" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 446.0
+offset_right = 154.0
+offset_bottom = 594.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_qualify_left_outlane_save" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 446.0
+offset_right = 154.0
+offset_bottom = 594.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_qualify_right_outlane_save" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 446.0
+offset_right = 154.0
+offset_bottom = 594.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_reset_inlane_detector" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 446.0
+offset_right = 154.0
+offset_bottom = 594.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_toggle_slings_dead" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 446.0
+offset_right = 154.0
+offset_bottom = 594.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_toggle_slots" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 446.0
+offset_right = 154.0
+offset_bottom = 594.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_start_minigame" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 446.0
+offset_right = 154.0
+offset_bottom = 594.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_set_bank_000" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 626.0
+offset_top = -215.0
+offset_right = 774.0
+offset_bottom = -67.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_set_bank_100" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 626.0
+offset_top = -215.0
+offset_right = 774.0
+offset_bottom = -67.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_set_bank_010" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 626.0
+offset_top = -215.0
+offset_right = 774.0
+offset_bottom = -67.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_set_bank_001" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 626.0
+offset_top = -215.0
+offset_right = 774.0
+offset_bottom = -67.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_set_bank_110" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 626.0
+offset_top = -215.0
+offset_right = 774.0
+offset_bottom = -67.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_set_bank_101" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 626.0
+offset_top = -215.0
+offset_right = 774.0
+offset_bottom = -67.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_set_bank_011" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 626.0
+offset_top = -215.0
+offset_right = 774.0
+offset_bottom = -67.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_set_bank_111" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 626.0
+offset_top = -215.0
+offset_right = 774.0
+offset_bottom = -67.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_plunger_power_1" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 2852.0
+offset_top = 2920.0
+offset_right = 3000.0
+offset_bottom = 3068.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_plunger_power_2" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 2852.0
+offset_top = 2920.0
+offset_right = 3000.0
+offset_bottom = 3068.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_plunger_power_3" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 2852.0
+offset_top = 2920.0
+offset_right = 3000.0
+offset_bottom = 3068.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_plunger_power_4" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 2852.0
+offset_top = 2920.0
+offset_right = 3000.0
+offset_bottom = 3068.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_plunger_power_5" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 2852.0
+offset_top = 2920.0
+offset_right = 3000.0
+offset_bottom = 3068.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_plunger_power_6" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 2852.0
+offset_top = 2920.0
+offset_right = 3000.0
+offset_bottom = 3068.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_enable_left_cbg" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 376.0
+offset_right = 301.0
+offset_bottom = 524.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_disable_left_cbg" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 376.0
+offset_right = 301.0
+offset_bottom = 524.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_enable_right_cbg" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 376.0
+offset_right = 301.0
+offset_bottom = 524.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_disable_right_cbg" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 376.0
+offset_right = 301.0
+offset_bottom = 524.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_enable_right_cbg_alt" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 376.0
+offset_right = 301.0
+offset_bottom = 524.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_disable_right_cbg_alt" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 376.0
+offset_right = 301.0
+offset_bottom = 524.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_enable_spinner_targets" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 376.0
+offset_right = 301.0
+offset_bottom = 524.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_disable_spinner_targets" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 376.0
+offset_right = 301.0
+offset_bottom = 524.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="vswitch_test_coils" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 376.0
+offset_right = 301.0
+offset_bottom = 524.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["no_audit"]
+
+[node name="s_coin_door" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 1332.0
+offset_top = 3858.0
+offset_right = 1480.0
+offset_bottom = 4006.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["service_door_open", "power_off"]
+
+[node name="s_coin_door_service_1" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 1332.0
+offset_top = 3858.0
+offset_right = 1480.0
+offset_bottom = 4006.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["service_esc"]
+
+[node name="s_coin_door_service_2" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 1332.0
+offset_top = 3858.0
+offset_right = 1480.0
+offset_bottom = 4006.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["service_down"]
+
+[node name="s_coin_door_service_3" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 1332.0
+offset_top = 3858.0
+offset_right = 1480.0
+offset_bottom = 4006.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["service_up"]
+
+[node name="s_coin_door_service_4" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 1332.0
+offset_top = 3858.0
+offset_right = 1480.0
+offset_bottom = 4006.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["service_enter"]
+
+[node name="s_start" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 247.0
+offset_top = 3748.0
+offset_right = 395.0
+offset_bottom = 3896.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["start", "text_input_select"]
+
+[node name="s_left_flipper" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 3451.0
+offset_right = 179.0
+offset_bottom = 3599.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["left_flipper", "text_input_left"]
+
+[node name="s_left_flipper_secondary" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 3451.0
+offset_right = 179.0
+offset_bottom = 3599.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["mini_flipper"]
+
+[node name="s_tilt_bob" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 735.0
+offset_right = 387.0
+offset_bottom = 883.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["tilt_warning"]
+
+[node name="s_right_flipper" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 2869.0
+offset_top = 3283.0
+offset_right = 3017.0
+offset_bottom = 3431.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+tags = ["right_flipper", "text_input_right"]
+
+[node name="s_right_flipper_secondary" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = 2869.0
+offset_top = 3283.0
+offset_right = 3017.0
+offset_bottom = 3431.0
+texture_normal = ExtResource("5_e2jqc")
+texture_pressed = ExtResource("6_tn0qe")
+stretch_mode = 4
+script = ExtResource("5_v1su3")
+
+[node name="lights" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="l_test_1" type="Sprite2D" parent="lights"]
+position = Vector2(462.556, 3903.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_bb", "lights_bb_trogdor", "lights_2a"]
+
+[node name="l_test_2" type="Sprite2D" parent="lights"]
+position = Vector2(462.556, 3903.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_bb", "lights_bb_flames", "lights_2b"]
+
+[node name="l_test_3" type="Sprite2D" parent="lights"]
+position = Vector2(462.556, 3903.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_bb", "lights_bb_characters", "lights_2a"]
+
+[node name="l_bb_trogdor_t_1" type="Sprite2D" parent="lights"]
+position = Vector2(2823.56, 270.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_bb", "lights_bb_trogdor", "lights_bb_trogdor_t"]
+
+[node name="l_bb_trogdor_r_1" type="Sprite2D" parent="lights"]
+position = Vector2(2823.56, 270.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_bb", "lights_bb_trogdor", "lights_bb_trogdor_r"]
+
+[node name="l_bb_trogdor_o_1" type="Sprite2D" parent="lights"]
+position = Vector2(2823.56, 270.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_bb", "lights_bb_trogdor", "lights_bb_trogdor_o"]
+
+[node name="l_bb_trogdor_g_1" type="Sprite2D" parent="lights"]
+position = Vector2(2823.56, 270.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_bb", "lights_bb_trogdor", "lights_bb_trogdor_g"]
+
+[node name="l_bb_trogdor_d_1" type="Sprite2D" parent="lights"]
+position = Vector2(2823.56, 270.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_bb", "lights_bb_trogdor", "lights_bb_trogdor_d"]
+
+[node name="l_bb_trogdor_o2_1" type="Sprite2D" parent="lights"]
+position = Vector2(2823.56, 270.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_bb", "lights_bb_trogdor", "lights_bb_trogdor_o2"]
+
+[node name="l_bb_trogdor_r2_1" type="Sprite2D" parent="lights"]
+position = Vector2(2823.56, 270.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_bb", "lights_bb_trogdor", "lights_bb_trogdor_r2"]
+
+[node name="l_bb_trogdor_!_1" type="Sprite2D" parent="lights"]
+position = Vector2(2823.56, 270.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_bb", "lights_bb_trogdor", "lights_bb_trogdor_bang"]
+
+[node name="l_bb_character_trogdor_1" type="Sprite2D" parent="lights"]
+position = Vector2(2823.56, 270.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_bb", "lights_bb_characters", "lights_bb_char_trogdor"]
+
+[node name="l_bb_character_knight_1" type="Sprite2D" parent="lights"]
+position = Vector2(2823.56, 270.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_bb", "lights_bb_characters", "lights_bb_char_knight"]
+
+[node name="l_bb_character_peasant_1" type="Sprite2D" parent="lights"]
+position = Vector2(2823.56, 270.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_bb", "lights_bb_characters", "lights_bb_char_peasant"]
+
+[node name="l_bb_flame_trogdor_outer_1" type="Sprite2D" parent="lights"]
+position = Vector2(2823.56, 270.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_bb", "lights_bb_flames", "lights_bb_flames_trogdor", "lights_bb_flames_trogdor_outer"]
+
+[node name="l_bb_flame_trogdor_inner_1" type="Sprite2D" parent="lights"]
+position = Vector2(2823.56, 270.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_bb", "lights_bb_flames", "lights_bb_flames_trogdor", "lights_bb_flames_trogdor_inner"]
+
+[node name="l_bb_flame_peasant_1" type="Sprite2D" parent="lights"]
+position = Vector2(2823.56, 270.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_bb", "lights_bb_flames", "lights_bb_flames_peasant"]
+
+[node name="l_bb_flame_background_bottom_1" type="Sprite2D" parent="lights"]
+position = Vector2(2823.56, 270.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_bb", "lights_bb_flames", "lights_bb_flames_background", "lights_bb_flames_background_bottom"]
+
+[node name="l_bb_flame_background_top_1" type="Sprite2D" parent="lights"]
+position = Vector2(2823.56, 270.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_bb", "lights_bb_flames", "lights_bb_flames_background", "lights_bb_flames_background_top"]
+
+[node name="l_bb_gi_1" type="Sprite2D" parent="lights"]
+position = Vector2(2823.56, 270.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_bb", "lights_bb_gi", "lights_gi"]
+
+[node name="l_bb_edge_top_1" type="Sprite2D" parent="lights"]
+position = Vector2(2639.56, 127.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_top"]
+
+[node name="l_bb_edge_top_2" type="Sprite2D" parent="lights"]
+position = Vector2(2639.56, 127.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_top"]
+
+[node name="l_bb_edge_top_3" type="Sprite2D" parent="lights"]
+position = Vector2(2639.56, 127.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_top"]
+
+[node name="l_bb_edge_top_4" type="Sprite2D" parent="lights"]
+position = Vector2(2639.56, 127.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_top"]
+
+[node name="l_bb_edge_top_5" type="Sprite2D" parent="lights"]
+position = Vector2(2639.56, 127.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_top"]
+
+[node name="l_bb_edge_top_6" type="Sprite2D" parent="lights"]
+position = Vector2(2639.56, 127.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_top"]
+
+[node name="l_bb_edge_top_7" type="Sprite2D" parent="lights"]
+position = Vector2(2639.56, 127.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_top"]
+
+[node name="l_bb_edge_top_8" type="Sprite2D" parent="lights"]
+position = Vector2(2639.56, 127.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_top"]
+
+[node name="l_bb_edge_top_9" type="Sprite2D" parent="lights"]
+position = Vector2(2639.56, 127.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_top"]
+
+[node name="l_bb_edge_top_10" type="Sprite2D" parent="lights"]
+position = Vector2(2639.56, 127.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_top"]
+
+[node name="l_bb_edge_top_11" type="Sprite2D" parent="lights"]
+position = Vector2(2639.56, 127.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_top"]
+
+[node name="l_bb_edge_top_12" type="Sprite2D" parent="lights"]
+position = Vector2(2639.56, 127.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_top"]
+
+[node name="l_bb_edge_top_13" type="Sprite2D" parent="lights"]
+position = Vector2(2639.56, 127.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_top"]
+
+[node name="l_bb_edge_top_14" type="Sprite2D" parent="lights"]
+position = Vector2(2639.56, 127.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_top"]
+
+[node name="l_bb_edge_top_15" type="Sprite2D" parent="lights"]
+position = Vector2(2639.56, 127.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_top"]
+
+[node name="l_bb_edge_top_16" type="Sprite2D" parent="lights"]
+position = Vector2(2639.56, 127.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_top"]
+
+[node name="l_bb_edge_top_17" type="Sprite2D" parent="lights"]
+position = Vector2(2639.56, 127.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_top"]
+
+[node name="l_bb_edge_top_18" type="Sprite2D" parent="lights"]
+position = Vector2(2639.56, 127.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_top"]
+
+[node name="l_bb_edge_top_19" type="Sprite2D" parent="lights"]
+position = Vector2(2639.56, 127.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_top"]
+
+[node name="l_bb_edge_right_1" type="Sprite2D" parent="lights"]
+position = Vector2(2973.56, 331.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_right"]
+
+[node name="l_bb_edge_right_2" type="Sprite2D" parent="lights"]
+position = Vector2(2973.56, 331.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_right"]
+
+[node name="l_bb_edge_right_3" type="Sprite2D" parent="lights"]
+position = Vector2(2973.56, 331.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_right"]
+
+[node name="l_bb_edge_right_4" type="Sprite2D" parent="lights"]
+position = Vector2(2973.56, 331.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_right"]
+
+[node name="l_bb_edge_right_5" type="Sprite2D" parent="lights"]
+position = Vector2(2973.56, 331.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_right"]
+
+[node name="l_bb_edge_right_6" type="Sprite2D" parent="lights"]
+position = Vector2(2973.56, 331.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_right"]
+
+[node name="l_bb_edge_right_7" type="Sprite2D" parent="lights"]
+position = Vector2(2973.56, 331.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_right"]
+
+[node name="l_bb_edge_right_8" type="Sprite2D" parent="lights"]
+position = Vector2(2973.56, 331.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_right"]
+
+[node name="l_bb_edge_right_9" type="Sprite2D" parent="lights"]
+position = Vector2(2973.56, 331.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_right"]
+
+[node name="l_bb_edge_right_10" type="Sprite2D" parent="lights"]
+position = Vector2(2973.56, 331.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_right"]
+
+[node name="l_bb_edge_right_11" type="Sprite2D" parent="lights"]
+position = Vector2(2973.56, 331.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_right"]
+
+[node name="l_bb_edge_right_12" type="Sprite2D" parent="lights"]
+position = Vector2(2973.56, 331.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_right"]
+
+[node name="l_bb_edge_right_13" type="Sprite2D" parent="lights"]
+position = Vector2(2973.56, 331.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_right"]
+
+[node name="l_bb_edge_left_1" type="Sprite2D" parent="lights"]
+position = Vector2(2284.56, 311.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_left"]
+
+[node name="l_bb_edge_left_2" type="Sprite2D" parent="lights"]
+position = Vector2(2284.56, 311.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_left"]
+
+[node name="l_bb_edge_left_3" type="Sprite2D" parent="lights"]
+position = Vector2(2284.56, 311.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_left"]
+
+[node name="l_bb_edge_left_4" type="Sprite2D" parent="lights"]
+position = Vector2(2284.56, 311.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_left"]
+
+[node name="l_bb_edge_left_5" type="Sprite2D" parent="lights"]
+position = Vector2(2284.56, 311.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_left"]
+
+[node name="l_bb_edge_left_6" type="Sprite2D" parent="lights"]
+position = Vector2(2284.56, 311.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_left"]
+
+[node name="l_bb_edge_left_7" type="Sprite2D" parent="lights"]
+position = Vector2(2284.56, 311.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_left"]
+
+[node name="l_bb_edge_left_8" type="Sprite2D" parent="lights"]
+position = Vector2(2284.56, 311.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_left"]
+
+[node name="l_bb_edge_left_9" type="Sprite2D" parent="lights"]
+position = Vector2(2284.56, 311.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_left"]
+
+[node name="l_bb_edge_left_10" type="Sprite2D" parent="lights"]
+position = Vector2(2284.56, 311.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_left"]
+
+[node name="l_bb_edge_left_11" type="Sprite2D" parent="lights"]
+position = Vector2(2284.56, 311.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_left"]
+
+[node name="l_bb_edge_left_12" type="Sprite2D" parent="lights"]
+position = Vector2(2284.56, 311.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_left"]
+
+[node name="l_bb_edge_left_13" type="Sprite2D" parent="lights"]
+position = Vector2(2284.56, 311.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_left"]
+
+[node name="l_pf_x2" type="Sprite2D" parent="lights"]
+position = Vector2(1412.56, 3018.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3a", "lights_4a", "lights_5a", "lights_pf", "lights_multipliers"]
+
+[node name="l_pf_x3" type="Sprite2D" parent="lights"]
+position = Vector2(1412.56, 3018.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3b", "lights_4b", "lights_5b", "lights_pf", "lights_multipliers"]
+
+[node name="l_pf_x4" type="Sprite2D" parent="lights"]
+position = Vector2(1412.56, 3018.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3c", "lights_4c", "lights_5c", "lights_pf", "lights_multipliers"]
+
+[node name="l_pf_x5" type="Sprite2D" parent="lights"]
+position = Vector2(1412.56, 3018.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4d", "lights_5d", "lights_pf", "lights_multipliers"]
+
+[node name="l_majesty_1" type="Sprite2D" parent="lights"]
+position = Vector2(1440.56, 2206.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3b", "lights_4a", "lights_5e", "lights_pf", "lights_majesty"]
+
+[node name="l_majesty_2" type="Sprite2D" parent="lights"]
+position = Vector2(1440.56, 2206.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3c", "lights_4b", "lights_5a", "lights_pf", "lights_majesty"]
+
+[node name="l_majesty_3" type="Sprite2D" parent="lights"]
+position = Vector2(1440.56, 2206.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4c", "lights_5b", "lights_pf", "lights_majesty"]
+
+[node name="l_majesty_4" type="Sprite2D" parent="lights"]
+position = Vector2(1440.56, 2206.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4d", "lights_5c", "lights_pf", "lights_majesty"]
+
+[node name="l_majesty_5" type="Sprite2D" parent="lights"]
+position = Vector2(1440.56, 2206.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3c", "lights_4a", "lights_5d", "lights_pf", "lights_majesty"]
+
+[node name="l_majesty_6" type="Sprite2D" parent="lights"]
+position = Vector2(1440.56, 2206.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3a", "lights_4b", "lights_5e", "lights_pf", "lights_majesty"]
+
+[node name="l_drain" type="Sprite2D" parent="lights"]
+position = Vector2(-189.444, 429.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3a", "lights_4c", "lights_5e", "lights_pf", "lights_ball_save"]
+
+[node name="l_spinner_left_flasher" type="Sprite2D" parent="lights"]
+position = Vector2(-189.444, 429.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_5e", "lights_flashers"]
+
+[node name="l_spinner_left_indicator" type="Sprite2D" parent="lights"]
+position = Vector2(-189.444, 429.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3c", "lights_4b", "lights_5a", "lights_pf"]
+
+[node name="l_spinner_right_flasher" type="Sprite2D" parent="lights"]
+position = Vector2(-189.444, 429.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4c", "lights_5e", "lights_flashers"]
+
+[node name="l_spinner_right_indicator" type="Sprite2D" parent="lights"]
+position = Vector2(-189.444, 429.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3c", "lights_4d", "lights_5b", "lights_pf"]
+
+[node name="l_orbit_left" type="Sprite2D" parent="lights"]
+position = Vector2(-189.444, 429.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4c", "lights_5a", "lights_pf"]
+
+[node name="l_orbit_right" type="Sprite2D" parent="lights"]
+position = Vector2(-189.444, 429.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4d", "lights_5c", "lights_pf"]
+
+[node name="l_vuk_left" type="Sprite2D" parent="lights"]
+position = Vector2(-189.444, 429.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4a", "lights_5b", "lights_pf"]
+
+[node name="l_vuk_right" type="Sprite2D" parent="lights"]
+position = Vector2(-189.444, 429.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3c", "lights_4b", "lights_5d", "lights_pf"]
+
+[node name="l_elbow_lower" type="Sprite2D" parent="lights"]
+position = Vector2(-189.444, 429.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4d", "lights_5e", "lights_pf"]
+
+[node name="l_burn_center" type="Sprite2D" parent="lights"]
+position = Vector2(-189.444, 429.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3b", "lights_4a", "lights_5b", "lights_pf"]
+
+[node name="l_ramp_right" type="Sprite2D" parent="lights"]
+position = Vector2(-189.444, 429.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3c", "lights_4c", "lights_5e", "lights_pf"]
+
+[node name="l_ramp_left" type="Sprite2D" parent="lights"]
+position = Vector2(-189.444, 429.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_5c", "lights_pf"]
+
+[node name="l_loop_left" type="Sprite2D" parent="lights"]
+position = Vector2(-189.444, 429.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_5b", "lights_pf"]
+
+[node name="l_loop_right" type="Sprite2D" parent="lights"]
+position = Vector2(-189.444, 429.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3b", "lights_4c", "lights_5d", "lights_pf"]
+
+[node name="l_gate_left" type="Sprite2D" parent="lights"]
+position = Vector2(-189.444, 429.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4d", "lights_5a", "lights_pf"]
+
+[node name="l_gate_right" type="Sprite2D" parent="lights"]
+position = Vector2(-189.444, 429.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3c", "lights_4a", "lights_5b", "lights_pf"]
+
+[node name="generated_light_1" type="Sprite2D" parent="lights"]
+position = Vector2(524, 3769)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+
+[node name="gl_ring_a_1" type="Sprite2D" parent="lights"]
+position = Vector2(649.556, 3837.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2a", "lights_3a", "lights_4a", "lights_5a", "lights_gl_ring_a"]
+
+[node name="gl_ring_a_2" type="Sprite2D" parent="lights"]
+position = Vector2(649.556, 3837.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2b", "lights_3b", "lights_4a", "lights_5e", "lights_gl_ring_a"]
+
+[node name="gl_ring_a_3" type="Sprite2D" parent="lights"]
+position = Vector2(649.556, 3837.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2a", "lights_3c", "lights_4b", "lights_5b", "lights_gl_ring_a"]
+
+[node name="gl_ring_a_4" type="Sprite2D" parent="lights"]
+position = Vector2(649.556, 3837.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2b", "lights_3a", "lights_4b", "lights_5e", "lights_gl_ring_a"]
+
+[node name="gl_ring_a_5" type="Sprite2D" parent="lights"]
+position = Vector2(649.556, 3837.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2a", "lights_3b", "lights_4c", "lights_5c", "lights_gl_ring_a"]
+
+[node name="gl_ring_a_6" type="Sprite2D" parent="lights"]
+position = Vector2(649.556, 3837.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2b", "lights_3c", "lights_4c", "lights_5e", "lights_gl_ring_a"]
+
+[node name="gl_ring_a_7" type="Sprite2D" parent="lights"]
+position = Vector2(649.556, 3837.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2a", "lights_3a", "lights_4d", "lights_5d", "lights_gl_ring_a"]
+
+[node name="gl_ring_a_8" type="Sprite2D" parent="lights"]
+position = Vector2(649.556, 3837.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2b", "lights_3b", "lights_4d", "lights_5e", "lights_gl_ring_a"]
+
+[node name="gl_grid_1" type="Sprite2D" parent="lights"]
+position = Vector2(1216.56, 877.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2a", "lights_3a", "lights_4a", "lights_5a", "grid_lights"]
+
+[node name="gl_grid_2" type="Sprite2D" parent="lights"]
+position = Vector2(1216.56, 877.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2b", "lights_3b", "lights_4b", "lights_5b", "grid_lights"]
+
+[node name="gl_grid_3" type="Sprite2D" parent="lights"]
+position = Vector2(1216.56, 877.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2a", "lights_3c", "lights_4c", "lights_5c", "grid_lights"]
+
+[node name="gl_grid_4" type="Sprite2D" parent="lights"]
+position = Vector2(1216.56, 877.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2b", "lights_3a", "lights_4d", "lights_5d", "grid_lights"]
+
+[node name="gl_grid_5" type="Sprite2D" parent="lights"]
+position = Vector2(1216.56, 877.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2a", "lights_3b", "lights_4a", "lights_5e", "grid_lights"]
+
+[node name="gl_grid_6" type="Sprite2D" parent="lights"]
+position = Vector2(1216.56, 877.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2b", "lights_3c", "lights_4b", "lights_5a", "grid_lights"]
+
+[node name="gl_grid_7" type="Sprite2D" parent="lights"]
+position = Vector2(1216.56, 877.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2a", "lights_3a", "lights_4c", "lights_5b", "grid_lights"]
+
+[node name="gl_grid_8" type="Sprite2D" parent="lights"]
+position = Vector2(1216.56, 877.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2b", "lights_3b", "lights_4d", "lights_5c", "grid_lights"]
+
+[node name="gl_grid_9" type="Sprite2D" parent="lights"]
+position = Vector2(1216.56, 877.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2a", "lights_3c", "lights_4a", "lights_5d", "grid_lights"]
+
+[node name="gl_cobra_ring_a_1" type="Sprite2D" parent="lights"]
+position = Vector2(3577.56, 1367.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2a", "lights_3a", "lights_4a", "lights_5a", "lights_rings", "lights_pf", "lights_cobra_ring_a"]
+
+[node name="gl_cobra_ring_a_2" type="Sprite2D" parent="lights"]
+position = Vector2(3577.56, 1367.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2b", "lights_3b", "lights_4a", "lights_5e", "lights_rings", "lights_pf", "lights_cobra_ring_a"]
+
+[node name="gl_cobra_ring_a_3" type="Sprite2D" parent="lights"]
+position = Vector2(3577.56, 1367.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2a", "lights_3c", "lights_4b", "lights_5b", "lights_rings", "lights_pf", "lights_cobra_ring_a"]
+
+[node name="gl_cobra_ring_a_4" type="Sprite2D" parent="lights"]
+position = Vector2(3577.56, 1367.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2b", "lights_3a", "lights_4b", "lights_5e", "lights_rings", "lights_pf", "lights_cobra_ring_a"]
+
+[node name="gl_cobra_ring_a_5" type="Sprite2D" parent="lights"]
+position = Vector2(3577.56, 1367.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2a", "lights_3b", "lights_4c", "lights_5c", "lights_rings", "lights_pf", "lights_cobra_ring_a"]
+
+[node name="gl_cobra_ring_a_6" type="Sprite2D" parent="lights"]
+position = Vector2(3577.56, 1367.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2b", "lights_3c", "lights_4c", "lights_5e", "lights_rings", "lights_pf", "lights_cobra_ring_a"]
+
+[node name="gl_cobra_ring_a_7" type="Sprite2D" parent="lights"]
+position = Vector2(3577.56, 1367.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2a", "lights_3a", "lights_4d", "lights_5d", "lights_rings", "lights_pf", "lights_cobra_ring_a"]
+
+[node name="gl_cobra_ring_a_8" type="Sprite2D" parent="lights"]
+position = Vector2(3577.56, 1367.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2b", "lights_3b", "lights_4d", "lights_5e", "lights_rings", "lights_pf", "lights_cobra_ring_a"]
+
+[node name="gl_cobra_ring_b_1" type="Sprite2D" parent="lights"]
+position = Vector2(3418.56, 1354.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2a", "lights_3a", "lights_4a", "lights_5a", "lights_rings", "lights_pf", "lights_cobra_ring_b"]
+
+[node name="gl_cobra_ring_b_2" type="Sprite2D" parent="lights"]
+position = Vector2(3418.56, 1354.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2b", "lights_3b", "lights_4a", "lights_5e", "lights_rings", "lights_pf", "lights_cobra_ring_b"]
+
+[node name="gl_cobra_ring_b_3" type="Sprite2D" parent="lights"]
+position = Vector2(3418.56, 1354.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2a", "lights_3c", "lights_4b", "lights_5b", "lights_rings", "lights_pf", "lights_cobra_ring_b"]
+
+[node name="gl_cobra_ring_b_4" type="Sprite2D" parent="lights"]
+position = Vector2(3418.56, 1354.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2b", "lights_3a", "lights_4b", "lights_5e", "lights_rings", "lights_pf", "lights_cobra_ring_b"]
+
+[node name="gl_cobra_ring_b_5" type="Sprite2D" parent="lights"]
+position = Vector2(3418.56, 1354.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2a", "lights_3b", "lights_4c", "lights_5c", "lights_rings", "lights_pf", "lights_cobra_ring_b"]
+
+[node name="gl_cobra_ring_b_6" type="Sprite2D" parent="lights"]
+position = Vector2(3418.56, 1354.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2b", "lights_3c", "lights_4c", "lights_5e", "lights_rings", "lights_pf", "lights_cobra_ring_b"]
+
+[node name="gl_cobra_ring_b_7" type="Sprite2D" parent="lights"]
+position = Vector2(3418.56, 1354.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2a", "lights_3a", "lights_4d", "lights_5d", "lights_rings", "lights_pf", "lights_cobra_ring_b"]
+
+[node name="gl_cobra_ring_b_8" type="Sprite2D" parent="lights"]
+position = Vector2(3418.56, 1354.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2b", "lights_3b", "lights_4d", "lights_5e", "lights_rings", "lights_pf", "lights_cobra_ring_b"]
+
+[node name="gl_cobra_ring_c_1" type="Sprite2D" parent="lights"]
+position = Vector2(3283.56, 1350.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2a", "lights_3a", "lights_4a", "lights_5a", "lights_rings", "lights_pf", "lights_cobra_ring_c"]
+
+[node name="gl_cobra_ring_c_2" type="Sprite2D" parent="lights"]
+position = Vector2(3283.56, 1350.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2b", "lights_3b", "lights_4a", "lights_5e", "lights_rings", "lights_pf", "lights_cobra_ring_c"]
+
+[node name="gl_cobra_ring_c_3" type="Sprite2D" parent="lights"]
+position = Vector2(3283.56, 1350.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2a", "lights_3c", "lights_4b", "lights_5b", "lights_rings", "lights_pf", "lights_cobra_ring_c"]
+
+[node name="gl_cobra_ring_c_4" type="Sprite2D" parent="lights"]
+position = Vector2(3283.56, 1350.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2b", "lights_3a", "lights_4b", "lights_5e", "lights_rings", "lights_pf", "lights_cobra_ring_c"]
+
+[node name="gl_cobra_ring_c_5" type="Sprite2D" parent="lights"]
+position = Vector2(3283.56, 1350.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2a", "lights_3b", "lights_4c", "lights_5c", "lights_rings", "lights_pf", "lights_cobra_ring_c"]
+
+[node name="gl_cobra_ring_c_6" type="Sprite2D" parent="lights"]
+position = Vector2(3283.56, 1350.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2b", "lights_3c", "lights_4c", "lights_5e", "lights_rings", "lights_pf", "lights_cobra_ring_c"]
+
+[node name="gl_cobra_ring_c_7" type="Sprite2D" parent="lights"]
+position = Vector2(3283.56, 1350.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2a", "lights_3a", "lights_4d", "lights_5d", "lights_rings", "lights_pf", "lights_cobra_ring_c"]
+
+[node name="gl_cobra_ring_c_8" type="Sprite2D" parent="lights"]
+position = Vector2(3283.56, 1350.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2b", "lights_3b", "lights_4d", "lights_5e", "lights_rings", "lights_pf", "lights_cobra_ring_c"]
+
+[node name="gl_cobra_ring_d_1" type="Sprite2D" parent="lights"]
+position = Vector2(3161.56, 1350.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2a", "lights_3a", "lights_4a", "lights_5a", "lights_rings", "lights_pf", "lights_cobra_ring_d"]
+
+[node name="gl_cobra_ring_d_2" type="Sprite2D" parent="lights"]
+position = Vector2(3161.56, 1350.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2b", "lights_3b", "lights_4a", "lights_5e", "lights_rings", "lights_pf", "lights_cobra_ring_d"]
+
+[node name="gl_cobra_ring_d_3" type="Sprite2D" parent="lights"]
+position = Vector2(3161.56, 1350.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2a", "lights_3c", "lights_4b", "lights_5b", "lights_rings", "lights_pf", "lights_cobra_ring_d"]
+
+[node name="gl_cobra_ring_d_4" type="Sprite2D" parent="lights"]
+position = Vector2(3161.56, 1350.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2b", "lights_3a", "lights_4b", "lights_5e", "lights_rings", "lights_pf", "lights_cobra_ring_d"]
+
+[node name="gl_cobra_ring_d_5" type="Sprite2D" parent="lights"]
+position = Vector2(3161.56, 1350.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2a", "lights_3b", "lights_4c", "lights_5c", "lights_rings", "lights_pf", "lights_cobra_ring_d"]
+
+[node name="gl_cobra_ring_d_6" type="Sprite2D" parent="lights"]
+position = Vector2(3161.56, 1350.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2b", "lights_3c", "lights_4c", "lights_5e", "lights_rings", "lights_pf", "lights_cobra_ring_d"]
+
+[node name="gl_cobra_ring_d_7" type="Sprite2D" parent="lights"]
+position = Vector2(3161.56, 1350.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2a", "lights_3a", "lights_4d", "lights_5d", "lights_rings", "lights_pf", "lights_cobra_ring_d"]
+
+[node name="gl_cobra_ring_d_8" type="Sprite2D" parent="lights"]
+position = Vector2(3161.56, 1350.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_2b", "lights_3b", "lights_4d", "lights_5e", "lights_rings", "lights_pf", "lights_cobra_ring_d"]
+
+[node name="gl_ss_elbow_downwards" type="Sprite2D" parent="lights"]
+position = Vector2(3128.56, 449.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_sequence_shots"]
+
+[node name="gl_ss_elbow_upwards" type="Sprite2D" parent="lights"]
+position = Vector2(3128.56, 449.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_sequence_shots"]
+
+[node name="gl_ss_horseshoe_clockwise" type="Sprite2D" parent="lights"]
+position = Vector2(3128.56, 449.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_sequence_shots"]
+
+[node name="gl_ss_horseshoe_widdershins" type="Sprite2D" parent="lights"]
+position = Vector2(3128.56, 449.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_sequence_shots"]
+
+[node name="gl_ss_left_orbit_open" type="Sprite2D" parent="lights"]
+position = Vector2(3128.56, 449.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_sequence_shots"]
+
+[node name="gl_ss_left_orbit_closed" type="Sprite2D" parent="lights"]
+position = Vector2(3128.56, 449.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_sequence_shots"]
+
+[node name="gl_ss_right_orbit_open" type="Sprite2D" parent="lights"]
+position = Vector2(3128.56, 449.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_sequence_shots"]
+
+[node name="gl_ss_right_orbit_closed" type="Sprite2D" parent="lights"]
+position = Vector2(3128.56, 449.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_sequence_shots"]
+
+[node name="gl_ss_right_ramp_summit" type="Sprite2D" parent="lights"]
+position = Vector2(3128.56, 449.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_sequence_shots"]
+
+[node name="gl_ss_right_ramp_travel" type="Sprite2D" parent="lights"]
+position = Vector2(3128.56, 449.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_sequence_shots"]
+
+[node name="gl_ss_right_outlane_escape" type="Sprite2D" parent="lights"]
+position = Vector2(3128.56, 449.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_sequence_shots"]
+
+[node name="gl_ss_s_ramp_summit" type="Sprite2D" parent="lights"]
+position = Vector2(3128.56, 449.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_sequence_shots"]
+
+[node name="gl_ss_s_ramp_travel" type="Sprite2D" parent="lights"]
+position = Vector2(3128.56, 449.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_sequence_shots"]
+
+[node name="gl_ss_subway_travel" type="Sprite2D" parent="lights"]
+position = Vector2(3128.56, 449.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_generated", "lights_sequence_shots"]
+
+[node name="gi_horseshoe_behind" type="Sprite2D" parent="lights"]
+position = Vector2(1681.56, 751.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_5a", "lights_pf", "lights_gi"]
+
+[node name="gi_burn_after" type="Sprite2D" parent="lights"]
+position = Vector2(1681.56, 751.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_5b", "lights_pf", "lights_gi"]
+
+[node name="l_burn_n" type="Sprite2D" parent="lights"]
+position = Vector2(1428.56, 131.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4d", "lights_5d", "lights_pf", "lights_burn"]
+
+[node name="l_burn_r" type="Sprite2D" parent="lights"]
+position = Vector2(1428.56, 131.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4c", "lights_5c", "lights_pf", "lights_burn"]
+
+[node name="l_burn_u" type="Sprite2D" parent="lights"]
+position = Vector2(1428.56, 131.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3c", "lights_4b", "lights_5b", "lights_pf", "lights_burn"]
+
+[node name="l_burn_b" type="Sprite2D" parent="lights"]
+position = Vector2(1428.56, 131.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3b", "lights_4a", "lights_5a", "lights_pf", "lights_burn"]
+
+[node name="gi_blue_target_back" type="Sprite2D" parent="lights"]
+position = Vector2(870, 425)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_5a", "lights_pf", "lights_gi"]
+
+[node name="l_captive_ball_ring_1" type="Sprite2D" parent="lights"]
+position = Vector2(963.556, 832.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3b", "lights_4a", "lights_5a", "lights_pf", "lights_captive_ring"]
+
+[node name="l_captive_ball_ring_2" type="Sprite2D" parent="lights"]
+position = Vector2(963.556, 832.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3c", "lights_4a", "lights_5e", "lights_pf", "lights_captive_ring"]
+
+[node name="l_captive_ball_ring_3" type="Sprite2D" parent="lights"]
+position = Vector2(963.556, 832.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4b", "lights_5b", "lights_pf", "lights_captive_ring"]
+
+[node name="l_captive_ball_ring_4" type="Sprite2D" parent="lights"]
+position = Vector2(963.556, 832.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_5e", "lights_pf", "lights_captive_ring"]
+
+[node name="l_captive_ball_ring_5" type="Sprite2D" parent="lights"]
+position = Vector2(963.556, 832.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3c", "lights_4c", "lights_5c", "lights_pf", "lights_captive_ring"]
+
+[node name="l_captive_ball_ring_6" type="Sprite2D" parent="lights"]
+position = Vector2(963.556, 832.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3a", "lights_4c", "lights_5e", "lights_pf", "lights_captive_ring"]
+
+[node name="l_captive_ball_ring_7" type="Sprite2D" parent="lights"]
+position = Vector2(963.556, 832.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3b", "lights_4d", "lights_5d", "lights_pf", "lights_captive_ring"]
+
+[node name="l_captive_ball_ring_8" type="Sprite2D" parent="lights"]
+position = Vector2(963.556, 832.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3c", "lights_4d", "lights_5e", "lights_pf", "lights_captive_ring"]
+
+[node name="l_captive_ball_single" type="Sprite2D" parent="lights"]
+position = Vector2(963.556, 832.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4d", "lights_5e", "lights_pf"]
+
+[node name="gi_sling_right_top" type="Sprite2D" parent="lights"]
+position = Vector2(1881.56, 2610.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_5a", "lights_pf"]
+
+[node name="gi_sling_right_bottom" type="Sprite2D" parent="lights"]
+position = Vector2(1881.56, 2610.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_5b", "lights_pf", "lights_gi"]
+
+[node name="gi_right_flipper_top" type="Sprite2D" parent="lights"]
+position = Vector2(1970.56, 2944.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4c", "lights_5c", "lights_pf", "lights_gi", "l_right_outlane", "lights_ball_save"]
+
+[node name="gi_right_flipper_bottom" type="Sprite2D" parent="lights"]
+position = Vector2(1970.56, 2944.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4d", "lights_5d", "lights_pf", "lights_gi", "l_right_inlane", "lights_ball_save"]
+
+[node name="l_sling_post_ring_right_1" type="Sprite2D" parent="lights"]
+position = Vector2(1889.56, 2773.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3b", "lights_4a", "lights_5a", "lights_cab", "lights_sling_post_ring_right"]
+
+[node name="l_sling_post_ring_right_2" type="Sprite2D" parent="lights"]
+position = Vector2(1889.56, 2773.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3c", "lights_4a", "lights_5e", "lights_cab", "lights_sling_post_ring_right"]
+
+[node name="l_sling_post_ring_right_3" type="Sprite2D" parent="lights"]
+position = Vector2(1889.56, 2773.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4b", "lights_5b", "lights_cab", "lights_sling_post_ring_right"]
+
+[node name="l_sling_post_ring_right_4" type="Sprite2D" parent="lights"]
+position = Vector2(1889.56, 2773.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_5e", "lights_cab", "lights_sling_post_ring_right"]
+
+[node name="l_sling_post_ring_right_5" type="Sprite2D" parent="lights"]
+position = Vector2(1889.56, 2773.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3c", "lights_4c", "lights_5c", "lights_cab", "lights_sling_post_ring_right"]
+
+[node name="l_sling_post_ring_right_6" type="Sprite2D" parent="lights"]
+position = Vector2(1889.56, 2773.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3a", "lights_4c", "lights_5e", "lights_cab", "lights_sling_post_ring_right"]
+
+[node name="l_sling_post_ring_right_7" type="Sprite2D" parent="lights"]
+position = Vector2(1889.56, 2773.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3b", "lights_4d", "lights_5d", "lights_cab", "lights_sling_post_ring_right"]
+
+[node name="l_sling_post_ring_right_8" type="Sprite2D" parent="lights"]
+position = Vector2(1889.56, 2773.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3c", "lights_4d", "lights_5e", "lights_cab", "lights_sling_post_ring_right"]
+
+[node name="gi_sling_left_top" type="Sprite2D" parent="lights"]
+position = Vector2(951.556, 2578.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_5a", "lights_pf"]
+
+[node name="gi_sling_left_bottom" type="Sprite2D" parent="lights"]
+position = Vector2(951.556, 2578.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_5b", "lights_pf", "lights_gi"]
+
+[node name="l_sling_post_ring_left_1" type="Sprite2D" parent="lights"]
+position = Vector2(993.556, 2844.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_5a", "lights_cab", "lights_sling_post_ring_left"]
+
+[node name="l_sling_post_ring_left_2" type="Sprite2D" parent="lights"]
+position = Vector2(993.556, 2844.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4a", "lights_5e", "lights_cab", "lights_sling_post_ring_left"]
+
+[node name="l_sling_post_ring_left_3" type="Sprite2D" parent="lights"]
+position = Vector2(993.556, 2844.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3c", "lights_4b", "lights_5b", "lights_cab", "lights_sling_post_ring_left"]
+
+[node name="l_sling_post_ring_left_4" type="Sprite2D" parent="lights"]
+position = Vector2(993.556, 2844.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3a", "lights_4b", "lights_5e", "lights_cab", "lights_sling_post_ring_left"]
+
+[node name="l_sling_post_ring_left_5" type="Sprite2D" parent="lights"]
+position = Vector2(993.556, 2844.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3b", "lights_4c", "lights_5c", "lights_cab", "lights_sling_post_ring_left"]
+
+[node name="l_sling_post_ring_left_6" type="Sprite2D" parent="lights"]
+position = Vector2(993.556, 2844.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3c", "lights_4c", "lights_5e", "lights_cab", "lights_sling_post_ring_left"]
+
+[node name="l_sling_post_ring_left_7" type="Sprite2D" parent="lights"]
+position = Vector2(993.556, 2844.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4d", "lights_5d", "lights_cab", "lights_sling_post_ring_left"]
+
+[node name="l_sling_post_ring_left_8" type="Sprite2D" parent="lights"]
+position = Vector2(993.556, 2844.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4d", "lights_5e", "lights_cab", "lights_sling_post_ring_left"]
+
+[node name="gi_left_flipper_top" type="Sprite2D" parent="lights"]
+position = Vector2(862.556, 3005.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4c", "lights_5c", "lights_pf", "lights_gi", "l_left_outlane", "lights_ball_save"]
+
+[node name="gi_left_flipper_bottom" type="Sprite2D" parent="lights"]
+position = Vector2(862.556, 3005.56)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4d", "lights_5d", "lights_pf", "lights_gi", "l_left_inlane", "lights_ball_save"]
+
+[node name="l_pop_ring_b_1" type="Sprite2D" parent="lights"]
+position = Vector2(1608.56, 449.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_5a", "lights_pf", "lights_pop_ring_b", "lights_pops"]
+
+[node name="l_pop_ring_b_2" type="Sprite2D" parent="lights"]
+position = Vector2(1608.56, 449.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4a", "lights_5e", "lights_pf", "lights_pop_ring_b", "lights_pops"]
+
+[node name="l_pop_ring_b_3" type="Sprite2D" parent="lights"]
+position = Vector2(1608.56, 449.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3c", "lights_4b", "lights_5b", "lights_pf", "lights_pop_ring_b", "lights_pops"]
+
+[node name="l_pop_ring_b_4" type="Sprite2D" parent="lights"]
+position = Vector2(1608.56, 449.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3a", "lights_4b", "lights_5e", "lights_pf", "lights_pop_ring_b", "lights_pops"]
+
+[node name="l_pop_ring_b_5" type="Sprite2D" parent="lights"]
+position = Vector2(1608.56, 449.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3b", "lights_4c", "lights_5c", "lights_pf", "lights_pop_ring_b", "lights_pops"]
+
+[node name="l_pop_ring_b_6" type="Sprite2D" parent="lights"]
+position = Vector2(1608.56, 449.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3c", "lights_4c", "lights_5e", "lights_pf", "lights_pop_ring_b", "lights_pops"]
+
+[node name="l_pop_ring_b_7" type="Sprite2D" parent="lights"]
+position = Vector2(1608.56, 449.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4d", "lights_5d", "lights_pf", "lights_pop_ring_b", "lights_pops"]
+
+[node name="l_pop_ring_b_8" type="Sprite2D" parent="lights"]
+position = Vector2(1608.56, 449.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4d", "lights_5e", "lights_pf", "lights_pop_ring_b", "lights_pops"]
+
+[node name="l_pop_ring_c_1" type="Sprite2D" parent="lights"]
+position = Vector2(1912.56, 354.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3c", "lights_4a", "lights_5a", "lights_pf", "lights_pop_ring_c", "lights_pops"]
+
+[node name="l_pop_ring_c_2" type="Sprite2D" parent="lights"]
+position = Vector2(1912.56, 354.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3a", "lights_4a", "lights_5e", "lights_pf", "lights_pop_ring_c", "lights_pops"]
+
+[node name="l_pop_ring_c_3" type="Sprite2D" parent="lights"]
+position = Vector2(1912.56, 354.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3b", "lights_4b", "lights_5b", "lights_pf", "lights_pop_ring_c", "lights_pops"]
+
+[node name="l_pop_ring_c_4" type="Sprite2D" parent="lights"]
+position = Vector2(1912.56, 354.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3c", "lights_4b", "lights_5e", "lights_pf", "lights_pop_ring_c", "lights_pops"]
+
+[node name="l_pop_ring_c_5" type="Sprite2D" parent="lights"]
+position = Vector2(1912.56, 354.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4c", "lights_5c", "lights_pf", "lights_pop_ring_c", "lights_pops"]
+
+[node name="l_pop_ring_c_6" type="Sprite2D" parent="lights"]
+position = Vector2(1912.56, 354.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4c", "lights_5e", "lights_pf", "lights_pop_ring_c", "lights_pops"]
+
+[node name="l_pop_ring_c_7" type="Sprite2D" parent="lights"]
+position = Vector2(1912.56, 354.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3c", "lights_4d", "lights_5d", "lights_pf", "lights_pop_ring_c", "lights_pops"]
+
+[node name="l_pop_ring_c_8" type="Sprite2D" parent="lights"]
+position = Vector2(1912.56, 354.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3a", "lights_4d", "lights_5e", "lights_pf", "lights_pop_ring_c", "lights_pops"]
+
+[node name="l_pop_ring_a_1" type="Sprite2D" parent="lights"]
+position = Vector2(1146.56, 399.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3b", "lights_4a", "lights_5a", "lights_pf", "lights_pop_ring_a", "lights_pops"]
+
+[node name="l_pop_ring_a_2" type="Sprite2D" parent="lights"]
+position = Vector2(1146.56, 399.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3c", "lights_4a", "lights_5e", "lights_pf", "lights_pop_ring_a", "lights_pops"]
+
+[node name="l_pop_ring_a_3" type="Sprite2D" parent="lights"]
+position = Vector2(1146.56, 399.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4b", "lights_5b", "lights_pf", "lights_pop_ring_a", "lights_pops"]
+
+[node name="l_pop_ring_a_4" type="Sprite2D" parent="lights"]
+position = Vector2(1146.56, 399.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_5e", "lights_pf", "lights_pop_ring_a", "lights_pops"]
+
+[node name="l_pop_ring_a_5" type="Sprite2D" parent="lights"]
+position = Vector2(1146.56, 399.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3c", "lights_4c", "lights_5c", "lights_pf", "lights_pop_ring_a", "lights_pops"]
+
+[node name="l_pop_ring_a_6" type="Sprite2D" parent="lights"]
+position = Vector2(1146.56, 399.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3a", "lights_4c", "lights_5e", "lights_pf", "lights_pop_ring_a", "lights_pops"]
+
+[node name="l_pop_ring_a_7" type="Sprite2D" parent="lights"]
+position = Vector2(1146.56, 399.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3b", "lights_4d", "lights_5d", "lights_pf", "lights_pop_ring_a", "lights_pops"]
+
+[node name="l_pop_ring_a_8" type="Sprite2D" parent="lights"]
+position = Vector2(1146.56, 399.556)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3c", "lights_4d", "lights_5e", "lights_pf", "lights_pop_ring_a", "lights_pops"]
+
+[node name="vlight_for_generated_example_mode" type="Sprite2D" parent="lights"]
+position = Vector2(-212.444, 62.5555)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_virtual"]
+
+[node name="vlight_ball_1" type="Sprite2D" parent="lights"]
+position = Vector2(-212.444, 62.5555)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_virtual"]
+
+[node name="vlight_ball_2" type="Sprite2D" parent="lights"]
+position = Vector2(-212.444, 62.5555)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_virtual"]
+
+[node name="vlight_ball_3" type="Sprite2D" parent="lights"]
+position = Vector2(-212.444, 62.5555)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_virtual"]
+
+[node name="vlight_tilt" type="Sprite2D" parent="lights"]
+position = Vector2(-212.444, 62.5555)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_virtual"]
+
+[node name="vlight_game_over" type="Sprite2D" parent="lights"]
+position = Vector2(-212.444, 62.5555)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_virtual"]
+
+[node name="vlight_player_1" type="Sprite2D" parent="lights"]
+position = Vector2(-212.444, 62.5555)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_virtual"]
+
+[node name="vlight_player_2" type="Sprite2D" parent="lights"]
+position = Vector2(-212.444, 62.5555)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_virtual"]
+
+[node name="vlight_player_3" type="Sprite2D" parent="lights"]
+position = Vector2(-212.444, 62.5555)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_virtual"]
+
+[node name="vlight_player_4" type="Sprite2D" parent="lights"]
+position = Vector2(-212.444, 62.5555)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_virtual"]
+
+[node name="vlight_left_inlane_qualified" type="Sprite2D" parent="lights"]
+position = Vector2(-212.444, 62.5555)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_virtual"]
+
+[node name="vlight_right_inlane_qualified" type="Sprite2D" parent="lights"]
+position = Vector2(-212.444, 62.5555)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_virtual"]
+
+[node name="l_mini_cab_left_secondary" type="Sprite2D" parent="lights"]
+position = Vector2(-95.4444, 65.5555)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3a", "lights_4a", "lights_5a", "lights_cab"]
+
+[node name="l_mini_cab_left" type="Sprite2D" parent="lights"]
+position = Vector2(-95.4444, 65.5555)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2b", "lights_3b", "lights_4b", "lights_5b", "lights_cab"]
+
+[node name="l_mini_cab_right" type="Sprite2D" parent="lights"]
+position = Vector2(-95.4444, 65.5555)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")
+tags = ["lights_2a", "lights_3c", "lights_4c", "lights_5c", "lights_cab"]
+
+[node name="l_mini_cab_right_secondary" type="Sprite2D" parent="lights"]
+position = Vector2(-95.4444, 65.5555)
+scale = Vector2(0.474074, 0.474074)
+texture = ExtResource("2_vgxr8")
+script = ExtResource("2_omy47")

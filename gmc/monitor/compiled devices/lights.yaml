@@ -1,0 +1,1349 @@
+#config_version=6
+
+# Just putting one light per entire section for now,
+# as the code will generally just use tags to set
+# entire sections at once instead of individuall addressing
+
+lights:
+  # Test strip on neuron:
+  l_test_1:
+    number: neuron-4-1
+    type: rgb
+    tags: lights_bb, lights_bb_trogdor, lights_2a
+
+  l_test_2:
+    number: neuron-4-2
+    type: rgb
+    tags: lights_bb, lights_bb_flames, lights_2b
+
+  l_test_3:
+    number: neuron-4-3
+    type: rgb
+    tags: lights_bb, lights_bb_characters, lights_2a
+
+  # Letters: TROGDOR! - note two O's and R's
+  l_bb_trogdor_t_1:
+    number: 7700
+    platform: virtual
+    type: rgb
+    tags: lights_bb, lights_bb_trogdor, lights_bb_trogdor_t
+
+  l_bb_trogdor_r_1:
+    number: 7702
+    platform: virtual
+    type: rgb
+    tags: lights_bb, lights_bb_trogdor, lights_bb_trogdor_r
+
+  l_bb_trogdor_o_1:
+    number: 7704
+    platform: virtual
+    type: rgb
+    tags: lights_bb, lights_bb_trogdor, lights_bb_trogdor_o
+
+  l_bb_trogdor_g_1:
+    number: 7706
+    platform: virtual
+    type: rgb
+    tags: lights_bb, lights_bb_trogdor, lights_bb_trogdor_g
+
+  l_bb_trogdor_d_1:
+    number: 7708
+    platform: virtual
+    type: rgb
+    tags: lights_bb, lights_bb_trogdor, lights_bb_trogdor_d
+
+  l_bb_trogdor_o2_1:
+    number: 7710
+    platform: virtual
+    type: rgb
+    tags: lights_bb, lights_bb_trogdor, lights_bb_trogdor_o2
+
+  l_bb_trogdor_r2_1:
+    number: 7712
+    platform: virtual
+    type: rgb
+    tags: lights_bb, lights_bb_trogdor, lights_bb_trogdor_r2
+
+  l_bb_trogdor_!_1:
+    number: 7714
+    platform: virtual
+    type: rgb
+    tags: lights_bb, lights_bb_trogdor, lights_bb_trogdor_bang
+
+  # Characters: Trogdor, Knight, Peasant
+  l_bb_character_trogdor_1: #5-10?
+    number: 7720
+    platform: virtual
+    type: rgb
+    default_on_color: green
+    tags: lights_bb, lights_bb_characters, lights_bb_char_trogdor
+
+  l_bb_character_knight_1: #3-8?
+    number: 7730
+    platform: virtual
+    type: rgb
+    default_on_color: blue
+    tags: lights_bb, lights_bb_characters, lights_bb_char_knight
+
+  l_bb_character_peasant_1: #3-8?
+    number: 7740
+    platform: virtual
+    type: rgb
+    default_on_color: tan
+    tags: lights_bb, lights_bb_characters, lights_bb_char_peasant
+
+  # Flames: Trog breath, peasant head, background
+  l_bb_flame_trogdor_outer_1: #2-5?
+    number: 7750
+    platform: virtual
+    type: rgb
+    default_on_color: yellow
+    tags: lights_bb, lights_bb_flames, lights_bb_flames_trogdor, lights_bb_flames_trogdor_outer
+
+  l_bb_flame_trogdor_inner_1: #2-4?
+    number: 7755
+    platform: virtual
+    type: rgb
+    default_on_color: orange
+    tags: lights_bb, lights_bb_flames, lights_bb_flames_trogdor, lights_bb_flames_trogdor_inner
+
+  l_bb_flame_peasant_1: #2-4?
+    number: 7760
+    platform: virtual
+    type: rgb
+    default_on_color: yellow
+    tags: lights_bb, lights_bb_flames, lights_bb_flames_peasant
+
+  l_bb_flame_background_bottom_1: #7-14?
+    number: 7770
+    platform: virtual
+    type: rgb
+    default_on_color: red
+    tags: lights_bb, lights_bb_flames, lights_bb_flames_background, lights_bb_flames_background_bottom
+
+  l_bb_flame_background_top_1: #5-10?
+    number: 7790
+    platform: virtual
+    type: rgb
+    default_on_color: red
+    tags: lights_bb, lights_bb_flames, lights_bb_flames_background, lights_bb_flames_background_top
+
+  # Backbox GI
+  l_bb_gi_1: #5-32?
+    number: 7800
+    platform: virtual
+    type: rgb
+    tags: lights_bb, lights_bb_gi, lights_gi
+
+  # full strip, top
+  l_bb_edge_top_1:
+    number: neuron-1-1
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_bb_edge, lights_bb_edge_top
+  l_bb_edge_top_2:
+    number: neuron-1-2
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b, lights_bb_edge, lights_bb_edge_top
+  l_bb_edge_top_3:
+    number: neuron-1-3
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_bb_edge, lights_bb_edge_top
+  l_bb_edge_top_4:
+    number: neuron-1-4
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b, lights_bb_edge, lights_bb_edge_top
+  l_bb_edge_top_5:
+    number: neuron-1-5
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_bb_edge, lights_bb_edge_top
+  l_bb_edge_top_6:
+    number: neuron-1-6
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b, lights_bb_edge, lights_bb_edge_top
+  l_bb_edge_top_7:
+    number: neuron-1-7
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_bb_edge, lights_bb_edge_top
+  l_bb_edge_top_8:
+    number: neuron-1-8
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b, lights_bb_edge, lights_bb_edge_top
+  l_bb_edge_top_9:
+    number: neuron-1-9
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_bb_edge, lights_bb_edge_top
+  l_bb_edge_top_10:
+    number: neuron-1-10
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b, lights_bb_edge, lights_bb_edge_top
+  l_bb_edge_top_11:
+    number: neuron-1-11
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_bb_edge, lights_bb_edge_top
+  l_bb_edge_top_12:
+    number: neuron-1-12
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b, lights_bb_edge, lights_bb_edge_top
+  l_bb_edge_top_13:
+    number: neuron-1-13
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_bb_edge, lights_bb_edge_top
+  l_bb_edge_top_14:
+    number: neuron-1-14
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b, lights_bb_edge, lights_bb_edge_top
+  l_bb_edge_top_15:
+    number: neuron-1-15
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_bb_edge, lights_bb_edge_top
+  l_bb_edge_top_16:
+    number: neuron-1-16
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b, lights_bb_edge, lights_bb_edge_top
+  l_bb_edge_top_17:
+    number: neuron-1-17
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_bb_edge, lights_bb_edge_top
+  l_bb_edge_top_18:
+    number: neuron-1-18
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b, lights_bb_edge, lights_bb_edge_top
+  l_bb_edge_top_19:
+    number: neuron-1-19
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_bb_edge, lights_bb_edge_top
+
+  l_bb_edge_right_1:
+    number: neuron-1-20
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b, lights_bb_edge, lights_bb_edge_right
+  l_bb_edge_right_2:
+    number: neuron-1-21
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_bb_edge, lights_bb_edge_right
+  l_bb_edge_right_3:
+    number: neuron-1-22
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b, lights_bb_edge, lights_bb_edge_right
+  l_bb_edge_right_4:
+    number: neuron-1-23
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_bb_edge, lights_bb_edge_right
+  l_bb_edge_right_5:
+    number: neuron-1-24
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b, lights_bb_edge, lights_bb_edge_right
+  l_bb_edge_right_6:
+    number: neuron-1-25
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_bb_edge, lights_bb_edge_right
+  l_bb_edge_right_7:
+    number: neuron-1-26
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b, lights_bb_edge, lights_bb_edge_right
+  l_bb_edge_right_8:
+    number: neuron-1-27
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_bb_edge, lights_bb_edge_right
+  l_bb_edge_right_9:
+    number: neuron-1-28
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b, lights_bb_edge, lights_bb_edge_right
+  l_bb_edge_right_10:
+    number: neuron-1-29
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_bb_edge, lights_bb_edge_right
+  l_bb_edge_right_11:
+    number: neuron-1-30
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b, lights_bb_edge, lights_bb_edge_right
+  l_bb_edge_right_12:
+    number: neuron-1-31
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_bb_edge, lights_bb_edge_right
+  l_bb_edge_right_13:
+    number: neuron-1-32
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b, lights_bb_edge, lights_bb_edge_right
+
+  l_bb_edge_left_1:
+    number: neuron-2-1
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b, lights_bb_edge, lights_bb_edge_left
+  l_bb_edge_left_2:
+    number: neuron-2-2
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_bb_edge, lights_bb_edge_left
+  l_bb_edge_left_3:
+    number: neuron-2-3
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b, lights_bb_edge, lights_bb_edge_left
+  l_bb_edge_left_4:
+    number: neuron-2-4
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_bb_edge, lights_bb_edge_left
+  l_bb_edge_left_5:
+    number: neuron-2-5
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b, lights_bb_edge, lights_bb_edge_left
+  l_bb_edge_left_6:
+    number: neuron-2-6
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_bb_edge, lights_bb_edge_left
+  l_bb_edge_left_7:
+    number: neuron-2-7
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b, lights_bb_edge, lights_bb_edge_left
+  l_bb_edge_left_8:
+    number: neuron-2-8
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_bb_edge, lights_bb_edge_left
+  l_bb_edge_left_9:
+    number: neuron-2-9
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b, lights_bb_edge, lights_bb_edge_left
+  l_bb_edge_left_10:
+    number: neuron-2-10
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_bb_edge, lights_bb_edge_left
+  l_bb_edge_left_11:
+    number: neuron-2-11
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b, lights_bb_edge, lights_bb_edge_left
+  l_bb_edge_left_12:
+    number: neuron-2-12
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_bb_edge, lights_bb_edge_left
+  l_bb_edge_left_13:
+    number: neuron-2-13
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b, lights_bb_edge, lights_bb_edge_left
+
+  # playfield multipliers
+  l_pf_x2:
+    number: 9001
+    platform: virtual
+    type: rgb
+    tags: lights_2b, lights_3a, lights_4a, lights_5a, lights_pf, lights_multipliers
+  l_pf_x3:
+    number: 9002
+    platform: virtual
+    type: rgb
+    tags: lights_2a, lights_3b, lights_4b, lights_5b, lights_pf, lights_multipliers
+  l_pf_x4:
+    number: 9003
+    platform: virtual
+    type: rgb
+    tags: lights_2b, lights_3c, lights_4c, lights_5c, lights_pf, lights_multipliers
+  l_pf_x5:
+    number: 9004
+    platform: virtual
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4d, lights_5d, lights_pf, lights_multipliers
+
+  # MAJESTY counters (from 12:00 clockwise rotating)
+  l_majesty_1: #Consider splitting into R G and B channels to separately light colors without mounting multiple LED packages into one insert
+    number: 9005
+    platform: virtual
+    type: rgb
+    tags: lights_2a, lights_3b, lights_4a, lights_5e, lights_pf, lights_majesty
+  l_majesty_2:
+    number: 9006
+    platform: virtual
+    type: rgb
+    tags: lights_2b, lights_3c, lights_4b, lights_5a, lights_pf, lights_majesty
+  l_majesty_3:
+    number: 9007
+    platform: virtual
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4c, lights_5b, lights_pf, lights_majesty
+  l_majesty_4:
+    number: 9008
+    platform: virtual
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4d, lights_5c, lights_pf, lights_majesty
+  l_majesty_5:
+    number: 9009
+    platform: virtual
+    type: rgb
+    tags: lights_2a, lights_3c, lights_4a, lights_5d, lights_pf, lights_majesty
+  l_majesty_6:
+    number: 9010
+    platform: virtual
+    type: rgb
+    tags: lights_2b, lights_3a, lights_4b, lights_5e, lights_pf, lights_majesty
+
+
+  # Inlanes and Outlanes
+  # l_left_outlane: #GSPF assigned to gi left flipper top
+  #   number: 9015
+  #   platform: virtual
+  #   type: rgb
+  #   tags: lights_2a, lights_3c, lights_4a, lights_5a, lights_pf, lights_lanes, lights_outlanes
+  # l_left_inlane: #GSPF assigned to gi left flipper bottom
+  #   number: 9016
+  #   platform: virtual
+  #   type: rgb
+  #   tags: lights_2b, lights_3a, lights_4b, lights_5b, lights_pf, lights_lanes, lights_inlanes
+  # l_right_inlane: #GSPF assigned to gi right flipper bottom
+  #   number: 9017
+  #   platform: virtual
+  #   type: rgb
+  #   tags: lights_2a, lights_3b, lights_4c, lights_5c, lights_pf, lights_lanes, lights_inlanes
+  # l_right_outlane: #GSPF assigned to gi right flipper top
+  #   number: 9018
+  #   platform: virtual
+  #   type: rgb
+  #   tags: lights_2b, lights_3c, lights_4d, lights_5d, lights_pf, lights_lanes, lights_outlanes
+
+  l_drain:
+    number: 9019
+    platform: virtual
+    type: rgb
+    tags: lights_2b, lights_3a, lights_4c, lights_5e, lights_pf, lights_ball_save
+
+  l_spinner_left_flasher:
+    number: 9101
+    platform: virtual
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_5e, lights_flashers
+  l_spinner_left_indicator:
+    number: 9102
+    platform: virtual
+    type: rgb
+    tags: lights_2b, lights_3c, lights_4b, lights_5a, lights_pf
+
+  l_spinner_right_flasher:
+    number: 9103
+    platform: virtual
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4c, lights_5e, lights_flashers
+  l_spinner_right_indicator:
+    number: 9104
+    platform: virtual
+    type: rgb
+    tags: lights_2a, lights_3c, lights_4d, lights_5b, lights_pf
+
+  l_orbit_left:
+    number: 9201
+    platform: virtual
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4c, lights_5a, lights_pf
+
+  l_orbit_right:
+    number: 9202
+    platform: virtual
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4d, lights_5c, lights_pf
+
+  l_vuk_left:
+    number: 9203
+    platform: virtual
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4a, lights_5b, lights_pf
+
+  l_vuk_right:
+    number: 9204
+    platform: virtual
+    type: rgb
+    tags: lights_2a, lights_3c, lights_4b, lights_5d, lights_pf
+
+  l_elbow_lower:
+    number: 9205
+    platform: virtual
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4d, lights_5e, lights_pf
+
+  l_burn_center:
+    number: 9206
+    platform: virtual
+    type: rgb
+    tags: lights_2a, lights_3b, lights_4a, lights_5b, lights_pf
+
+  l_ramp_right:
+    number: 9207
+    platform: virtual
+    type: rgb
+    tags: lights_2a, lights_3c, lights_4c, lights_5e, lights_pf
+
+  l_ramp_left:
+    number: 9208
+    platform: virtual
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4b, lights_5c, lights_pf
+
+  l_loop_left:
+    number: 9209
+    platform: virtual
+    type: rgb
+    tags: lights_2a, lights_3a, lights_4a, lights_5b, lights_pf
+
+  l_loop_right:
+    number: 9210
+    platform: virtual
+    type: rgb
+    tags: lights_2a, lights_3b, lights_4c, lights_5d, lights_pf
+
+  l_gate_left:
+    number: 9211
+    platform: virtual
+    type: rgb
+    tags: lights_2b, lights_3b, lights_4d, lights_5a, lights_pf
+
+  l_gate_right:
+    number: 9212
+    platform: virtual
+    type: rgb
+    tags: lights_2b, lights_3c, lights_4a, lights_5b, lights_pf
+
+  generated_light_1:
+    number: 8801
+    platform: virtual
+    type: rgb
+  gl_ring_a_1:
+    tags: lights_generated,lights_2a,lights_3a,lights_4a,lights_5a,lights_gl_ring_a
+    type: rgb
+    number: 8802
+    platform: virtual
+  gl_ring_a_2:
+    tags: lights_generated,lights_2b,lights_3b,lights_4a,lights_5e,lights_gl_ring_a
+    type: rgb
+    number: 8803
+    platform: virtual
+  gl_ring_a_3:
+    tags: lights_generated,lights_2a,lights_3c,lights_4b,lights_5b,lights_gl_ring_a
+    type: rgb
+    number: 8804
+    platform: virtual
+  gl_ring_a_4:
+    tags: lights_generated,lights_2b,lights_3a,lights_4b,lights_5e,lights_gl_ring_a
+    type: rgb
+    number: 8805
+    platform: virtual
+  gl_ring_a_5:
+    tags: lights_generated,lights_2a,lights_3b,lights_4c,lights_5c,lights_gl_ring_a
+    type: rgb
+    number: 8806
+    platform: virtual
+  gl_ring_a_6:
+    tags: lights_generated,lights_2b,lights_3c,lights_4c,lights_5e,lights_gl_ring_a
+    type: rgb
+    number: 8807
+    platform: virtual
+  gl_ring_a_7:
+    tags: lights_generated,lights_2a,lights_3a,lights_4d,lights_5d,lights_gl_ring_a
+    type: rgb
+    number: 8808
+    platform: virtual
+  gl_ring_a_8:
+    tags: lights_generated,lights_2b,lights_3b,lights_4d,lights_5e,lights_gl_ring_a
+    type: rgb
+    number: 8809
+    platform: virtual
+  gl_grid_1:
+    tags: lights_generated,lights_2a,lights_3a,lights_4a,lights_5a,grid_lights
+    type: rgb
+    number: 8810
+    platform: virtual
+  gl_grid_2:
+    tags: lights_generated,lights_2b,lights_3b,lights_4b,lights_5b,grid_lights
+    type: rgb
+    number: 8811
+    platform: virtual
+  gl_grid_3:
+    tags: lights_generated,lights_2a,lights_3c,lights_4c,lights_5c,grid_lights
+    type: rgb
+    number: 8812
+    platform: virtual
+  gl_grid_4:
+    tags: lights_generated,lights_2b,lights_3a,lights_4d,lights_5d,grid_lights
+    type: rgb
+    number: 8813
+    platform: virtual
+  gl_grid_5:
+    tags: lights_generated,lights_2a,lights_3b,lights_4a,lights_5e,grid_lights
+    type: rgb
+    number: 8814
+    platform: virtual
+  gl_grid_6:
+    tags: lights_generated,lights_2b,lights_3c,lights_4b,lights_5a,grid_lights
+    type: rgb
+    number: 8815
+    platform: virtual
+  gl_grid_7:
+    tags: lights_generated,lights_2a,lights_3a,lights_4c,lights_5b,grid_lights
+    type: rgb
+    number: 8816
+    platform: virtual
+  gl_grid_8:
+    tags: lights_generated,lights_2b,lights_3b,lights_4d,lights_5c,grid_lights
+    type: rgb
+    number: 8817
+    platform: virtual
+  gl_grid_9:
+    tags: lights_generated,lights_2a,lights_3c,lights_4a,lights_5d,grid_lights
+    type: rgb
+    number: 8818
+    platform: virtual
+  gl_cobra_ring_a_1:
+    tags: lights_generated,lights_2a,lights_3a,lights_4a,lights_5a,lights_rings,lights_pf,lights_cobra_ring_a
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-1
+  gl_cobra_ring_a_2:
+    tags: lights_generated,lights_2b,lights_3b,lights_4a,lights_5e,lights_rings,lights_pf,lights_cobra_ring_a
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-2
+  gl_cobra_ring_a_3:
+    tags: lights_generated,lights_2a,lights_3c,lights_4b,lights_5b,lights_rings,lights_pf,lights_cobra_ring_a
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-3
+  gl_cobra_ring_a_4:
+    tags: lights_generated,lights_2b,lights_3a,lights_4b,lights_5e,lights_rings,lights_pf,lights_cobra_ring_a
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-4
+  gl_cobra_ring_a_5:
+    tags: lights_generated,lights_2a,lights_3b,lights_4c,lights_5c,lights_rings,lights_pf,lights_cobra_ring_a
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-5
+  gl_cobra_ring_a_6:
+    tags: lights_generated,lights_2b,lights_3c,lights_4c,lights_5e,lights_rings,lights_pf,lights_cobra_ring_a
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-6
+  gl_cobra_ring_a_7:
+    tags: lights_generated,lights_2a,lights_3a,lights_4d,lights_5d,lights_rings,lights_pf,lights_cobra_ring_a
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-7
+  gl_cobra_ring_a_8:
+    tags: lights_generated,lights_2b,lights_3b,lights_4d,lights_5e,lights_rings,lights_pf,lights_cobra_ring_a
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-8
+  gl_cobra_ring_b_1:
+    tags: lights_generated,lights_2a,lights_3a,lights_4a,lights_5a,lights_rings,lights_pf,lights_cobra_ring_b
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-9
+  gl_cobra_ring_b_2:
+    tags: lights_generated,lights_2b,lights_3b,lights_4a,lights_5e,lights_rings,lights_pf,lights_cobra_ring_b
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-10
+  gl_cobra_ring_b_3:
+    tags: lights_generated,lights_2a,lights_3c,lights_4b,lights_5b,lights_rings,lights_pf,lights_cobra_ring_b
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-11
+  gl_cobra_ring_b_4:
+    tags: lights_generated,lights_2b,lights_3a,lights_4b,lights_5e,lights_rings,lights_pf,lights_cobra_ring_b
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-12
+  gl_cobra_ring_b_5:
+    tags: lights_generated,lights_2a,lights_3b,lights_4c,lights_5c,lights_rings,lights_pf,lights_cobra_ring_b
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-13
+  gl_cobra_ring_b_6:
+    tags: lights_generated,lights_2b,lights_3c,lights_4c,lights_5e,lights_rings,lights_pf,lights_cobra_ring_b
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-14
+  gl_cobra_ring_b_7:
+    tags: lights_generated,lights_2a,lights_3a,lights_4d,lights_5d,lights_rings,lights_pf,lights_cobra_ring_b
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-15
+  gl_cobra_ring_b_8:
+    tags: lights_generated,lights_2b,lights_3b,lights_4d,lights_5e,lights_rings,lights_pf,lights_cobra_ring_b
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-16
+  gl_cobra_ring_c_1:
+    tags: lights_generated,lights_2a,lights_3a,lights_4a,lights_5a,lights_rings,lights_pf,lights_cobra_ring_c
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-17
+  gl_cobra_ring_c_2:
+    tags: lights_generated,lights_2b,lights_3b,lights_4a,lights_5e,lights_rings,lights_pf,lights_cobra_ring_c
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-18
+  gl_cobra_ring_c_3:
+    tags: lights_generated,lights_2a,lights_3c,lights_4b,lights_5b,lights_rings,lights_pf,lights_cobra_ring_c
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-19
+  gl_cobra_ring_c_4:
+    tags: lights_generated,lights_2b,lights_3a,lights_4b,lights_5e,lights_rings,lights_pf,lights_cobra_ring_c
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-20
+  gl_cobra_ring_c_5:
+    tags: lights_generated,lights_2a,lights_3b,lights_4c,lights_5c,lights_rings,lights_pf,lights_cobra_ring_c
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-21
+  gl_cobra_ring_c_6:
+    tags: lights_generated,lights_2b,lights_3c,lights_4c,lights_5e,lights_rings,lights_pf,lights_cobra_ring_c
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-22
+  gl_cobra_ring_c_7:
+    tags: lights_generated,lights_2a,lights_3a,lights_4d,lights_5d,lights_rings,lights_pf,lights_cobra_ring_c
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-23
+  gl_cobra_ring_c_8:
+    tags: lights_generated,lights_2b,lights_3b,lights_4d,lights_5e,lights_rings,lights_pf,lights_cobra_ring_c
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-24
+  gl_cobra_ring_d_1:
+    tags: lights_generated,lights_2a,lights_3a,lights_4a,lights_5a,lights_rings,lights_pf,lights_cobra_ring_d
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-25
+  gl_cobra_ring_d_2:
+    tags: lights_generated,lights_2b,lights_3b,lights_4a,lights_5e,lights_rings,lights_pf,lights_cobra_ring_d
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-26
+  gl_cobra_ring_d_3:
+    tags: lights_generated,lights_2a,lights_3c,lights_4b,lights_5b,lights_rings,lights_pf,lights_cobra_ring_d
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-27
+  gl_cobra_ring_d_4:
+    tags: lights_generated,lights_2b,lights_3a,lights_4b,lights_5e,lights_rings,lights_pf,lights_cobra_ring_d
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-28
+  gl_cobra_ring_d_5:
+    tags: lights_generated,lights_2a,lights_3b,lights_4c,lights_5c,lights_rings,lights_pf,lights_cobra_ring_d
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-29
+  gl_cobra_ring_d_6:
+    tags: lights_generated,lights_2b,lights_3c,lights_4c,lights_5e,lights_rings,lights_pf,lights_cobra_ring_d
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-30
+  gl_cobra_ring_d_7:
+    tags: lights_generated,lights_2a,lights_3a,lights_4d,lights_5d,lights_rings,lights_pf,lights_cobra_ring_d
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-31
+  gl_cobra_ring_d_8:
+    tags: lights_generated,lights_2b,lights_3b,lights_4d,lights_5e,lights_rings,lights_pf,lights_cobra_ring_d
+    type: rgb
+    platform: fast
+    number: exp_playfield-3-32
+  gl_ss_elbow_downwards:
+    tags: lights_generated,lights_sequence_shots
+    number: 8819
+    platform: virtual
+    type: rgb
+  gl_ss_elbow_upwards:
+    tags: lights_generated,lights_sequence_shots
+    number: 8820
+    platform: virtual
+    type: rgb
+  gl_ss_horseshoe_clockwise:
+    tags: lights_generated,lights_sequence_shots
+    number: 8821
+    platform: virtual
+    type: rgb
+  gl_ss_horseshoe_widdershins:
+    tags: lights_generated,lights_sequence_shots
+    number: 8822
+    platform: virtual
+    type: rgb
+  gl_ss_left_orbit_open:
+    tags: lights_generated,lights_sequence_shots
+    number: 8823
+    platform: virtual
+    type: rgb
+  gl_ss_left_orbit_closed:
+    tags: lights_generated,lights_sequence_shots
+    number: 8824
+    platform: virtual
+    type: rgb
+  gl_ss_right_orbit_open:
+    tags: lights_generated,lights_sequence_shots
+    number: 8825
+    platform: virtual
+    type: rgb
+  gl_ss_right_orbit_closed:
+    tags: lights_generated,lights_sequence_shots
+    number: 8826
+    platform: virtual
+    type: rgb
+  gl_ss_right_ramp_summit:
+    tags: lights_generated,lights_sequence_shots
+    number: 8827
+    platform: virtual
+    type: rgb
+  gl_ss_right_ramp_travel:
+    tags: lights_generated,lights_sequence_shots
+    number: 8828
+    platform: virtual
+    type: rgb
+  gl_ss_right_outlane_escape:
+    tags: lights_generated,lights_sequence_shots
+    number: 8829
+    platform: virtual
+    type: rgb
+  gl_ss_s_ramp_summit:
+    tags: lights_generated,lights_sequence_shots
+    number: 8830
+    platform: virtual
+    type: rgb
+  gl_ss_s_ramp_travel:
+    tags: lights_generated,lights_sequence_shots
+    number: 8831
+    platform: virtual
+    type: rgb
+  gl_ss_subway_travel:
+    tags: lights_generated,lights_sequence_shots
+    number: 8832
+    platform: virtual
+    type: rgb
+
+  gi_horseshoe_behind:
+    type: grb
+    number: exp_playfield-1-1
+    tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_pf, lights_gi
+  gi_burn_after:
+    type: grb
+    number: exp_playfield-1-2
+    tags: lights_2b, lights_3b, lights_4b, lights_5b, lights_pf, lights_gi
+
+  # B U R N rollovers: (3-6)
+  l_burn_n:
+    type: grb
+    number: exp_playfield-1-3
+    tags: lights_2b, lights_3b, lights_4d, lights_5d, lights_pf, lights_burn
+  l_burn_r:
+    type: grb
+    number: exp_playfield-1-4
+    tags: lights_2a, lights_3a, lights_4c, lights_5c, lights_pf, lights_burn
+  l_burn_u:
+    type: grb
+    number: exp_playfield-1-5
+    tags: lights_2b, lights_3c, lights_4b, lights_5b, lights_pf, lights_burn
+  l_burn_b:
+    type: grb
+    number: exp_playfield-1-6
+    tags: lights_2a, lights_3b, lights_4a, lights_5a, lights_pf, lights_burn
+
+  gi_blue_target_back:
+    type: grb
+    number: exp_playfield-1-7
+    tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_pf, lights_gi
+
+  # cobra post ring over captive ball: (8-15)
+  l_captive_ball_ring_1:
+    number: exp_playfield-1-8
+    tags: lights_2a, lights_3b, lights_4a, lights_5a, lights_pf, lights_captive_ring
+  l_captive_ball_ring_2:
+    number: exp_playfield-1-9
+    tags: lights_2b, lights_3c, lights_4a, lights_5e, lights_pf, lights_captive_ring
+  l_captive_ball_ring_3:
+    number: exp_playfield-1-10
+    tags: lights_2a, lights_3a, lights_4b, lights_5b, lights_pf, lights_captive_ring
+  l_captive_ball_ring_4:
+    number: exp_playfield-1-11
+    tags: lights_2b, lights_3b, lights_4b, lights_5e, lights_pf, lights_captive_ring
+  l_captive_ball_ring_5:
+    number: exp_playfield-1-12
+    tags: lights_2a, lights_3c, lights_4c, lights_5c, lights_pf, lights_captive_ring
+  l_captive_ball_ring_6:
+    number: exp_playfield-1-13
+    tags: lights_2b, lights_3a, lights_4c, lights_5e, lights_pf, lights_captive_ring
+  l_captive_ball_ring_7:
+    number: exp_playfield-1-14
+    tags: lights_2a, lights_3b, lights_4d, lights_5d, lights_pf, lights_captive_ring
+  l_captive_ball_ring_8:
+    number: exp_playfield-1-15
+    tags: lights_2b, lights_3c, lights_4d, lights_5e, lights_pf, lights_captive_ring
+
+  l_captive_ball_single:
+    number: exp_playfield-1-16
+    type: grb
+    tags: lights_2a, lights_3a, lights_4d, lights_5e, lights_pf
+
+#EXP header #4
+  gi_sling_right_top:
+    type: grb
+    number: exp_playfield-4-1
+    tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_pf
+  gi_sling_right_bottom:
+    type: grb
+    number: exp_playfield-4-2
+    tags: lights_2b, lights_3b, lights_4b, lights_5b, lights_pf, lights_gi
+  gi_right_flipper_top:
+    type: grb
+    number: exp_playfield-4-3
+    tags: lights_2a, lights_3a, lights_4c, lights_5c, lights_pf, lights_gi, l_right_outlane, lights_ball_save
+  gi_right_flipper_bottom:
+    type: grb
+    number: exp_playfield-4-4
+    tags: lights_2b, lights_3b, lights_4d, lights_5d, lights_pf, lights_gi, l_right_inlane, lights_ball_save
+
+# Cobrapin post ring, right side (TODO rename): (5-12)
+  l_sling_post_ring_right_1:
+    number: exp_playfield-4-5
+    tags: lights_2a, lights_3b, lights_4a, lights_5a, lights_cab, lights_sling_post_ring_right
+  l_sling_post_ring_right_2:
+    number: exp_playfield-4-6
+    tags: lights_2b, lights_3c, lights_4a, lights_5e, lights_cab, lights_sling_post_ring_right
+  l_sling_post_ring_right_3:
+    number: exp_playfield-4-7
+    tags: lights_2a, lights_3a, lights_4b, lights_5b, lights_cab, lights_sling_post_ring_right
+  l_sling_post_ring_right_4:
+    number: exp_playfield-4-8
+    tags: lights_2b, lights_3b, lights_4b, lights_5e, lights_cab, lights_sling_post_ring_right
+  l_sling_post_ring_right_5:
+    number: exp_playfield-4-9
+    tags: lights_2a, lights_3c, lights_4c, lights_5c, lights_cab, lights_sling_post_ring_right
+  l_sling_post_ring_right_6:
+    number: exp_playfield-4-10
+    tags: lights_2b, lights_3a, lights_4c, lights_5e, lights_cab, lights_sling_post_ring_right
+  l_sling_post_ring_right_7:
+    number: exp_playfield-4-11
+    tags: lights_2a, lights_3b, lights_4d, lights_5d, lights_cab, lights_sling_post_ring_right
+  l_sling_post_ring_right_8:
+    number: exp_playfield-4-12
+    tags: lights_2b, lights_3c, lights_4d, lights_5e, lights_cab, lights_sling_post_ring_right
+
+  gi_sling_left_top:
+    type: grb
+    number: exp_playfield-4-13
+    tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_pf
+
+  gi_sling_left_bottom:
+    number: exp_playfield-4-14
+    type: grb
+    tags: lights_2b, lights_3b, lights_4b, lights_5b, lights_pf, lights_gi
+
+# Cobrapin post ring, left side (TODO rename): (15-22)
+  l_sling_post_ring_left_1:
+    number: exp_playfield-4-15
+    tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_cab, lights_sling_post_ring_left
+  l_sling_post_ring_left_2:
+    number: exp_playfield-4-16
+    tags: lights_2b, lights_3b, lights_4a, lights_5e, lights_cab, lights_sling_post_ring_left
+  l_sling_post_ring_left_3:
+    number: exp_playfield-4-17
+    tags: lights_2a, lights_3c, lights_4b, lights_5b, lights_cab, lights_sling_post_ring_left
+  l_sling_post_ring_left_4:
+    number: exp_playfield-4-18
+    tags: lights_2b, lights_3a, lights_4b, lights_5e, lights_cab, lights_sling_post_ring_left
+  l_sling_post_ring_left_5:
+    number: exp_playfield-4-19
+    tags: lights_2a, lights_3b, lights_4c, lights_5c, lights_cab, lights_sling_post_ring_left
+  l_sling_post_ring_left_6:
+    number: exp_playfield-4-20
+    tags: lights_2b, lights_3c, lights_4c, lights_5e, lights_cab, lights_sling_post_ring_left
+  l_sling_post_ring_left_7:
+    number: exp_playfield-4-21
+    tags: lights_2a, lights_3a, lights_4d, lights_5d, lights_cab, lights_sling_post_ring_left
+  l_sling_post_ring_left_8:
+    number: exp_playfield-4-22
+    tags: lights_2b, lights_3b, lights_4d, lights_5e, lights_cab, lights_sling_post_ring_left
+
+  gi_left_flipper_top:
+    type: grb
+    number: exp_playfield-4-23
+    tags: lights_2a, lights_3a, lights_4c, lights_5c, lights_pf, lights_gi, l_left_outlane, lights_ball_save
+  gi_left_flipper_bottom:
+    number: exp_playfield-4-24
+    type: grb
+    tags: lights_2b, lights_3b, lights_4d, lights_5d, lights_pf, lights_gi, l_left_inlane, lights_ball_save
+
+  l_pop_ring_b_1:
+    tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_pf, lights_pop_ring_b, lights_pops
+    channels:
+      red:
+        number: exp_playfield-2-1-0 #+1
+      green:
+        number: exp_playfield-2-1-1 #+1
+      blue:
+        number: exp_playfield-2-1-2 #+1
+      white:
+        number: exp_playfield-2-2-1 #+2
+
+  l_pop_ring_b_2:
+    tags: lights_2b, lights_3b, lights_4a, lights_5e, lights_pf, lights_pop_ring_b, lights_pops
+    channels:
+      red:
+        number: exp_playfield-2-2-2 #+1
+      green:
+        number: exp_playfield-2-2-0 #-2
+      blue:
+        number: exp_playfield-2-3-1 #+4
+      white:
+        number: exp_playfield-2-3-0 #-1
+
+  l_pop_ring_b_3:
+    tags: lights_2a, lights_3c, lights_4b, lights_5b, lights_pf, lights_pop_ring_b, lights_pops
+    channels:
+      red:
+        number: exp_playfield-2-4-1 #+4
+      green:
+        number: exp_playfield-2-3-2 #-2
+      blue:
+        number: exp_playfield-2-4-0 #+1
+      white:
+        number: exp_playfield-2-4-2 #+2
+
+  l_pop_ring_b_4:
+    tags: lights_2b, lights_3a, lights_4b, lights_5e, lights_pf, lights_pop_ring_b, lights_pops
+    channels:
+      red:
+        number: exp_playfield-2-5-0 #+1
+      green:
+        number: exp_playfield-2-5-1 #+1
+      blue:
+        number: exp_playfield-2-5-2 #+1
+      white:
+        number: exp_playfield-2-6-1 #+2
+
+  l_pop_ring_b_5:
+    tags: lights_2a, lights_3b, lights_4c, lights_5c, lights_pf, lights_pop_ring_b, lights_pops
+    channels:
+      red:
+        number: exp_playfield-2-6-2 #+1
+      green:
+        number: exp_playfield-2-6-0 #-2
+      blue:
+        number: exp_playfield-2-7-1 #+4
+      white:
+        number: exp_playfield-2-7-0 #-1
+
+  l_pop_ring_b_6:
+    tags: lights_2b, lights_3c, lights_4c, lights_5e, lights_pf, lights_pop_ring_b, lights_pops
+    channels:
+      red:
+        number: exp_playfield-2-8-1 #+4
+      green:
+        number: exp_playfield-2-7-2 #-2
+      blue:
+        number: exp_playfield-2-8-0 #+1
+      white:
+        number: exp_playfield-2-8-2 #+2
+
+  l_pop_ring_b_7:
+    tags: lights_2a, lights_3a, lights_4d, lights_5d, lights_pf, lights_pop_ring_b, lights_pops
+    channels:
+      red:
+        number: exp_playfield-2-9-0 #+1
+      green:
+        number: exp_playfield-2-9-1 #+1
+      blue:
+        number: exp_playfield-2-9-2 #+1
+      white:
+        number: exp_playfield-2-10-1 #+2
+
+  l_pop_ring_b_8:
+    tags: lights_2b, lights_3b, lights_4d, lights_5e, lights_pf, lights_pop_ring_b, lights_pops
+    channels:
+      red:
+        number: exp_playfield-2-10-2 #+1
+      green:
+        number: exp_playfield-2-10-0 #-2
+      blue:
+        number: exp_playfield-2-11-1 #+4
+      white:
+        number: exp_playfield-2-11-0 #-1
+
+  # Ring C
+  l_pop_ring_c_1:
+    tags: lights_2a, lights_3c, lights_4a, lights_5a, lights_pf, lights_pop_ring_c, lights_pops
+    channels:
+      red:
+        number: exp_playfield-2-12-1 #+4
+      green:
+        number: exp_playfield-2-11-2 #-2
+      blue:
+        number: exp_playfield-2-12-0 #+1
+      white:
+        number: exp_playfield-2-12-2 #+2
+
+  l_pop_ring_c_2:
+    tags: lights_2b, lights_3a, lights_4a, lights_5e, lights_pf, lights_pop_ring_c, lights_pops
+    channels:
+      red:
+        number: exp_playfield-2-13-0 #+1
+      green:
+        number: exp_playfield-2-13-1 #+1
+      blue:
+        number: exp_playfield-2-13-2 #+1
+      white:
+        number: exp_playfield-2-14-1 #+2
+
+  l_pop_ring_c_3:
+    tags: lights_2a, lights_3b, lights_4b, lights_5b, lights_pf, lights_pop_ring_c, lights_pops
+    channels:
+      red:
+        number: exp_playfield-2-14-2 #+1
+      green:
+        number: exp_playfield-2-14-0 #-2
+      blue:
+        number: exp_playfield-2-15-1 #+4
+      white:
+        number: exp_playfield-2-15-0 #-1
+
+  l_pop_ring_c_4:
+    tags: lights_2b, lights_3c, lights_4b, lights_5e, lights_pf, lights_pop_ring_c, lights_pops
+    channels:
+      red:
+        number: exp_playfield-2-16-1 #+4
+      green:
+        number: exp_playfield-2-15-2 #-2
+      blue:
+        number: exp_playfield-2-16-0 #+1
+      white:
+        number: exp_playfield-2-16-2 #+2
+
+  l_pop_ring_c_5:
+    tags: lights_2a, lights_3a, lights_4c, lights_5c, lights_pf, lights_pop_ring_c, lights_pops
+    channels:
+      red:
+        number: exp_playfield-2-17-0 #+1
+      green:
+        number: exp_playfield-2-17-1 #+1
+      blue:
+        number: exp_playfield-2-17-2 #+1
+      white:
+        number: exp_playfield-2-18-1 #+2
+
+  l_pop_ring_c_6:
+    tags: lights_2b, lights_3b, lights_4c, lights_5e, lights_pf, lights_pop_ring_c, lights_pops
+    channels:
+      red:
+        number: exp_playfield-2-18-2 #+1
+      green:
+        number: exp_playfield-2-18-0 #-2
+      blue:
+        number: exp_playfield-2-19-1 #+4
+      white:
+        number: exp_playfield-2-19-0 #-1
+
+  l_pop_ring_c_7:
+    tags: lights_2a, lights_3c, lights_4d, lights_5d, lights_pf, lights_pop_ring_c, lights_pops
+    channels:
+      red:
+        number: exp_playfield-2-20-1 #+4
+      green:
+        number: exp_playfield-2-19-2 #-2
+      blue:
+        number: exp_playfield-2-20-0 #+1
+      white:
+        number: exp_playfield-2-20-2 #+2
+
+  l_pop_ring_c_8:
+    tags: lights_2b, lights_3a, lights_4d, lights_5e, lights_pf, lights_pop_ring_c, lights_pops
+    channels:
+      red:
+        number: exp_playfield-2-21-0 #+1
+      green:
+        number: exp_playfield-2-21-1 #+1
+      blue:
+        number: exp_playfield-2-21-2 #+1
+      white:
+        number: exp_playfield-2-22-1 #+2
+
+  # Ring A
+  l_pop_ring_a_1:
+    tags: lights_2a, lights_3b, lights_4a, lights_5a, lights_pf, lights_pop_ring_a, lights_pops
+    channels:
+      red:
+        number: exp_playfield-2-22-2 #+1
+      green:
+        number: exp_playfield-2-22-0 #-2
+      blue:
+        number: exp_playfield-2-23-1 #+4
+      white:
+        number: exp_playfield-2-23-0 #-1
+
+  l_pop_ring_a_2:
+    tags: lights_2b, lights_3c, lights_4a, lights_5e, lights_pf, lights_pop_ring_a, lights_pops
+    channels:
+      red:
+        number: exp_playfield-2-24-1 #+4
+      green:
+        number: exp_playfield-2-23-2 #-2
+      blue:
+        number: exp_playfield-2-24-0 #+1
+      white:
+        number: exp_playfield-2-24-2 #+2
+
+  l_pop_ring_a_3:
+    tags: lights_2a, lights_3a, lights_4b, lights_5b, lights_pf, lights_pop_ring_a, lights_pops
+    channels:
+      red:
+        number: exp_playfield-2-25-0 #+1
+      green:
+        number: exp_playfield-2-25-1 #+1
+      blue:
+        number: exp_playfield-2-25-2 #+1
+      white:
+        number: exp_playfield-2-26-1 #+2
+
+  l_pop_ring_a_4:
+    tags: lights_2b, lights_3b, lights_4b, lights_5e, lights_pf, lights_pop_ring_a, lights_pops
+    channels:
+      red:
+        number: exp_playfield-2-26-2 #+1
+      green:
+        number: exp_playfield-2-26-0 #-2
+      blue:
+        number: exp_playfield-2-27-1 #+4
+      white:
+        number: exp_playfield-2-27-0 #-1
+
+  l_pop_ring_a_5:
+    tags: lights_2a, lights_3c, lights_4c, lights_5c, lights_pf, lights_pop_ring_a, lights_pops
+    channels:
+      red:
+        number: exp_playfield-2-28-1 #+4
+      green:
+        number: exp_playfield-2-27-2 #-2
+      blue:
+        number: exp_playfield-2-28-0 #+1
+      white:
+        number: exp_playfield-2-28-2 #+2
+
+  l_pop_ring_a_6:
+    tags: lights_2b, lights_3a, lights_4c, lights_5e, lights_pf, lights_pop_ring_a, lights_pops
+    channels:
+      red:
+        number: exp_playfield-2-29-0 #+1
+      green:
+        number: exp_playfield-2-29-1 #+1
+      blue:
+        number: exp_playfield-2-29-2 #+1
+      white:
+        number: exp_playfield-2-30-1 #+2
+
+  l_pop_ring_a_7:
+    tags: lights_2a, lights_3b, lights_4d, lights_5d, lights_pf, lights_pop_ring_a, lights_pops
+    channels:
+      red:
+        number: exp_playfield-2-30-2 #+1
+      green:
+        number: exp_playfield-2-30-0 #-2
+      blue:
+        number: exp_playfield-2-31-1 #+4
+      white:
+        number: exp_playfield-2-31-0 #-1
+
+  l_pop_ring_a_8:
+    tags: lights_2b, lights_3c, lights_4d, lights_5e, lights_pf, lights_pop_ring_a, lights_pops
+    channels:
+      red:
+        number: exp_playfield-2-32-1 #+4
+      green:
+        number: exp_playfield-2-31-2 #-2
+      blue:
+        number: exp_playfield-2-32-0 #+1
+      white:
+        number: exp_playfield-2-32-2 #+2
+
+  vlight_for_generated_example_mode:
+    number: 9501
+    platform: virtual
+    type: rgb
+    tags: lights_virtual
+
+  # for info_lights, see: https://missionpinball.org/latest/config/info_lights/
+  vlight_ball_1:
+    number: 9502
+    platform: virtual
+    type: rgb
+    tags: lights_virtual
+    default_on_color: ff00ff
+  vlight_ball_2:
+    number: 9503
+    platform: virtual
+    type: rgb
+    tags: lights_virtual
+    default_on_color: ff00ff
+  vlight_ball_3:
+    number: 9504
+    platform: virtual
+    type: rgb
+    tags: lights_virtual
+    default_on_color: ff00ff
+  vlight_tilt:
+    number: 9505
+    platform: virtual
+    type: rgb
+    tags: lights_virtual
+    default_on_color: red
+  vlight_game_over:
+    number: 9506
+    platform: virtual
+    type: rgb
+    tags: lights_virtual
+    default_on_color: red
+
+  vlight_player_1:
+    number: 9511
+    platform: virtual
+    type: rgb
+    tags: lights_virtual
+    default_on_color: red
+  vlight_player_2:
+    number: 9512
+    platform: virtual
+    type: rgb
+    tags: lights_virtual
+    default_on_color: blue
+  vlight_player_3:
+    number: 9513
+    platform: virtual
+    type: rgb
+    tags: lights_virtual
+    default_on_color: teal
+  vlight_player_4:
+    number: 9514
+    platform: virtual
+    type: rgb
+    tags: lights_virtual
+    default_on_color: purple
+
+  vlight_left_inlane_qualified:
+    number: 9521
+    platform: virtual
+    type: rgb
+    tags: lights_virtual
+  vlight_right_inlane_qualified:
+    number: 9522
+    platform: virtual
+    type: rgb
+    tags: lights_virtual
+
+  l_mini_cab_left_secondary:
+    platform: virtual
+    tags: lights_2a, lights_3a, lights_4a, lights_5a, lights_cab
+
+  l_mini_cab_left:
+    platform: virtual
+    tags: lights_2b, lights_3b, lights_4b, lights_5b, lights_cab
+
+  l_mini_cab_right:
+    platform: virtual
+    tags: lights_2a, lights_3c, lights_4c, lights_5c, lights_cab
+
+  l_mini_cab_right_secondary:
+    platform: virtual
+    tags: lights_2b, lights_3b, lights_4d, lights_5e, lights_cab

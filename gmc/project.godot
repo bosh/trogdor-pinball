@@ -31,7 +31,7 @@ mouse_cursor/custom_image="uid://e1lfl52llkvu"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/mpf-gmc/plugin.cfg")
+enabled=PackedStringArray("res://addons/gmc-toolbox/plugin.cfg", "res://addons/mpf-gmc/plugin.cfg")
 
 [rendering]
 

@@ -1,0 +1,408 @@
+#config_version=6
+
+switches:
+
+#IO 3208
+
+## A J8
+  s_drop_bank_left:
+    number: 3208-0
+    platform_settings:
+      debounce_open: 5ms
+      debounce_close: 12ms
+  s_drop_bank_center:
+    number: 3208-1
+    platform_settings:
+      debounce_open: 4ms
+      debounce_close: 10ms
+  s_drop_bank_right:
+    number: 3208-2
+    platform_settings:
+      debounce_open: 3ms
+      debounce_close: 8ms
+
+  s_horseshoe_right: #proxy
+    number: 3208-3
+    tags: playfield_active, skill_shot_failure
+    debounce: quick
+  s_horseshoe_left: #proxy
+    number: 3208-4
+    tags: playfield_active, skill_shot_failure
+    debounce: quick
+  s_captive_ball_presence:
+    number: 3208-5
+    # debounce: quick #needs dialing in but we want high sensitivity #Later: quick is too sensitive oops
+    type: 'NC' #actually NO but the ball sits on it to make it NC
+  s_spinner_right: #opto, double reports spins
+    number: 3208-6
+    type: 'NC' #not sure how important this nc is
+    tags: playfield_active, skill_shot_failure
+  s_wireform_right_top: #opto
+    number: 3208-7
+    type: 'NC'
+    tags: playfield_active
+
+## B J3
+  s_subway_entrance: #opto
+    number: 3208-8
+    type: 'NC'
+    tags: playfield_active
+  s_spinner_left:
+    number: 3208-9
+    tags: playfield_active, skill_shot_failure
+  s_upper_flipper_eos:
+    number: 3208-10
+    type: 'NC' #needs check
+  s_left_flipper_eos:
+    number: 3208-11
+    type: 'NC' #needs check
+  s_left_sling: # Parallel switch pair
+    number: 3208-12
+    tags: skill_shot_failure
+  s_left_inner_lane:
+    number: 3208-13
+    tags: playfield_active, skill_shot_failure
+  s_left_outer_lane:
+    number: 3208-14
+    tags: playfield_active
+  s_subway_vuk_presence: #opto
+    number: 3208-15
+    type: 'NC'
+    tags: skill_shot_failure
+
+## C J6
+  s_trough_ball_1: #opto
+    number: 3208-16
+    type: 'NC'
+  s_trough_ball_jam: #opto
+    number: 3208-17
+    type: 'NC'
+  s_right_flipper_eos:
+    number: 3208-18
+    type: 'NC' #needs check
+  s_right_sling: # Parallel switch pair
+    number: 3208-19
+    tags: skill_shot_failure
+  s_trough_ball_5:
+    number: 3208-20
+  s_trough_ball_4:
+    number: 3208-21
+  s_trough_ball_3:
+    number: 3208-22
+  s_trough_ball_2:
+    number: 3208-23
+
+## D J9
+  s_wireform_s_entrance: #proxy, not real, to be removed
+    number: 831
+    type: 'NC'
+    platform: virtual
+    tags: playfield_active
+
+  s_wireform_s_top: #opto
+    number: 3208-24
+    type: 'NC'
+    tags: playfield_active
+  s_vuk_presence:
+    number: 3208-25
+    tags: skill_shot_failure
+  s_launch_exit: #proxy
+    number: 3208-26
+    debounce: quick
+  s_elbow_lower: #proxy
+    number: 3208-27
+    tags: playfield_active, skill_shot_failure
+    debounce: quick
+  s_elbow_upper: #proxy
+    number: 3208-28
+    tags: playfield_active, skill_shot_failure
+    debounce: quick
+  s_right_outer_lane:
+    number: 3208-29
+    tags: playfield_active, skill_shot_failure
+  s_right_inner_lane:
+    number: 3208-30
+    tags: playfield_active, skill_shot_failure
+  s_plunger: # shooter lane presence
+    number: 3208-31
+
+#IO 1616
+## A J7
+  s_pop_left:
+    number: 1616-0
+    tags: skill_shot_failure
+
+  # 6 Blue standup switches, CCW from 12:00 back to 8:00
+  s_blue_standup_1:
+    number: 1616-1
+    tags: playfield_active, blue_standup, skill_shot_failure
+  s_blue_standup_2:
+    number: 1616-2
+    tags: playfield_active, blue_standup, skill_shot_failure
+  s_blue_standup_3:
+    number: 1616-3
+    tags: playfield_active, blue_standup, skill_shot_failure
+  s_blue_standup_4:
+    number: 1616-4
+    tags: playfield_active, blue_standup, skill_shot_failure
+  s_blue_standup_5:
+    number: 1616-5
+    tags: playfield_active, blue_standup, skill_shot_failure
+#  s_blue_standup_6:
+#    number: 1616-6
+#    tags: playfield_active, blue_standup, skill_shot_failure
+  s_drop_bank_stuck_ball_detector:
+    number: 1616-7
+    tags: playfield_active, skill_shot_failure
+  s_left_orbit_outer: #proxy
+    number: 1616-6
+    tags: playfield_active, skill_shot_failure
+    debounce: quick
+
+## B J8
+  s_burn_b:
+    number: 1616-8
+    tags: playfield_active, skill_shot_failure
+  s_burn_u:
+    number: 1616-9
+    tags: playfield_active, skill_shot_failure
+  s_burn_r:
+    number: 1616-10
+    tags: playfield_active, skill_shot_failure
+  s_burn_n:
+    number: 1616-11
+    tags: playfield_active, skill_shot_failure
+  s_right_orbit_outer:
+    number: 1616-12
+    tags: playfield_active, skill_shot_failure
+  s_pop_right:
+    number: 1616-13
+    tags: skill_shot_failure
+  s_pop_center:
+    number: 1616-14
+    tags: skill_shot_failure
+  s_burn_standup:
+    number: 1616-15
+    tags: playfield_active, skill_shot_failure
+
+# Future:
+
+  s_orbit_diverter_eos:
+    number: 801
+    platform: virtual
+    type: 'NO'
+
+  s_left_orbit_inner:
+    number: 802
+    platform: virtual
+    tags: playfield_active
+  s_right_orbit_inner:
+    number: 803
+    platform: virtual
+    tags: playfield_active
+
+  # Right wireform proxy entrance
+  s_wireform_right_entrance:
+    number: 804
+    platform: virtual
+    tags: playfield_active
+
+  # Other proxy switches
+  s_right_outlane_lower:
+    number: 806
+    platform: virtual
+
+
+  vswitch_end_game:
+    platform: virtual
+    number: 901
+    tags: no_audit
+
+  vswitch_qualify_burnination:
+    platform: virtual
+    number: 902
+    tags: no_audit
+
+  vswitch_add_fire_level:
+    platform: virtual
+    number: 903
+    tags: no_audit
+
+  vswitch_qualify_burninated:
+    platform: virtual
+    number: 904
+    tags: no_audit
+
+  vswitch_qualify_left_outlane_save:
+    platform: virtual
+    number: 905
+    tags: no_audit
+
+  vswitch_qualify_right_outlane_save:
+    platform: virtual
+    number: 906
+    tags: no_audit
+
+  vswitch_reset_inlane_detector:
+    platform: virtual
+    number: 907
+    tags: no_audit
+
+  vswitch_toggle_slings_dead:
+    platform: virtual
+    number: 908
+    tags: no_audit
+
+  vswitch_toggle_slots:
+    platform: virtual
+    number: 909
+    tags: no_audit
+
+  vswitch_start_minigame:
+    platform: virtual
+    number: 910
+    tags: no_audit
+
+  vswitch_set_bank_000:
+    platform: virtual
+    number: 930
+    tags: no_audit
+  vswitch_set_bank_100:
+    platform: virtual
+    number: 931
+    tags: no_audit
+  vswitch_set_bank_010:
+    platform: virtual
+    number: 932
+    tags: no_audit
+  vswitch_set_bank_001:
+    platform: virtual
+    number: 933
+    tags: no_audit
+  vswitch_set_bank_110:
+    platform: virtual
+    number: 934
+    tags: no_audit
+  vswitch_set_bank_101:
+    platform: virtual
+    number: 935
+    tags: no_audit
+  vswitch_set_bank_011:
+    platform: virtual
+    number: 936
+    tags: no_audit
+  vswitch_set_bank_111:
+    platform: virtual
+    number: 938
+    tags: no_audit
+
+  vswitch_plunger_power_1:
+    platform: virtual
+    number: 991
+    tags: no_audit
+  vswitch_plunger_power_2:
+    platform: virtual
+    number: 992
+    tags: no_audit
+  vswitch_plunger_power_3:
+    platform: virtual
+    number: 993
+    tags: no_audit
+  vswitch_plunger_power_4:
+    platform: virtual
+    number: 994
+    tags: no_audit
+  vswitch_plunger_power_5:
+    platform: virtual
+    number: 995
+    tags: no_audit
+  vswitch_plunger_power_6:
+    platform: virtual
+    number: 996
+    tags: no_audit
+
+  vswitch_enable_left_cbg:
+    platform: virtual
+    number: 920
+    tags: no_audit
+  vswitch_disable_left_cbg:
+    platform: virtual
+    number: 921
+    tags: no_audit
+  vswitch_enable_right_cbg:
+    platform: virtual
+    number: 922
+    tags: no_audit
+  vswitch_disable_right_cbg:
+    platform: virtual
+    number: 923
+    tags: no_audit
+  vswitch_enable_right_cbg_alt:
+    platform: virtual
+    number: 926
+    tags: no_audit
+  vswitch_disable_right_cbg_alt:
+    platform: virtual
+    number: 927
+    tags: no_audit
+
+  vswitch_enable_spinner_targets:
+    platform: virtual
+    number: 950
+    tags: no_audit
+  vswitch_disable_spinner_targets:
+    platform: virtual
+    number: 951
+    tags: no_audit
+
+  vswitch_test_coils:
+    platform: virtual
+    number: 999
+    tags: no_audit
+
+
+## J4 Coin Door
+  s_coin_door:
+    number: 0024-0
+    tags: service_door_open, power_off
+  s_coin_door_service_1:
+    number: 0024-7
+    tags: service_esc
+  s_coin_door_service_2:
+    number: 0024-6
+    tags: service_down
+  s_coin_door_service_3:
+    number: 0024-5
+    tags: service_up
+  s_coin_door_service_4:
+    number: 0024-4
+    tags: service_enter
+  # 3 2 1 available
+
+## J1 Cabinet Left
+  s_start:
+    number: 0024-8
+    tags: start, text_input_select
+
+  # 9 available
+
+  s_left_flipper:
+    number: 0024-10
+    tags: left_flipper, text_input_left
+  s_left_flipper_secondary:
+    number: 0024-11
+    tags: mini_flipper
+
+  # 12 13 14 available
+
+  s_tilt_bob:
+    number: 0024-15
+    tags: tilt_warning
+
+## J9 Cabinet Right
+  s_right_flipper:
+    number: 0024-16
+    tags: right_flipper, text_input_right
+  s_right_flipper_secondary:
+    number: 0024-17
+  # 18, 19, 20, 21, 22, 23, 24 available
