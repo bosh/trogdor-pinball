@@ -11,7 +11,7 @@
 [node name="Playfield" type="TextureRect"]
 texture = ExtResource("1_5cimo")
 script = ExtResource("1_57m3d")
-monitor_size = Vector2(1512, 2012)
+monitor_size = Vector2(3024, 4032)
 metadata/_custom_type_script = "uid://c0tpjusq5lf14"
 metadata/_edit_lock_ = true
 
@@ -20,14 +20,16 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 metadata/_edit_lock_ = true
 
 [node name="s_drop_bank_left" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -695.0
-offset_top = 576.0
-offset_right = -547.0
-offset_bottom = 724.0
+offset_left = 1018.35
+offset_top = 727.34
+offset_right = 1166.35
+offset_bottom = 875.34
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -35,10 +37,10 @@ script = ExtResource("5_v1su3")
 
 [node name="s_drop_bank_center" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -695.0
-offset_top = 576.0
-offset_right = -547.0
-offset_bottom = 724.0
+offset_left = 1115.36
+offset_top = 680.95
+offset_right = 1263.36
+offset_bottom = 828.95
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -46,10 +48,10 @@ script = ExtResource("5_v1su3")
 
 [node name="s_drop_bank_right" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -695.0
-offset_top = 576.0
-offset_right = -547.0
-offset_bottom = 724.0
+offset_left = 1214.47
+offset_top = 634.55
+offset_right = 1362.47
+offset_bottom = 782.55
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -57,10 +59,10 @@ script = ExtResource("5_v1su3")
 
 [node name="s_horseshoe_right" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -695.0
-offset_top = 576.0
-offset_right = -547.0
-offset_bottom = 724.0
+offset_left = 1756.43
+offset_top = 881.28
+offset_right = 1904.43
+offset_bottom = 1029.28
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -69,10 +71,10 @@ tags = ["playfield_active", "skill_shot_failure"]
 
 [node name="s_horseshoe_left" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -695.0
-offset_top = 576.0
-offset_right = -547.0
-offset_bottom = 724.0
+offset_left = 1381.06
+offset_top = 767.41
+offset_right = 1529.06
+offset_bottom = 915.41
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -81,10 +83,10 @@ tags = ["playfield_active", "skill_shot_failure"]
 
 [node name="s_captive_ball_presence" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -695.0
-offset_top = 576.0
-offset_right = -547.0
-offset_bottom = 724.0
+offset_left = 877.06
+offset_top = 887.61
+offset_right = 1025.06
+offset_bottom = 1035.61
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -92,10 +94,10 @@ script = ExtResource("5_v1su3")
 
 [node name="s_spinner_right" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -695.0
-offset_top = 576.0
-offset_right = -547.0
-offset_bottom = 724.0
+offset_left = 2068.53
+offset_top = 807.47
+offset_right = 2216.53
+offset_bottom = 955.47
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -104,10 +106,10 @@ tags = ["playfield_active", "skill_shot_failure"]
 
 [node name="s_wireform_right_top" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -695.0
-offset_top = 576.0
-offset_right = -547.0
-offset_bottom = 724.0
+offset_left = 2163.42
+offset_top = 919.24
+offset_right = 2311.42
+offset_bottom = 1067.24
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -116,10 +118,10 @@ tags = ["playfield_active"]
 
 [node name="s_subway_entrance" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -695.0
-offset_top = 576.0
-offset_right = -547.0
-offset_bottom = 724.0
+offset_left = 830.67
+offset_top = 602.92
+offset_right = 978.67
+offset_bottom = 750.92
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -128,10 +130,10 @@ tags = ["playfield_active"]
 
 [node name="s_spinner_left" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -695.0
-offset_top = 576.0
-offset_right = -547.0
-offset_bottom = 724.0
+offset_left = 527.0
+offset_top = 1621.46
+offset_right = 675.0
+offset_bottom = 1769.46
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -140,10 +142,10 @@ tags = ["playfield_active", "skill_shot_failure"]
 
 [node name="s_upper_flipper_eos" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -695.0
-offset_top = 576.0
-offset_right = -547.0
-offset_bottom = 724.0
+offset_left = 843.32
+offset_top = 1560.31
+offset_right = 991.32
+offset_bottom = 1708.31
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -151,10 +153,10 @@ script = ExtResource("5_v1su3")
 
 [node name="s_left_flipper_eos" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -695.0
-offset_top = 576.0
-offset_right = -547.0
-offset_bottom = 724.0
+offset_left = 1102.7
+offset_top = 3169.31
+offset_right = 1250.7
+offset_bottom = 3317.31
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -162,10 +164,10 @@ script = ExtResource("5_v1su3")
 
 [node name="s_left_sling" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -695.0
-offset_top = 576.0
-offset_right = -547.0
-offset_bottom = 724.0
+offset_left = 824.34
+offset_top = 2477.63
+offset_right = 972.34
+offset_bottom = 2625.63
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -174,10 +176,10 @@ tags = ["skill_shot_failure"]
 
 [node name="s_left_inner_lane" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -695.0
-offset_top = 576.0
-offset_right = -547.0
-offset_bottom = 724.0
+offset_left = 613.46
+offset_top = 2606.27
+offset_right = 761.46
+offset_bottom = 2754.27
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -186,10 +188,10 @@ tags = ["playfield_active", "skill_shot_failure"]
 
 [node name="s_left_outer_lane" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -695.0
-offset_top = 576.0
-offset_right = -547.0
-offset_bottom = 724.0
+offset_left = 453.2
+offset_top = 2610.49
+offset_right = 601.2
+offset_bottom = 2758.49
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -198,10 +200,10 @@ tags = ["playfield_active"]
 
 [node name="s_subway_vuk_presence" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -695.0
-offset_top = 576.0
-offset_right = -547.0
-offset_bottom = 724.0
+offset_left = 611.36
+offset_top = 1899.82
+offset_right = 759.36
+offset_bottom = 2047.82
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -210,10 +212,10 @@ tags = ["skill_shot_failure"]
 
 [node name="s_trough_ball_1" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -695.0
-offset_top = 576.0
-offset_right = -547.0
-offset_bottom = 724.0
+offset_left = 2243.56
+offset_top = 3458.22
+offset_right = 2391.56
+offset_bottom = 3606.22
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -221,10 +223,10 @@ script = ExtResource("5_v1su3")
 
 [node name="s_trough_ball_jam" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -695.0
-offset_top = 576.0
-offset_right = -547.0
-offset_bottom = 724.0
+offset_left = 2363.76
+offset_top = 3354.89
+offset_right = 2511.76
+offset_bottom = 3502.89
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -232,10 +234,10 @@ script = ExtResource("5_v1su3")
 
 [node name="s_right_flipper_eos" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -695.0
-offset_top = 576.0
-offset_right = -547.0
-offset_bottom = 724.0
+offset_left = 1623.57
+offset_top = 3165.1
+offset_right = 1771.57
+offset_bottom = 3313.1
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -243,10 +245,10 @@ script = ExtResource("5_v1su3")
 
 [node name="s_right_sling" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -695.0
-offset_top = 576.0
-offset_right = -547.0
-offset_bottom = 724.0
+offset_left = 1834.45
+offset_top = 2475.52
+offset_right = 1982.45
+offset_bottom = 2623.52
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -255,10 +257,10 @@ tags = ["skill_shot_failure"]
 
 [node name="s_trough_ball_5" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 2192.0
-offset_top = 3398.0
-offset_right = 2340.0
-offset_bottom = 3546.0
+offset_left = 1912.48
+offset_top = 3460.33
+offset_right = 2060.48
+offset_bottom = 3608.33
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -266,10 +268,10 @@ script = ExtResource("5_v1su3")
 
 [node name="s_trough_ball_4" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 2192.0
-offset_top = 3398.0
-offset_right = 2340.0
-offset_bottom = 3546.0
+offset_left = 1996.83
+offset_top = 3458.22
+offset_right = 2144.83
+offset_bottom = 3606.22
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -277,10 +279,10 @@ script = ExtResource("5_v1su3")
 
 [node name="s_trough_ball_3" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 2192.0
-offset_top = 3398.0
-offset_right = 2340.0
-offset_bottom = 3546.0
+offset_left = 2079.07
+offset_top = 3458.22
+offset_right = 2227.07
+offset_bottom = 3606.22
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -288,10 +290,10 @@ script = ExtResource("5_v1su3")
 
 [node name="s_trough_ball_2" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 2192.0
-offset_top = 3398.0
-offset_right = 2340.0
-offset_bottom = 3546.0
+offset_left = 2161.31
+offset_top = 3458.22
+offset_right = 2309.31
+offset_bottom = 3606.22
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -299,10 +301,10 @@ script = ExtResource("5_v1su3")
 
 [node name="s_wireform_s_entrance" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -683.0
-offset_top = 959.0
-offset_right = -535.0
-offset_bottom = 1107.0
+offset_left = 1522.35
+offset_top = 1012.03
+offset_right = 1670.35
+offset_bottom = 1160.03
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -311,10 +313,10 @@ tags = ["playfield_active"]
 
 [node name="s_wireform_s_top" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -683.0
-offset_top = 959.0
-offset_right = -535.0
-offset_bottom = 1107.0
+offset_left = 1566.64
+offset_top = 828.56
+offset_right = 1714.64
+offset_bottom = 976.56
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -323,10 +325,10 @@ tags = ["playfield_active"]
 
 [node name="s_vuk_presence" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -683.0
-offset_top = 959.0
-offset_right = -535.0
-offset_bottom = 1107.0
+offset_left = 2108.59
+offset_top = 1376.85
+offset_right = 2256.59
+offset_bottom = 1524.85
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -335,10 +337,10 @@ tags = ["skill_shot_failure"]
 
 [node name="s_launch_exit" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -683.0
-offset_top = 959.0
-offset_right = -535.0
-offset_bottom = 1107.0
+offset_left = 2237.23
+offset_top = 1817.58
+offset_right = 2385.23
+offset_bottom = 1965.58
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -346,10 +348,10 @@ script = ExtResource("5_v1su3")
 
 [node name="s_elbow_lower" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -683.0
-offset_top = 959.0
-offset_right = -535.0
-offset_bottom = 1107.0
+offset_left = 2306.82
+offset_top = 1463.31
+offset_right = 2454.82
+offset_bottom = 1611.31
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -358,10 +360,10 @@ tags = ["playfield_active", "skill_shot_failure"]
 
 [node name="s_elbow_upper" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -683.0
-offset_top = 959.0
-offset_right = -535.0
-offset_bottom = 1107.0
+offset_left = 2254.1
+offset_top = 1267.19
+offset_right = 2402.1
+offset_bottom = 1415.19
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -370,10 +372,10 @@ tags = ["playfield_active", "skill_shot_failure"]
 
 [node name="s_right_outer_lane" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -683.0
-offset_top = 959.0
-offset_right = -535.0
-offset_bottom = 1107.0
+offset_left = 2228.79
+offset_top = 2536.68
+offset_right = 2376.79
+offset_bottom = 2684.68
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -382,10 +384,10 @@ tags = ["playfield_active", "skill_shot_failure"]
 
 [node name="s_right_inner_lane" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -683.0
-offset_top = 959.0
-offset_right = -535.0
-offset_bottom = 1107.0
+offset_left = 2051.66
+offset_top = 2530.35
+offset_right = 2199.66
+offset_bottom = 2678.35
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -394,10 +396,10 @@ tags = ["playfield_active", "skill_shot_failure"]
 
 [node name="s_plunger" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -683.0
-offset_top = 959.0
-offset_right = -535.0
-offset_bottom = 1107.0
+offset_left = 2561.98
+offset_top = 3329.58
+offset_right = 2709.98
+offset_bottom = 3477.58
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -405,10 +407,10 @@ script = ExtResource("5_v1su3")
 
 [node name="s_pop_left" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -683.0
-offset_top = 959.0
-offset_right = -535.0
-offset_bottom = 1107.0
+offset_left = 1096.38
+offset_top = 379.39
+offset_right = 1244.38
+offset_bottom = 527.39
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -417,10 +419,10 @@ tags = ["skill_shot_failure"]
 
 [node name="s_blue_standup_1" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 965.0
-offset_top = 164.0
-offset_right = 1113.0
-offset_bottom = 312.0
+offset_left = 1033.11
+offset_top = 202.25
+offset_right = 1181.11
+offset_bottom = 350.25
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -429,10 +431,10 @@ tags = ["playfield_active", "blue_standup", "skill_shot_failure"]
 
 [node name="s_blue_standup_2" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 965.0
-offset_top = 164.0
-offset_right = 1113.0
-offset_bottom = 312.0
+offset_left = 955.09
+offset_top = 225.45
+offset_right = 1103.09
+offset_bottom = 373.45
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -441,10 +443,10 @@ tags = ["playfield_active", "blue_standup", "skill_shot_failure"]
 
 [node name="s_blue_standup_3" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 965.0
-offset_top = 164.0
-offset_right = 1113.0
-offset_bottom = 312.0
+offset_left = 879.17
+offset_top = 278.17
+offset_right = 1027.17
+offset_bottom = 426.17
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -453,10 +455,10 @@ tags = ["playfield_active", "blue_standup", "skill_shot_failure"]
 
 [node name="s_blue_standup_4" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 965.0
-offset_top = 164.0
-offset_right = 1113.0
-offset_bottom = 312.0
+offset_left = 851.76
+offset_top = 354.08
+offset_right = 999.76
+offset_bottom = 502.08
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -465,10 +467,10 @@ tags = ["playfield_active", "blue_standup", "skill_shot_failure"]
 
 [node name="s_blue_standup_5" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 965.0
-offset_top = 164.0
-offset_right = 1113.0
-offset_bottom = 312.0
+offset_left = 843.32
+offset_top = 444.76
+offset_right = 991.32
+offset_bottom = 592.76
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -477,10 +479,10 @@ tags = ["playfield_active", "blue_standup", "skill_shot_failure"]
 
 [node name="s_drop_bank_stuck_ball_detector" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 997.0
-offset_top = 596.0
-offset_right = 1145.0
-offset_bottom = 744.0
+offset_left = 978.28
+offset_top = 579.72
+offset_right = 1126.28
+offset_bottom = 727.72
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -489,10 +491,10 @@ tags = ["playfield_active", "skill_shot_failure"]
 
 [node name="s_left_orbit_outer" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -691.0
-offset_top = 788.0
-offset_right = -543.0
-offset_bottom = 936.0
+offset_left = 851.76
+offset_top = 172.73
+offset_right = 999.76
+offset_bottom = 320.73
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -501,10 +503,10 @@ tags = ["playfield_active", "skill_shot_failure"]
 
 [node name="s_burn_b" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 1474.0
-offset_top = 30.0
-offset_right = 1622.0
-offset_bottom = 178.0
+offset_left = 1195.49
+offset_top = 210.69
+offset_right = 1343.49
+offset_bottom = 358.69
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -513,10 +515,10 @@ tags = ["playfield_active", "skill_shot_failure"]
 
 [node name="s_burn_u" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 1474.0
-offset_top = 30.0
-offset_right = 1622.0
-offset_bottom = 178.0
+offset_left = 1328.34
+offset_top = 214.9
+offset_right = 1476.34
+offset_bottom = 362.9
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -525,10 +527,10 @@ tags = ["playfield_active", "skill_shot_failure"]
 
 [node name="s_burn_r" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 1474.0
-offset_top = 30.0
-offset_right = 1622.0
-offset_bottom = 178.0
+offset_left = 1503.37
+offset_top = 217.01
+offset_right = 1651.37
+offset_bottom = 365.01
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -537,10 +539,10 @@ tags = ["playfield_active", "skill_shot_failure"]
 
 [node name="s_burn_n" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 1474.0
-offset_top = 30.0
-offset_right = 1622.0
-offset_bottom = 178.0
+offset_left = 1659.42
+offset_top = 233.88
+offset_right = 1807.42
+offset_bottom = 381.88
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -549,10 +551,10 @@ tags = ["playfield_active", "skill_shot_failure"]
 
 [node name="s_right_orbit_outer" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -250.0
-offset_top = 1355.0
-offset_right = -102.0
-offset_bottom = 1503.0
+offset_left = 2026.35
+offset_top = 225.45
+offset_right = 2174.35
+offset_bottom = 373.45
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -561,10 +563,10 @@ tags = ["playfield_active", "skill_shot_failure"]
 
 [node name="s_pop_right" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -250.0
-offset_top = 1355.0
-offset_right = -102.0
-offset_bottom = 1503.0
+offset_left = 1813.36
+offset_top = 307.69
+offset_right = 1961.36
+offset_bottom = 455.69
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -573,10 +575,10 @@ tags = ["skill_shot_failure"]
 
 [node name="s_pop_center" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -250.0
-offset_top = 1355.0
-offset_right = -102.0
-offset_bottom = 1503.0
+offset_left = 1501.26
+offset_top = 430.0
+offset_right = 1649.26
+offset_bottom = 578.0
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -585,10 +587,10 @@ tags = ["skill_shot_failure"]
 
 [node name="s_burn_standup" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -250.0
-offset_top = 1355.0
-offset_right = -102.0
-offset_bottom = 1503.0
+offset_left = 1412.69
+offset_top = 269.73
+offset_right = 1560.69
+offset_bottom = 417.73
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -597,10 +599,10 @@ tags = ["playfield_active", "skill_shot_failure"]
 
 [node name="s_orbit_diverter_eos" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -250.0
-offset_top = 1355.0
-offset_right = -102.0
-offset_bottom = 1503.0
+offset_left = 744.21
+offset_top = 541.77
+offset_right = 892.21
+offset_bottom = 689.77
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -608,10 +610,10 @@ script = ExtResource("5_v1su3")
 
 [node name="s_left_orbit_inner" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -250.0
-offset_top = 1355.0
-offset_right = -102.0
-offset_bottom = 1503.0
+offset_left = 1174.4
+offset_top = 6.13
+offset_right = 1322.4
+offset_bottom = 154.13
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -620,10 +622,10 @@ tags = ["playfield_active"]
 
 [node name="s_right_orbit_inner" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -250.0
-offset_top = 1355.0
-offset_right = -102.0
-offset_bottom = 1503.0
+offset_left = 1663.64
+offset_top = -0.19
+offset_right = 1811.64
+offset_bottom = 147.81
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -632,10 +634,10 @@ tags = ["playfield_active"]
 
 [node name="s_wireform_right_entrance" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -250.0
-offset_top = 1355.0
-offset_right = -102.0
-offset_bottom = 1503.0
+offset_left = 2085.4
+offset_top = 1037.33
+offset_right = 2233.4
+offset_bottom = 1185.33
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -644,10 +646,10 @@ tags = ["playfield_active"]
 
 [node name="s_right_outlane_lower" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = -250.0
-offset_top = 1355.0
-offset_right = -102.0
-offset_bottom = 1503.0
+offset_left = 2136.01
+offset_top = 2975.31
+offset_right = 2284.01
+offset_bottom = 3123.31
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -655,10 +657,10 @@ script = ExtResource("5_v1su3")
 
 [node name="vswitch_end_game" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 446.0
-offset_right = 154.0
-offset_bottom = 594.0
+offset_left = 2625.74
+offset_top = 3546.83
+offset_right = 2773.74
+offset_bottom = 3694.83
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -667,10 +669,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_qualify_burnination" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 446.0
-offset_right = 154.0
-offset_bottom = 594.0
+offset_left = -30.55
+offset_top = -13.17
+offset_right = 117.45
+offset_bottom = 134.83
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -679,10 +681,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_add_fire_level" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 446.0
-offset_right = 154.0
-offset_bottom = 594.0
+offset_left = 28.93
+offset_top = 64.22
+offset_right = 176.93
+offset_bottom = 212.22
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -691,10 +693,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_qualify_burninated" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 446.0
-offset_right = 154.0
-offset_bottom = 594.0
+offset_left = -30.55
+offset_top = 147.59
+offset_right = 117.45
+offset_bottom = 295.59
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -703,10 +705,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_qualify_left_outlane_save" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 446.0
-offset_right = 154.0
-offset_bottom = 594.0
+offset_left = 273.95
+offset_top = 2361.65
+offset_right = 421.95
+offset_bottom = 2509.65
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -715,10 +717,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_qualify_right_outlane_save" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 446.0
-offset_right = 154.0
-offset_bottom = 594.0
+offset_left = 2629.46
+offset_top = 2389.06
+offset_right = 2777.46
+offset_bottom = 2537.06
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -727,10 +729,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_reset_inlane_detector" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 446.0
-offset_right = 154.0
-offset_bottom = 594.0
+offset_left = 18.79
+offset_top = 2361.65
+offset_right = 166.79
+offset_bottom = 2509.65
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -739,10 +741,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_toggle_slings_dead" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 446.0
-offset_right = 154.0
-offset_bottom = 594.0
+offset_left = -31.82
+offset_top = 513.99
+offset_right = 116.18
+offset_bottom = 661.99
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -751,10 +753,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_toggle_slots" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 446.0
-offset_right = 154.0
-offset_bottom = 594.0
+offset_left = -32.83
+offset_top = 599.47
+offset_right = 115.17
+offset_bottom = 747.47
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -763,10 +765,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_start_minigame" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 446.0
-offset_right = 154.0
-offset_bottom = 594.0
+offset_left = -13.65
+offset_top = 234.43
+offset_right = 134.35
+offset_bottom = 382.43
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -775,10 +777,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_set_bank_000" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 626.0
-offset_top = -215.0
-offset_right = 774.0
-offset_bottom = -67.0
+offset_left = 482.72
+offset_top = -19.17
+offset_right = 630.72
+offset_bottom = 128.83
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -787,10 +789,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_set_bank_100" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 626.0
-offset_top = -215.0
-offset_right = 774.0
-offset_bottom = -67.0
+offset_left = 411.02
+offset_top = 69.4
+offset_right = 559.02
+offset_bottom = 217.4
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -799,10 +801,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_set_bank_010" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 626.0
-offset_top = -215.0
-offset_right = 774.0
-offset_bottom = -67.0
+offset_left = 486.94
+offset_top = 67.29
+offset_right = 634.94
+offset_bottom = 215.29
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -811,10 +813,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_set_bank_001" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 626.0
-offset_top = -215.0
-offset_right = 774.0
-offset_bottom = -67.0
+offset_left = 564.96
+offset_top = 67.29
+offset_right = 712.96
+offset_bottom = 215.29
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -823,10 +825,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_set_bank_110" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 626.0
-offset_top = -215.0
-offset_right = 774.0
-offset_bottom = -67.0
+offset_left = 567.07
+offset_top = 149.53
+offset_right = 715.07
+offset_bottom = 297.53
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -835,10 +837,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_set_bank_101" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 626.0
-offset_top = -215.0
-offset_right = 774.0
-offset_bottom = -67.0
+offset_left = 486.94
+offset_top = 151.64
+offset_right = 634.94
+offset_bottom = 299.64
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -847,10 +849,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_set_bank_011" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 626.0
-offset_top = -215.0
-offset_right = 774.0
-offset_bottom = -67.0
+offset_left = 411.02
+offset_top = 151.64
+offset_right = 559.02
+offset_bottom = 299.64
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -859,10 +861,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_set_bank_111" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 626.0
-offset_top = -215.0
-offset_right = 774.0
-offset_bottom = -67.0
+offset_left = 486.94
+offset_top = 231.77
+offset_right = 634.94
+offset_bottom = 379.77
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -871,10 +873,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_plunger_power_1" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 2852.0
-offset_top = 2920.0
-offset_right = 3000.0
-offset_bottom = 3068.0
+offset_left = 2853.0
+offset_top = 3169.31
+offset_right = 3001.0
+offset_bottom = 3317.31
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -883,10 +885,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_plunger_power_2" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 2852.0
-offset_top = 2920.0
-offset_right = 3000.0
-offset_bottom = 3068.0
+offset_left = 2844.56
+offset_top = 3093.4
+offset_right = 2992.56
+offset_bottom = 3241.4
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -895,10 +897,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_plunger_power_3" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 2852.0
-offset_top = 2920.0
-offset_right = 3000.0
-offset_bottom = 3068.0
+offset_left = 2834.02
+offset_top = 3017.48
+offset_right = 2982.02
+offset_bottom = 3165.48
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -907,10 +909,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_plunger_power_4" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 2852.0
-offset_top = 2920.0
-offset_right = 3000.0
-offset_bottom = 3068.0
+offset_left = 2825.58
+offset_top = 2941.56
+offset_right = 2973.58
+offset_bottom = 3089.56
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -919,10 +921,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_plunger_power_5" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 2852.0
-offset_top = 2920.0
-offset_right = 3000.0
-offset_bottom = 3068.0
+offset_left = 2819.26
+offset_top = 2865.65
+offset_right = 2967.26
+offset_bottom = 3013.65
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -931,10 +933,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_plunger_power_6" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 2852.0
-offset_top = 2920.0
-offset_right = 3000.0
-offset_bottom = 3068.0
+offset_left = 2812.93
+offset_top = 2791.84
+offset_right = 2960.93
+offset_bottom = 2939.84
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -943,10 +945,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_enable_left_cbg" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 153.0
-offset_top = 376.0
-offset_right = 301.0
-offset_bottom = 524.0
+offset_left = 950.87
+offset_top = -33.93
+offset_right = 1098.87
+offset_bottom = 114.07
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -955,10 +957,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_disable_left_cbg" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 153.0
-offset_top = 376.0
-offset_right = 301.0
-offset_bottom = 524.0
+offset_left = 1028.9
+offset_top = -33.93
+offset_right = 1176.9
+offset_bottom = 114.07
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -967,10 +969,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_enable_right_cbg" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 153.0
-offset_top = 376.0
-offset_right = 301.0
-offset_bottom = 524.0
+offset_left = 1809.15
+offset_top = -29.72
+offset_right = 1957.15
+offset_bottom = 118.28
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -979,10 +981,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_disable_right_cbg" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 153.0
-offset_top = 376.0
-offset_right = 301.0
-offset_bottom = 524.0
+offset_left = 1887.17
+offset_top = -27.61
+offset_right = 2035.17
+offset_bottom = 120.39
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -991,10 +993,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_enable_right_cbg_alt" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 153.0
-offset_top = 376.0
-offset_right = 301.0
-offset_bottom = 524.0
+offset_left = 1887.17
+offset_top = 48.31
+offset_right = 2035.17
+offset_bottom = 196.31
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -1003,10 +1005,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_disable_right_cbg_alt" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 153.0
-offset_top = 376.0
-offset_right = 301.0
-offset_bottom = 524.0
+offset_left = 1965.2
+offset_top = 48.31
+offset_right = 2113.2
+offset_bottom = 196.31
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -1015,10 +1017,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_enable_spinner_targets" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 153.0
-offset_top = 376.0
-offset_right = 301.0
-offset_bottom = 524.0
+offset_left = 113.68
+offset_top = 1427.46
+offset_right = 261.68
+offset_bottom = 1575.46
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -1027,10 +1029,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_disable_spinner_targets" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 153.0
-offset_top = 376.0
-offset_right = 301.0
-offset_bottom = 524.0
+offset_left = 185.38
+offset_top = 1427.46
+offset_right = 333.38
+offset_bottom = 1575.46
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -1039,10 +1041,10 @@ tags = ["no_audit"]
 
 [node name="vswitch_test_coils" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 153.0
-offset_top = 376.0
-offset_right = 301.0
-offset_bottom = 524.0
+offset_left = 129.46
+offset_top = 332.92
+offset_right = 277.46
+offset_bottom = 480.92
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -1051,10 +1053,10 @@ tags = ["no_audit"]
 
 [node name="s_coin_door" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 1332.0
-offset_top = 3858.0
-offset_right = 1480.0
-offset_bottom = 4006.0
+offset_left = 1155.42
+offset_top = 3801.95
+offset_right = 1303.42
+offset_bottom = 3949.95
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -1063,10 +1065,10 @@ tags = ["service_door_open", "power_off"]
 
 [node name="s_coin_door_service_1" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 1332.0
-offset_top = 3858.0
-offset_right = 1480.0
-offset_bottom = 4006.0
+offset_left = 1313.58
+offset_top = 3797.73
+offset_right = 1461.58
+offset_bottom = 3945.73
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -1075,10 +1077,10 @@ tags = ["service_esc"]
 
 [node name="s_coin_door_service_2" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 1332.0
-offset_top = 3858.0
-offset_right = 1480.0
-offset_bottom = 4006.0
+offset_left = 1389.5
+offset_top = 3797.73
+offset_right = 1537.5
+offset_bottom = 3945.73
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -1087,10 +1089,10 @@ tags = ["service_down"]
 
 [node name="s_coin_door_service_3" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 1332.0
-offset_top = 3858.0
-offset_right = 1480.0
-offset_bottom = 4006.0
+offset_left = 1463.31
+offset_top = 3799.84
+offset_right = 1611.31
+offset_bottom = 3947.84
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -1099,10 +1101,10 @@ tags = ["service_up"]
 
 [node name="s_coin_door_service_4" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 1332.0
-offset_top = 3858.0
-offset_right = 1480.0
-offset_bottom = 4006.0
+offset_left = 1537.11
+offset_top = 3799.84
+offset_right = 1685.11
+offset_bottom = 3947.84
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -1111,10 +1113,10 @@ tags = ["service_enter"]
 
 [node name="s_start" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 247.0
-offset_top = 3748.0
-offset_right = 395.0
-offset_bottom = 3896.0
+offset_left = 333.0
+offset_top = 3388.63
+offset_right = 481.0
+offset_bottom = 3536.63
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -1123,10 +1125,10 @@ tags = ["start", "text_input_select"]
 
 [node name="s_left_flipper" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 3451.0
-offset_right = 179.0
-offset_bottom = 3599.0
+offset_left = 1178.62
+offset_top = 3247.34
+offset_right = 1326.62
+offset_bottom = 3395.34
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -1135,10 +1137,10 @@ tags = ["left_flipper", "text_input_left"]
 
 [node name="s_left_flipper_secondary" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 3451.0
-offset_right = 179.0
-offset_bottom = 3599.0
+offset_left = 1104.81
+offset_top = 3245.23
+offset_right = 1252.81
+offset_bottom = 3393.23
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -1147,10 +1149,10 @@ tags = ["mini_flipper"]
 
 [node name="s_tilt_bob" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 239.0
-offset_top = 735.0
-offset_right = 387.0
-offset_bottom = 883.0
+offset_left = 190.68
+offset_top = 749.46
+offset_right = 338.68
+offset_bottom = 897.46
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -1159,10 +1161,10 @@ tags = ["tilt_warning"]
 
 [node name="s_right_flipper" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 2869.0
-offset_top = 3283.0
-offset_right = 3017.0
-offset_bottom = 3431.0
+offset_left = 1547.66
+offset_top = 3238.9
+offset_right = 1695.66
+offset_bottom = 3386.9
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -1171,10 +1173,10 @@ tags = ["right_flipper", "text_input_right"]
 
 [node name="s_right_flipper_secondary" type="TextureButton" parent="switches"]
 layout_mode = 0
-offset_left = 2869.0
-offset_top = 3283.0
-offset_right = 3017.0
-offset_bottom = 3431.0
+offset_left = 1619.36
+offset_top = 3241.01
+offset_right = 1767.36
+offset_bottom = 3389.01
 texture_normal = ExtResource("5_e2jqc")
 texture_pressed = ExtResource("6_tn0qe")
 stretch_mode = 4
@@ -1190,769 +1192,769 @@ grow_vertical = 2
 metadata/_edit_lock_ = true
 
 [node name="l_test_1" type="Sprite2D" parent="lights"]
-position = Vector2(462.556, 3903.56)
+position = Vector2(-491.445, 4192.56)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_bb", "lights_bb_trogdor", "lights_2a"]
 
 [node name="l_test_2" type="Sprite2D" parent="lights"]
-position = Vector2(462.556, 3903.56)
+position = Vector2(-491.445, 4192.56)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_bb", "lights_bb_flames", "lights_2b"]
 
 [node name="l_test_3" type="Sprite2D" parent="lights"]
-position = Vector2(462.556, 3903.56)
+position = Vector2(-491.445, 4192.56)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_bb", "lights_bb_characters", "lights_2a"]
 
 [node name="l_bb_trogdor_t_1" type="Sprite2D" parent="lights"]
-position = Vector2(2823.56, 270.556)
+position = Vector2(2275.85, 82.78)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_bb", "lights_bb_trogdor", "lights_bb_trogdor_t"]
 
 [node name="l_bb_trogdor_r_1" type="Sprite2D" parent="lights"]
-position = Vector2(2823.56, 270.556)
+position = Vector2(2384.36, 74.21)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_bb", "lights_bb_trogdor", "lights_bb_trogdor_r"]
 
 [node name="l_bb_trogdor_o_1" type="Sprite2D" parent="lights"]
-position = Vector2(2823.56, 270.556)
+position = Vector2(2487.16, 77.07)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_bb", "lights_bb_trogdor", "lights_bb_trogdor_o"]
 
 [node name="l_bb_trogdor_g_1" type="Sprite2D" parent="lights"]
-position = Vector2(2823.56, 270.556)
+position = Vector2(2601.38, 74.21)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_bb", "lights_bb_trogdor", "lights_bb_trogdor_g"]
 
 [node name="l_bb_trogdor_d_1" type="Sprite2D" parent="lights"]
-position = Vector2(2823.56, 270.556)
+position = Vector2(2707.04, 82.78)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_bb", "lights_bb_trogdor", "lights_bb_trogdor_d"]
 
 [node name="l_bb_trogdor_o2_1" type="Sprite2D" parent="lights"]
-position = Vector2(2823.56, 270.556)
+position = Vector2(2806.98, 74.21)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_bb", "lights_bb_trogdor", "lights_bb_trogdor_o2"]
 
 [node name="l_bb_trogdor_r2_1" type="Sprite2D" parent="lights"]
-position = Vector2(2823.56, 270.556)
+position = Vector2(2910.13, 82.19)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_bb", "lights_bb_trogdor", "lights_bb_trogdor_r2"]
 
 [node name="l_bb_trogdor_!_1" type="Sprite2D" parent="lights"]
-position = Vector2(2823.56, 270.556)
+position = Vector2(2960.74, 105.4)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_bb", "lights_bb_trogdor", "lights_bb_trogdor_bang"]
 
 [node name="l_bb_character_trogdor_1" type="Sprite2D" parent="lights"]
-position = Vector2(2823.56, 270.556)
+position = Vector2(2557.96, 233.93)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_bb", "lights_bb_characters", "lights_bb_char_trogdor"]
 
 [node name="l_bb_character_knight_1" type="Sprite2D" parent="lights"]
-position = Vector2(2823.56, 270.556)
+position = Vector2(2775.16, 520.55)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_bb", "lights_bb_characters", "lights_bb_char_knight"]
 
 [node name="l_bb_character_peasant_1" type="Sprite2D" parent="lights"]
-position = Vector2(2823.56, 270.556)
+position = Vector2(2393.47, 512.12)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_bb", "lights_bb_characters", "lights_bb_char_peasant"]
 
 [node name="l_bb_flame_trogdor_outer_1" type="Sprite2D" parent="lights"]
-position = Vector2(2823.56, 270.556)
+position = Vector2(2602.24, 429.93)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_bb", "lights_bb_flames", "lights_bb_flames_trogdor", "lights_bb_flames_trogdor_outer"]
 
 [node name="l_bb_flame_trogdor_inner_1" type="Sprite2D" parent="lights"]
-position = Vector2(2823.56, 270.556)
+position = Vector2(2673.94, 434.14)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_bb", "lights_bb_flames", "lights_bb_flames_trogdor", "lights_bb_flames_trogdor_inner"]
 
 [node name="l_bb_flame_peasant_1" type="Sprite2D" parent="lights"]
-position = Vector2(2823.56, 270.556)
+position = Vector2(2452.52, 478.4)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_bb", "lights_bb_flames", "lights_bb_flames_peasant"]
 
 [node name="l_bb_flame_background_bottom_1" type="Sprite2D" parent="lights"]
-position = Vector2(2823.56, 270.556)
+position = Vector2(2931.21, 438.36)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_bb", "lights_bb_flames", "lights_bb_flames_background", "lights_bb_flames_background_bottom"]
 
 [node name="l_bb_flame_background_top_1" type="Sprite2D" parent="lights"]
-position = Vector2(2823.56, 270.556)
+position = Vector2(2855.3, 337.2)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_bb", "lights_bb_flames", "lights_bb_flames_background", "lights_bb_flames_background_top"]
 
 [node name="l_bb_gi_1" type="Sprite2D" parent="lights"]
-position = Vector2(2823.56, 270.556)
+position = Vector2(2800.47, 223.39)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_bb", "lights_bb_gi", "lights_gi"]
 
 [node name="l_bb_edge_top_1" type="Sprite2D" parent="lights"]
-position = Vector2(2639.56, 127.556)
+position = Vector2(2241.59, 22.83)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_top"]
 
 [node name="l_bb_edge_top_2" type="Sprite2D" parent="lights"]
-position = Vector2(2639.56, 127.556)
+position = Vector2(2287.27, 19.98)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_top"]
 
 [node name="l_bb_edge_top_3" type="Sprite2D" parent="lights"]
-position = Vector2(2639.56, 127.556)
+position = Vector2(2336.54, 21.08)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_top"]
 
 [node name="l_bb_edge_top_4" type="Sprite2D" parent="lights"]
-position = Vector2(2639.56, 127.556)
+position = Vector2(2385.04, 23.19)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_top"]
 
 [node name="l_bb_edge_top_5" type="Sprite2D" parent="lights"]
-position = Vector2(2639.56, 127.556)
+position = Vector2(2427.21, 21.08)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_top"]
 
 [node name="l_bb_edge_top_6" type="Sprite2D" parent="lights"]
-position = Vector2(2639.56, 127.556)
+position = Vector2(2473.61, 21.08)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_top"]
 
 [node name="l_bb_edge_top_7" type="Sprite2D" parent="lights"]
-position = Vector2(2639.56, 127.556)
+position = Vector2(2520, 21.08)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_top"]
 
 [node name="l_bb_edge_top_8" type="Sprite2D" parent="lights"]
-position = Vector2(2639.56, 127.556)
+position = Vector2(2566.39, 21.07)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_top"]
 
 [node name="l_bb_edge_top_9" type="Sprite2D" parent="lights"]
-position = Vector2(2639.56, 127.556)
+position = Vector2(2610.68, 23.18)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_top"]
 
 [node name="l_bb_edge_top_10" type="Sprite2D" parent="lights"]
-position = Vector2(2639.56, 127.556)
+position = Vector2(2657.07, 23.18)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_top"]
 
 [node name="l_bb_edge_top_11" type="Sprite2D" parent="lights"]
-position = Vector2(2639.56, 127.556)
+position = Vector2(2699.25, 25.29)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_top"]
 
 [node name="l_bb_edge_top_12" type="Sprite2D" parent="lights"]
-position = Vector2(2639.56, 127.556)
+position = Vector2(2741.42, 25.29)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_top"]
 
 [node name="l_bb_edge_top_13" type="Sprite2D" parent="lights"]
-position = Vector2(2639.56, 127.556)
+position = Vector2(2783.6, 25.29)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_top"]
 
 [node name="l_bb_edge_top_14" type="Sprite2D" parent="lights"]
-position = Vector2(2639.56, 127.556)
+position = Vector2(2821.56, 23.18)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_top"]
 
 [node name="l_bb_edge_top_15" type="Sprite2D" parent="lights"]
-position = Vector2(2639.56, 127.556)
+position = Vector2(2859.51, 25.29)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_top"]
 
 [node name="l_bb_edge_top_16" type="Sprite2D" parent="lights"]
-position = Vector2(2639.56, 127.556)
+position = Vector2(2897.47, 25.29)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_top"]
 
 [node name="l_bb_edge_top_17" type="Sprite2D" parent="lights"]
-position = Vector2(2639.56, 127.556)
+position = Vector2(2939.65, 25.29)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_top"]
 
 [node name="l_bb_edge_top_18" type="Sprite2D" parent="lights"]
-position = Vector2(2639.56, 127.556)
+position = Vector2(2977.61, 23.18)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_top"]
 
 [node name="l_bb_edge_top_19" type="Sprite2D" parent="lights"]
-position = Vector2(2639.56, 127.556)
+position = Vector2(2998.69, 52.7)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_top"]
 
 [node name="l_bb_edge_right_1" type="Sprite2D" parent="lights"]
-position = Vector2(2973.56, 331.556)
+position = Vector2(2996.59, 90.64)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_right"]
 
 [node name="l_bb_edge_right_2" type="Sprite2D" parent="lights"]
-position = Vector2(2973.56, 331.556)
+position = Vector2(2996.59, 128.58)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_right"]
 
 [node name="l_bb_edge_right_3" type="Sprite2D" parent="lights"]
-position = Vector2(2973.56, 331.556)
+position = Vector2(2998.69, 168.63)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_right"]
 
 [node name="l_bb_edge_right_4" type="Sprite2D" parent="lights"]
-position = Vector2(2973.56, 331.556)
+position = Vector2(2996.59, 208.68)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_right"]
 
 [node name="l_bb_edge_right_5" type="Sprite2D" parent="lights"]
-position = Vector2(2973.56, 331.556)
+position = Vector2(3000.8, 248.73)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_right"]
 
 [node name="l_bb_edge_right_6" type="Sprite2D" parent="lights"]
-position = Vector2(2973.56, 331.556)
+position = Vector2(2998.69, 288.78)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_right"]
 
 [node name="l_bb_edge_right_7" type="Sprite2D" parent="lights"]
-position = Vector2(2973.56, 331.556)
+position = Vector2(3000.8, 333.05)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_right"]
 
 [node name="l_bb_edge_right_8" type="Sprite2D" parent="lights"]
-position = Vector2(2973.56, 331.556)
+position = Vector2(2998.69, 375.21)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_right"]
 
 [node name="l_bb_edge_right_9" type="Sprite2D" parent="lights"]
-position = Vector2(2973.56, 331.556)
+position = Vector2(2998.69, 419.47)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_right"]
 
 [node name="l_bb_edge_right_10" type="Sprite2D" parent="lights"]
-position = Vector2(2973.56, 331.556)
+position = Vector2(2998.69, 459.52)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_right"]
 
 [node name="l_bb_edge_right_11" type="Sprite2D" parent="lights"]
-position = Vector2(2973.56, 331.556)
+position = Vector2(2998.3, 499.51)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_right"]
 
 [node name="l_bb_edge_right_12" type="Sprite2D" parent="lights"]
-position = Vector2(2973.56, 331.556)
+position = Vector2(2998.69, 539.62)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_right"]
 
 [node name="l_bb_edge_right_13" type="Sprite2D" parent="lights"]
-position = Vector2(2973.56, 331.556)
+position = Vector2(2996.59, 579.67)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_right"]
 
 [node name="l_bb_edge_left_1" type="Sprite2D" parent="lights"]
-position = Vector2(2284.56, 311.556)
+position = Vector2(2221.6, 82.78)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_left"]
 
 [node name="l_bb_edge_left_2" type="Sprite2D" parent="lights"]
-position = Vector2(2284.56, 311.556)
+position = Vector2(2221.6, 119.88)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_left"]
 
 [node name="l_bb_edge_left_3" type="Sprite2D" parent="lights"]
-position = Vector2(2284.56, 311.556)
+position = Vector2(2221.6, 168.41)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_left"]
 
 [node name="l_bb_edge_left_4" type="Sprite2D" parent="lights"]
-position = Vector2(2284.56, 311.556)
+position = Vector2(2221.6, 208.37)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_left"]
 
 [node name="l_bb_edge_left_5" type="Sprite2D" parent="lights"]
-position = Vector2(2284.56, 311.556)
+position = Vector2(2221.6, 248.33)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_left"]
 
 [node name="l_bb_edge_left_6" type="Sprite2D" parent="lights"]
-position = Vector2(2284.56, 311.556)
+position = Vector2(2221.6, 294)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_left"]
 
 [node name="l_bb_edge_left_7" type="Sprite2D" parent="lights"]
-position = Vector2(2284.56, 311.556)
+position = Vector2(2221.6, 336.81)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_left"]
 
 [node name="l_bb_edge_left_8" type="Sprite2D" parent="lights"]
-position = Vector2(2284.56, 311.556)
+position = Vector2(2221.6, 376.77)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_left"]
 
 [node name="l_bb_edge_left_9" type="Sprite2D" parent="lights"]
-position = Vector2(2284.56, 311.556)
+position = Vector2(2221.6, 416.73)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_left"]
 
 [node name="l_bb_edge_left_10" type="Sprite2D" parent="lights"]
-position = Vector2(2284.56, 311.556)
+position = Vector2(2221.6, 459.55)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_left"]
 
 [node name="l_bb_edge_left_11" type="Sprite2D" parent="lights"]
-position = Vector2(2284.56, 311.556)
+position = Vector2(2221.6, 502.36)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_left"]
 
 [node name="l_bb_edge_left_12" type="Sprite2D" parent="lights"]
-position = Vector2(2284.56, 311.556)
+position = Vector2(2221.6, 542.32)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_bb_edge", "lights_bb_edge_left"]
 
 [node name="l_bb_edge_left_13" type="Sprite2D" parent="lights"]
-position = Vector2(2284.56, 311.556)
+position = Vector2(2221.6, 582.28)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_bb_edge", "lights_bb_edge_left"]
 
 [node name="l_pf_x2" type="Sprite2D" parent="lights"]
-position = Vector2(1412.56, 3018.56)
+position = Vector2(1168.27, 2646.53)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3a", "lights_4a", "lights_5a", "lights_pf", "lights_multipliers"]
 
 [node name="l_pf_x3" type="Sprite2D" parent="lights"]
-position = Vector2(1412.56, 3018.56)
+position = Vector2(1334.86, 2583.26)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3b", "lights_4b", "lights_5b", "lights_pf", "lights_multipliers"]
 
 [node name="l_pf_x4" type="Sprite2D" parent="lights"]
-position = Vector2(1412.56, 3018.56)
+position = Vector2(1520.44, 2583.26)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3c", "lights_4c", "lights_5c", "lights_pf", "lights_multipliers"]
 
 [node name="l_pf_x5" type="Sprite2D" parent="lights"]
-position = Vector2(1412.56, 3018.56)
+position = Vector2(1670.16, 2657.07)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4d", "lights_5d", "lights_pf", "lights_multipliers"]
 
 [node name="l_majesty_1" type="Sprite2D" parent="lights"]
-position = Vector2(1440.56, 2206.56)
+position = Vector2(1514.11, 1592.13)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3b", "lights_4a", "lights_5e", "lights_pf", "lights_majesty"]
 
 [node name="l_majesty_2" type="Sprite2D" parent="lights"]
-position = Vector2(1440.56, 2206.56)
+position = Vector2(1830.43, 1857.84)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3c", "lights_4b", "lights_5a", "lights_pf", "lights_majesty"]
 
 [node name="l_majesty_3" type="Sprite2D" parent="lights"]
-position = Vector2(1440.56, 2206.56)
+position = Vector2(1838.86, 2178.38)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4c", "lights_5b", "lights_pf", "lights_majesty"]
 
 [node name="l_majesty_4" type="Sprite2D" parent="lights"]
-position = Vector2(1440.56, 2206.56)
+position = Vector2(1505.67, 2425.1)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4d", "lights_5c", "lights_pf", "lights_majesty"]
 
 [node name="l_majesty_5" type="Sprite2D" parent="lights"]
-position = Vector2(1440.56, 2206.56)
+position = Vector2(1178.81, 2167.83)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3c", "lights_4a", "lights_5d", "lights_pf", "lights_majesty"]
 
 [node name="l_majesty_6" type="Sprite2D" parent="lights"]
-position = Vector2(1440.56, 2206.56)
+position = Vector2(1195.68, 1868.38)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3a", "lights_4b", "lights_5e", "lights_pf", "lights_majesty"]
 
 [node name="l_drain" type="Sprite2D" parent="lights"]
-position = Vector2(-189.444, 429.556)
+position = Vector2(1417.1, 3317.12)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3a", "lights_4c", "lights_5e", "lights_pf", "lights_ball_save"]
 
 [node name="l_spinner_left_flasher" type="Sprite2D" parent="lights"]
-position = Vector2(-189.444, 429.556)
+position = Vector2(529.31, 1583.7)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_5e", "lights_flashers"]
 
 [node name="l_spinner_left_indicator" type="Sprite2D" parent="lights"]
-position = Vector2(-189.444, 429.556)
+position = Vector2(527.2, 1659.62)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3c", "lights_4b", "lights_5a", "lights_pf"]
 
 [node name="l_spinner_right_flasher" type="Sprite2D" parent="lights"]
-position = Vector2(-189.444, 429.556)
+position = Vector2(2279.6, 767.6)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4c", "lights_5e", "lights_flashers"]
 
 [node name="l_spinner_right_indicator" type="Sprite2D" parent="lights"]
-position = Vector2(-189.444, 429.556)
+position = Vector2(2247.97, 839.3)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3c", "lights_4d", "lights_5b", "lights_pf"]
 
 [node name="l_orbit_left" type="Sprite2D" parent="lights"]
-position = Vector2(-189.444, 429.556)
+position = Vector2(784.47, 425.97)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4c", "lights_5a", "lights_pf"]
 
 [node name="l_orbit_right" type="Sprite2D" parent="lights"]
-position = Vector2(-189.444, 429.556)
+position = Vector2(2425.1, 649.51)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4d", "lights_5c", "lights_pf"]
 
 [node name="l_vuk_left" type="Sprite2D" parent="lights"]
-position = Vector2(-189.444, 429.556)
+position = Vector2(813.99, 2064.5)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4a", "lights_5b", "lights_pf"]
 
 [node name="l_vuk_right" type="Sprite2D" parent="lights"]
-position = Vector2(-189.444, 429.556)
+position = Vector2(2096.13, 1478.26)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3c", "lights_4b", "lights_5d", "lights_pf"]
 
 [node name="l_elbow_lower" type="Sprite2D" parent="lights"]
-position = Vector2(-189.444, 429.556)
+position = Vector2(2328.1, 1779.82)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4d", "lights_5e", "lights_pf"]
 
 [node name="l_burn_center" type="Sprite2D" parent="lights"]
-position = Vector2(-189.444, 429.556)
+position = Vector2(1410.78, 442.85)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3b", "lights_4a", "lights_5b", "lights_pf"]
 
 [node name="l_ramp_right" type="Sprite2D" parent="lights"]
-position = Vector2(-189.444, 429.556)
+position = Vector2(2275.38, 1199.9)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3c", "lights_4c", "lights_5e", "lights_pf"]
 
 [node name="l_ramp_left" type="Sprite2D" parent="lights"]
-position = Vector2(-189.444, 429.556)
+position = Vector2(1568.94, 1185.14)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_5c", "lights_pf"]
 
 [node name="l_loop_left" type="Sprite2D" parent="lights"]
-position = Vector2(-189.444, 429.556)
+position = Vector2(1438.19, 923.65)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_5b", "lights_pf"]
 
 [node name="l_loop_right" type="Sprite2D" parent="lights"]
-position = Vector2(-189.444, 429.556)
+position = Vector2(1824.1, 1035.41)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3b", "lights_4c", "lights_5d", "lights_pf"]
 
 [node name="l_gate_left" type="Sprite2D" parent="lights"]
-position = Vector2(-189.444, 429.556)
+position = Vector2(1176.7, 101.22)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4d", "lights_5a", "lights_pf"]
 
 [node name="l_gate_right" type="Sprite2D" parent="lights"]
-position = Vector2(-189.444, 429.556)
+position = Vector2(1811.45, 90.68)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3c", "lights_4a", "lights_5b", "lights_pf"]
 
 [node name="generated_light_1" type="Sprite2D" parent="lights"]
-position = Vector2(524, 3769)
+position = Vector2(841.41, 3825.34)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 
 [node name="gl_ring_a_1" type="Sprite2D" parent="lights"]
-position = Vector2(649.556, 3837.56)
+position = Vector2(605.22, 3736.77)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_2a", "lights_3a", "lights_4a", "lights_5a", "lights_gl_ring_a"]
 
 [node name="gl_ring_a_2" type="Sprite2D" parent="lights"]
-position = Vector2(649.556, 3837.56)
+position = Vector2(672.7, 3804.25)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_2b", "lights_3b", "lights_4a", "lights_5e", "lights_gl_ring_a"]
 
 [node name="gl_ring_a_3" type="Sprite2D" parent="lights"]
-position = Vector2(649.556, 3837.56)
+position = Vector2(744.4, 3800.03)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_2a", "lights_3c", "lights_4b", "lights_5b", "lights_gl_ring_a"]
 
 [node name="gl_ring_a_4" type="Sprite2D" parent="lights"]
-position = Vector2(649.556, 3837.56)
+position = Vector2(797.12, 3734.66)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_2b", "lights_3a", "lights_4b", "lights_5e", "lights_gl_ring_a"]
 
 [node name="gl_ring_a_5" type="Sprite2D" parent="lights"]
-position = Vector2(649.556, 3837.56)
+position = Vector2(795.01, 3656.64)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_2a", "lights_3b", "lights_4c", "lights_5c", "lights_gl_ring_a"]
 
 [node name="gl_ring_a_6" type="Sprite2D" parent="lights"]
-position = Vector2(649.556, 3837.56)
+position = Vector2(729.64, 3601.81)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_2b", "lights_3c", "lights_4c", "lights_5e", "lights_gl_ring_a"]
 
 [node name="gl_ring_a_7" type="Sprite2D" parent="lights"]
-position = Vector2(649.556, 3837.56)
+position = Vector2(662.16, 3603.92)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_2a", "lights_3a", "lights_4d", "lights_5d", "lights_gl_ring_a"]
 
 [node name="gl_ring_a_8" type="Sprite2D" parent="lights"]
-position = Vector2(649.556, 3837.56)
+position = Vector2(605.22, 3665.07)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_2b", "lights_3b", "lights_4d", "lights_5e", "lights_gl_ring_a"]
 
 [node name="gl_grid_1" type="Sprite2D" parent="lights"]
-position = Vector2(1216.56, 877.556)
+position = Vector2(1102.9, 896.23)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_2a", "lights_3a", "lights_4a", "lights_5a", "grid_lights"]
 
 [node name="gl_grid_2" type="Sprite2D" parent="lights"]
-position = Vector2(1216.56, 877.556)
+position = Vector2(1204.12, 847.73)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_2b", "lights_3b", "lights_4b", "lights_5b", "grid_lights"]
 
 [node name="gl_grid_3" type="Sprite2D" parent="lights"]
-position = Vector2(1216.56, 877.556)
+position = Vector2(1303.23, 790.79)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_2a", "lights_3c", "lights_4c", "lights_5c", "grid_lights"]
 
 [node name="gl_grid_4" type="Sprite2D" parent="lights"]
-position = Vector2(1216.56, 877.556)
+position = Vector2(1102.9, 999.56)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_2b", "lights_3a", "lights_4d", "lights_5d", "grid_lights"]
 
 [node name="gl_grid_5" type="Sprite2D" parent="lights"]
-position = Vector2(1216.56, 877.556)
+position = Vector2(1210.44, 948.95)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_2a", "lights_3b", "lights_4a", "lights_5e", "grid_lights"]
 
 [node name="gl_grid_6" type="Sprite2D" parent="lights"]
-position = Vector2(1216.56, 877.556)
+position = Vector2(1305.34, 889.91)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_2b", "lights_3c", "lights_4b", "lights_5a", "grid_lights"]
 
 [node name="gl_grid_7" type="Sprite2D" parent="lights"]
-position = Vector2(1216.56, 877.556)
+position = Vector2(1100.79, 1113.44)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_2a", "lights_3a", "lights_4c", "lights_5b", "grid_lights"]
 
 [node name="gl_grid_8" type="Sprite2D" parent="lights"]
-position = Vector2(1216.56, 877.556)
+position = Vector2(1212.55, 1052.28)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_2b", "lights_3b", "lights_4d", "lights_5c", "grid_lights"]
 
 [node name="gl_grid_9" type="Sprite2D" parent="lights"]
-position = Vector2(1216.56, 877.556)
+position = Vector2(1315.88, 986.91)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
@@ -2183,658 +2185,658 @@ script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_2b", "lights_3b", "lights_4d", "lights_5e", "lights_rings", "lights_pf", "lights_cobra_ring_d"]
 
 [node name="gl_ss_elbow_downwards" type="Sprite2D" parent="lights"]
-position = Vector2(3128.56, 449.556)
+position = Vector2(2372.38, 1398.13)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_sequence_shots"]
 
 [node name="gl_ss_elbow_upwards" type="Sprite2D" parent="lights"]
-position = Vector2(3128.56, 449.556)
+position = Vector2(2382.93, 1469.82)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_sequence_shots"]
 
 [node name="gl_ss_horseshoe_clockwise" type="Sprite2D" parent="lights"]
-position = Vector2(3128.56, 449.556)
+position = Vector2(1488.8, 778.14)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_sequence_shots"]
 
 [node name="gl_ss_horseshoe_widdershins" type="Sprite2D" parent="lights"]
-position = Vector2(3128.56, 449.556)
+position = Vector2(1834.64, 881.47)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_sequence_shots"]
 
 [node name="gl_ss_left_orbit_open" type="Sprite2D" parent="lights"]
-position = Vector2(3128.56, 449.556)
+position = Vector2(849.84, 208.77)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_sequence_shots"]
 
 [node name="gl_ss_left_orbit_closed" type="Sprite2D" parent="lights"]
-position = Vector2(3128.56, 449.556)
+position = Vector2(923.65, 179.25)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_sequence_shots"]
 
 [node name="gl_ss_right_orbit_open" type="Sprite2D" parent="lights"]
-position = Vector2(3128.56, 449.556)
+position = Vector2(2098.24, 379.58)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_sequence_shots"]
 
 [node name="gl_ss_right_orbit_closed" type="Sprite2D" parent="lights"]
-position = Vector2(3128.56, 449.556)
+position = Vector2(2155.18, 350.06)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_sequence_shots"]
 
 [node name="gl_ss_right_ramp_summit" type="Sprite2D" parent="lights"]
-position = Vector2(3128.56, 449.556)
+position = Vector2(2226.88, 1069.15)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_sequence_shots"]
 
 [node name="gl_ss_right_ramp_travel" type="Sprite2D" parent="lights"]
-position = Vector2(3128.56, 449.556)
+position = Vector2(2285.92, 917.32)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_sequence_shots"]
 
 [node name="gl_ss_right_outlane_escape" type="Sprite2D" parent="lights"]
-position = Vector2(3128.56, 449.556)
+position = Vector2(2492.59, 2971.28)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_sequence_shots"]
 
 [node name="gl_ss_s_ramp_summit" type="Sprite2D" parent="lights"]
-position = Vector2(3128.56, 449.556)
+position = Vector2(1684.92, 835.08)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_sequence_shots"]
 
 [node name="gl_ss_s_ramp_travel" type="Sprite2D" parent="lights"]
-position = Vector2(3128.56, 449.556)
+position = Vector2(1598.46, 835.08)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_sequence_shots"]
 
 [node name="gl_ss_subway_travel" type="Sprite2D" parent="lights"]
-position = Vector2(3128.56, 449.556)
+position = Vector2(980.59, 676.92)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_generated", "lights_sequence_shots"]
 
 [node name="gi_horseshoe_behind" type="Sprite2D" parent="lights"]
-position = Vector2(1681.56, 751.556)
+position = Vector2(1651.36, 772.75)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_5a", "lights_pf", "lights_gi"]
 
 [node name="gi_burn_after" type="Sprite2D" parent="lights"]
-position = Vector2(1681.56, 751.556)
+position = Vector2(1792.47, 217.21)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_5b", "lights_pf", "lights_gi"]
 
 [node name="l_burn_n" type="Sprite2D" parent="lights"]
-position = Vector2(1428.56, 131.556)
+position = Vector2(1663.6, 227.4)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4d", "lights_5d", "lights_pf", "lights_burn"]
 
 [node name="l_burn_r" type="Sprite2D" parent="lights"]
-position = Vector2(1428.56, 131.556)
+position = Vector2(1484.07, 219.42)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4c", "lights_5c", "lights_pf", "lights_burn"]
 
 [node name="l_burn_u" type="Sprite2D" parent="lights"]
-position = Vector2(1428.56, 131.556)
+position = Vector2(1349.62, 221.42)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3c", "lights_4b", "lights_5b", "lights_pf", "lights_burn"]
 
 [node name="l_burn_b" type="Sprite2D" parent="lights"]
-position = Vector2(1428.56, 131.556)
+position = Vector2(1218.88, 225.64)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3b", "lights_4a", "lights_5a", "lights_pf", "lights_burn"]
 
 [node name="gi_blue_target_back" type="Sprite2D" parent="lights"]
-position = Vector2(870, 425)
+position = Vector2(1109.22, 202.44)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_5a", "lights_pf", "lights_gi"]
 
 [node name="l_captive_ball_ring_1" type="Sprite2D" parent="lights"]
-position = Vector2(963.556, 832.556)
+position = Vector2(868.82, 847.73)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3b", "lights_4a", "lights_5a", "lights_pf", "lights_captive_ring"]
 
 [node name="l_captive_ball_ring_2" type="Sprite2D" parent="lights"]
-position = Vector2(963.556, 832.556)
+position = Vector2(917.32, 889.91)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3c", "lights_4a", "lights_5e", "lights_pf", "lights_captive_ring"]
 
 [node name="l_captive_ball_ring_3" type="Sprite2D" parent="lights"]
-position = Vector2(963.556, 832.556)
+position = Vector2(974.26, 885.69)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4b", "lights_5b", "lights_pf", "lights_captive_ring"]
 
 [node name="l_captive_ball_ring_4" type="Sprite2D" parent="lights"]
-position = Vector2(963.556, 832.556)
+position = Vector2(1018.54, 839.3)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_5e", "lights_pf", "lights_captive_ring"]
 
 [node name="l_captive_ball_ring_5" type="Sprite2D" parent="lights"]
-position = Vector2(963.556, 832.556)
+position = Vector2(1018.54, 786.58)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3c", "lights_4c", "lights_5c", "lights_pf", "lights_captive_ring"]
 
 [node name="l_captive_ball_ring_6" type="Sprite2D" parent="lights"]
-position = Vector2(963.556, 832.556)
+position = Vector2(978.48, 731.75)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3a", "lights_4c", "lights_5e", "lights_pf", "lights_captive_ring"]
 
 [node name="l_captive_ball_ring_7" type="Sprite2D" parent="lights"]
-position = Vector2(963.556, 832.556)
+position = Vector2(919.43, 731.75)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3b", "lights_4d", "lights_5d", "lights_pf", "lights_captive_ring"]
 
 [node name="l_captive_ball_ring_8" type="Sprite2D" parent="lights"]
-position = Vector2(963.556, 832.556)
+position = Vector2(864.6, 784.47)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3c", "lights_4d", "lights_5e", "lights_pf", "lights_captive_ring"]
 
 [node name="l_captive_ball_single" type="Sprite2D" parent="lights"]
-position = Vector2(963.556, 832.556)
+position = Vector2(946.85, 807.67)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4d", "lights_5e", "lights_pf"]
 
 [node name="gi_sling_right_top" type="Sprite2D" parent="lights"]
-position = Vector2(1881.56, 2610.56)
+position = Vector2(2018.11, 2387.15)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_5a", "lights_pf"]
 
 [node name="gi_sling_right_bottom" type="Sprite2D" parent="lights"]
-position = Vector2(1881.56, 2610.56)
+position = Vector2(1990.69, 2665.51)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_5b", "lights_pf", "lights_gi"]
 
 [node name="gi_right_flipper_top" type="Sprite2D" parent="lights"]
-position = Vector2(1970.56, 2944.56)
+position = Vector2(2134.09, 2910.13)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4c", "lights_5c", "lights_pf", "lights_gi", "l_right_outlane", "lights_ball_save"]
 
 [node name="gi_right_flipper_bottom" type="Sprite2D" parent="lights"]
-position = Vector2(1970.56, 2944.56)
+position = Vector2(1992.8, 3013.46)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4d", "lights_5d", "lights_pf", "lights_gi", "l_right_inlane", "lights_ball_save"]
 
 [node name="l_sling_post_ring_right_1" type="Sprite2D" parent="lights"]
-position = Vector2(1889.56, 2773.56)
+position = Vector2(1809.34, 2827.88)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3b", "lights_4a", "lights_5a", "lights_cab", "lights_sling_post_ring_right"]
 
 [node name="l_sling_post_ring_right_2" type="Sprite2D" parent="lights"]
-position = Vector2(1889.56, 2773.56)
+position = Vector2(1864.17, 2878.49)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3c", "lights_4a", "lights_5e", "lights_cab", "lights_sling_post_ring_right"]
 
 [node name="l_sling_post_ring_right_3" type="Sprite2D" parent="lights"]
-position = Vector2(1889.56, 2773.56)
+position = Vector2(1925.32, 2880.6)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4b", "lights_5b", "lights_cab", "lights_sling_post_ring_right"]
 
 [node name="l_sling_post_ring_right_4" type="Sprite2D" parent="lights"]
-position = Vector2(1889.56, 2773.56)
+position = Vector2(1975.93, 2829.99)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_5e", "lights_cab", "lights_sling_post_ring_right"]
 
 [node name="l_sling_post_ring_right_5" type="Sprite2D" parent="lights"]
-position = Vector2(1889.56, 2773.56)
+position = Vector2(1975.93, 2762.51)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3c", "lights_4c", "lights_5c", "lights_cab", "lights_sling_post_ring_right"]
 
 [node name="l_sling_post_ring_right_6" type="Sprite2D" parent="lights"]
-position = Vector2(1889.56, 2773.56)
+position = Vector2(1925.32, 2711.9)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3a", "lights_4c", "lights_5e", "lights_cab", "lights_sling_post_ring_right"]
 
 [node name="l_sling_post_ring_right_7" type="Sprite2D" parent="lights"]
-position = Vector2(1889.56, 2773.56)
+position = Vector2(1859.95, 2707.68)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3b", "lights_4d", "lights_5d", "lights_cab", "lights_sling_post_ring_right"]
 
 [node name="l_sling_post_ring_right_8" type="Sprite2D" parent="lights"]
-position = Vector2(1889.56, 2773.56)
+position = Vector2(1809.34, 2762.51)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3c", "lights_4d", "lights_5e", "lights_cab", "lights_sling_post_ring_right"]
 
 [node name="gi_sling_left_top" type="Sprite2D" parent="lights"]
-position = Vector2(951.556, 2578.56)
+position = Vector2(828.75, 2431.43)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_5a", "lights_pf"]
 
 [node name="gi_sling_left_bottom" type="Sprite2D" parent="lights"]
-position = Vector2(951.556, 2578.56)
+position = Vector2(822.43, 2652.85)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_5b", "lights_pf", "lights_gi"]
 
 [node name="l_sling_post_ring_left_1" type="Sprite2D" parent="lights"]
-position = Vector2(993.556, 2844.56)
+position = Vector2(862.49, 2834.21)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_5a", "lights_cab", "lights_sling_post_ring_left"]
 
 [node name="l_sling_post_ring_left_2" type="Sprite2D" parent="lights"]
-position = Vector2(993.556, 2844.56)
+position = Vector2(913.1, 2880.6)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4a", "lights_5e", "lights_cab", "lights_sling_post_ring_left"]
 
 [node name="l_sling_post_ring_left_3" type="Sprite2D" parent="lights"]
-position = Vector2(993.556, 2844.56)
+position = Vector2(976.37, 2882.71)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3c", "lights_4b", "lights_5b", "lights_cab", "lights_sling_post_ring_left"]
 
 [node name="l_sling_post_ring_left_4" type="Sprite2D" parent="lights"]
-position = Vector2(993.556, 2844.56)
+position = Vector2(1018.54, 2832.1)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3a", "lights_4b", "lights_5e", "lights_cab", "lights_sling_post_ring_left"]
 
 [node name="l_sling_post_ring_left_5" type="Sprite2D" parent="lights"]
-position = Vector2(993.556, 2844.56)
+position = Vector2(1020.65, 2766.73)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3b", "lights_4c", "lights_5c", "lights_cab", "lights_sling_post_ring_left"]
 
 [node name="l_sling_post_ring_left_6" type="Sprite2D" parent="lights"]
-position = Vector2(993.556, 2844.56)
+position = Vector2(980.59, 2720.33)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3c", "lights_4c", "lights_5e", "lights_cab", "lights_sling_post_ring_left"]
 
 [node name="l_sling_post_ring_left_7" type="Sprite2D" parent="lights"]
-position = Vector2(993.556, 2844.56)
+position = Vector2(913.1, 2722.44)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4d", "lights_5d", "lights_cab", "lights_sling_post_ring_left"]
 
 [node name="l_sling_post_ring_left_8" type="Sprite2D" parent="lights"]
-position = Vector2(993.556, 2844.56)
+position = Vector2(864.6, 2766.73)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4d", "lights_5e", "lights_cab", "lights_sling_post_ring_left"]
 
 [node name="gi_left_flipper_top" type="Sprite2D" parent="lights"]
-position = Vector2(862.556, 3005.56)
+position = Vector2(687.46, 2920.67)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4c", "lights_5c", "lights_pf", "lights_gi", "l_left_outlane", "lights_ball_save"]
 
 [node name="gi_left_flipper_bottom" type="Sprite2D" parent="lights"]
-position = Vector2(862.556, 3005.56)
+position = Vector2(851.95, 3034.54)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4d", "lights_5d", "lights_pf", "lights_gi", "l_left_inlane", "lights_ball_save"]
 
 [node name="l_pop_ring_b_1" type="Sprite2D" parent="lights"]
-position = Vector2(1608.56, 449.556)
+position = Vector2(1805.12, 417.54)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_5a", "lights_pf", "lights_pop_ring_b", "lights_pops"]
 
 [node name="l_pop_ring_b_2" type="Sprite2D" parent="lights"]
-position = Vector2(1608.56, 449.556)
+position = Vector2(1853.62, 468.15)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4a", "lights_5e", "lights_pf", "lights_pop_ring_b", "lights_pops"]
 
 [node name="l_pop_ring_b_3" type="Sprite2D" parent="lights"]
-position = Vector2(1608.56, 449.556)
+position = Vector2(1916.89, 468.15)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3c", "lights_4b", "lights_5b", "lights_pf", "lights_pop_ring_b", "lights_pops"]
 
 [node name="l_pop_ring_b_4" type="Sprite2D" parent="lights"]
-position = Vector2(1608.56, 449.556)
+position = Vector2(1967.5, 421.76)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3a", "lights_4b", "lights_5e", "lights_pf", "lights_pop_ring_b", "lights_pops"]
 
 [node name="l_pop_ring_b_5" type="Sprite2D" parent="lights"]
-position = Vector2(1608.56, 449.556)
+position = Vector2(1967.5, 356.38)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3b", "lights_4c", "lights_5c", "lights_pf", "lights_pop_ring_b", "lights_pops"]
 
 [node name="l_pop_ring_b_6" type="Sprite2D" parent="lights"]
-position = Vector2(1608.56, 449.556)
+position = Vector2(1923.21, 303.67)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3c", "lights_4c", "lights_5e", "lights_pf", "lights_pop_ring_b", "lights_pops"]
 
 [node name="l_pop_ring_b_7" type="Sprite2D" parent="lights"]
-position = Vector2(1608.56, 449.556)
+position = Vector2(1853.62, 305.77)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4d", "lights_5d", "lights_pf", "lights_pop_ring_b", "lights_pops"]
 
 [node name="l_pop_ring_b_8" type="Sprite2D" parent="lights"]
-position = Vector2(1608.56, 449.556)
+position = Vector2(1805.12, 354.28)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4d", "lights_5e", "lights_pf", "lights_pop_ring_b", "lights_pops"]
 
 [node name="l_pop_ring_c_1" type="Sprite2D" parent="lights"]
-position = Vector2(1912.56, 354.556)
+position = Vector2(1497.24, 520.87)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3c", "lights_4a", "lights_5a", "lights_pf", "lights_pop_ring_c", "lights_pops"]
 
 [node name="l_pop_ring_c_2" type="Sprite2D" parent="lights"]
-position = Vector2(1912.56, 354.556)
+position = Vector2(1545.74, 567.26)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3a", "lights_4a", "lights_5e", "lights_pf", "lights_pop_ring_c", "lights_pops"]
 
 [node name="l_pop_ring_c_3" type="Sprite2D" parent="lights"]
-position = Vector2(1912.56, 354.556)
+position = Vector2(1609, 567.26)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3b", "lights_4b", "lights_5b", "lights_pf", "lights_pop_ring_c", "lights_pops"]
 
 [node name="l_pop_ring_c_4" type="Sprite2D" parent="lights"]
-position = Vector2(1912.56, 354.556)
+position = Vector2(1668.05, 531.41)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3c", "lights_4b", "lights_5e", "lights_pf", "lights_pop_ring_c", "lights_pops"]
 
 [node name="l_pop_ring_c_5" type="Sprite2D" parent="lights"]
-position = Vector2(1912.56, 354.556)
+position = Vector2(1661.72, 463.93)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4c", "lights_5c", "lights_pf", "lights_pop_ring_c", "lights_pops"]
 
 [node name="l_pop_ring_c_6" type="Sprite2D" parent="lights"]
-position = Vector2(1912.56, 354.556)
+position = Vector2(1609, 413.32)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4c", "lights_5e", "lights_pf", "lights_pop_ring_c", "lights_pops"]
 
 [node name="l_pop_ring_c_7" type="Sprite2D" parent="lights"]
-position = Vector2(1912.56, 354.556)
+position = Vector2(1541.52, 415.43)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3c", "lights_4d", "lights_5d", "lights_pf", "lights_pop_ring_c", "lights_pops"]
 
 [node name="l_pop_ring_c_8" type="Sprite2D" parent="lights"]
-position = Vector2(1912.56, 354.556)
+position = Vector2(1493.02, 461.82)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3a", "lights_4d", "lights_5e", "lights_pf", "lights_pop_ring_c", "lights_pops"]
 
 [node name="l_pop_ring_a_1" type="Sprite2D" parent="lights"]
-position = Vector2(1146.56, 399.556)
+position = Vector2(1086.03, 487.13)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3b", "lights_4a", "lights_5a", "lights_pf", "lights_pop_ring_a", "lights_pops"]
 
 [node name="l_pop_ring_a_2" type="Sprite2D" parent="lights"]
-position = Vector2(1146.56, 399.556)
+position = Vector2(1136.64, 537.74)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3c", "lights_4a", "lights_5e", "lights_pf", "lights_pop_ring_a", "lights_pops"]
 
 [node name="l_pop_ring_a_3" type="Sprite2D" parent="lights"]
-position = Vector2(1146.56, 399.556)
+position = Vector2(1204.12, 535.63)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4b", "lights_5b", "lights_pf", "lights_pop_ring_a", "lights_pops"]
 
 [node name="l_pop_ring_a_4" type="Sprite2D" parent="lights"]
-position = Vector2(1146.56, 399.556)
+position = Vector2(1252.62, 472.37)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_5e", "lights_pf", "lights_pop_ring_a", "lights_pops"]
 
 [node name="l_pop_ring_a_5" type="Sprite2D" parent="lights"]
-position = Vector2(1146.56, 399.556)
+position = Vector2(1250.51, 411.21)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3c", "lights_4c", "lights_5c", "lights_pf", "lights_pop_ring_a", "lights_pops"]
 
 [node name="l_pop_ring_a_6" type="Sprite2D" parent="lights"]
-position = Vector2(1146.56, 399.556)
+position = Vector2(1199.9, 369.04)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3a", "lights_4c", "lights_5e", "lights_pf", "lights_pop_ring_a", "lights_pops"]
 
 [node name="l_pop_ring_a_7" type="Sprite2D" parent="lights"]
-position = Vector2(1146.56, 399.556)
+position = Vector2(1134.53, 369.04)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3b", "lights_4d", "lights_5d", "lights_pf", "lights_pop_ring_a", "lights_pops"]
 
 [node name="l_pop_ring_a_8" type="Sprite2D" parent="lights"]
-position = Vector2(1146.56, 399.556)
+position = Vector2(1081.81, 423.87)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3c", "lights_4d", "lights_5e", "lights_pf", "lights_pop_ring_a", "lights_pops"]
 
 [node name="vlight_for_generated_example_mode" type="Sprite2D" parent="lights"]
-position = Vector2(-212.444, 62.5555)
+position = Vector2(706.44, 3692.49)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_virtual"]
 
 [node name="vlight_ball_1" type="Sprite2D" parent="lights"]
-position = Vector2(-212.444, 62.5555)
+position = Vector2(2711.9, 3869.62)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_virtual"]
 
 [node name="vlight_ball_2" type="Sprite2D" parent="lights"]
-position = Vector2(-212.444, 62.5555)
+position = Vector2(2711.9, 3797.92)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_virtual"]
 
 [node name="vlight_ball_3" type="Sprite2D" parent="lights"]
-position = Vector2(-212.444, 62.5555)
+position = Vector2(2709.79, 3726.23)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_virtual"]
 
 [node name="vlight_tilt" type="Sprite2D" parent="lights"]
-position = Vector2(-212.444, 62.5555)
+position = Vector2(50.61, 809.77)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_virtual"]
 
 [node name="vlight_game_over" type="Sprite2D" parent="lights"]
-position = Vector2(-212.444, 62.5555)
+position = Vector2(2699.74, 3543.35)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_virtual"]
 
 [node name="vlight_player_1" type="Sprite2D" parent="lights"]
-position = Vector2(-212.444, 62.5555)
+position = Vector2(2775.37, 3620.83)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_virtual"]
 
 [node name="vlight_player_2" type="Sprite2D" parent="lights"]
-position = Vector2(-212.444, 62.5555)
+position = Vector2(2785.71, 3722.01)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_virtual"]
 
 [node name="vlight_player_3" type="Sprite2D" parent="lights"]
-position = Vector2(-212.444, 62.5555)
+position = Vector2(2785.71, 3795.82)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_virtual"]
 
 [node name="vlight_player_4" type="Sprite2D" parent="lights"]
-position = Vector2(-212.444, 62.5555)
+position = Vector2(2783.6, 3871.73)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_virtual"]
 
 [node name="vlight_left_inlane_qualified" type="Sprite2D" parent="lights"]
-position = Vector2(-212.444, 62.5555)
+position = Vector2(345.84, 2355.51)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_virtual"]
 
 [node name="vlight_right_inlane_qualified" type="Sprite2D" parent="lights"]
-position = Vector2(-212.444, 62.5555)
+position = Vector2(2697.14, 2387.15)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_virtual"]
 
 [node name="l_mini_cab_left_secondary" type="Sprite2D" parent="lights"]
-position = Vector2(-95.4444, 65.5555)
+position = Vector2(1010.11, 3169.51)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3a", "lights_4a", "lights_5a", "lights_cab"]
 
 [node name="l_mini_cab_left" type="Sprite2D" parent="lights"]
-position = Vector2(-95.4444, 65.5555)
+position = Vector2(1071.26, 3211.68)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2b", "lights_3b", "lights_4b", "lights_5b", "lights_cab"]
 
 [node name="l_mini_cab_right" type="Sprite2D" parent="lights"]
-position = Vector2(-95.4444, 65.5555)
+position = Vector2(1767.16, 3188.49)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
 tags = ["lights_2a", "lights_3c", "lights_4c", "lights_5c", "lights_cab"]
 
 [node name="l_mini_cab_right_secondary" type="Sprite2D" parent="lights"]
-position = Vector2(-95.4444, 65.5555)
+position = Vector2(1826.21, 3146.31)
 scale = Vector2(0.474074, 0.474074)
 texture = ExtResource("2_vgxr8")
 script = ExtResource("2_omy47")
