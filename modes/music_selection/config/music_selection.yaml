@@ -42,13 +42,6 @@ event_player:
   s_left_flipper_secondary_active{device.switches.s_plunger.state == 1}: [reverse_music_selection_carousel, reverse_current_track]
   s_right_flipper_secondary_active{device.switches.s_plunger.state == 1}: [advance_music_selection_carousel, advance_current_track]
 
-  sw_playfield_active: # Active play immediately ends music selection
-    - remove_music_selection_slide
-    - mode_stop_music_selection
-  playfield_active: # Active play immediately ends music selection
-    - remove_music_selection_slide
-    - mode_stop_music_selection
-
   carousel_item_selected{carousel=="music_selection"}: # Carousel selection event
     - remove_music_selection_slide
     - mode_stop_music_selection

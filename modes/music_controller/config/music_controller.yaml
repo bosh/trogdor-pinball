@@ -13,6 +13,13 @@ event_player:
     - pick_random_track
     - mode_start_music_selection # Carousel on every ball. Could make this configurable in settings
 
+  sw_playfield_active: # Active play immediately ends music selection
+    - remove_music_selection_slide
+    - mode_stop_music_selection
+  playfield_active: # Active play immediately ends music selection
+    - remove_music_selection_slide
+    - mode_stop_music_selection
+
   music_track_finished:
     - advance_current_track
   special_track_finished:
