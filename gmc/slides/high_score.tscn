@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dxpvno44c1578"]
+[gd_scene load_steps=7 format=3 uid="uid://dxpvno44c1578"]
 
 [ext_resource type="Script" uid="uid://6mdcui7wkc47" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_ko5a2"]
 [ext_resource type="Texture2D" uid="uid://3uspw0udlcto" path="res://images/included/trogface.png" id="2_e8urn"]
-[ext_resource type="Script" uid="uid://f25uakg7a7nq" path="res://addons/mpf-gmc/classes/mpf_text_input.gd" id="3_u6yse"]
+[ext_resource type="Theme" uid="uid://b8adqm76rxt14" path="res://themes/high_score_letters.tres" id="3_5lg8l"]
+[ext_resource type="Script" uid="uid://btfn6s6a0a7rg" path="res://addons/mpf-gmc/classes/mpf_text_input.gd" id="3_u6yse"]
 [ext_resource type="Script" uid="uid://cm7sg7wq6hq8s" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_qd6me"]
 [ext_resource type="FontFile" uid="uid://dhi02px4iy4jf" path="res://fonts/lappy-486-extended.ttf" id="4_torhw"]
 
@@ -17,11 +18,12 @@ texture = ExtResource("2_e8urn")
 
 [node name="MPFTextInput" type="HFlowContainer" parent="." node_paths=PackedStringArray("display_node")]
 layout_mode = 0
-offset_left = 929.0
-offset_top = 530.0
-offset_right = 1463.0
-offset_bottom = 689.0
-scale = Vector2(3.65, 3.65)
+offset_left = 988.0
+offset_top = 471.0
+offset_right = 2814.0
+offset_bottom = 722.0
+theme = ExtResource("3_5lg8l")
+theme_override_constants/h_separation = 45
 script = ExtResource("3_u6yse")
 grid_width = 30
 max_length = 3
@@ -29,29 +31,30 @@ display_node = NodePath("../RichTextLabel")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 1884.0
-offset_top = 256.0
-offset_right = 3072.0
-offset_bottom = 548.0
+offset_left = 1879.0
+offset_top = 213.0
+offset_right = 3067.0
+offset_bottom = 505.0
+theme = ExtResource("3_5lg8l")
 theme_override_font_sizes/normal_font_size = 200
 bbcode_enabled = true
 text = "[pulse freq=3.0 color=#ff00ffff ease=-1.0]A[/pulse]"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1184.0
-offset_top = 751.0
-offset_right = 2583.0
-offset_bottom = 893.0
+offset_left = 1160.0
+offset_top = 750.0
+offset_right = 2559.0
+offset_bottom = 829.0
 theme_override_fonts/font = ExtResource("4_torhw")
 theme_override_font_sizes/font_size = 50
 text = "Use Flippers to scroll then press Start to enter your initials"
 
 [node name="event_value" type="Label" parent="."]
 layout_mode = 0
-offset_left = 2110.0
+offset_left = 2085.0
 offset_top = 35.0
-offset_right = 2881.0
+offset_right = 2886.0
 offset_bottom = 214.0
 theme_override_fonts/font = ExtResource("4_torhw")
 theme_override_font_sizes/font_size = 150
@@ -63,10 +66,10 @@ comma_separate = true
 
 [node name="event_award" type="Label" parent="."]
 layout_mode = 0
-offset_left = 831.0
-offset_top = 62.0
-offset_right = 2071.0
-offset_bottom = 232.0
+offset_left = 797.0
+offset_top = 43.0
+offset_right = 2037.0
+offset_bottom = 213.0
 theme_override_fonts/font = ExtResource("4_torhw")
 theme_override_font_sizes/font_size = 100
 text = "High Score Category Name"
@@ -77,10 +80,10 @@ variable_name = "award"
 
 [node name="event_player" type="Label" parent="."]
 layout_mode = 0
-offset_left = 937.0
-offset_top = 322.0
-offset_right = 1868.0
-offset_bottom = 582.0
+offset_left = 971.0
+offset_top = 248.0
+offset_right = 1846.0
+offset_bottom = 454.0
 theme_override_fonts/font = ExtResource("4_torhw")
 theme_override_font_sizes/font_size = 150
 text = "Player N:"

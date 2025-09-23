@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Videlectrix"
 run/main_scene="uid://dsm5b6gyeowis"
-config/features=PackedStringArray("4.4", "Mobile")
+config/features=PackedStringArray("4.5", "Mobile")
 run/low_processor_mode_sleep_usec=0
 config/icon="uid://bqov4rcjabtvf"
 config/windows_native_icon="res://icon.ico"
