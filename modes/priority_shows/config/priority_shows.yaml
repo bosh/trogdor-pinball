@@ -9,16 +9,16 @@ show_player:
     skillshot_success:
       loops: 2
 
-  ball_save_default_timer_start:
-    ball_save_on:
-      key: center_ball_save_show
-      show_tokens:
-        color: blue
-  ball_save_default_hurry_up:
-    ball_save_flash:
-      key: center_ball_save_show
-      show_tokens:
-        color: blue
+#  ball_save_default_timer_start:
+#    ball_save_on:
+#      key: center_ball_save_show
+#      show_tokens:
+#        color: blue
+#  ball_save_default_hurry_up:
+#    ball_save_flash:
+#      key: center_ball_save_show
+#      show_tokens:
+#        color: blue
   # ball_save_default_disabled:
   #   center_ball_save_show:
   #     action: stop
