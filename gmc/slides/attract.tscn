@@ -73,6 +73,11 @@ text = "THE BURNINATOR"
 position = Vector2(1420, 412)
 scale = Vector2(1.75182, 3.40157)
 
+[node name="event" type="Sprite2D" parent="MPFCarousel/byline"]
+position = Vector2(-381.8885, 2.6458359)
+scale = Vector2(1.1512417, 0.5928933)
+texture = ExtResource("13_gvrry")
+
 [node name="website" type="Label" parent="MPFCarousel/byline"]
 offset_left = 380.747
 offset_top = -112.301
@@ -388,6 +393,11 @@ variable_name = "burnination_points1_value"
 comma_separate = true
 template_string = "%s Peasants Burninated"
 
+[node name="event" type="Sprite2D" parent="MPFCarousel/burnination_champ"]
+position = Vector2(-381.8885, 2.6458359)
+scale = Vector2(1.1512417, 0.5928933)
+texture = ExtResource("13_gvrry")
+
 [node name="grand_champ" type="Node2D" parent="MPFCarousel"]
 
 [node name="label" type="Label" parent="MPFCarousel/grand_champ"]
@@ -432,6 +442,11 @@ script = ExtResource("5_ose3f")
 variable_type = 2
 variable_name = "score1_value"
 comma_separate = true
+
+[node name="event6" type="Sprite2D" parent="MPFCarousel/grand_champ"]
+position = Vector2(751.0001, 421)
+scale = Vector2(2.0167682, 2.0167682)
+texture = ExtResource("13_gvrry")
 
 [node name="high_score_1" type="Node2D" parent="MPFCarousel"]
 
@@ -478,6 +493,11 @@ variable_type = 2
 variable_name = "score2_value"
 comma_separate = true
 
+[node name="event5" type="Sprite2D" parent="MPFCarousel/high_score_1"]
+position = Vector2(751.0001, 421)
+scale = Vector2(2.0167682, 2.0167682)
+texture = ExtResource("13_gvrry")
+
 [node name="high_score_2" type="Node2D" parent="MPFCarousel"]
 
 [node name="label" type="Label" parent="MPFCarousel/high_score_2"]
@@ -522,6 +542,11 @@ script = ExtResource("5_ose3f")
 variable_type = 2
 variable_name = "score3_value"
 comma_separate = true
+
+[node name="event4" type="Sprite2D" parent="MPFCarousel/high_score_2"]
+position = Vector2(751.0001, 421)
+scale = Vector2(2.0167682, 2.0167682)
+texture = ExtResource("13_gvrry")
 
 [node name="high_score_3" type="Node2D" parent="MPFCarousel"]
 
@@ -568,7 +593,17 @@ variable_type = 2
 variable_name = "score4_value"
 comma_separate = true
 
+[node name="event3" type="Sprite2D" parent="MPFCarousel/high_score_3"]
+position = Vector2(751.0001, 421)
+scale = Vector2(2.0167682, 2.0167682)
+texture = ExtResource("13_gvrry")
+
 [node name="high_score_4" type="Node2D" parent="MPFCarousel"]
+
+[node name="event2" type="Sprite2D" parent="MPFCarousel/high_score_4"]
+position = Vector2(751.0001, 421)
+scale = Vector2(2.0167682, 2.0167682)
+texture = ExtResource("13_gvrry")
 
 [node name="label" type="Label" parent="MPFCarousel/high_score_4"]
 offset_left = 1226.0
@@ -612,8 +647,3 @@ script = ExtResource("5_ose3f")
 variable_type = 2
 variable_name = "score5_value"
 comma_separate = true
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(771.00006, 441)
-scale = Vector2(2.0167682, 2.0167682)
-texture = ExtResource("13_gvrry")

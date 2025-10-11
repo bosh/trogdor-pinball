@@ -18,7 +18,7 @@ mode_settings:
     - high_score_3{machine.score4_value}
     - high_score_4{machine.score5_value}
     - logos
-    - credits
+#   - credits
   next_item_events: advance_attract_carousel
   previous_item_events: reverse_attract_carousel
 
