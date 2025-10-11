@@ -1157,6 +1157,12 @@ switch:
   vswitch_end_game:
     x: 0.8927702974974641
     y: 0.8980232062908369
+  vswitch_fast_audio_disables:
+    x: 0.068
+    y: 0.12
+  vswitch_fast_audio_enables:
+    x: 0.068
+    y: 0.11
   vswitch_plunger_power_1:
     x: 0.9679218967921898
     y: 0.8043933054393306
@@ -1217,12 +1223,6 @@ switch:
   vswitch_start_minigame:
     x: 0.019955654101995568
     y: 0.07649667405764968
-  vswitch_fast_audio_enables:
-    x: 0.068
-    y: 0.11
-  vswitch_fast_audio_disables:
-    x: 0.068
-    y: 0.12
   vswitch_test_coils:
     x: 0.06728232189973615
     y: 0.10092348284960423
