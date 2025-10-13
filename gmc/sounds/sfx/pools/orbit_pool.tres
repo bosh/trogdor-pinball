@@ -1,0 +1,11 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=4 format=3 uid="uid://cunyi0ltmui20"]
+
+[ext_resource type="AudioStream" uid="uid://p6samry4qx7b" path="res://sounds/sfx/orbit_1.wav" id="1_ln088"]
+[ext_resource type="AudioStream" uid="uid://cfv14duw73o0j" path="res://sounds/sfx/orbit_2.wav" id="2_dqfqa"]
+[ext_resource type="AudioStream" uid="uid://55xi3l775s0u" path="res://sounds/sfx/orbit_3.wav" id="3_hi3rs"]
+
+[resource]
+streams_count = 3
+stream_0/stream = ExtResource("1_ln088")
+stream_1/stream = ExtResource("2_dqfqa")
+stream_2/stream = ExtResource("3_hi3rs")

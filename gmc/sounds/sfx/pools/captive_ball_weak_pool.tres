@@ -1,0 +1,9 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=3 uid="uid://cgn7vee7fb1fw"]
+
+[ext_resource type="AudioStream" uid="uid://cildrjcv5bor6" path="res://sounds/sfx/captive_ball_weak_1.wav" id="1_30jnm"]
+[ext_resource type="AudioStream" uid="uid://01p8o77npdo" path="res://sounds/sfx/captive_ball_weak_2.wav" id="2_xmldi"]
+
+[resource]
+streams_count = 2
+stream_0/stream = ExtResource("1_30jnm")
+stream_1/stream = ExtResource("2_xmldi")

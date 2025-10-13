@@ -3,6 +3,13 @@
 sound_player:
   dj_pop_pool: pop_pool
   dj_drop_pool: drop_pool
+  dj_peasant_hit_pool: peasant_hit_pool
+  dj_trogdor_ramp_pool: trogdor_ramp_pool
+  dj_right_ramp_pool: right_ramp_pool
+  dj_orbit_pool: orbit_pool
+  dj_vuk_capture_pool: vuk_capture_pool
+  dj_captive_ball_pool: captive_ball_pool
+  dj_captive_ball_weak_pool: captive_ball_weak_pool
   dj_burnination_pop_hit_pool: burnination_pop_hit_pool
   dj_multiplier_added_pool: multiplier_added_pool
   dj_bonus_multiplier_added_pool: bonus_multiplier_added_pool

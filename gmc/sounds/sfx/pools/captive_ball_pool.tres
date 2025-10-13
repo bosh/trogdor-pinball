@@ -1,0 +1,15 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=6 format=3 uid="uid://cjuht1ulfeqcl"]
+
+[ext_resource type="AudioStream" uid="uid://c0wuwvjwx4en6" path="res://sounds/sfx/captive_ball_1.wav" id="1_jsugl"]
+[ext_resource type="AudioStream" uid="uid://cp1350dn50us8" path="res://sounds/sfx/captive_ball_2.wav" id="2_a6ymp"]
+[ext_resource type="AudioStream" uid="uid://dchr8c674kmws" path="res://sounds/sfx/captive_ball_3.wav" id="3_37fl7"]
+[ext_resource type="AudioStream" uid="uid://bcajmf24e5wx" path="res://sounds/sfx/captive_ball_4.wav" id="4_je8wo"]
+[ext_resource type="AudioStream" uid="uid://jqjayq4ap20c" path="res://sounds/sfx/captive_ball_5.wav" id="5_3rhqw"]
+
+[resource]
+streams_count = 5
+stream_0/stream = ExtResource("1_jsugl")
+stream_1/stream = ExtResource("2_a6ymp")
+stream_2/stream = ExtResource("3_37fl7")
+stream_3/stream = ExtResource("4_je8wo")
+stream_4/stream = ExtResource("5_3rhqw")

@@ -11,6 +11,13 @@ module TrogBuild
     EFFECTS_HOOKS = %w(
       pop_pool
       drop_pool
+      peasant_hit_pool
+      trogdor_ramp_pool
+      right_ramp_pool
+      orbit_pool
+      vuk_capture_pool
+      captive_ball_pool
+      captive_ball_weak_pool
       burnination_pop_hit_pool
       multiplier_added_pool
       bonus_multiplier_added_pool
@@ -19,6 +26,7 @@ module TrogBuild
       sling_pool
       sling_combo_pool
       not_enough_credits_pool
+
       cash
       at_max_players
       burnination_pop_up_1
