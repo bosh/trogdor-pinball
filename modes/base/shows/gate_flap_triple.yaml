@@ -1,0 +1,33 @@
+#show_version=6
+
+- duration: 400ms
+  coils:
+    c_gate_left:
+      action: pulse
+      pulse_ms: 35
+      pulse_power: 1
+    c_gate_right:
+      action: pulse
+      pulse_ms: 35
+      pulse_power: 1
+- duration: 400ms
+  coils:
+    c_gate_left:
+      action: pulse
+      pulse_ms: 50
+      pulse_power: .75
+    c_gate_right:
+      action: pulse
+      pulse_ms: 50
+      pulse_power: .75
+- duration: 400ms
+  coils:
+    c_gate_left:
+      action: pulse
+      pulse_ms: 50
+      pulse_power: .75
+    c_gate_right:
+      action: pulse
+      pulse_ms: 50
+      pulse_power: .75
+- duration: 100ms

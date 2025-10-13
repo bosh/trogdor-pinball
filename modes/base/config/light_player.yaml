@@ -18,6 +18,10 @@ event_player:
   player_playfield_multiplier{value==5}: [start_gi_pfm_5]
 
 show_player:
+  flap_gates:
+    gate_flap_triple:
+      loops: 0
+
   start_gi_base:
     led_color:
       show_tokens:
