@@ -46,10 +46,12 @@ timers:
       action: restart
 
 event_player:
+  mode_captive_ball_based_started: [enable_orbit_diverter]
+
   spinner_spinner_left_base_active: [enable_captive_ball_combo, timer_captive_ball_combo_timeout_restart]
   spinner_spinner_left_targeted_active: [enable_captive_ball_combo, timer_captive_ball_combo_timeout_restart]
   timer_captive_ball_combo_timeout_complete: [disable_captive_ball_combo]
-  captive_ball_target_live_hit: [dj_captive_ball_pool]
+  captive_ball_target_live_hit: [dj_captive_ball_pool, activate_orbit_diverter]
   captive_ball_target_disabled_hit: [dj_captive_ball_weak_pool]
 
 variable_player:

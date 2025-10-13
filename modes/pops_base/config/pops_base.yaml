@@ -36,8 +36,8 @@ shot_groups:
       - base_pop_center
 
 event_player:
-  mode_pops_base_started: [enable_orbit_diverter]
-  s_burn_standup_active: [activate_orbit_diverter]
+  mode_pops_base_started: [enable_saver_post]
+  s_burn_standup_active: [activate_saver_post]
   base_pop_group_hit: [dj_pop_pool]
 
 show_player:
