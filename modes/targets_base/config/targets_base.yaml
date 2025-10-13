@@ -6,7 +6,7 @@ mode:
   priority: 1570
 
 event_player:
-  sw_blue_standup: [dj_TODO]
+  sw_blue_standup: [dj_peasant_hit_pool]
   s_burn_standup_active: [dj_TODO]
 
 variable_player:

@@ -7,7 +7,7 @@ mode:
 
 event_player:
   base_right_orbit_open_hit: [deactivate_orbit_diverter, deactivate_orbit_diverter_skillshot]
-  base_orbit_open_group_hit:   [dj_TODO] # Maybe only the closeds have sounds, to prevent double sending?
+  base_orbit_open_group_hit:   [dj_orbit_pool] # Maybe only the closeds have sounds, to prevent double sending?
   base_orbit_closed_group_hit: [dj_TODO]
 
 variable_player:

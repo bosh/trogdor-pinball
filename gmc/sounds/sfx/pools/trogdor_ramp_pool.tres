@@ -1,13 +1,13 @@
 [gd_resource type="AudioStreamRandomizer" load_steps=5 format=3 uid="uid://bn7y3k7t8d1k8"]
 
 [ext_resource type="AudioStream" uid="uid://ddfoxib6m1y2b" path="res://sounds/sfx/trogdor_ramp_1.wav" id="1_nwuop"]
-[ext_resource type="AudioStream" uid="uid://b46duxqfgwra5" path="res://sounds/sfx/right_ramp_2.wav" id="2_5nbmh"]
-[ext_resource type="AudioStream" uid="uid://duuwglsbb4dad" path="res://sounds/sfx/right_ramp_3.wav" id="3_8cror"]
-[ext_resource type="AudioStream" uid="uid://35xgkagxt3tg" path="res://sounds/sfx/right_ramp_4.wav" id="4_ybj2f"]
+[ext_resource type="AudioStream" uid="uid://2yxktwgm3oj4" path="res://sounds/sfx/trogdor_ramp_2.wav" id="2_nwuop"]
+[ext_resource type="AudioStream" uid="uid://dlo7xlgivv85x" path="res://sounds/sfx/trogdor_ramp_3.wav" id="3_5nbmh"]
+[ext_resource type="AudioStream" uid="uid://buqi7asxyq13y" path="res://sounds/sfx/trogdor_ramp_4.wav" id="4_8cror"]
 
 [resource]
 streams_count = 4
 stream_0/stream = ExtResource("1_nwuop")
-stream_1/stream = ExtResource("2_5nbmh")
-stream_2/stream = ExtResource("3_8cror")
-stream_3/stream = ExtResource("4_ybj2f")
+stream_1/stream = ExtResource("2_nwuop")
+stream_2/stream = ExtResource("3_5nbmh")
+stream_3/stream = ExtResource("4_8cror")

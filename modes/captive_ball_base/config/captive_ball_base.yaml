@@ -49,8 +49,8 @@ event_player:
   spinner_spinner_left_base_active: [enable_captive_ball_combo, timer_captive_ball_combo_timeout_restart]
   spinner_spinner_left_targeted_active: [enable_captive_ball_combo, timer_captive_ball_combo_timeout_restart]
   timer_captive_ball_combo_timeout_complete: [disable_captive_ball_combo]
-  captive_ball_target_live_hit: [dj_TODO]
-  captive_ball_target_disabled_hit: [dj_TODO]
+  captive_ball_target_live_hit: [dj_captive_ball_pool]
+  captive_ball_target_disabled_hit: [dj_captive_ball_weak_pool]
 
 variable_player:
   reset_captive_ball_target_hits:
