@@ -20,5 +20,5 @@ variable_player:
 event_player:
   mode_slings_dead_started: [enable_right_outlane_post, enable_saver_post]
   mode_slings_dead_will_stop: [disable_right_outlane_post, disable_saver_post]
-  s_left_sling_active: [activate_right_outlane_post]
-  s_right_sling_active: [activate_saver_post]
+  s_left_sling_active: [activate_right_outlane_post, dj_TODO]
+  s_right_sling_active: [activate_saver_post, dj_TODO]

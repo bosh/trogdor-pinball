@@ -30,7 +30,8 @@ variable_player:
 
 event_player:
   mode_ramps_base_started: [enable_right_outlane_post_ramp_save]
-  shot_ramp_right_live_hit: [qualify_right_outlane_ramp_save]
+  shot_ramp_middle_live_hit: [dj_TODO]
+  shot_ramp_right_live_hit: [qualify_right_outlane_ramp_save, dj_TODO]
   qualify_right_outlane_ramp_save:
     - activate_right_outlane_post_ramp_save
     - enable_ball_save_right_wireform_save

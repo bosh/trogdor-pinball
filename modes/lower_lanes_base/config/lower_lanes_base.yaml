@@ -43,6 +43,9 @@ event_player:
   vswitch_reset_inlane_detector_active:
     - reset_inlane_detectors
 
+  inlane_detector_shot_off_hit:       [dj_TODO]
+  inlane_detector_shot_qualified_hit: [dj_TODO]
+
   # Basic implementation of lane qual rollover opening upper gate for loop shot
   # Should become a state machine (elsewhere) to manage gate state and a request to the machine from here
   left_inlane_detector_shot_qualified_hit:

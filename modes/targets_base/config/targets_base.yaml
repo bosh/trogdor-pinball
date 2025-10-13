@@ -5,6 +5,10 @@ mode:
   stop_events: mode_stop_targets_base, ball_will_end
   priority: 1570
 
+event_player:
+  sw_blue_standup: [dj_TODO]
+  s_burn_standup_active: [dj_TODO]
+
 variable_player:
   sw_blue_standup:
     target_hits: 1

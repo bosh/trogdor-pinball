@@ -10,6 +10,7 @@ module TrogBuild
 
     EFFECTS_HOOKS = %w(
       pop_pool
+      drop_pool
       burnination_pop_hit_pool
       multiplier_added_pool
       bonus_multiplier_added_pool

@@ -7,9 +7,10 @@ mode:
 
 event_player:
   mode_loops_base_started: [enable_orbit_diverter]
-  base_left_uturn_hit: [activate_orbit_diverter]  # combo from upper loop
-  upper_elbow_hit: [activate_orbit_diverter]      # rare occasion to open diverter
+  base_left_uturn_hit:  [activate_orbit_diverter] # combo from upper loop
+  upper_elbow_hit:      [activate_orbit_diverter] # rare occasion to open diverter
   ss_subway_travel_hit: [activate_orbit_diverter] # VUK eject loop combo
+  base_loop_group_hit:  [dj_TODO]
 
 variable_player:
   left_uturn_hit:
