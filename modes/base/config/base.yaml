@@ -19,6 +19,13 @@ slide_player:
       action: remove
 
 widget_player:
+  mode_base_started:
+    info_overlay:
+      slide: _overlay
+  mode_base_stopping:
+    info_overlay:
+      slide: _overlay
+      action: remove
   player_playfield_multiplier.1{value>1}:
     playfield_multiplier_overlay:
       slide: base

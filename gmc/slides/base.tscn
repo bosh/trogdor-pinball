@@ -1,10 +1,9 @@
-[gd_scene load_steps=35 format=3 uid="uid://wnn1blxym12s"]
+[gd_scene load_steps=33 format=3 uid="uid://wnn1blxym12s"]
 
 [ext_resource type="Script" uid="uid://26gxb32nccfs" path="res://slides/base.gd" id="1_cnhqp"]
 [ext_resource type="Texture2D" uid="uid://djxqwdhxk0b0e" path="res://images/included/sprites/bg/bga.png" id="2_avh2n"]
 [ext_resource type="Script" uid="uid://cm7sg7wq6hq8s" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_bsdxn"]
 [ext_resource type="Script" uid="uid://cl2fwawg56l5e" path="res://addons/mpf-gmc/classes/mpf_conditional_children.gd" id="2_gvfig"]
-[ext_resource type="FontFile" uid="uid://dbblxkk3tmho5" path="res://fonts/preeow-paper.ttf" id="2_j6mlq"]
 [ext_resource type="Texture2D" uid="uid://ctmrf02mkceh8" path="res://images/included/sprites/bg/bgb.png" id="3_ukjfp"]
 [ext_resource type="FontFile" uid="uid://dhi02px4iy4jf" path="res://fonts/lappy-486-extended.ttf" id="4_l2x7l"]
 [ext_resource type="Texture2D" uid="uid://bt4jl34sdav6w" path="res://images/included/sprites/bg/bgc.png" id="4_r1rew"]
@@ -84,10 +83,6 @@ animations = [{
 "name": &"default",
 "speed": 2.0
 }]
-
-[sub_resource type="Theme" id="Theme_t7ujo"]
-Label/font_sizes/font_size = 40
-Label/fonts/font = ExtResource("2_j6mlq")
 
 [node name="Base" type="Control"]
 layout_mode = 3
@@ -191,77 +186,6 @@ sprite_frames = SubResource("SpriteFrames_ume64")
 position = Vector2(2079.04, 363)
 scale = Vector2(1.07, 1.07)
 sprite_frames = SubResource("SpriteFrames_gjonj")
-
-[node name="MPFVariable - Ball" type="Label" parent="."]
-layout_mode = 0
-offset_left = 2476.0
-offset_top = 19.0
-offset_right = 2871.0
-offset_bottom = 169.0
-theme = SubResource("Theme_t7ujo")
-theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
-theme_override_constants/outline_size = 9
-theme_override_fonts/font = ExtResource("4_l2x7l")
-theme_override_font_sizes/font_size = 125
-text = "Ball: 1"
-horizontal_alignment = 1
-script = ExtResource("2_bsdxn")
-variable_name = "ball"
-template_string = "Ball: %s"
-
-[node name="MPFVariable - Score Main" type="Label" parent="."]
-layout_mode = 0
-offset_left = 33.0
-offset_top = 16.0
-offset_right = 1456.0
-offset_bottom = 235.0
-theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
-theme_override_constants/outline_size = 9
-theme_override_fonts/font = ExtResource("4_l2x7l")
-theme_override_font_sizes/font_size = 125
-text = "Score: 1,000,000"
-script = ExtResource("2_bsdxn")
-variable_name = "score"
-comma_separate = true
-min_digits = 2
-template_string = "Score: %s"
-
-[node name="MPFVariable - Ball Score" type="Label" parent="."]
-layout_mode = 0
-offset_left = 1053.0
-offset_top = -130.0
-offset_right = 1385.0
-offset_bottom = -27.0
-theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
-theme_override_constants/outline_size = 9
-theme_override_fonts/font = ExtResource("4_l2x7l")
-theme_override_font_sizes/font_size = 75
-text = "(123,000)"
-horizontal_alignment = 1
-script = ExtResource("2_bsdxn")
-variable_name = "ball_score"
-comma_separate = true
-min_digits = 2
-template_string = "(%s)"
-
-[node name="MPFVariable - Current P#" type="Label" parent="."]
-layout_mode = 0
-offset_left = 1965.0
-offset_top = 19.0
-offset_right = 2462.0
-offset_bottom = 169.0
-theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
-theme_override_constants/outline_size = 9
-theme_override_fonts/font = ExtResource("4_l2x7l")
-theme_override_font_sizes/font_size = 125
-text = "Player N"
-horizontal_alignment = 1
-script = ExtResource("2_bsdxn")
-variable_name = "number"
-comma_separate = true
-min_digits = 2
-template_string = "Player %s"
-min_players = 2
 
 [node name="Off-player scores" type="Node2D" parent="."]
 
