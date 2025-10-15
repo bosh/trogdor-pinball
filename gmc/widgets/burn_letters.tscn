@@ -10,7 +10,7 @@ anchors_preset = 0
 script = ExtResource("1_r4pks")
 metadata/_custom_type_script = "uid://ct36ftwq5qpfo"
 
-[node name="Label" type="Label" parent="."]
+[node name="Label (hide me!)" type="Label" parent="."]
 visible = false
 layout_mode = 0
 offset_right = 300.0
@@ -28,96 +28,46 @@ condition_type = 4
 condition_value = "0"
 metadata/_custom_type_script = "uid://b846v662darst"
 
-[node name="Unlit B" type="Control" parent="MPFConditional - total lit > 0"]
-layout_mode = 3
-anchors_preset = 0
+[node name="Unlit letters" type="Node2D" parent="MPFConditional - total lit > 0"]
+
+[node name="B" type="Label" parent="MPFConditional - total lit > 0/Unlit letters"]
 offset_left = 744.0
 offset_top = 248.0
 offset_right = 1044.0
-offset_bottom = 548.0
-script = ExtResource("2_2aylp")
-variable_type = 1
-variable_name = "b_lit"
-condition_type = 1
-condition_value = "True"
-metadata/_custom_type_script = "uid://b846v662darst"
-
-[node name="B" type="Label" parent="MPFConditional - total lit > 0/Unlit B"]
-layout_mode = 0
-offset_right = 300.0
-offset_bottom = 300.0
+offset_bottom = 725.0
 theme = ExtResource("3_bjegw")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.721569, 0.65098, 0, 1)
 theme_override_font_sizes/font_size = 400
 text = "B"
 
-[node name="Unlit U" type="Control" parent="MPFConditional - total lit > 0"]
-layout_mode = 3
-anchors_preset = 0
+[node name="U" type="Label" parent="MPFConditional - total lit > 0/Unlit letters"]
 offset_left = 1144.0
 offset_top = 248.0
 offset_right = 1444.0
-offset_bottom = 548.0
-script = ExtResource("2_2aylp")
-variable_type = 1
-variable_name = "u_lit"
-condition_type = 1
-condition_value = "True"
-metadata/_custom_type_script = "uid://b846v662darst"
-
-[node name="U" type="Label" parent="MPFConditional - total lit > 0/Unlit U"]
-layout_mode = 0
-offset_right = 300.0
-offset_bottom = 300.0
+offset_bottom = 725.0
 theme = ExtResource("3_bjegw")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.721569, 0.65098, 0, 1)
 theme_override_font_sizes/font_size = 400
 text = "U"
 
-[node name="Unlit R" type="Control" parent="MPFConditional - total lit > 0"]
-layout_mode = 3
-anchors_preset = 0
+[node name="R" type="Label" parent="MPFConditional - total lit > 0/Unlit letters"]
 offset_left = 1544.0
 offset_top = 248.0
 offset_right = 1844.0
-offset_bottom = 548.0
-script = ExtResource("2_2aylp")
-variable_type = 1
-variable_name = "r_lit"
-condition_type = 1
-condition_value = "True"
-metadata/_custom_type_script = "uid://b846v662darst"
-
-[node name="R" type="Label" parent="MPFConditional - total lit > 0/Unlit R"]
-layout_mode = 0
-offset_right = 300.0
-offset_bottom = 300.0
+offset_bottom = 725.0
 theme = ExtResource("3_bjegw")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.721569, 0.65098, 0, 1)
 theme_override_font_sizes/font_size = 400
 text = "R"
 
-[node name="Unlit N" type="Control" parent="MPFConditional - total lit > 0"]
-layout_mode = 3
-anchors_preset = 0
+[node name="N" type="Label" parent="MPFConditional - total lit > 0/Unlit letters"]
 offset_left = 1944.0
 offset_top = 248.0
 offset_right = 2244.0
-offset_bottom = 548.0
-script = ExtResource("2_2aylp")
-variable_type = 1
-variable_name = "n_lit"
-condition_type = 1
-condition_value = "True"
-metadata/_custom_type_script = "uid://b846v662darst"
-
-[node name="N" type="Label" parent="MPFConditional - total lit > 0/Unlit N"]
-layout_mode = 0
-offset_right = 300.0
-offset_bottom = 300.0
+offset_bottom = 725.0
 theme = ExtResource("3_bjegw")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.721569, 0.65098, 0, 1)
@@ -148,7 +98,6 @@ theme_override_font_sizes/font_size = 400
 text = "B"
 
 [node name="Lit U" type="Control" parent="MPFConditional - total lit > 0"]
-layout_mode = 3
 anchors_preset = 0
 offset_left = 1144.0
 offset_top = 248.0
@@ -172,7 +121,6 @@ theme_override_font_sizes/font_size = 400
 text = "U"
 
 [node name="Lit R" type="Control" parent="MPFConditional - total lit > 0"]
-layout_mode = 3
 anchors_preset = 0
 offset_left = 1544.0
 offset_top = 248.0
@@ -196,7 +144,6 @@ theme_override_font_sizes/font_size = 400
 text = "R"
 
 [node name="Lit N" type="Control" parent="MPFConditional - total lit > 0"]
-layout_mode = 3
 anchors_preset = 0
 offset_left = 1944.0
 offset_top = 248.0
