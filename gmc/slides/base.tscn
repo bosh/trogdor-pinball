@@ -105,6 +105,13 @@ script = ExtResource("2_gvfig")
 variable_name = "ball"
 metadata/_custom_type_script = "uid://cl2fwawg56l5e"
 
+[node name="__default__" type="Node2D" parent="Conditional Background/MPFConditionalChildren"]
+visible = false
+
+[node name="Background A" type="Sprite2D" parent="Conditional Background/MPFConditionalChildren/__default__"]
+position = Vector2(1440, 432)
+texture = ExtResource("2_avh2n")
+
 [node name="1" type="Node2D" parent="Conditional Background/MPFConditionalChildren"]
 
 [node name="Background D" type="Sprite2D" parent="Conditional Background/MPFConditionalChildren/1"]
@@ -122,12 +129,6 @@ texture = ExtResource("4_r1rew")
 [node name="Background B" type="Sprite2D" parent="Conditional Background/MPFConditionalChildren/3"]
 position = Vector2(1440, 432)
 texture = ExtResource("3_ukjfp")
-
-[node name="__default__" type="Node2D" parent="Conditional Background/MPFConditionalChildren"]
-
-[node name="Background A" type="Sprite2D" parent="Conditional Background/MPFConditionalChildren/__default__"]
-position = Vector2(1440, 432)
-texture = ExtResource("2_avh2n")
 
 [node name="Static Assets" type="Node2D" parent="."]
 
@@ -152,7 +153,8 @@ position = Vector2(2084, 453)
 texture = ExtResource("9_ovcnp")
 
 [node name="Roar" type="Sprite2D" parent="Static Assets"]
-position = Vector2(1486, 461)
+position = Vector2(1491, 462)
+scale = Vector2(1.3108975, 1.3108974)
 texture = ExtResource("10_gvfig")
 
 [node name="K1" type="Sprite2D" parent="Static Assets"]
@@ -181,24 +183,26 @@ position = Vector2(1145, 626)
 sprite_frames = SubResource("SpriteFrames_gvfig")
 
 [node name="breath_animation" type="AnimatedSprite2D" parent="Static Assets"]
-position = Vector2(1223, 390)
+position = Vector2(1173, 375)
+scale = Vector2(1.3055556, 1.3055556)
 sprite_frames = SubResource("SpriteFrames_ume64")
 
 [node name="cottage_fire_animation" type="AnimatedSprite2D" parent="Static Assets"]
-position = Vector2(2088, 370)
+position = Vector2(2079.04, 363)
+scale = Vector2(1.07, 1.07)
 sprite_frames = SubResource("SpriteFrames_gjonj")
 
 [node name="MPFVariable - Ball" type="Label" parent="."]
 layout_mode = 0
 offset_left = 2476.0
-offset_top = 2.0
+offset_top = 19.0
 offset_right = 2871.0
-offset_bottom = 194.0
+offset_bottom = 169.0
 theme = SubResource("Theme_t7ujo")
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
 theme_override_fonts/font = ExtResource("4_l2x7l")
-theme_override_font_sizes/font_size = 150
+theme_override_font_sizes/font_size = 125
 text = "Ball: 1"
 horizontal_alignment = 1
 script = ExtResource("2_bsdxn")
@@ -207,10 +211,10 @@ template_string = "Ball: %s"
 
 [node name="MPFVariable - Score Main" type="Label" parent="."]
 layout_mode = 0
-offset_left = 32.0
-offset_top = 10.0
-offset_right = 1455.0
-offset_bottom = 229.0
+offset_left = 33.0
+offset_top = 16.0
+offset_right = 1456.0
+offset_bottom = 235.0
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
 theme_override_fonts/font = ExtResource("4_l2x7l")
@@ -242,10 +246,10 @@ template_string = "(%s)"
 
 [node name="MPFVariable - Current P#" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1931.0
-offset_top = 11.0
-offset_right = 2428.0
-offset_bottom = 161.0
+offset_left = 1965.0
+offset_top = 19.0
+offset_right = 2462.0
+offset_bottom = 169.0
 theme_override_colors/font_outline_color = Color(0.694704, 1.72067e-06, 2.88785e-07, 1)
 theme_override_constants/outline_size = 9
 theme_override_fonts/font = ExtResource("4_l2x7l")
