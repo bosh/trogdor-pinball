@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://6mdcui7wkc47" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_grcpe"]
 [ext_resource type="Texture2D" uid="uid://c7rku52o4c103" path="res://images/attract_bg.jpg" id="2_quk18"]
 [ext_resource type="Texture2D" uid="uid://n4cm0hpnab06" path="res://images/included/trogdor_nameplate.jpg" id="3_08cu3"]
-[ext_resource type="Script" uid="uid://dpe3dq8axt3g7" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="3_ivb84"]
+[ext_resource type="Script" uid="uid://bnssoxshet8be" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="3_ivb84"]
 [ext_resource type="Texture2D" uid="uid://dounln3l35d26" path="res://addons/mpf-gmc/images/logo_mpf.png" id="5_5y4l4"]
 [ext_resource type="Texture2D" uid="uid://cp8gsdaumsu5g" path="res://images/included/cheat graffiti.png" id="5_bo6y5"]
 [ext_resource type="Script" uid="uid://cm7sg7wq6hq8s" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="5_ose3f"]
@@ -394,8 +394,8 @@ comma_separate = true
 template_string = "%s Peasants Burninated"
 
 [node name="event" type="Sprite2D" parent="MPFCarousel/burnination_champ"]
-position = Vector2(-381.8885, 2.6458359)
-scale = Vector2(1.1512417, 0.5928933)
+position = Vector2(449, 591.4043)
+scale = Vector2(2.0815473, 1.4902703)
 texture = ExtResource("13_gvrry")
 
 [node name="grand_champ" type="Node2D" parent="MPFCarousel"]
