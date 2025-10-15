@@ -51,6 +51,7 @@ event_player:
     - mode_start_burnination_controller
     - mode_start_slots_controller
     - mode_start_spinners_base
+    - mode_start_single_ball_combos # This will move out to the scoring controller when ball count matters
     # - dj_game_start|1800ms # BUG? it seems like it plays twice? Is the delay echoing?
 
   tilt_warning_1: [dj_tilt_warning_pool]

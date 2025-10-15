@@ -1,0 +1,48 @@
+#config_version=6
+
+mode:
+  priority: 3333 #TODO
+  start_events: mode_start_single_ball_combos
+  stop_events: mode_stop_single_ball_combos
+
+shot_profiles:
+  combo_1_profile:
+    advance_on_hit: False
+    states:
+      - name: 'unstarted'
+      - name: 'step1'
+      - name: 'step2'
+      - name: 'completed'
+
+timers:
+  combo_1_timeout:
+    start_value: 1
+    end_value: 0
+    direction: down
+    tick_interval: 6000ms # TODO dial in
+    start_running: False
+    control_events:
+      - action: restart
+        event: restart_combo_1_timeout
+      - action: stop
+        event: stop_combo_1_timeout
+
+event_player:
+  timer_combo_1_timeout_complete: [reset_combo_1_shot]
+  combo_1_shot_hit: [restart_combo_1_timeout]
+
+  s_left_inner_lane_active{device.shots.combo_1_shot.state == 0}: [combo_1_shot_hit, combo_shot_1_adv_1]
+  ss_right_orbit_open_hit{device.shots.combo_1_shot.state == 1}: [combo_1_shot_hit, combo_shot_1_adv_2]
+  ss_right_orbit_closed_hit{device.shots.combo_1_shot.state == 2}: [stop_combo_1_timeout, combo_1_shot_complete, reset_combo_1_shot]
+
+variable_player:
+  combo_1_complete:
+    points: 5000
+
+shots:
+  combo_1_shot:
+    profile: combo_1_profile
+    reset_events: reset_combo_1_shot
+    control_events:
+      - {events: combo_shot_1_adv_2, state: 2}
+      - {events: combo_shot_1_adv_1, state: 1}

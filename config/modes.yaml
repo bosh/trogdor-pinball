@@ -30,6 +30,7 @@ modes:
   - slots_controller
   - drops_base
   - vuks_base
+  - single_ball_combos
   - targets_base
   - tilt #base+override
   - queue_ball_end_analytics
