@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://bb6nrhkigh7wi"]
+[gd_scene load_steps=9 format=3 uid="uid://bb6nrhkigh7wi"]
 
 [ext_resource type="Script" uid="uid://ct36ftwq5qpfo" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_paucj"]
 [ext_resource type="Texture2D" uid="uid://djpf3crq72u2x" path="res://images/included/base_frame.png" id="2_f0uot"]
 [ext_resource type="FontFile" uid="uid://dbblxkk3tmho5" path="res://fonts/preeow-paper.ttf" id="3_qt3wn"]
 [ext_resource type="FontFile" uid="uid://dhi02px4iy4jf" path="res://fonts/lappy-486-extended.ttf" id="4_bcc44"]
 [ext_resource type="Script" uid="uid://cm7sg7wq6hq8s" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="5_pq8ll"]
+[ext_resource type="Script" uid="uid://cl2fwawg56l5e" path="res://addons/mpf-gmc/classes/mpf_conditional_children.gd" id="6_qt3wn"]
+[ext_resource type="Theme" uid="uid://cx5kw5e8kdnr6" path="res://themes/attract_scores_text.tres" id="7_bcc44"]
 
 [sub_resource type="Theme" id="Theme_2o5qu"]
 Label/font_sizes/font_size = 40
@@ -92,3 +94,71 @@ comma_separate = true
 min_digits = 2
 template_string = "Player %s"
 min_players = 2
+
+[node name="MPFConditionalChildren" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 118.0
+offset_top = 104.0
+offset_right = 218.0
+offset_bottom = 192.0
+script = ExtResource("6_qt3wn")
+variable_name = "playfield_multiplier"
+
+[node name="initial" type="Node2D" parent="MPFConditionalChildren"]
+
+[node name="__default__" type="Node2D" parent="MPFConditionalChildren"]
+position = Vector2(-13, -10)
+
+[node name="1" type="Node2D" parent="MPFConditionalChildren"]
+position = Vector2(-26, -20)
+
+[node name="2" type="Node2D" parent="MPFConditionalChildren"]
+
+[node name="Label" type="Label" parent="MPFConditionalChildren/2"]
+offset_left = 1164.0
+offset_top = -73.0
+offset_right = 1467.0
+offset_bottom = 77.0
+theme = ExtResource("7_bcc44")
+theme_override_colors/font_color = Color(0.670588, 0.682353, 0, 1)
+theme_override_font_sizes/font_size = 125
+text = "PFx2"
+
+[node name="3" type="Node2D" parent="MPFConditionalChildren"]
+
+[node name="Label" type="Label" parent="MPFConditionalChildren/3"]
+offset_left = 1164.0
+offset_top = -73.0
+offset_right = 1461.0
+offset_bottom = 77.0
+theme = ExtResource("7_bcc44")
+theme_override_colors/font_color = Color(0.866667, 0.584314, 0.364706, 1)
+theme_override_colors/font_outline_color = Color(0.760784, 0, 0, 1)
+theme_override_font_sizes/font_size = 125
+text = "PFx3"
+
+[node name="4" type="Node2D" parent="MPFConditionalChildren"]
+
+[node name="Label" type="Label" parent="MPFConditionalChildren/4"]
+offset_left = 1164.0
+offset_top = -73.0
+offset_right = 1467.0
+offset_bottom = 77.0
+theme = ExtResource("7_bcc44")
+theme_override_colors/font_color = Color(0.766236, 0.248177, 0.709524, 1)
+theme_override_colors/font_outline_color = Color(0.867387, 0.554019, 0.254814, 1)
+theme_override_font_sizes/font_size = 125
+text = "PFx4"
+
+[node name="5" type="Node2D" parent="MPFConditionalChildren"]
+
+[node name="Label" type="Label" parent="MPFConditionalChildren/5"]
+offset_left = 1164.0
+offset_top = -73.0
+offset_right = 1467.0
+offset_bottom = 77.0
+theme = ExtResource("7_bcc44")
+theme_override_colors/font_color = Color(0.0246202, 0.61154, 7.70092e-07, 1)
+theme_override_colors/font_outline_color = Color(0.933333, 0, 0.768627, 1)
+theme_override_font_sizes/font_size = 125
+text = "PFx5"

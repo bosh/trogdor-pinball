@@ -26,13 +26,10 @@ widget_player:
     info_overlay:
       slide: _overlay
       action: remove
-  player_playfield_multiplier.1{value>1}:
-    playfield_multiplier_overlay:
-      slide: base
-      action: remove
-  player_playfield_multiplier{value>1}:
-    playfield_multiplier_overlay:
-      slide: base
+  player_playfield_multiplier:
+    info_overlay:
+      slide: _overlay
+      action: update
 
 event_player:
   mode_base_started:
