@@ -15,6 +15,14 @@ timed_switches:
     time: 1200ms
     switches:
       - s_drop_bank_stuck_ball_detector
+  ts_drop_bank_stuck_ball_second:
+    time: 3000ms
+    switches:
+      - s_drop_bank_stuck_ball_detector
+  ts_drop_bank_stuck_ball_long:
+    time: 6000ms
+    switches:
+      - s_drop_bank_stuck_ball_detector
 
 widget_player:
   ball_search_started: ball_search_overlay
@@ -26,12 +34,19 @@ coil_player:
   ts_drop_bank_stuck_ball_active:
     c_slot_bank_left_drop:
       pulse_ms: 50
+  ts_drop_bank_stuck_ball_second_active:
+    c_slot_bank_left_drop:
+      pulse_ms: 60
+  ts_drop_bank_stuck_ball_long_active:
+    c_slot_bank_left_drop:
+      pulse_ms: 70
+
   ball_search_phase_1:
     c_slot_bank_left_drop:
       pulse_ms: 25
   ball_search_phase_2:
-    c_slot_bank_left_drop:
-      pulse_ms: 35
+    c_slot_bank_reset:
+      action: pulse
   ball_search_phase_3:
     c_slot_bank_left_drop:
       pulse_ms: 45
