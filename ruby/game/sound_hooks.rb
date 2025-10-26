@@ -68,6 +68,7 @@ module TrogBuild
       music_stop
       special_cheat_multiball
       special_cheat_multiball_qualified
+      secret_quip
     )
     MUSIC_HOOKS_TO_STOP = %w(
       burnination_background
@@ -91,7 +92,8 @@ module TrogBuild
       'burnination_mode_song' => 'special_music_finished',
       'attract_music_pool' => 'music_track_finished',
       'special_cheat_multiball' => 'special_music_finished',
-      'special_cheat_multiball_qualified' => 'special_music_finished'
+      'special_cheat_multiball_qualified' => 'special_music_finished',
+      'secret_quip' => 'special_music_finished'
     }
 
     VOICE_HOOKS = %w(

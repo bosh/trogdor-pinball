@@ -110,6 +110,10 @@ sound_player:
     special_cheat_multiball_qualified:
       bus: music
       events_when_stopped: special_music_finished
+  dj_secret_quip:
+    secret_quip:
+      bus: music
+      events_when_stopped: special_music_finished
   dj_stop_burnination_background:
     burnination_background:
       bus: music

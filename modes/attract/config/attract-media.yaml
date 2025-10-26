@@ -5,6 +5,14 @@ show_player:
     on:
       show_tokens:
         led: l_start
+  play_secret_lightshow:
+    flash_color:
+      priority: 10
+      loops: 8
+      speed: 7
+      show_tokens:
+        lights: "*"
+        color: red
 
 slide_player:
   mode_attract_started.1:
@@ -28,3 +36,34 @@ event_player:
     - dj_music_stop
   mode_attract_will_stop:
     - dj_music_stop
+
+  super_secret_sequence_hit:
+    - dj_secret_quip
+    - play_secret_lightshow
+
+  special_music_finished:
+    - dj_attract_music_pool|1000ms
+
+sequence_shots:
+  super_secret_sequence:
+    switch_sequence:
+      - s_left_flipper
+      - s_left_flipper
+      - s_left_flipper
+      - s_right_flipper
+      - s_left_flipper
+      - s_left_flipper
+      - s_left_flipper
+      - s_right_flipper
+      - s_left_flipper
+      - s_left_flipper
+      - s_left_flipper
+      - s_right_flipper
+      - s_left_flipper
+      - s_right_flipper
+      - s_left_flipper
+      - s_right_flipper
+      - s_right_flipper
+    cancel_switches:
+      - s_start
+      - s_plunger
