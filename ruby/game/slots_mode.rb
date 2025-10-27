@@ -180,11 +180,11 @@ module TrogBuild
 
     def add_variable_players!
       # Every first slot hit should give some points
-      add_variable_player(slots_active_scored, vp_score(25, true))
+      add_variable_player(slots_active_scored, vp_score(50, true))
 
       # Every singles and pairs give small points with multiplier
-      add_variable_player(singles_locked_event,      vp_score(75, true))
-      add_variable_player(splitpair_locked_event,    vp_score(125, true))
+      add_variable_player(singles_locked_event,      vp_score(100, true))
+      add_variable_player(splitpair_locked_event,    vp_score(150, true))
       add_variable_player(neighborpair_locked_event, vp_score(200, true))
       # Row and diagonal locking gives big points with no multiplier
       add_variable_player(row_locked_event,          vp_score(5000, false))

@@ -26,6 +26,7 @@ module TrogBuild
       add_shots!
       add_shows!
       add_event_players!
+      add_variable_players!
     end
 
     def to_hash
