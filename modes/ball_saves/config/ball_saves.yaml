@@ -115,10 +115,10 @@ widget_player:
 
 variable_player:
   left_outlane_rollover_off_hit:
-    points: 999
+    points: 1000
     rollover_hits: 1
   right_outlane_rollover_off_hit:
-    points: 1189
+    points: 1200
     rollover_hits: 1
 
   left_outlane_rollover_qualified_hit:

@@ -48,7 +48,7 @@ variable_player:
     points: 1000
 
   base_drops_full_sweep_complete:
-    score: 3333 # flat score
+    score: 3000 # flat score
     target_hits: 3
 
 accruals:
