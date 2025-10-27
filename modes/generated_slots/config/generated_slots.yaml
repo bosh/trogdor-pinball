@@ -608,13 +608,13 @@ event_player:
   - slots_manager_stop|1500ms
 variable_player:
   slots_active_scored:
-    score: 50 * current_player.playfield_multiplier
+    points: 50
   slots_singles_locked:
-    score: 100 * current_player.playfield_multiplier
+    points: 100
   slots_splitpair_locked:
-    score: 150 * current_player.playfield_multiplier
+    points: 150
   slots_neighborpair_locked:
-    score: 200 * current_player.playfield_multiplier
+    points: 200
   slots_row_locked:
     score: 5000
   slots_diagonal_locked:

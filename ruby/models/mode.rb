@@ -86,7 +86,7 @@ module TrogBuild
     end
     def vp_score(value, use_pf_multiplier)
       if use_pf_multiplier
-        {'score' => "#{value} * current_player.playfield_multiplier"}
+        {'points' => value}
       else
         {'score' => value}
       end
