@@ -57,6 +57,7 @@ state_machines:
         events_when_started:
           - mode_start_burn_rollovers
           - mode_start_pops_base
+          - burnination_multiball_reset
       burnination:
         label: burnination
         events_when_started:
@@ -87,8 +88,9 @@ state_machines:
           - mode_stop_burnination_rollovers
           - mode_start_burn_rollovers
           - mode_fail_pops_burnination
+          - burnination_multiball_reset
     transitions:
-      - source: start
+      - source: start, failed
         target: burnination
         events: burnination_controller_begin
       - source: burnination

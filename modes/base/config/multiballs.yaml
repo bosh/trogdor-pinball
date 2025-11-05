@@ -13,6 +13,7 @@ multiballs:
     ball_count_type: total
     disable_events: ball_ending, mode_stop_burnination_rollovers
     start_events: burnination_multiball_qualified
+    enable_events: burnination_multiball_reset
     shoot_again: settings.burnination_timer_seconds*1000 #Uses the base setting but does not increment like the overall timer does
 
   skillshot_addaball:
