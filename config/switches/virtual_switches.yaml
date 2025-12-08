@@ -225,6 +225,8 @@ virtual_platform_start_active_switches:
   - s_trough_ball_1
   - s_trough_ball_2
   - s_trough_ball_3
+  - s_trough_ball_4
+  - s_trough_ball_5
 
 plugins: switch_player
 switch_player:
