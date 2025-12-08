@@ -49,15 +49,15 @@ event_player:
   skillshot_of_an_artist_hitme_hit:
     - disable_skill_2
     - disable_skill_3
-    - dj_skill_shot_1_hit|1s
+    - dj_skill_shot_1_hit|250ms
   skillshot_2_hitme_hit:
     - disable_skill_1
     - disable_skill_3
-    - dj_skill_shot_2_hit|1s
+    - dj_skill_shot_2_hit|250ms
   skillshot_3_hitme_hit:
     - disable_skill_1
     - disable_skill_2
-    - dj_skill_shot_3_hit|1s
+    - dj_skill_shot_3_hit|250ms
 
   skillshots_group_hitme_hit:
     - deactivate_orbit_diverter_skillshot
