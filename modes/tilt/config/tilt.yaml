@@ -23,6 +23,12 @@ slide_player:
     tilt:
       action: remove
 
+widget_player:
+  tilt:
+    info_overlay:
+      slide: _overlay
+      action: remove
+
 show_player:
   tilt_warning_1:
     flash_color:

@@ -470,13 +470,12 @@ settings:
   tilt_multiple_hit_window:
     label: Tilt Sensitivity
     values:
-      200: "very sensitive"
-      350: "sensitive"
-      550: "default"
-      750: "loose"
-      1000: "very loose"
-      2000: "generous"
-    default: 550
+      400: "very sensitive"
+      600: "sensitive"
+      800: "default"
+      1000: "loose"
+      1600: "generous"
+    default: 800
     key_type: int
     sort: 403
 
