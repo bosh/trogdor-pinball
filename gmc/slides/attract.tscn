@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://1muw6d5hkqte"]
+[gd_scene format=3 uid="uid://1muw6d5hkqte"]
 
 [ext_resource type="Script" uid="uid://6mdcui7wkc47" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_grcpe"]
 [ext_resource type="Texture2D" uid="uid://c7rku52o4c103" path="res://images/attract_bg.jpg" id="2_quk18"]
@@ -14,16 +14,16 @@
 [ext_resource type="Theme" uid="uid://cx5kw5e8kdnr6" path="res://themes/attract_scores_text.tres" id="12_bvyxe"]
 [ext_resource type="Texture2D" uid="uid://d2ciiqajy4e4j" path="res://images/included/expo25.png" id="13_gvrry"]
 
-[node name="Attract" type="Control"]
+[node name="Attract" type="Control" unique_id=1600267746]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_grcpe")
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="." unique_id=1936748072]
 position = Vector2(1440, 432)
 texture = ExtResource("2_quk18")
 
-[node name="MPFCarousel" type="Control" parent="."]
+[node name="MPFCarousel" type="Control" parent="." unique_id=213919219]
 anchors_preset = 0
 offset_left = 20.0
 offset_top = 20.0
@@ -32,28 +32,28 @@ offset_bottom = 20.0
 script = ExtResource("3_ivb84")
 carousel_name = "attract"
 
-[node name="title" type="Node2D" parent="MPFCarousel"]
+[node name="title" type="Node2D" parent="MPFCarousel" unique_id=1472248333]
 position = Vector2(1420, 412)
 scale = Vector2(1.75182, 3.40157)
 
-[node name="blackout" type="ColorRect" parent="MPFCarousel/title"]
+[node name="blackout" type="ColorRect" parent="MPFCarousel/title" unique_id=827315854]
 offset_left = -822.002
 offset_top = -127.0
 offset_right = 821.998
 offset_bottom = 127.0
 color = Color(0, 0, 0, 1)
 
-[node name="name" type="Sprite2D" parent="MPFCarousel/title"]
+[node name="name" type="Sprite2D" parent="MPFCarousel/title" unique_id=2055612263]
 position = Vector2(-3.05176e-05, -24.4004)
 scale = Vector2(0.702085, 0.425926)
 texture = ExtResource("3_08cu3")
 
-[node name="cheat" type="Sprite2D" parent="MPFCarousel/title"]
+[node name="cheat" type="Sprite2D" parent="MPFCarousel/title" unique_id=1059512379]
 position = Vector2(743.798, 92.3103)
 scale = Vector2(1, 0.465158)
 texture = ExtResource("5_bo6y5")
 
-[node name="subtitle" type="Label" parent="MPFCarousel/title"]
+[node name="subtitle" type="Label" parent="MPFCarousel/title" unique_id=1753401028]
 offset_left = -23.9751
 offset_top = 44.6852
 offset_right = 527.025
@@ -69,16 +69,16 @@ theme_override_fonts/font = ExtResource("9_ne241")
 theme_override_font_sizes/font_size = 45
 text = "THE BURNINATOR"
 
-[node name="byline" type="Node2D" parent="MPFCarousel"]
+[node name="byline" type="Node2D" parent="MPFCarousel" unique_id=654819347]
 position = Vector2(1420, 412)
 scale = Vector2(1.75182, 3.40157)
 
-[node name="event" type="Sprite2D" parent="MPFCarousel/byline"]
+[node name="event" type="Sprite2D" parent="MPFCarousel/byline" unique_id=97076839]
 position = Vector2(-381.8885, 2.6458359)
 scale = Vector2(1.1512417, 0.5928933)
 texture = ExtResource("13_gvrry")
 
-[node name="website" type="Label" parent="MPFCarousel/byline"]
+[node name="website" type="Label" parent="MPFCarousel/byline" unique_id=771010289]
 offset_left = 380.747
 offset_top = -112.301
 offset_right = 1170.75
@@ -91,7 +91,7 @@ theme_override_fonts/font = ExtResource("10_8giox")
 theme_override_font_sizes/font_size = 45
 text = "trogdorpinball.com"
 
-[node name="github" type="Label" parent="MPFCarousel/byline"]
+[node name="github" type="Label" parent="MPFCarousel/byline" unique_id=1485911548]
 offset_left = 605.0
 offset_top = 83.0
 offset_right = 844.0
@@ -104,7 +104,7 @@ theme_override_fonts/font = ExtResource("10_8giox")
 theme_override_font_sizes/font_size = 22
 text = "github.com/bosh"
 
-[node name="name" type="Label" parent="MPFCarousel/byline"]
+[node name="name" type="Label" parent="MPFCarousel/byline" unique_id=80384563]
 offset_left = 305.397
 offset_top = 24.4005
 offset_right = 1095.4
@@ -119,7 +119,7 @@ theme_override_fonts/font = ExtResource("10_8giox")
 theme_override_font_sizes/font_size = 60
 text = "by Alex Lobascio"
 
-[node name="credits" type="Label" parent="MPFCarousel"]
+[node name="credits" type="Label" parent="MPFCarousel" unique_id=1413163730]
 layout_mode = 0
 offset_left = 2.0
 offset_top = -144.0
@@ -139,31 +139,31 @@ script = ExtResource("5_ose3f")
 variable_type = 2
 variable_name = "credits_string"
 
-[node name="logos" type="Node2D" parent="MPFCarousel"]
+[node name="logos" type="Node2D" parent="MPFCarousel" unique_id=1231638291]
 
-[node name="blackout" type="ColorRect" parent="MPFCarousel/logos"]
+[node name="blackout" type="ColorRect" parent="MPFCarousel/logos" unique_id=533722042]
 offset_left = -20.0
 offset_top = -20.0
 offset_right = 2860.0
 offset_bottom = 844.0
 color = Color(0, 0, 0, 1)
 
-[node name="mpf_logo" type="Sprite2D" parent="MPFCarousel/logos"]
+[node name="mpf_logo" type="Sprite2D" parent="MPFCarousel/logos" unique_id=1034984457]
 position = Vector2(2412, 396)
 scale = Vector2(2.9875, 2.9875)
 texture = ExtResource("5_5y4l4")
 
-[node name="fast_logo" type="Sprite2D" parent="MPFCarousel/logos"]
+[node name="fast_logo" type="Sprite2D" parent="MPFCarousel/logos" unique_id=1562174878]
 position = Vector2(576, 383)
 scale = Vector2(0.542683, 0.542683)
 texture = ExtResource("7_ardjk")
 
-[node name="hsr_logo" type="Sprite2D" parent="MPFCarousel/logos"]
+[node name="hsr_logo" type="Sprite2D" parent="MPFCarousel/logos" unique_id=1158157564]
 position = Vector2(1592, 587)
 scale = Vector2(1.2551, 1.2551)
 texture = ExtResource("8_0ti1i")
 
-[node name="Label" type="Label" parent="MPFCarousel/logos"]
+[node name="Label" type="Label" parent="MPFCarousel/logos" unique_id=1582869646]
 offset_left = 1219.0
 offset_top = -15.0
 offset_right = 1982.0
@@ -172,9 +172,9 @@ theme_override_fonts/font = ExtResource("9_ne241")
 theme_override_font_sizes/font_size = 45
 text = "Trogdor (C) 2003 Strong Bad"
 
-[node name="last_scores_1p" type="Node2D" parent="MPFCarousel"]
+[node name="last_scores_1p" type="Node2D" parent="MPFCarousel" unique_id=1285863217]
 
-[node name="player1_score" type="Label" parent="MPFCarousel/last_scores_1p"]
+[node name="player1_score" type="Label" parent="MPFCarousel/last_scores_1p" unique_id=1571990257]
 offset_left = 74.0
 offset_top = 26.0
 offset_right = 1007.0
@@ -190,9 +190,9 @@ variable_type = 2
 variable_name = "player1_score"
 comma_separate = true
 
-[node name="last_scores_2p" type="Node2D" parent="MPFCarousel"]
+[node name="last_scores_2p" type="Node2D" parent="MPFCarousel" unique_id=405238003]
 
-[node name="player1_score" type="Label" parent="MPFCarousel/last_scores_2p"]
+[node name="player1_score" type="Label" parent="MPFCarousel/last_scores_2p" unique_id=317564569]
 offset_left = 74.0
 offset_top = 26.0
 offset_right = 1007.0
@@ -208,7 +208,7 @@ variable_type = 2
 variable_name = "player1_score"
 comma_separate = true
 
-[node name="player2_score" type="Label" parent="MPFCarousel/last_scores_2p"]
+[node name="player2_score" type="Label" parent="MPFCarousel/last_scores_2p" unique_id=1983588215]
 offset_left = 1866.0
 offset_top = 21.0
 offset_right = 2799.0
@@ -225,9 +225,9 @@ variable_type = 2
 variable_name = "player2_score"
 comma_separate = true
 
-[node name="last_scores_3p" type="Node2D" parent="MPFCarousel"]
+[node name="last_scores_3p" type="Node2D" parent="MPFCarousel" unique_id=352152649]
 
-[node name="player1_score" type="Label" parent="MPFCarousel/last_scores_3p"]
+[node name="player1_score" type="Label" parent="MPFCarousel/last_scores_3p" unique_id=163716670]
 offset_left = 74.0
 offset_top = 26.0
 offset_right = 1007.0
@@ -243,7 +243,7 @@ variable_type = 2
 variable_name = "player1_score"
 comma_separate = true
 
-[node name="player2_score" type="Label" parent="MPFCarousel/last_scores_3p"]
+[node name="player2_score" type="Label" parent="MPFCarousel/last_scores_3p" unique_id=2061330936]
 offset_left = 1866.0
 offset_top = 21.0
 offset_right = 2799.0
@@ -260,7 +260,7 @@ variable_type = 2
 variable_name = "player2_score"
 comma_separate = true
 
-[node name="player3_score" type="Label" parent="MPFCarousel/last_scores_3p"]
+[node name="player3_score" type="Label" parent="MPFCarousel/last_scores_3p" unique_id=929430402]
 offset_left = 82.0
 offset_top = 557.0
 offset_right = 1015.0
@@ -276,9 +276,9 @@ variable_type = 2
 variable_name = "player3_score"
 comma_separate = true
 
-[node name="last_scores_4p" type="Node2D" parent="MPFCarousel"]
+[node name="last_scores_4p" type="Node2D" parent="MPFCarousel" unique_id=1420102895]
 
-[node name="player1_score" type="Label" parent="MPFCarousel/last_scores_4p"]
+[node name="player1_score" type="Label" parent="MPFCarousel/last_scores_4p" unique_id=119234412]
 offset_left = 74.0
 offset_top = 26.0
 offset_right = 1007.0
@@ -294,7 +294,7 @@ variable_type = 2
 variable_name = "player1_score"
 comma_separate = true
 
-[node name="player2_score" type="Label" parent="MPFCarousel/last_scores_4p"]
+[node name="player2_score" type="Label" parent="MPFCarousel/last_scores_4p" unique_id=573226202]
 offset_left = 1866.0
 offset_top = 21.0
 offset_right = 2799.0
@@ -311,7 +311,7 @@ variable_type = 2
 variable_name = "player2_score"
 comma_separate = true
 
-[node name="player3_score" type="Label" parent="MPFCarousel/last_scores_4p"]
+[node name="player3_score" type="Label" parent="MPFCarousel/last_scores_4p" unique_id=1068415325]
 offset_left = 82.0
 offset_top = 557.0
 offset_right = 1015.0
@@ -327,7 +327,7 @@ variable_type = 2
 variable_name = "player3_score"
 comma_separate = true
 
-[node name="player4_score" type="Label" parent="MPFCarousel/last_scores_4p"]
+[node name="player4_score" type="Label" parent="MPFCarousel/last_scores_4p" unique_id=1312842541]
 offset_left = 1605.0
 offset_top = 565.0
 offset_right = 2799.0
@@ -344,9 +344,9 @@ variable_type = 2
 variable_name = "player3_score"
 comma_separate = true
 
-[node name="burnination_champ" type="Node2D" parent="MPFCarousel"]
+[node name="burnination_champ" type="Node2D" parent="MPFCarousel" unique_id=1682801894]
 
-[node name="label" type="Label" parent="MPFCarousel/burnination_champ"]
+[node name="label" type="Label" parent="MPFCarousel/burnination_champ" unique_id=216546454]
 offset_left = 1226.0
 offset_top = 53.0
 offset_right = 2778.0
@@ -363,7 +363,7 @@ script = ExtResource("5_ose3f")
 variable_type = 2
 variable_name = "burnination_points1_label"
 
-[node name="name" type="Label" parent="MPFCarousel/burnination_champ"]
+[node name="name" type="Label" parent="MPFCarousel/burnination_champ" unique_id=1972641655]
 offset_left = 1734.0
 offset_top = 215.0
 offset_right = 2782.0
@@ -377,7 +377,7 @@ script = ExtResource("5_ose3f")
 variable_type = 2
 variable_name = "burnination_points1_name"
 
-[node name="value" type="Label" parent="MPFCarousel/burnination_champ"]
+[node name="value" type="Label" parent="MPFCarousel/burnination_champ" unique_id=190994179]
 offset_left = 1021.0
 offset_top = 377.0
 offset_right = 2781.0
@@ -393,14 +393,14 @@ variable_name = "burnination_points1_value"
 comma_separate = true
 template_string = "%s Peasants Burninated"
 
-[node name="event" type="Sprite2D" parent="MPFCarousel/burnination_champ"]
+[node name="event" type="Sprite2D" parent="MPFCarousel/burnination_champ" unique_id=181925884]
 position = Vector2(449, 591.4043)
 scale = Vector2(2.0815473, 1.4902703)
 texture = ExtResource("13_gvrry")
 
-[node name="grand_champ" type="Node2D" parent="MPFCarousel"]
+[node name="grand_champ" type="Node2D" parent="MPFCarousel" unique_id=133175872]
 
-[node name="label" type="Label" parent="MPFCarousel/grand_champ"]
+[node name="label" type="Label" parent="MPFCarousel/grand_champ" unique_id=2144119208]
 offset_left = 1226.0
 offset_top = 53.0
 offset_right = 2778.0
@@ -414,7 +414,7 @@ script = ExtResource("5_ose3f")
 variable_type = 2
 variable_name = "score1_label"
 
-[node name="name" type="Label" parent="MPFCarousel/grand_champ"]
+[node name="name" type="Label" parent="MPFCarousel/grand_champ" unique_id=1405224257]
 offset_left = 1734.0
 offset_top = 215.0
 offset_right = 2782.0
@@ -428,7 +428,7 @@ script = ExtResource("5_ose3f")
 variable_type = 2
 variable_name = "score1_name"
 
-[node name="value" type="Label" parent="MPFCarousel/grand_champ"]
+[node name="value" type="Label" parent="MPFCarousel/grand_champ" unique_id=1904037587]
 offset_left = 1021.0
 offset_top = 377.0
 offset_right = 2781.0
@@ -443,14 +443,14 @@ variable_type = 2
 variable_name = "score1_value"
 comma_separate = true
 
-[node name="event6" type="Sprite2D" parent="MPFCarousel/grand_champ"]
+[node name="event6" type="Sprite2D" parent="MPFCarousel/grand_champ" unique_id=613695392]
 position = Vector2(751.0001, 421)
 scale = Vector2(2.0167682, 2.0167682)
 texture = ExtResource("13_gvrry")
 
-[node name="high_score_1" type="Node2D" parent="MPFCarousel"]
+[node name="high_score_1" type="Node2D" parent="MPFCarousel" unique_id=294641474]
 
-[node name="label" type="Label" parent="MPFCarousel/high_score_1"]
+[node name="label" type="Label" parent="MPFCarousel/high_score_1" unique_id=1508442608]
 offset_left = 1226.0
 offset_top = 53.0
 offset_right = 2778.0
@@ -464,7 +464,7 @@ script = ExtResource("5_ose3f")
 variable_type = 2
 variable_name = "score2_label"
 
-[node name="name" type="Label" parent="MPFCarousel/high_score_1"]
+[node name="name" type="Label" parent="MPFCarousel/high_score_1" unique_id=527792574]
 offset_left = 1734.0
 offset_top = 215.0
 offset_right = 2782.0
@@ -478,7 +478,7 @@ script = ExtResource("5_ose3f")
 variable_type = 2
 variable_name = "score2_name"
 
-[node name="value" type="Label" parent="MPFCarousel/high_score_1"]
+[node name="value" type="Label" parent="MPFCarousel/high_score_1" unique_id=1386278321]
 offset_left = 1021.0
 offset_top = 377.0
 offset_right = 2781.0
@@ -493,14 +493,14 @@ variable_type = 2
 variable_name = "score2_value"
 comma_separate = true
 
-[node name="event5" type="Sprite2D" parent="MPFCarousel/high_score_1"]
+[node name="event5" type="Sprite2D" parent="MPFCarousel/high_score_1" unique_id=764124229]
 position = Vector2(751.0001, 421)
 scale = Vector2(2.0167682, 2.0167682)
 texture = ExtResource("13_gvrry")
 
-[node name="high_score_2" type="Node2D" parent="MPFCarousel"]
+[node name="high_score_2" type="Node2D" parent="MPFCarousel" unique_id=1290992303]
 
-[node name="label" type="Label" parent="MPFCarousel/high_score_2"]
+[node name="label" type="Label" parent="MPFCarousel/high_score_2" unique_id=2037185843]
 offset_left = 1226.0
 offset_top = 53.0
 offset_right = 2778.0
@@ -514,7 +514,7 @@ script = ExtResource("5_ose3f")
 variable_type = 2
 variable_name = "score3_label"
 
-[node name="name" type="Label" parent="MPFCarousel/high_score_2"]
+[node name="name" type="Label" parent="MPFCarousel/high_score_2" unique_id=1453767033]
 offset_left = 1734.0
 offset_top = 215.0
 offset_right = 2782.0
@@ -528,7 +528,7 @@ script = ExtResource("5_ose3f")
 variable_type = 2
 variable_name = "score3_name"
 
-[node name="value" type="Label" parent="MPFCarousel/high_score_2"]
+[node name="value" type="Label" parent="MPFCarousel/high_score_2" unique_id=1461971534]
 offset_left = 1021.0
 offset_top = 377.0
 offset_right = 2781.0
@@ -543,14 +543,14 @@ variable_type = 2
 variable_name = "score3_value"
 comma_separate = true
 
-[node name="event4" type="Sprite2D" parent="MPFCarousel/high_score_2"]
+[node name="event4" type="Sprite2D" parent="MPFCarousel/high_score_2" unique_id=1454350310]
 position = Vector2(751.0001, 421)
 scale = Vector2(2.0167682, 2.0167682)
 texture = ExtResource("13_gvrry")
 
-[node name="high_score_3" type="Node2D" parent="MPFCarousel"]
+[node name="high_score_3" type="Node2D" parent="MPFCarousel" unique_id=1801376922]
 
-[node name="label" type="Label" parent="MPFCarousel/high_score_3"]
+[node name="label" type="Label" parent="MPFCarousel/high_score_3" unique_id=138185828]
 offset_left = 1226.0
 offset_top = 53.0
 offset_right = 2778.0
@@ -564,7 +564,7 @@ script = ExtResource("5_ose3f")
 variable_type = 2
 variable_name = "score4_label"
 
-[node name="name" type="Label" parent="MPFCarousel/high_score_3"]
+[node name="name" type="Label" parent="MPFCarousel/high_score_3" unique_id=141795932]
 offset_left = 1734.0
 offset_top = 215.0
 offset_right = 2782.0
@@ -578,7 +578,7 @@ script = ExtResource("5_ose3f")
 variable_type = 2
 variable_name = "score4_name"
 
-[node name="value" type="Label" parent="MPFCarousel/high_score_3"]
+[node name="value" type="Label" parent="MPFCarousel/high_score_3" unique_id=38803003]
 offset_left = 1021.0
 offset_top = 377.0
 offset_right = 2781.0
@@ -593,19 +593,19 @@ variable_type = 2
 variable_name = "score4_value"
 comma_separate = true
 
-[node name="event3" type="Sprite2D" parent="MPFCarousel/high_score_3"]
+[node name="event3" type="Sprite2D" parent="MPFCarousel/high_score_3" unique_id=954090429]
 position = Vector2(751.0001, 421)
 scale = Vector2(2.0167682, 2.0167682)
 texture = ExtResource("13_gvrry")
 
-[node name="high_score_4" type="Node2D" parent="MPFCarousel"]
+[node name="high_score_4" type="Node2D" parent="MPFCarousel" unique_id=1385199545]
 
-[node name="event2" type="Sprite2D" parent="MPFCarousel/high_score_4"]
+[node name="event2" type="Sprite2D" parent="MPFCarousel/high_score_4" unique_id=465006774]
 position = Vector2(751.0001, 421)
 scale = Vector2(2.0167682, 2.0167682)
 texture = ExtResource("13_gvrry")
 
-[node name="label" type="Label" parent="MPFCarousel/high_score_4"]
+[node name="label" type="Label" parent="MPFCarousel/high_score_4" unique_id=452077058]
 offset_left = 1226.0
 offset_top = 53.0
 offset_right = 2778.0
@@ -619,7 +619,7 @@ script = ExtResource("5_ose3f")
 variable_type = 2
 variable_name = "score5_label"
 
-[node name="name" type="Label" parent="MPFCarousel/high_score_4"]
+[node name="name" type="Label" parent="MPFCarousel/high_score_4" unique_id=1576422666]
 offset_left = 1734.0
 offset_top = 215.0
 offset_right = 2782.0
@@ -633,7 +633,7 @@ script = ExtResource("5_ose3f")
 variable_type = 2
 variable_name = "score5_name"
 
-[node name="value" type="Label" parent="MPFCarousel/high_score_4"]
+[node name="value" type="Label" parent="MPFCarousel/high_score_4" unique_id=571779125]
 offset_left = 1021.0
 offset_top = 377.0
 offset_right = 2781.0
