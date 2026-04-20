@@ -21,6 +21,7 @@ event_player:
   burn_group_lit_complete:
     - increment_playfield_multiplier
     - burnination_controller_begin
+    - widget_hide_burn_letters|2000ms
   s_left_flipper_active: [rotate_burn_left, burn_updated|1ms]
   s_right_flipper_active: [rotate_burn_right, burn_updated|1ms]
   mode_burn_rollovers_started: [burn_updated|1ms]
