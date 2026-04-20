@@ -6,7 +6,7 @@ diverters:
     type: hold
     activation_time: 3s
     enable_events: enable_right_controlled_ball_gate
-    disable_events: disable_right_controlled_ball_gate,ball_ending
+    disable_events: disable_diverters,disable_right_controlled_ball_gate,ball_ending
     activate_events: activate_right_controlled_ball_gate
     deactivate_events: deactivate_right_controlled_ball_gate,disable_right_controlled_ball_gate,ball_ending
     activation_switches: s_left_orbit_outer
@@ -15,7 +15,7 @@ diverters:
     type: hold
     activation_time: 6s
     enable_events: enable_right_controlled_ball_gate_alternative_profile
-    disable_events: disable_right_controlled_ball_gate_alternative_profile,ball_ending
+    disable_events: disable_diverters,disable_right_controlled_ball_gate_alternative_profile,ball_ending
     activate_events: activate_right_controlled_ball_gate_alternative_profile
     deactivate_events: deactivate_right_controlled_ball_gate_alternative_profile,disable_right_controlled_ball_gate_alternative_profile,ball_ending
     activation_switches: s_left_orbit_outer
@@ -24,7 +24,7 @@ diverters:
     type: hold
     activation_time: 3s
     enable_events: enable_left_controlled_ball_gate
-    disable_events: disable_left_controlled_ball_gate,ball_ending
+    disable_events: disable_diverters,disable_left_controlled_ball_gate,ball_ending
     activate_events: activate_left_controlled_ball_gate
     deactivate_events: deactivate_left_controlled_ball_gate,disable_left_controlled_ball_gate,ball_ending
     activation_switches: s_right_orbit_outer
@@ -33,7 +33,7 @@ diverters:
     type: hold
     activation_time: settings.saver_post_time
     enable_events: enable_saver_post
-    disable_events: disable_saver_post,ball_ending
+    disable_events: disable_diverters,disable_saver_post,ball_ending
     activate_events: activate_saver_post
     deactivate_events: deactivate_saver_post,disable_saver_post,ball_ending
   div_right_outlane_post:
@@ -41,7 +41,7 @@ diverters:
     type: hold
     activation_time: 3s
     enable_events: enable_right_outlane_post
-    disable_events: disable_right_outlane_post,ball_ending
+    disable_events: disable_diverters,disable_right_outlane_post,ball_ending
     activate_events: activate_right_outlane_post
     deactivate_events: deactivate_right_outlane_post,disable_right_outlane_post,ball_ending
     activation_switches: s_right_outer_lane
@@ -50,7 +50,7 @@ diverters:
     type: hold
     activation_time: 8000ms
     enable_events: enable_right_outlane_post_ramp_save
-    disable_events: disable_right_outlane_post_ramp_save,ball_ending
+    disable_events: disable_diverters,disable_right_outlane_post_ramp_save,ball_ending
     activate_events: activate_right_outlane_post_ramp_save
     deactivate_events: deactivate_right_outlane_post_ramp_save,disable_right_outlane_post_ramp_save,ball_ending
     targets_when_active: bd_plunger

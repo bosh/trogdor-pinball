@@ -73,6 +73,9 @@ diverter:
   orbit_diverter:
     x: 0.25313807531380755
     y: 0.16370292887029292
+  orbit_diverter_skillshot:
+    x: 0.23213850280419407
+    y: 0.17264081931236283
 drop_target:
   dt_slots_center:
     x: 0.393305439330544

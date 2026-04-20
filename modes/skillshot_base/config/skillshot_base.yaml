@@ -43,6 +43,7 @@ event_player:
   mode_skillshot_base_started:
     - enable_orbit_diverter_skillshot
     - activate_orbit_diverter_skillshot
+    - activate_orbit_diverter_skillshot|100ms #echoed to ensure diverter open
   timer_skill_shot_timeout_complete:
     - deactivate_orbit_diverter_skillshot
     - mode_fail_skillshot_base
