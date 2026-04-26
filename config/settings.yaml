@@ -12,7 +12,7 @@ settings:
     values:
       1: '1'
       2: '2'
-      3: '3 (default)'
+      3: '3'
       4: '4'
       5: '5'
 
@@ -25,7 +25,7 @@ settings:
       1: '1'
       2: '2'
       3: '3'
-      4: '4 (default)'
+      4: '4'
 
   flipper_main_coil_power:
     sort: 151
@@ -37,7 +37,7 @@ settings:
       15: '15 ms'
       18: '18 ms'
       20: '20 ms'
-      24: '24 ms (default)'
+      24: '24 ms'
       28: '28 ms'
       32: '32 ms'
       36: '36 ms'
@@ -52,7 +52,7 @@ settings:
   #     0.125: '1/8'
   #     0.25: '1/4'
   #     0.375: '3/8'
-  #     0.5: '1/2 (default)'
+  #     0.5: '1/2'
   #     0.625: '5/8'
   #     0.75: '3/4'
   #     0.875: '7/8'
@@ -68,7 +68,7 @@ settings:
       15: '15 ms'
       18: '18 ms'
       20: '20 ms'
-      24: '24 ms (default)'
+      24: '24 ms'
       28: '28 ms'
       32: '32 ms'
       36: '36 ms'
@@ -83,7 +83,7 @@ settings:
       9: '9 ms'
       12: '12 ms'
       15: '15 ms'
-      18: '18 ms (default)'
+      18: '18 ms'
       21: '21 ms'
       24: '24 ms'
       28: '28 ms'
@@ -100,7 +100,7 @@ settings:
       12: '12 ms'
       15: '15 ms'
       18: '18 ms'
-      20: '20 ms (default)'
+      20: '20 ms'
       24: '24 ms'
       28: '28 ms'
       32: '32 ms'
@@ -114,7 +114,7 @@ settings:
     default: 12
     values:
       9: '9 ms'
-      12: '12 ms (default)'
+      12: '12 ms'
       15: '15 ms'
       18: '18 ms'
       21: '21 ms'
@@ -127,7 +127,7 @@ settings:
     default: 9
     values:
       7: '7 ms'
-      9: '9 ms (default)'
+      9: '9 ms'
       11: '11 ms'
       13: '13 ms'
       16: '16 ms'
@@ -141,7 +141,7 @@ settings:
     values:
       5: '5 ms'
       7: '7 ms'
-      9: '9 ms (default)'
+      9: '9 ms'
       12: '12 ms'
       15: '15 ms'
       18: '18 ms'
@@ -154,7 +154,7 @@ settings:
     values:
       18: '18 ms'
       22: '22 ms'
-      26: '26 ms (default)'
+      26: '26 ms'
       30: '30 ms'
       34: '34 ms'
 
@@ -167,7 +167,7 @@ settings:
       12: '12 ms'
       15: '15 ms'
       20: '20 ms'
-      25: '25 ms (default)'
+      25: '25 ms'
       30: '30 ms'
       35: '35 ms'
 
@@ -179,7 +179,7 @@ settings:
     values:
       50: '50 ms'
       60: '60 ms'
-      70: '70 ms (default)'
+      70: '70 ms'
       80: '80 ms'
       90: '90 ms'
 
@@ -191,7 +191,7 @@ settings:
     values:
       14: '14 ms'
       17: '17 ms'
-      20: '20 ms (default)'
+      20: '20 ms'
       23: '23 ms'
       27: '27 ms'
 
@@ -202,7 +202,7 @@ settings:
     default: 16
     values:
       13: '13 ms'
-      16: '16 ms (default)'
+      16: '16 ms'
       19: '19 ms'
       22: '22 ms'
       25: '25 ms'
@@ -228,7 +228,7 @@ settings:
     default: 20
     values:
       15: '15 ms'
-      20: '20 ms (default)'
+      20: '20 ms'
       25: '25 ms'
       30: '30 ms'
 
@@ -239,7 +239,7 @@ settings:
     default: 20
     values:
       15: '15 ms'
-      20: '20 ms (default)'
+      20: '20 ms'
       25: '25 ms'
       30: '30 ms'
 
@@ -267,7 +267,7 @@ settings:
   #   values:
   #     6000: '6 seconds'
   #     7000: '7 seconds'
-  #     8000: '8 seconds (default)'
+  #     8000: '8 seconds'
   #     10000: '10 seconds'
   #     12000: '12 seconds'
 
@@ -279,7 +279,7 @@ settings:
   #   values:
   #     8000: '8 seconds'
   #     10000: '10 seconds'
-  #     12000: '12 seconds (default)'
+  #     12000: '12 seconds'
   #     14000: '14 seconds'
   #     16000: '16 seconds'
 
@@ -336,7 +336,7 @@ settings:
     default: 4
     values:
       4: '4'
-      6: '6 (default)'
+      6: '6'
       8: '8'
       10: '10'
   burnination_fire_level_two:
@@ -346,7 +346,7 @@ settings:
     default: 10
     values:
       7: '7'
-      10: '10 (default)'
+      10: '10'
       12: '12'
       15: '15'
       18: '18'
@@ -358,7 +358,7 @@ settings:
     values:
       12: '12'
       16: '16'
-      20: '20 (default)'
+      20: '20'
       25: '25'
       30: '30'
 
@@ -370,7 +370,7 @@ settings:
     values:
       1: '1'
       2: '2'
-      3: '3 (default)'
+      3: '3'
       4: '4'
       5: '5'
   burnination_rollover_ontarget_increment:
@@ -384,7 +384,7 @@ settings:
       2: '2'
       3: '3'
       4: '4'
-      5: '5 (default)'
+      5: '5'
       6: '6'
   burnination_rollover_offtarget_increment:
     sort: 307
@@ -393,7 +393,7 @@ settings:
     default: 1
     values:
       0: '0'
-      1: '1 (default)'
+      1: '1'
       2: '2'
       3: '3'
       4: '4'
@@ -407,7 +407,7 @@ settings:
       10: '10 seconds (for testing)'
       30: '30 seconds'
       45: '45 seconds'
-      55: '55 seconds (default)'
+      55: '55 seconds'
       65: '65 seconds'
       75: '75 seconds'
 
@@ -419,7 +419,7 @@ settings:
     values:
       4: '4 seconds'
       5: '5 seconds'
-      6: '6 seconds (default)'
+      6: '6 seconds'
       7: '7 seconds'
       8: '8 seconds'
 
@@ -430,7 +430,7 @@ settings:
     default: 1.0
     values:
       0.5: '.5 seconds'
-      1.0: '1 second (default)'
+      1.0: '1 second'
       1.5: '1.5 seconds'
       2.0: '2 seconds'
       3.0: '3 seconds'
@@ -442,7 +442,7 @@ settings:
     default: 30
     values:
       20: '20 spins'
-      30: '30 spins (default)'
+      30: '30 spins'
       40: '40 spins'
       60: '60 spins'
 
@@ -452,7 +452,7 @@ settings:
       0: "Tilt Disabled"
       1: "1"
       2: "2"
-      3: "3 (default)"
+      3: "3"
       5: "5"
       10: "10"
     default: 3
@@ -462,7 +462,7 @@ settings:
     label: Time to wait on fully tilting out to settle bob
     values:
       3000: "3s"
-      5000: "5s (default)"
+      5000: "5s"
       8000: "8s"
     default: 5000
     key_type: int
@@ -483,7 +483,7 @@ settings:
     label: Attract Carousel Rotation Time
     values:
       3.0: "3 seconds"
-      5.0: "5 seconds (default)"
+      5.0: "5 seconds"
       7.0: "7 seconds"
       10.0: "10 seconds"
     default: 5.0
@@ -497,7 +497,7 @@ settings:
     default: 5000
     values:
       1000: '1k'
-      5000: '5k (default)'
+      5000: '5k'
       10000: '10k'
       20000: '20k'
 
@@ -508,7 +508,7 @@ settings:
     default: 20000
     values:
       10000: '10k'
-      20000: '20k (default)'
+      20000: '20k'
       30000: '30k'
       40000: '40k'
 
@@ -519,7 +519,7 @@ settings:
     default: 40000
     values:
       20000: '20k'
-      40000: '40k (default)'
+      40000: '40k'
       60000: '60k'
       80000: '80k'
 
@@ -531,6 +531,6 @@ settings:
     values:
       40000: '40k'
       60000: '60k'
-      80000: '80k (default)'
+      80000: '80k'
       100000: '100k'
       150000: '150k'
