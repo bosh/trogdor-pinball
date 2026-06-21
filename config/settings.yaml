@@ -464,7 +464,7 @@ settings:
       3000: "3s"
       5000: "5s"
       8000: "8s"
-    default: 5000
+    default: 8000
     key_type: int
     sort: 402
   tilt_multiple_hit_window:
@@ -475,7 +475,7 @@ settings:
       800: "default"
       1000: "loose"
       1600: "generous"
-    default: 800
+    default: 1000
     key_type: int
     sort: 403
 

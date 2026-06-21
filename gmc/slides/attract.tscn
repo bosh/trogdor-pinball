@@ -33,6 +33,7 @@ script = ExtResource("3_ivb84")
 carousel_name = "attract"
 
 [node name="title" type="Node2D" parent="MPFCarousel" unique_id=1472248333]
+visible = false
 position = Vector2(1420, 412)
 scale = Vector2(1.75182, 3.40157)
 
@@ -115,6 +116,7 @@ theme_override_font_sizes/font_size = 60
 text = "by Alex Lobascio"
 
 [node name="credits" type="Label" parent="MPFCarousel" unique_id=1413163730]
+visible = false
 layout_mode = 0
 offset_left = 2.0
 offset_top = -144.0
@@ -135,6 +137,7 @@ variable_type = 2
 variable_name = "credits_string"
 
 [node name="logos" type="Node2D" parent="MPFCarousel" unique_id=1231638291]
+visible = false
 
 [node name="blackout" type="ColorRect" parent="MPFCarousel/logos" unique_id=533722042]
 offset_left = -20.0
@@ -168,6 +171,7 @@ theme_override_font_sizes/font_size = 45
 text = "Trogdor (C) 2003 Strong Bad"
 
 [node name="last_scores_1p" type="Node2D" parent="MPFCarousel" unique_id=1285863217]
+visible = false
 
 [node name="player1_score" type="Label" parent="MPFCarousel/last_scores_1p" unique_id=1571990257]
 offset_left = 74.0
@@ -186,6 +190,7 @@ variable_name = "player1_score"
 comma_separate = true
 
 [node name="last_scores_2p" type="Node2D" parent="MPFCarousel" unique_id=405238003]
+visible = false
 
 [node name="player1_score" type="Label" parent="MPFCarousel/last_scores_2p" unique_id=317564569]
 offset_left = 74.0
@@ -221,6 +226,7 @@ variable_name = "player2_score"
 comma_separate = true
 
 [node name="last_scores_3p" type="Node2D" parent="MPFCarousel" unique_id=352152649]
+visible = false
 
 [node name="player1_score" type="Label" parent="MPFCarousel/last_scores_3p" unique_id=163716670]
 offset_left = 74.0
@@ -272,6 +278,7 @@ variable_name = "player3_score"
 comma_separate = true
 
 [node name="last_scores_4p" type="Node2D" parent="MPFCarousel" unique_id=1420102895]
+visible = false
 
 [node name="player1_score" type="Label" parent="MPFCarousel/last_scores_4p" unique_id=119234412]
 offset_left = 74.0
@@ -444,6 +451,7 @@ scale = Vector2(0.9801109, 0.980111)
 texture = ExtResource("13_gvrry")
 
 [node name="high_score_1" type="Node2D" parent="MPFCarousel" unique_id=294641474]
+visible = false
 
 [node name="label" type="Label" parent="MPFCarousel/high_score_1" unique_id=1508442608]
 offset_left = 1226.0
@@ -494,6 +502,7 @@ scale = Vector2(0.9801109, 0.980111)
 texture = ExtResource("13_gvrry")
 
 [node name="high_score_2" type="Node2D" parent="MPFCarousel" unique_id=1290992303]
+visible = false
 
 [node name="label" type="Label" parent="MPFCarousel/high_score_2" unique_id=2037185843]
 offset_left = 1226.0
@@ -544,6 +553,7 @@ scale = Vector2(0.9801108, 0.98011094)
 texture = ExtResource("13_gvrry")
 
 [node name="high_score_3" type="Node2D" parent="MPFCarousel" unique_id=1801376922]
+visible = false
 
 [node name="label" type="Label" parent="MPFCarousel/high_score_3" unique_id=138185828]
 offset_left = 1226.0
@@ -594,6 +604,7 @@ scale = Vector2(0.9801108, 0.98011094)
 texture = ExtResource("13_gvrry")
 
 [node name="high_score_4" type="Node2D" parent="MPFCarousel" unique_id=1385199545]
+visible = false
 
 [node name="Gspf31" type="Sprite2D" parent="MPFCarousel/high_score_4" unique_id=1863600090]
 position = Vector2(599.99994, 410)
