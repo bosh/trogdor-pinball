@@ -12,7 +12,7 @@
 [ext_resource type="FontFile" uid="uid://b23p1dqnrdsfu" path="res://fonts/AHNBH.ttf" id="9_ne241"]
 [ext_resource type="FontFile" uid="uid://dhi02px4iy4jf" path="res://fonts/lappy-486-extended.ttf" id="10_8giox"]
 [ext_resource type="Theme" uid="uid://cx5kw5e8kdnr6" path="res://themes/attract_scores_text.tres" id="12_bvyxe"]
-[ext_resource type="Texture2D" uid="uid://d2ciiqajy4e4j" path="res://images/included/expo25.png" id="13_gvrry"]
+[ext_resource type="Texture2D" uid="uid://bkh0pch4uluo2" path="res://images/included/gspf26.jpg" id="13_gvrry"]
 
 [node name="Attract" type="Control" unique_id=1600267746]
 layout_mode = 3
@@ -72,11 +72,6 @@ text = "THE BURNINATOR"
 [node name="byline" type="Node2D" parent="MPFCarousel" unique_id=654819347]
 position = Vector2(1420, 412)
 scale = Vector2(1.75182, 3.40157)
-
-[node name="event" type="Sprite2D" parent="MPFCarousel/byline" unique_id=97076839]
-position = Vector2(-381.8885, 2.6458359)
-scale = Vector2(1.1512417, 0.5928933)
-texture = ExtResource("13_gvrry")
 
 [node name="website" type="Label" parent="MPFCarousel/byline" unique_id=771010289]
 offset_left = 380.747
@@ -393,9 +388,9 @@ variable_name = "burnination_points1_value"
 comma_separate = true
 template_string = "%s Peasants Burninated"
 
-[node name="event" type="Sprite2D" parent="MPFCarousel/burnination_champ" unique_id=181925884]
-position = Vector2(449, 591.4043)
-scale = Vector2(2.0815473, 1.4902703)
+[node name="Gspf26" type="Sprite2D" parent="MPFCarousel/burnination_champ" unique_id=682301870]
+position = Vector2(600, 410)
+scale = Vector2(0.9801109, 0.980111)
 texture = ExtResource("13_gvrry")
 
 [node name="grand_champ" type="Node2D" parent="MPFCarousel" unique_id=133175872]
@@ -443,9 +438,9 @@ variable_type = 2
 variable_name = "score1_value"
 comma_separate = true
 
-[node name="event6" type="Sprite2D" parent="MPFCarousel/grand_champ" unique_id=613695392]
-position = Vector2(751.0001, 421)
-scale = Vector2(2.0167682, 2.0167682)
+[node name="Gspf27" type="Sprite2D" parent="MPFCarousel/grand_champ" unique_id=655555258]
+position = Vector2(600, 410)
+scale = Vector2(0.9801109, 0.980111)
 texture = ExtResource("13_gvrry")
 
 [node name="high_score_1" type="Node2D" parent="MPFCarousel" unique_id=294641474]
@@ -493,9 +488,9 @@ variable_type = 2
 variable_name = "score2_value"
 comma_separate = true
 
-[node name="event5" type="Sprite2D" parent="MPFCarousel/high_score_1" unique_id=764124229]
-position = Vector2(751.0001, 421)
-scale = Vector2(2.0167682, 2.0167682)
+[node name="Gspf28" type="Sprite2D" parent="MPFCarousel/high_score_1" unique_id=690574856]
+position = Vector2(600, 410)
+scale = Vector2(0.9801109, 0.980111)
 texture = ExtResource("13_gvrry")
 
 [node name="high_score_2" type="Node2D" parent="MPFCarousel" unique_id=1290992303]
@@ -543,9 +538,9 @@ variable_type = 2
 variable_name = "score3_value"
 comma_separate = true
 
-[node name="event4" type="Sprite2D" parent="MPFCarousel/high_score_2" unique_id=1454350310]
-position = Vector2(751.0001, 421)
-scale = Vector2(2.0167682, 2.0167682)
+[node name="Gspf29" type="Sprite2D" parent="MPFCarousel/high_score_2" unique_id=1302984086]
+position = Vector2(599.99994, 410)
+scale = Vector2(0.9801108, 0.98011094)
 texture = ExtResource("13_gvrry")
 
 [node name="high_score_3" type="Node2D" parent="MPFCarousel" unique_id=1801376922]
@@ -593,16 +588,16 @@ variable_type = 2
 variable_name = "score4_value"
 comma_separate = true
 
-[node name="event3" type="Sprite2D" parent="MPFCarousel/high_score_3" unique_id=954090429]
-position = Vector2(751.0001, 421)
-scale = Vector2(2.0167682, 2.0167682)
+[node name="Gspf30" type="Sprite2D" parent="MPFCarousel/high_score_3" unique_id=1029079735]
+position = Vector2(599.99994, 410)
+scale = Vector2(0.9801108, 0.98011094)
 texture = ExtResource("13_gvrry")
 
 [node name="high_score_4" type="Node2D" parent="MPFCarousel" unique_id=1385199545]
 
-[node name="event2" type="Sprite2D" parent="MPFCarousel/high_score_4" unique_id=465006774]
-position = Vector2(751.0001, 421)
-scale = Vector2(2.0167682, 2.0167682)
+[node name="Gspf31" type="Sprite2D" parent="MPFCarousel/high_score_4" unique_id=1863600090]
+position = Vector2(599.99994, 410)
+scale = Vector2(0.9801108, 0.98011094)
 texture = ExtResource("13_gvrry")
 
 [node name="label" type="Label" parent="MPFCarousel/high_score_4" unique_id=452077058]
