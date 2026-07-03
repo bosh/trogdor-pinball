@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://brjib3kyg6i18"]
+[gd_scene format=3 uid="uid://brjib3kyg6i18"]
 
 [ext_resource type="Script" uid="uid://cakyur8sjr1j7" path="res://slides/minigame.gd" id="1_dn0tp"]
 [ext_resource type="Texture2D" uid="uid://cp8gsdaumsu5g" path="res://images/included/cheat graffiti.png" id="2_cqw1w"]
