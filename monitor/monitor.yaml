@@ -1,3 +1,26 @@
+achievement:
+  burnination:
+    x: 0.49969530773918347
+    y: 0.43814747105423524
+  capture_capturerer:
+    x: 0.5646963233800528
+    y: 0.47897623400365635
+  power_puncher:
+    x: 0.5606337599024985
+    y: 0.5368677635588056
+  ramp_rider:
+    x: 0.49482023156611826
+    y: 0.5594149908592322
+  spinner_spinner:
+    x: 0.43713183018484664
+    y: 0.5210237659963438
+  target_targeter:
+    x: 0.4525695713995531
+    y: 0.4667885435709933
+achievement_group:
+  burnination_supreme:
+    x: 0.49725776965265084
+    y: 0.5015234613040829
 autofire:
   pop_center:
     x: 0.5571827057182707
@@ -40,6 +63,9 @@ ball_save:
   right_outlane_saver:
     x: 0.47907949790794985
     y: 0.7871338912133892
+  right_outlane_wireform_save:
+    x: 0.5752589884216941
+    y: 0.845825716026813
   short:
     x: 0.47907949790794985
     y: 0.7709205020920503
@@ -50,6 +76,9 @@ combo_switch:
   cab_two_button_reset:
     x: 0.47907949790794985
     y: 0.7515690376569039
+  combo_both_flippers_hold:
+    x: 0.4200690635791184
+    y: 0.7507617306520415
 device_size: 0.02
 diverter:
   div_left_controlled_ball_gate:
