@@ -1,9 +1,9 @@
 #config_version=6
 
 # As you add coils, you will define
-# their name, number on the board, default_pulse. 
+# their name, number on the board, default_pulse.
 
-# Visit https://docs.missionpinball.org/en/latest/mechs/coils/ for additional information. 
+# Visit https://docs.missionpinball.org/en/latest/mechs/coils/ for additional information.
 
 coils:
 
@@ -12,30 +12,47 @@ coils:
   c_auto_plunger:
     number: 3208-0
     default_pulse_ms: settings.auto_plunger_coil_power
+
   c_right_outlane_post:
     number: 3208-1
     allow_enable: true
     default_pulse_ms: settings.outlane_post_power
     default_hold_power: .375
+
   c_trough_eject:
     number: 3208-2
     default_pulse_ms: settings.trough_eject_coil_power
+
   c_flipper_left_full:
     number: 3208-3
     default_pulse_ms: settings.flipper_main_coil_power
+    platform_settings:
+      max_eos_ms: 45
+      max_on_time_ms: 120
+
   c_flipper_left_hold:
     number: 3208-4
     default_hold_power: 0.5
     # default_hold_power: settings.flipper_hold_coil_power
     allow_enable: true
+    platform_settings:
+      refresh_ms: 4
+
   c_flipper_right_hold:
     number: 3208-5
     default_hold_power: 0.5
     # default_hold_power: settings.flipper_hold_coil_power
     allow_enable: true
+    platform_settings:
+      refresh_ms: 4
+
   c_flipper_right_full:
     number: 3208-6
     default_pulse_ms: settings.flipper_main_coil_power
+    platform_settings:
+      max_eos_ms: 45
+      max_on_time_ms: 120
+
   c_saver_post:
     number: 3208-7
     allow_enable: true
@@ -47,27 +64,39 @@ coils:
   c_right_sling:
     number: 1616-0
     default_pulse_ms: settings.slingshot_power
+
   c_left_sling:
     number: 1616-1
     default_pulse_ms: settings.slingshot_power
+
   c_flipper_upper_full:
     number: 1616-2
     default_pulse_ms: settings.upper_flipper_main_coil_power
+    platform_settings:
+      max_eos_ms: 45
+      max_on_time_ms: 120
+
   c_flipper_upper_hold:
     number: 1616-3
     default_hold_power: .5
     allow_enable: true
+    platform_settings:
+      refresh_ms: 4
+
   c_subway_vuk:
     number: 1616-4
     default_pulse_ms: settings.left_vuk_power
+
   c_slot_bank_left_drop:
     number: 1616-5
     default_pulse_ms: settings.slot_bank_knockdown_power
     default_pulse_power: 1.0
+
   c_slot_bank_center_drop:
     number: 1616-6
     default_pulse_ms: settings.slot_bank_knockdown_power
     default_pulse_power: .75
+
   c_slot_bank_right_drop:
     number: 1616-7
     default_pulse_ms: settings.slot_bank_knockdown_power
@@ -78,31 +107,39 @@ coils:
     number: 1616-8
     default_pulse_ms: settings.slot_bank_reset_power
     default_pulse_power: 0.875 #Dialing in
+
   c_gate_left:
     number: 1616-9
     default_pulse_ms: settings.gate_power
     default_hold_power: 0.5
+
   c_orbit_diverter_full:
     number: 1616-10
     default_pulse_ms: settings.diverter_flipper_power
     default_hold_power: .125
+
   # c_orbit_diverter_hold:
   #   number: 1616-x #not enough drivers available
   #   default_hold_power: .5
   #   allow_enable: true
+
   c_pop_center:
     number: 1616-11
     default_pulse_ms: settings.pop_bumper_power
+
   c_pop_right:
     number: 1616-12
     default_pulse_ms: settings.pop_bumper_power
+
   c_pop_left:
     number: 1616-13
     default_pulse_ms: settings.pop_bumper_power
+
   c_gate_right:
     number: 1616-14
     default_pulse_ms: settings.gate_power
     default_hold_power: 0.5
+
   c_vuk:
     number: 1616-15
     default_pulse_ms: settings.right_vuk_power
