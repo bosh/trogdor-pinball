@@ -27,8 +27,8 @@ coils:
     number: 3208-3
     default_pulse_ms: settings.flipper_main_coil_power
     platform_settings:
-      max_eos_ms: 45
-      max_on_time_ms: 120
+      max_eos_ms: 80
+      max_on_time_ms: 500
 
   c_flipper_left_hold:
     number: 3208-4
@@ -50,8 +50,8 @@ coils:
     number: 3208-6
     default_pulse_ms: settings.flipper_main_coil_power
     platform_settings:
-      max_eos_ms: 45
-      max_on_time_ms: 120
+      max_eos_ms: 80
+      max_on_time_ms: 500
 
   c_saver_post:
     number: 3208-7
@@ -73,8 +73,8 @@ coils:
     number: 1616-2
     default_pulse_ms: settings.upper_flipper_main_coil_power
     platform_settings:
-      max_eos_ms: 45
-      max_on_time_ms: 120
+      max_eos_ms: 80
+      max_on_time_ms: 500
 
   c_flipper_upper_hold:
     number: 1616-3
